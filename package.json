@@ -1,0 +1,32 @@
+{
+  "name": "augmentedjs2",
+  "version": "2.0.0",
+  "description": "The Augmented.js 2 Framework.",
+  "main": "index.js",
+  "scripts": {
+    "test": "jasmine-node ./test --verbose",
+    "build": "browserify index.js -o ./dist/augmented2.js",
+    "docs": "jsdoc ./ -d ./jsdoc/ -R ./README.md -t ./node_modules/ink-docstrap/template/ -c ./jsdoc.conf.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Augmentedjs/augmented-next.git"
+  },
+  "keywords": [
+    "augmentedjs"
+  ],
+  "author": "Bob Warren <jedi.master@augmentedjs.com> (http://www.augmentedjs.com)",
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "browserify": "^14.5.0",
+    "jsdoc": "^3.5.5",
+    "ink-docstrap": "*",
+    "jasmine-core": "^2.8.0",
+    "jasmine-node": "^2.0.0"
+  },
+  "dependencies": {},
+  "bugs": {
+    "url": "https://github.com/Augmentedjs/augmented-next/issues"
+  },
+  "homepage": "http://www.augmentedjs.com"
+}
