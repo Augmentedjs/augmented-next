@@ -1,4 +1,3 @@
-"use strict";
 /**
  * Augmented.js 2 - The Core UI Component and package
  *
@@ -79,7 +78,9 @@ Augmented.has = (obj, key) => {
 const createAssigner = (keysFunc, undefinedOnly) => {
   return (obj) => {
     const length = arguments.length;
-    if (length < 2 || obj === null) return obj;
+    if (length < 2 || obj === null) {
+      return obj;
+    }
     let index = 1, i = 0;
     for (index = 1; index < length; index++) {
       const source = arguments[index],
@@ -87,7 +88,9 @@ const createAssigner = (keysFunc, undefinedOnly) => {
             l = keys.length;
       for (i = 0; i < l; i++) {
         const key = keys[i];
-        if (!undefinedOnly || obj[key] === void 0) obj[key] = source[key];
+        if (!undefinedOnly || obj[key] === void 0) {
+          obj[key] = source[key];
+        }
       }
     }
     return obj;
@@ -165,4 +168,6 @@ const classExtend = (protoProps, staticProps) => {
   return child;
 };
 
-module.exports = Augmented;
+export default Augmented;
+
+//module.exports = Augmented;

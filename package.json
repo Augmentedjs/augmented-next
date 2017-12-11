@@ -4,9 +4,16 @@
   "description": "The Augmented.js 2 Framework.",
   "main": "index.js",
   "scripts": {
-    "test": "jasmine-node ./test --verbose",
-    "build": "browserify index.js -o ./dist/augmented2.js",
-    "docs": "jsdoc ./ -d ./jsdoc/ -R ./README.md -t ./node_modules/ink-docstrap/template/ -c ./jsdoc.conf.json"
+    "dev": "webpack-dev-server --inline --content-base ./ --env.dev",
+    "build": "webpack --env.prod",
+    "lint": "eslint index.js",
+    "start": "node index.js",
+    "setup": "npm install && npm run validate",
+    "validate": "npm-run-all lint test build",
+    "test": "mocha  --require babel-core/register",
+    "docs": "jsdoc ./ -d ./jsdoc/ -R ./README.md -t ./node_modules/ink-docstrap/template/ -c ./jsdoc.conf.json",
+    "test2": "jasmine-node ./test --verbose",
+    "build2": "browserify index.js -o ./dist/augmented2.js"
   },
   "repository": {
     "type": "git",
@@ -22,9 +29,25 @@
     "jsdoc": "^3.5.5",
     "ink-docstrap": "*",
     "jasmine-core": "^2.8.0",
-    "jasmine-node": "^2.0.0"
+    "jasmine-node": "^2.0.0",
+    "mocha": "^4.0.1",
+    "babel-core": "^6.13.2",
+    "babel-loader": "^6.2.4",
+    "babel-plugin-istanbul": "^1.0.3",
+    "babel-preset-es2015": "^6.13.2",
+    "babel-preset-stage-2": "^6.13.0",
+    "babel-register": "^6.11.6",
+    "eslint": "^3.2.2",
+    "eslint-config-kentcdodds": "^9.0.2",
+    "webpack": "^2.1.0",
+    "webpack-config-utils": "^2.0.0",
+    "webpack-dev-server": "^2.1.0",
+    "webpack-validator": "^2.2.7"
   },
-  "dependencies": {},
+  "dependencies": {
+    "expect": "^21.2.1",
+    "webpack-dev-middleware": "^1.12.2"
+  },
   "bugs": {
     "url": "https://github.com/Augmentedjs/augmented-next/issues"
   },
