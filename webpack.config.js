@@ -7,7 +7,7 @@ module.exports = env => {
   const {ifProd, ifNotProd} = getIfUtils(env)
 
   return validate({
-    entry: './index.js',
+    entry: './src/augmented.js',
     context: __dirname,
     output: {
       path: resolve(__dirname, './dist'),

@@ -1,5 +1,5 @@
 const expect = require("expect");
-import Augmented from '../index';
+import Augmented from '../src/augmented';
 
 describe("Given Augmented", () => {
 	it("is defined", () => {
@@ -22,7 +22,7 @@ describe("Given Augmented", () => {
 		expect(typeof Augmented.noConflict === "function").toBeTruthy();
 	});
 
-	xdescribe("Given an Augmented exec", () => {
+	describe("Given an Augmented exec", () => {
 		const object = { stuff: () => { return true; } };
 
 		it("is defined", () => {
@@ -40,128 +40,80 @@ describe("Given Augmented", () => {
 		});
 
 		it("can be created with options", () => {
-			var object = new Augmented.Object({stuff: "stuff"});
-
+			const object = new Augmented.Object({stuff: "stuff"});
 			expect(object.options.stuff).toEqual("stuff");
 		});
 
 		it("can be extended", () => {
-			var exObject = Augmented.Object.extend({stuff: "stuff"});
-			var object = new exObject();
+			const exObject = Augmented.Object.extend({stuff: "stuff"});
+			const object = new exObject();
 			expect(object.stuff).toEqual("stuff");
 		});
 	});
 
-	xdescribe("Given Augmented.isFunction", () => {
-		var o = {}, p = 123, f = () => { return true; };
-
-		it("is defined", () => {
-			expect(Augmented.isFunction).toBeDefined();
-		});
-
-		it("checks if object is an function", () => {
-			expect(Augmented.isFunction(o)).toBeFalsy();
-		});
-		it("checks if number is not an function", () => {
-			expect(Augmented.isFunction(p)).toBeFalsy();
-		});
-		it("checks if function is not an function", () => {
-			expect(Augmented.isFunction(f)).toBeTruthy();
-		});
-
-		it("returns true for a function call", () => {
-			var t = () => {};
-			expect(Augmented.isFunction(t)).toBeTruthy();
-		});
-
-		it("returns false for a string value", () => {
-			var t = "x";
-			expect(Augmented.isFunction(t)).toBeFalsy();
-		});
-
-		it("returns false for a property call", () => {
-			var t = { stuff: "stuff"};
-			expect(Augmented.isFunction(t.stuff)).toBeFalsy();
-		});
-
-		it("returns false for an Array", () => {
-			var t = [];
-			expect(Augmented.isFunction(t)).toBeFalsy();
-		});
-
-		it("returns false for an Object", () => {
-			var t = {};
-			expect(Augmented.isFunction(t)).toBeFalsy();
-		});
-
-		it("returns false for an Augmented.Object", () => {
-			var t = new Augmented.Object();
-			expect(Augmented.isFunction(t)).toBeFalsy();
-		});
-	});
-
-	xdescribe("Given Augmented.result", () => {
+	describe("Given Augmented.result", () => {
 		it("is defined", () => {
 			expect(Augmented.result).toBeDefined();
 		});
 
 		it("returns the function call", () => {
-			var t = { test: () => { return true; } };
+			const t = { test: () => { return true; } };
 			expect(Augmented.result(t, "test")).toBeTruthy();
 		});
 
 		it("returns the property", () => {
-			var t = { test: true };
+			const t = { test: true };
 			expect(Augmented.result(t, "test")).toBeTruthy();
 		});
-
 	});
 
-	xdescribe("Given Augmented Array", () => {
+	describe("Given Augmented Array", () => {
 		describe("Given Array.includes", () => {
 			it("can check if a string is included", () => {
-				var arr = ["x","y","z"];
+				const arr = ["x","y","z"];
 				expect(arr.includes("z")).toBeTruthy();
 			});
 			it("can check if a number is included", () => {
-				var arr = [1,2,3];
+				const arr = [1,2,3];
 				expect(arr.includes(2)).toBeTruthy();
 			});
 			it("can check if a number is not included", () => {
-				var arr = [1,2,3];
+				const arr = [1,2,3];
 				expect(arr.includes(5)).toBeFalsy();
 			});
 		});
-		describe("Given Array.has", () => {
+
+		xdescribe("Given arrayHas", () => {
 			it("can check if it has a string", () => {
-				var arr = ["x","y","z"];
+				const arr = ["x","y","z"];
 				expect(arr.has("z")).toBeTruthy();
 			});
 			it("can check if it has a number", () => {
-				var arr = [1,2,3];
+				const arr = [1,2,3];
 				expect(arr.has(2)).toBeTruthy();
 			});
 			it("can check if it does not have a number", () => {
-				var arr = [1,2,3];
+				const arr = [1,2,3];
 				expect(arr.has(5)).toBeFalsy();
 			});
 		});
+
 		describe("Given Array.find", () => {
-			var a = [{ "name": "Bubba", "id": 1 }, { "name": "Bill", "id": 2 }, { "name": "MonkeyBone", "id": 3 }], r = null, p = function(aa) { return (aa.id === 2); };
+			const a = [{ "name": "Bubba", "id": 1 }, { "name": "Bill", "id": 2 }, { "name": "MonkeyBone", "id": 3 }], p = function(aa) { return (aa.id === 2); };
 			it("checks if property is in an array", () => {
-				r = a.find(p);
+				const r = a.find(p);
 				expect(r).toEqual({ "name": "Bill", "id": 2 });
 			});
 
 			it("checks if property is not in an array", () => {
-				r = a.find(p);
+				const r = a.find(p);
 				expect(r).not.toEqual({ "name": "x", "id": 9 });
 			});
 		});
 	});
 
-	xdescribe("Given Augmented has", () => {
-		var o;
+	describe("Given Augmented has", () => {
+		let o;
 		beforeEach(() => {
 			o = { x: "", y: () => { return true; } };
 		});
@@ -179,8 +131,56 @@ describe("Given Augmented", () => {
 		});
 	});
 
-	xdescribe("Given Augmented isObject", () => {
-		var o = {}, p = 123, f = () => { return true; };
+	describe("Given Augmented.isFunction", () => {
+		const o = {}, p = 123, f = () => { return true; };
+
+		it("is defined", () => {
+			expect(Augmented.isFunction).toBeDefined();
+		});
+
+		it("checks if object is an function", () => {
+			expect(Augmented.isFunction(o)).toBeFalsy();
+		});
+		it("checks if number is not an function", () => {
+			expect(Augmented.isFunction(p)).toBeFalsy();
+		});
+		it("checks if function is not an function", () => {
+			expect(Augmented.isFunction(f)).toBeTruthy();
+		});
+
+		it("returns true for a function call", () => {
+			const t = () => {};
+			expect(Augmented.isFunction(t)).toBeTruthy();
+		});
+
+		it("returns false for a string value", () => {
+			const t = "x";
+			expect(Augmented.isFunction(t)).toBeFalsy();
+		});
+
+		it("returns false for a property call", () => {
+			const t = { stuff: "stuff"};
+			expect(Augmented.isFunction(t.stuff)).toBeFalsy();
+		});
+
+		it("returns false for an Array", () => {
+			const t = [];
+			expect(Augmented.isFunction(t)).toBeFalsy();
+		});
+
+		it("returns false for an Object", () => {
+			const t = {};
+			expect(Augmented.isFunction(t)).toBeFalsy();
+		});
+
+		xit("returns false for an Augmented.Object", () => {
+			const t = new Augmented.Object();
+			expect(Augmented.isFunction(t)).toBeFalsy();
+		});
+	});
+
+	describe("Given Augmented isObject", () => {
+		const o = {}, p = 123, f = () => { return true; };
 
 		it("checks if object is an object", () => {
 			expect(Augmented.isObject(o)).toBeTruthy();
@@ -193,8 +193,8 @@ describe("Given Augmented", () => {
 		});
 	});
 
-	xdescribe("Given Augmented isString", () => {
-		var o = {}, n = 123, p = "123", f = () => { return true; };
+	describe("Given Augmented isString", () => {
+		const o = {}, n = 123, p = "123", f = () => { return true; };
 
 		it("checks if object is a string", () => {
 			expect(Augmented.isString(o)).toBeFalsy();
@@ -209,8 +209,22 @@ describe("Given Augmented", () => {
 			expect(Augmented.isString(f)).toBeFalsy();
 		});
 		it("checks if a string ends with a set of characters", () => {
-			var file = "test.json";
+			const file = "test.json";
 			expect(file.endsWith(".json")).toBeTruthy();
+		});
+	});
+
+	describe("Given Augmented isDefined", () => {
+		const y = {}, n = undefined, nn = null;
+
+		it("checks if object is defined", () => {
+			expect(Augmented.isDefined(y)).toBeTruthy();
+		});
+		it("checks if undefined is not defined", () => {
+			expect(Augmented.isDefined(n)).toBeFalsy();
+		});
+		it("checks if null is defined", () => {
+			expect(Augmented.isDefined(nn)).toBeTruthy();
 		});
 	});
 });
