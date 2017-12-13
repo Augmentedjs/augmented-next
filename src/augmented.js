@@ -102,6 +102,14 @@ Augmented.allKeys = (obj) => {
   return Object.getOwnPropertyNames(obj);
 };
 
+
+const result = (prototype) => {
+  if (!Augmented.isObject(prototype)) {
+    return {};
+  }
+  return Object.create(prototype);
+};
+
 /**
  * Augmented.create
  * @method create
@@ -111,12 +119,11 @@ Augmented.allKeys = (obj) => {
  * @returns {object} Returns the created object
  */
 Augmented.create = (prototype, props) => {
-  const result = (prototype) => {
-    if (!Augmented.isObject(prototype)) return {};
-    return Object.create(prototype);
-  };
-  if (props) Object.assign(result, props);
-  return result;
+  const o = result(prototype);
+  if (props) {
+    Object.assign(o, props);
+  }
+  return o;
 };
 
 // Map from CRUD to HTTP for our default sync implementation.
@@ -221,23 +228,6 @@ Augmented.result = (object, property) => {
   return Augmented.isFunction(value) ? value.call(object) : value;
 };
 
-// Polyfills for ES6 functions
-if (!Number.isInteger) {
-  console.log("polyfill Number.isInteger");
-}
-
-if (!String.prototype.endsWith) {
-  console.log("polyfill String.endsWith");
-}
-
-if (!Array.prototype.find) {
-  console.log("polyfill Array.find");
-}
-
-if (!Array.prototype.includes) {
-  console.log("polyfill Array.includes");
-}
-
 /**
  * Array.has - returns is a property is in the array (very fast return)
  * @function Array.has
@@ -279,70 +269,6 @@ Augmented.exec = (functionName, context /*, args */) => {
 Augmented.isDefined = (val) => {
   return typeof val != "undefined";
 };
-
-const createAssigner = (keysFunc, undefinedOnly) => {
-  return (obj) => {
-    const length = arguments.length;
-    if (length < 2 || obj === null) {
-      return obj;
-    }
-    let index = 1, i = 0;
-    for (index = 1; index < length; index++) {
-      const source = arguments[index],
-            keys = keysFunc(source),
-            l = keys.length;
-      for (i = 0; i < l; i++) {
-        const key = keys[i];
-        if (!undefinedOnly || obj[key] === void 0) {
-          obj[key] = source[key];
-        }
-      }
-    }
-    return obj;
-  };
-};
-
-/**
- * Class Extend -
- * Helper function to correctly set up the prototype chain for subclasses.<br/>
- * Similar to `goog.inherits`, but uses a hash of prototype properties and
- * class properties to be extended.
- * @constructor Augmented.Utility.ClassExtend
- * @param {any} protoProps Properties from prototype
- * @param {any} staticProps Static Properties to add if provided
- * @memberof Augmented.Utility
- */
-Augmented.extend = (protoProps, staticProps) => {
-  const parent = this;
-  let child;
-
-  // The constructor function for the new subclass is either defined by you
-  // (the "constructor" property in your `extend` definition), or defaulted
-  // by us to simply call the parent constructor.
-  if (protoProps && Augmented.has(protoProps, "constructor")) {
-    child = protoProps.constructor;
-  } else {
-    child = () => {
-      return parent.apply(this, arguments);
-    };
-  }
-
-  // Add static properties to the constructor function, if supplied.
-  createAssigner(child, parent, staticProps);
-
-  // Set the prototype chain to inherit from `parent`, without calling
-  // `parent`'s constructor function and add the prototype properties.
-  child.prototype = Augmented.create(parent.prototype, protoProps);
-  child.prototype.constructor = child;
-
-  // Set a convenience property in case the parent's prototype is needed
-  // later.
-  child.__super__ = parent.prototype;
-
-  return child;
-};
-
-
 
 export default Augmented;
 

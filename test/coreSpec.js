@@ -17,9 +17,19 @@ describe("Given Augmented", () => {
 	it("has a release name defined", () => {
 		expect(Augmented.releasename).toBeDefined();
 	});
-
-	xit("supports noConflict", () => {
-		expect(typeof Augmented.noConflict === "function").toBeTruthy();
+	describe("Given ES6 or higher", () => {
+		it("has Number.isInteger", () => {
+			expect(Number.isInteger).toBeDefined();
+		});
+		it("has String.endsWith", () => {
+			expect(String.prototype.endsWith).toBeDefined();
+		});
+		it("has Array.find", () => {
+			expect(Array.prototype.find).toBeDefined();
+		});
+		it("has Array.includes", () => {
+			expect(Array.prototype.includes).toBeDefined();
+		});
 	});
 
 	describe("Given an Augmented exec", () => {
@@ -225,6 +235,36 @@ describe("Given Augmented", () => {
 		});
 		it("checks if null is defined", () => {
 			expect(Augmented.isDefined(nn)).toBeTruthy();
+		});
+	});
+
+	describe("Given Augmented allKeys", () => {
+		let o;
+		beforeEach(() => {
+			o = { x: "", y: () => { return true; } };
+		});
+		afterEach(() => {
+			o = null;
+		});
+		it("returns all keys", () => {
+			const k = Augmented.allKeys(o);
+
+			expect(k).toEqual(["x", "y"]);
+		});
+	});
+
+	describe("Given Augmented object create", () => {
+		let o;
+		beforeEach(() => {
+			o = { x: "", y: () => { return true; } };
+		});
+		afterEach(() => {
+			o = null;
+		});
+		it("can create an object", () => {
+			const k = Augmented.create(o, { "z": "z"});
+			expect(k).toBeDefined();
+			expect(k.z).toEqual("z");
 		});
 	});
 });
