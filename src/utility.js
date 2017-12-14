@@ -4,7 +4,6 @@
  * @namespace Augmented.Utility
  * @memberof Augmented
  */
-const Utility = {};
 
 /**
  * Shuffles an Array with Fisher-Yates Shuffle algorithm
@@ -13,7 +12,7 @@ const Utility = {};
  * @param {array} array The array to shuffle
  * @returns {array} A new shuffled array
  */
-Utility.Shuffle = (array) => {
+export const shuffle = (array) => {
   const nArray = array.slice(0), l = array.length;
   let i = 0, temp, j;
   for (i = l - 1; i > 0; i--) {
@@ -33,7 +32,7 @@ Utility.Shuffle = (array) => {
  * @param {boolean} spaces Use spaces instead of tabs
  * @returns {number} number The number of spaces to pad
  */
-Utility.PrettyPrint = (obj, spaces, number) => {
+export const prettyPrint = (obj, spaces, number) => {
   let x = "\t";
   if (spaces) {
     x = " ".repeat(number);
@@ -49,7 +48,7 @@ Utility.PrettyPrint = (obj, spaces, number) => {
  * @param {object} key The property to sort by
  * @returns {array} The sorted array
  */
-Utility.Sort = (array, key) => {
+export const sort = (array, key) => {
   return array.sort( (a, b) => {
     const x = a[key], y = b[key];
     return ((x < y) ? -1 : ((x > y) ? 1 : 0));
@@ -66,7 +65,7 @@ Utility.Sort = (array, key) => {
  * @param {function} comparator The comparator to use
  * @returns {Number} The index of the element which defaults to -1 when not found.
  */
-Utility.BinarySearch = (arr, find, comparator) => {
+export const binarySearch = (arr, find, comparator) => {
   let low = 0, high = arr.length - 1, i, comparison;
 
   while (low <= high) {
@@ -90,7 +89,7 @@ Utility.BinarySearch = (arr, find, comparator) => {
  * @param {Array} arr Array to Sort
  * @returns {Array} Returns a sorted array
  */
-const quickSort = Utility.QuickSort = (arr) => {
+export const quickSort = (arr) => {
   //if array is empty
   if (arr.length === 0) {
     return [];
@@ -123,23 +122,14 @@ const quickSort = Utility.QuickSort = (arr) => {
  * @property {Symbol} Object Any Object
  * @property {Symbol} Null Null
  */
-/*Utility.TransformerType = {
-  "xString": 0,
-  "xInteger": 1,
-  "xNumber": 2,
-  "xBoolean": 3,
-  "xArray": 4,
-  "xObject": 5,
-  "xNull": 6
-};*/
-Utility.TransformerType = {};
-Utility.TransformerType.STRING = Symbol("String");
-Utility.TransformerType.INTEGER = Symbol("Integer");
-Utility.TransformerType.NUMBER = Symbol("Number");
-Utility.TransformerType.BOOLEAN = Symbol("Boolean");
-Utility.TransformerType.ARRAY = Symbol("Array");
-Utility.TransformerType.OBJECT = Symbol("Object");
-Utility.TransformerType.NULL = Symbol("Null");
+export const TransformerType = {};
+TransformerType.STRING = Symbol("String");
+TransformerType.INTEGER = Symbol("Integer");
+TransformerType.NUMBER = Symbol("Number");
+TransformerType.BOOLEAN = Symbol("Boolean");
+TransformerType.ARRAY = Symbol("Array");
+TransformerType.OBJECT = Symbol("Object");
+TransformerType.NULL = Symbol("Null");
 
 /**
  * Augmented.Utility.Transformer <br/>
@@ -147,7 +137,7 @@ Utility.TransformerType.NULL = Symbol("Null");
  * @namespace Augmented.Utility.Transformer
  * @memberof Augmented.Utility
  */
-class Transformer {
+export class Transformer {
   constructor() {
   }
 
@@ -157,7 +147,7 @@ class Transformer {
    * @type {Augmented.Utility.TransformerType}
    * @memberof Augmented.Utility.Transformer
    */
-  static type = Utility.TransformerType;
+  static type = TransformerType;
 
   /**
    * Transform an object, primitive, or array to another object, primitive, or array
@@ -170,23 +160,23 @@ class Transformer {
   static transform(source, type) {
     let out = null;
     switch(type) {
-      case Utility.TransformerType.xString:
+      case TransformerType.STRING:
       if (typeof source === 'object') {
         out = JSON.stringify(source);
       } else {
         out = String(source);
       }
       break;
-      case Utility.TransformerType.INTEGER:
+      case TransformerType.INTEGER:
       out = parseInt(source);
       break;
-      case Utility.TransformerType.NUMBER:
+      case TransformerType.NUMBER:
       out = Number(source);
       break;
-      case Utility.TransformerType.BOOLEAN:
+      case TransformerType.BOOLEAN:
       out = Boolean(source);
       break;
-      case Utility.TransformerType.ARRAY:
+      case TransformerType.ARRAY:
       if (!Array.isArray(source)) {
         out = [];
         out[0] = source;
@@ -194,7 +184,7 @@ class Transformer {
         out = source;
       }
       break;
-      case Utility.TransformerType.OBJECT:
+      case TransformerType.OBJECT:
       if (typeof source !== 'object') {
         out = {};
         out[source] = source;
@@ -215,29 +205,27 @@ class Transformer {
    */
   static isType(source) {
     if (source === null) {
-      return Utility.TransformerType.NULL;
+      return TransformerType.NULL;
     } else if (typeof source === 'string') {
-      return Utility.TransformerType.STRING;
+      return TransformerType.STRING;
     } else if (typeof source === 'number') {
-      return Utility.TransformerType.NUMBER;
+      return TransformerType.NUMBER;
     } else if (typeof source === 'boolean') {
-      return Utility.TransformerType.BOOLEAN;
+      return TransformerType.BOOLEAN;
     } else if (Array.isArray(source)) {
-      return Utility.TransformerType.ARRAY;
+      return TransformerType.ARRAY;
     } else if (typeof source === 'object') {
-      return Augmented.Utility.TransformerType.xObject;
+      return TransformerType.OBJECT;
     }
   }
 };
-
-Utility.Transformer = Transformer;
 
 /**
  * Wrap method to handle wrapping functions (simular to _.wrap)
  * @method wrap
  * @memberof Augmented.Utility
  */
-Utility.wrap = (fn, wrap) => {
+export const wrap = (fn, wrap) => {
   return () => {
     return wrap.apply(this, [fn].concat(Array.prototype.slice.call(arguments)));
   };
@@ -252,7 +240,7 @@ Utility.wrap = (fn, wrap) => {
  * @returns {object} returns a new object with only these keys
  * @memberof Augmented.Utility
  */
-Utility.filterObject = (object, keys) => {
+export const filterObject = (object, keys) => {
   const newObject = {};
   if (object && keys) {
     const l = keys.length;
@@ -264,4 +252,13 @@ Utility.filterObject = (object, keys) => {
   return newObject;
 };
 
-export default Utility;
+export const pad = (p, str, padLeft) => {
+  if (typeof str === "undefined") {
+    return p;
+  }
+  if (padLeft) {
+    return (p + str).slice(-p.length);
+  } else {
+    return (p + pad).substring(0, p.length);
+  }
+};

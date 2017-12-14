@@ -1,4 +1,5 @@
 import Utility from "./utility";
+import Logger from "./logger";
 
 /**
  * Augmented.js 2 - The Core UI Component and package
@@ -11,6 +12,7 @@ import Utility from "./utility";
  */
 const Augmented = {};
 Augmented.Utility = Utility;
+Augmented.Logger = Logger;
 
 /**
  * The standard version property

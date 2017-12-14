@@ -1,5 +1,5 @@
 const expect = require("expect");
-import Augmented from '../src/augmented';
+import Augmented from "../src/augmented";
 
 describe("Given Augmented", () => {
 	it("is defined", () => {
