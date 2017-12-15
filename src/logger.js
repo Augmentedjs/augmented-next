@@ -1,9 +1,19 @@
-import pad from "./utility";
 /**
  * A Logger package
  * @namespace Augmented.Logger
  * @memberof Augmented
  */
+
+const pad = (p, str, padLeft) => {
+  if (typeof str === "undefined") {
+    return p;
+  }
+  if (padLeft) {
+    return (p + str).slice(-p.length);
+  } else {
+    return (p + pad).substring(0, p.length);
+  }
+};
 
 /**
  * Augmented.Logger.Type
@@ -65,23 +75,25 @@ class AbstractLogger {
    * @memberof AbstractLogger
    * @param {string} message The message to log
    * @param {Augmented.Logger.Level} level The level of the log message
+   * @returns {string} The message
    */
   log(message, level) {
+    let m = "";
     if (message) {
       if (!level) {
         level = Level.INFO;
       }
-
       if (this.loggerLevel === Level.DEBUG && level === Level.DEBUG) {
-        this.logMe(`${this._getLogTime()}${this.OPEN_GROUP}DEBUG${this.CLOSE_GROUP}${message}`, level);
+        m = this._logMe(`${this._getLogTime()}${this.OPEN_GROUP}DEBUG${this.CLOSE_GROUP}${message}`, level);
       } else if (level === Level.ERROR) {
-        this.logMe(`${this._getLogTime()}${this.OPEN_GROUP}ERROR${this.CLOSE_GROUP}${message}`, level);
+        m = this._logMe(`${this._getLogTime()}${this.OPEN_GROUP}ERROR${this.CLOSE_GROUP}${message}`, level);
       } else if (level === Level.WARN) {
-        this.logMe(`${this._getLogTime()}${this.OPEN_GROUP}WARN ${this.CLOSE_GROUP}${message}`, level);
+        m = this._logMe(`${this._getLogTime()}${this.OPEN_GROUP}WARN ${this.CLOSE_GROUP}${message}`, level);
       } else if (this.loggerLevel === Level.DEBUG || this.loggerLevel === Level.INFO) {
-        this.logMe(`${this._getLogTime()}${this.OPEN_GROUP}INFO ${this.CLOSE_GROUP}${message}`, level);
+        m = this._logMe(`${this._getLogTime()}${this.OPEN_GROUP}INFO ${this.CLOSE_GROUP}${message}`, level);
       }
     }
+    return m;
   };
 
   /**
@@ -129,10 +141,11 @@ class AbstractLogger {
    * override this in an instance
    * @example _logMe(message, level) { ... };
    * @method _logMe
-   * @private
-   * @memberof AbstractLogger
    * @param {string} message The message to log
    * @param {string} level The level to log to
+   * @returns {string} The message
+   * @memberof AbstractLogger
+   * @private
    */
    _logMe(message, level) {};
 };
@@ -153,6 +166,7 @@ class ConsoleLogger extends AbstractLogger {
     } else {
       console.log(message);
     }
+    return message;
   };
 };
 

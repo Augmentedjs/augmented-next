@@ -42,13 +42,13 @@ export const prettyPrint = (obj, spaces, number) => {
 
 /**
  * Sorts an array of objects by propery in object
- * @constructor Augmented.Utility.Sort
+ * @constructor Augmented.Utility.sortObjects
  * @memberof Augmented.Utility
  * @param {array} array The object array to sort
  * @param {object} key The property to sort by
  * @returns {array} The sorted array
  */
-export const sort = (array, key) => {
+export const sortObjects = (array, key) => {
   return array.sort( (a, b) => {
     const x = a[key], y = b[key];
     return ((x < y) ? -1 : ((x > y) ? 1 : 0));
@@ -252,13 +252,17 @@ export const filterObject = (object, keys) => {
   return newObject;
 };
 
-export const pad = (p, str, padLeft) => {
-  if (typeof str === "undefined") {
-    return p;
+export const extend = (...args) => {
+  let i = 0;
+  const l = args.length;
+  console.log("length", l);
+  for (i = 1; i < l; i++) {
+    let key;
+    for(key in args[i]) {
+      if(args[i].hasOwnProperty(key)) {
+        args[0][key] = args[i][key];
+      }
+    }
   }
-  if (padLeft) {
-    return (p + str).slice(-p.length);
-  } else {
-    return (p + pad).substring(0, p.length);
-  }
+  return args[0];
 };

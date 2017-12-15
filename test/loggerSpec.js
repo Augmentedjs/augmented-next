@@ -1,37 +1,67 @@
 const expect = require("expect");
-import * as Logger from "../src/logger";
+import Augmented from "../src/augmented";
 
 describe("Given a logger factory", () => {
 	it("is defined", () => {
-		expect(Logger.LoggerFactory).toBeDefined();
+		expect(Augmented.Logger.LoggerFactory).toBeDefined();
 	});
 
 	describe("Given a console logger", () => {
 		let logger = null;
 		beforeEach(() => {
-			logger = Logger.LoggerFactory.getLogger(Logger.Type.CONSOLE, Logger.Level.DEBUG);
+			logger = Augmented.Logger.LoggerFactory.getLogger(Augmented.Logger.Type.CONSOLE, Augmented.Logger.Level.DEBUG);
 		});
 
 		afterEach(() => {
 			logger = null;
 		});
 
-		it("can request a console logger", () => {
+		it("can request a logger", () => {
 			expect(logger).toBeDefined();
 		});
 
 		it("can log info", () => {
-			logger.info("xx");
-			expect(logger).toBeDefined();
+			const m = logger.info("xx");
+			expect(m).not.toEqual("");
 		});
 
 		it("can log debug", () => {
-			logger.debug("xx");
-			expect(logger).toBeDefined();
+			const m = logger.debug("xx");
+			expect(m).not.toEqual("");
 		});
 
 		it("can log warn", () => {
-			logger.warn("xx");
+			const m = logger.warn("xx");
+			expect(m).not.toEqual("");
+		});
+	});
+
+	describe("Given a color console logger", () => {
+		let logger = null;
+		beforeEach(() => {
+			logger = Augmented.Logger.LoggerFactory.getLogger(Augmented.Logger.Type.COLOR_CONSOLE, Augmented.Logger.Level.DEBUG);
+		});
+
+		afterEach(() => {
+			logger = null;
+		});
+
+		it("can request a logger", () => {
+			expect(logger).toBeDefined();
+		});
+	});
+
+	describe("Given a REST logger", () => {
+		let logger = null;
+		beforeEach(() => {
+			logger = Augmented.Logger.LoggerFactory.getLogger(Augmented.Logger.Type.REST, Augmented.Logger.Level.DEBUG);
+		});
+
+		afterEach(() => {
+			logger = null;
+		});
+
+		it("can request a logger", () => {
 			expect(logger).toBeDefined();
 		});
 	});

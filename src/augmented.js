@@ -1,5 +1,5 @@
-import Utility from "./utility";
-import Logger from "./logger";
+import * as Utility from "./utility";
+import * as Logger from "./logger";
 
 /**
  * Augmented.js 2 - The Core UI Component and package
