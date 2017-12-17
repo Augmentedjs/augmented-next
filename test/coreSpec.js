@@ -44,23 +44,6 @@ describe("Given Augmented", () => {
 		});
 	});
 
-	xdescribe("Given an Augmented Object", () => {
-		it("is defined", () => {
-			expect(Augmented.Object).toBeDefined();
-		});
-
-		it("can be created with options", () => {
-			const object = new Augmented.Object({stuff: "stuff"});
-			expect(object.options.stuff).toEqual("stuff");
-		});
-
-		it("can be extended", () => {
-			const exObject = Augmented.Object.extend({stuff: "stuff"});
-			const object = new exObject();
-			expect(object.stuff).toEqual("stuff");
-		});
-	});
-
 	describe("Given Augmented.result", () => {
 		it("is defined", () => {
 			expect(Augmented.result).toBeDefined();
@@ -77,8 +60,9 @@ describe("Given Augmented", () => {
 		});
 	});
 
-	describe("Given Augmented Array", () => {
-		describe("Given Array.includes", () => {
+	describe("Given arrays", () => {
+
+		describe("Given ES6 Array.includes", () => {
 			it("can check if a string is included", () => {
 				const arr = ["x","y","z"];
 				expect(arr.includes("z")).toBeTruthy();
@@ -93,22 +77,22 @@ describe("Given Augmented", () => {
 			});
 		});
 
-		xdescribe("Given arrayHas", () => {
+		describe("Given arrayHas", () => {
 			it("can check if it has a string", () => {
 				const arr = ["x","y","z"];
-				expect(arr.has("z")).toBeTruthy();
+				expect(Augmented.arrayHas(arr, "z")).toBeTruthy();
 			});
 			it("can check if it has a number", () => {
 				const arr = [1,2,3];
-				expect(arr.has(2)).toBeTruthy();
+				expect(Augmented.arrayHas(arr, 2)).toBeTruthy();
 			});
 			it("can check if it does not have a number", () => {
 				const arr = [1,2,3];
-				expect(arr.has(5)).toBeFalsy();
+				expect(Augmented.arrayHas(arr, 5)).toBeFalsy();
 			});
 		});
 
-		describe("Given Array.find", () => {
+		describe("Given ES6 Array.find", () => {
 			const a = [{ "name": "Bubba", "id": 1 }, { "name": "Bill", "id": 2 }, { "name": "MonkeyBone", "id": 3 }], p = function(aa) { return (aa.id === 2); };
 			it("checks if property is in an array", () => {
 				const r = a.find(p);

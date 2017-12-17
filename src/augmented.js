@@ -1,5 +1,6 @@
 import * as Utility from "./utility";
 import * as Logger from "./logger";
+import AugmentedObject from "./object.js";
 
 /**
  * Augmented.js 2 - The Core UI Component and package
@@ -13,6 +14,7 @@ import * as Logger from "./logger";
 const Augmented = {};
 Augmented.Utility = Utility;
 Augmented.Logger = Logger;
+Augmented.Object = AugmentedObject;
 
 /**
  * The standard version property
@@ -232,13 +234,14 @@ Augmented.result = (object, property) => {
 
 /**
  * Array.has - returns is a property is in the array (very fast return)
- * @function Array.has
- * @memberof Array
+ * @function arrayhas
+ * @memberof Augmented
+ * @param {array} arr Source array
  * @param {object} key Key to test for
  * @returns true if property is included in an array
  */
-Augmented.arrayHas = (key) => {
-  return (this.indexOf(key) !== -1);
+Augmented.arrayHas = (arr, key) => {
+  return (arr.indexOf(key) !== -1);
 };
 
 /**
