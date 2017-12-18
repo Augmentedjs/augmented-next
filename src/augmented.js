@@ -1,6 +1,9 @@
 import * as Utility from "./utility";
 import * as Logger from "./logger";
 import AugmentedObject from "./object.js";
+import AugmentedMap from "./map.js";
+import isString from "./isString.js";
+import Stack from "./stack.js";
 
 /**
  * Augmented.js 2 - The Core UI Component and package
@@ -13,6 +16,8 @@ import AugmentedObject from "./object.js";
  */
 const Augmented = {};
 Augmented.Utility = Utility;
+Augmented.Utility.Map = AugmentedMap;
+Augmented.Utility.Stack = Stack;
 Augmented.Logger = Logger;
 Augmented.Object = AugmentedObject;
 
@@ -207,17 +212,8 @@ Augmented.isFunction = (name) => {
   return Object.prototype.toString.call(name) == "[object Function]";
 };
 
-/**
- * Augmented.isString -
- * checks if a value is a String
- * @method isString
- * @memberof Augmented
- * @param {string} variable to check
- * @returns {boolean} true if value is a string
- */
-Augmented.isString = (val) => {
-  return (typeof val === "string") || ((!!val && typeof val === "object") && Object.prototype.toString.call(val) === "[object String]");
-};
+// imported
+Augmented.isString = isString;
 
 /**
 * Augmented.result - returns named property in an object

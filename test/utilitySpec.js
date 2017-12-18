@@ -56,18 +56,6 @@ describe("Given Utilities", () => {
 		});
 	});
 
-	xdescribe("Given Augmented Class Extend", () => {
-		it("Extends a class object", () => {
-			var x = Augmented.Model.extend({ x: "", url: "/" });
-			var y = Augmented.Utility.ClassExtend(Augmented.Model, { x: "", url: "/" });
-			var xx = new x();
-			var yy = new y();
-
-			expect(x.x).toEqual(y.x);
-			expect(x.url).toEqual(y.url);
-		});
-	});
-
 	describe("Given wrap", () => {
 		const f = () => {};
 		it("can wrap functions", () => {
@@ -86,6 +74,24 @@ describe("Given Utilities", () => {
 		});
 	});
 
-	// Transformer
-	// filter
+	describe("Given filterObject", () => {
+		let o;
+    beforeEach(() => {
+			o = { "this": "this", "is": "is", "an": "an", "object": "object" };
+		});
+
+		afterEach(() => {
+			o = null;
+		});
+
+		it("can filter objects to one key", () => {
+			const x = Augmented.Utility.filterObject(o, ["object"]);
+			expect(x).toEqual({"object": "object"});
+		});
+
+		it("can filter objects to multiple keys", () => {
+			const x = Augmented.Utility.filterObject(o, ["object", "is"]);
+			expect(x).toEqual({"is": "is", "object": "object"});
+		});
+	});
 });

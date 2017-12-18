@@ -161,7 +161,7 @@ export class Transformer {
     let out = null;
     switch(type) {
       case TransformerType.STRING:
-      if (typeof source === 'object') {
+      if (typeof source === "object") {
         out = JSON.stringify(source);
       } else {
         out = String(source);
@@ -185,7 +185,7 @@ export class Transformer {
       }
       break;
       case TransformerType.OBJECT:
-      if (typeof source !== 'object') {
+      if (typeof source !== "object") {
         out = {};
         out[source] = source;
       } else {
@@ -206,15 +206,15 @@ export class Transformer {
   static isType(source) {
     if (source === null) {
       return TransformerType.NULL;
-    } else if (typeof source === 'string') {
+    } else if (typeof source === "string") {
       return TransformerType.STRING;
-    } else if (typeof source === 'number') {
+    } else if (typeof source === "number") {
       return TransformerType.NUMBER;
-    } else if (typeof source === 'boolean') {
+    } else if (typeof source === "boolean") {
       return TransformerType.BOOLEAN;
     } else if (Array.isArray(source)) {
       return TransformerType.ARRAY;
-    } else if (typeof source === 'object') {
+    } else if (typeof source === "object") {
       return TransformerType.OBJECT;
     }
   }
@@ -255,7 +255,6 @@ export const filterObject = (object, keys) => {
 export const extend = (...args) => {
   let i = 0;
   const l = args.length;
-  console.log("length", l);
   for (i = 1; i < l; i++) {
     let key;
     for(key in args[i]) {

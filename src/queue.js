@@ -5,7 +5,9 @@
 * @param {number} timeout The timout period for each process in the queue (optional)
 * @memberof Augmented.Utility
 */
-Augmented.Utility.AsynchronousQueue = function(timeout) {
+class AsynchronousQueue {
+  constructor(timeout) {
+  }
   var to = (timeout) ? timeout : Augmented.Configuration.AsynchronousQueueTimeout;
   this.queue = {};
 

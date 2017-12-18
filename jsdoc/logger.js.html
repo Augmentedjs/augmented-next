@@ -1,0 +1,432 @@
+<!-- start:source.tmpl.hbs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+		<title>logger.js</title>
+		<link rel="icon" type="image/png" href="favicon.png"/>
+		<!--[if lt IE 9]>
+		<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+		<link href="https://fonts.googleapis.com/css?family=PT+Mono" rel="stylesheet">
+		<link type="text/css" rel="stylesheet" href="css/bootstrap.min.css">
+		<link type="text/css" rel="stylesheet" href="css/prism.min.css">
+		<link type="text/css" rel="stylesheet" href="css/template.min.css">
+			<style>
+				.page-header,
+				pre.code-toolbar > .toolbar:hover {
+					background-color: #2196F3;
+				}
+				.callout-primary,
+				.toc .nav > li > a:hover,
+				.toc .nav > li > a:focus,
+				.toc .nav > li.active > a,
+				.toc .nav > li.active > a:hover,
+				.toc .nav > li.active > a:focus,
+				pre.code-toolbar > .toolbar:hover {
+					border-left-color: #2196F3;
+				}
+				pre.code-toolbar > .toolbar:hover {
+					border-bottom-color: #2196F3;
+				}
+				.callout-primary h5,
+				.symbol-title.collapsible-symbol .toggle-icon,
+				.breadcrumb li a,
+				.toc .nav > li > a:hover,
+				.toc .nav > li > a:focus,
+				.toc .nav > li.active > a,
+				.toc .nav > li.active > a:hover,
+				.toc .nav > li.active > a:focus {
+					color: #2196F3;
+				}
+			</style>
+		<script type="text/javascript">
+			window.TEMPLATE_OPTIONS = {"includeDate":true,"dateFormat":"ddd MMM Do YYYY","systemName":"Augmented.js","systemSummary":"Augmented.js 2 - Elegant Developement made simple.","systemLogo":"img/logo.png","systemColor":"#2196F3","navMembers":[{"kind":"class","title":"Classes","summary":"All documented classes."},{"kind":"external","title":"Externals","summary":"All documented external members."},{"kind":"global","title":"Globals","summary":"All documented globals."},{"kind":"mixin","title":"Mixins","summary":"All documented mixins."},{"kind":"interface","title":"Interfaces","summary":"All documented interfaces."},{"kind":"module","title":"Modules","summary":"All documented modules."},{"kind":"namespace","title":"Namespaces","summary":"All documented namespaces."},{"kind":"tutorial","title":"Tutorials","summary":"All available tutorials."}],"footer":"<a href='http://www.augmentedjs.com'>Augmented.js Homepage</a>","copyright":"","linenums":true,"collapseSymbols":false,"inverseNav":true,"inlineNav":false,"outputSourceFiles":true,"sourceRootPath":null,"disablePackagePath":true,"outputSourcePath":true,"showTableOfContents":true,"showAccessFilter":true,"analytics":null,"methodHeadingReturns":false,"sort":"linenum, longname, version, since","search":true,"favicon":"favicon.png","stylesheets":[],"scripts":[],"monospaceLinks":false,"cleverLinks":false,"logoFile":"images/logo.png","navType":"vertical","protocol":"html://"};
+			window.DOCLET_TOC_ENABLED = false;
+			window.DOCLET_AFILTER_ENABLED = false;
+		</script>
+</head>
+<body>
+	<!-- start:navbar.hbs -->
+	<header class="navbar navbar-default navbar-fixed-top navbar-inverse">
+		<div class="container">
+			<div class="navbar-header">
+				<a class="navbar-brand branding-logo" href="index.html" style="background-image: url(img/logo.png);">
+					Augmented.js
+				</a>
+				<!-- displayed on small devices -->
+				<button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#topNavigation">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+			</div>
+			<div class="navbar-collapse collapse" id="topNavigation">
+				<ul class="nav navbar-nav">
+							<li class="dropdown">
+								<a href="list_class.html" class="dropdown-toggle" data-toggle="dropdown">Classes<b class="caret"></b></a>
+								<ul class="dropdown-menu">
+										<li><a href="AbstractSecurityClient.html">AbstractSecurityClient</a></li>
+										<li><a href="Augmented.AbstractLocalStorage.html">Augmented.AbstractLocalStorage</a></li>
+										<li><a href="Augmented.AbstractLogger.html">Augmented.AbstractLogger</a></li>
+										<li><a href="Augmented.Application.html">Augmented.Application</a></li>
+										<li><a href="Augmented.Collection.html">Augmented.Collection</a></li>
+										<li><a href="Augmented.History_.html">Augmented.History</a></li>
+										<li><a href="Augmented.history.html">Augmented.history</a></li>
+										<li><a href="Augmented.LocalStorageCollection.html">Augmented.LocalStorageCollection</a></li>
+										<li><a href="Augmented.Model.html">Augmented.Model</a></li>
+										<li><a href="Augmented.Object.html">Augmented.Object</a></li>
+										<li><a href="Augmented.PaginatedCollection.html">Augmented.PaginatedCollection</a></li>
+										<li><a href="Augmented.Router.html">Augmented.Router</a></li>
+										<li><a href="Augmented.Security.Client.ACLClient.html">Augmented.Security.Client.ACLClient</a></li>
+										<li><a href="Augmented.Security.Client.OAUTH2Client.html">Augmented.Security.Client.OAUTH2Client</a></li>
+										<li><a href="Augmented.Security.Context.html">Augmented.Security.Context</a></li>
+										<li><a href="Augmented.Security.Entry.html">Augmented.Security.Entry</a></li>
+										<li><a href="Augmented.Utility.AsynchronousQueue.html">Augmented.Utility.AsynchronousQueue</a></li>
+										<li><a href="Augmented.Utility.AugmentedMap.html">Augmented.Utility.AugmentedMap</a></li>
+										<li><a href="Augmented.Utility.BinarySearch.html">Augmented.Utility.BinarySearch</a></li>
+										<li><a href="Augmented.Utility.Map.html">Augmented.Utility.Map</a></li>
+										<li><a href="Augmented.Utility.PrettyPrint.html">Augmented.Utility.PrettyPrint</a></li>
+										<li><a href="Augmented.Utility.QuickSort.html">Augmented.Utility.QuickSort</a></li>
+										<li><a href="Augmented.Utility.SchemaGenerator.html">Augmented.Utility.SchemaGenerator</a></li>
+										<li><a href="Augmented.Utility.Shuffle.html">Augmented.Utility.Shuffle</a></li>
+										<li><a href="Augmented.Utility.sortObjects.html">Augmented.Utility.sortObjects</a></li>
+										<li><a href="Augmented.Utility.Stack.html">Augmented.Utility.Stack</a></li>
+										<li><a href="Augmented.ValidationFramework.html">Augmented.ValidationFramework</a></li>
+										<li><a href="Augmented.View.html">Augmented.View</a></li>
+								</ul>
+							</li>
+							<li class="dropdown">
+								<a href="list_module.html" class="dropdown-toggle" data-toggle="dropdown">Modules<b class="caret"></b></a>
+								<ul class="dropdown-menu">
+										<li><a href="Augmented.module_$.html">Augmented.$</a></li>
+										<li><a href="Augmented.module__.html">Augmented._</a></li>
+										<li><a href="module-Augmented.html">Augmented</a></li>
+								</ul>
+							</li>
+							<li class="dropdown">
+								<a href="list_namespace.html" class="dropdown-toggle" data-toggle="dropdown">Namespaces<b class="caret"></b></a>
+								<ul class="dropdown-menu">
+										<li><a href="Augmented.Ajax.html">Augmented.Ajax</a></li>
+										<li><a href="Augmented.Ajax.Configuration.html">Augmented.Ajax.Configuration</a></li>
+										<li><a href="Augmented.LocalStorageFactory.html">Augmented.LocalStorageFactory</a></li>
+										<li><a href="Augmented.Logger.html">Augmented.Logger</a></li>
+										<li><a href="Augmented.Logger.LoggerFactory.html">Augmented.Logger.LoggerFactory</a></li>
+										<li><a href="Augmented.PaginationFactory.html">Augmented.PaginationFactory</a></li>
+										<li><a href="Augmented.Security.html">Augmented.Security</a></li>
+										<li><a href="Augmented.Security.AuthenticationFactory.html">Augmented.Security.AuthenticationFactory</a></li>
+										<li><a href="Augmented.Security.Client.html">Augmented.Security.Client</a></li>
+										<li><a href="Augmented.Security.Principal.html">Augmented.Security.Principal</a></li>
+										<li><a href="Augmented.Utility.html">Augmented.Utility</a></li>
+										<li><a href="Augmented.Utility.BundleObject.html">Augmented.Utility.BundleObject</a></li>
+										<li><a href="Augmented.Utility.MessageKeyFormatter.html">Augmented.Utility.MessageKeyFormatter</a></li>
+										<li><a href="Augmented.Utility.MessageReader.html">Augmented.Utility.MessageReader</a></li>
+										<li><a href="Augmented.Utility.ResourceBundle.html">Augmented.Utility.ResourceBundle</a></li>
+										<li><a href="Augmented.Utility.Transformer.html">Augmented.Utility.Transformer</a></li>
+								</ul>
+							</li>
+				</ul>
+					<!-- start:lunr-search-navbar.hbs -->
+					<form class="navbar-form navbar-right" role="search">
+						<div class="input-group">
+							<input type="text" class="form-control" placeholder="Search" id="lunr-search-input">
+							<div class="input-group-btn">
+								<button class="btn btn-default" id="lunr-search-submit">
+									<i class="glyphicon glyphicon-search"></i>
+								</button>
+							</div>
+						</div>
+					</form>
+					<!-- start:lunr-search-navbar.hbs -->		</div>
+		</div>
+	</header>
+	<!-- end:navbar.hbs -->		<div class="page-header">
+			<div class="container">
+				<span class="kind">source</span>
+				<h1><span class="name">logger.js</span></h1>
+			</div>
+		</div>
+	<div class="container content">
+		<div class="row">
+			<div class="col-md-12 main-content">
+		<section class="source-section">
+			<article></article>
+			<pre class="prettyprint source language-javascript line-numbers"><code class="language-javascript">/**
+ * A Logger package
+ * @namespace Augmented.Logger
+ * @memberof Augmented
+ */
+
+const pad = (p, str, padLeft) => {
+  if (typeof str === "undefined") {
+    return p;
+  }
+  if (padLeft) {
+    return (p + str).slice(-p.length);
+  } else {
+    return (p + pad).substring(0, p.length);
+  }
+};
+
+/**
+ * Augmented.Logger.Type
+ * @name Augmented.Logger.Type
+ * @enum {Symbol}
+ * @memberof Augmented.Logger
+ * @property {Symbol} CONSOLE The console logger (HTML5 console)
+ * @property {Symbol} COLOR_CONSOLE The color console logger (HTML5 console)
+ * @property {Symbol} REST A REST-based logger
+ * @memberof Augmented.Logger
+ */
+export const Type = {};
+Type.CONSOLE = Symbol("console");
+Type.COLOR_CONSOLE = Symbol("colorConsole");
+Type.REST = Symbol("rest");
+
+/**
+ * Augmented.Logger.Level
+ * @name Augmented.Logger.Level
+ * @enum {Symbol}
+ * @property {Symbol} INFO The Info level
+ * @property {Symbol} DEBUG The debug level
+ * @property {Symbol} ERROR The error level
+ * @property {Symbol} WARN The warning level
+ * @memberof Augmented.Logger
+ */
+export const Level = {};
+Level.INFO = Symbol("info");
+Level.DEBUG = Symbol("debug");
+Level.ERROR = Symbol("error");
+Level.WARN = Symbol("warn");
+
+/**
+ * Augmented Abstract Logger
+ * @constructor Augmented.AbstractLogger
+ * @param {Augmented.Logger.Level} l The level to initialize the logger with
+ * @abstract
+ * @memberof Augmented
+ */
+class AbstractLogger {
+  constructor(l) {
+    this.loggerLevel = (l) ? l : Level.INFO;
+  };
+  TIME_SEPERATOR = ":";
+  DATE_SEPERATOR = "-";
+  OPEN_GROUP = " [ ";
+  CLOSE_GROUP = " ] ";
+  label = Level;
+
+  _getLogTime() {
+    const now = new Date();
+    const s = `${now.getFullYear()}${this.DATE_SEPERATOR}${(now.getMonth() + 1)}${this.DATE_SEPERATOR}${now.getDate()} ${now.getHours()}${this.TIME_SEPERATOR}${now.getMinutes()}${this.TIME_SEPERATOR}${now.getSeconds()}${this.TIME_SEPERATOR}${now.getMilliseconds()}`;
+    return pad("                        ", s, false);
+  };
+
+  /**
+   * log a message
+   * @method log
+   * @memberof AbstractLogger
+   * @param {string} message The message to log
+   * @param {Augmented.Logger.Level} level The level of the log message
+   * @returns {string} The message
+   */
+  log(message, level) {
+    let m = "";
+    if (message) {
+      if (!level) {
+        level = Level.INFO;
+      }
+      if (this.loggerLevel === Level.DEBUG &amp;&amp; level === Level.DEBUG) {
+        m = this._logMe(`${this._getLogTime()}${this.OPEN_GROUP}DEBUG${this.CLOSE_GROUP}${message}`, level);
+      } else if (level === Level.ERROR) {
+        m = this._logMe(`${this._getLogTime()}${this.OPEN_GROUP}ERROR${this.CLOSE_GROUP}${message}`, level);
+      } else if (level === Level.WARN) {
+        m = this._logMe(`${this._getLogTime()}${this.OPEN_GROUP}WARN ${this.CLOSE_GROUP}${message}`, level);
+      } else if (this.loggerLevel === Level.DEBUG || this.loggerLevel === Level.INFO) {
+        m = this._logMe(`${this._getLogTime()}${this.OPEN_GROUP}INFO ${this.CLOSE_GROUP}${message}`, level);
+      }
+    }
+    return m;
+  };
+
+  /**
+   * Logs a message in info level
+   * @method info
+   * @param {string} message
+   * @memberof AbstractLogger
+   */
+  info(message) {
+    this.log(message, Level.INFO);
+  };
+
+  /**
+   * Log a message in error level
+   * @method error
+   * @param {string} message
+   * @memberof AbstractLogger
+   */
+  error(message) {
+    this.log(message, Level.ERROR);
+  };
+
+  /**
+   * Log a message in debug level
+   * @method debug
+   * @param {string} message
+   * @memberof AbstractLogger
+   */
+  debug(message) {
+    this.log(message, Level.DEBUG);
+  };
+
+  /**
+   * Log a message in warn level
+   * @method warn
+   * @param {string} message
+   * @memberof AbstractLogger
+   */
+  warn(message) {
+    this.log(message, Level.WARN);
+  };
+
+  /**
+   * logMe method - the actual logger method that logs.  Each instance will have it's own&lt;br/>
+   * override this in an instance
+   * @example _logMe(message, level) { ... };
+   * @method _logMe
+   * @param {string} message The message to log
+   * @param {string} level The level to log to
+   * @returns {string} The message
+   * @memberof AbstractLogger
+   * @private
+   */
+   _logMe(message, level) {};
+};
+
+class ConsoleLogger extends AbstractLogger {
+  constructor(l) {
+    super(l);
+  };
+  _logMe(message, level) {
+    if (level === Level.INFO) {
+      console.info(message);
+    } else if (level === Level.ERROR) {
+      console.error(message);
+    } else if (level === Level.DEBUG) {
+      console.log(message);
+    } else if (level === Level.WARN) {
+      console.warn(message);
+    } else {
+      console.log(message);
+    }
+    return message;
+  };
+};
+
+class ColorConsoleLogger extends AbstractLogger {
+  constructor(l) {
+    super(l);
+  };
+  _logMe(message, level) {
+    if (level === Level.INFO) {
+      console.info("\x1b[36m" + message + "\x1b[0m");
+    } else if (level === Level.ERROR) {
+      console.error("\x1b[31m" + message + "\x1b[0m");
+    } else if (level === Level.DEBUG) {
+      console.log("\x1b[34m" + message + "\x1b[0m");
+    } else if (level === Level.WARN) {
+      console.warn("\x1b[33m" + message + "\x1b[0m");
+    } else {
+      console.log("\x1b[37m" + message + "\x1b[0m");
+    }
+  };
+};
+
+class RestLogger extends AbstractLogger {
+  constructor(l, uri) {
+    super(l);
+    this.uri = uri;
+  };
+  setURI(uri) {
+    this.uri = uri;
+  };
+  _logMe(message) {
+    // use new ajax promise
+    /*
+    Augmented.ajax({
+      url: this.uri,
+      method: "POST",
+      contentType: "text/plain",
+      dataType: "text",
+      async: true,
+      data: message,
+      success: function (data, status) { this.success(); },
+      failure: function (data, status) { this.failure(); }
+    });
+    */
+  };
+};
+
+/**
+* Augmented.Logger.LoggerFactory - A logger factory for creating a logger instance
+* @namespace Augmented.Logger.LoggerFactory
+* @memberof Augmented.Logger
+*/
+export class LoggerFactory {
+  constructor() {
+  };
+  /**
+   * getLogger - get an instance of a logger
+   * @method getLogger
+   * @param {Augmented.Logger.Type} type Type of logger instance
+   * @param {Augmented.Logger.Level} level Level to set the logger to
+   * @memberof Augmented.Logger.LoggerFactory
+   * @returns {Augmented.Logger.abstractLogger} logger Instance of a logger by istance type
+   * @example Augmented.Logger.LoggerFactory.getLogger(Augmented.Logger.Type.console, Augmented.Logger.Level.debug);
+   */
+  static getLogger(type, level) {
+    if (type === Type.CONSOLE) {
+      return new ConsoleLogger(level);
+    } else if (type === Type.COLOR_CONSOLE) {
+      return new ColorConsoleLogger(level);
+    } else if (type === Type.REST) {
+      return new RestLogger(level);
+    }
+  };
+};
+</code></pre>
+		</section>
+			</div>
+		</div>
+	</div>
+	<footer>
+				<div class="footer-option">&lt;a href&#x3D;&#x27;http://www.augmentedjs.com&#x27;&gt;Augmented.js Homepage&lt;/a&gt;</div>
+			<div class="generated-by">Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Sun Dec 17th 2017 using the <a href="https://github.com/steveush/foodoc">FooDoc template</a>.</div>
+	</footer>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/clipboard.min.js"></script>
+	<script src="js/prism.min.js"></script>
+	<script src="js/template.min.js"></script>
+		<!-- start:lunr-search-modal.hbs -->
+		<div class="modal fade" id="lunr-search-modal">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title">Search results</h4>
+					</div>
+					<div class="modal-body" id="lunr-search-body">
+					</div>
+					<div class="modal-footer" id="lunr-search-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>
+				</div><!-- /.modal-content -->
+			</div><!-- /.modal-dialog -->
+		</div>
+		<!-- end:lunr-search-modal.hbs -->		<script src="js/lunr.min.js"></script>
+	
+</body>
+</html>
+<!-- end:source.tmpl.hbs -->

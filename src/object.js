@@ -1,4 +1,36 @@
-const _ = require("lodash");
+const _bind = require("lodash.bind");
+
+let idCounter = 0;
+
+// some lodash-like functions ported over
+const _keys = (object) => {
+  return Object.keys(object);
+};
+const _uniqueId = (prefix) => {
+  const id = ++idCounter;
+  return `{$prefix}${id}`;
+};
+const _before = (nn, func) => {
+  let result, n;
+  if (typeof func != 'function') {
+    throw new TypeError(FUNC_ERROR_TEXT);
+  }
+  n = Number.parseInt(nn);
+  return () => {
+    if (--n > 0) {
+      result = func.apply(this, arguments);
+    }
+    if (n <= 1) {
+      func = undefined;
+    }
+    return result;
+  };
+};
+const _once = (func) => {
+  return _before(2, func);
+};
+
+
 // Events
 
 // Regular expression used to split event strings.
@@ -14,7 +46,7 @@ const eventsApi = (iteratee, events, name, callback, opts) => {
     if (callback !== void 0 && "context" in opts && opts.context === void 0) {
       opts.context = callback;
     }
-    for (names = _.keys(name); i < names.length; i++) {
+    for (names = _keys(name); i < names.length; i++) {
       events = eventsApi(iteratee, events, names[i], name[names[i]], opts);
     }
   } else if (name && EVENT_SPLITTER.test(name)) {
@@ -41,7 +73,6 @@ const internalOn = (obj, name, callback, context, listening) => {
     const listeners = obj._listeners || (obj._listeners = {});
     listeners[listening.id] = listening;
   }
-
   return obj;
 };
 
@@ -68,7 +99,7 @@ const offApi = (events, name, callback, options) => {
 
   // Delete all events listeners and "drop" events.
   if (!name && !callback && !context) {
-    const ids = _.keys(listeners);
+    const ids = _keys(listeners);
     for (; i < ids.length; i++) {
       listening = listeners[ids[i]];
       delete listeners[listening.id];
@@ -77,7 +108,7 @@ const offApi = (events, name, callback, options) => {
     return;
   }
 
-  let names = name ? [name] : _.keys(events);
+  let names = name ? [name] : _keys(events);
   for (; i < names.length; i++) {
     name = names[i];
     const handlers = events[name];
@@ -134,8 +165,7 @@ const triggerApi = (objEvents, name, callback, args) => {
 };
 
 // A difficult-to-believe, but optimized internal dispatch function for
-// triggering events. Tries to keep the usual cases speedy (most internal
-// Backbone events have 3 arguments).
+// triggering events. Tries to keep the usual cases speedy
 const triggerEvents = (events, args) => {
   let ev, i = -1;
   const l = events.length, a1 = args[0], a2 = args[1], a3 = args[2];
@@ -173,22 +203,24 @@ class AugmentedObject {
   /**
    * Initialize the object
    * @method initialize
+   * @returns {object} Returns this context
    * @memberof Augmented.Object
    */
   initialize(...args) {
+    return this;
   };
 
   get options() {
     return this._options;
-  }
+  };
 
   set options(options) {
     this._options = options;
-  }
+  };
 
   get events() {
     return this._events;
-  }
+  };
 
   /**
    * Trigger one or many events, firing all bound callbacks. Callbacks are
@@ -198,6 +230,8 @@ class AugmentedObject {
    * @method trigger
    * @param {string} name The name of the event
    * @param {any} args any number of additional arguments
+   * @returns {object} Returns this context
+   * @memberof Augmented.Object
    */
   trigger(name, ...args) {
     if (this._events) {
@@ -217,10 +251,16 @@ class AugmentedObject {
    * the callback is invoked, its listener will be removed. If multiple events
    * are passed in using the space-separated syntax, the handler will fire
    * once for each event, not once for a combination of all events.
+   * @method once
+   * @param {string} name The name of the event
+   * @param {function} callback The callback to evoke
+   * @param {object} context The context of the callback
+   * @returns {object} Returns this context
+   * @memberof Augmented.Object
    */
   once(name, callback, context) {
     // Map the event into a `{event: once}` object.
-    const events = eventsApi(onceMap, {}, name, callback, _.bind(this.off, this));
+    const events = eventsApi(this._onceMap, {}, name, callback, _bind(this.off, this));
     if (typeof name === "string" && context == null) {
       callback = void 0;
     }
@@ -232,6 +272,12 @@ class AugmentedObject {
    * callbacks with that function. If `callback` is null, removes all
    * callbacks for the event. If `name` is null, removes all bound
    * callbacks for all events.
+   * @method off
+   * @param {string} name The name of the event
+   * @param {function} callback The callback to evoke
+   * @param {object} context The context of the callback
+   * @returns {object} Returns this context
+   * @memberof Augmented.Object
    */
   off(name, callback, context) {
     if (this._events) {
@@ -243,12 +289,20 @@ class AugmentedObject {
     return this;
   };
 
-  // Tell this object to stop listening to either specific events ... or
-  // to every object it's currently listening to.
+  /**
+   * Tell this object to stop listening to either specific events ... or
+   * to every object it's currently listening to.
+   * @method stopListening
+   * @param {object} obj The object to stop listening to
+   * @param {string} name The name of the event
+   * @param {function} callback The callback to evoke
+   * @returns {object} Returns this context
+   * @memberof Augmented.Object
+   */
   stopListening(obj, name, callback) {
     const listeningTo = this._listeningTo;
     if (listeningTo) {
-      const ids = obj ? [obj._listenId] : _.keys(listeningTo);
+      const ids = obj ? [obj._listenId] : _keys(listeningTo);
       let i = 0;
       for (i = 0; i < ids.length; i++) {
         const listening = listeningTo[ids[i]];
@@ -267,6 +321,12 @@ class AugmentedObject {
   /**
    * Bind an event to a `callback` function. Passing `"all"` will bind
    * the callback to all events fired.
+   * @method on
+   * @param {string} name The name of the event
+   * @param {function} callback The callback to evoke
+   * @param {object} context The context of the callback
+   * @returns {object} Returns this context
+   * @memberof Augmented.Object
    */
   on(name, callback, context) {
     return internalOn(this, name, callback, context);
@@ -276,17 +336,23 @@ class AugmentedObject {
    * Inversion-of-control versions of `on`. Tell *this* object to listen to
    * an event in another object... keeping track of what it's listening to
    * for easier unbinding later.
+   * @method listenTo
+   * @param {object} obj The object to stop listening to
+   * @param {string} name The name of the event
+   * @param {function} callback The callback to evoke
+   * @returns {object} Returns this context
+   * @memberof Augmented.Object
    */
   listenTo(obj, name, callback) {
     if (obj) {
-      const id = obj._listenId || (obj._listenId = _.uniqueId("l"));
+      const id = obj._listenId || (obj._listenId = _uniqueId("l"));
       const listeningTo = this._listeningTo || (this._listeningTo = {});
       let listening = listeningTo[id];
 
       // This object is not listening to any other events on `obj` yet.
       // Setup the necessary references to track the listening callbacks.
       if (!listening) {
-        const thisId = this._listenId || (this._listenId = _.uniqueId("l"));
+        const thisId = this._listenId || (this._listenId = _uniqueId("l"));
         listening = listeningTo[id] = {obj: obj, objId: id, id: thisId, listeningTo: listeningTo, count: 0};
       }
 
@@ -298,10 +364,16 @@ class AugmentedObject {
 
   /**
    * Inversion-of-control versions of `once`.
+   * @method listenToOnce
+   * @param {object} obj The object to stop listening to
+   * @param {string} name The name of the event
+   * @param {function} callback The callback to evoke
+   * @returns {object} Returns this context
+   * @memberof Augmented.Object
    */
   listenToOnce(obj, name, callback) {
     // Map the event into a `{event: once}` object.
-    const events = eventsApi(this._onceMap, {}, name, callback, _.bind(this.stopListening, this, obj));
+    const events = eventsApi(this._onceMap, {}, name, callback, _bind(this.stopListening, this, obj));
     return this.listenTo(obj, events);
   };
 
@@ -309,11 +381,11 @@ class AugmentedObject {
   // `offer` unbinds the `onceWrapper` after it has been called.
   _onceMap(map, name, callback, offer) {
     if (callback) {
-      const _once = map[name] = _.once(() => {
-        offer(name, once);
+      const __once = map[name] = _once(() => {
+        offer(name, __once);
         callback.apply(this, arguments);
       });
-      _once._callback = callback;
+      __once._callback = callback;
     }
     return map;
   };

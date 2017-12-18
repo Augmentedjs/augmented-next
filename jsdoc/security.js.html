@@ -1,0 +1,510 @@
+<!-- start:source.tmpl.hbs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+		<title>security.js</title>
+		<link rel="icon" type="image/png" href="favicon.png"/>
+		<!--[if lt IE 9]>
+		<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+		<link href="https://fonts.googleapis.com/css?family=PT+Mono" rel="stylesheet">
+		<link type="text/css" rel="stylesheet" href="css/bootstrap.min.css">
+		<link type="text/css" rel="stylesheet" href="css/prism.min.css">
+		<link type="text/css" rel="stylesheet" href="css/template.min.css">
+			<style>
+				.page-header,
+				pre.code-toolbar > .toolbar:hover {
+					background-color: #2196F3;
+				}
+				.callout-primary,
+				.toc .nav > li > a:hover,
+				.toc .nav > li > a:focus,
+				.toc .nav > li.active > a,
+				.toc .nav > li.active > a:hover,
+				.toc .nav > li.active > a:focus,
+				pre.code-toolbar > .toolbar:hover {
+					border-left-color: #2196F3;
+				}
+				pre.code-toolbar > .toolbar:hover {
+					border-bottom-color: #2196F3;
+				}
+				.callout-primary h5,
+				.symbol-title.collapsible-symbol .toggle-icon,
+				.breadcrumb li a,
+				.toc .nav > li > a:hover,
+				.toc .nav > li > a:focus,
+				.toc .nav > li.active > a,
+				.toc .nav > li.active > a:hover,
+				.toc .nav > li.active > a:focus {
+					color: #2196F3;
+				}
+			</style>
+		<script type="text/javascript">
+			window.TEMPLATE_OPTIONS = {"includeDate":true,"dateFormat":"ddd MMM Do YYYY","systemName":"Augmented.js","systemSummary":"Augmented.js 2 - Elegant Developement made simple.","systemLogo":"img/logo.png","systemColor":"#2196F3","navMembers":[{"kind":"class","title":"Classes","summary":"All documented classes."},{"kind":"external","title":"Externals","summary":"All documented external members."},{"kind":"global","title":"Globals","summary":"All documented globals."},{"kind":"mixin","title":"Mixins","summary":"All documented mixins."},{"kind":"interface","title":"Interfaces","summary":"All documented interfaces."},{"kind":"module","title":"Modules","summary":"All documented modules."},{"kind":"namespace","title":"Namespaces","summary":"All documented namespaces."},{"kind":"tutorial","title":"Tutorials","summary":"All available tutorials."}],"footer":"<a href='http://www.augmentedjs.com'>Augmented.js Homepage</a>","copyright":"","linenums":true,"collapseSymbols":false,"inverseNav":true,"inlineNav":false,"outputSourceFiles":true,"sourceRootPath":null,"disablePackagePath":true,"outputSourcePath":true,"showTableOfContents":true,"showAccessFilter":true,"analytics":null,"methodHeadingReturns":false,"sort":"linenum, longname, version, since","search":true,"favicon":"favicon.png","stylesheets":[],"scripts":[],"monospaceLinks":false,"cleverLinks":false,"logoFile":"images/logo.png","navType":"vertical","protocol":"html://"};
+			window.DOCLET_TOC_ENABLED = false;
+			window.DOCLET_AFILTER_ENABLED = false;
+		</script>
+</head>
+<body>
+	<!-- start:navbar.hbs -->
+	<header class="navbar navbar-default navbar-fixed-top navbar-inverse">
+		<div class="container">
+			<div class="navbar-header">
+				<a class="navbar-brand branding-logo" href="index.html" style="background-image: url(img/logo.png);">
+					Augmented.js
+				</a>
+				<!-- displayed on small devices -->
+				<button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#topNavigation">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+			</div>
+			<div class="navbar-collapse collapse" id="topNavigation">
+				<ul class="nav navbar-nav">
+							<li class="dropdown">
+								<a href="list_class.html" class="dropdown-toggle" data-toggle="dropdown">Classes<b class="caret"></b></a>
+								<ul class="dropdown-menu">
+										<li><a href="AbstractSecurityClient.html">AbstractSecurityClient</a></li>
+										<li><a href="Augmented.AbstractLocalStorage.html">Augmented.AbstractLocalStorage</a></li>
+										<li><a href="Augmented.AbstractLogger.html">Augmented.AbstractLogger</a></li>
+										<li><a href="Augmented.Application.html">Augmented.Application</a></li>
+										<li><a href="Augmented.Collection.html">Augmented.Collection</a></li>
+										<li><a href="Augmented.History_.html">Augmented.History</a></li>
+										<li><a href="Augmented.history.html">Augmented.history</a></li>
+										<li><a href="Augmented.LocalStorageCollection.html">Augmented.LocalStorageCollection</a></li>
+										<li><a href="Augmented.Model.html">Augmented.Model</a></li>
+										<li><a href="Augmented.Object.html">Augmented.Object</a></li>
+										<li><a href="Augmented.PaginatedCollection.html">Augmented.PaginatedCollection</a></li>
+										<li><a href="Augmented.Router.html">Augmented.Router</a></li>
+										<li><a href="Augmented.Security.Client.ACLClient.html">Augmented.Security.Client.ACLClient</a></li>
+										<li><a href="Augmented.Security.Client.OAUTH2Client.html">Augmented.Security.Client.OAUTH2Client</a></li>
+										<li><a href="Augmented.Security.Context.html">Augmented.Security.Context</a></li>
+										<li><a href="Augmented.Security.Entry.html">Augmented.Security.Entry</a></li>
+										<li><a href="Augmented.Utility.AsynchronousQueue.html">Augmented.Utility.AsynchronousQueue</a></li>
+										<li><a href="Augmented.Utility.AugmentedMap.html">Augmented.Utility.AugmentedMap</a></li>
+										<li><a href="Augmented.Utility.BinarySearch.html">Augmented.Utility.BinarySearch</a></li>
+										<li><a href="Augmented.Utility.Map.html">Augmented.Utility.Map</a></li>
+										<li><a href="Augmented.Utility.PrettyPrint.html">Augmented.Utility.PrettyPrint</a></li>
+										<li><a href="Augmented.Utility.QuickSort.html">Augmented.Utility.QuickSort</a></li>
+										<li><a href="Augmented.Utility.SchemaGenerator.html">Augmented.Utility.SchemaGenerator</a></li>
+										<li><a href="Augmented.Utility.Shuffle.html">Augmented.Utility.Shuffle</a></li>
+										<li><a href="Augmented.Utility.sortObjects.html">Augmented.Utility.sortObjects</a></li>
+										<li><a href="Augmented.Utility.Stack.html">Augmented.Utility.Stack</a></li>
+										<li><a href="Augmented.ValidationFramework.html">Augmented.ValidationFramework</a></li>
+										<li><a href="Augmented.View.html">Augmented.View</a></li>
+								</ul>
+							</li>
+							<li class="dropdown">
+								<a href="list_module.html" class="dropdown-toggle" data-toggle="dropdown">Modules<b class="caret"></b></a>
+								<ul class="dropdown-menu">
+										<li><a href="Augmented.module_$.html">Augmented.$</a></li>
+										<li><a href="Augmented.module__.html">Augmented._</a></li>
+										<li><a href="module-Augmented.html">Augmented</a></li>
+								</ul>
+							</li>
+							<li class="dropdown">
+								<a href="list_namespace.html" class="dropdown-toggle" data-toggle="dropdown">Namespaces<b class="caret"></b></a>
+								<ul class="dropdown-menu">
+										<li><a href="Augmented.Ajax.html">Augmented.Ajax</a></li>
+										<li><a href="Augmented.Ajax.Configuration.html">Augmented.Ajax.Configuration</a></li>
+										<li><a href="Augmented.LocalStorageFactory.html">Augmented.LocalStorageFactory</a></li>
+										<li><a href="Augmented.Logger.html">Augmented.Logger</a></li>
+										<li><a href="Augmented.Logger.LoggerFactory.html">Augmented.Logger.LoggerFactory</a></li>
+										<li><a href="Augmented.PaginationFactory.html">Augmented.PaginationFactory</a></li>
+										<li><a href="Augmented.Security.html">Augmented.Security</a></li>
+										<li><a href="Augmented.Security.AuthenticationFactory.html">Augmented.Security.AuthenticationFactory</a></li>
+										<li><a href="Augmented.Security.Client.html">Augmented.Security.Client</a></li>
+										<li><a href="Augmented.Security.Principal.html">Augmented.Security.Principal</a></li>
+										<li><a href="Augmented.Utility.html">Augmented.Utility</a></li>
+										<li><a href="Augmented.Utility.BundleObject.html">Augmented.Utility.BundleObject</a></li>
+										<li><a href="Augmented.Utility.MessageKeyFormatter.html">Augmented.Utility.MessageKeyFormatter</a></li>
+										<li><a href="Augmented.Utility.MessageReader.html">Augmented.Utility.MessageReader</a></li>
+										<li><a href="Augmented.Utility.ResourceBundle.html">Augmented.Utility.ResourceBundle</a></li>
+										<li><a href="Augmented.Utility.Transformer.html">Augmented.Utility.Transformer</a></li>
+								</ul>
+							</li>
+				</ul>
+					<!-- start:lunr-search-navbar.hbs -->
+					<form class="navbar-form navbar-right" role="search">
+						<div class="input-group">
+							<input type="text" class="form-control" placeholder="Search" id="lunr-search-input">
+							<div class="input-group-btn">
+								<button class="btn btn-default" id="lunr-search-submit">
+									<i class="glyphicon glyphicon-search"></i>
+								</button>
+							</div>
+						</div>
+					</form>
+					<!-- start:lunr-search-navbar.hbs -->		</div>
+		</div>
+	</header>
+	<!-- end:navbar.hbs -->		<div class="page-header">
+			<div class="container">
+				<span class="kind">source</span>
+				<h1><span class="name">security.js</span></h1>
+			</div>
+		</div>
+	<div class="container content">
+		<div class="row">
+			<div class="col-md-12 main-content">
+		<section class="source-section">
+			<article></article>
+			<pre class="prettyprint source language-javascript line-numbers"><code class="language-javascript">// Security
+
+/**
+* Security Package and API
+* @namespace Augmented.Security
+* @memberof Augmented
+*/
+Augmented.Security = {};
+
+/**
+* Security client namespace
+* @namespace Augmented.Security.Client
+* @memberof Augmented.Security
+*/
+Augmented.Security.Client = {};
+
+/**
+* Pricipal object for use in security as part of the abstract implimentation
+* @namespace Augmented.Security.Principal
+* @memberof Augmented.Security
+* @property {string} fullName The full name of the principal
+* @property {number} id The id of the principal
+* @property {string} login The login of the principal
+* @property {string} email The email of the principal
+*/
+Augmented.Security.Principal = {
+  fullName: "",
+  id: 0,
+  login: "",
+  email: ""
+};
+
+/**
+* Augmented.Security.Context
+* Used as a security data storage class
+* @constructor Augmented.Security.Context
+* @param {Augmented.Security.Principal} principal The principal for this context
+* @param {array} permissions Permissions to add to the context
+* @memberof Augmented.Security
+*/
+var securityContext = Augmented.Security.Context = function(principal, permissions) {
+  this.principal = (principal) ? principal : (new principal().login = "guest");
+  this.permissions = (permissions) ? permissions : [];
+
+  /**
+  * getPrincipal - get the principal of this context
+  * @method getPrincipal
+  * @memberof Augmented.Security.Context
+  * @returns {Augmented.Security.Principal} principal The principal of this context
+  */
+  this.getPrincipal = function() {
+    return this.principal;
+  };
+
+  /**
+  * getPermissions - Get all the permissions for a principal
+  * @method getPermissions
+  * @memberof Augmented.Security.Context
+  * @returns {array} permissions All permissions
+  */
+  this.getPermissions = function() {
+    return this.permissions;
+  };
+
+  /**
+  * setPermissions - Set all permissions for a principal
+  * @method setPermissions
+  * @param {array} permissions
+  * @memberof Augmented.Security.Context
+  */
+  this.setPermissions = function(p) {
+    this.permissions = p;
+  };
+
+  /**
+  * addPermission - Add a new permission for a principal
+  * @method addPermission
+  * @param {string} permission
+  * @memberof Augmented.Security.Context
+  */
+  this.addPermission = function(p) {
+    this.permissions.push(p);
+  };
+
+  /**
+  * removePermission - Remove a permission for a principal
+  * @method removePermission
+  * @param {string} permission
+  * @memberof Augmented.Security.Context
+  */
+  this.removePermission = function(p) {
+    var i = this.permissions.indexOf(p);
+    this.permissions.splice(i, 1);
+  };
+
+  /**
+  * hasPermission - checks for a permission for this principal
+  * @method hasPermission
+  * @param {string} permission
+  * @memberof Augmented.Security.Context
+  */
+  this.hasPermission = function(p) {
+    return (this.permissions.indexOf(p) != -1);
+  };
+};
+
+/**
+* Augmented.Security.ClientType - Security client type
+* @enum {number}
+* @memberof Augmented.Security
+* @name Augmented.Security.ClientType
+* @property {number} OAuth2 The OAuth2 type
+* @property {number} ACL The ACL type
+*/
+Augmented.Security.ClientType = {
+  OAUTH2 : 0,
+  ACL: 1
+};
+
+/**
+* The abstract Security Client - for use to extend your own
+* @name AbstractSecurityClient
+* @constructor AbstractSecurityClient
+* @property {Augmented.Security.ClientType} type The client type
+* @property {string} uri The base uri
+*/
+var AbstractSecurityClient = Augmented.Object.extend({
+  type: null,
+  uri: ""
+});
+
+/**
+* The OAUTH2 Client
+* @name Augmented.Security.Client.OAUTH2Client
+* @constructor Augmented.Security.Client.OAUTH2Client
+* @memberof Augmented.Security.Client
+*/
+Augmented.Security.Client.OAUTH2Client = AbstractSecurityClient.extend({
+  type: Augmented.Security.ClientType.OAUTH2,
+  /**
+  * Access Token
+  * @property accessToken
+  * @memberof Augmented.Security.Client.OAUTH2Client
+  */
+  accessToken: "",
+  /**
+  * Authorization Token
+  * @property authorizationToken
+  * @memberof Augmented.Security.Client.OAUTH2Client
+  */
+  authorizationToken: "",
+  /**
+  * Authorize the application/service/module via OAUTH
+  * @method authorize
+  * @param {string} name The name of the application/service/module
+  * @memberof Augmented.Security.Client.OAUTH2Client
+  */
+  authorize: function(name) {
+    // TODO: Go authorize the app and get a token
+    this.authorizationToken = "";
+  },
+  /**
+  * access the application/service/module via OAUTH
+  * @method access
+  * @param {string} principal The principal
+  * @memberof Augmented.Security.Client.OAUTH2Client
+  * TODO: Refresh the token and store it
+  */
+  access: function(principal) {
+    this.accessToken = "";
+  }
+});
+
+/**
+* Role/Privilege (ACL) Security
+* @name Augmented.Security.Client.ACLClient
+* @constructor Augmented.Security.Client.ACLClient
+* @memberof Augmented.Security.Client
+*/
+Augmented.Security.Client.ACLClient = AbstractSecurityClient.extend({
+  type: Augmented.Security.ClientType.ACL,
+  /**
+  * authenticate the user
+  * @method authenticate
+  * @param {string} username The name of the user (login)
+  * @param {string} password The password for the user (not stored)
+  * @returns {Augmented.Security.Context} Returns a security context or null is case of failure
+  * @memberof Augmented.Security.Client.ACL
+  * @throws Error Failed to authenticate
+  */
+  authenticate: function(username, password) {
+    var c = null;
+    Augmented.ajax({
+      url: this.uri,
+      method: "GET",
+      user: username,
+      password: password,
+      success: function(data, status) {
+        var p = new principal({
+          fullName: data.fullName,
+          id: data.id,
+          login: data.login,
+          email: data.email
+        });
+        c = new securityContext(p, data.permissions);
+      },
+      failure: function(data, status) {
+        // TODO: Bundle this perhaps
+        throw new Error("Failed to authenticate with response of - " + status);
+      }
+    });
+    return c;
+  }
+});
+
+/**
+* AuthenticationFactory Class -
+* Returns a client of given type for use with security
+* @namespace Augmented.Security.AuthenticationFactory
+* @memberof Augmented.Security
+* @static
+*/
+var authenticationFactory = Augmented.Security.AuthenticationFactory = {
+  /**
+  * Get an instance of a security client
+  * @method getSecurityClient
+  * @param {Augmented.Security.ClientType} clientType The Client Type to return
+  * @returns {Augmented.Security.Client} Returns a security client instance
+  * @memberof Augmented.Security.AuthenticationFactory
+  */
+  getSecurityClient: function(clientType) {
+    if (clientType === Augmented.Security.ClientType.OAUTH2) {
+      return new Augmented.Security.Client.OAUTH2Client();
+    } else if (clientType === Augmented.Security.ClientType.ACL) {
+      return new Augmented.Security.Client.ACLClient();
+    }
+    return null;
+  }
+};
+
+/**
+* Augmented.Security.Entry -
+* Used to secure a resource via permissions
+* @class Augmented.Security.Entry
+* @memberof Augmented.Security
+* @param {array} permissions Permissions to add to the entry (optional)
+* @param {boolean} negaive Sets negative permissions (optional)
+*/
+Augmented.Security.Entry = function(p, neg) {
+  /**
+  * Gets the permissions
+  * @property {array} permissions
+  * @memberof Augmented.Security.Entry
+  * @private
+  */
+  this.permissions = (p) ? p : [];
+
+  /**
+  * Negative flag
+  * @property {boolean} isNegative
+  * @memberof Augmented.Security.Entry
+  */
+  this.isNegative = (neg) ? neg : false;
+
+  /**
+  * Gets the permissions
+  * @method getPermissions
+  * @memberof Augmented.Security.Entry
+  * @returns {array} Permissions
+  */
+  this.getPermissions = function() {
+    return this.permissions;
+  };
+  /**
+  * Sets the permissions
+  * @method setPermissions
+  * @memberof Augmented.Security.Entry
+  * @param {array} permissions Permissions Array to set
+  */
+  this.setPermissions = function(p) {
+    this.permissions = p;
+  };
+  /**
+  * Add a permission
+  * @method addPermission
+  * @memberof Augmented.Security.Entry
+  * @param {string} permission Permission to add
+  */
+  this.addPermission = function(p) {
+    this.permissions.push(p);
+  };
+  /**
+  * Remove a permission
+  * @method removePermission
+  * @memberof Augmented.Security.Entry
+  * @param {string} permission Permission to remove
+  */
+  this.removePermission = function(p) {
+    var i = this.permissions.indexOf(p);
+    this.permissions.splice(i, 1);
+  };
+  /**
+  * Returns if this entry has a permission
+  * @method hasPermission
+  * @memberof Augmented.Security.Entry
+  * @param {string} permission Permission to test for
+  * @returns {boolean} Returns true if this entry has this permission
+  */
+  this.hasPermission = function(p) {
+    return (this.permissions.indexOf(p) != -1);
+  };
+  /**
+  * Sets this entry negaive or positive
+  * @method setNegative
+  * @memberof Augmented.Security.Entry
+  * @param {boolean} negative flag True or False
+  */
+  this.setNegative = function(n) {
+    this.isNegative = n;
+  };
+};
+</code></pre>
+		</section>
+			</div>
+		</div>
+	</div>
+	<footer>
+				<div class="footer-option">&lt;a href&#x3D;&#x27;http://www.augmentedjs.com&#x27;&gt;Augmented.js Homepage&lt;/a&gt;</div>
+			<div class="generated-by">Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Sun Dec 17th 2017 using the <a href="https://github.com/steveush/foodoc">FooDoc template</a>.</div>
+	</footer>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/clipboard.min.js"></script>
+	<script src="js/prism.min.js"></script>
+	<script src="js/template.min.js"></script>
+		<!-- start:lunr-search-modal.hbs -->
+		<div class="modal fade" id="lunr-search-modal">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title">Search results</h4>
+					</div>
+					<div class="modal-body" id="lunr-search-body">
+					</div>
+					<div class="modal-footer" id="lunr-search-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>
+				</div><!-- /.modal-content -->
+			</div><!-- /.modal-dialog -->
+		</div>
+		<!-- end:lunr-search-modal.hbs -->		<script src="js/lunr.min.js"></script>
+	
+</body>
+</html>
+<!-- end:source.tmpl.hbs -->
