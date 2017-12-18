@@ -4,6 +4,7 @@ import AugmentedObject from "./object.js";
 import AugmentedMap from "./map.js";
 import isString from "./isString.js";
 import Stack from "./stack.js";
+import SchemaGenerator from "./schemaGenerator.js";
 
 /**
  * Augmented.js 2 - The Core UI Component and package
@@ -18,6 +19,7 @@ const Augmented = {};
 Augmented.Utility = Utility;
 Augmented.Utility.Map = AugmentedMap;
 Augmented.Utility.Stack = Stack;
+Augmented.Utility.SchemaGenerator = SchemaGenerator;
 Augmented.Logger = Logger;
 Augmented.Object = AugmentedObject;
 
