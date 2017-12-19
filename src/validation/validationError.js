@@ -36,10 +36,6 @@ export const ErrorCodes = {
   UNKNOWN_PROPERTY: 1000
 };
 
-let ErrorCodeLookup = {};
-for (let key in ErrorCodes) {
-  ErrorCodeLookup[ErrorCodes[key]] = key;
-}
 // TODO: bundle this
 export const ErrorMessagesDefault = {
   INVALID_TYPE: "Invalid type: {type} (expected {expected})",
@@ -79,8 +75,10 @@ export const ErrorMessagesDefault = {
   UNKNOWN_PROPERTY: "Unknown property (not in schema)"
 };
 
-class ValidationError {
+class ValidationError extends Error {
   constructor(code, message, params, dataPath, schemaPath, subErrors) {
+    // Pass remaining arguments (including vendor specific ones) to parent constructor
+    super(code, message, params);
     Error.call(this);
     if (code === undefined) {
       throw new Error ("No code supplied for error: "+ message);
@@ -102,28 +100,34 @@ class ValidationError {
         this.stack = err2.stack || err2.stacktrace;
       }
     }
-  }
-};
-export ValidationError;
+  };
 
-ValidationError.prototype = Object.create(Error.prototype);
-ValidationError.prototype.constructor = ValidationError;
-ValidationError.prototype.name = 'ValidationError';
+  name = 'ValidationError';
 
-ValidationError.prototype.prefixWith = function (dataPrefix, schemaPrefix) {
-  if (dataPrefix !== null) {
-    dataPrefix = dataPrefix.replace(/~/g, "~0").replace(/\//g, "~1");
-    this.dataPath = "/" + dataPrefix + this.dataPath;
-  }
-  if (schemaPrefix !== null) {
-    schemaPrefix = schemaPrefix.replace(/~/g, "~0").replace(/\//g, "~1");
-    this.schemaPath = "/" + schemaPrefix + this.schemaPath;
-  }
-  if (this.subErrors !== null) {
-    let i = 0, l = this.subErrors.length;
-    for (i = 0; i < l; i++) {
-      this.subErrors[i].prefixWith(dataPrefix, schemaPrefix);
+  prefixWith(dataPrefix, schemaPrefix) {
+    if (dataPrefix !== null) {
+      dataPrefix = dataPrefix.replace(/~/g, "~0").replace(/\//g, "~1");
+      this.dataPath = "/" + dataPrefix + this.dataPath;
     }
-  }
-  return this;
+    if (schemaPrefix !== null) {
+      schemaPrefix = schemaPrefix.replace(/~/g, "~0").replace(/\//g, "~1");
+      this.schemaPath = "/" + schemaPrefix + this.schemaPath;
+    }
+    if (this.subErrors !== null) {
+      let i = 0, l = this.subErrors.length;
+      for (i = 0; i < l; i++) {
+        this.subErrors[i].prefixWith(dataPrefix, schemaPrefix);
+      }
+    }
+    return this;
+  };
+
 };
+
+export let ErrorCodeLookup = {};
+
+for (let key in ErrorCodes) {
+  ErrorCodeLookup[ErrorCodes[key]] = key;
+}
+
+export default ValidationError;

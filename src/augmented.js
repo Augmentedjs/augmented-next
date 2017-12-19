@@ -3,8 +3,10 @@ import * as Logger from "./logger";
 import AugmentedObject from "./object.js";
 import AugmentedMap from "./map.js";
 import isString from "./isString.js";
+import isFunction from "./isFunction.js";
 import Stack from "./stack.js";
-import SchemaGenerator from "./schemaGenerator.js";
+import SchemaGenerator from "./validation/schemaGenerator.js";
+import ValidationFramework from "./validation/validation.js";
 
 /**
  * Augmented.js 2 - The Core UI Component and package
@@ -22,6 +24,7 @@ Augmented.Utility.Stack = Stack;
 Augmented.Utility.SchemaGenerator = SchemaGenerator;
 Augmented.Logger = Logger;
 Augmented.Object = AugmentedObject;
+Augmented.ValidationFramework = ValidationFramework;
 
 /**
  * The standard version property
@@ -201,21 +204,9 @@ Augmented.sync = (method, model, options) => {
   return xhr;
 };
 
-/**
-* Augmented.isFunction -
-* returns true if called name is a function
-* simular to jQuery .isFunction method
-* @method Augmented.isFunction
-* @param {function} name The name of the function to test
-* @memberof Augmented
-* @returns true if called name is a function
-*/
-Augmented.isFunction = (name) => {
-  return Object.prototype.toString.call(name) == "[object Function]";
-};
-
 // imported
 Augmented.isString = isString;
+Augmented.isFunction = isFunction;
 
 /**
 * Augmented.result - returns named property in an object

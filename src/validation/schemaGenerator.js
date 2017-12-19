@@ -1,3 +1,11 @@
+const SCHEMA_HEADER = {
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "model",
+  "description": "Generated Schema",
+  "type": "object",
+  "properties": { }
+};
+
 /**
  * <p>Augmented.Utility.SchemaGenerator<br/>
  *

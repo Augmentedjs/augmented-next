@@ -1,9 +1,9 @@
 import ValidatorContext from "./validatorContext.js";
-import ErrorCodes from "./validationError";
+import {ErrorCodeLookup, ErrorCodes, ErrorMessagesDefault} from "./validationError.js";
 
 let languages = {};
 
-const createApi(language) => {
+const createApi = (language) => {
   const _myContext = new ValidatorContext();
   let currentLanguage = language || 'en';
   const api = {
@@ -155,4 +155,4 @@ const createApi(language) => {
   return api;
 };
 
-export default createAPI;
+export default createApi;
