@@ -6,7 +6,7 @@ import isString from "./isString.js";
 import isFunction from "./isFunction.js";
 import Stack from "./stack.js";
 import SchemaGenerator from "./validation/schemaGenerator.js";
-import ValidationFramework from "./validation/validation.js";
+import ValidationFramework from "./validation/validationFramework.js";
 
 /**
  * Augmented.js 2 - The Core UI Component and package

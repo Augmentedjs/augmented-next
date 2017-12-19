@@ -11,8 +11,9 @@ import Validator from "./validator.js";
  */
 class ValidationFramework {
   constructor() {
-    _myValidator = new Validator();
+    this._myValidator = new Validator();
   };
+  
   _myValidator = null;
 
   /**
@@ -22,7 +23,7 @@ class ValidationFramework {
    * @memberof Augmented.ValidationFramework
    */
   supportsValidation() {
-    return (_myValidator !== null);
+    return (this._myValidator !== null);
   };
 
   /**
@@ -33,7 +34,7 @@ class ValidationFramework {
    * @memberof Augmented.ValidationFramework
    */
   registerSchema(identity, schema) {
-    _myValidator.addSchema(identity, schema);
+    this._myValidator.addSchema(identity, schema);
   };
 
   /**
@@ -44,7 +45,7 @@ class ValidationFramework {
    * @memberof Augmented.ValidationFramework
    */
   getSchema(identity) {
-    return _myValidator.getSchema(identity);
+    return this._myValidator.getSchema(identity);
   };
 
   /**
@@ -54,7 +55,7 @@ class ValidationFramework {
    * @memberof Augmented.ValidationFramework
    */
   getSchemas() {
-    return _myValidator.getSchemaMap();
+    return this._myValidator.getSchemaMap();
   };
 
   /**
@@ -63,7 +64,7 @@ class ValidationFramework {
    * @memberof Augmented.ValidationFramework
    */
   clearSchemas() {
-    _myValidator.dropSchemas();
+    this._myValidator.dropSchemas();
   };
 
   /**
@@ -75,7 +76,7 @@ class ValidationFramework {
    * @memberof Augmented.ValidationFramework
    */
   validate(data, schema) {
-    return _myValidator.validateMultiple(data, schema);
+    return this._myValidator.validateMultiple(data, schema);
   };
 
   /**
@@ -85,7 +86,7 @@ class ValidationFramework {
    * @memberof Augmented.ValidationFramework
    */
   getValidationMessages() {
-    return _myValidator.error;
+    return this._myValidator.error;
   };
 
   /**

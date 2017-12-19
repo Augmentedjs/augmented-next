@@ -1,11 +1,13 @@
 import ValidatorContext from "./validatorContext.js";
 import {ErrorCodeLookup, ErrorCodes, ErrorMessagesDefault} from "./validationError.js";
+import { normSchema, resolveUrl, getDocumentUri } from "./functions.js";
 
 let languages = {};
 
 const createApi = (language) => {
   const _myContext = new ValidatorContext();
   let currentLanguage = language || 'en';
+
   const api = {
     addFormat: () => {
       _myContext.addFormat.apply(_myContext, arguments);
