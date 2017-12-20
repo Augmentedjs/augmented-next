@@ -94,4 +94,13 @@ describe("Given Utilities", () => {
 			expect(x).toEqual({"is": "is", "object": "object"});
 		});
 	});
+
+	describe("Given pad", () => {
+		it("can pad a string", () => {
+			const a = Augmented.Utility.pad("_____", "This is a string", true);
+			expect(a).not.toEqual(null);
+			expect(a).not.toEqual("");
+			expect(a).toEqual("_____This is a string");
+		});
+	});
 });

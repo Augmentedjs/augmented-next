@@ -1,111 +1,85 @@
+import extend from "./extend.js";
+import Configuration from "./configuration.js";
+
 /**
-* Augmented.Utility.AsynchronousQueue -
-* An Async queue for handling async chained functions
-* @constructor Augmented.Utility.AsynchronousQueue
-* @param {number} timeout The timout period for each process in the queue (optional)
-* @memberof Augmented.Utility
-*/
+ * Augmented.Utility.AsynchronousQueue -
+ * An Async queue for handling async chained functions
+ * @constructor Augmented.Utility.AsynchronousQueue
+ * @param {number} timeout The timout period for each process in the queue (optional)
+ * @memberof Augmented.Utility
+ */
 class AsynchronousQueue {
   constructor(timeout) {
-  }
-  var to = (timeout) ? timeout : Augmented.Configuration.AsynchronousQueueTimeout;
-  this.queue = {};
+    this._timeout = (timeout) ? timeout : Configuration.AsynchronousQueueTimeout;
+  };
+
+  _queue = {};
 
   /**
-  * @method add The Add method for adding processes to the queue
-  * @memberof Augmented.Utility.AsynchronousQueue
-  */
-  this.add = function() {
-    var args = arguments;
-    if (args.length <= 0) {
-      return false;
+   * @method add The Add method for adding processes to the queue
+   * @memberof Augmented.Utility.AsynchronousQueue
+   */
+  add(...args) {
+    if (args && args.length > 0) {
+      extend(this._queue, args);
+      return true;
     }
-
-    Augmented.Utility.extend(this.queue, args);
+    return false;
   };
 
   /**
-  * @method clear Clear all processes in the queue
-  * @memberof Augmented.Utility.AsynchronousQueue
-  */
-  this.clear = function() {
-    if (this.queue.length > 0) {
-      this.queue.splice(0, this.queue.length);
+   * @method clear Clear all processes in the queue
+   * @memberof Augmented.Utility.AsynchronousQueue
+   */
+  clear() {
+    if (this._queue.length > 0) {
+      this._queue.splice(0, this._queue.length);
     }
   };
 
   /**
-  * @method process Process the queue
-  * @memberof Augmented.Utility.AsynchronousQueue
-  */
-  this.process = function() {
-    if (arguments) {
-      Augmented.Utility.extend(this.queue, arguments);
+   * @method process Process the queue
+   * @memberof Augmented.Utility.AsynchronousQueue
+   */
+  process(...args) {
+    if (args) {
+      extend(this._queue, args);
     }
-    var args = this.queue;
-    var l = Object.keys(args).length;//args.length;
+    const q = this._queue;
+    const l = Object.keys(q).length;//args.length;
+    let to = this._timeout;
+
     if (l <= 0) {
       return false;
     }
-    (function chain(i) {
-      if (i >= l || typeof args[i] !== 'function') {
+    const chain = (i) => {
+      if (i >= l || typeof q[i] !== 'function') {
         return false;
       }
-      window.setTimeout(function() {
-        args[i]();
+      setTimeout( () => {
+        q[i]();
         chain(i + 1);
       }, to);
-    })(0);
+    };
+    chain(0);
     return true;
   };
+
   /**
-  * @method getTimeout Get the timeout for the queue
-  * @memberof Augmented.Utility.AsynchronousQueue
-  */
-  this.getTimeout = function() {
-    return to;
+   * @method getTimeout Get the timeout for the queue
+   * @memberof Augmented.Utility.AsynchronousQueue
+   */
+  get timeout() {
+    return this._timeout;
   };
+
   /**
-  * @method getQueue get the full queue
-  * @memberof Augmented.Utility.AsynchronousQueue
-  */
-  this.getQueue = function() {
-    return this.queue;
+   * @method getQueue get the full queue
+   * @memberof Augmented.Utility.AsynchronousQueue
+   */
+  get queue() {
+    return this._queue;
   };
 };
 
-Augmented.Utility.PromiseQueue = function() {
-  var _queue = [];
-
-  /**
-  * @method add The Add method for adding processes to the queue
-  * @memberof Augmented.Utility.PromiseQueue
-  */
-  this.add = function(func, resolve, reject) {
-    const f = function() {
-      var promise = new Promise(function(resolve, reject){
-        var ret = func();
-        if (ret) {
-          resolve();
-        }
-        else {
-          reject();
-        }
-      });
-      return promise;
-    }
-
-    this.queue.push(f);
-  };
-
-  /**
-  * @method clear Clear all processes in the queue
-  * @memberof Augmented.Utility.AsynchronousQueue
-  */
-  this.clear = function() {
-    if (this.queue.length > 0) {
-      this.queue.splice(0, this.queue.length);
-    }
-  };
-
-};
+export default AsynchronousQueue;

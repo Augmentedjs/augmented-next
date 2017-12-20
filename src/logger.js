@@ -1,19 +1,10 @@
+import pad from "./pad.js";
+
 /**
  * A Logger package
  * @namespace Augmented.Logger
  * @memberof Augmented
  */
-
-const pad = (p, str, padLeft) => {
-  if (typeof str === "undefined") {
-    return p;
-  }
-  if (padLeft) {
-    return (p + str).slice(-p.length);
-  } else {
-    return (p + pad).substring(0, p.length);
-  }
-};
 
 /**
  * Augmented.Logger.Type

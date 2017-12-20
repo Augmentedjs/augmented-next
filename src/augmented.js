@@ -9,6 +9,11 @@ import SchemaGenerator from "./validation/schemaGenerator.js";
 import ValidationFramework from "./validation/validationFramework.js";
 import * as Security from "./security/security.js";
 import ClientType from "./security/clientType.js";
+import extend from "./extend.js";
+import Configuration from "./configuration.js";
+import AsynchronousQueue from "./queue.js";
+import Application from "./application.js";
+import pad from "./pad.js";
 
 /**
  * Augmented.js 2 - The Core UI Component and package
@@ -24,11 +29,16 @@ Augmented.Utility = Utility;
 Augmented.Utility.Map = AugmentedMap;
 Augmented.Utility.Stack = Stack;
 Augmented.Utility.SchemaGenerator = SchemaGenerator;
+Augmented.Utility.extend = extend;
+Augmented.Utility.AsynchronousQueue = AsynchronousQueue;
+Augmented.Utility.pad = pad;
 Augmented.Logger = Logger;
 Augmented.Object = AugmentedObject;
 Augmented.ValidationFramework = ValidationFramework;
 Augmented.Security = Security;
 Augmented.Security.ClientType = ClientType;
+Augmented.Configuration = Configuration;
+Augmented.Application = Application;
 
 /**
  * The standard version property
@@ -62,22 +72,7 @@ Augmented._ = {};
  */
 Augmented.$ = {};
 
-/**
- * Augmented.Configuration - a set of configuration properties for the framework
- * @enum Configuration
- * @memberof Augmented
- * @property {string} LoggerLevel The level of the framework internal logger
- * @property {string} MessageBundle - the base name for messages in the framework (default: Messages)
- * @property {number} AsynchronousQueueTimeout the default milisecond timeout (default: 2000)
- * @property {number} ApplicationInitProcessTimeout the application init even timeout (default: 1000)
- * @todo change logger level to error
- */
-Augmented.Configuration = {
-  LoggerLevel: "info",
-  MessageBundle: "Messages",
-  AsynchronousQueueTimeout: 2000,
-  ApplicationInitProcessTimeout: 1000
-};
+
 
 /*
  * Base functionality
