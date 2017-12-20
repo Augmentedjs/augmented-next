@@ -1,6 +1,6 @@
 import SchemaGenerator from "./schemaGenerator.js";
-import UriTemplate from "./uriTemplate.js";
-import Validator from "./validator.js";
+import createApi from "./api.js";
+import { ERROR_MESSAGES_DEFAULT } from "./validationError.js";
 
 /**
  * Augmented.ValidationFramework -
@@ -11,9 +11,12 @@ import Validator from "./validator.js";
  */
 class ValidationFramework {
   constructor() {
-    this._myValidator = new Validator();
+    this._myValidator = createApi();
+    if (this._myValidator) {
+      this._myValidator.addLanguage("en-us", ERROR_MESSAGES_DEFAULT);  // changed to US
+    }
   };
-  
+
   _myValidator = null;
 
   /**
@@ -31,10 +34,11 @@ class ValidationFramework {
    * @method registerSchema
    * @param {string} identity The identity of the schema
    * @param {object} schema The JSON schema
+   * @returns {boolean} Returns true on success
    * @memberof Augmented.ValidationFramework
    */
   registerSchema(identity, schema) {
-    this._myValidator.addSchema(identity, schema);
+    return this._myValidator.addSchema(identity, schema);
   };
 
   /**
@@ -98,9 +102,10 @@ class ValidationFramework {
    */
   generateSchema(model) {
     let data = model;
-    if (model && model instanceof Augmented.Model) {
+    /*TODO support model
+    if (model && model instanceof Model) {
       data = model.toJSON();
-    }
+    }*/
     return SchemaGenerator(data);
   };
 };

@@ -1,4 +1,4 @@
-export const ErrorCodes = {
+const ERROR_CODES = {
   INVALID_TYPE: 0,
   ENUM_MISMATCH: 1,
   ANY_OF_MISSING: 10,
@@ -37,7 +37,7 @@ export const ErrorCodes = {
 };
 
 // TODO: bundle this
-export const ErrorMessagesDefault = {
+const ERROR_MESSAGES_DEFAULT = {
   INVALID_TYPE: "Invalid type: {type} (expected {expected})",
   ENUM_MISMATCH: "No enum match for: {value}",
   ANY_OF_MISSING: "Data does not match any schemas from \"anyOf\"",
@@ -75,11 +75,11 @@ export const ErrorMessagesDefault = {
   UNKNOWN_PROPERTY: "Unknown property (not in schema)"
 };
 
-class ValidationError extends Error {
+class ValidationError { //extends Error {
   constructor(code, message, params, dataPath, schemaPath, subErrors) {
     // Pass remaining arguments (including vendor specific ones) to parent constructor
-    super(code, message, params);
-    Error.call(this);
+    //super(code, message, params);
+    //Error.call(this);
     if (code === undefined) {
       throw new Error ("No code supplied for error: "+ message);
     }
@@ -90,13 +90,12 @@ class ValidationError extends Error {
     this.schemaPath = schemaPath || "";
     this.subErrors = subErrors || null;
 
-    let err = new Error(this.message);
+    const err = new Error(this.message);
     this.stack = err.stack || err.stacktrace;
     if (!this.stack) {
       try {
         throw err;
-      }
-      catch(err2) {
+      } catch(err2) {
         this.stack = err2.stack || err2.stacktrace;
       }
     }
@@ -121,13 +120,11 @@ class ValidationError extends Error {
     }
     return this;
   };
-
 };
 
-export let ErrorCodeLookup = {};
-
-for (let key in ErrorCodes) {
-  ErrorCodeLookup[ErrorCodes[key]] = key;
+let ErrorCodeLookup = {}, key;
+for (key in ERROR_CODES) {
+  ErrorCodeLookup[ERROR_CODES[key]] = key;
 }
 
-export default ValidationError;
+export { ERROR_CODES, ERROR_MESSAGES_DEFAULT, ValidationError, ErrorCodeLookup };

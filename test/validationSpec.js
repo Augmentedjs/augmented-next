@@ -1,56 +1,167 @@
 const expect = require("expect");
 import Augmented from "../src/augmented";
 
+const TEST_SCHEMA = {
+	"$schema": "http://json-schema.org/draft-04/schema#",
+  "description": "schema for a story",
+  "type": "object",
+  "title": "Story",
+  "properties": {
+    "identifier": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string",
+      "enum": ["Story", "Epic"]
+    },
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string",
+      "minLength": 0,
+      "maxLength": 512
+    },
+    "estimate": {
+      "type": "string",
+      "enum": ["1", "2", "3", "5", "8", "13", "20", "40", "100"]
+    },
+    "assignee": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string",
+      "enum": ["Planned", "In Progress", "Done"]
+    },
+    "theme": {
+      "type": "string"
+    }
+  },
+  "required": ["title", "type"]
+};
+
 describe("Given Validation", () => {
 	describe("Given the Augmented Validation Framework", () => {
+		let v;
+	  beforeEach(() => {
+	    v = new Augmented.ValidationFramework();
+	  });
+	  afterEach(() => {
+	    v = null;
+	  });
+
 		it("is defined", () => {
 			expect(Augmented.ValidationFramework).toBeDefined();
 		});
 
 		it("can create an instance", () => {
-			const v = new Augmented.ValidationFramework();
 			expect(v).toBeDefined();
 		});
 
+		it("can register a schema", () => {
+			v.registerSchema("story", TEST_SCHEMA);
+			const x = v.getSchema("story");
+			expect(x).toBeDefined();
+		});
+
+		it("can get a schema", () => {
+			v.registerSchema("story", TEST_SCHEMA);
+			const x = v.getSchema("story");
+			expect(x).toEqual(TEST_SCHEMA);
+		});
+
+		it("can get a schema map", () => {
+			v.registerSchema("story", TEST_SCHEMA);
+			const x = v.getSchemas();
+			expect(x).not.toEqual({});
+		});
+
+		it("can clear a schema", () => {
+			v.registerSchema("story", TEST_SCHEMA);
+			v.clearSchemas();
+			const x = v.getSchemas();
+			expect(x).toEqual({});
+		});
+
+		it("can validate from a schema", () => {
+			v.registerSchema("story", TEST_SCHEMA);
+			const result = v.validate({ "x": "x" }, TEST_SCHEMA);
+			expect(result).not.toEqual({});
+		});
+
+		it("can validate from a schema with errors", () => {
+			v.registerSchema("story", TEST_SCHEMA);
+			const result = v.validate({ "x": "x" }, TEST_SCHEMA);
+			expect(result.errors).not.toEqual({});
+		});
+
+		it("can validate from a schema with errors and get messages", () => {
+			v.registerSchema("story", TEST_SCHEMA);
+			const result = v.validate({ "x": "x" }, TEST_SCHEMA);
+			const messages = v.getValidationMessages();
+			expect(messages).not.toEqual({});
+		});
+
+		it("can validate from a schema with no errors", () => {
+			v.registerSchema("story", TEST_SCHEMA);
+			const result = v.validate({ "title": "x", "type": "Story" }, TEST_SCHEMA);
+			expect(result.errors).not.toEqual({});
+		});
+
+		it("can generate a schema", () => {
+			const result = v.generateSchema({ "title": "x", "type": "Story" });
+			expect(result["$schema"]).toEqual("http://json-schema.org/draft-04/schema#");
+		});
 	});
 
 	xdescribe("Given an Augmented Model", () => {
+		let model;
+	  beforeEach(() => {
+	    model = new Augmented.Model();
+	  });
+	  afterEach(() => {
+	    model = null;
+	  });
+
 		it("is defined", () => {
 			expect(Augmented.Model).toBeDefined();
 		});
 
-		it("can generate a schema from a model", () => {
-			var model = new Augmented.Model();
-			model.set({ "Name": "Bob", "ID": 123, "Email": "bob@augmentedjs.org", "Role": "Architect", "Active": true });
-			var schema = Augmented.ValidationFramework.generateSchema(model);
-			expect(schema).toBeDefined();
-			expect(Augmented.isObject(schema)).toBeTruthy();
-		});
-
 		it("with no Schema does not support Validation", () => {
-			var model = new Augmented.Model();
 			expect(model.supportsValidation()).toBeFalsy();
 		});
 
 		it("with an empty Schema does support Validation", () => {
-			var model = new Augmented.Model();
 			model.schema = {};
 			expect(model.supportsValidation()).toBeTruthy();
+		});
+
+		it("can generate a schema from a model", () => {
+			model.set({ "Name": "Bob", "ID": 123, "Email": "bob@augmentedjs.org", "Role": "Architect", "Active": true });
+			const schema = Augmented.ValidationFramework.generateSchema(model);
+			expect(schema).toBeDefined();
+			expect(Augmented.isObject(schema)).toBeTruthy();
 		});
 	});
 
 	xdescribe("Given an Augmented Collection", () => {
+		let collection;
+	  beforeEach(() => {
+	    collection = new Augmented.Collection();
+	  });
+	  afterEach(() => {
+	    collection = null;
+	  });
+
 		it("has an augmented Collection", () => {
 			expect(Augmented.Collection).toBeDefined();
 		});
 
 		it("with no Schema does not support Validation", () => {
-			var collection = new Augmented.Collection();
 			expect(collection.supportsValidation()).toBeFalsy();
 		});
 
 		it("with an empty Schema does support Validation", () => {
-			var collection = new Augmented.Collection();
 			collection.schema = {};
 			expect(collection.supportsValidation()).toBeTruthy();
 		});

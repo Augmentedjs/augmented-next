@@ -1,5 +1,5 @@
 import ValidatorContext from "./validatorContext.js";
-import {ErrorCodeLookup, ErrorCodes, ErrorMessagesDefault} from "./validationError.js";
+import { ErrorCodeLookup, ERROR_CODES, ERROR_MESSAGES_DEFAULT } from "./validationError.js";
 import { normSchema, resolveUrl, getDocumentUri } from "./functions.js";
 
 let languages = {};
@@ -9,8 +9,8 @@ const createApi = (language) => {
   let currentLanguage = language || 'en';
 
   const api = {
-    addFormat: () => {
-      _myContext.addFormat.apply(_myContext, arguments);
+    addFormat: (format, validator) => {
+      _myContext.addFormat(format, validator);
     },
     language: (code) => {
       if (!code) {
@@ -28,9 +28,9 @@ const createApi = (language) => {
     },
     addLanguage: (code, messageMap) => {
       let key;
-      for (key in ErrorCodes) {
-        if (messageMap[key] && !messageMap[ErrorCodes[key]]) {
-          messageMap[ErrorCodes[key]] = messageMap[key];
+      for (key in ERROR_CODES) {
+        if (messageMap[key] && !messageMap[ERROR_CODES[key]]) {
+          messageMap[ERROR_CODES[key]] = messageMap[key];
         }
       }
       let rootCode = code.split('-')[0];
@@ -92,11 +92,11 @@ const createApi = (language) => {
       result.valid = (result.errors.length === 0);
       return result;
     },
-    addSchema: () => {
-      return _myContext.addSchema.apply(_myContext, arguments);
+    addSchema: (url, schema) => {
+      return _myContext.addSchema(url, schema);
     },
-    getSchema: () => {
-      return _myContext.getSchema.apply(_myContext, arguments);
+    getSchema: (url, urlHistory) => {
+      return _myContext.getSchema(url, urlHistory);
     },
     getSchemaMap: () => {
       return _myContext.getSchemaMap.apply(_myContext, arguments);
@@ -122,17 +122,17 @@ const createApi = (language) => {
         // TODO message bundle this
         throw new Error('Code number must be an integer > 10000');
       }
-      if (typeof ErrorCodes[codeName] !== 'undefined') {
+      if (typeof ERROR_CODES[codeName] !== 'undefined') {
         // TODO message bundle this
-        throw new Error('Error already defined: ' + codeName + ' as ' + ErrorCodes[codeName]);
+        throw new Error('Error already defined: ' + codeName + ' as ' + ERROR_CODES[codeName]);
       }
       if (typeof ErrorCodeLookup[codeNumber] !== 'undefined') {
         // TODO message bundle this
         throw new Error('Error code already used: ' + ErrorCodeLookup[codeNumber] + ' as ' + codeNumber);
       }
-      ErrorCodes[codeName] = codeNumber;
+      ERROR_CODES[codeName] = codeNumber;
       ErrorCodeLookup[codeNumber] = codeName;
-      ErrorMessagesDefault[codeName] = ErrorMessagesDefault[codeNumber] = defaultMessage;
+      ERROR_MESSAGES_DEFAULT[codeName] = ERROR_MESSAGES_DEFAULT[codeNumber] = defaultMessage;
       for (let langCode in languages) {
         let language = languages[langCode];
         if (language[codeName]) {
@@ -152,7 +152,7 @@ const createApi = (language) => {
     normSchema: normSchema,
     resolveUrl: resolveUrl,
     getDocumentUri: getDocumentUri,
-    errorCodes: ErrorCodes
+    errorCodes: ERROR_CODES
   };
   return api;
 };

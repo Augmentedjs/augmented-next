@@ -15,12 +15,13 @@ const SCHEMA_HEADER = {
  * @memberof Augmented.Utility
  */
 const SchemaGenerator = (data) => {
+  let obj = SCHEMA_HEADER;
   let i, d, dkey, p, keys = Object.keys(data), l = keys.length;
   for (i = 0; i < l; i++) {
     d = keys[i];
     for (dkey in d) {
       if (d.hasOwnProperty(dkey)) {
-        p = SCHEMA_HEADER.properties[d] = {};
+        p = obj.properties[d] = {};
 
         let t = (typeof data[d]);
         if (t === "object") {

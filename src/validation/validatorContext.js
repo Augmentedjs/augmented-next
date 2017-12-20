@@ -1,4 +1,5 @@
-import {ValidationError, ErrorCodes, ErrorMessagesDefault} from "./validationError.js";
+import { ValidationError, ERROR_CODES, ERROR_MESSAGES_DEFAULT } from "./validationError.js";
+import { normSchema, getDocumentUri } from "./functions.js";
 
 let CLOSE_ENOUGH_LOW = Math.pow(2, -51);
 let CLOSE_ENOUGH_HIGH = 1 - CLOSE_ENOUGH_LOW;
@@ -35,13 +36,196 @@ class ValidatorContext {
     }
   };
 
+  notReallyPercentEncode(string) {
+    return encodeURI(string).replace(/%25[0-9][0-9]/g, (doubleEncoded) => {
+      return "%" + doubleEncoded.substring(3);
+    });
+  };
+
+  uriTemplateSubstitution(spec) {
+    let modifier = "";
+    if (URI_TEMPLATE_GLOBAL_MODIFIERS[spec.charAt(0)]) {
+      modifier = spec.charAt(0);
+      spec = spec.substring(1);
+    }
+    let separator = "";
+    let prefix = "";
+    let shouldEscape = true;
+    let showVariables = false;
+    let trimEmptyString = false;
+    if (modifier === '+') {
+      shouldEscape = false;
+    } else if (modifier === ".") {
+      prefix = ".";
+      separator = ".";
+    } else if (modifier === "/") {
+      prefix = "/";
+      separator = "/";
+    } else if (modifier === '#') {
+      prefix = "#";
+      shouldEscape = false;
+    } else if (modifier === ';') {
+      prefix = ";";
+      separator = ";";
+      showVariables = true;
+      trimEmptyString = true;
+    } else if (modifier === '?') {
+      prefix = "?";
+      separator = "&";
+      showVariables = true;
+    } else if (modifier === '&') {
+      prefix = "&";
+      separator = "&";
+      showVariables = true;
+    }
+
+    let varNames = [];
+    let varList = spec.split(",");
+    let varSpecs = [];
+    let varSpecMap = {};
+    let i = 0, l = varList.length;
+    for (i = 0; i < l; i++) {
+      let varName = varList[i];
+      let truncate = null;
+      if (varName.indexOf(":") !== -1) {
+        let parts = varName.split(":");
+        varName = parts[0];
+        truncate = parseInt(parts[1], 10);
+      }
+      let suffices = {};
+      while (URI_TEMPLATE_SUFFICES[varName.charAt(varName.length - 1)]) {
+        suffices[varName.charAt(varName.length - 1)] = true;
+        varName = varName.substring(0, varName.length - 1);
+      }
+      let varSpec = {
+        truncate: truncate,
+        name: varName,
+        suffices: suffices
+      };
+      varSpecs.push(varSpec);
+      varSpecMap[varName] = varSpec;
+      varNames.push(varName);
+    }
+
+    const subFunction = (valueFunction) => {
+      let result = "";
+      let startIndex = 0;
+      let i = 0, l = varSpecs.length;
+      for (i = 0; i < l; i++) {
+        let varSpec = varSpecs[i];
+
+        if (!valueFunction && !isFunction(valueFunction)) {
+          throw new Error("Problem qith value function.");
+        }
+
+        let value = valueFunction(varSpec.name);
+        if (value === null || value === undefined || (Array.isArray(value) && value.length === 0) || (typeof value === 'object' && Object.keys(value).length === 0)) {
+          startIndex++;
+          continue;
+        }
+        if (i === startIndex) {
+          result += prefix;
+        } else {
+          result += (separator || ",");
+        }
+        if (Array.isArray(value)) {
+          if (showVariables) {
+            result += varSpec.name + "=";
+          }
+          let j = 0;
+          l = value.length;
+          for (j = 0; j < l; j++) {
+            if (j > 0) {
+              result += varSpec.suffices['*'] ? (separator || ",") : ",";
+              if (varSpec.suffices['*'] && showVariables) {
+                result += varSpec.name + "=";
+              }
+            }
+            result += shouldEscape ? encodeURIComponent(value[j]).replace(/!/g, "%21") : this.notReallyPercentEncode(value[j]);
+          }
+        } else if (typeof value === "object") {
+          if (showVariables && !varSpec.suffices['*']) {
+            result += varSpec.name + "=";
+          }
+          let first = true;
+          for (let key in value) {
+            if (!first) {
+              result += varSpec.suffices['*'] ? (separator || ",") : ",";
+            }
+            first = false;
+            result += shouldEscape ? encodeURIComponent(key).replace(/!/g, "%21") : this.notReallyPercentEncode(key);
+            result += varSpec.suffices['*'] ? '=' : ",";
+            result += shouldEscape ? encodeURIComponent(value[key]).replace(/!/g, "%21") : this.notReallyPercentEncode(value[key]);
+          }
+        } else {
+          if (showVariables) {
+            result += varSpec.name;
+            if (!trimEmptyString || value !== "") {
+              result += "=";
+            }
+          }
+          if (varSpec.truncate !== null) {
+            value = value.substring(0, varSpec.truncate);
+          }
+          result += shouldEscape ? encodeURIComponent(value).replace(/!/g, "%21"): this.notReallyPercentEncode(value);
+        }
+      }
+      return result;
+    };
+    subFunction.varNames = varNames;
+    return {
+      prefix: prefix,
+      substitution: subFunction
+    };
+  };
+
+  recursiveCompare(A, B) {
+    if (A === B) {
+      return true;
+    }
+    if (typeof A === "object" && typeof B === "object") {
+      if (Array.isArray(A) !== Array.isArray(B)) {
+        return false;
+      } else if (Array.isArray(A)) {
+        if (A.length !== B.length) {
+          return false;
+        }
+        let i = 0, l = A.length;
+        for (i = 0; i < l; i++) {
+          if (!this.recursiveCompare(A[i], B[i])) {
+            return false;
+          }
+        }
+      } else {
+        let key;
+        for (key in A) {
+          if (B[key] === undefined && A[key] !== undefined) {
+            return false;
+          }
+        }
+        for (key in B) {
+          if (A[key] === undefined && B[key] !== undefined) {
+            return false;
+          }
+        }
+        for (key in A) {
+          if (!this.recursiveCompare(A[key], B[key])) {
+            return false;
+          }
+        }
+      }
+      return true;
+    }
+    return false;
+  };
+
   defineKeyword(keyword, keywordFunction) {
     this.definedKeywords[keyword] = this.definedKeywords[keyword] || [];
     this.definedKeywords[keyword].push(keywordFunction);
   };
 
   createError(code, messageParams, dataPath, schemaPath, subErrors) {
-    let messageTemplate = this.errorMessages[code] || ErrorMessagesDefault[code];
+    let messageTemplate = this.errorMessages[code] || ERROR_MESSAGES_DEFAULT[code];
     if (typeof messageTemplate !== 'string') {
       return new ValidationError(code, "Unknown error code " + code + ": " + JSON.stringify(messageParams), messageParams, dataPath, schemaPath, subErrors);
     }
@@ -73,7 +257,7 @@ class ValidatorContext {
 
   banUnknownProperties() {
     for (let unknownPath in this.unknownPropertyPaths) {
-      let error = this.createError(ErrorCodes.UNKNOWN_PROPERTY, {path: unknownPath}, unknownPath, "");
+      let error = this.createError(ERROR_CODES.UNKNOWN_PROPERTY, {path: unknownPath}, unknownPath, "");
       let result = this.handleError(error);
       if (result) {
         return result;
@@ -94,7 +278,7 @@ class ValidatorContext {
     if (schema['$ref'] !== undefined) {
       urlHistory = urlHistory || {};
       if (urlHistory[schema['$ref']]) {
-        return this.createError(ErrorCodes.CIRCULAR_REFERENCE, {urls: Object.keys(urlHistory).join(', ')}, '', '');
+        return this.createError(ERROR_CODES.CIRCULAR_REFERENCE, {urls: Object.keys(urlHistory).join(', ')}, '', '');
       }
       urlHistory[schema['$ref']] = true;
       schema = this.getSchema(schema['$ref'], urlHistory);
@@ -175,8 +359,7 @@ class ValidatorContext {
       if (typeof url === 'object' && typeof url.id === 'string') {
         schema = url;
         url = schema.id;
-      }
-      else {
+      } else {
         return;
       }
     }
@@ -222,6 +405,7 @@ class ValidatorContext {
     this.schemas = {};
     this.reset();
   };
+
   reset() {
     this.missing = [];
     this.missingMap = {};
@@ -231,6 +415,7 @@ class ValidatorContext {
   validateAll(data, schema, dataPathParts, schemaPathParts, dataPointerPath) {
     let topLevel;
     schema = this.resolveRefs(schema);
+
     if (!schema) {
       return null;
     } else if (schema instanceof ValidationError) {
@@ -330,9 +515,9 @@ class ValidatorContext {
     }
     let errorMessage = this.formatValidators[schema.format].call(null, data, schema);
     if (typeof errorMessage === 'string' || typeof errorMessage === 'number') {
-      return this.createError(ErrorCodes.FORMAT_CUSTOM, {message: errorMessage}).prefixWith(null, "format");
+      return this.createError(ERROR_CODES.FORMAT_CUSTOM, {message: errorMessage}).prefixWith(null, "format");
     } else if (errorMessage && typeof errorMessage === 'object') {
-      return this.createError(ErrorCodes.FORMAT_CUSTOM, {message: errorMessage.message || "?"}, errorMessage.dataPath || null, errorMessage.schemaPath || "/format");
+      return this.createError(ERROR_CODES.FORMAT_CUSTOM, {message: errorMessage.message || "?"}, errorMessage.dataPath || null, errorMessage.schemaPath || "/format");
     }
     return null;
   };
@@ -348,16 +533,16 @@ class ValidatorContext {
         let func = validationFunctions[i];
         let result = func(data, schema[key], schema, dataPointerPath);
         if (typeof result === 'string' || typeof result === 'number') {
-          return this.createError(ErrorCodes.KEYWORD_CUSTOM, {key: key, message: result}).prefixWith(null, "format");
+          return this.createError(ERROR_CODES.KEYWORD_CUSTOM, {key: key, message: result}).prefixWith(null, "format");
         } else if (result && typeof result === 'object') {
           let code = result.code;
           if (typeof code === 'string') {
-            if (!ErrorCodes[code]) {
+            if (!ERROR_CODES[code]) {
               throw new Error('Undefined error code (use defineError): ' + code);
             }
-            code = ErrorCodes[code];
+            code = ERROR_CODES[code];
           } else if (typeof code !== 'number') {
-            code = ErrorCodes.KEYWORD_CUSTOM;
+            code = ERROR_CODES.KEYWORD_CUSTOM;
           }
           let messageParams = (typeof result.message === 'object') ? result.message : {key: key, message: result.message || "?"};
           let schemaPath = result.schemaPath ||( "/" + key.replace(/~/g, '~0').replace(/\//g, '~1'));
@@ -401,7 +586,7 @@ class ValidatorContext {
         return null;
       }
     }
-    return this.createError(ErrorCodes.INVALID_TYPE, {type: dataType, expected: allowedTypes.join("/")});
+    return this.createError(ERROR_CODES.INVALID_TYPE, {type: dataType, expected: allowedTypes.join("/")});
   };
 
   validateEnum(data, schema) {
@@ -415,7 +600,7 @@ class ValidatorContext {
         return null;
       }
     }
-    return this.createError(ErrorCodes.ENUM_MISMATCH, {value: (typeof JSON !== 'undefined') ? JSON.stringify(data) : data});
+    return this.createError(ERROR_CODES.ENUM_MISMATCH, {value: (typeof JSON !== 'undefined') ? JSON.stringify(data) : data});
   };
 
   validateNumeric(data, schema, dataPointerPath) {
@@ -430,7 +615,7 @@ class ValidatorContext {
     if (typeof data === "number") {
       let remainder = (data/multipleOf)%1;
       if (remainder >= CLOSE_ENOUGH_LOW && remainder < CLOSE_ENOUGH_HIGH) {
-        return this.createError(ErrorCodes.NUMBER_MULTIPLE_OF, {value: data, multipleOf: multipleOf});
+        return this.createError(ERROR_CODES.NUMBER_MULTIPLE_OF, {value: data, multipleOf: multipleOf});
       }
     }
     return null;
@@ -442,18 +627,18 @@ class ValidatorContext {
     }
     if (schema.minimum !== undefined) {
       if (data < schema.minimum) {
-        return this.createError(ErrorCodes.NUMBER_MINIMUM, {value: data, minimum: schema.minimum}).prefixWith(null, "minimum");
+        return this.createError(ERROR_CODES.NUMBER_MINIMUM, {value: data, minimum: schema.minimum}).prefixWith(null, "minimum");
       }
       if (schema.exclusiveMinimum && data === schema.minimum) {
-        return this.createError(ErrorCodes.NUMBER_MINIMUM_EXCLUSIVE, {value: data, minimum: schema.minimum}).prefixWith(null, "exclusiveMinimum");
+        return this.createError(ERROR_CODES.NUMBER_MINIMUM_EXCLUSIVE, {value: data, minimum: schema.minimum}).prefixWith(null, "exclusiveMinimum");
       }
     }
     if (schema.maximum !== undefined) {
       if (data > schema.maximum) {
-        return this.createError(ErrorCodes.NUMBER_MAXIMUM, {value: data, maximum: schema.maximum}).prefixWith(null, "maximum");
+        return this.createError(ERROR_CODES.NUMBER_MAXIMUM, {value: data, maximum: schema.maximum}).prefixWith(null, "maximum");
       }
       if (schema.exclusiveMaximum && data === schema.maximum) {
-        return this.createError(ErrorCodes.NUMBER_MAXIMUM_EXCLUSIVE, {value: data, maximum: schema.maximum}).prefixWith(null, "exclusiveMaximum");
+        return this.createError(ERROR_CODES.NUMBER_MAXIMUM_EXCLUSIVE, {value: data, maximum: schema.maximum}).prefixWith(null, "exclusiveMaximum");
       }
     }
     return null;
@@ -464,7 +649,7 @@ class ValidatorContext {
       return null;
     }
     if (isNaN(data) === true || data === Infinity || data === -Infinity) {
-      return this.createError(ErrorCodes.NUMBER_NOT_A_NUMBER, {value: data}).prefixWith(null, "type");
+      return this.createError(ERROR_CODES.NUMBER_NOT_A_NUMBER, {value: data}).prefixWith(null, "type");
     }
     return null;
   };
@@ -479,12 +664,12 @@ class ValidatorContext {
     }
     if (schema.minLength !== undefined) {
       if (data.length < schema.minLength) {
-        return this.createError(ErrorCodes.STRING_LENGTH_SHORT, {length: data.length, minimum: schema.minLength}).prefixWith(null, "minLength");
+        return this.createError(ERROR_CODES.STRING_LENGTH_SHORT, {length: data.length, minimum: schema.minLength}).prefixWith(null, "minLength");
       }
     }
     if (schema.maxLength !== undefined) {
       if (data.length > schema.maxLength) {
-        return this.createError(ErrorCodes.STRING_LENGTH_LONG, {length: data.length, maximum: schema.maxLength}).prefixWith(null, "maxLength");
+        return this.createError(ERROR_CODES.STRING_LENGTH_LONG, {length: data.length, maximum: schema.maxLength}).prefixWith(null, "maxLength");
       }
     }
     return null;
@@ -496,7 +681,7 @@ class ValidatorContext {
     }
     let regexp = new RegExp(schema.pattern);
     if (!regexp.test(data)) {
-      return this.createError(ErrorCodes.STRING_PATTERN, {pattern: schema.pattern}).prefixWith(null, "pattern");
+      return this.createError(ERROR_CODES.STRING_PATTERN, {pattern: schema.pattern}).prefixWith(null, "pattern");
     }
     return null;
   };
@@ -511,7 +696,7 @@ class ValidatorContext {
     let error;
     if (schema.minItems !== undefined) {
       if (data.length < schema.minItems) {
-        error = (this.createError(ErrorCodes.ARRAY_LENGTH_SHORT, {length: data.length, minimum: schema.minItems})).prefixWith(null, "minItems");
+        error = (this.createError(ERROR_CODES.ARRAY_LENGTH_SHORT, {length: data.length, minimum: schema.minItems})).prefixWith(null, "minItems");
         if (this.handleError(error)) {
           return error;
         }
@@ -519,7 +704,7 @@ class ValidatorContext {
     }
     if (schema.maxItems !== undefined) {
       if (data.length > schema.maxItems) {
-        error = (this.createError(ErrorCodes.ARRAY_LENGTH_LONG, {length: data.length, maximum: schema.maxItems})).prefixWith(null, "maxItems");
+        error = (this.createError(ERROR_CODES.ARRAY_LENGTH_LONG, {length: data.length, maximum: schema.maxItems})).prefixWith(null, "maxItems");
         if (this.handleError(error)) {
           return error;
         }
@@ -535,7 +720,7 @@ class ValidatorContext {
         let j = 0;
         for (j = i + 1; j < l; j++) {
           if (recursiveCompare(data[i], data[j])) {
-            let error = (this.createError(ErrorCodes.ARRAY_UNIQUE, {match1: i, match2: j})).prefixWith(null, "uniqueItems");
+            let error = (this.createError(ERROR_CODES.ARRAY_UNIQUE, {match1: i, match2: j})).prefixWith(null, "uniqueItems");
             if (this.handleError(error)) {
               return error;
             }
@@ -561,7 +746,7 @@ class ValidatorContext {
         } else if (schema.additionalItems !== undefined) {
           if (typeof schema.additionalItems === "boolean") {
             if (!schema.additionalItems) {
-              error = (this.createError(ErrorCodes.ARRAY_ADDITIONAL_ITEMS, {})).prefixWith("" + i, "additionalItems");
+              error = (this.createError(ERROR_CODES.ARRAY_ADDITIONAL_ITEMS, {})).prefixWith("" + i, "additionalItems");
               if (this.handleError(error)) {
                 return error;
               }
@@ -594,7 +779,7 @@ class ValidatorContext {
     let error;
     if (schema.minProperties !== undefined) {
       if (keys.length < schema.minProperties) {
-        error = this.createError(ErrorCodes.OBJECT_PROPERTIES_MINIMUM, {propertyCount: keys.length, minimum: schema.minProperties}).prefixWith(null, "minProperties");
+        error = this.createError(ERROR_CODES.OBJECT_PROPERTIES_MINIMUM, {propertyCount: keys.length, minimum: schema.minProperties}).prefixWith(null, "minProperties");
         if (this.handleError(error)) {
           return error;
         }
@@ -602,7 +787,7 @@ class ValidatorContext {
     }
     if (schema.maxProperties !== undefined) {
       if (keys.length > schema.maxProperties) {
-        error = this.createError(ErrorCodes.OBJECT_PROPERTIES_MAXIMUM, {propertyCount: keys.length, maximum: schema.maxProperties}).prefixWith(null, "maxProperties");
+        error = this.createError(ERROR_CODES.OBJECT_PROPERTIES_MAXIMUM, {propertyCount: keys.length, maximum: schema.maxProperties}).prefixWith(null, "maxProperties");
         if (this.handleError(error)) {
           return error;
         }
@@ -617,7 +802,7 @@ class ValidatorContext {
       for (i = 0; i < l; i++) {
         let key = schema.required[i];
         if (data[key] === undefined) {
-          let error = this.createError(ErrorCodes.OBJECT_REQUIRED, {key: key}).prefixWith(null, "" + i).prefixWith(null, "required");
+          let error = this.createError(ERROR_CODES.OBJECT_REQUIRED, {key: key}).prefixWith(null, "" + i).prefixWith(null, "required");
           if (this.handleError(error)) {
             return error;
           }
@@ -657,7 +842,7 @@ class ValidatorContext {
           }
           if (typeof schema.additionalProperties === "boolean") {
             if (!schema.additionalProperties) {
-              error = this.createError(ErrorCodes.OBJECT_ADDITIONAL_PROPERTIES, {}).prefixWith(key, "additionalProperties");
+              error = this.createError(ERROR_CODES.OBJECT_ADDITIONAL_PROPERTIES, {}).prefixWith(key, "additionalProperties");
               if (this.handleError(error)) {
                 return error;
               }
@@ -686,7 +871,7 @@ class ValidatorContext {
           let dep = schema.dependencies[depKey];
           if (typeof dep === "string") {
             if (data[dep] === undefined) {
-              error = this.createError(ErrorCodes.OBJECT_DEPENDENCY_KEY, {key: depKey, missing: dep}).prefixWith(null, depKey).prefixWith(null, "dependencies");
+              error = this.createError(ERROR_CODES.OBJECT_DEPENDENCY_KEY, {key: depKey, missing: dep}).prefixWith(null, depKey).prefixWith(null, "dependencies");
               if (this.handleError(error)) {
                 return error;
               }
@@ -696,7 +881,7 @@ class ValidatorContext {
             for (i = 0; i < l; i++) {
               let requiredKey = dep[i];
               if (data[requiredKey] === undefined) {
-                error = this.createError(ErrorCodes.OBJECT_DEPENDENCY_KEY, {key: depKey, missing: requiredKey}).prefixWith(null, "" + i).prefixWith(null, depKey).prefixWith(null, "dependencies");
+                error = this.createError(ERROR_CODES.OBJECT_DEPENDENCY_KEY, {key: depKey, missing: requiredKey}).prefixWith(null, "" + i).prefixWith(null, depKey).prefixWith(null, "dependencies");
                 if (this.handleError(error)) {
                   return error;
                 }
@@ -788,7 +973,7 @@ class ValidatorContext {
     if (errorAtEnd) {
       errors = errors.concat(this.errors.slice(startErrorCount));
       this.errors = this.errors.slice(0, startErrorCount);
-      return this.createError(ErrorCodes.ANY_OF_MISSING, {}, "", "/anyOf", errors);
+      return this.createError(ERROR_CODES.ANY_OF_MISSING, {}, "", "/anyOf", errors);
     }
   };
 
@@ -820,7 +1005,7 @@ class ValidatorContext {
           validIndex = i;
         } else {
           this.errors = this.errors.slice(0, startErrorCount);
-          return this.createError(ErrorCodes.ONE_OF_MULTIPLE, {index1: validIndex, index2: i}, "", "/oneOf");
+          return this.createError(ERROR_CODES.ONE_OF_MULTIPLE, {index1: validIndex, index2: i}, "", "/oneOf");
         }
         if (this.trackUnknownProperties) {
           for (let knownKey in this.knownPropertyPaths) {
@@ -844,7 +1029,7 @@ class ValidatorContext {
     if (validIndex === null) {
       errors = errors.concat(this.errors.slice(startErrorCount));
       this.errors = this.errors.slice(0, startErrorCount);
-      return this.createError(ErrorCodes.ONE_OF_MISSING, {}, "", "/oneOf", errors);
+      return this.createError(ERROR_CODES.ONE_OF_MISSING, {}, "", "/oneOf", errors);
     } else {
       this.errors = this.errors.slice(0, startErrorCount);
     }
@@ -871,7 +1056,7 @@ class ValidatorContext {
       this.knownPropertyPaths = oldKnownPropertyPaths;
     }
     if (error === null && notErrors.length === 0) {
-      return this.createError(ErrorCodes.NOT_PASSED, {}, "", "/not");
+      return this.createError(ERROR_CODES.NOT_PASSED, {}, "", "/not");
     }
     return null;
   };
