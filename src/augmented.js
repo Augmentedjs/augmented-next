@@ -7,6 +7,8 @@ import isFunction from "./isFunction.js";
 import Stack from "./stack.js";
 import SchemaGenerator from "./validation/schemaGenerator.js";
 import ValidationFramework from "./validation/validationFramework.js";
+import * as Security from "./security/security.js";
+import ClientType from "./security/clientType.js";
 
 /**
  * Augmented.js 2 - The Core UI Component and package
@@ -25,6 +27,8 @@ Augmented.Utility.SchemaGenerator = SchemaGenerator;
 Augmented.Logger = Logger;
 Augmented.Object = AugmentedObject;
 Augmented.ValidationFramework = ValidationFramework;
+Augmented.Security = Security;
+Augmented.Security.ClientType = ClientType;
 
 /**
  * The standard version property

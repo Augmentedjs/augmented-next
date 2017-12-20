@@ -6,7 +6,7 @@ describe("Given an Augmented Object", () => {
     expect(Augmented.Object).toBeDefined();
   });
 
-  describe("Given an obhject instance", () => {
+  describe("Given an object instance", () => {
     let object;
     beforeEach(() => {
 			object = new Augmented.Object({stuff: "stuff"});
