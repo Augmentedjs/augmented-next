@@ -1,6 +1,7 @@
 import * as Utility from "./utility";
 import * as Logger from "./logger";
 import AugmentedObject from "./object.js";
+import AugmentedModel from "./model.js";
 import AugmentedMap from "./map.js";
 import isString from "./isString.js";
 import isFunction from "./isFunction.js";
@@ -14,6 +15,9 @@ import Configuration from "./configuration.js";
 import AsynchronousQueue from "./queue.js";
 import Application from "./application.js";
 import pad from "./pad.js";
+import { BundleObject, ResourceBundle, MessageReader, MessageKeyFormatter } from "./resourceBundle.js";
+import sync from "./sync.js";
+import request from "./request/request.js";
 
 /**
  * Augmented.js 2 - The Core UI Component and package
@@ -32,13 +36,30 @@ Augmented.Utility.SchemaGenerator = SchemaGenerator;
 Augmented.Utility.extend = extend;
 Augmented.Utility.AsynchronousQueue = AsynchronousQueue;
 Augmented.Utility.pad = pad;
+Augmented.Utility.BundleObject = BundleObject;
+Augmented.Utility.ResourceBundle = ResourceBundle;
+Augmented.Utility.MessageReader = MessageReader;
+Augmented.Utility.MessageKeyFormatter = MessageKeyFormatter;
 Augmented.Logger = Logger;
 Augmented.Object = AugmentedObject;
+Augmented.Model = AugmentedModel;
 Augmented.ValidationFramework = ValidationFramework;
 Augmented.Security = Security;
 Augmented.Security.ClientType = ClientType;
 Augmented.Configuration = Configuration;
 Augmented.Application = Application;
+Augmented.isString = isString;
+Augmented.isFunction = isFunction;
+Augmented.sync = sync;
+
+/**
+* Ajax namespace for use with Ajax related configuration and methods
+* @namespace Augmented.Request
+* @memberof Augmented
+*/
+Augmented.Request = {};
+
+Augmented.Request.request = request;
 
 /**
  * The standard version property
@@ -71,8 +92,6 @@ Augmented._ = {};
  * @memberof Augmented
  */
 Augmented.$ = {};
-
-
 
 /*
  * Base functionality
@@ -115,7 +134,6 @@ Augmented.allKeys = (obj) => {
   return Object.getOwnPropertyNames(obj);
 };
 
-
 const result = (prototype) => {
   if (!Augmented.isObject(prototype)) {
     return {};
@@ -138,74 +156,6 @@ Augmented.create = (prototype, props) => {
   }
   return o;
 };
-
-// Map from CRUD to HTTP for our default sync implementation.
-const methodMap = {
-  "create": "POST",
-  "update": "PUT",
-  "patch": "PATCH",
-  "delete": "DELETE",
-  "read": "GET"
-};
-
-/**
- * Augmented.sync - Base sync method that can pass special augmented features
- * @method sync
- * @memberof Augmented
- */
-Augmented.sync = (method, model, options) => {
-  const type = methodMap[method];
-
-  if (!options) {
-    options = {};
-  }
-
-  // Default JSON-request options.
-  const params = {type: type, dataType: "json"};
-
-  // Ensure that we have a URL.
-  if (!options.url) {
-    if (model.url) {
-      if (Augmented.isFunction(model.url)) {
-        params.url = model.url();
-      } else {
-        params.url = model.url;
-      }
-    } else {
-      throw new Error("A \"url\" property or function must be specified");
-    }
-  }
-
-  // Ensure that we have the appropriate request data.
-  if (options.data == null && model && (method === "create" || method === "update" || method === "patch")) {
-    params.contentType = "application/json";
-    params.data = JSON.stringify(options.attrs || model.toJSON(options));
-  }
-
-  // Don't process data on a non-GET request.
-  if (params.type !== "GET") {
-    params.processData = false;
-  }
-
-  // Pass along `textStatus` and `errorThrown` from jQuery.
-  const error = options.error;
-  options.error = (xhr, textStatus, errorThrown) => {
-    options.textStatus = textStatus;
-    options.errorThrown = errorThrown;
-    if (error) {
-      error.call(options.context, xhr, textStatus, errorThrown);
-    }
-  };
-
-  // Make the request, allowing the user to override any Ajax options.
-  const xhr = options.xhr = Augmented.ajax(Augmented.Utility.extend(params, options));
-  model.trigger("request", model, xhr, options);
-  return xhr;
-};
-
-// imported
-Augmented.isString = isString;
-Augmented.isFunction = isFunction;
 
 /**
 * Augmented.result - returns named property in an object
@@ -238,10 +188,10 @@ Augmented.arrayHas = (arr, key) => {
  * @memberof Augmented
  * @param {string} functionName The name of the function
  * @param {object} context The context to call from
- * @param (object) args Arguments
+ * @param {object} args Arguments
  */
-Augmented.exec = (functionName, context /*, args */) => {
-  const args = Array.prototype.slice.call(arguments, 2),
+Augmented.exec = (functionName, context, ...args) => {
+  const //args = Array.prototype.slice.call(arguments, 2),
         namespaces = functionName.split("."),
         func = namespaces.pop(),
         l = namespaces.length;

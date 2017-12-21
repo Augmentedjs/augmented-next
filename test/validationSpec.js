@@ -114,7 +114,7 @@ describe("Given Validation", () => {
 		});
 	});
 
-	xdescribe("Given an Augmented Model", () => {
+	describe("Given an Augmented Model", () => {
 		let model;
 	  beforeEach(() => {
 	    model = new Augmented.Model();
@@ -136,7 +136,7 @@ describe("Given Validation", () => {
 			expect(model.supportsValidation()).toBeTruthy();
 		});
 
-		it("can generate a schema from a model", () => {
+		xit("can generate a schema from a model", () => {
 			model.set({ "Name": "Bob", "ID": 123, "Email": "bob@augmentedjs.org", "Role": "Architect", "Active": true });
 			const schema = Augmented.ValidationFramework.generateSchema(model);
 			expect(schema).toBeDefined();

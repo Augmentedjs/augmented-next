@@ -1,70 +1,79 @@
+//TODO: add a library or make your own.
 //var resourceBundle = (!resourceBundle) ? new i18nBase() : resourceBundle;
 
 /**
-* ResourceBundle Object used for configuration of a bundle
-* @namespace Augmented.Utility.BundleObject
-* @memberof Augmented.Utility
-* @name Augmented.Utility.BundleObject
-* @property {string} name Name/uri/file of the bundle
-* @property {string} mode Bundlefile type (default: both)
-* @property {boolean} cache Cache reading from bundle (default: true)
-*/
-Augmented.Utility.BundleObject = {
+ * ResourceBundle Object used for configuration of a bundle
+ * @namespace Augmented.Utility.BundleObject
+ * @memberof Augmented.Utility
+ * @name Augmented.Utility.BundleObject
+ * @property {string} name Name/uri/file of the bundle
+ * @property {string} mode Bundlefile type (default: both)
+ * @property {boolean} cache Cache reading from bundle (default: true)
+ */
+export const BundleObject = {
   name: '',
   mode: 'both',
   cache: true
 };
 
 /**
-* Augmented.Utility.ResourceBundle
-* @namespace Augmented.Utility.ResourceBundle
-* @memberof Augmented.Utility
-* @name Augmented.Utility.ResourceBundle
-*/
-Augmented.Utility.ResourceBundle = {
+ * Augmented.Utility.ResourceBundle
+ * @namespace Augmented.Utility.ResourceBundle
+ * @memberof Augmented.Utility
+ * @name Augmented.Utility.ResourceBundle
+ */
+export class ResourceBundle {
+  constructor() {
+    // setup a library
+  };
+
   /**
   * Gets the bundle(s) and registers to Augmented.Utility.ResourceBundle
   * @method getBundle
-  * @param {Augmented.Utility.BundleObject} Bundle to get
+  * @param {Augmented.Utility.BundleObject} bundle Bundle to get
   * @memberof Augmented.Utility.ResourceBundle
   * @returns {object} returns a bundle
   */
-  getBundle: function() {
+  static getBundle() {
     return {};//resourceBundle.properties.apply(this, arguments);
-  },
+  };
 
   /**
-  * Gets a string from the registered bundle
-  * @method getString
-  * @memberof Augmented.Utility.ResourceBundle
-  */
-  getString: function() {
+   * Gets a string from the registered bundle
+   * @method getString
+   * @memberof Augmented.Utility.ResourceBundle
+   */
+  static getString() {
     return "";//resourceBundle.prop.apply(this, arguments);
   }
 };
 
 /**
-* Reads a message out of the bundle
-* @namespace Augmented.Utility.MessageReader
-* @memberof Augmented.Utility
-* @name Augmented.Utility.MessageReader
-*/
-Augmented.Utility.MessageReader = {
+ * Reads a message out of the bundle
+ * @namespace Augmented.Utility.MessageReader
+ * @memberof Augmented.Utility
+ * @name Augmented.Utility.MessageReader
+ */
+export class MessageReader {
+  constructor() {
+
+  };
+
   /**
-  * getMessage - get the message out of the bundle.<br/>
-  * If message is not found, then ResourceBundle returns the key
-  * wrapped in square brackets
-  * loop through the fallback path of the key by removing the
-  * last attribute and searching the bundle again
-  * stop when you get back a real message (not just the [key])
-  * @method getMessage
-  * @memberof Augmented.Utility.MessageReader
-  * @param {string} key The key to return from the bundle
-  */
-  getMessage: function(key) {
+   * getMessage - get the message out of the bundle.<br/>
+   * If message is not found, then ResourceBundle returns the key
+   * wrapped in square brackets
+   * loop through the fallback path of the key by removing the
+   * last attribute and searching the bundle again
+   * stop when you get back a real message (not just the [key])
+   * @method getMessage
+   * @memberof Augmented.Utility.MessageReader
+   * @param {string} key The key to return from the bundle
+   */
+  getMessage(key) {
+    const delimiter = ".";
     // try getting the message out of the bundle
-    var msg = Augmented.Utility.ResourceBundle.getString.apply(this,arguments),
-    delimiter = ".",
+    let msg = ResourceBundle.getString(key),
     last = key.length,
     originalKey = key;
     // if message is not found, then ResourceBundle returns the key
@@ -75,7 +84,7 @@ Augmented.Utility.MessageReader = {
     while ( last > 0 && msg == '[' + key + ']') {
       last = key.lastIndexOf(delimiter);
       key = key.substring(0,last);
-      msg = Augmented.Utility.ResourceBundle.getString.apply(this,arguments);
+      msg = ResourceBundle.getString(key);
     }
     // if the original key or a fallback was found, return the
     // message
@@ -86,38 +95,42 @@ Augmented.Utility.MessageReader = {
 };
 
 /**
-* <p>Augmented.Utility.MessageKeyFormatter<br/>
-*
-* Concatenate the pieces of the message together if a portion of the key is
-* missing, the rest of the key is ignored. <em>ex. if the "rule" attribute is
-* missing, then the key will return with the message.level + message.kind only</em></p>
-* @namespace Augmented.Utility.MessageKeyFormatter
-* @memberof Augmented.Utility
-* @name Augmented.Utility.MessageKeyFormatter
-*/
-Augmented.Utility.MessageKeyFormatter = {
+ * <p>Augmented.Utility.MessageKeyFormatter<br/>
+ *
+ * Concatenate the pieces of the message together if a portion of the key is
+ * missing, the rest of the key is ignored. <em>ex. if the "rule" attribute is
+ * missing, then the key will return with the message.level + message.kind only</em></p>
+ * @namespace Augmented.Utility.MessageKeyFormatter
+ * @memberof Augmented.Utility
+ * @name Augmented.Utility.MessageKeyFormatter
+ */
+export class MessageKeyFormatter {
+  constructor() {
+
+  };
+
   /**
   * Key Delimiter
-  * @property {srting} delimiter The delimter used to seperate each key
+  * @property {string} delimiter The delimter used to seperate each key
   * @memberof Augmented.Utility.MessageKeyFormatter
   */
-  delimiter: ".",
+  delimiter = ".";
   /**
-  * Format a key for a message
-  * @function format
-  * @param {message} message The message to format
-  * @memberof Augmented.Utility.MessageKeyFormatter
-  * @returns The key to lookup in a bundle
-  */
-  format: function(message) {
-    var key = "";
+   * Format a key for a message
+   * @function format
+   * @param {message} message The message to format
+   * @memberof Augmented.Utility.MessageKeyFormatter
+   * @returns The key to lookup in a bundle
+   */
+  static format(message) {
+    let key = "";
     if (message) {
-      var x = message.level &&
+      let x = message.level &&
       (key += message.level, message.kind &&
         (key += this.delimiter + message.kind, message.rule &&
           (key += this.delimiter + message.rule, message.values.title &&
             (key += this.delimiter + message.values.title))));
     }
     return (key) ? key : "";
-  }
+  };
 };
