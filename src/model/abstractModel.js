@@ -3,7 +3,27 @@ import extend from "../extend.js";
 import uniqueId from "../uniqueId.js";
 
 // for now
-const _ = require("lodash");
+const _clone = require("lodash.clone");
+const _result = require("lodash.result");
+const _isEmpty = require("lodash.isempty");
+const _has = require("lodash.has");
+const _isEqual = require("lodash.isequal");
+const _defaults = require("lodash.defaults");
+const _iteratee = require("lodash.iteratee");
+const _defer = require("lodash.defer");
+const _escape = require("lodash.escape");
+
+const wrapError = (model, options) => {
+  if (model) {
+    const error = options.error;
+    options.error = (resp) => {
+      if (error) {
+        error.call(options.context, model, resp, options);
+      }
+      model.trigger("error", model, resp, options);
+    };
+  }
+};
 
 /**
  * AbstractModel <br/>
@@ -32,8 +52,8 @@ export default class AbstractModel extends AugmentedObject {
       attrs = this.parse(attrs, options) || {};
     }
 
-    this.defaults = _.result(this, 'defaults');
-    attrs = _.defaults(extend({}, this.defaults, attrs), this.defaults);
+    this.defaults = _result(this, "defaults");
+    attrs = _defaults(extend({}, this.defaults, attrs), this.defaults);
     this.set(attrs, options);
     this.changed = {};
     this.initialize(args);
@@ -57,6 +77,12 @@ export default class AbstractModel extends AugmentedObject {
 
   urlRoot = "";
 
+  _pending = false;
+
+  _changing = false;
+
+  _previousAttributes = null;
+
   preinitialize(...args) {
   };
 
@@ -76,7 +102,7 @@ export default class AbstractModel extends AugmentedObject {
     }
     // Handle both `"key", value` and `{key: value}` -style arguments.
     let attrs;
-    if (typeof key === 'object') {
+    if (typeof key === "object") {
       attrs = key;
       options = val;
     } else {
@@ -100,7 +126,7 @@ export default class AbstractModel extends AugmentedObject {
     this._changing = true;
 
     if (!changing) {
-      this._previousAttributes = _.clone(this._attributes);
+      this._previousAttributes = _clone(this._attributes);
       this.changed = {};
     }
 
@@ -112,10 +138,10 @@ export default class AbstractModel extends AugmentedObject {
     // For each `set` attribute, update or delete the current value.
     for (attr in attrs) {
       val = attrs[attr];
-      if (!_.isEqual(current[attr], val)) {
+      if (!_isEqual(current[attr], val)) {
         changes.push(attr);
       }
-      if (!_.isEqual(prev[attr], val)) {
+      if (!_isEqual(prev[attr], val)) {
         changed[attr] = val;
       } else {
         delete changed[attr];
@@ -135,7 +161,7 @@ export default class AbstractModel extends AugmentedObject {
       }
       let i = 0;
       for (i = 0; i < changes.length; i++) {
-        this.trigger('change:' + changes[i], this, current[changes[i]], options);
+        this.trigger("change:" + changes[i], this, current[changes[i]], options);
       }
     }
 
@@ -148,7 +174,7 @@ export default class AbstractModel extends AugmentedObject {
       while (this._pending) {
         options = this._pending;
         this._pending = false;
-        this.trigger('change', this, options);
+        this.trigger("change", this, options);
       }
     }
     this._pending = false;
@@ -157,18 +183,16 @@ export default class AbstractModel extends AugmentedObject {
   };
 
   escape(attribute) {
-    const value = this.get(attribute);
-    // escape the value
-    return value;
+    return _escape(this.get(attr));
   };
 
   has(attribute) {
     return this.get(attr) !== null;
   };
 
-  // Special-cased proxy to underscore's `_.matches` method.
+  // Special-cased proxy to underscore's `matches` method.
   matches(attrs) {
-    return !!_.iteratee(attrs, this)(this._attributes);
+    return !!_iteratee(attrs, this)(this._attributes);
   };
 
   // Remove an attribute from the model, firing `"change"`. `unset` is a noop
@@ -185,7 +209,7 @@ export default class AbstractModel extends AugmentedObject {
   };
 
   toJSON() {
-    return _.clone(this._attributes);
+    return _clone(this._attributes);
   };
 
   //– sync x
@@ -204,10 +228,10 @@ export default class AbstractModel extends AugmentedObject {
       if (success) {
         success.call(options.context, model, resp, options);
       }
-      model.trigger('sync', model, resp, options);
+      model.trigger("sync", model, resp, options);
     };
     wrapError(this, options);
-    return this.sync('read', this, options);
+    return this.sync("read", this, options);
   };
 
   // Set a hash of model attributes, and sync the model to the server.
@@ -216,7 +240,7 @@ export default class AbstractModel extends AugmentedObject {
   save(key, val, options) {
     // Handle both `"key", value` and `{key: value}` -style arguments.
     let attrs;
-    if (key == null || typeof key === 'object') {
+    if (key == null || typeof key === "object") {
       attrs = key;
       options = val;
     } else {
@@ -255,7 +279,7 @@ export default class AbstractModel extends AugmentedObject {
       if (success) {
         success.call(options.context, model, resp, options);
       }
-      model.trigger('sync', model, resp, options);
+      model.trigger("sync", model, resp, options);
     };
     wrapError(this, options);
 
@@ -264,30 +288,30 @@ export default class AbstractModel extends AugmentedObject {
       this._attributes = extend({}, attributes, attrs);
     }
 
-    let method = this.isNew() ? 'create' : (options.patch ? 'patch' : 'update');
-    if (method === 'patch' && !options.attrs) {
+    let method = this.isNew() ? "create" : (options.patch ? "patch" : "update");
+    if (method === "patch" && !options.attrs) {
       options.attrs = attrs;
     }
-    let xhr = this.sync(method, this, options);
+    let request = this.sync(method, this, options);
 
     // Restore attributes.
     this._attributes = attributes;
 
-    return xhr;
+    return request;
   };
 
   // Destroy this model on the server if it was already persisted.
   // Optimistically removes the model from its collection, if it has one.
   // If `wait: true` is passed, waits for the server to respond before removal.
   destroy(options) {
-    options = options ? _.clone(options) : {};
+    options = options ? _clone(options) : {};
     let model = this;
     let success = options.success;
     let wait = options.wait;
 
     let destroy = () => {
       model.stopListening();
-      model.trigger('destroy', model, model.collection, options);
+      model.trigger("destroy", model, model.collection, options);
     };
 
     options.success = (resp) => {
@@ -298,19 +322,19 @@ export default class AbstractModel extends AugmentedObject {
         success.call(options.context, model, resp, options);
       }
       if (!model.isNew()) {
-        model.trigger('sync', model, resp, options);
+        model.trigger("sync", model, resp, options);
       }
     };
 
-    let xhr = false;
+    let request = false;
     if (this.isNew()) {
-      _.defer(options.success);
+      _defer(options.success);
     } else {
       wrapError(this, options);
-      xhr = this.sync('delete', this, options);
+      request = this.sync("delete", this, options);
     }
     if (!wait) destroy();
-    return xhr;
+    return request;
   };
 
   // Default URL for the model's representation on the server -- if you're
@@ -318,14 +342,14 @@ export default class AbstractModel extends AugmentedObject {
   // that will be called.
   url() {
     let base =
-      _.result(this, 'urlRoot') ||
-      _.result(this.collection, 'url') ||
+      _result(this, "urlRoot") ||
+      _result(this.collection, "url") ||
       urlError();
     if (this.isNew()) {
       return base;
     }
     let id = this.get(this.idAttribute);
-    return base.replace(/[^\/]$/, '$&/') + encodeURIComponent(id);
+    return base.replace(/[^\/]$/, "$&/") + encodeURIComponent(id);
   };
 
   keys() { // ???
@@ -385,9 +409,9 @@ export default class AbstractModel extends AugmentedObject {
   // If you specify an attribute name, determine if that attribute has changed.
   hasChanged(attr) {
    if (attr == null) {
-     return !_.isEmpty(this.changed);
+     return !_isEmpty(this.changed);
    }
-   return _.has(this.changed, attr);
+   return _has(this.changed, attr);
   };
 
   // Return an object containing all the attributes that have changed, or
@@ -398,14 +422,14 @@ export default class AbstractModel extends AugmentedObject {
   // determining if there *would be* a change.
   changedAttributes(diff) {
     if (!diff) {
-      return this.hasChanged() ? _.clone(this.changed) : false;
+      return this.hasChanged() ? _clone(this.changed) : false;
     }
     let old = this._changing ? this._previousAttributes : this._attributes;
     let changed = {};
     let hasChanged;
     for (let attr in diff) {
       let val = diff[attr];
-      if (_.isEqual(old[attr], val)) {
+      if (_isEqual(old[attr], val)) {
         continue;
       }
       changed[attr] = val;
@@ -426,7 +450,7 @@ export default class AbstractModel extends AugmentedObject {
   // Get all of the attributes of the model at the time of the previous
   // `"change"` event.
   previousAttributes() {
-    return _.clone(this._previousAttributes);
+    return _clone(this._previousAttributes);
   };
 
   // Run validation against the next complete set of model attributes,
@@ -440,7 +464,7 @@ export default class AbstractModel extends AugmentedObject {
     if (!error) {
       return true;
     }
-    this.trigger('invalid', this, error, extend(options, {validationError: error}));
+    this.trigger("invalid", this, error, extend(options, {validationError: error}));
     return false;
   };
   /**
