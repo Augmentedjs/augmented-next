@@ -1,6 +1,6 @@
 {
-  "name": "augmentedjs2",
-  "version": "2.0.0",
+  "name": "augmentedjs-next",
+  "version": "2.0.0-alpha.0",
   "description": "The Augmented.js 2 Framework.",
   "main": "index.js",
   "scripts": {
@@ -43,6 +43,7 @@
     "webpack-validator": "^2.2.7"
   },
   "dependencies": {
+    "lodash": "^4.17.4",
     "lodash.bind": "^4.2.1"
   },
   "bugs": {

@@ -222,12 +222,14 @@ class AugmentedMap {
 
     const props = Object.keys(dataToParse),
           l = props.length;
-    let i = 0;
+    this._keys = props;
+    this._data = dataToParse;
+    /*let i = 0;
     for (i = 0; i < l; i++) {
       const p = props[i],
             v = dataToParse[p];
       this.set(p, v);
-    }
+    }*/
     return true;
   };
 };

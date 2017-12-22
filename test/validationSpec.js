@@ -114,36 +114,6 @@ describe("Given Validation", () => {
 		});
 	});
 
-	describe("Given an Augmented Model", () => {
-		let model;
-	  beforeEach(() => {
-	    model = new Augmented.Model();
-	  });
-	  afterEach(() => {
-	    model = null;
-	  });
-
-		it("is defined", () => {
-			expect(Augmented.Model).toBeDefined();
-		});
-
-		it("with no Schema does not support Validation", () => {
-			expect(model.supportsValidation()).toBeFalsy();
-		});
-
-		it("with an empty Schema does support Validation", () => {
-			model.schema = {};
-			expect(model.supportsValidation()).toBeTruthy();
-		});
-
-		xit("can generate a schema from a model", () => {
-			model.set({ "Name": "Bob", "ID": 123, "Email": "bob@augmentedjs.org", "Role": "Architect", "Active": true });
-			const schema = Augmented.ValidationFramework.generateSchema(model);
-			expect(schema).toBeDefined();
-			expect(Augmented.isObject(schema)).toBeTruthy();
-		});
-	});
-
 	xdescribe("Given an Augmented Collection", () => {
 		let collection;
 	  beforeEach(() => {

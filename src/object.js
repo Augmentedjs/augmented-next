@@ -1,15 +1,11 @@
 const _bind = require("lodash.bind");
-
-let idCounter = 0;
+import uniqueId from "./uniqueId.js";
 
 // some lodash-like functions ported over
 const _keys = (object) => {
   return Object.keys(object);
 };
-const _uniqueId = (prefix) => {
-  const id = ++idCounter;
-  return `{$prefix}${id}`;
-};
+
 const _before = (nn, func) => {
   let result, n;
   if (typeof func != 'function') {
@@ -345,14 +341,14 @@ class AugmentedObject {
    */
   listenTo(obj, name, callback) {
     if (obj) {
-      const id = obj._listenId || (obj._listenId = _uniqueId("l"));
+      const id = obj._listenId || (obj._listenId = uniqueId("l"));
       const listeningTo = this._listeningTo || (this._listeningTo = {});
       let listening = listeningTo[id];
 
       // This object is not listening to any other events on `obj` yet.
       // Setup the necessary references to track the listening callbacks.
       if (!listening) {
-        const thisId = this._listenId || (this._listenId = _uniqueId("l"));
+        const thisId = this._listenId || (this._listenId = uniqueId("l"));
         listening = listeningTo[id] = {obj: obj, objId: id, id: thisId, listeningTo: listeningTo, count: 0};
       }
 

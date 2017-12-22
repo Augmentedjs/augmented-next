@@ -1,7 +1,7 @@
 import * as Utility from "./utility";
 import * as Logger from "./logger";
 import AugmentedObject from "./object.js";
-import AugmentedModel from "./model.js";
+import AbstractModel from "./model/abstractModel.js";
 import AugmentedMap from "./map.js";
 import isString from "./isString.js";
 import isFunction from "./isFunction.js";
@@ -16,8 +16,8 @@ import AsynchronousQueue from "./queue.js";
 import Application from "./application.js";
 import pad from "./pad.js";
 import { BundleObject, ResourceBundle, MessageReader, MessageKeyFormatter } from "./resourceBundle.js";
-import sync from "./sync.js";
-import request from "./request/request.js";
+import uniqueId from "./uniqueId.js";
+
 
 /**
  * Augmented.js 2 - The Core UI Component and package
@@ -40,9 +40,10 @@ Augmented.Utility.BundleObject = BundleObject;
 Augmented.Utility.ResourceBundle = ResourceBundle;
 Augmented.Utility.MessageReader = MessageReader;
 Augmented.Utility.MessageKeyFormatter = MessageKeyFormatter;
+Augmented.Utility.uniqueId = uniqueId;
 Augmented.Logger = Logger;
 Augmented.Object = AugmentedObject;
-Augmented.Model = AugmentedModel;
+Augmented.AbstractModel = AbstractModel;
 Augmented.ValidationFramework = ValidationFramework;
 Augmented.Security = Security;
 Augmented.Security.ClientType = ClientType;
@@ -50,22 +51,13 @@ Augmented.Configuration = Configuration;
 Augmented.Application = Application;
 Augmented.isString = isString;
 Augmented.isFunction = isFunction;
-Augmented.sync = sync;
 
-/**
-* Ajax namespace for use with Ajax related configuration and methods
-* @namespace Augmented.Request
-* @memberof Augmented
-*/
-Augmented.Request = {};
-
-Augmented.Request.request = request;
 
 /**
  * The standard version property
  * @constant VERSION
  */
-Augmented.VERSION = "2.0.0";
+Augmented.VERSION = "2.0.0-alpha.0";
 /**
  * A codename for internal use
  * @constant codename
