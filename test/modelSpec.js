@@ -18,25 +18,7 @@ describe("Given an Abstract Model", () => {
     expect(model.isEmpty()).toBeTruthy();
   });
 
-  xit("without Cross Origin Support will not make Cross Origin requests", () => {
-    model.crossOrigin = false;
-    expect(model.crossOrigin).toBeFalsy();
-  });
-
-  xit("with Cross Origin Support will make Cross Origin requests", () => {
-    model.crossOrigin = true;
-    expect(model.crossOrigin).toBeTruthy();
-  });
-
-  xit("with mock can return something", () => {
-    let s = false;
-    model.mock = true;
-    model.url = "/info";
-    model.fetch({"success": () => { s = true; }});
-    expect(s).toBeTruthy();
-  });
-
-  xit("can reset with data", () => {
+  it("can reset with data", () => {
     model.set({ "y": "y" });
     model.reset({ "x": "x" });
 
@@ -44,13 +26,12 @@ describe("Given an Abstract Model", () => {
     expect(model.get("y")).not.toBeDefined();
   });
 
-  xit("can set with data", () => {
+  it("can set with data", () => {
     model.set({ "x": "x" });
     expect(model.get("x")).toEqual("x");
   });
 
   describe("Given validation", () => {
-
 	  beforeEach(() => {
 	    model = new Augmented.AbstractModel();
 	  });

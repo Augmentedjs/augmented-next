@@ -1,4 +1,4 @@
-import isFunction from "../isFunction.js";
+import isFunction from "../functions/isFunction.js";
 
 class UriTemplate {
   constructor(template) {

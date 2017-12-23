@@ -1,22 +1,22 @@
-import * as Utility from "./utility";
-import * as Logger from "./logger";
+import * as Utility from "./utility/utility";
+import * as Logger from "./logger/logger";
 import AugmentedObject from "./object.js";
 import AbstractModel from "./model/abstractModel.js";
 import AugmentedMap from "./map.js";
-import isString from "./isString.js";
-import isFunction from "./isFunction.js";
+import isString from "./functions/isString.js";
+import isFunction from "./functions/isFunction.js";
 import Stack from "./stack.js";
 import SchemaGenerator from "./validation/schemaGenerator.js";
 import ValidationFramework from "./validation/validationFramework.js";
 import * as Security from "./security/security.js";
 import ClientType from "./security/clientType.js";
-import extend from "./extend.js";
+import extend from "./functions/extend.js";
 import Configuration from "./configuration.js";
 import AsynchronousQueue from "./queue.js";
 import Application from "./application.js";
-import pad from "./pad.js";
+import pad from "./functions/pad.js";
 import { BundleObject, ResourceBundle, MessageReader, MessageKeyFormatter } from "./resourceBundle.js";
-import uniqueId from "./uniqueId.js";
+import uniqueId from "./functions/uniqueId.js";
 
 
 /**
@@ -25,7 +25,7 @@ import uniqueId from "./uniqueId.js";
  * @author Bob Warren
  *
  * @module Augmented
- * @version 2.0.0-alpha.1
+ * @version 2.0.0-alpha.2
  * @license Apache-2.0
  */
 const Augmented = {};
@@ -57,7 +57,7 @@ Augmented.isFunction = isFunction;
  * The standard version property
  * @constant VERSION
  */
-Augmented.VERSION = "2.0.0-alpha.1";
+Augmented.VERSION = "2.0.0-alpha.2";
 /**
  * A codename for internal use
  * @constant codename

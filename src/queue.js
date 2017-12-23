@@ -1,4 +1,4 @@
-import extend from "./extend.js";
+import extend from "./functions/extend.js";
 import Configuration from "./configuration.js";
 
 /**

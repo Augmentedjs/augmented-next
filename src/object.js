@@ -1,5 +1,5 @@
 const _bind = require("lodash.bind");
-import uniqueId from "./uniqueId.js";
+import uniqueId from "./functions/uniqueId.js";
 
 // some lodash-like functions ported over
 const _keys = (object) => {

@@ -1,5 +1,3 @@
-import AugmentedMap from "./map.js";
-
 const before = (app) => {
   return new Promise( (resolve, reject) => {
     const t = app.beforeInitialize();
@@ -58,23 +56,18 @@ check = (app) => {
  */
 class Application {
   constructor(name) {
-    if (!this._metadata) {
-      this._metadata = new AugmentedMap();
-    } else {
-      this._metadata.clear();
-    }
-
     // preassign a name
     if (name) {
-      this._metadata.set("name", name);
+      this._metadata["name"] = name;
     } else {
-      this._metadata.set("name", "untitled");
+      this._metadata["name"] = "untitled";
     }
 
     // preset a datastore object
-    this._metadata.set("datastore", {});
+    this._metadata["datastore"] = {};
   };
-  _metadata = null;
+
+  _metadata = {};
 
   /**
    * The router property of the application
@@ -148,7 +141,7 @@ class Application {
    * @memberof Augmented.Application
    */
   setMetadataItem(key, value) {
-    this._metadata.set(key, value);
+    this._metadata[key] = value;
   };
 
   /** Get a specific item in metadata
@@ -156,7 +149,7 @@ class Application {
    * @memberof Augmented.Application
    */
   getMetadataItem(key) {
-    return this._metadata.get(key);
+    return this._metadata[key];
   };
 
   /** Register a Router - adds routes to the application
@@ -191,17 +184,6 @@ class Application {
    */
   stop() {
     this._started = false;
-  };
-
-  /** creates a custom datastore based on a model
-   * @method createDatastore
-   * @param {Augmented.Model|object} model A custom Model
-   * @memberof Augmented.Application
-   */
-  createDatastore(model) {
-    if (model) {
-      this.setMetadataItem("datastore", new model());
-    }
   };
 
   /** Gets the datastore for the application

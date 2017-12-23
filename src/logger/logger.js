@@ -1,4 +1,4 @@
-import pad from "./pad.js";
+import pad from "../functions/pad.js";
 
 /**
  * A Logger package

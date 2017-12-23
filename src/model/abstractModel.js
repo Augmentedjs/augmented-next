@@ -1,6 +1,6 @@
 import AugmentedObject from "../object.js";
-import extend from "../extend.js";
-import uniqueId from "../uniqueId.js";
+import extend from "../functions/extend.js";
+import uniqueId from "../functions/uniqueId.js";
 
 // for now
 const _clone = require("lodash.clone");
