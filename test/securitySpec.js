@@ -3,7 +3,6 @@ import Augmented from "../src/augmented";
 
 describe("Given Augmented Security", () => {
 	it("is defined", () => {
-		console.log("Security", Augmented.Security);
 		expect(Augmented.Security).toBeDefined();
 	});
 

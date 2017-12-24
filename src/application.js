@@ -28,9 +28,19 @@ after = (app) => {
     }
   });
 },
+setStarted = (app) => {
+  return new Promise( (resolve, reject) => {
+    app._started = true;
+    if (app.started) {
+      resolve(app);
+    } else {
+      reject(new Error("failed setting started!"));
+    }
+  });
+},
 check = (app) => {
   return new Promise( (resolve, reject) => {
-    const t = app.started();
+    const t = app.started;
     if (t) {
       resolve(app);
     } else {
@@ -95,6 +105,7 @@ class Application {
    * @memberof Augmented.Application
    */
   initialize() {
+    return true;
   };
 
   /** Event for before the startup of the application
@@ -102,6 +113,7 @@ class Application {
    * @memberof Augmented.Application
    */
   beforeInitialize() {
+    return true;
   };
 
   /** Event for after the startup of the application
@@ -109,6 +121,7 @@ class Application {
    * @memberof Augmented.Application
    */
   afterInitialize() {
+    return true;
   };
 
   /** Get the application name
@@ -171,6 +184,7 @@ class Application {
     before(app)
     .then(init)
     .then(after)
+    .then(setStarted)
     .then(check)
     .catch( (e) => {
       app.stop();

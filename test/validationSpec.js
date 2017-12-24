@@ -113,27 +113,4 @@ describe("Given Validation", () => {
 			expect(result["$schema"]).toEqual("http://json-schema.org/draft-04/schema#");
 		});
 	});
-
-	xdescribe("Given an Augmented Collection", () => {
-		let collection;
-	  beforeEach(() => {
-	    collection = new Augmented.Collection();
-	  });
-	  afterEach(() => {
-	    collection = null;
-	  });
-
-		it("has an augmented Collection", () => {
-			expect(Augmented.Collection).toBeDefined();
-		});
-
-		it("with no Schema does not support Validation", () => {
-			expect(collection.supportsValidation()).toBeFalsy();
-		});
-
-		it("with an empty Schema does support Validation", () => {
-			collection.schema = {};
-			expect(collection.supportsValidation()).toBeTruthy();
-		});
-	});
 });

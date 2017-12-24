@@ -17,7 +17,8 @@ import Application from "./application.js";
 import pad from "./functions/pad.js";
 import { BundleObject, ResourceBundle, MessageReader, MessageKeyFormatter } from "./resourceBundle.js";
 import uniqueId from "./functions/uniqueId.js";
-
+import AbstractCollection from "./collection/collection.js";
+import sortObjects from "./utility/sort.js";
 
 /**
  * Augmented.js 2 - The Core UI Component and package
@@ -41,9 +42,11 @@ Augmented.Utility.ResourceBundle = ResourceBundle;
 Augmented.Utility.MessageReader = MessageReader;
 Augmented.Utility.MessageKeyFormatter = MessageKeyFormatter;
 Augmented.Utility.uniqueId = uniqueId;
+Augmented.Utility.sortObjects = sortObjects;
 Augmented.Logger = Logger;
 Augmented.Object = AugmentedObject;
 Augmented.AbstractModel = AbstractModel;
+Augmented.AbstractCollection = AbstractCollection;
 Augmented.ValidationFramework = ValidationFramework;
 Augmented.Security = Security;
 Augmented.Security.ClientType = ClientType;

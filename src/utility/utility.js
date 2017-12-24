@@ -1,4 +1,5 @@
 import extend from "../functions/extend.js";
+import sortObjects from "./sort.js";
 
 /**
  * Utility Package -
@@ -42,20 +43,7 @@ export const prettyPrint = (obj, spaces, number) => {
   return JSON.stringify(obj, null, x);
 };
 
-/**
- * Sorts an array of objects by propery in object
- * @constructor Augmented.Utility.sortObjects
- * @memberof Augmented.Utility
- * @param {array} array The object array to sort
- * @param {object} key The property to sort by
- * @returns {array} The sorted array
- */
-export const sortObjects = (array, key) => {
-  return array.sort( (a, b) => {
-    const x = a[key], y = b[key];
-    return ((x < y) ? -1 : ((x > y) ? 1 : 0));
-  });
-};
+
 
 /**
  * Performs a binary search on the host array. vs indexOf<br/>
