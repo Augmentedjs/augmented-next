@@ -48,9 +48,10 @@ describe("Given an Abstract Model", () => {
 			expect(model.supportsValidation()).toBeTruthy();
 		});
 
-		xit("can generate a schema from a model", () => {
+		it("can generate a schema from a model", () => {
 			model.set({ "Name": "Bob", "ID": 123, "Email": "bob@augmentedjs.org", "Role": "Architect", "Active": true });
-			const schema = Augmented.ValidationFramework.generateSchema(model);
+      const v = new Augmented.ValidationFramework();
+			const schema = v.generateSchema(model);
 			expect(schema).toBeDefined();
 			expect(Augmented.isObject(schema)).toBeTruthy();
 		});

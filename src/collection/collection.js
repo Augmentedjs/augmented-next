@@ -5,10 +5,11 @@ import isString from "../functions/isString.js";
 import isFunction from "../functions/isFunction.js";
 import sortObjects from "../utility/sort.js";
 import AbstractModel from "../model/abstractModel.js";
+import ValidationFramework from "../validation/validationFramework.js";
+import CollectionIterator from "./iterator.js";
 
 const _clone = require("lodash.clone");
 const _some = require("lodash.some");
-
 
 // Default options for `Collection#set`.
 const setOptions = {
@@ -554,16 +555,18 @@ export default class AbstractCollection extends AugmentedObject {
    * @returns {array} Returns array of message from validation
    */
   validate() {
-    /*if (this.supportsValidation()) {
+    if (this.supportsValidation()) {
       // validate from Validator
       let messages = [];
       this.validationMessages.messages = messages;
       this.validationMessages.valid = true;
-      const a = this.toJSON(), l = a.length;
+      const a = this.toJSON(), l = (a && Array.isArray(a)) ? a.length : 0;
       let i = 0;
-      //logger.debug("AUGMENTED: Collection Validate: Beginning with " + l + " models.");
+      const v = new ValidationFramework();
+
+      console.debug("AUGMENTED: Collection Validate: Beginning with " + l + " models.");
       for (i = 0; i < l; i++) {
-        messages[i] = ValidationFramework.validate(a[i], this.schema);
+        messages[i] = v.validate(a[i], this.schema);
         if (!messages[i].valid) {
           this.validationMessages.valid = false;
         }
@@ -573,7 +576,7 @@ export default class AbstractCollection extends AugmentedObject {
     } else {
       this.validationMessages.valid = true;
     }
-    return this.validationMessages;*/
+    return this.validationMessages;
   };
 
   /**

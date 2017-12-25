@@ -56,18 +56,18 @@ describe("Given an Augmented Collection", () => {
     let first = c.at(1);
     expect(first.get("Name")).toEqual("Corey");
   });
-  xit("can validate", () => {
+  it("can validate", () => {
     c.schema = schema;
     c.add(data);
     c.validate();
     //console.debug(c.validationMessages);
     expect(c.isValid()).toBeTruthy();
   });
-  xit("validation returns messages on invalid data", () => {
+  it("validation returns messages on invalid data", () => {
     c.schema = schema;
     c.add({bubba: "junk"});
     c.validate();
-    //console.debug(c.validationMessages);
+    console.debug(c.validationMessages);
     expect(c.isValid()).toBeFalsy();
   });
 
@@ -80,7 +80,7 @@ describe("Given an Augmented Collection", () => {
     expect(c.supportsValidation()).toBeTruthy();
   });
 });
-  
+
 /*
 xdescribe("Given an Augmented Collection Backed by Local Storage", () => {
   let c, myC = Augmented.LocalStorageCollection.extend({

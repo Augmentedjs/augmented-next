@@ -1,6 +1,7 @@
 import AugmentedObject from "../object.js";
 import extend from "../functions/extend.js";
 import uniqueId from "../functions/uniqueId.js";
+import ValidationFramework from "../validation/validationFramework.js";
 
 // for now
 const _clone = require("lodash.clone");
@@ -510,9 +511,11 @@ export default class AbstractModel extends AugmentedObject {
    * @returns {array} Returns array of messages from validation
    */
   validate() {
-    if (this.supportsValidation() && Augmented.ValidationFramework.supportsValidation()) {
+    const v = new ValidationFramework();
+
+    if (this.supportsValidation() && v.supportsValidation()) {
       // validate from Validator
-      this.validationMessages = Augmented.ValidationFramework.validate(this.toJSON(), this.schema);
+      this.validationMessages = v.validate(this.toJSON(), this.schema);
     } else {
       this.validationMessages.valid = true;
     }

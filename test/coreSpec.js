@@ -167,7 +167,7 @@ describe("Given Augmented", () => {
 			expect(Augmented.isFunction(t)).toBeFalsy();
 		});
 
-		xit("returns false for an Augmented.Object", () => {
+		it("returns false for an Augmented.Object", () => {
 			const t = new Augmented.Object();
 			expect(Augmented.isFunction(t)).toBeFalsy();
 		});
