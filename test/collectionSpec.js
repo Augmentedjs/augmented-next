@@ -50,7 +50,7 @@ describe("Given an Augmented Collection", () => {
     c.add(data);
     expect(c.size()).toEqual(5);
   });
-  xit("can sort data by key", () => {
+  it("can sort data by key", () => {
     c.add(data);
     c.sortByKey("Name");
     let first = c.at(1);

@@ -10,6 +10,7 @@ import CollectionIterator from "./iterator.js";
 
 const _clone = require("lodash.clone");
 const _some = require("lodash.some");
+//const _map = require("lodash.map");
 
 // Default options for `Collection#set`.
 const setOptions = {
@@ -39,6 +40,7 @@ const splice = (array, insert, at) => {
     array[i + length + at] = tail[i];
   }
 };
+
 
 /**
  * Abstract Augmented Collection <br/>
@@ -104,14 +106,20 @@ export default class AbstractCollection extends AugmentedObject {
   };
 
   // The JSON representation of a Collection is an array of the
-  // models' attributes.
-  toJSON(options) {
-    return this.map(function(model) { return model.toJSON(options); });
+  // models" attributes.
+  toJSON() {
+    //return this.map( (model) => { return model.toJSON(options); });
+    let i = 0;
+    const out = [], l = this.models.length;
+    for (i = 0; i < l; i++) {
+      out[i] = this.models[i].toJSON();
+    }
+    return out;
   };
 
-  map() {
-
-  };
+  /*map(collection, interatee) {
+    return _map(collection, interatee);
+  };*/
 
   // Add a model, or list of models to the set. `models` may be Backbone
   // Models or raw JavaScript objects to be converted to Models, or any
@@ -128,7 +136,7 @@ export default class AbstractCollection extends AugmentedObject {
     let removed = this._removeModels(models, options);
     if (!options.silent && removed.length) {
       options.changes = {added: [], merged: [], removed: removed};
-      this.trigger('update', this, options);
+      this.trigger("update", this, options);
     }
     return singular ? removed[0] : removed;
   };
@@ -147,7 +155,7 @@ export default class AbstractCollection extends AugmentedObject {
       models = this.parse(models, options) || [];
     }
 
-    console.log("models", models);
+    //console.log("models", models);
 
     let singular = !Array.isArray(models);
     models = singular ? [models] : models.slice();
@@ -238,21 +246,21 @@ export default class AbstractCollection extends AugmentedObject {
     // Silently sort the collection if appropriate.
     if (sort) this.sort({silent: true});
 
-    // Unless silenced, it's time to fire all appropriate add/sort/update events.
+    // Unless silenced, it"s time to fire all appropriate add/sort/update events.
     if (!options.silent) {
       for (i = 0; i < toAdd.length; i++) {
         if (at != null) options.index = at + i;
         model = toAdd[i];
-        model.trigger('add', model, this, options);
+        model.trigger("add", model, this, options);
       }
-      if (sort || orderChanged) this.trigger('sort', this, options);
+      if (sort || orderChanged) this.trigger("sort", this, options);
       if (toAdd.length || toRemove.length || toMerge.length) {
         options.changes = {
           added: toAdd,
           removed: toRemove,
           merged: toMerge
         };
-        this.trigger('update', this, options);
+        this.trigger("update", this, options);
       }
     }
 
@@ -272,7 +280,7 @@ export default class AbstractCollection extends AugmentedObject {
     options.previousModels = this.models;
     this._reset();
     models = this.add(models, extend({silent: true}, options));
-    if (!options.silent) this.trigger('reset', this, options);
+    if (!options.silent) this.trigger("reset", this, options);
     return models;
   };
 
@@ -330,7 +338,7 @@ export default class AbstractCollection extends AugmentedObject {
   // Return models with matching attributes. Useful for simple cases of
   // `filter`.
   where(attrs, first) {
-    return this[first ? 'find' : 'filter'](attrs);
+    return this[first ? "find" : "filter"](attrs);
   };
 
   // Return the first model with matching attributes. Useful for simple cases
@@ -339,12 +347,12 @@ export default class AbstractCollection extends AugmentedObject {
     return this.where(attrs, true);
   };
 
-  // Force the collection to re-sort itself. You don't need to call this under
+  // Force the collection to re-sort itself. You don"t need to call this under
   // normal circumstances, as the set will maintain sort order as each item
   // is added.
   sort(options) {
     let comparator = this.comparator;
-    if (!comparator) throw new Error('Cannot sort a set without a comparator');
+    if (!comparator) throw new Error("Cannot sort a set without a comparator");
     options || (options = {});
 
     let length = comparator.length;
@@ -356,13 +364,19 @@ export default class AbstractCollection extends AugmentedObject {
     } else {
       this.models.sort(comparator);
     }
-    if (!options.silent) this.trigger('sort', this, options);
+    if (!options.silent) this.trigger("sort", this, options);
     return this;
   };
 
   // Pluck an attribute from each model in the collection.
   pluck(attr) {
-    return this.map(attr + "");
+    let i = 0;
+    const out = [], l = this.models.length;
+    for (i = 0; i < l; i++) {
+      out[i] = this.models[i].toJSON()[attr];
+    }
+    return out;
+    //return this.map(attr + "");
   };
 
   fetch(options) {
@@ -404,7 +418,7 @@ export default class AbstractCollection extends AugmentedObject {
   // Define how to uniquely identify models in the collection.
   modelId(attrs) {
     if (attrs) {
-      return attrs[this.model.idAttribute || 'id'];
+      return attrs[this.model.idAttribute || "id"];
     } else {
       return "id";
     }
@@ -446,7 +460,7 @@ export default class AbstractCollection extends AugmentedObject {
     if (!model.validationError) {
       return model;
     }
-    this.trigger('invalid', this, model.validationError, options);
+    this.trigger("invalid", this, model.validationError, options);
     return false;
   };
 
@@ -461,7 +475,7 @@ export default class AbstractCollection extends AugmentedObject {
       this.models.splice(index, 1);
       this.length--;
 
-      // Remove references before triggering 'remove' event to prevent an
+      // Remove references before triggering "remove" event to prevent an
       // infinite loop. #3693
       delete this._byId[model.cid];
       let id = this.modelId(model.attributes);
@@ -469,7 +483,7 @@ export default class AbstractCollection extends AugmentedObject {
 
       if (!options.silent) {
         options.index = index;
-        model.trigger('remove', model, this, options);
+        model.trigger("remove", model, this, options);
       }
 
       removed.push(model);
@@ -489,7 +503,7 @@ export default class AbstractCollection extends AugmentedObject {
     this._byId[model.cid] = model;
     let id = this.modelId(model.attributes);
     if (id != null) this._byId[id] = model;
-    model.on('all', this._onModelEvent, this);
+    model.on("all", this._onModelEvent, this);
   };
 
   // Internal method to sever a model's ties to a collection.
@@ -498,7 +512,7 @@ export default class AbstractCollection extends AugmentedObject {
     let id = this.modelId(model.attributes);
     if (id != null) delete this._byId[id];
     if (this === model.collection) delete model.collection;
-    model.off('all', this._onModelEvent, this);
+    model.off("all", this._onModelEvent, this);
   };
 
   // Internal method called every time a model in the set fires an event.
@@ -507,9 +521,9 @@ export default class AbstractCollection extends AugmentedObject {
   // in other collections are ignored.
   _onModelEvent(event, model, collection, options) {
     if (model) {
-      if ((event === 'add' || event === 'remove') && collection !== this) return;
-      if (event === 'destroy') this.remove(model, options);
-      if (event === 'change') {
+      if ((event === "add" || event === "remove") && collection !== this) return;
+      if (event === "destroy") this.remove(model, options);
+      if (event === "change") {
         let prevId = this.modelId(model.previousAttributes());
         let id = this.modelId(model.attributes);
         if (prevId !== id) {
@@ -564,7 +578,7 @@ export default class AbstractCollection extends AugmentedObject {
       let i = 0;
       const v = new ValidationFramework();
 
-      console.debug("AUGMENTED: Collection Validate: Beginning with " + l + " models.");
+      //console.debug("AUGMENTED: Collection Validate: Beginning with " + l + " models.");
       for (i = 0; i < l; i++) {
         messages[i] = v.validate(a[i], this.schema);
         if (!messages[i].valid) {
@@ -588,7 +602,7 @@ export default class AbstractCollection extends AugmentedObject {
   sync(method, model, options) {
   };
   /**
-   * Collection.save - Saves the collection as a 'create'
+   * Collection.save - Saves the collection as a "create"
    * @method save
    * @memberof Augmented.Collection
    */
@@ -596,7 +610,7 @@ export default class AbstractCollection extends AugmentedObject {
     this.sync("create", this, options);
   };
   /**
-   * Collection.update - Updates the collection as an 'update'
+   * Collection.update - Updates the collection as an "update"
    * @method update
    * @memberof Augmented.Collection
    */
@@ -604,7 +618,7 @@ export default class AbstractCollection extends AugmentedObject {
     this.sync("update", this, options);
   };
   /**
-   * Collection.remove - Remove from the collection as a 'delete'
+   * Collection.remove - Remove from the collection as a "delete"
    * @method remove
    * @memberof Augmented.Collection
    */
