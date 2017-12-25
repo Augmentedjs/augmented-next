@@ -67,63 +67,26 @@
 							<li class="dropdown">
 								<a href="list_class.html" class="dropdown-toggle" data-toggle="dropdown">Classes<b class="caret"></b></a>
 								<ul class="dropdown-menu">
-										<li><a href="AbstractSecurityClient.html">AbstractSecurityClient</a></li>
-										<li><a href="Augmented.AbstractLocalStorage.html">Augmented.AbstractLocalStorage</a></li>
-										<li><a href="Augmented.AbstractLogger.html">Augmented.AbstractLogger</a></li>
 										<li><a href="Augmented.Application.html">Augmented.Application</a></li>
-										<li><a href="Augmented.Collection.html">Augmented.Collection</a></li>
-										<li><a href="Augmented.History_.html">Augmented.History</a></li>
-										<li><a href="Augmented.history.html">Augmented.history</a></li>
-										<li><a href="Augmented.LocalStorageCollection.html">Augmented.LocalStorageCollection</a></li>
-										<li><a href="Augmented.Model.html">Augmented.Model</a></li>
 										<li><a href="Augmented.Object.html">Augmented.Object</a></li>
-										<li><a href="Augmented.PaginatedCollection.html">Augmented.PaginatedCollection</a></li>
-										<li><a href="Augmented.Router.html">Augmented.Router</a></li>
-										<li><a href="Augmented.Security.Client.ACLClient.html">Augmented.Security.Client.ACLClient</a></li>
-										<li><a href="Augmented.Security.Client.OAUTH2Client.html">Augmented.Security.Client.OAUTH2Client</a></li>
-										<li><a href="Augmented.Security.Context.html">Augmented.Security.Context</a></li>
-										<li><a href="Augmented.Security.Entry.html">Augmented.Security.Entry</a></li>
 										<li><a href="Augmented.Utility.AsynchronousQueue.html">Augmented.Utility.AsynchronousQueue</a></li>
-										<li><a href="Augmented.Utility.AugmentedMap.html">Augmented.Utility.AugmentedMap</a></li>
-										<li><a href="Augmented.Utility.BinarySearch.html">Augmented.Utility.BinarySearch</a></li>
 										<li><a href="Augmented.Utility.Map.html">Augmented.Utility.Map</a></li>
-										<li><a href="Augmented.Utility.PrettyPrint.html">Augmented.Utility.PrettyPrint</a></li>
-										<li><a href="Augmented.Utility.QuickSort.html">Augmented.Utility.QuickSort</a></li>
-										<li><a href="Augmented.Utility.SchemaGenerator.html">Augmented.Utility.SchemaGenerator</a></li>
-										<li><a href="Augmented.Utility.Shuffle.html">Augmented.Utility.Shuffle</a></li>
-										<li><a href="Augmented.Utility.sortObjects.html">Augmented.Utility.sortObjects</a></li>
 										<li><a href="Augmented.Utility.Stack.html">Augmented.Utility.Stack</a></li>
-										<li><a href="Augmented.ValidationFramework.html">Augmented.ValidationFramework</a></li>
-										<li><a href="Augmented.View.html">Augmented.View</a></li>
 								</ul>
 							</li>
 							<li class="dropdown">
 								<a href="list_module.html" class="dropdown-toggle" data-toggle="dropdown">Modules<b class="caret"></b></a>
 								<ul class="dropdown-menu">
-										<li><a href="Augmented.module_$.html">Augmented.$</a></li>
-										<li><a href="Augmented.module__.html">Augmented._</a></li>
 										<li><a href="module-Augmented.html">Augmented</a></li>
 								</ul>
 							</li>
 							<li class="dropdown">
 								<a href="list_namespace.html" class="dropdown-toggle" data-toggle="dropdown">Namespaces<b class="caret"></b></a>
 								<ul class="dropdown-menu">
-										<li><a href="Augmented.Ajax.html">Augmented.Ajax</a></li>
-										<li><a href="Augmented.Ajax.Configuration.html">Augmented.Ajax.Configuration</a></li>
-										<li><a href="Augmented.LocalStorageFactory.html">Augmented.LocalStorageFactory</a></li>
-										<li><a href="Augmented.Logger.html">Augmented.Logger</a></li>
-										<li><a href="Augmented.Logger.LoggerFactory.html">Augmented.Logger.LoggerFactory</a></li>
-										<li><a href="Augmented.PaginationFactory.html">Augmented.PaginationFactory</a></li>
-										<li><a href="Augmented.Security.html">Augmented.Security</a></li>
-										<li><a href="Augmented.Security.AuthenticationFactory.html">Augmented.Security.AuthenticationFactory</a></li>
-										<li><a href="Augmented.Security.Client.html">Augmented.Security.Client</a></li>
-										<li><a href="Augmented.Security.Principal.html">Augmented.Security.Principal</a></li>
-										<li><a href="Augmented.Utility.html">Augmented.Utility</a></li>
 										<li><a href="Augmented.Utility.BundleObject.html">Augmented.Utility.BundleObject</a></li>
 										<li><a href="Augmented.Utility.MessageKeyFormatter.html">Augmented.Utility.MessageKeyFormatter</a></li>
 										<li><a href="Augmented.Utility.MessageReader.html">Augmented.Utility.MessageReader</a></li>
 										<li><a href="Augmented.Utility.ResourceBundle.html">Augmented.Utility.ResourceBundle</a></li>
-										<li><a href="Augmented.Utility.Transformer.html">Augmented.Utility.Transformer</a></li>
 								</ul>
 							</li>
 				</ul>
@@ -153,17 +116,13 @@
 		<section class="source-section">
 			<article></article>
 			<pre class="prettyprint source language-javascript line-numbers"><code class="language-javascript">const _bind = require("lodash.bind");
-
-let idCounter = 0;
+import uniqueId from "./functions/uniqueId.js";
 
 // some lodash-like functions ported over
 const _keys = (object) => {
   return Object.keys(object);
 };
-const _uniqueId = (prefix) => {
-  const id = ++idCounter;
-  return `{$prefix}${id}`;
-};
+
 const _before = (nn, func) => {
   let result, n;
   if (typeof func != 'function') {
@@ -499,14 +458,14 @@ class AugmentedObject {
    */
   listenTo(obj, name, callback) {
     if (obj) {
-      const id = obj._listenId || (obj._listenId = _uniqueId("l"));
+      const id = obj._listenId || (obj._listenId = uniqueId("l"));
       const listeningTo = this._listeningTo || (this._listeningTo = {});
       let listening = listeningTo[id];
 
       // This object is not listening to any other events on `obj` yet.
       // Setup the necessary references to track the listening callbacks.
       if (!listening) {
-        const thisId = this._listenId || (this._listenId = _uniqueId("l"));
+        const thisId = this._listenId || (this._listenId = uniqueId("l"));
         listening = listeningTo[id] = {obj: obj, objId: id, id: thisId, listeningTo: listeningTo, count: 0};
       }
 
@@ -553,7 +512,7 @@ export default AugmentedObject;
 	</div>
 	<footer>
 				<div class="footer-option">&lt;a href&#x3D;&#x27;http://www.augmentedjs.com&#x27;&gt;Augmented.js Homepage&lt;/a&gt;</div>
-			<div class="generated-by">Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Sun Dec 17th 2017 using the <a href="https://github.com/steveush/foodoc">FooDoc template</a>.</div>
+			<div class="generated-by">Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Mon Dec 25th 2017 using the <a href="https://github.com/steveush/foodoc">FooDoc template</a>.</div>
 	</footer>
 	<script src="js/jquery.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>

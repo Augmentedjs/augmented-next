@@ -1,32 +1,50 @@
 import * as Utility from "./utility/utility";
-import * as Logger from "./logger/logger";
+import sortObjects from "./utility/sort.js";
+
 import AugmentedObject from "./object.js";
 import AbstractModel from "./model/abstractModel.js";
-import AugmentedMap from "./map.js";
-import isString from "./functions/isString.js";
-import isFunction from "./functions/isFunction.js";
+import AbstractCollection from "./collection/collection.js";
 import Stack from "./stack.js";
+import AugmentedMap from "./map.js";
+
+import * as Logger from "./logger/logger";
+
+import Configuration from "./configuration.js";
+import AsynchronousQueue from "./queue.js";
+import Application from "./application.js";
+import { BundleObject, ResourceBundle, MessageReader, MessageKeyFormatter } from "./resourceBundle.js";
+
 import SchemaGenerator from "./validation/schemaGenerator.js";
 import ValidationFramework from "./validation/validationFramework.js";
 import * as Security from "./security/security.js";
 import ClientType from "./security/clientType.js";
+
+import isString from "./functions/isString.js";
+import isFunction from "./functions/isFunction.js";
 import extend from "./functions/extend.js";
-import Configuration from "./configuration.js";
-import AsynchronousQueue from "./queue.js";
-import Application from "./application.js";
 import pad from "./functions/pad.js";
-import { BundleObject, ResourceBundle, MessageReader, MessageKeyFormatter } from "./resourceBundle.js";
 import uniqueId from "./functions/uniqueId.js";
-import AbstractCollection from "./collection/collection.js";
-import sortObjects from "./utility/sort.js";
+import has from "./functions/has.js";
+import isObject from "./functions/isObject.js";
+import allKeys from "./functions/allKeys.js";
+import create from "./functions/create.js";
+import result from "./functions/result.js";
+import arrayHas from "./functions/arrayHas.js";
+import exec from "./functions/exec.js";
+import isDefined from "./functions/isDefined.js";
+
+/*
+ * Base functionality
+ * Set of base capabilities used throughout the framework
+ */
 
 /**
- * Augmented.js 2 - The Core UI Component and package
+ * Augmented.js Next - The Core Component
  *
  * @author Bob Warren
  *
  * @module Augmented
- * @version 2.0.0-alpha.2
+ * @version 2.0.0-alpha.3
  * @license Apache-2.0
  */
 const Augmented = {};
@@ -43,24 +61,35 @@ Augmented.Utility.MessageReader = MessageReader;
 Augmented.Utility.MessageKeyFormatter = MessageKeyFormatter;
 Augmented.Utility.uniqueId = uniqueId;
 Augmented.Utility.sortObjects = sortObjects;
+
 Augmented.Logger = Logger;
+
 Augmented.Object = AugmentedObject;
 Augmented.AbstractModel = AbstractModel;
 Augmented.AbstractCollection = AbstractCollection;
+
 Augmented.ValidationFramework = ValidationFramework;
 Augmented.Security = Security;
 Augmented.Security.ClientType = ClientType;
 Augmented.Configuration = Configuration;
 Augmented.Application = Application;
+
 Augmented.isString = isString;
 Augmented.isFunction = isFunction;
-
+Augmented.has = has;
+Augmented.isObject = isObject;
+Augmented.allKeys = allKeys;
+Augmented.create = create;
+Augmented.result = result;
+Augmented.arrayHas = arrayHas;
+Augmented.exec = exec;
+Augmented.isDefined = isDefined;
 
 /**
  * The standard version property
  * @constant VERSION
  */
-Augmented.VERSION = "2.0.0-alpha.2";
+Augmented.VERSION = "2.0.0-alpha.3";
 /**
  * A codename for internal use
  * @constant codename
@@ -72,142 +101,4 @@ Augmented.codename = "JC Denton";
  */
 Augmented.releasename = "UNATCO";
 
-/**
- * Augmented underscore (if it exists from Backbone.js)
- * @module _
- * @name _
- * @memberof Augmented
- */
-Augmented._ = {};
-
-/**
- * Augmented underscore (if it exists from Backbone.js)
- * @module $
- * @name $
- * @memberof Augmented
- */
-Augmented.$ = {};
-
-/*
- * Base functionality
- * Set of base capabilities used throughout the framework
- */
-
-/**
- * Augmented.has
- * @method has
- * @memberof Augmented
- * @param {object} obj The input object
- * @param {object} key The test key
- * @returns {boolean} Returns true of the key exists
- */
-Augmented.has = (obj, key) => {
-  return obj !== null && hasOwnProperty.call(obj, key);
-};
-
-/**
- * Augmented.isObject
- * @method isObject
- * @memberof Augmented
- * @param {object} obj The input object
- * @returns {boolean} Returns true of the param is an object
- */
-Augmented.isObject = (obj) => {
-  const type = typeof obj;
-  return (type === "function" || type === "object" && !!obj);
-};
-
-/**
- * Augmented.allKeys
- * @method allKeys
- * @memberof Augmented
- * @param {object} obj The input object
- * @returns {array} Returns the array of ALL keys including prototyped
- */
-Augmented.allKeys = (obj) => {
-  if (!Augmented.isObject(obj)) return [];
-  return Object.getOwnPropertyNames(obj);
-};
-
-const result = (prototype) => {
-  if (!Augmented.isObject(prototype)) {
-    return {};
-  }
-  return Object.create(prototype);
-};
-
-/**
- * Augmented.create
- * @method create
- * @memberof Augmented
- * @param {object} prototype The input prototype
- * @param {object} props The properties (optional)
- * @returns {object} Returns the created object
- */
-Augmented.create = (prototype, props) => {
-  const o = result(prototype);
-  if (props) {
-    Object.assign(o, props);
-  }
-  return o;
-};
-
-/**
-* Augmented.result - returns named property in an object
-* simular to underscore .result method
-* @function result
-* @memberof Augmented
-* @returns named property in an object
-*/
-Augmented.result = (object, property) => {
-  if (object === null) return;
-  const value = object[property];
-  return Augmented.isFunction(value) ? value.call(object) : value;
-};
-
-/**
- * Array.has - returns is a property is in the array (very fast return)
- * @function arrayhas
- * @memberof Augmented
- * @param {array} arr Source array
- * @param {object} key Key to test for
- * @returns true if property is included in an array
- */
-Augmented.arrayHas = (arr, key) => {
-  return (arr.indexOf(key) !== -1);
-};
-
-/**
- * exec method - Execute a function by name
- * @method exec
- * @memberof Augmented
- * @param {string} functionName The name of the function
- * @param {object} context The context to call from
- * @param {object} args Arguments
- */
-Augmented.exec = (functionName, context, ...args) => {
-  const //args = Array.prototype.slice.call(arguments, 2),
-        namespaces = functionName.split("."),
-        func = namespaces.pop(),
-        l = namespaces.length;
-  let i = 0;
-  for (i = 0; i < l; i++) {
-    context = context[namespaces[i]];
-  }
-  return context[func].apply(context, args);
-};
-
-/**
- * Augmented.isDefined - Checks and returns if a passed variable is defined
- * @method isDefined
- * @memberof Augmented
- * @param {string} variable to check
- * @returns {boolean} true if value is defined
- */
-Augmented.isDefined = (val) => {
-  return typeof val != "undefined";
-};
-
 export default Augmented;
-
-//module.exports = Augmented;

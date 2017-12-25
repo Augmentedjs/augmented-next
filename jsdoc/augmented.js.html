@@ -67,63 +67,26 @@
 							<li class="dropdown">
 								<a href="list_class.html" class="dropdown-toggle" data-toggle="dropdown">Classes<b class="caret"></b></a>
 								<ul class="dropdown-menu">
-										<li><a href="AbstractSecurityClient.html">AbstractSecurityClient</a></li>
-										<li><a href="Augmented.AbstractLocalStorage.html">Augmented.AbstractLocalStorage</a></li>
-										<li><a href="Augmented.AbstractLogger.html">Augmented.AbstractLogger</a></li>
 										<li><a href="Augmented.Application.html">Augmented.Application</a></li>
-										<li><a href="Augmented.Collection.html">Augmented.Collection</a></li>
-										<li><a href="Augmented.History_.html">Augmented.History</a></li>
-										<li><a href="Augmented.history.html">Augmented.history</a></li>
-										<li><a href="Augmented.LocalStorageCollection.html">Augmented.LocalStorageCollection</a></li>
-										<li><a href="Augmented.Model.html">Augmented.Model</a></li>
 										<li><a href="Augmented.Object.html">Augmented.Object</a></li>
-										<li><a href="Augmented.PaginatedCollection.html">Augmented.PaginatedCollection</a></li>
-										<li><a href="Augmented.Router.html">Augmented.Router</a></li>
-										<li><a href="Augmented.Security.Client.ACLClient.html">Augmented.Security.Client.ACLClient</a></li>
-										<li><a href="Augmented.Security.Client.OAUTH2Client.html">Augmented.Security.Client.OAUTH2Client</a></li>
-										<li><a href="Augmented.Security.Context.html">Augmented.Security.Context</a></li>
-										<li><a href="Augmented.Security.Entry.html">Augmented.Security.Entry</a></li>
 										<li><a href="Augmented.Utility.AsynchronousQueue.html">Augmented.Utility.AsynchronousQueue</a></li>
-										<li><a href="Augmented.Utility.AugmentedMap.html">Augmented.Utility.AugmentedMap</a></li>
-										<li><a href="Augmented.Utility.BinarySearch.html">Augmented.Utility.BinarySearch</a></li>
 										<li><a href="Augmented.Utility.Map.html">Augmented.Utility.Map</a></li>
-										<li><a href="Augmented.Utility.PrettyPrint.html">Augmented.Utility.PrettyPrint</a></li>
-										<li><a href="Augmented.Utility.QuickSort.html">Augmented.Utility.QuickSort</a></li>
-										<li><a href="Augmented.Utility.SchemaGenerator.html">Augmented.Utility.SchemaGenerator</a></li>
-										<li><a href="Augmented.Utility.Shuffle.html">Augmented.Utility.Shuffle</a></li>
-										<li><a href="Augmented.Utility.sortObjects.html">Augmented.Utility.sortObjects</a></li>
 										<li><a href="Augmented.Utility.Stack.html">Augmented.Utility.Stack</a></li>
-										<li><a href="Augmented.ValidationFramework.html">Augmented.ValidationFramework</a></li>
-										<li><a href="Augmented.View.html">Augmented.View</a></li>
 								</ul>
 							</li>
 							<li class="dropdown">
 								<a href="list_module.html" class="dropdown-toggle" data-toggle="dropdown">Modules<b class="caret"></b></a>
 								<ul class="dropdown-menu">
-										<li><a href="Augmented.module_$.html">Augmented.$</a></li>
-										<li><a href="Augmented.module__.html">Augmented._</a></li>
 										<li><a href="module-Augmented.html">Augmented</a></li>
 								</ul>
 							</li>
 							<li class="dropdown">
 								<a href="list_namespace.html" class="dropdown-toggle" data-toggle="dropdown">Namespaces<b class="caret"></b></a>
 								<ul class="dropdown-menu">
-										<li><a href="Augmented.Ajax.html">Augmented.Ajax</a></li>
-										<li><a href="Augmented.Ajax.Configuration.html">Augmented.Ajax.Configuration</a></li>
-										<li><a href="Augmented.LocalStorageFactory.html">Augmented.LocalStorageFactory</a></li>
-										<li><a href="Augmented.Logger.html">Augmented.Logger</a></li>
-										<li><a href="Augmented.Logger.LoggerFactory.html">Augmented.Logger.LoggerFactory</a></li>
-										<li><a href="Augmented.PaginationFactory.html">Augmented.PaginationFactory</a></li>
-										<li><a href="Augmented.Security.html">Augmented.Security</a></li>
-										<li><a href="Augmented.Security.AuthenticationFactory.html">Augmented.Security.AuthenticationFactory</a></li>
-										<li><a href="Augmented.Security.Client.html">Augmented.Security.Client</a></li>
-										<li><a href="Augmented.Security.Principal.html">Augmented.Security.Principal</a></li>
-										<li><a href="Augmented.Utility.html">Augmented.Utility</a></li>
 										<li><a href="Augmented.Utility.BundleObject.html">Augmented.Utility.BundleObject</a></li>
 										<li><a href="Augmented.Utility.MessageKeyFormatter.html">Augmented.Utility.MessageKeyFormatter</a></li>
 										<li><a href="Augmented.Utility.MessageReader.html">Augmented.Utility.MessageReader</a></li>
 										<li><a href="Augmented.Utility.ResourceBundle.html">Augmented.Utility.ResourceBundle</a></li>
-										<li><a href="Augmented.Utility.Transformer.html">Augmented.Utility.Transformer</a></li>
 								</ul>
 							</li>
 				</ul>
@@ -152,29 +115,98 @@
 			<div class="col-md-12 main-content">
 		<section class="source-section">
 			<article></article>
-			<pre class="prettyprint source language-javascript line-numbers"><code class="language-javascript">import * as Utility from "./utility";
-import * as Logger from "./logger";
+			<pre class="prettyprint source language-javascript line-numbers"><code class="language-javascript">import * as Utility from "./utility/utility";
+import sortObjects from "./utility/sort.js";
+
 import AugmentedObject from "./object.js";
+import AbstractModel from "./model/abstractModel.js";
+import AbstractCollection from "./collection/collection.js";
+import Stack from "./stack.js";
+import AugmentedMap from "./map.js";
+
+import * as Logger from "./logger/logger";
+
+import Configuration from "./configuration.js";
+import AsynchronousQueue from "./queue.js";
+import Application from "./application.js";
+import { BundleObject, ResourceBundle, MessageReader, MessageKeyFormatter } from "./resourceBundle.js";
+
+import SchemaGenerator from "./validation/schemaGenerator.js";
+import ValidationFramework from "./validation/validationFramework.js";
+import * as Security from "./security/security.js";
+import ClientType from "./security/clientType.js";
+
+import isString from "./functions/isString.js";
+import isFunction from "./functions/isFunction.js";
+import extend from "./functions/extend.js";
+import pad from "./functions/pad.js";
+import uniqueId from "./functions/uniqueId.js";
+import has from "./functions/has.js";
+import isObject from "./functions/isObject.js";
+import allKeys from "./functions/allKeys.js";
+import create from "./functions/create.js";
+import result from "./functions/result.js";
+import arrayHas from "./functions/arrayHas.js";
+import exec from "./functions/exec.js";
+import isDefined from "./functions/isDefined.js";
+
+/*
+ * Base functionality
+ * Set of base capabilities used throughout the framework
+ */
 
 /**
- * Augmented.js 2 - The Core UI Component and package
+ * Augmented.js Next - The Core Component
  *
  * @author Bob Warren
  *
  * @module Augmented
- * @version 2.0.0
+ * @version 2.0.0-alpha.3
  * @license Apache-2.0
  */
 const Augmented = {};
 Augmented.Utility = Utility;
+Augmented.Utility.Map = AugmentedMap;
+Augmented.Utility.Stack = Stack;
+Augmented.Utility.SchemaGenerator = SchemaGenerator;
+Augmented.Utility.extend = extend;
+Augmented.Utility.AsynchronousQueue = AsynchronousQueue;
+Augmented.Utility.pad = pad;
+Augmented.Utility.BundleObject = BundleObject;
+Augmented.Utility.ResourceBundle = ResourceBundle;
+Augmented.Utility.MessageReader = MessageReader;
+Augmented.Utility.MessageKeyFormatter = MessageKeyFormatter;
+Augmented.Utility.uniqueId = uniqueId;
+Augmented.Utility.sortObjects = sortObjects;
+
 Augmented.Logger = Logger;
+
 Augmented.Object = AugmentedObject;
+Augmented.AbstractModel = AbstractModel;
+Augmented.AbstractCollection = AbstractCollection;
+
+Augmented.ValidationFramework = ValidationFramework;
+Augmented.Security = Security;
+Augmented.Security.ClientType = ClientType;
+Augmented.Configuration = Configuration;
+Augmented.Application = Application;
+
+Augmented.isString = isString;
+Augmented.isFunction = isFunction;
+Augmented.has = has;
+Augmented.isObject = isObject;
+Augmented.allKeys = allKeys;
+Augmented.create = create;
+Augmented.result = result;
+Augmented.arrayHas = arrayHas;
+Augmented.exec = exec;
+Augmented.isDefined = isDefined;
 
 /**
  * The standard version property
  * @constant VERSION
  */
-Augmented.VERSION = "2.0.0";
+Augmented.VERSION = "2.0.0-alpha.3";
 /**
  * A codename for internal use
  * @constant codename
@@ -186,252 +218,7 @@ Augmented.codename = "JC Denton";
  */
 Augmented.releasename = "UNATCO";
 
-/**
- * Augmented underscore (if it exists from Backbone.js)
- * @module _
- * @name _
- * @memberof Augmented
- */
-Augmented._ = {};
-
-/**
- * Augmented underscore (if it exists from Backbone.js)
- * @module $
- * @name $
- * @memberof Augmented
- */
-Augmented.$ = {};
-
-/**
- * Augmented.Configuration - a set of configuration properties for the framework
- * @enum Configuration
- * @memberof Augmented
- * @property {string} LoggerLevel The level of the framework internal logger
- * @property {string} MessageBundle - the base name for messages in the framework (default: Messages)
- * @property {number} AsynchronousQueueTimeout the default milisecond timeout (default: 2000)
- * @property {number} ApplicationInitProcessTimeout the application init even timeout (default: 1000)
- * @todo change logger level to error
- */
-Augmented.Configuration = {
-  LoggerLevel: "info",
-  MessageBundle: "Messages",
-  AsynchronousQueueTimeout: 2000,
-  ApplicationInitProcessTimeout: 1000
-};
-
-/*
- * Base functionality
- * Set of base capabilities used throughout the framework
- */
-
-/**
- * Augmented.has
- * @method has
- * @memberof Augmented
- * @param {object} obj The input object
- * @param {object} key The test key
- * @returns {boolean} Returns true of the key exists
- */
-Augmented.has = (obj, key) => {
-  return obj !== null &amp;&amp; hasOwnProperty.call(obj, key);
-};
-
-/**
- * Augmented.isObject
- * @method isObject
- * @memberof Augmented
- * @param {object} obj The input object
- * @returns {boolean} Returns true of the param is an object
- */
-Augmented.isObject = (obj) => {
-  const type = typeof obj;
-  return (type === "function" || type === "object" &amp;&amp; !!obj);
-};
-
-/**
- * Augmented.allKeys
- * @method allKeys
- * @memberof Augmented
- * @param {object} obj The input object
- * @returns {array} Returns the array of ALL keys including prototyped
- */
-Augmented.allKeys = (obj) => {
-  if (!Augmented.isObject(obj)) return [];
-  return Object.getOwnPropertyNames(obj);
-};
-
-
-const result = (prototype) => {
-  if (!Augmented.isObject(prototype)) {
-    return {};
-  }
-  return Object.create(prototype);
-};
-
-/**
- * Augmented.create
- * @method create
- * @memberof Augmented
- * @param {object} prototype The input prototype
- * @param {object} props The properties (optional)
- * @returns {object} Returns the created object
- */
-Augmented.create = (prototype, props) => {
-  const o = result(prototype);
-  if (props) {
-    Object.assign(o, props);
-  }
-  return o;
-};
-
-// Map from CRUD to HTTP for our default sync implementation.
-const methodMap = {
-  "create": "POST",
-  "update": "PUT",
-  "patch": "PATCH",
-  "delete": "DELETE",
-  "read": "GET"
-};
-
-/**
- * Augmented.sync - Base sync method that can pass special augmented features
- * @method sync
- * @memberof Augmented
- */
-Augmented.sync = (method, model, options) => {
-  const type = methodMap[method];
-
-  if (!options) {
-    options = {};
-  }
-
-  // Default JSON-request options.
-  const params = {type: type, dataType: "json"};
-
-  // Ensure that we have a URL.
-  if (!options.url) {
-    if (model.url) {
-      if (Augmented.isFunction(model.url)) {
-        params.url = model.url();
-      } else {
-        params.url = model.url;
-      }
-    } else {
-      throw new Error("A \"url\" property or function must be specified");
-    }
-  }
-
-  // Ensure that we have the appropriate request data.
-  if (options.data == null &amp;&amp; model &amp;&amp; (method === "create" || method === "update" || method === "patch")) {
-    params.contentType = "application/json";
-    params.data = JSON.stringify(options.attrs || model.toJSON(options));
-  }
-
-  // Don't process data on a non-GET request.
-  if (params.type !== "GET") {
-    params.processData = false;
-  }
-
-  // Pass along `textStatus` and `errorThrown` from jQuery.
-  const error = options.error;
-  options.error = (xhr, textStatus, errorThrown) => {
-    options.textStatus = textStatus;
-    options.errorThrown = errorThrown;
-    if (error) {
-      error.call(options.context, xhr, textStatus, errorThrown);
-    }
-  };
-
-  // Make the request, allowing the user to override any Ajax options.
-  const xhr = options.xhr = Augmented.ajax(Augmented.Utility.extend(params, options));
-  model.trigger("request", model, xhr, options);
-  return xhr;
-};
-
-/**
-* Augmented.isFunction -
-* returns true if called name is a function
-* simular to jQuery .isFunction method
-* @method Augmented.isFunction
-* @param {function} name The name of the function to test
-* @memberof Augmented
-* @returns true if called name is a function
-*/
-Augmented.isFunction = (name) => {
-  return Object.prototype.toString.call(name) == "[object Function]";
-};
-
-/**
- * Augmented.isString -
- * checks if a value is a String
- * @method isString
- * @memberof Augmented
- * @param {string} variable to check
- * @returns {boolean} true if value is a string
- */
-Augmented.isString = (val) => {
-  return (typeof val === "string") || ((!!val &amp;&amp; typeof val === "object") &amp;&amp; Object.prototype.toString.call(val) === "[object String]");
-};
-
-/**
-* Augmented.result - returns named property in an object
-* simular to underscore .result method
-* @function result
-* @memberof Augmented
-* @returns named property in an object
-*/
-Augmented.result = (object, property) => {
-  if (object === null) return;
-  const value = object[property];
-  return Augmented.isFunction(value) ? value.call(object) : value;
-};
-
-/**
- * Array.has - returns is a property is in the array (very fast return)
- * @function arrayhas
- * @memberof Augmented
- * @param {array} arr Source array
- * @param {object} key Key to test for
- * @returns true if property is included in an array
- */
-Augmented.arrayHas = (arr, key) => {
-  return (arr.indexOf(key) !== -1);
-};
-
-/**
- * exec method - Execute a function by name
- * @method exec
- * @memberof Augmented
- * @param {string} functionName The name of the function
- * @param {object} context The context to call from
- * @param (object) args Arguments
- */
-Augmented.exec = (functionName, context /*, args */) => {
-  const args = Array.prototype.slice.call(arguments, 2),
-        namespaces = functionName.split("."),
-        func = namespaces.pop(),
-        l = namespaces.length;
-  let i = 0;
-  for (i = 0; i &lt; l; i++) {
-    context = context[namespaces[i]];
-  }
-  return context[func].apply(context, args);
-};
-
-/**
- * Augmented.isDefined - Checks and returns if a passed variable is defined
- * @method isDefined
- * @memberof Augmented
- * @param {string} variable to check
- * @returns {boolean} true if value is defined
- */
-Augmented.isDefined = (val) => {
-  return typeof val != "undefined";
-};
-
 export default Augmented;
-
-//module.exports = Augmented;
 </code></pre>
 		</section>
 			</div>
@@ -439,7 +226,7 @@ export default Augmented;
 	</div>
 	<footer>
 				<div class="footer-option">&lt;a href&#x3D;&#x27;http://www.augmentedjs.com&#x27;&gt;Augmented.js Homepage&lt;/a&gt;</div>
-			<div class="generated-by">Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Sun Dec 17th 2017 using the <a href="https://github.com/steveush/foodoc">FooDoc template</a>.</div>
+			<div class="generated-by">Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Mon Dec 25th 2017 using the <a href="https://github.com/steveush/foodoc">FooDoc template</a>.</div>
 	</footer>
 	<script src="js/jquery.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>

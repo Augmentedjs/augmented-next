@@ -1,5 +1,6 @@
-const expect = require("expect");
 import Augmented from "../src/augmented";
+const expect = require("expect");
+
 
 const TEST_SCHEMA = {
 	"$schema": "http://json-schema.org/draft-04/schema#",

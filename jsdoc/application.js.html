@@ -67,63 +67,26 @@
 							<li class="dropdown">
 								<a href="list_class.html" class="dropdown-toggle" data-toggle="dropdown">Classes<b class="caret"></b></a>
 								<ul class="dropdown-menu">
-										<li><a href="AbstractSecurityClient.html">AbstractSecurityClient</a></li>
-										<li><a href="Augmented.AbstractLocalStorage.html">Augmented.AbstractLocalStorage</a></li>
-										<li><a href="Augmented.AbstractLogger.html">Augmented.AbstractLogger</a></li>
 										<li><a href="Augmented.Application.html">Augmented.Application</a></li>
-										<li><a href="Augmented.Collection.html">Augmented.Collection</a></li>
-										<li><a href="Augmented.History_.html">Augmented.History</a></li>
-										<li><a href="Augmented.history.html">Augmented.history</a></li>
-										<li><a href="Augmented.LocalStorageCollection.html">Augmented.LocalStorageCollection</a></li>
-										<li><a href="Augmented.Model.html">Augmented.Model</a></li>
 										<li><a href="Augmented.Object.html">Augmented.Object</a></li>
-										<li><a href="Augmented.PaginatedCollection.html">Augmented.PaginatedCollection</a></li>
-										<li><a href="Augmented.Router.html">Augmented.Router</a></li>
-										<li><a href="Augmented.Security.Client.ACLClient.html">Augmented.Security.Client.ACLClient</a></li>
-										<li><a href="Augmented.Security.Client.OAUTH2Client.html">Augmented.Security.Client.OAUTH2Client</a></li>
-										<li><a href="Augmented.Security.Context.html">Augmented.Security.Context</a></li>
-										<li><a href="Augmented.Security.Entry.html">Augmented.Security.Entry</a></li>
 										<li><a href="Augmented.Utility.AsynchronousQueue.html">Augmented.Utility.AsynchronousQueue</a></li>
-										<li><a href="Augmented.Utility.AugmentedMap.html">Augmented.Utility.AugmentedMap</a></li>
-										<li><a href="Augmented.Utility.BinarySearch.html">Augmented.Utility.BinarySearch</a></li>
 										<li><a href="Augmented.Utility.Map.html">Augmented.Utility.Map</a></li>
-										<li><a href="Augmented.Utility.PrettyPrint.html">Augmented.Utility.PrettyPrint</a></li>
-										<li><a href="Augmented.Utility.QuickSort.html">Augmented.Utility.QuickSort</a></li>
-										<li><a href="Augmented.Utility.SchemaGenerator.html">Augmented.Utility.SchemaGenerator</a></li>
-										<li><a href="Augmented.Utility.Shuffle.html">Augmented.Utility.Shuffle</a></li>
-										<li><a href="Augmented.Utility.sortObjects.html">Augmented.Utility.sortObjects</a></li>
 										<li><a href="Augmented.Utility.Stack.html">Augmented.Utility.Stack</a></li>
-										<li><a href="Augmented.ValidationFramework.html">Augmented.ValidationFramework</a></li>
-										<li><a href="Augmented.View.html">Augmented.View</a></li>
 								</ul>
 							</li>
 							<li class="dropdown">
 								<a href="list_module.html" class="dropdown-toggle" data-toggle="dropdown">Modules<b class="caret"></b></a>
 								<ul class="dropdown-menu">
-										<li><a href="Augmented.module_$.html">Augmented.$</a></li>
-										<li><a href="Augmented.module__.html">Augmented._</a></li>
 										<li><a href="module-Augmented.html">Augmented</a></li>
 								</ul>
 							</li>
 							<li class="dropdown">
 								<a href="list_namespace.html" class="dropdown-toggle" data-toggle="dropdown">Namespaces<b class="caret"></b></a>
 								<ul class="dropdown-menu">
-										<li><a href="Augmented.Ajax.html">Augmented.Ajax</a></li>
-										<li><a href="Augmented.Ajax.Configuration.html">Augmented.Ajax.Configuration</a></li>
-										<li><a href="Augmented.LocalStorageFactory.html">Augmented.LocalStorageFactory</a></li>
-										<li><a href="Augmented.Logger.html">Augmented.Logger</a></li>
-										<li><a href="Augmented.Logger.LoggerFactory.html">Augmented.Logger.LoggerFactory</a></li>
-										<li><a href="Augmented.PaginationFactory.html">Augmented.PaginationFactory</a></li>
-										<li><a href="Augmented.Security.html">Augmented.Security</a></li>
-										<li><a href="Augmented.Security.AuthenticationFactory.html">Augmented.Security.AuthenticationFactory</a></li>
-										<li><a href="Augmented.Security.Client.html">Augmented.Security.Client</a></li>
-										<li><a href="Augmented.Security.Principal.html">Augmented.Security.Principal</a></li>
-										<li><a href="Augmented.Utility.html">Augmented.Utility</a></li>
 										<li><a href="Augmented.Utility.BundleObject.html">Augmented.Utility.BundleObject</a></li>
 										<li><a href="Augmented.Utility.MessageKeyFormatter.html">Augmented.Utility.MessageKeyFormatter</a></li>
 										<li><a href="Augmented.Utility.MessageReader.html">Augmented.Utility.MessageReader</a></li>
 										<li><a href="Augmented.Utility.ResourceBundle.html">Augmented.Utility.ResourceBundle</a></li>
-										<li><a href="Augmented.Utility.Transformer.html">Augmented.Utility.Transformer</a></li>
 								</ul>
 							</li>
 				</ul>
@@ -152,89 +115,145 @@
 			<div class="col-md-12 main-content">
 		<section class="source-section">
 			<article></article>
-			<pre class="prettyprint source language-javascript line-numbers"><code class="language-javascript">/**
-* &lt;p>Application Class for use to define an application.&lt;br/>
-* An application contains metadata and initializers for the application.&lt;br/>
-* &lt;em>Applications track history, and normally would contain the entire single page App startup.&lt;/em>&lt;/p>
-* @constructor Augmented.Application
-* @param {string} name Name of the application
-* @memberof Augmented
-* @example var app = new Augmented.Application("Awesome");
-* app.start();
-* @example var app = new Augmented.Application();
-* app.setName("My Super Application!");
-* app.setMetadataItem("description", "something very awesome");
-* app.beforeInitialize() = function() { do some stuff... };
-* app.start();
-*/
-Augmented.Application = function(name) {
-  var _metadata, _routers = [];
+			<pre class="prettyprint source language-javascript line-numbers"><code class="language-javascript">const before = (app) => {
+  return new Promise( (resolve, reject) => {
+    const t = app.beforeInitialize();
+    if (t) {
+      resolve(app);
+    } else {
+      reject(new Error("failed before initialize!"));
+    }
+  });
+},
+init = (app) => {
+  return new Promise( (resolve, reject) => {
+    const t = app.initialize();
+    if (t) {
+      resolve(app);
+    } else {
+      reject(new Error("failed initialize!"));
+    }
+  });
+},
+after = (app) => {
+  return new Promise( (resolve, reject) => {
+    const t = app.afterInitialize();
+    if (t) {
+      resolve(app);
+    } else {
+      reject(new Error("failed after initialize!"));
+    }
+  });
+},
+setStarted = (app) => {
+  return new Promise( (resolve, reject) => {
+    app._started = true;
+    if (app.started) {
+      resolve(app);
+    } else {
+      reject(new Error("failed setting started!"));
+    }
+  });
+},
+check = (app) => {
+  return new Promise( (resolve, reject) => {
+    const t = app.started;
+    if (t) {
+      resolve(app);
+    } else {
+      reject(new Error("failed starting!"));
+    }
+  });
+};
+
+/**
+ * &lt;p>Application Class for use to define an application.&lt;br/>
+ * An application contains metadata and initializers for the application.&lt;br/>
+ * &lt;em>Applications track history, and normally would contain the entire single page App startup.&lt;/em>&lt;/p>
+ * @constructor Augmented.Application
+ * @param {string} name Name of the application
+ * @memberof Augmented
+ * @example const app = new Augmented.Application("Awesome");
+ * app.start();
+ * @example const app = new Augmented.Application();
+ * app.name = "My Super Application!";
+ * app.setMetadataItem("description", "something very awesome");
+ * app.beforeInitialize = () => { do some stuff... };
+ * app.start();
+ */
+class Application {
+  constructor(name) {
+    // preassign a name
+    if (name) {
+      this._metadata["name"] = name;
+    } else {
+      this._metadata["name"] = "untitled";
+    }
+
+    // preset a datastore object
+    this._metadata["datastore"] = {};
+  };
+
+  _metadata = {};
 
   /**
-  * The router property of the application
-  * @property router
-  * @memberof Augmented.Application
-  */
-  this.router = null;
+   * The router property of the application
+   * @property router
+   * @memberof Augmented.Application
+   */
+  _router = null;
+  get router() {
+    return this._router;
+  };
 
   /**
-  * The started property of the application
-  * @property started
-  * @memberof Augmented.Application
-  * @returns {boolean} Returns the property of the started Event
-  */
-  this.started = false;
-
-  if (!_metadata) {
-    _metadata = new Augmented.Utility.Map();
-  } else {
-    _metadata.clear();
-  }
-
-  // preassign a name
-  if (name) {
-    _metadata.set("name", name);
-  } else {
-    _metadata.set("name", "untitled");
-  }
-
-  // preset a datastore object
-  _metadata.set("datastore", {});
+   * The started property of the application
+   * @property started
+   * @memberof Augmented.Application
+   * @returns {boolean} Returns the property of the started Event
+   */
+  _started = false;
+  get started() {
+    return this._started;
+  };
 
   /** Event for after during startup of the application
-  * @method initialize
-  * @memberof Augmented.Application
-  */
-  this.initialize = function() {
+   * @method initialize
+   * @memberof Augmented.Application
+   */
+  initialize() {
+    return true;
   };
 
   /** Event for before the startup of the application
-  * @method beforeInitialize
-  * @memberof Augmented.Application
-  */
-  this.beforeInitialize = function() {
+   * @method beforeInitialize
+   * @memberof Augmented.Application
+   */
+  beforeInitialize() {
+    return true;
   };
 
   /** Event for after the startup of the application
-  * @method afterInitialize
-  * @memberof Augmented.Application
-  */
-  this.afterInitialize = function() {
+   * @method afterInitialize
+   * @memberof Augmented.Application
+   */
+  afterInitialize() {
+    return true;
   };
 
   /** Get the application name
-  * @method getName
-  * @memberof Augmented.Application
-  */
-  this.getName = function() {
+   * @method getName
+   * @memberof Augmented.Application
+   */
+  get name() {
     return this.getMetadataItem("name");
   };
 
   /** Set the application name
-  * @method setName
-  * @memberof Augmented.Application
-  */
-  this.setName = function(n) {
+   * @method setName
+   * @memberof Augmented.Application
+   */
+  set name(n) {
     return this.setMetadataItem("name", n);
   };
 
@@ -243,102 +262,83 @@ Augmented.Application = function(name) {
   * @memberof Augmented.Application
   * @returns Map of metadata in an Augmented.Utility.Map
   */
-  this.getMetadata = function() {
-    return _metadata;
+  get metadata() {
+    return this._metadata;
   };
 
   /** Set a specific item in metadata
-  * @method setMetadataItem
-  * @memberof Augmented.Application
-  */
-  this.setMetadataItem = function(key, value) {
-    _metadata.set(key, value);
+   * @method setMetadataItem
+   * @memberof Augmented.Application
+   */
+  setMetadataItem(key, value) {
+    this._metadata[key] = value;
   };
 
   /** Get a specific item in metadata
-  * @method getMetadataItem
-  * @memberof Augmented.Application
-  */
-  this.getMetadataItem = function(key) {
-    return _metadata.get(key);
+   * @method getMetadataItem
+   * @memberof Augmented.Application
+   */
+  getMetadataItem(key) {
+    return this._metadata[key];
   };
 
   /** Register a Router - adds routes to the application
-  * @method registerRouter
-  * @memberof Augmented.Application
-  */
-  this.registerRouter = function(router) {
+   * @method registerRouter
+   * @memberof Augmented.Application
+   */
+  registerRouter(router) {
     if (router){
-      this.router = router;
+      this._router = router;
     }
   };
 
   /** Event to start the application and history
-  * @method start
-  * @memberof Augmented.Application
-  */
-  this.start = function() {
-    var asyncQueue = new Augmented.Utility.AsynchronousQueue(Augmented.Configuration.ApplicationInitProcessTimeout);
-    var startCheck = function() {
-      if (!Augmented.History.started) {
-        Augmented.history.start();
-      }
-    };
-    this.started = asyncQueue.process(
-      this.beforeInitialize(),
-      this.initialize(),
-      this.afterInitialize(),
-      startCheck()
-    );
-    if (!this.started) {
-      this.stop();
-    }
+   * @method start
+   * @memberof Augmented.Application
+   */
+  start() {
+    const app = this;
+    before(app)
+    .then(init)
+    .then(after)
+    .then(setStarted)
+    .then(check)
+    .catch( (e) => {
+      app.stop();
+      throw e;
+    });
   };
 
   /** Event to stop the application and history
-  * @method stop
-  * @memberof Augmented.Application
-  */
-  this.stop = function() {
-    if (Augmented.History.started) {
-      Augmented.history.stop();
-    }
-    this.started = false;
-  };
-
-  /** creates a custom datastore based on a model
-  * @method createDatastore
-  * @param {Augmented.Model|object} model A custom Model
-  * @memberof Augmented.Application
-  */
-  this.createDatastore = function(model) {
-    if (model) {
-      this.setMetadataItem("datastore", new model());
-    }
+   * @method stop
+   * @memberof Augmented.Application
+   */
+  stop() {
+    this._started = false;
   };
 
   /** Gets the datastore for the application
-  * @method getDatastore
-  * @returns {Augmented.Model|object} the datastore
-  * @memberof Augmented.Application
-  */
-  this.getDatastore = function() {
+   * @method getDatastore
+   * @returns {Augmented.Model|object} the datastore
+   * @memberof Augmented.Application
+   */
+  get datastore() {
     return this.getMetadataItem("datastore");
   }
 
   /** Sets a datastore
-  * @method setDatastore
-  * @param {object} model A datastore
-  * @memberof Augmented.Application
-  */
-  this.setDatastore = function(ds) {
+   * @method setDatastore
+   * @param {object} model A datastore
+   * @memberof Augmented.Application
+   */
+  set datastore(ds) {
     if (ds) {
       this.setMetadataItem("datastore", ds);
     }
   };
-
 };
-Augmented.Application.prototype.constructor = Augmented.Application;
+
+export default Application;
 </code></pre>
 		</section>
 			</div>
@@ -346,7 +346,7 @@ Augmented.Application.prototype.constructor = Augmented.Application;
 	</div>
 	<footer>
 				<div class="footer-option">&lt;a href&#x3D;&#x27;http://www.augmentedjs.com&#x27;&gt;Augmented.js Homepage&lt;/a&gt;</div>
-			<div class="generated-by">Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Sun Dec 17th 2017 using the <a href="https://github.com/steveush/foodoc">FooDoc template</a>.</div>
+			<div class="generated-by">Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Mon Dec 25th 2017 using the <a href="https://github.com/steveush/foodoc">FooDoc template</a>.</div>
 	</footer>
 	<script src="js/jquery.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>

@@ -1,4 +1,4 @@
-# Augmented.js
+# Augmented.js Next
 ## The Augmented.js Framework.
 ### Version 2.0.x
 ### "JC Denton"

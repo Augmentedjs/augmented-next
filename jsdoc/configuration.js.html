@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
-		<title>queue.js</title>
+		<title>configuration.js</title>
 		<link rel="icon" type="image/png" href="favicon.png"/>
 		<!--[if lt IE 9]>
 		<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -107,7 +107,7 @@
 	<!-- end:navbar.hbs -->		<div class="page-header">
 			<div class="container">
 				<span class="kind">source</span>
-				<h1><span class="name">queue.js</span></h1>
+				<h1><span class="name">configuration.js</span></h1>
 			</div>
 		</div>
 	<div class="container content">
@@ -115,91 +115,24 @@
 			<div class="col-md-12 main-content">
 		<section class="source-section">
 			<article></article>
-			<pre class="prettyprint source language-javascript line-numbers"><code class="language-javascript">import extend from "./functions/extend.js";
-import Configuration from "./configuration.js";
-
-/**
- * Augmented.Utility.AsynchronousQueue -
- * An Async queue for handling async chained functions
- * @constructor Augmented.Utility.AsynchronousQueue
- * @param {number} timeout The timout period for each process in the queue (optional)
- * @memberof Augmented.Utility
+			<pre class="prettyprint source language-javascript line-numbers"><code class="language-javascript">/**
+ * Augmented.Configuration - a set of configuration properties for the framework
+ * @enum Configuration
+ * @memberof Augmented
+ * @property {string} LoggerLevel The level of the framework internal logger
+ * @property {string} MessageBundle - the base name for messages in the framework (default: Messages)
+ * @property {number} AsynchronousQueueTimeout the default milisecond timeout (default: 2000)
+ * @property {number} ApplicationInitProcessTimeout the application init even timeout (default: 1000)
+ * @todo change logger level to error
  */
-class AsynchronousQueue {
-  constructor(timeout) {
-    this._timeout = (timeout) ? timeout : Configuration.AsynchronousQueueTimeout;
-  };
-
-  _queue = {};
-
-  /**
-   * @method add The Add method for adding processes to the queue
-   * @memberof Augmented.Utility.AsynchronousQueue
-   */
-  add(...args) {
-    if (args &amp;&amp; args.length > 0) {
-      extend(this._queue, args);
-      return true;
-    }
-    return false;
-  };
-
-  /**
-   * @method clear Clear all processes in the queue
-   * @memberof Augmented.Utility.AsynchronousQueue
-   */
-  clear() {
-    if (this._queue.length > 0) {
-      this._queue.splice(0, this._queue.length);
-    }
-  };
-
-  /**
-   * @method process Process the queue
-   * @memberof Augmented.Utility.AsynchronousQueue
-   */
-  process(...args) {
-    if (args) {
-      extend(this._queue, args);
-    }
-    const q = this._queue;
-    const l = Object.keys(q).length;//args.length;
-    let to = this._timeout;
-
-    if (l &lt;= 0) {
-      return false;
-    }
-    const chain = (i) => {
-      if (i >= l || typeof q[i] !== 'function') {
-        return false;
-      }
-      setTimeout( () => {
-        q[i]();
-        chain(i + 1);
-      }, to);
-    };
-    chain(0);
-    return true;
-  };
-
-  /**
-   * @method getTimeout Get the timeout for the queue
-   * @memberof Augmented.Utility.AsynchronousQueue
-   */
-  get timeout() {
-    return this._timeout;
-  };
-
-  /**
-   * @method getQueue get the full queue
-   * @memberof Augmented.Utility.AsynchronousQueue
-   */
-  get queue() {
-    return this._queue;
-  };
+const Configuration = {
+  LoggerLevel: "info",
+  MessageBundle: "Messages",
+  AsynchronousQueueTimeout: 2000,
+  ApplicationInitProcessTimeout: 1000
 };
 
-export default AsynchronousQueue;
+export default Configuration;
 </code></pre>
 		</section>
 			</div>

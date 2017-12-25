@@ -66,63 +66,26 @@
 							<li class="dropdown">
 								<a href="list_class.html" class="dropdown-toggle" data-toggle="dropdown">Classes<b class="caret"></b></a>
 								<ul class="dropdown-menu">
-										<li><a href="AbstractSecurityClient.html">AbstractSecurityClient</a></li>
-										<li><a href="Augmented.AbstractLocalStorage.html">Augmented.AbstractLocalStorage</a></li>
-										<li><a href="Augmented.AbstractLogger.html">Augmented.AbstractLogger</a></li>
 										<li><a href="Augmented.Application.html">Augmented.Application</a></li>
-										<li><a href="Augmented.Collection.html">Augmented.Collection</a></li>
-										<li><a href="Augmented.History_.html">Augmented.History</a></li>
-										<li><a href="Augmented.history.html">Augmented.history</a></li>
-										<li><a href="Augmented.LocalStorageCollection.html">Augmented.LocalStorageCollection</a></li>
-										<li><a href="Augmented.Model.html">Augmented.Model</a></li>
 										<li><a href="Augmented.Object.html">Augmented.Object</a></li>
-										<li><a href="Augmented.PaginatedCollection.html">Augmented.PaginatedCollection</a></li>
-										<li><a href="Augmented.Router.html">Augmented.Router</a></li>
-										<li><a href="Augmented.Security.Client.ACLClient.html">Augmented.Security.Client.ACLClient</a></li>
-										<li><a href="Augmented.Security.Client.OAUTH2Client.html">Augmented.Security.Client.OAUTH2Client</a></li>
-										<li><a href="Augmented.Security.Context.html">Augmented.Security.Context</a></li>
-										<li><a href="Augmented.Security.Entry.html">Augmented.Security.Entry</a></li>
 										<li><a href="Augmented.Utility.AsynchronousQueue.html">Augmented.Utility.AsynchronousQueue</a></li>
-										<li><a href="Augmented.Utility.AugmentedMap.html">Augmented.Utility.AugmentedMap</a></li>
-										<li><a href="Augmented.Utility.BinarySearch.html">Augmented.Utility.BinarySearch</a></li>
 										<li><a href="Augmented.Utility.Map.html">Augmented.Utility.Map</a></li>
-										<li><a href="Augmented.Utility.PrettyPrint.html">Augmented.Utility.PrettyPrint</a></li>
-										<li><a href="Augmented.Utility.QuickSort.html">Augmented.Utility.QuickSort</a></li>
-										<li><a href="Augmented.Utility.SchemaGenerator.html">Augmented.Utility.SchemaGenerator</a></li>
-										<li><a href="Augmented.Utility.Shuffle.html">Augmented.Utility.Shuffle</a></li>
-										<li><a href="Augmented.Utility.sortObjects.html">Augmented.Utility.sortObjects</a></li>
 										<li><a href="Augmented.Utility.Stack.html">Augmented.Utility.Stack</a></li>
-										<li><a href="Augmented.ValidationFramework.html">Augmented.ValidationFramework</a></li>
-										<li><a href="Augmented.View.html">Augmented.View</a></li>
 								</ul>
 							</li>
 							<li class="dropdown">
 								<a href="list_module.html" class="dropdown-toggle" data-toggle="dropdown">Modules<b class="caret"></b></a>
 								<ul class="dropdown-menu">
-										<li><a href="Augmented.module_$.html">Augmented.$</a></li>
-										<li><a href="Augmented.module__.html">Augmented._</a></li>
 										<li><a href="module-Augmented.html">Augmented</a></li>
 								</ul>
 							</li>
 							<li class="dropdown">
 								<a href="list_namespace.html" class="dropdown-toggle" data-toggle="dropdown">Namespaces<b class="caret"></b></a>
 								<ul class="dropdown-menu">
-										<li><a href="Augmented.Ajax.html">Augmented.Ajax</a></li>
-										<li><a href="Augmented.Ajax.Configuration.html">Augmented.Ajax.Configuration</a></li>
-										<li><a href="Augmented.LocalStorageFactory.html">Augmented.LocalStorageFactory</a></li>
-										<li><a href="Augmented.Logger.html">Augmented.Logger</a></li>
-										<li><a href="Augmented.Logger.LoggerFactory.html">Augmented.Logger.LoggerFactory</a></li>
-										<li><a href="Augmented.PaginationFactory.html">Augmented.PaginationFactory</a></li>
-										<li><a href="Augmented.Security.html">Augmented.Security</a></li>
-										<li><a href="Augmented.Security.AuthenticationFactory.html">Augmented.Security.AuthenticationFactory</a></li>
-										<li><a href="Augmented.Security.Client.html">Augmented.Security.Client</a></li>
-										<li><a href="Augmented.Security.Principal.html">Augmented.Security.Principal</a></li>
-										<li><a href="Augmented.Utility.html">Augmented.Utility</a></li>
 										<li><a href="Augmented.Utility.BundleObject.html">Augmented.Utility.BundleObject</a></li>
 										<li><a href="Augmented.Utility.MessageKeyFormatter.html">Augmented.Utility.MessageKeyFormatter</a></li>
 										<li><a href="Augmented.Utility.MessageReader.html">Augmented.Utility.MessageReader</a></li>
 										<li><a href="Augmented.Utility.ResourceBundle.html">Augmented.Utility.ResourceBundle</a></li>
-										<li><a href="Augmented.Utility.Transformer.html">Augmented.Utility.Transformer</a></li>
 								</ul>
 							</li>
 				</ul>
@@ -184,14 +147,14 @@
 				</table>
 			</div>
 			<div class="callout callout-example"><h5>Examples</h5>		<div class="example-code">
-						<pre class="prettyprint source language-javascript"><code class="language-javascript">var app &#x3D; new Augmented.Application(&quot;Awesome&quot;);
+						<pre class="prettyprint source language-javascript"><code class="language-javascript">const app &#x3D; new Augmented.Application(&quot;Awesome&quot;);
 			app.start();</code></pre>
 					</div>
 					<div class="example-code">
-						<pre class="prettyprint source language-javascript"><code class="language-javascript">var app &#x3D; new Augmented.Application();
-			app.setName(&quot;My Super Application!&quot;);
+						<pre class="prettyprint source language-javascript"><code class="language-javascript">const app &#x3D; new Augmented.Application();
+			app.name &#x3D; &quot;My Super Application!&quot;;
 			app.setMetadataItem(&quot;description&quot;, &quot;something very awesome&quot;);
-			app.beforeInitialize() &#x3D; function() { do some stuff... };
+			app.beforeInitialize &#x3D; () &#x3D;&gt; { do some stuff... };
 			app.start();</code></pre>
 					</div>
 			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
@@ -214,7 +177,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="application.js.html">application.js</a>, <a href="application.js.html#line-1">line 1</a></p>
+									<p class="form-control-static"><a href="application.js.html">application.js</a>, <a href="application.js.html#line-52">line 52</a></p>
 								</div>
 							</div>
 			
@@ -230,64 +193,7 @@
 									<dl class="symbol">
 											<hr/>
 											<dt class="symbol-title member public">
-			<h4 id=".this.router" class="member public"><span class="signature-attribs">&lt;static> </span><span class="name">this.router</span><span class="signature-type"></span></h4>
-		</dt>
-<dd class="symbol-details member public">
-	<div class="symbol-details-inner">
-			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>The router property of the application</p></div>
-			</div>			<div class="callout callout-info">
-				<h5>Properties</h5>
-				<table class="params table table-striped">
-					<thead>
-					<tr>
-							<th>Name</th>
-						<th>Type</th>
-						<th class="last">Description</th>
-					</tr>
-					</thead>
-					<tbody>
-						<tr>
-								<td><code>router</code></td>
-							<td></td>
-							<td class="last">
-							</td>
-						</tr>
-					</tbody>
-				</table>
-			</div>
-			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-							<!-- source -->
-							<div class="form-group">
-								<label class="col-sm-3 control-label">Source</label>
-								<div class="col-sm-9">
-									<p class="form-control-static"><a href="application.js.html">application.js</a>, <a href="application.js.html#line-24">line 24</a></p>
-								</div>
-							</div>
-			
-			
-			
-			
-					</form>
-			</div>	</div>
-</dd>
-											<hr/>
-											<dt class="symbol-title member public">
-			<h4 id=".this.started" class="member public"><span class="signature-attribs">&lt;static> </span><span class="name">this.started</span><span class="signature-type"></span></h4>
+			<h4 id="._started" class="member public"><span class="signature-attribs">&lt;static> </span><span class="name">_started</span><span class="signature-type"></span></h4>
 		</dt>
 <dd class="symbol-details member public">
 	<div class="symbol-details-inner">
@@ -340,7 +246,64 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="application.js.html">application.js</a>, <a href="application.js.html#line-32">line 32</a></p>
+									<p class="form-control-static"><a href="application.js.html">application.js</a>, <a href="application.js.html#line-98">line 98</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title member public">
+			<h4 id="._router" class="member public"><span class="signature-attribs">&lt;static> </span><span class="name">_router</span><span class="signature-type"></span></h4>
+		</dt>
+<dd class="symbol-details member public">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>The router property of the application</p></div>
+			</div>			<div class="callout callout-info">
+				<h5>Properties</h5>
+				<table class="params table table-striped">
+					<thead>
+					<tr>
+							<th>Name</th>
+						<th>Type</th>
+						<th class="last">Description</th>
+					</tr>
+					</thead>
+					<tbody>
+						<tr>
+								<td><code>router</code></td>
+							<td></td>
+							<td class="last">
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="application.js.html">application.js</a>, <a href="application.js.html#line-87">line 87</a></p>
 								</div>
 							</div>
 			
@@ -380,7 +343,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="application.js.html">application.js</a>, <a href="application.js.html#line-50">line 50</a></p>
+									<p class="form-control-static"><a href="application.js.html">application.js</a>, <a href="application.js.html#line-103">line 103</a></p>
 								</div>
 							</div>
 			
@@ -417,7 +380,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="application.js.html">application.js</a>, <a href="application.js.html#line-57">line 57</a></p>
+									<p class="form-control-static"><a href="application.js.html">application.js</a>, <a href="application.js.html#line-111">line 111</a></p>
 								</div>
 							</div>
 			
@@ -454,7 +417,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="application.js.html">application.js</a>, <a href="application.js.html#line-64">line 64</a></p>
+									<p class="form-control-static"><a href="application.js.html">application.js</a>, <a href="application.js.html#line-119">line 119</a></p>
 								</div>
 							</div>
 			
@@ -491,7 +454,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="application.js.html">application.js</a>, <a href="application.js.html#line-71">line 71</a></p>
+									<p class="form-control-static"><a href="application.js.html">application.js</a>, <a href="application.js.html#line-127">line 127</a></p>
 								</div>
 							</div>
 			
@@ -528,7 +491,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="application.js.html">application.js</a>, <a href="application.js.html#line-79">line 79</a></p>
+									<p class="form-control-static"><a href="application.js.html">application.js</a>, <a href="application.js.html#line-135">line 135</a></p>
 								</div>
 							</div>
 			
@@ -573,7 +536,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="application.js.html">application.js</a>, <a href="application.js.html#line-87">line 87</a></p>
+									<p class="form-control-static"><a href="application.js.html">application.js</a>, <a href="application.js.html#line-143">line 143</a></p>
 								</div>
 							</div>
 			
@@ -610,7 +573,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="application.js.html">application.js</a>, <a href="application.js.html#line-96">line 96</a></p>
+									<p class="form-control-static"><a href="application.js.html">application.js</a>, <a href="application.js.html#line-152">line 152</a></p>
 								</div>
 							</div>
 			
@@ -647,7 +610,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="application.js.html">application.js</a>, <a href="application.js.html#line-104">line 104</a></p>
+									<p class="form-control-static"><a href="application.js.html">application.js</a>, <a href="application.js.html#line-160">line 160</a></p>
 								</div>
 							</div>
 			
@@ -684,7 +647,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="application.js.html">application.js</a>, <a href="application.js.html#line-112">line 112</a></p>
+									<p class="form-control-static"><a href="application.js.html">application.js</a>, <a href="application.js.html#line-168">line 168</a></p>
 								</div>
 							</div>
 			
@@ -721,7 +684,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="application.js.html">application.js</a>, <a href="application.js.html#line-122">line 122</a></p>
+									<p class="form-control-static"><a href="application.js.html">application.js</a>, <a href="application.js.html#line-178">line 178</a></p>
 								</div>
 							</div>
 			
@@ -758,65 +721,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="application.js.html">application.js</a>, <a href="application.js.html#line-144">line 144</a></p>
-								</div>
-							</div>
-			
-			
-			
-			
-					</form>
-			</div>	</div>
-</dd>
-											<hr/>
-											<dt class="symbol-title function public">
-			<h4 id=".createDatastore" class="function public"><span class="signature-attribs">&lt;static> </span><span class="name">createDatastore</span><span class="signature-params">( <span class="signature-param">model</span>&nbsp;)</span></h4>
-		</dt>
-<dd class="symbol-details function public">
-	<div class="symbol-details-inner">
-			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>creates a custom datastore based on a model</p></div>
-			</div>			<div class="callout callout-info">
-				<h5>Parameters</h5>
-				<table class="params table table-striped">
-					<thead>
-					<tr>
-							<th>Name</th>
-						<th>Type</th>
-						<th class="last">Description</th>
-					</tr>
-					</thead>
-					<tbody>
-						<tr>
-								<td><code>model</code></td>
-							<td><span class="param-type"><a href="Augmented.Model.html">Augmented.Model</a></span> | <span class="param-type">object</span></td>
-							<td class="last">
-									<p>A custom Model</p>
-							</td>
-						</tr>
-					</tbody>
-				</table>
-			</div>
-			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-							<!-- source -->
-							<div class="form-group">
-								<label class="col-sm-3 control-label">Source</label>
-								<div class="col-sm-9">
-									<p class="form-control-static"><a href="application.js.html">application.js</a>, <a href="application.js.html#line-155">line 155</a></p>
+									<p class="form-control-static"><a href="application.js.html">application.js</a>, <a href="application.js.html#line-195">line 195</a></p>
 								</div>
 							</div>
 			
@@ -835,7 +740,7 @@
 			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>Gets the datastore for the application</p></div>
 			</div>			<div class="callout callout-success"><h5>Returns</h5>		<form class="form-horizontal returns">
 							<div class="form-group">
-								<label class="col-sm-3 control-label returns-type"><span class="param-type"><a href="Augmented.Model.html">Augmented.Model</a></span> | <span class="param-type">object</span></label>
+								<label class="col-sm-3 control-label returns-type"><span class="param-type">Augmented.Model</span> | <span class="param-type">object</span></label>
 								<div class="col-sm-9">
 									<div class="form-control-static returns-description"><p>the datastore</p></div>
 								</div>
@@ -861,7 +766,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="application.js.html">application.js</a>, <a href="application.js.html#line-166">line 166</a></p>
+									<p class="form-control-static"><a href="application.js.html">application.js</a>, <a href="application.js.html#line-203">line 203</a></p>
 								</div>
 							</div>
 			
@@ -919,7 +824,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="application.js.html">application.js</a>, <a href="application.js.html#line-175">line 175</a></p>
+									<p class="form-control-static"><a href="application.js.html">application.js</a>, <a href="application.js.html#line-212">line 212</a></p>
 								</div>
 							</div>
 			
@@ -940,7 +845,7 @@
 	</div>
 	<footer>
 				<div class="footer-option">&lt;a href&#x3D;&#x27;http://www.augmentedjs.com&#x27;&gt;Augmented.js Homepage&lt;/a&gt;</div>
-			<div class="generated-by">Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Sun Dec 17th 2017 using the <a href="https://github.com/steveush/foodoc">FooDoc template</a>.</div>
+			<div class="generated-by">Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Mon Dec 25th 2017 using the <a href="https://github.com/steveush/foodoc">FooDoc template</a>.</div>
 	</footer>
 	<script src="js/jquery.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>

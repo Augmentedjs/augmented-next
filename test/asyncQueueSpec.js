@@ -1,5 +1,6 @@
-const expect = require("expect");
 import Augmented from "../src/augmented";
+const expect = require("expect");
+
 const TIMEOUT = 500;
 
 describe("Given Augmented AsynchronousQueue", () => {

@@ -1,5 +1,5 @@
-const expect = require("expect");
 import Augmented from "../src/augmented";
+const expect = require("expect");
 
 describe("Given Augmented Application", () => {
 	it("is defined", () => {
