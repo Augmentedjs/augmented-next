@@ -1,6 +1,5 @@
-import Augmented from "../src/augmented";
-const expect = require("expect");
-
+import Augmented from "../dist/augmented-next.js";
+import expect from "expect";
 
 describe("Given Augmented Stack", () => {
   let s;

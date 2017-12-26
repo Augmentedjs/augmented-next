@@ -1,30 +1,33 @@
-const {resolve} = require('path');
-const webpack = require('webpack');
-const validate = require('webpack-validator');
-const {getIfUtils, removeEmpty} = require('webpack-config-utils');
+const {resolve} = require("path");
+const webpack = require("webpack");
+const validate = require("webpack-validator");
+const {getIfUtils, removeEmpty} = require("webpack-config-utils");
 
 module.exports = env => {
   const {ifProd, ifNotProd} = getIfUtils(env)
 
   return validate({
-    entry: './src/augmented.js',
+    entry: "./src/augmented.js",
     context: __dirname,
     output: {
-      path: resolve(__dirname, './dist'),
-      filename: 'augmented2.js',
-      publicPath: '/dist/',
+      path: resolve(__dirname, "./dist"),
+      filename: "augmented-next.js",
+      publicPath: "/dist/",
       pathinfo: ifNotProd(),
+      library: "augmented-next",
+      libraryTarget: "umd",
+      umdNamedDefine: true
     },
-    devtool: ifProd('source-map', 'eval'),
+    devtool: ifProd("source-map", "eval"),
     devServer: {
       port: 8080,
       historyApiFallback: true
     },
     module: {
       loaders: [
-        {test: /\.js$/, exclude: /node_modules/, loader: 'babel-loader'},
-        {test: /\.css$/, loader: 'style-loader!css-loader'},
-        {test: /(\.eot|\.woff2|\.woff|\.ttf|\.svg)/, loader: 'file-loader'},
+        {test: /\.js$/, exclude: /node_modules/, loader: "babel-loader"},
+        {test: /\.css$/, loader: "style-loader!css-loader"},
+        {test: /(\.eot|\.woff2|\.woff|\.ttf|\.svg)/, loader: "file-loader"},
       ],
     },
     plugins: removeEmpty([
@@ -34,8 +37,8 @@ module.exports = env => {
         quiet: true,
       })),
       ifProd(new webpack.DefinePlugin({
-        'process.env': {
-          NODE_ENV: '"production"',
+        "process.env": {
+          NODE_ENV: "production",
         },
       })),
       ifProd(new webpack.optimize.UglifyJsPlugin({

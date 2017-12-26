@@ -1,16 +1,15 @@
 {
   "name": "augmentedjs-next",
-  "version": "2.0.0-alpha.4",
+  "version": "2.0.0-alpha.5",
   "description": "The Augmented.js 2 Framework.",
-  "main": "dist/augmented2.js",
+  "main": "dist/augmented-next.js",
   "scripts": {
     "dev": "webpack-dev-server --inline --content-base ./ --env.dev",
     "build": "webpack --env.prod",
     "lint": "eslint ./src/augmented.js",
-    "start": "node index.js",
     "setup": "npm install && npm run validate",
     "validate": "npm-run-all lint test build",
-    "test": "mocha  --require babel-core/register",
+    "test": "mocha --require babel-core/register",
     "docs": "jsdoc ./src -d ./jsdoc/ -R ./README.md -t ./node_modules/foodoc/template -c ./jsdoc.conf.json"
   },
   "repository": {
