@@ -1,8 +1,8 @@
 {
   "name": "augmentedjs-next",
-  "version": "2.0.0-alpha.3",
+  "version": "2.0.0-alpha.4",
   "description": "The Augmented.js 2 Framework.",
-  "main": "index.js",
+  "main": "dist/augmented2.js",
   "scripts": {
     "dev": "webpack-dev-server --inline --content-base ./ --env.dev",
     "build": "webpack --env.prod",
