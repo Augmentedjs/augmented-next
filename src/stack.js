@@ -6,9 +6,8 @@
  */
 class Stack {
   constructor() {
+    this._stack = [];
   };
-
-  _stack = [];
 
   /**
    * The empty method clears the stack

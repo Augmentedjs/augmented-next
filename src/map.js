@@ -8,12 +8,12 @@ import isString from "./functions/isString.js";
  */
 class AugmentedMap {
   constructor(myData) {
+    this._keys = [];
+    this._data = {};
     if (myData) {
       this.marshall(myData);
     }
   };
-  _keys = [];
-  _data = {};
 
   /**
    * Set the value by key in the map

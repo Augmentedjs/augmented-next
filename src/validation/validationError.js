@@ -99,9 +99,8 @@ class ValidationError { //extends Error {
         this.stack = err2.stack || err2.stacktrace;
       }
     }
+    this.name = "ValidationError";
   };
-
-  name = 'ValidationError';
 
   prefixWith(dataPrefix, schemaPrefix) {
     if (dataPrefix !== null) {

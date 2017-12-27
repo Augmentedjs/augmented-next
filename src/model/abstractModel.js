@@ -39,6 +39,15 @@ const wrapError = (model, options) => {
 export default class AbstractModel extends AugmentedObject {
   constructor(attributes, options, ...args) {
     super();
+    this.id = 0;
+    this.idAttribute = "id"; // ????
+    this.cidPrefix = "c";
+    this.defaults = {};
+    this.validationError = null;
+    this.urlRoot = "";
+    this._pending = false;
+    this._changing = false;
+    this._previousAttributes = null;
     this._attributes = (attributes) ? attributes : {};
     if (!options) {
       options = {};
@@ -59,30 +68,6 @@ export default class AbstractModel extends AugmentedObject {
     this.changed = {};
     this.initialize(args);
   };
-
-  id = 0;
-
-  idAttribute = "id"; // ????
-
-  cid = ""; // needed?
-
-  cidPrefix = "c";
-
-  _attributes = {};
-
-  changed = null;
-
-  defaults = {};
-
-  validationError = null;
-
-  urlRoot = "";
-
-  _pending = false;
-
-  _changing = false;
-
-  _previousAttributes = null;
 
   preinitialize(...args) {
   };

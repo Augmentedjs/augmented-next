@@ -2,9 +2,6 @@ const _bind = require("lodash.bind");
 import uniqueId from "./functions/uniqueId.js";
 
 // some lodash-like functions ported over
-const _keys = (object) => {
-  return Object.keys(object);
-};
 
 const _before = (nn, func) => {
   let result, n;
@@ -26,7 +23,6 @@ const _once = (func) => {
   return _before(2, func);
 };
 
-
 // Events
 
 // Regular expression used to split event strings.
@@ -42,7 +38,7 @@ const eventsApi = (iteratee, events, name, callback, opts) => {
     if (callback !== void 0 && "context" in opts && opts.context === void 0) {
       opts.context = callback;
     }
-    for (names = _keys(name); i < names.length; i++) {
+    for (names = Object.keys(name); i < names.length; i++) {
       events = eventsApi(iteratee, events, names[i], name[names[i]], opts);
     }
   } else if (name && EVENT_SPLITTER.test(name)) {
@@ -95,7 +91,7 @@ const offApi = (events, name, callback, options) => {
 
   // Delete all events listeners and "drop" events.
   if (!name && !callback && !context) {
-    const ids = _keys(listeners);
+    const ids = Object.keys(listeners);
     for (; i < ids.length; i++) {
       listening = listeners[ids[i]];
       delete listeners[listening.id];
@@ -104,7 +100,7 @@ const offApi = (events, name, callback, options) => {
     return;
   }
 
-  let names = name ? [name] : _keys(events);
+  let names = name ? [name] : Object.keys(events);
   for (; i < names.length; i++) {
     name = names[i];
     const handlers = events[name];
@@ -189,12 +185,12 @@ class AugmentedObject {
     if (options) {
       Object.assign(this._options, options);
     }
+
+    this._events = {};
+    this._listeningTo = {};
+    this._listenId = {};
+    this._listeners = {};
   };
-  _options = {};
-  _events = {};
-  _listeningTo = {};
-  _listenId = {};
-  _listeners = {};
 
   /**
    * Initialize the object
@@ -298,7 +294,7 @@ class AugmentedObject {
   stopListening(obj, name, callback) {
     const listeningTo = this._listeningTo;
     if (listeningTo) {
-      const ids = obj ? [obj._listenId] : _keys(listeningTo);
+      const ids = obj ? [obj._listenId] : Object.keys(listeningTo);
       let i = 0;
       for (i = 0; i < ids.length; i++) {
         const listening = listeningTo[ids[i]];

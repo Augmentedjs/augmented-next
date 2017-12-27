@@ -66,6 +66,7 @@ check = (app) => {
  */
 class Application {
   constructor(name) {
+    this._metadata = {};
     // preassign a name
     if (name) {
       this._metadata["name"] = name;
@@ -75,16 +76,16 @@ class Application {
 
     // preset a datastore object
     this._metadata["datastore"] = {};
+    this._router = null;
+    this._started = false;
   };
-
-  _metadata = {};
 
   /**
    * The router property of the application
    * @property router
    * @memberof Augmented.Application
    */
-  _router = null;
+
   get router() {
     return this._router;
   };
@@ -95,7 +96,7 @@ class Application {
    * @memberof Augmented.Application
    * @returns {boolean} Returns the property of the started Event
    */
-  _started = false;
+
   get started() {
     return this._started;
   };

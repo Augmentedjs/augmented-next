@@ -11,9 +11,8 @@ import Configuration from "./configuration.js";
 class AsynchronousQueue {
   constructor(timeout) {
     this._timeout = (timeout) ? timeout : Configuration.AsynchronousQueueTimeout;
+    this._queue = {};
   };
-
-  _queue = {};
 
   /**
    * @method add The Add method for adding processes to the queue

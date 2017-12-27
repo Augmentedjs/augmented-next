@@ -47,12 +47,12 @@ Level.WARN = Symbol("warn");
 class AbstractLogger {
   constructor(l) {
     this.loggerLevel = (l) ? l : Level.INFO;
+    this.label = Level;
+    this.TIME_SEPERATOR = ":";
+    this.DATE_SEPERATOR = "-";
+    this.OPEN_GROUP = " [ ";
+    this.CLOSE_GROUP = " ] ";
   };
-  TIME_SEPERATOR = ":";
-  DATE_SEPERATOR = "-";
-  OPEN_GROUP = " [ ";
-  CLOSE_GROUP = " ] ";
-  label = Level;
 
   _getLogTime() {
     const now = new Date();
@@ -206,10 +206,10 @@ class RestLogger extends AbstractLogger {
 };
 
 /**
-* Augmented.Logger.LoggerFactory - A logger factory for creating a logger instance
-* @namespace Augmented.Logger.LoggerFactory
-* @memberof Augmented.Logger
-*/
+ * Augmented.Logger.LoggerFactory - A logger factory for creating a logger instance
+ * @namespace Augmented.Logger.LoggerFactory
+ * @memberof Augmented.Logger
+ */
 export class LoggerFactory {
   constructor() {
   };

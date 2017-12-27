@@ -129,7 +129,8 @@ TransformerType.NULL = Symbol("Null");
  */
 export class Transformer {
   constructor() {
-  }
+    this.type = TransformerType;
+  };
 
   /**
    * The transformer type enum
@@ -137,7 +138,6 @@ export class Transformer {
    * @type {Augmented.Utility.TransformerType}
    * @memberof Augmented.Utility.Transformer
    */
-  static type = TransformerType;
 
   /**
    * Transform an object, primitive, or array to another object, primitive, or array

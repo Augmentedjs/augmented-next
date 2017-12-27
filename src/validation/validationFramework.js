@@ -17,8 +17,6 @@ class ValidationFramework {
     }
   };
 
-  _myValidator = null;
-
   /**
    * Returns if the framework supports validation
    * @method supportsValidation

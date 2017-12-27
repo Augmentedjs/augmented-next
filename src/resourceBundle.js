@@ -56,7 +56,6 @@ export class ResourceBundle {
  */
 export class MessageReader {
   constructor() {
-
   };
 
   /**
@@ -106,7 +105,6 @@ export class MessageReader {
  */
 export class MessageKeyFormatter {
   constructor() {
-
   };
 
   /**

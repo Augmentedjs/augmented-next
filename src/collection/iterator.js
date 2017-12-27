@@ -18,11 +18,7 @@ class CollectionIterator {
     this._kind = kind;
     this._index = 0;
   };
-
-  _collection = null;
-  _kind = null;
-  _index = 0;
-
+  
   // All Iterators should themselves be Iterable.
   /* ???
   if ($$iterator) {

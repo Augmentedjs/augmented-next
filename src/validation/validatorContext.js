@@ -1089,7 +1089,6 @@ class ValidatorContext {
       }
     }
   };
-
 };
 
 export default ValidatorContext = ValidatorContext;

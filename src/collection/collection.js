@@ -55,10 +55,19 @@ const splice = (array, insert, at) => {
 export default class AbstractCollection extends AugmentedObject {
   constructor(models, options) {
     super(options);
+
+    this.length = 0;
+    this.models = [];
+    this._byId = {};
+    this.schema = null;
+    this.validationMessages = {
+      valid: true
+    };
+
     if (!options) {
       options = {};
     }
-    this.preinitialize.apply(this, arguments);
+    this.preinitialize(models, options);
     if (options.model) {
       this.model = options.model;
     }
@@ -66,7 +75,7 @@ export default class AbstractCollection extends AugmentedObject {
       this.comparator = options.comparator;
     }
     this._reset();
-    this.initialize.apply(this, arguments);
+    this.initialize(models, options);
     if (models) {
       this.reset(models, extend({silent: true}, options));
     }
@@ -75,34 +84,24 @@ export default class AbstractCollection extends AugmentedObject {
     }
   };
 
-  model = null;
-
-  length = 0;
-
-  models = [];
-
-  _byId = {};
-
   /**
    * Schema property
    * @property {object} schema The JSON schema from this collection
    * @memberof Augmented.Collection
    */
-  schema = null;
+
 
   /**
    * Validation Message property
    * @property {object} validationMessages The property holding validation message data
    * @memberof Augmented.Collection
    */
-  validationMessages = {
-    valid: true
+
+
+  preinitialize(models, options) {
   };
 
-  preinitialize() {
-  };
-
-  initialize() {
+  initialize(models, options) {
   };
 
   // The JSON representation of a Collection is an array of the

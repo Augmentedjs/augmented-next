@@ -5,6 +5,9 @@ class UriTemplate {
     /*f (!(this instanceof UriTemplate)) {
       return new UriTemplate(template);
     }*/
+    //this.template = null;
+    //this.varNames = null;
+
     let parts = template.split("{");
     let textParts = [parts.shift()];
     let prefixes = [];
@@ -23,9 +26,6 @@ class UriTemplate {
     this.varNames = varNames;
     this.template = template;
   };
-
-  template = null;
-  varNames = null;
 
   fill(valueFunction) {
     let result = textParts[0];
