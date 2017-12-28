@@ -44,7 +44,7 @@ import isDefined from "./functions/isDefined.js";
  * @author Bob Warren
  *
  * @module Augmented
- * @version 2.0.0-alpha.7
+ * @version 2.0.0-alpha.8
  * @license Apache-2.0
  */
 const Augmented = {};
@@ -89,7 +89,7 @@ Augmented.isDefined = isDefined;
  * The standard version property
  * @constant VERSION
  */
-Augmented.VERSION = "2.0.0-alpha.7";
+Augmented.VERSION = "2.0.0-alpha.8";
 /**
  * A codename for internal use
  * @constant codename
