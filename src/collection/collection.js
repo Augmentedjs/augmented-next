@@ -416,7 +416,7 @@ export default class AbstractCollection extends AugmentedObject {
 
   // Define how to uniquely identify models in the collection.
   modelId(attrs) {
-    if (attrs) {
+    if (attrs && this.model && this.model.idAttribute) {
       return attrs[this.model.idAttribute || "id"];
     } else {
       return "id";
