@@ -3,13 +3,15 @@ import extend from "../functions/extend.js";
 import uniqueId from "../functions/uniqueId.js";
 import isString from "../functions/isString.js";
 import isFunction from "../functions/isFunction.js";
+import some from "../functions/some.js";
 import sortObjects from "../utility/sort.js";
 import AbstractModel from "../model/abstractModel.js";
 import ValidationFramework from "../validation/validationFramework.js";
 import CollectionIterator from "./iterator.js";
 
+
 const _clone = require("lodash.clone");
-const _some = require("lodash.some");
+//const _some = require("lodash.some");
 //const _map = require("lodash.map");
 
 // Default options for `Collection#set`.
@@ -228,7 +230,7 @@ export default class AbstractCollection extends AugmentedObject {
     let orderChanged = false;
     let replace = !sortable && add && remove;
     if (set.length && replace) {
-      orderChanged = this.length !== set.length || _some(this.models, function(m, index) {
+      orderChanged = this.length !== set.length || some(this.models, (m, index) => {
         return m !== set[index];
       });
       this.models.length = 0;
