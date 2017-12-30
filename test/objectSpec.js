@@ -41,7 +41,6 @@ describe("Given an Augmented Object", () => {
     });
 
     describe("Given an events", () => {
-
       const cb = () => { console.log("x"); return "I'm here!"; };
       describe("Given an persistant events", () => {
         beforeEach(() => {

@@ -252,4 +252,22 @@ describe("Given Augmented", () => {
 			expect(k.z).toEqual("z");
 		});
 	});
+
+	describe("Given Augmented some", () => {
+		let arr;
+		const isLargerThanTen = (element, index, array) => {
+  		return element >=10;
+		};
+		beforeEach(() => {
+			arr = [10, 9, 8];
+		});
+		afterEach(() => {
+			arr = null;
+		});
+		it("can create an object", () => {
+			const result = arr.some(isLargerThanTen);
+			expect(result).toBeDefined();
+			expect(result).toBeTruthy();
+		});
+	});
 });

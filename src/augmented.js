@@ -32,6 +32,7 @@ import result from "./functions/result.js";
 import arrayHas from "./functions/arrayHas.js";
 import exec from "./functions/exec.js";
 import isDefined from "./functions/isDefined.js";
+import some from "./functions/some.js";
 
 /*
  * Base functionality
@@ -44,7 +45,7 @@ import isDefined from "./functions/isDefined.js";
  * @author Bob Warren
  *
  * @module Augmented
- * @version 2.0.0-alpha.9
+ * @version 2.0.0-alpha.10
  * @license Apache-2.0
  */
 const Augmented = {};
@@ -84,12 +85,13 @@ Augmented.result = result;
 Augmented.arrayHas = arrayHas;
 Augmented.exec = exec;
 Augmented.isDefined = isDefined;
+Augmented.some = some;
 
 /**
  * The standard version property
  * @constant VERSION
  */
-Augmented.VERSION = "2.0.0-alpha.9";
+Augmented.VERSION = "2.0.0-alpha.10";
 /**
  * A codename for internal use
  * @constant codename
