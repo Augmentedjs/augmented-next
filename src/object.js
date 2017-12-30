@@ -214,6 +214,10 @@ class AugmentedObject {
     return this._events;
   };
 
+  set events(events) {
+    this._events = events;
+  };
+
   /**
    * Trigger one or many events, firing all bound callbacks. Callbacks are
    * passed the same arguments as `trigger` is, apart from the event name
