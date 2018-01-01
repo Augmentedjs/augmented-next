@@ -66,11 +66,7 @@
 							<li class="dropdown">
 								<a href="list_class.html" class="dropdown-toggle" data-toggle="dropdown">Classes<b class="caret"></b></a>
 								<ul class="dropdown-menu">
-										<li><a href="Augmented.Application.html">Augmented.Application</a></li>
 										<li><a href="Augmented.Object.html">Augmented.Object</a></li>
-										<li><a href="Augmented.Utility.AsynchronousQueue.html">Augmented.Utility.AsynchronousQueue</a></li>
-										<li><a href="Augmented.Utility.Map.html">Augmented.Utility.Map</a></li>
-										<li><a href="Augmented.Utility.Stack.html">Augmented.Utility.Stack</a></li>
 								</ul>
 							</li>
 							<li class="dropdown">
@@ -166,7 +162,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="object.js.html">object.js</a>, <a href="object.js.html#line-177">line 177</a></p>
+									<p class="form-control-static"><a href="object.js.html">object.js</a>, <a href="object.js.html#line-173">line 173</a></p>
 								</div>
 							</div>
 			
@@ -182,56 +178,11 @@
 									<dl class="symbol">
 											<hr/>
 											<dt class="symbol-title function public">
-			<h4 id=".initialize" class="function public"><span class="signature-attribs">&lt;static> </span><span class="name">initialize</span><span class="signature-params">()</span></h4>
+			<h4 id=".listenToOnce" class="function public"><span class="signature-attribs">&lt;static> </span><span class="name">listenToOnce</span><span class="signature-params">( <span class="signature-param">obj</span>, <span class="signature-param">name</span>, <span class="signature-param">callback</span>&nbsp;)</span></h4>
 		</dt>
 <dd class="symbol-details function public">
 	<div class="symbol-details-inner">
-			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>Initialize the object</p></div>
-			</div>			<div class="callout callout-success"><h5>Returns</h5>		<form class="form-horizontal returns">
-							<div class="form-group">
-								<label class="col-sm-3 control-label returns-type"><span class="param-type">object</span></label>
-								<div class="col-sm-9">
-									<div class="form-control-static returns-description"><p>Returns this context</p></div>
-								</div>
-							</div>
-					</form>
-			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-							<!-- source -->
-							<div class="form-group">
-								<label class="col-sm-3 control-label">Source</label>
-								<div class="col-sm-9">
-									<p class="form-control-static"><a href="object.js.html">object.js</a>, <a href="object.js.html#line-199">line 199</a></p>
-								</div>
-							</div>
-			
-			
-			
-			
-					</form>
-			</div>	</div>
-</dd>
-											<hr/>
-											<dt class="symbol-title function public">
-			<h4 id=".trigger" class="function public"><span class="signature-attribs">&lt;static> </span><span class="name">trigger</span><span class="signature-params">( <span class="signature-param">name</span>, <span class="signature-param">args</span>&nbsp;)</span></h4>
-		</dt>
-<dd class="symbol-details function public">
-	<div class="symbol-details-inner">
-			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>Trigger one or many events, firing all bound callbacks. Callbacks are<br>passed the same arguments as <code>trigger</code> is, apart from the event name<br>(unless you're listening on <code>&quot;all&quot;</code>, which will cause your callback to<br>receive the true name of the event as the first argument).</p></div>
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>Inversion-of-control versions of <code>once</code>.</p></div>
 			</div>			<div class="callout callout-info">
 				<h5>Parameters</h5>
 				<table class="params table table-striped">
@@ -244,78 +195,12 @@
 					</thead>
 					<tbody>
 						<tr>
-								<td><code>name</code></td>
-							<td><span class="param-type">string</span></td>
+								<td><code>obj</code></td>
+							<td><span class="param-type">object</span></td>
 							<td class="last">
-									<p>The name of the event</p>
+									<p>The object to stop listening to</p>
 							</td>
 						</tr>
-						<tr>
-								<td><code>args</code></td>
-							<td><span class="param-type">any</span></td>
-							<td class="last">
-									<p>any number of additional arguments</p>
-							</td>
-						</tr>
-					</tbody>
-				</table>
-			</div>
-			<div class="callout callout-success"><h5>Returns</h5>		<form class="form-horizontal returns">
-							<div class="form-group">
-								<label class="col-sm-3 control-label returns-type"><span class="param-type">object</span></label>
-								<div class="col-sm-9">
-									<div class="form-control-static returns-description"><p>Returns this context</p></div>
-								</div>
-							</div>
-					</form>
-			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-							<!-- source -->
-							<div class="form-group">
-								<label class="col-sm-3 control-label">Source</label>
-								<div class="col-sm-9">
-									<p class="form-control-static"><a href="object.js.html">object.js</a>, <a href="object.js.html#line-221">line 221</a></p>
-								</div>
-							</div>
-			
-			
-			
-			
-					</form>
-			</div>	</div>
-</dd>
-											<hr/>
-											<dt class="symbol-title function public">
-			<h4 id=".once" class="function public"><span class="signature-attribs">&lt;static> </span><span class="name">once</span><span class="signature-params">( <span class="signature-param">name</span>, <span class="signature-param">callback</span>, <span class="signature-param">context</span>&nbsp;)</span></h4>
-		</dt>
-<dd class="symbol-details function public">
-	<div class="symbol-details-inner">
-			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>Bind an event to only be triggered a single time. After the first time<br>the callback is invoked, its listener will be removed. If multiple events<br>are passed in using the space-separated syntax, the handler will fire<br>once for each event, not once for a combination of all events.</p></div>
-			</div>			<div class="callout callout-info">
-				<h5>Parameters</h5>
-				<table class="params table table-striped">
-					<thead>
-					<tr>
-							<th>Name</th>
-						<th>Type</th>
-						<th class="last">Description</th>
-					</tr>
-					</thead>
-					<tbody>
 						<tr>
 								<td><code>name</code></td>
 							<td><span class="param-type">string</span></td>
@@ -330,13 +215,6 @@
 									<p>The callback to evoke</p>
 							</td>
 						</tr>
-						<tr>
-								<td><code>context</code></td>
-							<td><span class="param-type">object</span></td>
-							<td class="last">
-									<p>The context of the callback</p>
-							</td>
-						</tr>
 					</tbody>
 				</table>
 			</div>
@@ -368,167 +246,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="object.js.html">object.js</a>, <a href="object.js.html#line-245">line 245</a></p>
-								</div>
-							</div>
-			
-			
-			
-			
-					</form>
-			</div>	</div>
-</dd>
-											<hr/>
-											<dt class="symbol-title function public">
-			<h4 id=".off" class="function public"><span class="signature-attribs">&lt;static> </span><span class="name">off</span><span class="signature-params">( <span class="signature-param">name</span>, <span class="signature-param">callback</span>, <span class="signature-param">context</span>&nbsp;)</span></h4>
-		</dt>
-<dd class="symbol-details function public">
-	<div class="symbol-details-inner">
-			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>Remove one or many callbacks. If <code>context</code> is null, removes all<br>callbacks with that function. If <code>callback</code> is null, removes all<br>callbacks for the event. If <code>name</code> is null, removes all bound<br>callbacks for all events.</p></div>
-			</div>			<div class="callout callout-info">
-				<h5>Parameters</h5>
-				<table class="params table table-striped">
-					<thead>
-					<tr>
-							<th>Name</th>
-						<th>Type</th>
-						<th class="last">Description</th>
-					</tr>
-					</thead>
-					<tbody>
-						<tr>
-								<td><code>name</code></td>
-							<td><span class="param-type">string</span></td>
-							<td class="last">
-									<p>The name of the event</p>
-							</td>
-						</tr>
-						<tr>
-								<td><code>callback</code></td>
-							<td><span class="param-type">function</span></td>
-							<td class="last">
-									<p>The callback to evoke</p>
-							</td>
-						</tr>
-						<tr>
-								<td><code>context</code></td>
-							<td><span class="param-type">object</span></td>
-							<td class="last">
-									<p>The context of the callback</p>
-							</td>
-						</tr>
-					</tbody>
-				</table>
-			</div>
-			<div class="callout callout-success"><h5>Returns</h5>		<form class="form-horizontal returns">
-							<div class="form-group">
-								<label class="col-sm-3 control-label returns-type"><span class="param-type">object</span></label>
-								<div class="col-sm-9">
-									<div class="form-control-static returns-description"><p>Returns this context</p></div>
-								</div>
-							</div>
-					</form>
-			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-							<!-- source -->
-							<div class="form-group">
-								<label class="col-sm-3 control-label">Source</label>
-								<div class="col-sm-9">
-									<p class="form-control-static"><a href="object.js.html">object.js</a>, <a href="object.js.html#line-266">line 266</a></p>
-								</div>
-							</div>
-			
-			
-			
-			
-					</form>
-			</div>	</div>
-</dd>
-											<hr/>
-											<dt class="symbol-title function public">
-			<h4 id=".on" class="function public"><span class="signature-attribs">&lt;static> </span><span class="name">on</span><span class="signature-params">( <span class="signature-param">name</span>, <span class="signature-param">callback</span>, <span class="signature-param">context</span>&nbsp;)</span></h4>
-		</dt>
-<dd class="symbol-details function public">
-	<div class="symbol-details-inner">
-			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>Bind an event to a <code>callback</code> function. Passing <code>&quot;all&quot;</code> will bind<br>the callback to all events fired.</p></div>
-			</div>			<div class="callout callout-info">
-				<h5>Parameters</h5>
-				<table class="params table table-striped">
-					<thead>
-					<tr>
-							<th>Name</th>
-						<th>Type</th>
-						<th class="last">Description</th>
-					</tr>
-					</thead>
-					<tbody>
-						<tr>
-								<td><code>name</code></td>
-							<td><span class="param-type">string</span></td>
-							<td class="last">
-									<p>The name of the event</p>
-							</td>
-						</tr>
-						<tr>
-								<td><code>callback</code></td>
-							<td><span class="param-type">function</span></td>
-							<td class="last">
-									<p>The callback to evoke</p>
-							</td>
-						</tr>
-						<tr>
-								<td><code>context</code></td>
-							<td><span class="param-type">object</span></td>
-							<td class="last">
-									<p>The context of the callback</p>
-							</td>
-						</tr>
-					</tbody>
-				</table>
-			</div>
-			<div class="callout callout-success"><h5>Returns</h5>		<form class="form-horizontal returns">
-							<div class="form-group">
-								<label class="col-sm-3 control-label returns-type"><span class="param-type">object</span></label>
-								<div class="col-sm-9">
-									<div class="form-control-static returns-description"><p>Returns this context</p></div>
-								</div>
-							</div>
-					</form>
-			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-							<!-- source -->
-							<div class="form-group">
-								<label class="col-sm-3 control-label">Source</label>
-								<div class="col-sm-9">
-									<p class="form-control-static"><a href="object.js.html">object.js</a>, <a href="object.js.html#line-317">line 317</a></p>
+									<p class="form-control-static"><a href="object.js.html">object.js</a>, <a href="object.js.html#line-361">line 361</a></p>
 								</div>
 							</div>
 			
@@ -620,11 +338,11 @@
 </dd>
 											<hr/>
 											<dt class="symbol-title function public">
-			<h4 id=".listenToOnce" class="function public"><span class="signature-attribs">&lt;static> </span><span class="name">listenToOnce</span><span class="signature-params">( <span class="signature-param">obj</span>, <span class="signature-param">name</span>, <span class="signature-param">callback</span>&nbsp;)</span></h4>
+			<h4 id=".on" class="function public"><span class="signature-attribs">&lt;static> </span><span class="name">on</span><span class="signature-params">( <span class="signature-param">name</span>, <span class="signature-param">callback</span>, <span class="signature-param">context</span>&nbsp;)</span></h4>
 		</dt>
 <dd class="symbol-details function public">
 	<div class="symbol-details-inner">
-			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>Inversion-of-control versions of <code>once</code>.</p></div>
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>Bind an event to a <code>callback</code> function. Passing <code>&quot;all&quot;</code> will bind<br>the callback to all events fired.</p></div>
 			</div>			<div class="callout callout-info">
 				<h5>Parameters</h5>
 				<table class="params table table-striped">
@@ -637,13 +355,6 @@
 					</thead>
 					<tbody>
 						<tr>
-								<td><code>obj</code></td>
-							<td><span class="param-type">object</span></td>
-							<td class="last">
-									<p>The object to stop listening to</p>
-							</td>
-						</tr>
-						<tr>
 								<td><code>name</code></td>
 							<td><span class="param-type">string</span></td>
 							<td class="last">
@@ -655,6 +366,13 @@
 							<td><span class="param-type">function</span></td>
 							<td class="last">
 									<p>The callback to evoke</p>
+							</td>
+						</tr>
+						<tr>
+								<td><code>context</code></td>
+							<td><span class="param-type">object</span></td>
+							<td class="last">
+									<p>The context of the callback</p>
 							</td>
 						</tr>
 					</tbody>
@@ -688,7 +406,285 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="object.js.html">object.js</a>, <a href="object.js.html#line-361">line 361</a></p>
+									<p class="form-control-static"><a href="object.js.html">object.js</a>, <a href="object.js.html#line-317">line 317</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title function public">
+			<h4 id=".off" class="function public"><span class="signature-attribs">&lt;static> </span><span class="name">off</span><span class="signature-params">( <span class="signature-param">name</span>, <span class="signature-param">callback</span>, <span class="signature-param">context</span>&nbsp;)</span></h4>
+		</dt>
+<dd class="symbol-details function public">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>Remove one or many callbacks. If <code>context</code> is null, removes all<br>callbacks with that function. If <code>callback</code> is null, removes all<br>callbacks for the event. If <code>name</code> is null, removes all bound<br>callbacks for all events.</p></div>
+			</div>			<div class="callout callout-info">
+				<h5>Parameters</h5>
+				<table class="params table table-striped">
+					<thead>
+					<tr>
+							<th>Name</th>
+						<th>Type</th>
+						<th class="last">Description</th>
+					</tr>
+					</thead>
+					<tbody>
+						<tr>
+								<td><code>name</code></td>
+							<td><span class="param-type">string</span></td>
+							<td class="last">
+									<p>The name of the event</p>
+							</td>
+						</tr>
+						<tr>
+								<td><code>callback</code></td>
+							<td><span class="param-type">function</span></td>
+							<td class="last">
+									<p>The callback to evoke</p>
+							</td>
+						</tr>
+						<tr>
+								<td><code>context</code></td>
+							<td><span class="param-type">object</span></td>
+							<td class="last">
+									<p>The context of the callback</p>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="callout callout-success"><h5>Returns</h5>		<form class="form-horizontal returns">
+							<div class="form-group">
+								<label class="col-sm-3 control-label returns-type"><span class="param-type">object</span></label>
+								<div class="col-sm-9">
+									<div class="form-control-static returns-description"><p>Returns this context</p></div>
+								</div>
+							</div>
+					</form>
+			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="object.js.html">object.js</a>, <a href="object.js.html#line-266">line 266</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title function public">
+			<h4 id=".once" class="function public"><span class="signature-attribs">&lt;static> </span><span class="name">once</span><span class="signature-params">( <span class="signature-param">name</span>, <span class="signature-param">callback</span>, <span class="signature-param">context</span>&nbsp;)</span></h4>
+		</dt>
+<dd class="symbol-details function public">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>Bind an event to only be triggered a single time. After the first time<br>the callback is invoked, its listener will be removed. If multiple events<br>are passed in using the space-separated syntax, the handler will fire<br>once for each event, not once for a combination of all events.</p></div>
+			</div>			<div class="callout callout-info">
+				<h5>Parameters</h5>
+				<table class="params table table-striped">
+					<thead>
+					<tr>
+							<th>Name</th>
+						<th>Type</th>
+						<th class="last">Description</th>
+					</tr>
+					</thead>
+					<tbody>
+						<tr>
+								<td><code>name</code></td>
+							<td><span class="param-type">string</span></td>
+							<td class="last">
+									<p>The name of the event</p>
+							</td>
+						</tr>
+						<tr>
+								<td><code>callback</code></td>
+							<td><span class="param-type">function</span></td>
+							<td class="last">
+									<p>The callback to evoke</p>
+							</td>
+						</tr>
+						<tr>
+								<td><code>context</code></td>
+							<td><span class="param-type">object</span></td>
+							<td class="last">
+									<p>The context of the callback</p>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="callout callout-success"><h5>Returns</h5>		<form class="form-horizontal returns">
+							<div class="form-group">
+								<label class="col-sm-3 control-label returns-type"><span class="param-type">object</span></label>
+								<div class="col-sm-9">
+									<div class="form-control-static returns-description"><p>Returns this context</p></div>
+								</div>
+							</div>
+					</form>
+			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="object.js.html">object.js</a>, <a href="object.js.html#line-245">line 245</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title function public">
+			<h4 id=".trigger" class="function public"><span class="signature-attribs">&lt;static> </span><span class="name">trigger</span><span class="signature-params">( <span class="signature-param">name</span>, <span class="signature-param">args</span>&nbsp;)</span></h4>
+		</dt>
+<dd class="symbol-details function public">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>Trigger one or many events, firing all bound callbacks. Callbacks are<br>passed the same arguments as <code>trigger</code> is, apart from the event name<br>(unless you're listening on <code>&quot;all&quot;</code>, which will cause your callback to<br>receive the true name of the event as the first argument).</p></div>
+			</div>			<div class="callout callout-info">
+				<h5>Parameters</h5>
+				<table class="params table table-striped">
+					<thead>
+					<tr>
+							<th>Name</th>
+						<th>Type</th>
+						<th class="last">Description</th>
+					</tr>
+					</thead>
+					<tbody>
+						<tr>
+								<td><code>name</code></td>
+							<td><span class="param-type">string</span></td>
+							<td class="last">
+									<p>The name of the event</p>
+							</td>
+						</tr>
+						<tr>
+								<td><code>args</code></td>
+							<td><span class="param-type">any</span></td>
+							<td class="last">
+									<p>any number of additional arguments</p>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="callout callout-success"><h5>Returns</h5>		<form class="form-horizontal returns">
+							<div class="form-group">
+								<label class="col-sm-3 control-label returns-type"><span class="param-type">object</span></label>
+								<div class="col-sm-9">
+									<div class="form-control-static returns-description"><p>Returns this context</p></div>
+								</div>
+							</div>
+					</form>
+			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="object.js.html">object.js</a>, <a href="object.js.html#line-221">line 221</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title function public">
+			<h4 id=".initialize" class="function public"><span class="signature-attribs">&lt;static> </span><span class="name">initialize</span><span class="signature-params">()</span></h4>
+		</dt>
+<dd class="symbol-details function public">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>Initialize the object</p></div>
+			</div>			<div class="callout callout-success"><h5>Returns</h5>		<form class="form-horizontal returns">
+							<div class="form-group">
+								<label class="col-sm-3 control-label returns-type"><span class="param-type">object</span></label>
+								<div class="col-sm-9">
+									<div class="form-control-static returns-description"><p>Returns this context</p></div>
+								</div>
+							</div>
+					</form>
+			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="object.js.html">object.js</a>, <a href="object.js.html#line-195">line 195</a></p>
 								</div>
 							</div>
 			
@@ -789,7 +785,7 @@
 	</div>
 	<footer>
 				<div class="footer-option">&lt;a href&#x3D;&#x27;http://www.augmentedjs.com&#x27;&gt;Augmented.js Homepage&lt;/a&gt;</div>
-			<div class="generated-by">Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Mon Dec 25th 2017 using the <a href="https://github.com/steveush/foodoc">FooDoc template</a>.</div>
+			<div class="generated-by">Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Mon Jan 1st 2018 using the <a href="https://github.com/steveush/foodoc">FooDoc template</a>.</div>
 	</footer>
 	<script src="js/jquery.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>

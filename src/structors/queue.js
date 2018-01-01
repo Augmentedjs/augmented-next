@@ -1,5 +1,5 @@
-import extend from "./functions/extend.js";
-import Configuration from "./configuration.js";
+import extend from "../functions/extend.js";
+import Configuration from "../configuration.js";
 
 /**
  * Augmented.Utility.AsynchronousQueue -

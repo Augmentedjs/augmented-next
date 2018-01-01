@@ -1,4 +1,4 @@
-import isString from "./functions/isString.js";
+import isString from "../functions/isString.js";
 
 /**
  * ES6-like Map - than can marshall

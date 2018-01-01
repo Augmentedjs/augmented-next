@@ -4,14 +4,17 @@ import sortObjects from "./utility/sort.js";
 import AugmentedObject from "./object.js";
 import AbstractModel from "./model/abstractModel.js";
 import AbstractCollection from "./collection/collection.js";
-import Stack from "./stack.js";
-import AugmentedMap from "./map.js";
+
+import Stack from "./structors/stack.js";
+import AugmentedMap from "./structors/map.js";
+import Configuration from "./configuration.js";
+import AsynchronousQueue from "./structors/queue.js";
 
 import * as Logger from "./logger/logger";
 
-import Configuration from "./configuration.js";
-import AsynchronousQueue from "./queue.js";
-import Application from "./application.js";
+
+import Application from "./application/application.js";
+
 import { BundleObject, ResourceBundle, MessageReader, MessageKeyFormatter } from "./resourceBundle.js";
 
 import SchemaGenerator from "./validation/schemaGenerator.js";
@@ -45,7 +48,7 @@ import some from "./functions/some.js";
  * @author Bob Warren
  *
  * @module Augmented
- * @version 2.0.0-alpha.10
+ * @version 2.0.0-alpha.11
  * @license Apache-2.0
  */
 const Augmented = {};
@@ -91,7 +94,7 @@ Augmented.some = some;
  * The standard version property
  * @constant VERSION
  */
-Augmented.VERSION = "2.0.0-alpha.10";
+Augmented.VERSION = "2.0.0-alpha.11";
 /**
  * A codename for internal use
  * @constant codename

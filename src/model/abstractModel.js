@@ -38,7 +38,7 @@ const wrapError = (model, options) => {
  */
 export default class AbstractModel extends AugmentedObject {
   constructor(attributes, options, ...args) {
-    super();
+    super(options);
     this.id = 0;
     this.idAttribute = "id"; // ????
     this.cidPrefix = "c";
@@ -52,6 +52,12 @@ export default class AbstractModel extends AugmentedObject {
     if (!options) {
       options = {};
     }
+
+    this.schema = null;
+    this.validationMessages = {
+     valid: true
+    };
+
     this.preinitialize(args);
     this.cid = uniqueId(this.cidPrefix);
     if (options.collection) {
@@ -68,6 +74,19 @@ export default class AbstractModel extends AugmentedObject {
     this.changed = {};
     this.initialize(args);
   };
+
+  /**
+   * Schema property
+   * @property {object} schema The JSON schema from this model
+   * @memberof AbstractModel
+   */
+
+  /**
+   * Validation Message property
+   * @property {object} validationMessages The property holding validation message data
+   * @memberof AbstractModel
+   */
+
 
   preinitialize(...args) {
   };
@@ -453,20 +472,7 @@ export default class AbstractModel extends AugmentedObject {
     this.trigger("invalid", this, error, extend(options, {validationError: error}));
     return false;
   };
-  /**
-   * Schema property
-   * @property {object} schema The JSON schema from this model
-   * @memberof AbstractModel
-   */
-  schema = null;
-  /**
-   * Validation Message property
-   * @property {object} validationMessages The property holding validation message data
-   * @memberof AbstractModel
-   */
-  validationMessages = {
-    valid: true
-  };
+
   /**
    * supportsValidation - Returns True if this model supports validation
    * @method supportsValidation
