@@ -48,7 +48,7 @@ import some from "./functions/some.js";
  * @author Bob Warren
  *
  * @module Augmented
- * @version 2.0.0-alpha.12
+ * @version 2.0.0-alpha.13
  * @license Apache-2.0
  */
 const Augmented = {};
@@ -94,7 +94,7 @@ Augmented.some = some;
  * The standard version property
  * @constant VERSION
  */
-Augmented.VERSION = "2.0.0-alpha.12";
+Augmented.VERSION = "2.0.0-alpha.13";
 /**
  * A codename for internal use
  * @constant codename

@@ -58,6 +58,10 @@ export default class AbstractModel extends AugmentedObject {
      valid: true
     };
 
+    if (options.schema) {
+      this.schema = options.schema;
+    }
+
     this.preinitialize(args);
     this.cid = uniqueId(this.cidPrefix);
     if (options.collection) {

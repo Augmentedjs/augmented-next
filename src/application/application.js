@@ -178,20 +178,26 @@ class Application {
 
   /** Event to start the application and history
    * @method start
+   * @returns
    * @memberof Augmented.Application
    */
-  start() {
-    const app = this;
-    before(app)
-    .then(init)
-    .then(after)
-    .then(setStarted)
-    .then(check)
-    .catch( (e) => {
-      app.stop();
-      throw e;
-    });
-  };
+   start() {
+     const app = this;
+     return new Promise( (resolve, reject) => {
+       before(app)
+       .then(init)
+       .then(after)
+       .then(setStarted)
+       .then(check)
+       .then( (app) => {
+         resolve(app);
+       })
+       .catch( (e) => {
+         app.stop();
+         reject(e);
+       });
+     });
+   };
 
   /** Event to stop the application and history
    * @method stop

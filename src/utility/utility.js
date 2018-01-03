@@ -1,6 +1,3 @@
-import extend from "../functions/extend.js";
-import sortObjects from "./sort.js";
-
 /**
  * Utility Package -
  * Small Utilities
