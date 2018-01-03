@@ -40,12 +40,12 @@
     "documentStore": {
       "store": {
         "index.html": [
-          "2",
           "augmented.j",
           "develop",
           "eleg",
           "index",
           "made",
+          "next",
           "readm",
           "simpl"
         ],
@@ -366,14 +366,6 @@
     },
     "tokenStore": {
       "root": {
-        "2": {
-          "docs": {
-            "index.html": {
-              "ref": "index.html",
-              "tf": 11.666666666666666
-            }
-          }
-        },
         "docs": {},
         "a": {
           "docs": {},
@@ -1803,6 +1795,138 @@
             }
           }
         },
+        "n": {
+          "docs": {},
+          "e": {
+            "docs": {},
+            "x": {
+              "docs": {},
+              "t": {
+                "docs": {
+                  "index.html": {
+                    "ref": "index.html",
+                    "tf": 11.666666666666666
+                  },
+                  "module-Augmented.html": {
+                    "ref": "module-Augmented.html",
+                    "tf": 12.5
+                  }
+                }
+              }
+            }
+          },
+          "a": {
+            "docs": {},
+            "m": {
+              "docs": {},
+              "e": {
+                "docs": {
+                  "Augmented.Object.html#.listenToOnce": {
+                    "ref": "Augmented.Object.html#.listenToOnce",
+                    "tf": 20
+                  },
+                  "Augmented.Object.html#.listenTo": {
+                    "ref": "Augmented.Object.html#.listenTo",
+                    "tf": 20
+                  },
+                  "Augmented.Object.html#.on": {
+                    "ref": "Augmented.Object.html#.on",
+                    "tf": 25
+                  },
+                  "Augmented.Object.html#.off": {
+                    "ref": "Augmented.Object.html#.off",
+                    "tf": 27.63157894736842
+                  },
+                  "Augmented.Object.html#.once": {
+                    "ref": "Augmented.Object.html#.once",
+                    "tf": 20
+                  },
+                  "Augmented.Object.html#.trigger": {
+                    "ref": "Augmented.Object.html#.trigger",
+                    "tf": 26.923076923076923
+                  },
+                  "Augmented.Object.html#.stopListening": {
+                    "ref": "Augmented.Object.html#.stopListening",
+                    "tf": 20
+                  }
+                },
+                "s": {
+                  "docs": {},
+                  "p": {
+                    "docs": {},
+                    "a": {
+                      "docs": {},
+                      "c": {
+                        "docs": {
+                          "list_namespace.html": {
+                            "ref": "list_namespace.html",
+                            "tf": 635
+                          },
+                          "Augmented.Utility.BundleObject.html": {
+                            "ref": "Augmented.Utility.BundleObject.html",
+                            "tf": 110
+                          },
+                          "Augmented.Utility.ResourceBundle.html": {
+                            "ref": "Augmented.Utility.ResourceBundle.html",
+                            "tf": 110
+                          },
+                          "Augmented.Utility.MessageReader.html": {
+                            "ref": "Augmented.Utility.MessageReader.html",
+                            "tf": 110
+                          },
+                          "Augmented.Utility.MessageKeyFormatter.html": {
+                            "ref": "Augmented.Utility.MessageKeyFormatter.html",
+                            "tf": 110
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "(": {
+                  "docs": {},
+                  "u": {
+                    "docs": {},
+                    "n": {
+                      "docs": {},
+                      "l": {
+                        "docs": {},
+                        "e": {
+                          "docs": {},
+                          "s": {
+                            "docs": {},
+                            "s": {
+                              "docs": {
+                                "Augmented.Object.html#.trigger": {
+                                  "ref": "Augmented.Object.html#.trigger",
+                                  "tf": 1.9230769230769231
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "u": {
+            "docs": {},
+            "l": {
+              "docs": {},
+              "l": {
+                "docs": {
+                  "Augmented.Object.html#.off": {
+                    "ref": "Augmented.Object.html#.off",
+                    "tf": 7.894736842105263
+                  }
+                }
+              }
+            }
+          }
+        },
         "r": {
           "docs": {},
           "e": {
@@ -2671,134 +2795,6 @@
                       "ref": "Augmented.Object.html#.listenTo",
                       "tf": 2.7777777777777777
                     }
-                  }
-                }
-              }
-            }
-          }
-        },
-        "n": {
-          "docs": {},
-          "a": {
-            "docs": {},
-            "m": {
-              "docs": {},
-              "e": {
-                "docs": {
-                  "Augmented.Object.html#.listenToOnce": {
-                    "ref": "Augmented.Object.html#.listenToOnce",
-                    "tf": 20
-                  },
-                  "Augmented.Object.html#.listenTo": {
-                    "ref": "Augmented.Object.html#.listenTo",
-                    "tf": 20
-                  },
-                  "Augmented.Object.html#.on": {
-                    "ref": "Augmented.Object.html#.on",
-                    "tf": 25
-                  },
-                  "Augmented.Object.html#.off": {
-                    "ref": "Augmented.Object.html#.off",
-                    "tf": 27.63157894736842
-                  },
-                  "Augmented.Object.html#.once": {
-                    "ref": "Augmented.Object.html#.once",
-                    "tf": 20
-                  },
-                  "Augmented.Object.html#.trigger": {
-                    "ref": "Augmented.Object.html#.trigger",
-                    "tf": 26.923076923076923
-                  },
-                  "Augmented.Object.html#.stopListening": {
-                    "ref": "Augmented.Object.html#.stopListening",
-                    "tf": 20
-                  }
-                },
-                "s": {
-                  "docs": {},
-                  "p": {
-                    "docs": {},
-                    "a": {
-                      "docs": {},
-                      "c": {
-                        "docs": {
-                          "list_namespace.html": {
-                            "ref": "list_namespace.html",
-                            "tf": 635
-                          },
-                          "Augmented.Utility.BundleObject.html": {
-                            "ref": "Augmented.Utility.BundleObject.html",
-                            "tf": 110
-                          },
-                          "Augmented.Utility.ResourceBundle.html": {
-                            "ref": "Augmented.Utility.ResourceBundle.html",
-                            "tf": 110
-                          },
-                          "Augmented.Utility.MessageReader.html": {
-                            "ref": "Augmented.Utility.MessageReader.html",
-                            "tf": 110
-                          },
-                          "Augmented.Utility.MessageKeyFormatter.html": {
-                            "ref": "Augmented.Utility.MessageKeyFormatter.html",
-                            "tf": 110
-                          }
-                        }
-                      }
-                    }
-                  }
-                },
-                "(": {
-                  "docs": {},
-                  "u": {
-                    "docs": {},
-                    "n": {
-                      "docs": {},
-                      "l": {
-                        "docs": {},
-                        "e": {
-                          "docs": {},
-                          "s": {
-                            "docs": {},
-                            "s": {
-                              "docs": {
-                                "Augmented.Object.html#.trigger": {
-                                  "ref": "Augmented.Object.html#.trigger",
-                                  "tf": 1.9230769230769231
-                                }
-                              }
-                            }
-                          }
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "u": {
-            "docs": {},
-            "l": {
-              "docs": {},
-              "l": {
-                "docs": {
-                  "Augmented.Object.html#.off": {
-                    "ref": "Augmented.Object.html#.off",
-                    "tf": 7.894736842105263
-                  }
-                }
-              }
-            }
-          },
-          "e": {
-            "docs": {},
-            "x": {
-              "docs": {},
-              "t": {
-                "docs": {
-                  "module-Augmented.html": {
-                    "ref": "module-Augmented.html",
-                    "tf": 12.5
                   }
                 }
               }
@@ -4386,7 +4382,6 @@
       "length": 276
     },
     "corpusTokens": [
-      "2",
       "againstop",
       "allcallback",
       "anoth",
@@ -4579,7 +4574,7 @@
       "longname": "index",
       "name": "Augmented.js",
       "tags": "index",
-      "summary": "Augmented.js 2 - Elegant Developement made simple.",
+      "summary": "Augmented.js Next - Elegant Developement made simple.",
       "description": "",
       "body": ""
     },

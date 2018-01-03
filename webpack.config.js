@@ -14,7 +14,7 @@ module.exports = env => {
       filename: "augmented-next.js",
       publicPath: "/dist/",
       pathinfo: ifNotProd(),
-      library: "augmented-next",
+      library: "Augmented",
       libraryTarget: "umd",
       umdNamedDefine: true
     },
