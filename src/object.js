@@ -186,7 +186,12 @@ class AugmentedObject {
       Object.assign(this._options, options);
     }
 
-    this._events = {};
+    if (options && options.events) {
+      this._events = options.events;
+    } else {
+      this._events = {};
+    }
+
     this._listeningTo = {};
     this._listenId = {};
     this._listeners = {};
