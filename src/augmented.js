@@ -49,7 +49,7 @@ import { fibonacci, fibonacciSequence } from "./functions/fibonacci.js";
  * @author Bob Warren
  *
  * @module Augmented
- * @version 2.0.0-alpha.17
+ * @version 2.0.0-alpha.18
  * @license Apache-2.0
  */
 const Augmented = {};
@@ -97,7 +97,7 @@ Augmented.fibonacciSequence = fibonacciSequence;
  * The standard version property
  * @constant VERSION
  */
-Augmented.VERSION = "2.0.0-alpha.17";
+Augmented.VERSION = "2.0.0-alpha.18";
 /**
  * A codename for internal use
  * @constant codename

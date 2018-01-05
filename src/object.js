@@ -179,12 +179,13 @@ const triggerEvents = (events, args) => {
  */
 class AugmentedObject {
   constructor(options) {
+    if (!options) {
+      options = {};
+    }
     if (!this._options) {
       this._options = {};
     }
-    if (options) {
-      Object.assign(this._options, options);
-    }
+    Object.assign(this._options, options);
 
     if (options && options.events) {
       this._events = options.events;
