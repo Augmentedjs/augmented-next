@@ -179,7 +179,7 @@ const triggerEvents = (events, args) => {
  */
 class AugmentedObject {
   constructor(options) {
-    if (!this.options) {
+    if (!this._options) {
       this._options = {};
     }
     if (options) {

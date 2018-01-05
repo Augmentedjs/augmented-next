@@ -1,6 +1,6 @@
 {
   "name": "augmentedjs-next",
-  "version": "2.0.0-alpha.16",
+  "version": "2.0.0-alpha.17",
   "description": "The Augmented.js Next Framework.",
   "main": "dist/augmented-next.js",
   "scripts": {
