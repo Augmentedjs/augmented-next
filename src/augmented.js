@@ -5,10 +5,10 @@ import AugmentedObject from "./object.js";
 import AbstractModel from "./model/abstractModel.js";
 import AbstractCollection from "./collection/collection.js";
 
-import Stack from "./structors/stack.js";
-import AugmentedMap from "./structors/map.js";
+import Stack from "./structures/stack.js";
+import AugmentedMap from "./structures/map.js";
 import Configuration from "./configuration.js";
-import AsynchronousQueue from "./structors/queue.js";
+import AsynchronousQueue from "./structures/queue.js";
 
 import * as Logger from "./logger/logger";
 
@@ -36,6 +36,7 @@ import arrayHas from "./functions/arrayHas.js";
 import exec from "./functions/exec.js";
 import isDefined from "./functions/isDefined.js";
 import some from "./functions/some.js";
+import { fibonacci, fibonacciSequence } from "./functions/fibonacci.js";
 
 /*
  * Base functionality
@@ -48,7 +49,7 @@ import some from "./functions/some.js";
  * @author Bob Warren
  *
  * @module Augmented
- * @version 2.0.0-alpha.14
+ * @version 2.0.0-alpha.15
  * @license Apache-2.0
  */
 const Augmented = {};
@@ -89,12 +90,14 @@ Augmented.arrayHas = arrayHas;
 Augmented.exec = exec;
 Augmented.isDefined = isDefined;
 Augmented.some = some;
+Augmented.fibonacci = fibonacci;
+Augmented.fibonacciSequence = fibonacciSequence;
 
 /**
  * The standard version property
  * @constant VERSION
  */
-Augmented.VERSION = "2.0.0-alpha.14";
+Augmented.VERSION = "2.0.0-alpha.15";
 /**
  * A codename for internal use
  * @constant codename
@@ -107,5 +110,5 @@ Augmented.codename = "JC Denton";
 Augmented.releasename = "UNATCO";
 
 //export default Augmented;
-
+// browser-compatible export from babel
 module.exports = Augmented;

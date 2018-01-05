@@ -235,13 +235,17 @@ class AugmentedObject {
    * @memberof Augmented.Object
    */
   trigger(name, ...args) {
+    //console.log("events", this._events);
+    //console.log("trigger: name", name);
+    //console.log("trigger: args", args);
     if (this._events) {
-      const length = Math.max(0, args.length - 1);
-      const argsA = Array(length);
-      let i = 0;
-      for (i = 0; i < length; i++) {
-        argsA[i] = args[i + 1];
-      }
+      //const length = Math.max(0, args.length - 1);
+      const argsA = (Array.isArray(args)) ? args : (Array.from(args));//(length);
+      //let i = 0;
+      //for (i = 0; i < length; i++) {
+      //  argsA[i] = args[i + 1];
+      //}
+      //console.log(`calling eventsApi(${triggerApi}, ${this._events}, ${name}, ${void 0}, ${argsA});`);
       eventsApi(triggerApi, this._events, name, void 0, argsA);
     }
     return this;

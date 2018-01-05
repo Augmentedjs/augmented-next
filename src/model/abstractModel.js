@@ -1,6 +1,7 @@
 import AugmentedObject from "../object.js";
 import extend from "../functions/extend.js";
 import uniqueId from "../functions/uniqueId.js";
+import allKeys from "../functions/allKeys.js";
 import ValidationFramework from "../validation/validationFramework.js";
 
 // for now
@@ -361,14 +362,14 @@ export default class AbstractModel extends AugmentedObject {
     return base.replace(/[^\/]$/, "$&/") + encodeURIComponent(id);
   };
 
-  keys() { // ???
-
+  keys() {
+    return Object.keys(this._attributes);
   };
 
-  values() { // ?
-
+  values() {
+    return Object.values(this._attributes);
   };
-
+/* if needed these can be used from lodash or underscore against the model's attributes
   pairs() { // ??
 
   };
@@ -388,7 +389,7 @@ export default class AbstractModel extends AugmentedObject {
   chain() { // ??
 
   };
-
+*/
   isEmpty() {
     return false;
   };

@@ -270,4 +270,17 @@ describe("Given Augmented", () => {
 			expect(result).toBeTruthy();
 		});
 	});
+
+	describe("Given Augmented fibonacci", () => {
+		it("can get a number in a sequence", () => {
+			const result = Augmented.fibonacci(12);
+			expect(result).toBeDefined();
+			expect(result).toEqual(144);
+		});
+		it("can create a sequence", () => {
+			const result = Augmented.fibonacciSequence(13);
+			expect(result).toBeDefined();
+			expect(result).toEqual([0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144]);
+		});
+	});
 });
