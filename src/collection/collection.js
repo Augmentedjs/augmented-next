@@ -4,15 +4,13 @@ import uniqueId from "../functions/uniqueId.js";
 import isString from "../functions/isString.js";
 import isFunction from "../functions/isFunction.js";
 import some from "../functions/some.js";
+import splice from "../functions/splice.js";
 import sortObjects from "../utility/sort.js";
 import AbstractModel from "../model/abstractModel.js";
 import ValidationFramework from "../validation/validationFramework.js";
 import CollectionIterator from "./iterator.js";
 
-
 const _clone = require("lodash.clone");
-//const _some = require("lodash.some");
-//const _map = require("lodash.map");
 
 // Default options for `Collection#set`.
 const setOptions = {
@@ -25,24 +23,6 @@ const addOptions = {
   add: true,
   remove: false
 };
-
-// Splices `insert` into `array` at index `at`.
-const splice = (array, insert, at) => {
-  at = Math.min(Math.max(at, 0), array.length);
-  let tail = Array(array.length - at);
-  const length = insert.length;
-  let i;
-  for (i = 0; i < tail.length; i++) {
-    tail[i] = array[i + at];
-  }
-  for (i = 0; i < length; i++) {
-    array[i + at] = insert[i];
-  }
-  for (i = 0; i < tail.length; i++) {
-    array[i + length + at] = tail[i];
-  }
-};
-
 
 /**
  * Abstract Augmented Collection <br/>
@@ -598,7 +578,6 @@ export default class AbstractCollection extends AugmentedObject {
    * Collecion.sync
    * @method sync
    * @memberof Augmented.Collection
-   * @borrows Backbone.sync
    */
   sync(method, model, options) {
   };
