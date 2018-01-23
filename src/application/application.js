@@ -89,6 +89,10 @@ class Application {
   get router() {
     return this._router;
   };
+  
+  set router(router) {
+    this._router = router;
+  };
 
   /**
    * The started property of the application

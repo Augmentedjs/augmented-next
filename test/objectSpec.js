@@ -40,6 +40,21 @@ describe("Given an Augmented Object", () => {
       expect(mobject.special).toEqual("hello");
     });
 
+    it("can be initialized without options", () => {
+      class myObject extends Augmented.Object {
+        constructor() {
+          super();
+          this._special = "hello";
+        };
+        get special() {
+          return this._special;
+        }
+      }
+
+      const mobject = new myObject();
+      expect(mobject.special).toEqual("hello");
+    });
+
     describe("Given an events", () => {
       const cb = () => { console.log("x"); return "I'm here!"; };
       describe("Given an persistant events", () => {
