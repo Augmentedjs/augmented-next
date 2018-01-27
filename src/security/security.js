@@ -17,9 +17,32 @@ import ClientType from "./clientType.js";
  * @property {string} email The email of the principal
  */
 export class Principal {
-  constructor() {
+  constructor(options) {
+    if (options && options.id) {
+      this._id = options.id;
+    } else {
+      this._id = 0;
+    }
+
+    if (options && options.email) {
+      this._email = options.email;
+    } else {
+      this._email = "";
+    }
+
+    if (options && options.login) {
+      this._login = options.login;
+    } else {
+      this._login = "";
+    }
+
+    if (options && options.fullName) {
+      this._fullName = options.fullName;
+    } else {
+      this._fullName = "";
+    }
   };
-  _fullName = "";
+
   get fullName() {
     return this._fullName;
   };
@@ -27,7 +50,6 @@ export class Principal {
     this._fullName = name;
   };
 
-  _id = 0;
   get id() {
     return this._id;
   };
@@ -36,7 +58,6 @@ export class Principal {
     this._id = id;
   };
 
-  _login = "";
   get login() {
     return this._login;
   };
@@ -44,7 +65,6 @@ export class Principal {
     this._login = login;
   };
 
-  _email = "";
   get email() {
     return this._email;
   };
@@ -66,9 +86,6 @@ export class Context {
     this._principal = (principal) ? principal : (new Principal().login = "guest");
     this._permissions = (permissions) ? permissions : [];
   };
-
-  _principal = null;
-  _permissions = [];
 
   /**
    * getPrincipal - get the principal of this context
@@ -132,9 +149,6 @@ export class Context {
   };
 };
 
-
-
-
 /**
 * AuthenticationFactory Class -
 * Returns a client of given type for use with security
@@ -183,7 +197,6 @@ export class Entry {
    * @memberof Augmented.Security.Entry
    * @private
    */
-  _permissions = [];
 
   /**
   * Negative flag

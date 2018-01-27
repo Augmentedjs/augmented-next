@@ -1,6 +1,7 @@
 import AugmentedObject from "../object.js";
 import ClientType from "./clientType.js";
 
+
 /**
  * Security client namespace
  * @namespace Augmented.Security.Client
@@ -19,14 +20,12 @@ export class AbstractSecurityClient extends AugmentedObject {
   constructor(type) {
     super();
     this._type = type;
+    this.  uri = "";
   };
 
-  _type = null;
   get type() {
     return this._type;
   };
-
-  uri = "";
 };
 
 /**
@@ -37,7 +36,9 @@ export class AbstractSecurityClient extends AugmentedObject {
  */
 export class OAUTH2Client extends AbstractSecurityClient {
   constructor() {
-    super(ClientType.OAUTH2)
+    super(ClientType.OAUTH2);
+    this.accessToken = "";
+    this.authorizationToken = "";
   };
 
   /**
@@ -45,13 +46,13 @@ export class OAUTH2Client extends AbstractSecurityClient {
    * @property accessToken
    * @memberof Augmented.Security.Client.OAUTH2Client
    */
-  accessToken = "";
+
   /**
    * Authorization Token
    * @property authorizationToken
    * @memberof Augmented.Security.Client.OAUTH2Client
    */
-  authorizationToken = "";
+
   /**
    * Authorize the application/service/module via OAUTH
    * @method authorize
@@ -96,7 +97,7 @@ export class ACLClient extends AbstractSecurityClient {
    */
   authenticate(username, password) {
     let c = null;
-    Ajax({
+    /*request({
       url: this.uri,
       method: "GET",
       user: username,
@@ -114,7 +115,7 @@ export class ACLClient extends AbstractSecurityClient {
         // TODO: Bundle this perhaps
         throw new Error("Failed to authenticate with response of - " + status);
       }
-    });
+    });*/
     return c;
   };
 };

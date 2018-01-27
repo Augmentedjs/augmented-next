@@ -342,15 +342,6 @@ window.lunrData = {
           "togeth",
           "utility.messagekeyformatt"
         ],
-        "Augmented.Utility.MessageKeyFormatter.html#.delimiter": [
-          "augmented.utility.messagekeyformatter.delimit",
-          "delimit",
-          "key",
-          "lt;static&gt",
-          "member",
-          "messagekeyformatter.delimit",
-          "utility.messagekeyformatter.delimit"
-        ],
         "Augmented.Utility.MessageKeyFormatter.html#.format": [
           "augmented.utility.messagekeyformatter.format",
           "format",
@@ -362,7 +353,7 @@ window.lunrData = {
           "utility.messagekeyformatter.format"
         ]
       },
-      "length": 23
+      "length": 22
     },
     "tokenStore": {
       "root": {
@@ -868,32 +859,6 @@ window.lunrData = {
                                                                                   },
                                                                                   ".": {
                                                                                     "docs": {},
-                                                                                    "d": {
-                                                                                      "docs": {},
-                                                                                      "e": {
-                                                                                        "docs": {},
-                                                                                        "l": {
-                                                                                          "docs": {},
-                                                                                          "i": {
-                                                                                            "docs": {},
-                                                                                            "m": {
-                                                                                              "docs": {},
-                                                                                              "i": {
-                                                                                                "docs": {},
-                                                                                                "t": {
-                                                                                                  "docs": {
-                                                                                                    "Augmented.Utility.MessageKeyFormatter.html#.delimiter": {
-                                                                                                      "ref": "Augmented.Utility.MessageKeyFormatter.html#.delimiter",
-                                                                                                      "tf": 1075
-                                                                                                    }
-                                                                                                  }
-                                                                                                }
-                                                                                              }
-                                                                                            }
-                                                                                          }
-                                                                                        }
-                                                                                      }
-                                                                                    },
                                                                                     "f": {
                                                                                       "docs": {},
                                                                                       "o": {
@@ -1151,26 +1116,6 @@ window.lunrData = {
                         "index.html": {
                           "ref": "index.html",
                           "tf": 11.666666666666666
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-            },
-            "l": {
-              "docs": {},
-              "i": {
-                "docs": {},
-                "m": {
-                  "docs": {},
-                  "i": {
-                    "docs": {},
-                    "t": {
-                      "docs": {
-                        "Augmented.Utility.MessageKeyFormatter.html#.delimiter": {
-                          "ref": "Augmented.Utility.MessageKeyFormatter.html#.delimiter",
-                          "tf": 650
                         }
                       }
                     }
@@ -1709,32 +1654,6 @@ window.lunrData = {
                                               "docs": {},
                                               ".": {
                                                 "docs": {},
-                                                "d": {
-                                                  "docs": {},
-                                                  "e": {
-                                                    "docs": {},
-                                                    "l": {
-                                                      "docs": {},
-                                                      "i": {
-                                                        "docs": {},
-                                                        "m": {
-                                                          "docs": {},
-                                                          "i": {
-                                                            "docs": {},
-                                                            "t": {
-                                                              "docs": {
-                                                                "Augmented.Utility.MessageKeyFormatter.html#.delimiter": {
-                                                                  "ref": "Augmented.Utility.MessageKeyFormatter.html#.delimiter",
-                                                                  "tf": 75
-                                                                }
-                                                              }
-                                                            }
-                                                          }
-                                                        }
-                                                      }
-                                                    }
-                                                  }
-                                                },
                                                 "f": {
                                                   "docs": {},
                                                   "o": {
@@ -1770,23 +1689,6 @@ window.lunrData = {
                             }
                           }
                         }
-                      }
-                    }
-                  }
-                }
-              }
-            },
-            "m": {
-              "docs": {},
-              "b": {
-                "docs": {},
-                "e": {
-                  "docs": {},
-                  "r": {
-                    "docs": {
-                      "Augmented.Utility.MessageKeyFormatter.html#.delimiter": {
-                        "ref": "Augmented.Utility.MessageKeyFormatter.html#.delimiter",
-                        "tf": 110
                       }
                     }
                   }
@@ -2763,10 +2665,6 @@ window.lunrData = {
                                     "ref": "Augmented.Utility.MessageReader.html#.getMessage",
                                     "tf": 33.33333333333333
                                   },
-                                  "Augmented.Utility.MessageKeyFormatter.html#.delimiter": {
-                                    "ref": "Augmented.Utility.MessageKeyFormatter.html#.delimiter",
-                                    "tf": 50
-                                  },
                                   "Augmented.Utility.MessageKeyFormatter.html#.format": {
                                     "ref": "Augmented.Utility.MessageKeyFormatter.html#.format",
                                     "tf": 33.33333333333333
@@ -3306,10 +3204,6 @@ window.lunrData = {
                   "ref": "Augmented.Utility.MessageKeyFormatter.html",
                   "tf": 8.333333333333332
                 },
-                "Augmented.Utility.MessageKeyFormatter.html#.delimiter": {
-                  "ref": "Augmented.Utility.MessageKeyFormatter.html#.delimiter",
-                  "tf": 25
-                },
                 "Augmented.Utility.MessageKeyFormatter.html#.format": {
                   "ref": "Augmented.Utility.MessageKeyFormatter.html#.format",
                   "tf": 16.666666666666664
@@ -3820,32 +3714,6 @@ window.lunrData = {
                                                               "docs": {},
                                                               ".": {
                                                                 "docs": {},
-                                                                "d": {
-                                                                  "docs": {},
-                                                                  "e": {
-                                                                    "docs": {},
-                                                                    "l": {
-                                                                      "docs": {},
-                                                                      "i": {
-                                                                        "docs": {},
-                                                                        "m": {
-                                                                          "docs": {},
-                                                                          "i": {
-                                                                            "docs": {},
-                                                                            "t": {
-                                                                              "docs": {
-                                                                                "Augmented.Utility.MessageKeyFormatter.html#.delimiter": {
-                                                                                  "ref": "Augmented.Utility.MessageKeyFormatter.html#.delimiter",
-                                                                                  "tf": 75
-                                                                                }
-                                                                              }
-                                                                            }
-                                                                          }
-                                                                        }
-                                                                      }
-                                                                    }
-                                                                  }
-                                                                },
                                                                 "f": {
                                                                   "docs": {},
                                                                   "o": {
@@ -4379,7 +4247,7 @@ window.lunrData = {
           }
         }
       },
-      "length": 276
+      "length": 269
     },
     "corpusTokens": [
       "againstop",
@@ -4403,7 +4271,6 @@ window.lunrData = {
       "augmented.object.trigg",
       "augmented.utility.bundleobject",
       "augmented.utility.messagekeyformatt",
-      "augmented.utility.messagekeyformatter.delimit",
       "augmented.utility.messagekeyformatter.format",
       "augmented.utility.messagekeyformatterconcaten",
       "augmented.utility.messageread",
@@ -4431,7 +4298,6 @@ window.lunrData = {
       "control",
       "core",
       "current",
-      "delimit",
       "develop",
       "document",
       "each",
@@ -4474,12 +4340,10 @@ window.lunrData = {
       "lt;static&gt",
       "made",
       "mani",
-      "member",
       "messag",
       "message.kind",
       "message.level",
       "messagekeyformatt",
-      "messagekeyformatter.delimit",
       "messagekeyformatter.format",
       "messageread",
       "messagereader.getmessag",
@@ -4550,7 +4414,6 @@ window.lunrData = {
       "us",
       "utility.bundleobject",
       "utility.messagekeyformatt",
-      "utility.messagekeyformatter.delimit",
       "utility.messagekeyformatter.format",
       "utility.messageread",
       "utility.messagereader.getmessag",
@@ -4786,16 +4649,6 @@ window.lunrData = {
       "summary": "",
       "description": "Augmented.Utility.MessageKeyFormatterConcatenate the pieces of the message together if a portion of the key ismissing, the rest of the key is ignored. ex. if the &quot;rule&quot; attribute ismissing, then the key will return with the message.level + message.kind only",
       "body": ""
-    },
-    "Augmented.Utility.MessageKeyFormatter.html#.delimiter": {
-      "id": "Augmented.Utility.MessageKeyFormatter.html#.delimiter",
-      "kind": "member",
-      "title": "&lt;static&gt; delimiter",
-      "longname": "Augmented.Utility.MessageKeyFormatter.delimiter",
-      "name": "delimiter",
-      "tags": "Augmented.Utility.MessageKeyFormatter.delimiter Utility.MessageKeyFormatter.delimiter MessageKeyFormatter.delimiter delimiter",
-      "summary": "",
-      "description": "Key Delimiter"
     },
     "Augmented.Utility.MessageKeyFormatter.html#.format": {
       "id": "Augmented.Utility.MessageKeyFormatter.html#.format",

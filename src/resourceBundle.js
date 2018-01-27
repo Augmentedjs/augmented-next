@@ -69,7 +69,7 @@ export class MessageReader {
    * @memberof Augmented.Utility.MessageReader
    * @param {string} key The key to return from the bundle
    */
-  getMessage(key) {
+  static getMessage(key) {
     const delimiter = ".";
     // try getting the message out of the bundle
     let msg = ResourceBundle.getString(key),
@@ -105,6 +105,7 @@ export class MessageReader {
  */
 export class MessageKeyFormatter {
   constructor() {
+    this.delimiter = ".";
   };
 
   /**
@@ -112,7 +113,7 @@ export class MessageKeyFormatter {
   * @property {string} delimiter The delimter used to seperate each key
   * @memberof Augmented.Utility.MessageKeyFormatter
   */
-  delimiter = ".";
+
   /**
    * Format a key for a message
    * @function format
