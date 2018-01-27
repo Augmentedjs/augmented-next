@@ -70,32 +70,6 @@ export const binarySearch = (arr, find, comparator) => {
 };
 
 /**
- * Quick Sort implimentation for Arrays -
- * @constructor Augmented.Utility.QuickSort
- * @memberof Augmented.Utility
- * @param {Array} arr Array to Sort
- * @returns {Array} Returns a sorted array
- */
-export const quickSort = (arr) => {
-  //if array is empty
-  if (arr.length === 0) {
-    return [];
-  }
-
-  let i = 1;
-  const l = arr.length, left = [], right = [], pivot = arr[0];
-  //go through each element in array
-  for (i = 1; i < l; i++) {
-    if (arr[i] < pivot) {
-      left.push(arr[i]);
-    } else {
-      right.push(arr[i]);
-    }
-  }
-  return quickSort(left).concat(pivot, quickSort(right));
-};
-
-/**
  * Augmented.Utility.TransformerType <br/>
  * Transformer type for use in the transformer
  * @enum {Symbol} Augmented.Utility.TransformerType

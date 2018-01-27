@@ -1,5 +1,5 @@
 import * as Utility from "./utility/utility";
-import sortObjects from "./utility/sort.js";
+import { sortObjects, mergeSort, quickSort, insertionSort, bubbleSort } from "./utility/sort.js";
 
 import AugmentedObject from "./object.js";
 import AbstractModel from "./model/abstractModel.js";
@@ -66,6 +66,10 @@ Augmented.Utility.MessageReader = MessageReader;
 Augmented.Utility.MessageKeyFormatter = MessageKeyFormatter;
 Augmented.Utility.uniqueId = uniqueId;
 Augmented.Utility.sortObjects = sortObjects;
+Augmented.Utility.mergeSort = mergeSort;
+Augmented.Utility.quickSort = quickSort;
+Augmented.Utility.insertionSort = insertionSort;
+Augmented.Utility.bubbleSort = bubbleSort;
 
 Augmented.Logger = Logger;
 

@@ -5,7 +5,7 @@ import isString from "../functions/isString.js";
 import isFunction from "../functions/isFunction.js";
 import some from "../functions/some.js";
 import splice from "../functions/splice.js";
-import sortObjects from "../utility/sort.js";
+import { sortObjects } from "../utility/sort.js";
 import AbstractModel from "../model/abstractModel.js";
 import ValidationFramework from "../validation/validationFramework.js";
 import CollectionIterator from "./iterator.js";

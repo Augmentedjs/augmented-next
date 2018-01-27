@@ -15,16 +15,6 @@ describe("Given Utilities", () => {
 		});
 	});
 
-	describe("Given object sort", () => {
-		it("can sort an array", () => {
-			const o = [{"A": "B"}, {"A": "D"}, {"A": "C"}];
-			const a = Augmented.Utility.sortObjects(o, "A");
-			expect(a).not.toEqual(null);
-			expect(a).not.toEqual([]);
-			expect(a).toEqual([{"A": "B"}, {"A": "C"}, {"A": "D"}]);
-		});
-	});
-
 	describe("Given object extend", () => {
 		it("Extends an object with data", () => {
 			const o = Augmented.Utility.extend({}, {"A": "B"});
