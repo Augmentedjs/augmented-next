@@ -1,0 +1,410 @@
+<!-- start:source.tmpl.hbs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+		<title>structures/map.js</title>
+		<link rel="icon" type="image/png" href="favicon.png"/>
+		<!--[if lt IE 9]>
+		<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+		<link href="https://fonts.googleapis.com/css?family=PT+Mono" rel="stylesheet">
+		<link type="text/css" rel="stylesheet" href="css/bootstrap.min.css">
+		<link type="text/css" rel="stylesheet" href="css/prism.min.css">
+		<link type="text/css" rel="stylesheet" href="css/template.min.css">
+			<style>
+				.page-header,
+				pre.code-toolbar > .toolbar:hover {
+					background-color: #2196F3;
+				}
+				.callout-primary,
+				.toc .nav > li > a:hover,
+				.toc .nav > li > a:focus,
+				.toc .nav > li.active > a,
+				.toc .nav > li.active > a:hover,
+				.toc .nav > li.active > a:focus,
+				pre.code-toolbar > .toolbar:hover {
+					border-left-color: #2196F3;
+				}
+				pre.code-toolbar > .toolbar:hover {
+					border-bottom-color: #2196F3;
+				}
+				.callout-primary h5,
+				.symbol-title.collapsible-symbol .toggle-icon,
+				.breadcrumb li a,
+				.toc .nav > li > a:hover,
+				.toc .nav > li > a:focus,
+				.toc .nav > li.active > a,
+				.toc .nav > li.active > a:hover,
+				.toc .nav > li.active > a:focus {
+					color: #2196F3;
+				}
+			</style>
+		<script type="text/javascript">
+			window.TEMPLATE_OPTIONS = {"includeDate":true,"dateFormat":"ddd MMM Do YYYY","systemName":"Augmented.js","systemSummary":"Augmented.js Next - Elegant Developement made simple.","systemLogo":"img/logo.png","systemColor":"#2196F3","navMembers":[{"kind":"class","title":"Classes","summary":"All documented classes."},{"kind":"external","title":"Externals","summary":"All documented external members."},{"kind":"global","title":"Globals","summary":"All documented globals."},{"kind":"mixin","title":"Mixins","summary":"All documented mixins."},{"kind":"interface","title":"Interfaces","summary":"All documented interfaces."},{"kind":"module","title":"Modules","summary":"All documented modules."},{"kind":"namespace","title":"Namespaces","summary":"All documented namespaces."},{"kind":"tutorial","title":"Tutorials","summary":"All available tutorials."}],"footer":"<a href='http://www.augmentedjs.com'>Augmented.js Homepage</a>","copyright":"","linenums":true,"collapseSymbols":false,"inverseNav":true,"inlineNav":false,"outputSourceFiles":true,"sourceRootPath":null,"disablePackagePath":true,"outputSourcePath":true,"showTableOfContents":true,"showAccessFilter":true,"analytics":null,"methodHeadingReturns":false,"sort":"linenum, longname, version, since","search":true,"favicon":"favicon.png","stylesheets":[],"scripts":[],"monospaceLinks":false,"cleverLinks":false,"logoFile":"images/logo.png","navType":"vertical","protocol":"html://"};
+			window.DOCLET_TOC_ENABLED = false;
+			window.DOCLET_AFILTER_ENABLED = false;
+		</script>
+</head>
+<body>
+	<!-- start:navbar.hbs -->
+	<header class="navbar navbar-default navbar-fixed-top navbar-inverse">
+		<div class="container">
+			<div class="navbar-header">
+				<a class="navbar-brand branding-logo" href="index.html" style="background-image: url(img/logo.png);">
+					Augmented.js
+				</a>
+				<!-- displayed on small devices -->
+				<button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#topNavigation">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+			</div>
+			<div class="navbar-collapse collapse" id="topNavigation">
+				<ul class="nav navbar-nav">
+							<li class="dropdown">
+								<a href="list_class.html" class="dropdown-toggle" data-toggle="dropdown">Classes<b class="caret"></b></a>
+								<ul class="dropdown-menu">
+										<li><a href="AbstractSecurityClient.html">AbstractSecurityClient</a></li>
+										<li><a href="Augmented.AbstractLogger.html">Augmented.AbstractLogger</a></li>
+										<li><a href="Augmented.AbstractModel.html">Augmented.AbstractModel</a></li>
+										<li><a href="Augmented.Application.html">Augmented.Application</a></li>
+										<li><a href="Augmented.Collection.html">Augmented.Collection</a></li>
+										<li><a href="Augmented.Object.html">Augmented.Object</a></li>
+										<li><a href="Augmented.Security.Client.ACLClient.html">Augmented.Security.Client.ACLClient</a></li>
+										<li><a href="Augmented.Security.Client.OAUTH2Client.html">Augmented.Security.Client.OAUTH2Client</a></li>
+										<li><a href="Augmented.Security.Context.html">Augmented.Security.Context</a></li>
+										<li><a href="Augmented.Security.Entry.html">Augmented.Security.Entry</a></li>
+										<li><a href="Augmented.Security.Principal.html">Augmented.Security.Principal</a></li>
+										<li><a href="Augmented.Utility.AsynchronousQueue.html">Augmented.Utility.AsynchronousQueue</a></li>
+										<li><a href="Augmented.Utility.BinarySearch.html">Augmented.Utility.BinarySearch</a></li>
+										<li><a href="Augmented.Utility.Map.html">Augmented.Utility.Map</a></li>
+										<li><a href="Augmented.Utility.PrettyPrint.html">Augmented.Utility.PrettyPrint</a></li>
+										<li><a href="Augmented.Utility.SchemaGenerator.html">Augmented.Utility.SchemaGenerator</a></li>
+										<li><a href="Augmented.Utility.Shuffle.html">Augmented.Utility.Shuffle</a></li>
+										<li><a href="Augmented.Utility.Stack.html">Augmented.Utility.Stack</a></li>
+										<li><a href="Augmented.ValidationFramework.html">Augmented.ValidationFramework</a></li>
+								</ul>
+							</li>
+							<li class="dropdown">
+								<a href="list_module.html" class="dropdown-toggle" data-toggle="dropdown">Modules<b class="caret"></b></a>
+								<ul class="dropdown-menu">
+										<li><a href="module-Augmented.html">Augmented</a></li>
+								</ul>
+							</li>
+							<li class="dropdown">
+								<a href="list_namespace.html" class="dropdown-toggle" data-toggle="dropdown">Namespaces<b class="caret"></b></a>
+								<ul class="dropdown-menu">
+										<li><a href="Augmented.Logger.html">Augmented.Logger</a></li>
+										<li><a href="Augmented.Logger.LoggerFactory.html">Augmented.Logger.LoggerFactory</a></li>
+										<li><a href="Augmented.Security.html">Augmented.Security</a></li>
+										<li><a href="Augmented.Security.AuthenticationFactory.html">Augmented.Security.AuthenticationFactory</a></li>
+										<li><a href="Augmented.Security.Client.html">Augmented.Security.Client</a></li>
+										<li><a href="Augmented.Utility.html">Augmented.Utility</a></li>
+										<li><a href="Augmented.Utility.BundleObject.html">Augmented.Utility.BundleObject</a></li>
+										<li><a href="Augmented.Utility.MessageKeyFormatter.html">Augmented.Utility.MessageKeyFormatter</a></li>
+										<li><a href="Augmented.Utility.MessageReader.html">Augmented.Utility.MessageReader</a></li>
+										<li><a href="Augmented.Utility.ResourceBundle.html">Augmented.Utility.ResourceBundle</a></li>
+										<li><a href="Augmented.Utility.Transformer.html">Augmented.Utility.Transformer</a></li>
+								</ul>
+							</li>
+				</ul>
+					<!-- start:lunr-search-navbar.hbs -->
+					<form class="navbar-form navbar-right" role="search">
+						<div class="input-group">
+							<input type="text" class="form-control" placeholder="Search" id="lunr-search-input">
+							<div class="input-group-btn">
+								<button class="btn btn-default" id="lunr-search-submit">
+									<i class="glyphicon glyphicon-search"></i>
+								</button>
+							</div>
+						</div>
+					</form>
+					<!-- start:lunr-search-navbar.hbs -->		</div>
+		</div>
+	</header>
+	<!-- end:navbar.hbs -->		<div class="page-header">
+			<div class="container">
+				<span class="kind">source</span>
+				<h1><span class="name">structures/map.js</span></h1>
+			</div>
+		</div>
+	<div class="container content">
+		<div class="row">
+			<div class="col-md-12 main-content">
+		<section class="source-section">
+			<article></article>
+			<pre class="prettyprint source language-javascript line-numbers"><code class="language-javascript">import isString from "../functions/isString.js";
+
+/**
+ * ES6-like Map - than can marshall
+ * @class Map
+ * @param myData {object} Map data to fill map
+ * @memberof Augmented.Utility
+ */
+class AugmentedMap {
+  constructor(myData) {
+    this._keys = [];
+    this._data = {};
+    if (myData) {
+      this.marshall(myData);
+    }
+  };
+
+  /**
+   * Set the value by key in the map
+   * @method set
+   * @memberof Augmented.Utility.Map
+   * @param {string} key name of the key
+   * @param {any} value value for the key
+   */
+  set(key, value) {
+    if (key !== null &amp;&amp; value !== null) {
+      if (!this._data[key]) {
+        this._keys.push(key);
+      }
+      this._data[key] = value;
+    }
+  };
+
+  /**
+   * Get the value by key in the map
+   * @method get
+   * @memberof Augmented.Utility.Map
+   * @param {string} key name of the key
+   * @returns {any} The value for the key
+   */
+  get(key) {
+    return this._data[key];
+  };
+
+  /**
+   * Index of the key in the map
+   * @method indexOf
+   * @memberof Augmented.Utility.Map
+   * @param {string} key name of the key
+   * @returns {number} index of the key
+   */
+  indexOf(key) {
+    return this._keys.indexOf(key);
+  };
+
+  /**
+   * Remove the value by key in the map
+   * @method remove
+   * @memberof Augmented.Utility.Map
+   * @param {string} key name of the key
+   */
+  remove(key) {
+    const i = this.indexOf(key);
+    this._keys.splice(i, 1);
+    delete this._data[key];
+  };
+
+  /**
+   * Has returns whether a key exists in the map
+   * @method has
+   * @memberof Augmented.Utility.Map
+   * @param {string} key name of the key
+   * @returns {boolean} true if the key exists in the map
+   */
+  has(key) {
+    return (this.indexOf(key) !== -1);
+  };
+
+  /**
+   * Iterator forEach key to value in the map
+   * @method forEach
+   * @memberof Augmented.Utility.Map
+   * @param {function} fn callback for the iterator
+   */
+  forEach(fn) {
+    if (typeof fn !== "function") {
+      return null;
+    }
+    const len = this._keys.length;
+    let i = 0, k;
+    for (i = 0; i &lt; len; i++) {
+      k = this._keys[i];
+      fn(k, this._data[k], i);
+    }
+  };
+
+  /**
+   * Get the key for the index in the map
+   * @method key
+   * @memberof Augmented.Utility.Map
+   * @param {number} i index of the key
+   * @returns {object} the key at index
+   */
+  key(i) {
+    return this._keys[i];
+  };
+
+  /**
+   * The entries value object in the map
+   * @method entries
+   * @memberof Augmented.Utility.Map
+   * @returns {array} Array of entries value objects
+   */
+  entries() {
+    let i = 0;
+    const len = this._keys.length, entries = new Array(len);
+    for (i = 0; i &lt; len; i++) {
+      entries[i] = {
+        key : this._keys[i],
+        value : this._data[i]
+      };
+    }
+    return entries;
+  };
+
+  /**
+   * The values in the map as an Array
+   * @method values
+   * @memberof Augmented.Utility.Map
+   * @returns {array} values as an Array
+   */
+  values() {
+    const len = this._keys.length, values = new Array(len);
+    let i = 0, key;
+
+    for (i = 0; i &lt; len; i++) {
+      key = this._keys[i];
+      values[i] = this._data[key];
+    }
+    return values;
+  };
+
+  /**
+   * Clear the map
+   * @method clear
+   * @memberof Augmented.Utility.Map
+   */
+  clear() {
+    this._keys = [];
+    this._data = {};
+  };
+
+  /**
+   * The size of the map in keys
+   * @method size
+   * @memberof Augmented.Utility.Map
+   * @returns {number} size of map by keys
+   */
+  size() {
+    return this._keys.length;
+  };
+
+  /**
+   * Represent the map in JSON
+   * @method toJSON
+   * @memberof Augmented.Utility.Map
+   * @returns {object} JSON of the map
+   */
+  toJSON() {
+    return this._data;
+  };
+
+  /**
+   * Represent the map in a String of JSON
+   * @method toString
+   * @memberof Augmented.Utility.Map
+   * @returns {string} Stringified JSON of the map
+   */
+  toString() {
+    return JSON.stringify(this._data);
+  };
+
+  // non-es6 API
+
+  /**
+   * Checks of the map is empty (not ES6)
+   * @method isEmpty
+   * @memberof Augmented.Utility.Map
+   * @returns {boolean} true if the map is empty
+   */
+  isEmpty() {
+    return this._keys.length === 0;
+  };
+
+  /**
+   * Marshalls a map&lt;br/>
+   * dataToMarshall must be the following type of data to parse:
+   * JSON object with properties (key/value)
+   *
+   * @method marshall
+   * @param {Augmented.Utility.Map} dataToMarshall Data to marshall as a map
+   * @returns {boolean} Returns true on success
+   * @memberof Augmented.Utility.Map
+   */
+  marshall(dataToMarshall) {
+    let dataToParse;
+    if (dataToMarshall &amp;&amp; dataToMarshall instanceof AugmentedMap) {
+      dataToParse = dataToMarshall.toJSON();
+    } else if(dataToMarshall &amp;&amp; dataToMarshall instanceof Object &amp;&amp; (Object.keys(dataToMarshall).length > 0)) {
+      dataToParse = dataToMarshall;
+    } else if(dataToMarshall &amp;&amp; isString(dataToMarshall)) {
+      try {
+        dataToParse = JSON.parse(dataToMarshall);
+      } catch(e) {
+        //_logger.warn("AUGMENTED: Map: Could not marshall data: " + JSON.stringify(dataToMarshall));
+        return false;
+      }
+    } else {
+      //_logger.warn("AUGMENTED: Map: Could not marshall data: " + JSON.stringify(dataToMarshall));
+      return false;
+    }
+
+    const props = Object.keys(dataToParse),
+          l = props.length;
+    this._keys = props;
+    this._data = dataToParse;
+    /*let i = 0;
+    for (i = 0; i &lt; l; i++) {
+      const p = props[i],
+            v = dataToParse[p];
+      this.set(p, v);
+    }*/
+    return true;
+  };
+};
+
+export default AugmentedMap;
+</code></pre>
+		</section>
+			</div>
+		</div>
+	</div>
+	<footer>
+				<div class="footer-option">&lt;a href&#x3D;&#x27;http://www.augmentedjs.com&#x27;&gt;Augmented.js Homepage&lt;/a&gt;</div>
+			<div class="generated-by">Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Wed Jan 31st 2018 using the <a href="https://github.com/steveush/foodoc">FooDoc template</a>.</div>
+	</footer>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/clipboard.min.js"></script>
+	<script src="js/prism.min.js"></script>
+	<script src="js/template.min.js"></script>
+		<!-- start:lunr-search-modal.hbs -->
+		<div class="modal fade" id="lunr-search-modal">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title">Search results</h4>
+					</div>
+					<div class="modal-body" id="lunr-search-body">
+					</div>
+					<div class="modal-footer" id="lunr-search-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>
+				</div><!-- /.modal-content -->
+			</div><!-- /.modal-dialog -->
+		</div>
+		<!-- end:lunr-search-modal.hbs -->		<script src="js/lunr.min.js"></script>
+	
+</body>
+</html>
+<!-- end:source.tmpl.hbs -->

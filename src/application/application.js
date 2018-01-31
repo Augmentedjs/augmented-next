@@ -53,7 +53,7 @@ check = (app) => {
  * <p>Application Class for use to define an application.<br/>
  * An application contains metadata and initializers for the application.<br/>
  * <em>Applications track history, and normally would contain the entire single page App startup.</em></p>
- * @constructor Augmented.Application
+ * @class Augmented.Application
  * @param {string} name Name of the application
  * @memberof Augmented
  * @example const app = new Augmented.Application("Awesome");
@@ -83,13 +83,13 @@ class Application {
   /**
    * The router property of the application
    * @property router
-   * @memberof Augmented.Application
+   * @memberof Application
    */
 
   get router() {
     return this._router;
   };
-  
+
   set router(router) {
     this._router = router;
   };
@@ -97,7 +97,7 @@ class Application {
   /**
    * The started property of the application
    * @property started
-   * @memberof Augmented.Application
+   * @memberof Application
    * @returns {boolean} Returns the property of the started Event
    */
 
@@ -107,7 +107,7 @@ class Application {
 
   /** Event for after during startup of the application
    * @method initialize
-   * @memberof Augmented.Application
+   * @memberof Application
    */
   initialize() {
     return true;
@@ -115,7 +115,7 @@ class Application {
 
   /** Event for before the startup of the application
    * @method beforeInitialize
-   * @memberof Augmented.Application
+   * @memberof Application
    */
   beforeInitialize() {
     return true;
@@ -123,31 +123,27 @@ class Application {
 
   /** Event for after the startup of the application
    * @method afterInitialize
-   * @memberof Augmented.Application
+   * @memberof Application
    */
   afterInitialize() {
     return true;
   };
 
-  /** Get the application name
-   * @method getName
-   * @memberof Augmented.Application
+  /** The application name
+   * @property name
+   * @memberof Application
    */
   get name() {
     return this.getMetadataItem("name");
   };
 
-  /** Set the application name
-   * @method setName
-   * @memberof Augmented.Application
-   */
   set name(n) {
     return this.setMetadataItem("name", n);
   };
 
-  /** Get the metadata map
-  * @method getMetadata
-  * @memberof Augmented.Application
+  /** The metadata map
+  * @property metadata
+  * @memberof Application
   * @returns Map of metadata in an Augmented.Utility.Map
   */
   get metadata() {
@@ -156,7 +152,9 @@ class Application {
 
   /** Set a specific item in metadata
    * @method setMetadataItem
-   * @memberof Augmented.Application
+   * @param {string} key Key to set
+   * @param {object} value Value of the key
+   * @memberof Application
    */
   setMetadataItem(key, value) {
     this._metadata[key] = value;
@@ -164,7 +162,9 @@ class Application {
 
   /** Get a specific item in metadata
    * @method getMetadataItem
-   * @memberof Augmented.Application
+   * @param {string} key Key
+   * @returns {object} value of the key
+   * @memberof Application
    */
   getMetadataItem(key) {
     return this._metadata[key];
@@ -172,7 +172,8 @@ class Application {
 
   /** Register a Router - adds routes to the application
    * @method registerRouter
-   * @memberof Augmented.Application
+   * @param {Router} router Router to register
+   * @memberof Application
    */
   registerRouter(router) {
     if (router){
@@ -182,8 +183,8 @@ class Application {
 
   /** Event to start the application and history
    * @method start
-   * @returns
-   * @memberof Augmented.Application
+   * @returns {Promise} Promise.Resolve or Promise.Reject based on success
+   * @memberof Application
    */
    start() {
      const app = this;
@@ -205,26 +206,20 @@ class Application {
 
   /** Event to stop the application and history
    * @method stop
-   * @memberof Augmented.Application
+   * @memberof Application
    */
   stop() {
     this._started = false;
   };
 
   /** Gets the datastore for the application
-   * @method getDatastore
-   * @returns {Augmented.Model|object} the datastore
-   * @memberof Augmented.Application
+   * @property {Augmented.Model|object}datastore
+   * @memberof Application
    */
   get datastore() {
     return this.getMetadataItem("datastore");
-  }
+  };
 
-  /** Sets a datastore
-   * @method setDatastore
-   * @param {object} model A datastore
-   * @memberof Augmented.Application
-   */
   set datastore(ds) {
     if (ds) {
       this.setMetadataItem("datastore", ds);

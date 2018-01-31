@@ -11,8 +11,7 @@ import ClientType from "./clientType.js";
 
 /**
  * The abstract Security Client - for use to extend your own
- * @name AbstractSecurityClient
- * @constructor AbstractSecurityClient
+ * @class AbstractSecurityClient
  * @property {Augmented.Security.ClientType} type The client type
  * @property {string} uri The base uri
  */
@@ -30,8 +29,7 @@ export class AbstractSecurityClient extends AugmentedObject {
 
 /**
  * The OAUTH2 Client
- * @name Augmented.Security.Client.OAUTH2Client
- * @constructor Augmented.Security.Client.OAUTH2Client
+ * @class Augmented.Security.Client.OAUTH2Client
  * @memberof Augmented.Security.Client
  */
 export class OAUTH2Client extends AbstractSecurityClient {
@@ -77,8 +75,7 @@ export class OAUTH2Client extends AbstractSecurityClient {
 
 /**
  * Role/Privilege (ACL) Security
- * @name Augmented.Security.Client.ACLClient
- * @constructor Augmented.Security.Client.ACLClient
+ * @class Augmented.Security.Client.ACLClient
  * @memberof Augmented.Security.Client
  */
 export class ACLClient extends AbstractSecurityClient {

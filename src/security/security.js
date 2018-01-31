@@ -9,7 +9,7 @@ import ClientType from "./clientType.js";
 
 /**
  * Pricipal object for use in security as part of the abstract implimentation
- * @namespace Augmented.Security.Principal
+ * @class Principal
  * @memberof Augmented.Security
  * @property {string} fullName The full name of the principal
  * @property {number} id The id of the principal
@@ -76,7 +76,7 @@ export class Principal {
 /**
 * Augmented.Security.Context
 * Used as a security data storage class
-* @constructor Augmented.Security.Context
+* @class Context
 * @param {Augmented.Security.Principal} principal The principal for this context
 * @param {array} permissions Permissions to add to the context
 * @memberof Augmented.Security
@@ -181,7 +181,7 @@ export class AuthenticationFactory {
 /**
 * Augmented.Security.Entry -
 * Used to secure a resource via permissions
-* @class Augmented.Security.Entry
+* @class Entry
 * @memberof Augmented.Security
 * @param {array} permissions Permissions to add to the entry (optional)
 * @param {boolean} negaive Sets negative permissions (optional)

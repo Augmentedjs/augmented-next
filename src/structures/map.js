@@ -2,7 +2,7 @@ import isString from "../functions/isString.js";
 
 /**
  * ES6-like Map - than can marshall
- * @constructor Augmented.Utility.Map
+ * @class Map
  * @param myData {object} Map data to fill map
  * @memberof Augmented.Utility
  */

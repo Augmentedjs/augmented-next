@@ -7,7 +7,7 @@
 
 /**
  * Shuffles an Array with Fisher-Yates Shuffle algorithm
- * @constructor Augmented.Utility.Shuffle
+ * @class Augmented.Utility.Shuffle
  * @memberof Augmented.Utility
  * @param {array} array The array to shuffle
  * @returns {array} A new shuffled array
@@ -26,7 +26,7 @@ export const shuffle = (array) => {
 
 /**
  * Prints an object nicely
- * @constructor Augmented.Utility.PrettyPrint
+ * @class Augmented.Utility.PrettyPrint
  * @memberof Augmented.Utility
  * @param {object} obj The object to print
  * @param {boolean} spaces Use spaces instead of tabs
@@ -45,7 +45,7 @@ export const prettyPrint = (obj, spaces, number) => {
 /**
  * Performs a binary search on the host array. vs indexOf<br/>
  * Binary Search is a complexity of <em>O(n log n)</em> vs <em>O(n)</em> with indexOf
- * @constructor Augmented.Utility.BinarySearch
+ * @class Augmented.Utility.BinarySearch
  * @memberof Augmented.Utility
  * @param {Array} arr The array.
  * @param {Any} find The item to search for within the array.

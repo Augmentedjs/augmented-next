@@ -1,7 +1,7 @@
 /**
  * Augmented.Utility.Stack -
  * Standard Stack data structure
- * @constructor Augmented.Utility.Stack
+ * @class Stack
  * @memberof Augmented.Utility
  */
 class Stack {

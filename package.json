@@ -1,13 +1,13 @@
 {
   "name": "augmentedjs-next",
-  "version": "2.0.0-alpha.21",
+  "version": "2.0.0-alpha.22",
   "description": "The Augmented.js Next Framework.",
   "main": "dist/augmented-next.js",
   "scripts": {
     "build": "webpack --env.prod",
     "lint": "eslint ./src/augmented.js",
     "test": "mocha --require babel-core/register -c test/*Spec.js",
-    "docs": "jsdoc ./src -d ./jsdoc/ -R ./README.md -t ./node_modules/foodoc/template -c ./jsdoc.conf.json"
+    "docs": "jsdoc ./src -r -d ./jsdoc/ -R ./README.md -t ./node_modules/foodoc/template -c ./jsdoc.conf.json"
   },
   "repository": {
     "type": "git",
@@ -19,7 +19,7 @@
   "author": "Bob Warren <jedi.master@augmentedjs.com> (http://www.augmentedjs.com)",
   "license": "Apache-2.0",
   "devDependencies": {
-    "@babel/preset-env": "^7.0.0-beta.38",
+    "@babel/preset-env": "^7.0.0-beta.39",
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
     "babel-plugin-istanbul": "^4.1.5",
@@ -34,7 +34,7 @@
     "foodoc": "0.0.8",
     "jsdoc": "^3.5.5",
     "mocha": "^4.1.0",
-    "uglifyjs-webpack-plugin": "^1.1.6",
+    "uglifyjs-webpack-plugin": "^1.1.8",
     "webpack": "^3.10.0",
     "webpack-config-utils": "^2.3.0"
   },

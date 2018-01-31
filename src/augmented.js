@@ -36,6 +36,8 @@ import exec from "./functions/exec.js";
 import isDefined from "./functions/isDefined.js";
 import some from "./functions/some.js";
 import splice from "./functions/splice.js";
+import before from "./functions/before.js";
+import once from "./functions/once.js";
 import { fibonacci, fibonacciSequence } from "./functions/fibonacci.js";
 
 /*
@@ -49,7 +51,7 @@ import { fibonacci, fibonacciSequence } from "./functions/fibonacci.js";
  * @author Bob Warren
  *
  * @module Augmented
- * @version 2.0.0-alpha.21
+ * @version 2.0.0-alpha.22
  * @license Apache-2.0
  */
 const Augmented = {};
@@ -97,23 +99,28 @@ Augmented.some = some;
 Augmented.fibonacci = fibonacci;
 Augmented.fibonacciSequence = fibonacciSequence;
 Augmented.splice = splice;
+Augmented.before = before;
+Augmented.once = once;
 
 /**
  * The standard version property
  * @constant VERSION
+ * @memberof Augmented
  */
-Augmented.VERSION = "2.0.0-alpha.21";
+Augmented.VERSION = "2.0.0-alpha.22";
 /**
  * A codename for internal use
  * @constant codename
+ * @memberof Augmented
  */
 Augmented.codename = "JC Denton";
 /**
  * A release name to help with identification of minor releases
  * @constant releasename
+ * @memberof Augmented
  */
 Augmented.releasename = "UNATCO";
 
-//export default Augmented;
+export default Augmented;
 // browser-compatible export from babel
-module.exports = Augmented;
+//module.exports = Augmented;

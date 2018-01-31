@@ -30,7 +30,7 @@ const addOptions = {
  * <li>Validation and Schemas</li>
  * <li>Security</li>
  * </ul>
- * @constructor Augmented.Collection
+ * @class Augmented.Collection
  * @memberof Augmented
  * @extends Augmented.Object
  */
@@ -69,14 +69,14 @@ export default class AbstractCollection extends AugmentedObject {
   /**
    * Schema property
    * @property {object} schema The JSON schema from this collection
-   * @memberof Augmented.Collection
+   * @memberof Collection
    */
 
 
   /**
    * Validation Message property
    * @property {object} validationMessages The property holding validation message data
-   * @memberof Augmented.Collection
+   * @memberof Collection
    */
 
 
@@ -519,7 +519,7 @@ export default class AbstractCollection extends AugmentedObject {
   /**
    * supportsValidation - Returns True if this collection supports validation
    * @method supportsValidation
-   * @memberof Augmented.Collection
+   * @memberof Collection
    * @returns {boolean} Returns True if this collection supports validation
    */
   supportsValidation() {
@@ -528,7 +528,7 @@ export default class AbstractCollection extends AugmentedObject {
   /**
    * isValid - Returns True if this collection is valid
    * @method isValid
-   * @memberof Augmented.Collection
+   * @memberof Collection
    * @returns {boolean} Returns True if this collection is valid
    */
   isValid() {
@@ -537,7 +537,7 @@ export default class AbstractCollection extends AugmentedObject {
   /**
    * getValidationMessages - Returns the validation messages
    * @method getValidationMessages
-   * @memberof Augmented.Collection
+   * @memberof Collection
    * @returns {array} Returns the message is an array of objects.
    */
   getValidationMessages() {
@@ -546,7 +546,7 @@ export default class AbstractCollection extends AugmentedObject {
   /**
    * Validates the collection
    * @method validate
-   * @memberof Augmented.Collection
+   * @memberof Collection
    * @returns {array} Returns array of message from validation
    */
   validate() {
@@ -577,14 +577,14 @@ export default class AbstractCollection extends AugmentedObject {
   /**
    * Collecion.sync
    * @method sync
-   * @memberof Augmented.Collection
+   * @memberof Collection
    */
   sync(method, model, options) {
   };
   /**
    * Collection.save - Saves the collection as a "create"
    * @method save
-   * @memberof Augmented.Collection
+   * @memberof Collection
    */
   save(options) {
     this.sync("create", this, options);
@@ -592,7 +592,7 @@ export default class AbstractCollection extends AugmentedObject {
   /**
    * Collection.update - Updates the collection as an "update"
    * @method update
-   * @memberof Augmented.Collection
+   * @memberof Collection
    */
   update(options) {
     this.sync("update", this, options);
@@ -600,7 +600,7 @@ export default class AbstractCollection extends AugmentedObject {
   /**
    * Collection.remove - Remove from the collection as a "delete"
    * @method remove
-   * @memberof Augmented.Collection
+   * @memberof Collection
    */
   remove(options) {
     this.sync("delete", this, options);
@@ -609,7 +609,7 @@ export default class AbstractCollection extends AugmentedObject {
    * sortByKey - Sorts the collection by a property key
    * @method sortByKey
    * @param {object} key The key to sort by
-   * @memberof Augmented.Collection
+   * @memberof Collection
    */
   sortByKey(key) {
     if (key) {
@@ -623,7 +623,7 @@ export default class AbstractCollection extends AugmentedObject {
   /**
    * Collection.isEmpty - returns true is the collection is empty
    * @method isEmpty
-   * @memberof Augmented.Collection
+   * @memberof Collection
    * @returns {boolean} returns true is the collection is empty
    */
   isEmpty() {
@@ -632,7 +632,7 @@ export default class AbstractCollection extends AugmentedObject {
   /**
    * Collection.size - returns the size of the collection
    * @method size
-   * @memberof Augmented.Collection
+   * @memberof Collection
    * @returns {number} returns the size of the collection
    */
   size() {
@@ -642,7 +642,7 @@ export default class AbstractCollection extends AugmentedObject {
   /**
    * toString - returns the collection data as a string
    * @method toString
-   * @memberof Augmented.Collection
+   * @memberof Collection
    * @returns {string}returns the collection data as a string
    */
   toString() {

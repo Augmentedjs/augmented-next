@@ -4,7 +4,7 @@ import Configuration from "../configuration.js";
 /**
  * Augmented.Utility.AsynchronousQueue -
  * An Async queue for handling async chained functions
- * @constructor Augmented.Utility.AsynchronousQueue
+ * @class AsynchronousQueue
  * @param {number} timeout The timout period for each process in the queue (optional)
  * @memberof Augmented.Utility
  */

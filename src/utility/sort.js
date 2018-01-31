@@ -1,6 +1,6 @@
 /**
  * Sorts an array of objects by propery in object
- * @constructor Augmented.Utility.sortObjects
+ * @function sortObjects
  * @memberof Augmented.Utility
  * @param {array} array The object array to sort
  * @param {object} key The property to sort by
@@ -15,7 +15,7 @@ export const sortObjects = (array, key) => {
 
 /**
  * Split the array into halves and merge them recursively
- * @constructor Augmented.Utility.mergeSort
+ * @function mergeSort
  * @memberof Augmented.Utility
  * @param {array} array The array to sort
  * @returns {array} The sorted array
@@ -33,7 +33,9 @@ export const mergeSort = (arr) => {
   return merge(mergeSort(left), mergeSort(right));
 };
 
-// compare the arrays item by item and return the concatenated result
+/*
+ * compare the arrays item by item and return the concatenated result
+ */
 const merge = (left, right) => {
   let result = [];
   let indexLeft = 0;
@@ -53,7 +55,7 @@ const merge = (left, right) => {
 
 /**
  * Quick Sort implimentation for Arrays -
- * @constructor Augmented.Utility.QuickSort
+ * @function QuickSort
  * @memberof Augmented.Utility
  * @param {Array} arr Array to Sort
  * @returns {Array} Returns a sorted array
@@ -80,7 +82,7 @@ export const quickSort = (arr) => {
 /**
  * Insertion sort is a simple sorting algorithm that builds the final sorted array (or list) one item at a time.
  * It is much less efficient on large lists than more advanced algorithms such as quicksort, heapsort, or merge sort.
- * @constructor Augmented.Utility.mergeSort
+ * @function mergeSort
  * @memberof Augmented.Utility
  * @param {array} array The array to sort
  * @returns {array} The sorted array
@@ -108,7 +110,7 @@ export const insertionSort = (unsortedList) => {
 
 /**
  * Simple sorting algorithm that repeatedly steps through the list to be sorted, compares each pair of adjacent items and swaps them if they are in the wrong order.
- * @constructor Augmented.Utility.mergeSort
+ * @function mergeSort
  * @memberof Augmented.Utility
  * @param {array} array The array to sort
  * @returns {array} The sorted array

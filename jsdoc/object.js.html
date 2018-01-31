@@ -67,7 +67,25 @@
 							<li class="dropdown">
 								<a href="list_class.html" class="dropdown-toggle" data-toggle="dropdown">Classes<b class="caret"></b></a>
 								<ul class="dropdown-menu">
+										<li><a href="AbstractSecurityClient.html">AbstractSecurityClient</a></li>
+										<li><a href="Augmented.AbstractLogger.html">Augmented.AbstractLogger</a></li>
+										<li><a href="Augmented.AbstractModel.html">Augmented.AbstractModel</a></li>
+										<li><a href="Augmented.Application.html">Augmented.Application</a></li>
+										<li><a href="Augmented.Collection.html">Augmented.Collection</a></li>
 										<li><a href="Augmented.Object.html">Augmented.Object</a></li>
+										<li><a href="Augmented.Security.Client.ACLClient.html">Augmented.Security.Client.ACLClient</a></li>
+										<li><a href="Augmented.Security.Client.OAUTH2Client.html">Augmented.Security.Client.OAUTH2Client</a></li>
+										<li><a href="Augmented.Security.Context.html">Augmented.Security.Context</a></li>
+										<li><a href="Augmented.Security.Entry.html">Augmented.Security.Entry</a></li>
+										<li><a href="Augmented.Security.Principal.html">Augmented.Security.Principal</a></li>
+										<li><a href="Augmented.Utility.AsynchronousQueue.html">Augmented.Utility.AsynchronousQueue</a></li>
+										<li><a href="Augmented.Utility.BinarySearch.html">Augmented.Utility.BinarySearch</a></li>
+										<li><a href="Augmented.Utility.Map.html">Augmented.Utility.Map</a></li>
+										<li><a href="Augmented.Utility.PrettyPrint.html">Augmented.Utility.PrettyPrint</a></li>
+										<li><a href="Augmented.Utility.SchemaGenerator.html">Augmented.Utility.SchemaGenerator</a></li>
+										<li><a href="Augmented.Utility.Shuffle.html">Augmented.Utility.Shuffle</a></li>
+										<li><a href="Augmented.Utility.Stack.html">Augmented.Utility.Stack</a></li>
+										<li><a href="Augmented.ValidationFramework.html">Augmented.ValidationFramework</a></li>
 								</ul>
 							</li>
 							<li class="dropdown">
@@ -79,10 +97,17 @@
 							<li class="dropdown">
 								<a href="list_namespace.html" class="dropdown-toggle" data-toggle="dropdown">Namespaces<b class="caret"></b></a>
 								<ul class="dropdown-menu">
+										<li><a href="Augmented.Logger.html">Augmented.Logger</a></li>
+										<li><a href="Augmented.Logger.LoggerFactory.html">Augmented.Logger.LoggerFactory</a></li>
+										<li><a href="Augmented.Security.html">Augmented.Security</a></li>
+										<li><a href="Augmented.Security.AuthenticationFactory.html">Augmented.Security.AuthenticationFactory</a></li>
+										<li><a href="Augmented.Security.Client.html">Augmented.Security.Client</a></li>
+										<li><a href="Augmented.Utility.html">Augmented.Utility</a></li>
 										<li><a href="Augmented.Utility.BundleObject.html">Augmented.Utility.BundleObject</a></li>
 										<li><a href="Augmented.Utility.MessageKeyFormatter.html">Augmented.Utility.MessageKeyFormatter</a></li>
 										<li><a href="Augmented.Utility.MessageReader.html">Augmented.Utility.MessageReader</a></li>
 										<li><a href="Augmented.Utility.ResourceBundle.html">Augmented.Utility.ResourceBundle</a></li>
+										<li><a href="Augmented.Utility.Transformer.html">Augmented.Utility.Transformer</a></li>
 								</ul>
 							</li>
 				</ul>
@@ -113,180 +138,13 @@
 			<article></article>
 			<pre class="prettyprint source language-javascript line-numbers"><code class="language-javascript">const _bind = require("lodash.bind");
 import uniqueId from "./functions/uniqueId.js";
-
-// some lodash-like functions ported over
-
-const _before = (nn, func) => {
-  let result, n;
-  if (typeof func != 'function') {
-    throw new TypeError(FUNC_ERROR_TEXT);
-  }
-  n = Number.parseInt(nn);
-  return () => {
-    if (--n > 0) {
-      result = func.apply(this, arguments);
-    }
-    if (n &lt;= 1) {
-      func = undefined;
-    }
-    return result;
-  };
-};
-const _once = (func) => {
-  return _before(2, func);
-};
-
-// Events
-
-// Regular expression used to split event strings.
-const EVENT_SPLITTER = /\s+/;
-
-// Iterates over the standard `event, callback` (as well as the fancy multiple
-// space-separated events `"change blur", callback` and jQuery-style event
-// maps `{event: callback}`).
-const eventsApi = (iteratee, events, name, callback, opts) => {
-  let i = 0, names;
-  if (name &amp;&amp; typeof name === "object") {
-    // Handle event maps.
-    if (callback !== void 0 &amp;&amp; "context" in opts &amp;&amp; opts.context === void 0) {
-      opts.context = callback;
-    }
-    for (names = Object.keys(name); i &lt; names.length; i++) {
-      events = eventsApi(iteratee, events, names[i], name[names[i]], opts);
-    }
-  } else if (name &amp;&amp; EVENT_SPLITTER.test(name)) {
-    // Handle space-separated event names by delegating them individually.
-    for (names = name.split(EVENT_SPLITTER); i &lt; names.length; i++) {
-      events = iteratee(events, names[i], callback, opts);
-    }
-  } else {
-    // Finally, standard events.
-    events = iteratee(events, name, callback, opts);
-  }
-  return events;
-};
-
-// Guard the `listening` argument from the public API.
-const internalOn = (obj, name, callback, context, listening) => {
-  obj._events = eventsApi(onApi, obj._events || {}, name, callback, {
-    context: context,
-    ctx: obj,
-    listening: listening
-  });
-
-  if (listening) {
-    const listeners = obj._listeners || (obj._listeners = {});
-    listeners[listening.id] = listening;
-  }
-  return obj;
-};
-
-// The reducing API that adds a callback to the `events` object.
-const onApi = (events, name, callback, options) => {
-  if (callback) {
-    const handlers = events[name] || (events[name] = []);
-    const context = options.context, ctx = options.ctx, listening = options.listening;
-    if (listening) {
-      listening.count++;
-    }
-    handlers.push({ callback: callback, context: context, ctx: context || ctx, listening: listening });
-  }
-  return events;
-};
-
-// The reducing API that removes a callback from the `events` object.
-const offApi = (events, name, callback, options) => {
-  if (!events) {
-    return;
-  }
-  let i = 0, listening;
-  const context = options.context, listeners = options.listeners;
-
-  // Delete all events listeners and "drop" events.
-  if (!name &amp;&amp; !callback &amp;&amp; !context) {
-    const ids = Object.keys(listeners);
-    for (; i &lt; ids.length; i++) {
-      listening = listeners[ids[i]];
-      delete listeners[listening.id];
-      delete listening.listeningTo[listening.objId];
-    }
-    return;
-  }
-
-  let names = name ? [name] : Object.keys(events);
-  for (; i &lt; names.length; i++) {
-    name = names[i];
-    const handlers = events[name];
-
-    // Bail out if there are no events stored.
-    if (!handlers) break;
-
-    // Replace events if there are any remaining.  Otherwise, clean up.
-    const remaining = [];
-    let j = 0;
-    for (j = 0; j &lt; handlers.length; j++) {
-      const handler = handlers[j];
-      if (
-        callback &amp;&amp; callback !== handler.callback &amp;&amp;
-          callback !== handler.callback._callback ||
-            context &amp;&amp; context !== handler.context
-      ) {
-        remaining.push(handler);
-      } else {
-        listening = handler.listening;
-        if (listening &amp;&amp; --listening.count === 0) {
-          delete listeners[listening.id];
-          delete listening.listeningTo[listening.objId];
-        }
-      }
-    }
-
-    // Update tail event if the list has any events.  Otherwise, clean up.
-    if (remaining.length) {
-      events[name] = remaining;
-    } else {
-      delete events[name];
-    }
-  }
-  return events;
-};
-
-// Handles triggering the appropriate event callbacks.
-const triggerApi = (objEvents, name, callback, args) => {
-  if (objEvents) {
-    const events = objEvents[name];
-    let allEvents = objEvents.all;
-    if (events &amp;&amp; allEvents) {
-      allEvents = allEvents.slice();
-    }
-    if (events) {
-      triggerEvents(events, args);
-    }
-    if (allEvents) {
-      triggerEvents(allEvents, [name].concat(args));
-    }
-  }
-  return objEvents;
-};
-
-// A difficult-to-believe, but optimized internal dispatch function for
-// triggering events. Tries to keep the usual cases speedy
-const triggerEvents = (events, args) => {
-  let ev, i = -1;
-  const l = events.length, a1 = args[0], a2 = args[1], a3 = args[2];
-  switch (args.length) {
-    case 0: while (++i &lt; l) (ev = events[i]).callback.call(ev.ctx); return;
-    case 1: while (++i &lt; l) (ev = events[i]).callback.call(ev.ctx, a1); return;
-    case 2: while (++i &lt; l) (ev = events[i]).callback.call(ev.ctx, a1, a2); return;
-    case 3: while (++i &lt; l) (ev = events[i]).callback.call(ev.ctx, a1, a2, a3); return;
-    default: while (++i &lt; l) (ev = events[i]).callback.apply(ev.ctx, args); return;
-  }
-};
+import once from "./functions/once.js";
+import { eventsApi, internalOn, offApi, triggerApi } from "./events.js";
 
 /**
  * Augmented Object
  * Base class for other classes to extend from
- * @constructor Augmented.Object
+ * @class Augmented.Object
  * @param {object} options Object options
  * @memberof Augmented
  */
@@ -321,6 +179,11 @@ class AugmentedObject {
     return this;
   };
 
+  /**
+   * The passed options
+   * @property options
+   * @memberof Augmented.Object
+   */
   get options() {
     return this._options;
   };
@@ -329,6 +192,11 @@ class AugmentedObject {
     this._options = options;
   };
 
+  /**
+   * The Events
+   * @property events
+   * @memberof Augmented.Object
+   */
   get events() {
     return this._events;
   };
@@ -500,7 +368,7 @@ class AugmentedObject {
   // `offer` unbinds the `onceWrapper` after it has been called.
   _onceMap(map, name, callback, offer) {
     if (callback) {
-      const __once = map[name] = _once(() => {
+      const __once = map[name] = once(() => {
         offer(name, __once);
         callback.apply(this, arguments);
       });
@@ -518,7 +386,7 @@ export default AugmentedObject;
 	</div>
 	<footer>
 				<div class="footer-option">&lt;a href&#x3D;&#x27;http://www.augmentedjs.com&#x27;&gt;Augmented.js Homepage&lt;/a&gt;</div>
-			<div class="generated-by">Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Sat Jan 27th 2018 using the <a href="https://github.com/steveush/foodoc">FooDoc template</a>.</div>
+			<div class="generated-by">Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Wed Jan 31st 2018 using the <a href="https://github.com/steveush/foodoc">FooDoc template</a>.</div>
 	</footer>
 	<script src="js/jquery.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
