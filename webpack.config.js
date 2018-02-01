@@ -28,12 +28,16 @@ module.exports = {
     colors: true
   },
   devtool: 'source-map',
-  plugins: [
-    new UglifyJsPlugin({
-    uglifyOptions: {
-      ie8: false,
-      ecma: 8
-    }
-  })
-  ]
+
 };
+
+/*
+plugins: [
+  new UglifyJsPlugin({
+  uglifyOptions: {
+    ie8: false,
+    ecma: 8
+  }
+})
+]
+*/
