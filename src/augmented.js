@@ -51,7 +51,7 @@ import { fibonacci, fibonacciSequence } from "./functions/fibonacci.js";
  * @author Bob Warren
  *
  * @module Augmented
- * @version 2.0.0-alpha.23
+ * @version 2.0.0-alpha.24
  * @license Apache-2.0
  */
 const Augmented = {};
@@ -107,7 +107,7 @@ Augmented.once = once;
  * @constant VERSION
  * @memberof Augmented
  */
-Augmented.VERSION = "2.0.0-alpha.23";
+Augmented.VERSION = "2.0.0-alpha.24";
 /**
  * A codename for internal use
  * @constant codename
@@ -121,6 +121,6 @@ Augmented.codename = "JC Denton";
  */
 Augmented.releasename = "UNATCO";
 
-export default Augmented;
+//export default Augmented;
 // browser-compatible export from babel
-//module.exports = Augmented;
+module.exports = Augmented;

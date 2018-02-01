@@ -3942,10 +3942,6 @@ exports.default = pad;
 "use strict";
 
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
 var _utility = __webpack_require__(24);
 
 var Utility = _interopRequireWildcard(_utility);
@@ -4091,7 +4087,7 @@ function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj;
  * @author Bob Warren
  *
  * @module Augmented
- * @version 2.0.0-alpha.23
+ * @version 2.0.0-alpha.24
  * @license Apache-2.0
  */
 var Augmented = {};
@@ -4147,7 +4143,7 @@ Augmented.once = _once2.default;
  * @constant VERSION
  * @memberof Augmented
  */
-Augmented.VERSION = "2.0.0-alpha.23";
+Augmented.VERSION = "2.0.0-alpha.24";
 /**
  * A codename for internal use
  * @constant codename
@@ -4161,9 +4157,9 @@ Augmented.codename = "JC Denton";
  */
 Augmented.releasename = "UNATCO";
 
-exports.default = Augmented;
+//export default Augmented;
 // browser-compatible export from babel
-//module.exports = Augmented;
+module.exports = Augmented;
 
 /***/ }),
 /* 24 */
