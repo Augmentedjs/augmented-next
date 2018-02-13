@@ -53,7 +53,6 @@ check = (app) => {
  * <p>Application Class for use to define an application.<br/>
  * An application contains metadata and initializers for the application.<br/>
  * <em>Applications track history, and normally would contain the entire single page App startup.</em></p>
- * @class Augmented.Application
  * @param {string} name Name of the application
  * @memberof Augmented
  * @example const app = new Augmented.Application("Awesome");
@@ -83,7 +82,6 @@ class Application {
   /**
    * The router property of the application
    * @property router
-   * @memberof Application
    */
 
   get router() {
@@ -97,7 +95,6 @@ class Application {
   /**
    * The started property of the application
    * @property started
-   * @memberof Application
    * @returns {boolean} Returns the property of the started Event
    */
 
@@ -106,24 +103,18 @@ class Application {
   };
 
   /** Event for after during startup of the application
-   * @method initialize
-   * @memberof Application
    */
   initialize() {
     return true;
   };
 
   /** Event for before the startup of the application
-   * @method beforeInitialize
-   * @memberof Application
    */
   beforeInitialize() {
     return true;
   };
 
   /** Event for after the startup of the application
-   * @method afterInitialize
-   * @memberof Application
    */
   afterInitialize() {
     return true;
@@ -131,7 +122,6 @@ class Application {
 
   /** The application name
    * @property name
-   * @memberof Application
    */
   get name() {
     return this.getMetadataItem("name");
@@ -143,7 +133,6 @@ class Application {
 
   /** The metadata map
   * @property metadata
-  * @memberof Application
   * @returns Map of metadata in an Augmented.Utility.Map
   */
   get metadata() {
@@ -151,29 +140,23 @@ class Application {
   };
 
   /** Set a specific item in metadata
-   * @method setMetadataItem
    * @param {string} key Key to set
    * @param {object} value Value of the key
-   * @memberof Application
    */
   setMetadataItem(key, value) {
     this._metadata[key] = value;
   };
 
   /** Get a specific item in metadata
-   * @method getMetadataItem
    * @param {string} key Key
    * @returns {object} value of the key
-   * @memberof Application
    */
   getMetadataItem(key) {
     return this._metadata[key];
   };
 
   /** Register a Router - adds routes to the application
-   * @method registerRouter
    * @param {Router} router Router to register
-   * @memberof Application
    */
   registerRouter(router) {
     if (router){
@@ -182,9 +165,7 @@ class Application {
   };
 
   /** Event to start the application and history
-   * @method start
    * @returns {Promise} Promise.Resolve or Promise.Reject based on success
-   * @memberof Application
    */
    start() {
      const app = this;
@@ -205,16 +186,13 @@ class Application {
    };
 
   /** Event to stop the application and history
-   * @method stop
-   * @memberof Application
    */
   stop() {
     this._started = false;
   };
 
   /** Gets the datastore for the application
-   * @property {Augmented.Model|object}datastore
-   * @memberof Application
+   * @property {Augmented.Model|object} datastore
    */
   get datastore() {
     return this.getMetadataItem("datastore");
