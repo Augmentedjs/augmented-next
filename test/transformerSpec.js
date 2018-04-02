@@ -1,6 +1,3 @@
-import Augmented from "../dist/augmented-next.js";
-import expect from "expect";
-
 const STRING = "string";
 const NUMBER = "number";
 const BOOLEAN = "boolean";
@@ -21,38 +18,38 @@ describe("Given a Utility Transformer", () => {
 
 		it("can transform to a string", () => {
 			out = Augmented.Utility.Transformer.transform(source, Augmented.Utility.TransformerType.STRING);
-			expect(typeof out === STRING).toBeTruthy();
-			expect(out).toEqual("100");
+			expect(typeof out === STRING).to.be.true;
+			expect(out).to.equal("100");
 		});
 
 		it("can transform to a integer", () => {
 			out = Augmented.Utility.Transformer.transform(source, Augmented.Utility.TransformerType.INTEGER);
-			expect(typeof out === NUMBER).toBeTruthy();
-			expect(out).toEqual(100);
+			expect(typeof out === NUMBER).to.be.true;
+			expect(out).to.equal(100);
 		});
 
 		it("can transform to a number", () => {
 			out = Augmented.Utility.Transformer.transform(source, Augmented.Utility.TransformerType.NUMBER);
-			expect(typeof out === NUMBER).toBeTruthy();
-			expect(out).toEqual(100);
+			expect(typeof out === NUMBER).to.be.true;
+			expect(out).to.equal(100);
 		});
 
 		it("can transform to a boolean", () => {
 			out = Augmented.Utility.Transformer.transform(source, Augmented.Utility.TransformerType.BOOLEAN);
-			expect(typeof out === BOOLEAN).toBeTruthy();
-			expect(out).toEqual(true);
+			expect(typeof out === BOOLEAN).to.be.true;
+			expect(out).to.equal(true);
 		});
 
 		it("can transform to an array", () => {
 			out = Augmented.Utility.Transformer.transform(source, Augmented.Utility.TransformerType.ARRAY);
-			expect(Array.isArray(out)).toBeTruthy();
-			expect(out).toEqual([100]);
+			expect(Array.isArray(out)).to.be.true;
+			expect(out).to.equal([100]);
 		});
 
 		it("can transform to an object", () => {
 			out = Augmented.Utility.Transformer.transform(source, Augmented.Utility.TransformerType.OBJECT);
-			expect(typeof out === OBJECT).toBeTruthy();
-			expect(out).toEqual({100: 100});
+			expect(typeof out === OBJECT).to.be.true;
+			expect(out).to.deep.equal({100: 100});
 		});
 	});
 
@@ -69,38 +66,38 @@ describe("Given a Utility Transformer", () => {
 
 		it("can transform to a string", () => {
 			out = Augmented.Utility.Transformer.transform(source, Augmented.Utility.TransformerType.STRING);
-			expect(typeof out === STRING).toBeTruthy();
-			expect(out).toEqual("1024.55");
+			expect(typeof out === STRING).to.be.true;
+			expect(out).to.equal("1024.55");
 		});
 
 		it("can transform to a integer", () => {
 			out = Augmented.Utility.Transformer.transform(source, Augmented.Utility.TransformerType.INTEGER);
-			expect(typeof out === NUMBER).toBeTruthy();
-			expect(out).toEqual(1024);
+			expect(typeof out === NUMBER).to.be.true;
+			expect(out).to.equal(1024);
 		});
 
 		it("can transform to a number", () => {
 			out = Augmented.Utility.Transformer.transform(source, Augmented.Utility.TransformerType.NUMBER);
-			expect(typeof out === NUMBER).toBeTruthy();
-			expect(out).toEqual(1024.55);
+			expect(typeof out === NUMBER).to.be.true;
+			expect(out).to.equal(1024.55);
 		});
 
 		it("can transform to a boolean", () => {
 			out = Augmented.Utility.Transformer.transform(source, Augmented.Utility.TransformerType.BOOLEAN);
-			expect(typeof out === BOOLEAN).toBeTruthy();
-			expect(out).toEqual(true);
+			expect(typeof out === BOOLEAN).to.be.true;
+			expect(out).to.equal(true);
 		});
 
 		it("can transform to an array", () => {
 			out = Augmented.Utility.Transformer.transform(source, Augmented.Utility.TransformerType.ARRAY);
-			expect(Array.isArray(out)).toBeTruthy();
-			expect(out).toEqual([1024.55]);
+			expect(Array.isArray(out)).to.be.true;
+			expect(out).to.equal([1024.55]);
 		});
 
 		it("can transform to an object", () => {
 			out = Augmented.Utility.Transformer.transform(source, Augmented.Utility.TransformerType.OBJECT);
-			expect(typeof out === OBJECT).toBeTruthy();
-			expect(out).toEqual({1024.55: 1024.55});
+			expect(typeof out === OBJECT).to.be.true;
+			expect(out).to.deep.equal({1024.55: 1024.55});
 		});
 	});
 
@@ -117,38 +114,38 @@ describe("Given a Utility Transformer", () => {
 
 		it("can transform to a string", () => {
 			out = Augmented.Utility.Transformer.transform(source, Augmented.Utility.TransformerType.STRING);
-			expect(typeof out === STRING).toBeTruthy();
-			expect(out).toEqual("12345.80");
+			expect(typeof out === STRING).to.be.true;
+			expect(out).to.equal("12345.80");
 		});
 
 		it("can transform to a integer", () => {
 			out = Augmented.Utility.Transformer.transform(source, Augmented.Utility.TransformerType.INTEGER);
-			expect(typeof out === NUMBER).toBeTruthy();
-			expect(out).toEqual(12345);
+			expect(typeof out === NUMBER).to.be.true;
+			expect(out).to.equal(12345);
 		});
 
 		it("can transform to a number", () => {
 			out = Augmented.Utility.Transformer.transform(source, Augmented.Utility.TransformerType.NUMBER);
-			expect(typeof out === NUMBER).toBeTruthy();
-			expect(out).toEqual(12345.80);
+			expect(typeof out === NUMBER).to.be.true;
+			expect(out).to.equal(12345.80);
 		});
 
 		it("can transform to a boolean", () => {
 			out = Augmented.Utility.Transformer.transform(source, Augmented.Utility.TransformerType.BOOLEAN);
-			expect(typeof out === BOOLEAN).toBeTruthy();
-			expect(out).toEqual(true);
+			expect(typeof out === BOOLEAN).to.be.true;
+			expect(out).to.equal(true);
 		});
 
 		it("can transform to an array", () => {
 			out = Augmented.Utility.Transformer.transform(source, Augmented.Utility.TransformerType.ARRAY);
-			expect(Array.isArray(out)).toBeTruthy();
-			expect(out).toEqual(["12345.80"]);
+			expect(Array.isArray(out)).to.be.true;
+			expect(out).to.equal(["12345.80"]);
 		});
 
 		it("can transform to an object", () => {
 			out = Augmented.Utility.Transformer.transform(source, Augmented.Utility.TransformerType.OBJECT);
-			expect(typeof out === OBJECT).toBeTruthy();
-			expect(out).toEqual({"12345.80": "12345.80"});
+			expect(typeof out === OBJECT).to.be.true;
+			expect(out).to.deep.equal({"12345.80": "12345.80"});
 		});
 	});
 
@@ -165,38 +162,38 @@ describe("Given a Utility Transformer", () => {
 
 		it("can transform to a string", () => {
 			out = Augmented.Utility.Transformer.transform(source, Augmented.Utility.TransformerType.STRING);
-			expect(typeof out === STRING).toBeTruthy();
-			expect(out).toEqual("false");
+			expect(typeof out === STRING).to.be.true;
+			expect(out).to.equal("false");
 		});
 
 		it("will transform to a integer (NaN)", () => {
 			out = Augmented.Utility.Transformer.transform(source, Augmented.Utility.TransformerType.INTEGER);
-			expect(typeof out === NUMBER).toBeTruthy();
-			expect(out).toEqual(NaN);
+			expect(typeof out === NUMBER).to.be.true;
+			expect(out).to.deep.equal(NaN);
 		});
 
 		it("can transform to a number", () => {
 			out = Augmented.Utility.Transformer.transform(source, Augmented.Utility.TransformerType.NUMBER);
-			expect(typeof out === NUMBER).toBeTruthy();
-			expect(out).toEqual(0);
+			expect(typeof out === NUMBER).to.be.true;
+			expect(out).to.equal(0);
 		});
 
 		it("can transform to a boolean", () => {
 			out = Augmented.Utility.Transformer.transform(source, Augmented.Utility.TransformerType.BOOLEAN);
-			expect(typeof out === BOOLEAN).toBeTruthy();
-			expect(out).toEqual(false);
+			expect(typeof out === BOOLEAN).to.be.true;
+			expect(out).to.equal(false);
 		});
 
 		it("can transform to an array", () => {
 			out = Augmented.Utility.Transformer.transform(source, Augmented.Utility.TransformerType.ARRAY);
-			expect(Array.isArray(out)).toBeTruthy();
-			expect(out).toEqual([false]);
+			expect(Array.isArray(out)).to.be.true;
+			expect(out).to.equal([false]);
 		});
 
 		it("can transform to an object", () => {
 			out = Augmented.Utility.Transformer.transform(source, Augmented.Utility.TransformerType.OBJECT);
-			expect(typeof out === OBJECT).toBeTruthy();
-			expect(out).toEqual({false: false});
+			expect(typeof out === OBJECT).to.be.true;
+			expect(out).to.deep.equal({false: false});
 		});
 	});
 
@@ -213,38 +210,38 @@ describe("Given a Utility Transformer", () => {
 
 		it("can transform to a string", () => {
 			out = Augmented.Utility.Transformer.transform(source, Augmented.Utility.TransformerType.STRING);
-			expect(typeof out === STRING).toBeTruthy();
-			expect(out).toEqual("[1,2,3]");
+			expect(typeof out === STRING).to.be.true;
+			expect(out).to.equal("[1,2,3]");
 		});
 
 		it("will transform to a integer (first in array)", () => {
 			out = Augmented.Utility.Transformer.transform(source, Augmented.Utility.TransformerType.INTEGER);
-			expect(typeof out === NUMBER).toBeTruthy();
-			expect(out).toEqual(1);
+			expect(typeof out === NUMBER).to.be.true;
+			expect(out).to.equal(1);
 		});
 
 		it("can transform to a number (NaN)", () => {
 			out = Augmented.Utility.Transformer.transform(source, Augmented.Utility.TransformerType.NUMBER);
-			expect(typeof out === NUMBER).toBeTruthy();
-			expect(out).toEqual(NaN);
+			expect(typeof out === NUMBER).to.be.true;
+			expect(out).to.deep.equal(NaN);
 		});
 
 		it("can transform to a boolean", () => {
 			out = Augmented.Utility.Transformer.transform(source, Augmented.Utility.TransformerType.BOOLEAN);
-			expect(typeof out === BOOLEAN).toBeTruthy();
-			expect(out).toEqual(true);
+			expect(typeof out === BOOLEAN).to.be.true;
+			expect(out).to.equal(true);
 		});
 
 		it("can transform to an array", () => {
 			out = Augmented.Utility.Transformer.transform(source, Augmented.Utility.TransformerType.ARRAY);
-			expect(Array.isArray(out)).toBeTruthy();
-			expect(out).toEqual([1,2,3]);
+			expect(Array.isArray(out)).to.be.true;
+			expect(out).to.equal([1,2,3]);
 		});
 
 		it("can transform to an object", () => {
 			out = Augmented.Utility.Transformer.transform(source, Augmented.Utility.TransformerType.OBJECT);
-			expect(typeof out === OBJECT).toBeTruthy();
-			expect(out).toEqual([1,2,3]);
+			expect(typeof out === OBJECT).to.be.true;
+			expect(out).to.equal([1,2,3]);
 		});
 	});
 
@@ -261,37 +258,37 @@ describe("Given a Utility Transformer", () => {
 
 		it("can transform to a string", () => {
 			out = Augmented.Utility.Transformer.transform(source, Augmented.Utility.TransformerType.STRING);
-			expect(typeof out === STRING).toBeTruthy();
-			expect(out).toEqual("{\"a\":\"a\"}");
+			expect(typeof out === STRING).to.be.true;
+			expect(out).to.equal("{\"a\":\"a\"}");
 		});
 
 		it("will transform to a integer (NaN)", () => {
 			out = Augmented.Utility.Transformer.transform(source, Augmented.Utility.TransformerType.INTEGER);
-			expect(typeof out === NUMBER).toBeTruthy();
-			expect(out).toEqual(NaN);
+			expect(typeof out === NUMBER).to.be.true;
+			expect(out).to.deep.equal(NaN);
 		});
 
 		it("can transform to a number (NaN)", () => {
 			out = Augmented.Utility.Transformer.transform(source, Augmented.Utility.TransformerType.NUMBER);
-			expect(typeof out === NUMBER).toBeTruthy();
-			expect(out).toEqual(NaN);
+			expect(typeof out === NUMBER).to.be.true;
+			expect(out).to.deep.equal(NaN);
 		});
 
 		it("can transform to a boolean", () => {
 			out = Augmented.Utility.Transformer.transform(source, Augmented.Utility.TransformerType.BOOLEAN);
-			expect(typeof out === BOOLEAN).toBeTruthy();
-			expect(out).toEqual(true);
+			expect(typeof out === BOOLEAN).to.be.true;
+			expect(out).to.equal(true);
 		});
 
 		it("can transform to an array", () => {
 			out = Augmented.Utility.Transformer.transform(source, Augmented.Utility.TransformerType.ARRAY);
-			expect(Array.isArray(out)).toBeTruthy();
+			expect(Array.isArray(out)).to.be.true;
 		});
 
 		it("can transform to an object", () => {
 			out = Augmented.Utility.Transformer.transform(source, Augmented.Utility.TransformerType.OBJECT);
-			expect(typeof out === OBJECT).toBeTruthy();
-			expect(out).toEqual(source);
+			expect(typeof out === OBJECT).to.be.true;
+			expect(out).to.equal(source);
 		});
 	});
 });

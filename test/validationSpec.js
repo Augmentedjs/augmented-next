@@ -1,6 +1,3 @@
-import Augmented from "../dist/augmented-next.js";
-import expect from "expect";
-
 const TEST_SCHEMA = {
 	"$schema": "http://json-schema.org/draft-04/schema#",
   "description": "schema for a story",
@@ -51,66 +48,66 @@ describe("Given Validation", () => {
 	  });
 
 		it("is defined", () => {
-			expect(Augmented.ValidationFramework).toBeDefined();
+			expect(Augmented.ValidationFramework).to.not.be.undefined;
 		});
 
 		it("can create an instance", () => {
-			expect(v).toBeDefined();
+			expect(v).to.not.be.undefined;
 		});
 
 		it("can register a schema", () => {
 			v.registerSchema("story", TEST_SCHEMA);
 			const x = v.getSchema("story");
-			expect(x).toBeDefined();
+			expect(x).to.not.be.undefined;
 		});
 
 		it("can get a schema", () => {
 			v.registerSchema("story", TEST_SCHEMA);
 			const x = v.getSchema("story");
-			expect(x).toEqual(TEST_SCHEMA);
+			expect(x).to.equal(TEST_SCHEMA);
 		});
 
 		it("can get a schema map", () => {
 			v.registerSchema("story", TEST_SCHEMA);
 			const x = v.getSchemas();
-			expect(x).not.toEqual({});
+			expect(x).to.not.equal({});
 		});
 
 		it("can clear a schema", () => {
 			v.registerSchema("story", TEST_SCHEMA);
 			v.clearSchemas();
 			const x = v.getSchemas();
-			expect(x).toEqual({});
+			expect(x).to.be.empty;
 		});
 
 		it("can validate from a schema", () => {
 			v.registerSchema("story", TEST_SCHEMA);
 			const result = v.validate({ "x": "x" }, TEST_SCHEMA);
-			expect(result).not.toEqual({});
+			expect(result).to.not.equal({});
 		});
 
 		it("can validate from a schema with errors", () => {
 			v.registerSchema("story", TEST_SCHEMA);
 			const result = v.validate({ "x": "x" }, TEST_SCHEMA);
-			expect(result.errors).not.toEqual({});
+			expect(result.errors).to.not.equal({});
 		});
 
 		it("can validate from a schema with errors and get messages", () => {
 			v.registerSchema("story", TEST_SCHEMA);
 			const result = v.validate({ "x": "x" }, TEST_SCHEMA);
 			const messages = v.getValidationMessages();
-			expect(messages).not.toEqual({});
+			expect(messages).to.not.equal({});
 		});
 
 		it("can validate from a schema with no errors", () => {
 			v.registerSchema("story", TEST_SCHEMA);
 			const result = v.validate({ "title": "x", "type": "Story" }, TEST_SCHEMA);
-			expect(result.errors).not.toEqual({});
+			expect(result.errors).to.not.equal({});
 		});
 
 		it("can generate a schema", () => {
 			const result = v.generateSchema({ "title": "x", "type": "Story" });
-			expect(result["$schema"]).toEqual("http://json-schema.org/draft-04/schema#");
+			expect(result["$schema"]).to.equal("http://json-schema.org/draft-04/schema#");
 		});
 	});
 });

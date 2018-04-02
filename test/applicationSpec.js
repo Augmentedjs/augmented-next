@@ -1,9 +1,6 @@
-import Augmented from "../dist/augmented-next.js";
-import expect from "expect";
-
 describe("Given Augmented Application", () => {
 	it("is defined", () => {
-		expect(Augmented.Application).toBeDefined();
+		expect(Augmented.Application).to.not.be.undefined;
 	});
 
 	describe("can create an instance", () => {
@@ -16,22 +13,22 @@ describe("Given Augmented Application", () => {
 		});
 
 		it("can create an instance", () => {
-			expect(app instanceof Augmented.Application).toBeTruthy();
+			expect(app instanceof Augmented.Application).to.be.true;
 		});
 
 		it("to be able to add metadata 'name'", () => {
 			app.setMetadataItem("name", "test");
-			expect(app.getMetadataItem("name")).toEqual("test");
+			expect(app.getMetadataItem("name")).to.equal("test");
 		});
 
 		it("can start", () => {
 			app.start();
-			expect(app.start).toBeDefined();
+			expect(app.start).to.not.be.undefined;
 		});
 
 		it("can stop", () => {
 			app.stop();
-			expect(app.stop).toBeDefined();
+			expect(app.stop).to.not.be.undefined;
 		});
 	});
 });

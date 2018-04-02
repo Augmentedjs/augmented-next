@@ -1,9 +1,6 @@
-import Augmented from "../dist/augmented-next.js";
-import expect from "expect";
-
 describe("Given an Augmented Object", () => {
   it("is defined", () => {
-    expect(Augmented.Object).toBeDefined();
+    expect(Augmented.Object).to.not.be.undefined;
   });
 
   describe("Given an object instance", () => {
@@ -17,11 +14,11 @@ describe("Given an Augmented Object", () => {
 		});
 
     it("has initialize", () => {
-      expect(object.initialize).toBeDefined();
+      expect(object.initialize).to.not.be.undefined;
     });
 
     it("can be created with options", () => {
-      expect(object.options.stuff).toEqual("stuff");
+      expect(object.options.stuff).to.equal("stuff");
     });
 
     it("can be extended", () => {
@@ -36,8 +33,8 @@ describe("Given an Augmented Object", () => {
       }
 
       const mobject = new myObject({stuff: "stuff"}, "hello");
-      expect(mobject.options.stuff).toEqual("stuff");
-      expect(mobject.special).toEqual("hello");
+      expect(mobject.options.stuff).to.equal("stuff");
+      expect(mobject.special).to.equal("hello");
     });
 
     it("can be initialized without options", () => {
@@ -52,7 +49,7 @@ describe("Given an Augmented Object", () => {
       }
 
       const mobject = new myObject();
-      expect(mobject.special).toEqual("hello");
+      expect(mobject.special).to.equal("hello");
     });
 
     describe("Given an events", () => {
@@ -67,21 +64,21 @@ describe("Given an Augmented Object", () => {
     		});
 
         it("has events", () => {
-          expect(object.events).toBeDefined();
+          expect(object.events).to.not.be.undefined;
         });
 
         it("can set events", () => {
           object.events = {};
-          expect(object.events).toBeDefined();
+          expect(object.events).to.not.be.undefined;
         });
 
         it("has an registered event", () => {
-          expect(object.events.test).toBeDefined();
+          expect(object.events.test).to.not.be.undefined;
         });
 
         it("can trigger an event", () => {
           const x = object.trigger("test");
-          expect(x).toBeDefined();
+          expect(x).to.not.be.undefined;
         });
       });
       describe("Given an event used once", () => {
@@ -96,14 +93,14 @@ describe("Given an Augmented Object", () => {
     		});
 
         it("can register an event once", () => {
-          expect(object.events.testOnce).toBeDefined();
+          expect(object.events.testOnce).to.not.be.undefined;
         });
 
         it("can trigger an event once", () => {
           const x = object.once("testOnce");
           const y = object.trigger("testOnce");
-          expect(y).toBeDefined();
-          expect(object.events.testOnce).not.toBeDefined();
+          expect(y).to.not.be.undefined;
+          expect(object.events.testOnce).not.to.not.be.undefined;
         });
       });
     });

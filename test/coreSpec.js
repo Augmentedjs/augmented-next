@@ -1,35 +1,32 @@
-import Augmented from "../dist/augmented-next.js";
-import expect from "expect";
-
 
 describe("Given Augmented", () => {
 	it("is defined", () => {
-		expect(Augmented).toBeDefined();
+		expect(Augmented).to.not.be.undefined;
 	});
 
 	it("has a version defined", () => {
-		expect(Augmented.VERSION).toBeDefined();
+		expect(Augmented.VERSION).to.not.be.undefined;
 	});
 
 	it("has a codename defined", () => {
-		expect(Augmented.codename).toBeDefined();
+		expect(Augmented.codename).to.not.be.undefined;
 	});
 
 	it("has a release name defined", () => {
-		expect(Augmented.releasename).toBeDefined();
+		expect(Augmented.releasename).to.not.be.undefined;
 	});
 	describe("Given ES6 or higher", () => {
 		it("has Number.isInteger", () => {
-			expect(Number.isInteger).toBeDefined();
+			expect(Number.isInteger).to.not.be.undefined;
 		});
 		it("has String.endsWith", () => {
-			expect(String.prototype.endsWith).toBeDefined();
+			expect(String.prototype.endsWith).to.not.be.undefined;
 		});
 		it("has Array.find", () => {
-			expect(Array.prototype.find).toBeDefined();
+			expect(Array.prototype.find).to.not.be.undefined;
 		});
 		it("has Array.includes", () => {
-			expect(Array.prototype.includes).toBeDefined();
+			expect(Array.prototype.includes).to.not.be.undefined;
 		});
 	});
 
@@ -37,27 +34,27 @@ describe("Given Augmented", () => {
 		const object = { stuff: () => { return true; } };
 
 		it("is defined", () => {
-			expect(Augmented.exec).toBeDefined();
+			expect(Augmented.exec).to.not.be.undefined;
 		});
 
 		it("can exec a function by name", () => {
-			expect(Augmented.exec("stuff", object)).toBeTruthy();
+			expect(Augmented.exec("stuff", object)).to.be.true;
 		});
 	});
 
 	describe("Given Augmented.result", () => {
 		it("is defined", () => {
-			expect(Augmented.result).toBeDefined();
+			expect(Augmented.result).to.not.be.undefined;
 		});
 
 		it("returns the function call", () => {
 			const t = { test: () => { return true; } };
-			expect(Augmented.result(t, "test")).toBeTruthy();
+			expect(Augmented.result(t, "test")).to.be.true;
 		});
 
 		it("returns the property", () => {
 			const t = { test: true };
-			expect(Augmented.result(t, "test")).toBeTruthy();
+			expect(Augmented.result(t, "test")).to.be.true;
 		});
 	});
 
@@ -66,30 +63,30 @@ describe("Given Augmented", () => {
 		describe("Given ES6 Array.includes", () => {
 			it("can check if a string is included", () => {
 				const arr = ["x","y","z"];
-				expect(arr.includes("z")).toBeTruthy();
+				expect(arr.includes("z")).to.be.true;
 			});
 			it("can check if a number is included", () => {
 				const arr = [1,2,3];
-				expect(arr.includes(2)).toBeTruthy();
+				expect(arr.includes(2)).to.be.true;
 			});
 			it("can check if a number is not included", () => {
 				const arr = [1,2,3];
-				expect(arr.includes(5)).toBeFalsy();
+				expect(arr.includes(5)).to.be.false;
 			});
 		});
 
 		describe("Given arrayHas", () => {
 			it("can check if it has a string", () => {
 				const arr = ["x","y","z"];
-				expect(Augmented.arrayHas(arr, "z")).toBeTruthy();
+				expect(Augmented.arrayHas(arr, "z")).to.be.true;
 			});
 			it("can check if it has a number", () => {
 				const arr = [1,2,3];
-				expect(Augmented.arrayHas(arr, 2)).toBeTruthy();
+				expect(Augmented.arrayHas(arr, 2)).to.be.true;
 			});
 			it("can check if it does not have a number", () => {
 				const arr = [1,2,3];
-				expect(Augmented.arrayHas(arr, 5)).toBeFalsy();
+				expect(Augmented.arrayHas(arr, 5)).to.be.false;
 			});
 		});
 
@@ -97,12 +94,12 @@ describe("Given Augmented", () => {
 			const a = [{ "name": "Bubba", "id": 1 }, { "name": "Bill", "id": 2 }, { "name": "MonkeyBone", "id": 3 }], p = function(aa) { return (aa.id === 2); };
 			it("checks if property is in an array", () => {
 				const r = a.find(p);
-				expect(r).toEqual({ "name": "Bill", "id": 2 });
+				expect(r).to.deep.equal({ "name": "Bill", "id": 2 });
 			});
 
 			it("checks if property is not in an array", () => {
 				const r = a.find(p);
-				expect(r).not.toEqual({ "name": "x", "id": 9 });
+				expect(r).not.to.deep.equal({ "name": "x", "id": 9 });
 			});
 		});
 	});
@@ -116,13 +113,13 @@ describe("Given Augmented", () => {
 			o = null;
 		});
 		it("checks if an object has a key", () => {
-			expect(Augmented.has(o, "x")).toBeTruthy();
+			expect(Augmented.has(o, "x")).to.be.true;
 		});
 		it("checks if an object does not have a key", () => {
-			expect(Augmented.has(o, "xx")).toBeFalsy();
+			expect(Augmented.has(o, "xx")).to.be.false;
 		});
 		it("checks if an object has a function key", () => {
-			expect(Augmented.has(o, "y")).toBeTruthy();
+			expect(Augmented.has(o, "y")).to.be.true;
 		});
 	});
 
@@ -130,47 +127,47 @@ describe("Given Augmented", () => {
 		const o = {}, p = 123, f = () => { return true; };
 
 		it("is defined", () => {
-			expect(Augmented.isFunction).toBeDefined();
+			expect(Augmented.isFunction).to.not.be.undefined;
 		});
 
 		it("checks if object is an function", () => {
-			expect(Augmented.isFunction(o)).toBeFalsy();
+			expect(Augmented.isFunction(o)).to.be.false;
 		});
 		it("checks if number is not an function", () => {
-			expect(Augmented.isFunction(p)).toBeFalsy();
+			expect(Augmented.isFunction(p)).to.be.false;
 		});
 		it("checks if function is not an function", () => {
-			expect(Augmented.isFunction(f)).toBeTruthy();
+			expect(Augmented.isFunction(f)).to.be.true;
 		});
 
 		it("returns true for a function call", () => {
 			const t = () => {};
-			expect(Augmented.isFunction(t)).toBeTruthy();
+			expect(Augmented.isFunction(t)).to.be.true;
 		});
 
 		it("returns false for a string value", () => {
 			const t = "x";
-			expect(Augmented.isFunction(t)).toBeFalsy();
+			expect(Augmented.isFunction(t)).to.be.false;
 		});
 
 		it("returns false for a property call", () => {
 			const t = { stuff: "stuff"};
-			expect(Augmented.isFunction(t.stuff)).toBeFalsy();
+			expect(Augmented.isFunction(t.stuff)).to.be.false;
 		});
 
 		it("returns false for an Array", () => {
 			const t = [];
-			expect(Augmented.isFunction(t)).toBeFalsy();
+			expect(Augmented.isFunction(t)).to.be.false;
 		});
 
 		it("returns false for an Object", () => {
 			const t = {};
-			expect(Augmented.isFunction(t)).toBeFalsy();
+			expect(Augmented.isFunction(t)).to.be.false;
 		});
 
 		it("returns false for an Augmented.Object", () => {
 			const t = new Augmented.Object();
-			expect(Augmented.isFunction(t)).toBeFalsy();
+			expect(Augmented.isFunction(t)).to.be.false;
 		});
 	});
 
@@ -178,13 +175,13 @@ describe("Given Augmented", () => {
 		const o = {}, p = 123, f = () => { return true; };
 
 		it("checks if object is an object", () => {
-			expect(Augmented.isObject(o)).toBeTruthy();
+			expect(Augmented.isObject(o)).to.be.true;
 		});
 		it("checks if number is not an object", () => {
-			expect(Augmented.isObject(p)).toBeFalsy();
+			expect(Augmented.isObject(p)).to.be.false;
 		});
 		it("checks if function is an object", () => {
-			expect(Augmented.isObject(f)).toBeTruthy();
+			expect(Augmented.isObject(f)).to.be.true;
 		});
 	});
 
@@ -192,20 +189,20 @@ describe("Given Augmented", () => {
 		const o = {}, n = 123, p = "123", f = () => { return true; };
 
 		it("checks if object is a string", () => {
-			expect(Augmented.isString(o)).toBeFalsy();
+			expect(Augmented.isString(o)).to.be.false;
 		});
 		it("checks if number is not a string", () => {
-			expect(Augmented.isFunction(p)).toBeFalsy();
+			expect(Augmented.isFunction(p)).to.be.false;
 		});
 		it("checks if string is a string", () => {
-			expect(Augmented.isString(p)).toBeTruthy();
+			expect(Augmented.isString(p)).to.be.true;
 		});
 		it("checks if function is not a string", () => {
-			expect(Augmented.isString(f)).toBeFalsy();
+			expect(Augmented.isString(f)).to.be.false;
 		});
 		it("checks if a string ends with a set of characters", () => {
 			const file = "test.json";
-			expect(file.endsWith(".json")).toBeTruthy();
+			expect(file.endsWith(".json")).to.be.true;
 		});
 	});
 
@@ -213,13 +210,13 @@ describe("Given Augmented", () => {
 		const y = {}, n = undefined, nn = null;
 
 		it("checks if object is defined", () => {
-			expect(Augmented.isDefined(y)).toBeTruthy();
+			expect(Augmented.isDefined(y)).to.be.true;
 		});
 		it("checks if undefined is not defined", () => {
-			expect(Augmented.isDefined(n)).toBeFalsy();
+			expect(Augmented.isDefined(n)).to.be.false;
 		});
 		it("checks if null is defined", () => {
-			expect(Augmented.isDefined(nn)).toBeTruthy();
+			expect(Augmented.isDefined(nn)).to.be.true;
 		});
 	});
 
@@ -234,7 +231,7 @@ describe("Given Augmented", () => {
 		it("returns all keys", () => {
 			const k = Augmented.allKeys(o);
 
-			expect(k).toEqual(["x", "y"]);
+			expect(k).to.equal(["x", "y"]);
 		});
 	});
 
@@ -248,8 +245,8 @@ describe("Given Augmented", () => {
 		});
 		it("can create an object", () => {
 			const k = Augmented.create(o, { "z": "z"});
-			expect(k).toBeDefined();
-			expect(k.z).toEqual("z");
+			expect(k).to.not.be.undefined;
+			expect(k.z).to.equal("z");
 		});
 	});
 
@@ -266,21 +263,21 @@ describe("Given Augmented", () => {
 		});
 		it("can create an object", () => {
 			const result = arr.some(isLargerThanTen);
-			expect(result).toBeDefined();
-			expect(result).toBeTruthy();
+			expect(result).to.not.be.undefined;
+			expect(result).to.be.true;
 		});
 	});
 
 	describe("Given Augmented fibonacci", () => {
 		it("can get a number in a sequence", () => {
 			const result = Augmented.fibonacci(12);
-			expect(result).toBeDefined();
-			expect(result).toEqual(144);
+			expect(result).to.not.be.undefined;
+			expect(result).to.equal(144);
 		});
 		it("can create a sequence", () => {
 			const result = Augmented.fibonacciSequence(13);
-			expect(result).toBeDefined();
-			expect(result).toEqual([0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144]);
+			expect(result).to.not.be.undefined;
+			expect(result).to.equal([0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144]);
 		});
 	});
 });

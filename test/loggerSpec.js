@@ -1,10 +1,8 @@
-import Augmented from "../dist/augmented-next.js";
-import expect from "expect";
 
 
 describe("Given a logger factory", () => {
 	it("is defined", () => {
-		expect(Augmented.Logger.LoggerFactory).toBeDefined();
+		expect(Augmented.Logger.LoggerFactory).to.not.be.undefined;
 	});
 
 	describe("Given a console logger", () => {
@@ -18,22 +16,22 @@ describe("Given a logger factory", () => {
 		});
 
 		it("can request a logger", () => {
-			expect(logger).toBeDefined();
+			expect(logger).to.not.be.undefined;
 		});
 
 		it("can log info", () => {
 			const m = logger.info("xx");
-			expect(m).not.toEqual("");
+			expect(m).to.not.equal("");
 		});
 
 		it("can log debug", () => {
 			const m = logger.debug("xx");
-			expect(m).not.toEqual("");
+			expect(m).to.not.equal("");
 		});
 
 		it("can log warn", () => {
 			const m = logger.warn("xx");
-			expect(m).not.toEqual("");
+			expect(m).to.not.equal("");
 		});
 	});
 
@@ -48,7 +46,7 @@ describe("Given a logger factory", () => {
 		});
 
 		it("can request a logger", () => {
-			expect(logger).toBeDefined();
+			expect(logger).to.not.be.undefined;
 		});
 	});
 
@@ -63,7 +61,7 @@ describe("Given a logger factory", () => {
 		});
 
 		it("can request a logger", () => {
-			expect(logger).toBeDefined();
+			expect(logger).to.not.be.undefined;
 		});
 	});
 });

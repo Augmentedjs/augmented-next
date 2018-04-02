@@ -1,28 +1,25 @@
-import Augmented from "../dist/augmented-next.js";
-import expect from "expect";
-
 describe("Given Utilities", () => {
 	it("is defined", () => {
-		expect(Augmented.Utility).toBeDefined();
+		expect(Augmented.Utility).to.not.be.undefined;
 	});
 
 	describe("Given shuffle", () => {
 		it("can shuffle an array", () => {
 			const a = Augmented.Utility.shuffle([1, 2, 3, 4, 5]);
-			expect(a).not.toEqual(null);
-			expect(a).not.toEqual([]);
-			expect(a).not.toEqual([1, 2, 3, 4, 5]);
+			expect(a).to.not.equal(null);
+			expect(a).to.not.equal([]);
+			expect(a).to.not.equal([1, 2, 3, 4, 5]);
 		});
 	});
 
 	describe("Given object extend", () => {
 		it("Extends an object with data", () => {
 			const o = Augmented.Utility.extend({}, {"A": "B"});
-			expect(o).toEqual({"A": "B"});
+			expect(o).to.deep.equal({"A": "B"});
 		});
 
 		it("Extends an object with more data", () => {
-			expect(Augmented.Utility.extend({}, {"A": "B"}, {"C": "D"})).toEqual({"A": "B", "C": "D"});
+			expect(Augmented.Utility.extend({}, {"A": "B"}, {"C": "D"})).to.deep.equal({"A": "B", "C": "D"});
 		});
 
 		it("Extends an object prototype", () => {
@@ -40,9 +37,9 @@ describe("Given Utilities", () => {
 			});
 
 			const circle = new Circle();
-			expect(circle instanceof Circle).toBeTruthy();
+			expect(circle instanceof Circle).to.be.true;
 
-			expect(circle instanceof Shape).toBeTruthy();
+			expect(circle instanceof Shape).to.be.true;
 		});
 	});
 
@@ -52,7 +49,7 @@ describe("Given Utilities", () => {
 			const ff = () => { return true; };
 			const x = Augmented.Utility.wrap(f, ff);
 			const y = x();
-			expect(y).toBeTruthy();
+			expect(y).to.be.true;
 		});
 	});
 
@@ -60,7 +57,7 @@ describe("Given Utilities", () => {
 		const o = { "this": "this", "is": "is", "an": "an", "object": "object" };
 		it("can pretty print", () => {
 			const x = Augmented.Utility.prettyPrint(o);
-			expect(x).not.toEqual("");
+			expect(x).to.not.equal("");
 		});
 	});
 
@@ -76,21 +73,21 @@ describe("Given Utilities", () => {
 
 		it("can filter objects to one key", () => {
 			const x = Augmented.Utility.filterObject(o, ["object"]);
-			expect(x).toEqual({"object": "object"});
+			expect(x).to.deep.equal({"object": "object"});
 		});
 
 		it("can filter objects to multiple keys", () => {
 			const x = Augmented.Utility.filterObject(o, ["object", "is"]);
-			expect(x).toEqual({"is": "is", "object": "object"});
+			expect(x).to.deep.equal({"is": "is", "object": "object"});
 		});
 	});
 
 	describe("Given pad", () => {
 		it("can pad a string", () => {
 			const a = Augmented.Utility.pad("_____", "This is a string", true);
-			expect(a).not.toEqual(null);
-			expect(a).not.toEqual("");
-			expect(a).toEqual("_____This is a string");
+			expect(a).to.not.equal(null);
+			expect(a).to.not.equal("");
+			expect(a).to.equal("_____This is a string");
 		});
 	});
 });

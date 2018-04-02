@@ -4,7 +4,6 @@ const webpack = require('webpack');
 module.exports = {
   entry: './src/augmented.js',
   context: __dirname,
-  target: 'node',
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'augmented-next.js',

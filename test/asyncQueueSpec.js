@@ -1,11 +1,10 @@
-import Augmented from "../dist/augmented-next.js";
-import expect from "expect";
+
 
 const TIMEOUT = 500;
 
 describe("Given Augmented AsynchronousQueue", () => {
 	it("is defined", () => {
-		expect(Augmented.Utility.AsynchronousQueue).toBeDefined();
+		expect(Augmented.Utility.AsynchronousQueue).to.not.be.undefined;
 	});
 
 	describe("Given a queue", () => {
@@ -22,7 +21,7 @@ describe("Given Augmented AsynchronousQueue", () => {
 	  });
 
 		it("can define a queue with a timeout", () => {
-			expect(q.timeout).toEqual(TIMEOUT);
+			expect(q.timeout).to.equal(TIMEOUT);
 		});
 
 		it("can queue a few functions", () => {
@@ -33,7 +32,7 @@ describe("Given Augmented AsynchronousQueue", () => {
 				(count) => { count++; },
 				(count) => { count++; }
 			);
-			expect(s).toBeTruthy();
+			expect(s).to.be.true;
 		});
 
 		it("can add a few functions to the queue", () => {
@@ -45,7 +44,7 @@ describe("Given Augmented AsynchronousQueue", () => {
 				(count) => { count++; }
 			);
 
-			expect(Object.keys(q.queue).length).toBeGreaterThan(0);
+			expect(Object.keys(q.queue).length).to.equal(5);
 		});
 
 		it("can add a few functions to the queue then run them", () => {
@@ -57,7 +56,7 @@ describe("Given Augmented AsynchronousQueue", () => {
 				(count) => { count++; }
 			);
 			const s = q.process();
-			expect(s).toBeTruthy();
+			expect(s).to.be.true;
 		});
 
 		it("can add a few functions to the queue then run them in sync", () => {
@@ -74,7 +73,7 @@ describe("Given Augmented AsynchronousQueue", () => {
 				() => { let count = () => { let x = 0; for(let i=0;i<10000;i++){ x++; } return x;}; console.info("10: " + count()); }
 			);
 			const s = q.process();
-			expect(s).toBeTruthy();
+			expect(s).to.be.true;
 		});
 	});
 });
