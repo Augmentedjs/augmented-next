@@ -33,11 +33,9 @@ const wrapError = (model, options) => {
  * <li>Validation and Schemas</li>
  * <li>Security</li>
  * </ul>
- * @constructor AbstractModel
- * @memberof Augmented
- * @extends Augmented.Object
+ * @extends Object
  */
-export default class AbstractModel extends AugmentedObject {
+class AbstractModel extends AugmentedObject {
   constructor(attributes, options, ...args) {
     super(options);
     this.id = 0;
@@ -83,13 +81,11 @@ export default class AbstractModel extends AugmentedObject {
   /**
    * Schema property
    * @property {object} schema The JSON schema from this model
-   * @memberof AbstractModel
    */
 
   /**
    * Validation Message property
    * @property {object} validationMessages The property holding validation message data
-   * @memberof AbstractModel
    */
 
 
@@ -99,13 +95,17 @@ export default class AbstractModel extends AugmentedObject {
   initialize(...args) {
   };
 
+  /** Get the attribute form the Model
+   * @returns {any} The model attribute
+   */
   get(attribute) {
     return this._attributes[attribute];
   };
 
-  // Set a hash of model attributes on the object, firing `"change"`. This is
-  // the core primitive operation of a model, updating the data and notifying
-  // anyone who needs to know about the change in state. The heart of the beast.
+  /** Set a hash of model attributes on the object, firing `"change"`. This is
+   * the core primitive operation of a model, updating the data and notifying
+   * anyone who needs to know about the change in state.
+   */
   set(key, val, options) {
     if (key === null) {
       return this;
@@ -192,40 +192,52 @@ export default class AbstractModel extends AugmentedObject {
     return this;
   };
 
+  /** Escape the attribute data
+   */
   escape(attribute) {
     return _escape(this.get(attr));
   };
 
+  /** Has an attribute in the Model
+   * @returns {bolean} Returns true if exists
+   */
   has(attribute) {
     return this.get(attr) !== null;
   };
 
-  // Special-cased proxy to underscore's `matches` method.
+  /** Special-cased proxy to underscore's `matches` method.
+   */
   matches(attrs) {
     return !!_iteratee(attrs, this)(this._attributes);
   };
 
-  // Remove an attribute from the model, firing `"change"`. `unset` is a noop
-  // if the attribute doesn't exist.
+  /** Remove an attribute from the model, firing `"change"`. `unset` is a noop
+   * if the attribute doesn't exist.
+   */
   unset(attr, options) {
     return this.set(attr, void 0, extend({}, options, {unset: true}));
   };
 
-  // Clear all attributes on the model, firing `"change"`.
+  /** Clear all attributes on the model, firing `"change"`.
+   */
   clear(options) {
     let attrs = {};
     for (let key in this._attributes) attrs[key] = void 0;
     return this.set(attrs, extend({}, options, {unset: true}));
   };
 
+  /**
+   * Transforms model to pure toJSON
+   */
   toJSON() {
     return _clone(this._attributes);
   };
 
   //– sync x
 
-  // Fetch the model from the server, merging the response with the model's
-  // local attributes. Any changed attributes will trigger a "change" event.
+  /** Fetch the model from the server, merging the response with the model's
+   * local attributes. Any changed attributes will trigger a "change" event.
+   */
   fetch(options) {
     options = extend({parse: true}, options);
     let model = this;
@@ -244,9 +256,10 @@ export default class AbstractModel extends AugmentedObject {
     return this.sync("read", this, options);
   };
 
-  // Set a hash of model attributes, and sync the model to the server.
-  // If the server returns an attributes hash that differs, the model's
-  // state will be `set` again.
+  /** Set a hash of model attributes, and sync the model to the server.
+   * If the server returns an attributes hash that differs, the model's
+   * state will be `set` again.
+   */
   save(key, val, options) {
     // Handle both `"key", value` and `{key: value}` -style arguments.
     let attrs;
@@ -310,9 +323,10 @@ export default class AbstractModel extends AugmentedObject {
     return request;
   };
 
-  // Destroy this model on the server if it was already persisted.
-  // Optimistically removes the model from its collection, if it has one.
-  // If `wait: true` is passed, waits for the server to respond before removal.
+  /** Destroy this model on the server if it was already persisted.
+   * Optimistically removes the model from its collection, if it has one.
+   * If `wait: true` is passed, waits for the server to respond before removal.
+   */
   destroy(options) {
     options = options ? _clone(options) : {};
     let model = this;
@@ -347,9 +361,10 @@ export default class AbstractModel extends AugmentedObject {
     return request;
   };
 
-  // Default URL for the model's representation on the server -- if you're
-  // using Backbone's restful methods, override this to change the endpoint
-  // that will be called.
+  /** Default URL for the model's representation on the server -- if you're
+   * using restful methods, override this to change the endpoint
+   * that will be called.
+   */
   url() {
     let base =
       _result(this, "urlRoot") ||
@@ -369,6 +384,7 @@ export default class AbstractModel extends AugmentedObject {
   values() {
     return Object.values(this._attributes);
   };
+
 /* if needed these can be used from lodash or underscore against the model's attributes
   pairs() { // ??
 
@@ -390,33 +406,29 @@ export default class AbstractModel extends AugmentedObject {
 
   };
 */
-  isEmpty() {
-    return false;
-  };
 
-  // **parse** converts a response into the hash of attributes to be `set` on
-  // the model. The default implementation is just to pass the response along.
+  /** **parse** converts a response into the hash of attributes to be `set` on
+   * the model. The default implementation is just to pass the response along.
+   */
   parse(resp, options) {
     return resp;
   };
 
-  // Create a new model with identical attributes to this one.
+  /** Create a new model with identical attributes to this one.
+   */
   clone() {
     return new this.constructor(this._attributes);
   };
 
-  // A model is new if it has never been saved to the server, and lacks an id.
+  /** A model is new if it has never been saved to the server, and lacks an id.
+   */
   isNew() {
     return !this.has(this.idAttribute);
   };
 
-  // Check if the model is currently in a valid state.
-  isValid(options) {
-    return this._validate({}, extend({}, options, {validate: true}));
-  };
-
-  // Determine if the model has changed since the last `"change"` event.
-  // If you specify an attribute name, determine if that attribute has changed.
+  /** Determine if the model has changed since the last `"change"` event.
+   * If you specify an attribute name, determine if that attribute has changed.
+   */
   hasChanged(attr) {
    if (attr == null) {
      return !_isEmpty(this.changed);
@@ -424,12 +436,13 @@ export default class AbstractModel extends AugmentedObject {
    return _has(this.changed, attr);
   };
 
-  // Return an object containing all the attributes that have changed, or
-  // false if there are no changed attributes. Useful for determining what
-  // parts of a view need to be updated and/or what attributes need to be
-  // persisted to the server. Unset attributes will be set to undefined.
-  // You can also pass an attributes object to diff against the model,
-  // determining if there *would be* a change.
+  /** Return an object containing all the attributes that have changed, or
+   * false if there are no changed attributes. Useful for determining what
+   * parts of a view need to be updated and/or what attributes need to be
+   * persisted to the server. Unset attributes will be set to undefined.
+   * You can also pass an attributes object to diff against the model,
+   * determining if there *would be* a change.
+   */
   changedAttributes(diff) {
     if (!diff) {
       return this.hasChanged() ? _clone(this.changed) : false;
@@ -448,8 +461,9 @@ export default class AbstractModel extends AugmentedObject {
     return hasChanged ? changed : false;
   };
 
-  // Get the previous value of an attribute, recorded at the time the last
-  // `"change"` event was fired.
+  /** Get the previous value of an attribute, recorded at the time the last
+   * `"change"` event was fired.
+   */
   previous(attr) {
     if (attr == null || !this._previousAttributes) {
       return null;
@@ -457,31 +471,15 @@ export default class AbstractModel extends AugmentedObject {
     return this._previousAttributes[attr];
   };
 
-  // Get all of the attributes of the model at the time of the previous
-  // `"change"` event.
+  /** Get all of the attributes of the model at the time of the previous
+   * `"change"` event.
+   */
   previousAttributes() {
     return _clone(this._previousAttributes);
   };
 
-  // Run validation against the next complete set of model attributes,
-  // returning `true` if all is well. Otherwise, fire an `"invalid"` event.
-  _validate(attrs, options) {
-    if (!options.validate || !this.validate) {
-      return true;
-    }
-    attrs = extend({}, this._attributes, attrs);
-    let error = this.validationError = this.validate(attrs, options) || null;
-    if (!error) {
-      return true;
-    }
-    this.trigger("invalid", this, error, extend(options, {validationError: error}));
-    return false;
-  };
-
   /**
    * supportsValidation - Returns True if this model supports validation
-   * @method supportsValidation
-   * @memberof AbstractModel
    * @returns {boolean} Returns True if this model supports validation
    */
   supportsValidation() {
@@ -490,20 +488,28 @@ export default class AbstractModel extends AugmentedObject {
     }
     return false;
   };
+
+  /** Check if the model is currently in a valid state.
+   */
+  isValid(options) {
+    return
+  };
+
   /**
    * isValid - Returns True if this model is valid
-   * @method isValid
-   * @memberof AbstractModel
+   * Runs two level validation, attribute-level then JSON Schema
    * @returns {boolean} Returns True if this model is valid
    */
   isValid() {
-    this.validate();
-    return this.validationMessages.valid;
+    const valid = this._validate({}, extend({}, options, {validate: true}));
+    if (valid) {
+      const messages = this.validate();
+      return this.validationMessages.valid;
+    }
+    return valid;
   };
   /**
    * Validates the model
-   * @method validate
-   * @memberof AbstractModel
    * @returns {array} Returns array of messages from validation
    */
   validate() {
@@ -519,8 +525,6 @@ export default class AbstractModel extends AugmentedObject {
   };
   /**
    * Gets the validation messages only in an array
-   * @method getValidationMessages
-   * @memberof AbstractModel
    * @returns {array} Returns array of messages from validation
    */
   getValidationMessages() {
@@ -535,16 +539,12 @@ export default class AbstractModel extends AugmentedObject {
     return messages;
   };
   /**
-   * Model.sync - Sync model data to bound REST call
-   * @method sync
-   * @memberof AbstractModel
+   * Sync model data to bound REST call
    */
   sync(method, model, options) {
   };
   /**
-   * Model.reset - clear and rewrite the model with passed data
-   * @method reset
-   * @memberof AbstractModel
+   * reset - clear and rewrite the model with passed data
    * @param {object} data The data to replace the model with (optional)
    */
   reset(data) {
@@ -553,20 +553,18 @@ export default class AbstractModel extends AugmentedObject {
       this.set(data);
     }
   };
+
   /**
-   * Model.isEmpty - returns true is the model is empty
-   * @method isEmpty
-   * @memberof AbstractModel
+   * isEmpty - returns true is the model is empty
    * @returns {boolean} returns true is the model is empty
    */
   isEmpty() {
     return ( (this._attributes) ? (Object.keys(this._attributes).length === 0) : true );
   };
+
   /**
    * toString - returns the model data as a string
-   * @method toString
-   * @memberof AbstractModel
-   * @returns {string}returns the model data as a string
+   * @returns {string} returns the model data as a string
    */
   toString() {
     return JSON.stringify(this.toJSON());
@@ -574,34 +572,45 @@ export default class AbstractModel extends AugmentedObject {
 
   /**
    * fetch - Fetches the model as a 'get'
-   * @method fetch
-   * @memberof AbstractModel
    */
   fetch(options) {
     this.sync("read", this, options);
   };
   /**
    * save - Saves the model as a 'create'
-   * @method save
-   * @memberof AbstractModel
    */
   save(options) {
     this.sync("create", this, options);
   };
   /**
    * update - Updates the model as a 'update'
-   * @method update
-   * @memberof AbstractModel
    */
   update(options) {
     this.sync("update", this, options);
   };
   /**
    * destroy - Deletes the model as a 'delete'
-   * @method destroy
-   * @memberof AbstractModel
    */
   destroy(options) {
     this.sync("delete", this, options);
   };
+
+  /** Run validation against the next complete set of model attributes,
+   * returning `true` if all is well. Otherwise, fire an `"invalid"` event.
+   * @private
+   */
+  _validate(attrs, options) {
+    if (!options.validate || !this.validate) {
+      return true;
+    }
+    attrs = extend({}, this._attributes, attrs);
+    let error = this.validationError = this.validate(attrs, options) || null;
+    if (!error) {
+      return true;
+    }
+    this.trigger("invalid", this, error, extend(options, {validationError: error}));
+    return false;
+  };
 };
+
+export default AbstractModel;

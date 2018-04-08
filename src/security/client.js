@@ -4,15 +4,14 @@ import ClientType from "./clientType.js";
 
 /**
  * Security client namespace
- * @namespace Augmented.Security.Client
- * @memberof Augmented.Security
+ * @namespace Security.Client
+ * @memberof Security
  */
 
 
 /**
  * The abstract Security Client - for use to extend your own
- * @class AbstractSecurityClient
- * @property {Augmented.Security.ClientType} type The client type
+ * @property {Security.ClientType} type The client type
  * @property {string} uri The base uri
  */
 export class AbstractSecurityClient extends AugmentedObject {
@@ -22,6 +21,9 @@ export class AbstractSecurityClient extends AugmentedObject {
     this.  uri = "";
   };
 
+  /**
+   * @property {Security.ClientType} type The client type
+   */
   get type() {
     return this._type;
   };
@@ -29,8 +31,7 @@ export class AbstractSecurityClient extends AugmentedObject {
 
 /**
  * The OAUTH2 Client
- * @class Augmented.Security.Client.OAUTH2Client
- * @memberof Augmented.Security.Client
+ * @memberof Security.Client
  */
 export class OAUTH2Client extends AbstractSecurityClient {
   constructor() {
@@ -42,20 +43,16 @@ export class OAUTH2Client extends AbstractSecurityClient {
   /**
    * Access Token
    * @property accessToken
-   * @memberof Augmented.Security.Client.OAUTH2Client
    */
 
   /**
    * Authorization Token
    * @property authorizationToken
-   * @memberof Augmented.Security.Client.OAUTH2Client
    */
 
   /**
    * Authorize the application/service/module via OAUTH
-   * @method authorize
    * @param {string} name The name of the application/service/module
-   * @memberof Augmented.Security.Client.OAUTH2Client
    */
   authorize(name) {
     // TODO: Go authorize the app and get a token
@@ -63,9 +60,7 @@ export class OAUTH2Client extends AbstractSecurityClient {
   };
   /**
    * access the application/service/module via OAUTH
-   * @method access
    * @param {string} principal The principal
-   * @memberof Augmented.Security.Client.OAUTH2Client
    * TODO: Refresh the token and store it
    */
   access(principal) {
@@ -75,8 +70,7 @@ export class OAUTH2Client extends AbstractSecurityClient {
 
 /**
  * Role/Privilege (ACL) Security
- * @class Augmented.Security.Client.ACLClient
- * @memberof Augmented.Security.Client
+ * @memberof Security.Client
  */
 export class ACLClient extends AbstractSecurityClient {
   constructor() {
@@ -85,11 +79,9 @@ export class ACLClient extends AbstractSecurityClient {
 
   /**
    * authenticate the user
-   * @method authenticate
    * @param {string} username The name of the user (login)
    * @param {string} password The password for the user (not stored)
-   * @returns {Augmented.Security.Context} Returns a security context or null is case of failure
-   * @memberof Augmented.Security.Client.ACL
+   * @returns {Security.Context} Returns a security context or null is case of failure
    * @throws Error Failed to authenticate
    */
   authenticate(username, password) {

@@ -10,9 +10,8 @@ const SCHEMA_HEADER = {
  * <p>Augmented.Utility.SchemaGenerator<br/>
  *
  * Genrate a schema from a set of data</p>
- * @constructor Augmented.Utility.SchemaGenerator
  * @param {object} data a dataset to produce a schema from
- * @memberof Augmented.Utility
+ * @memberof Utility
  */
 const SchemaGenerator = (data) => {
   let obj = SCHEMA_HEADER;

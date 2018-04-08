@@ -3,14 +3,12 @@ import ClientType from "./clientType.js";
 
 /**
  * Security Package and API
- * @namespace Augmented.Security
- * @memberof Augmented
+ * @namespace Security
  */
 
 /**
  * Pricipal object for use in security as part of the abstract implimentation
- * @class Principal
- * @memberof Augmented.Security
+ * @memberof Security
  * @property {string} fullName The full name of the principal
  * @property {number} id The id of the principal
  * @property {string} login The login of the principal
@@ -76,10 +74,10 @@ export class Principal {
 /**
 * Augmented.Security.Context
 * Used as a security data storage class
-* @class Context
-* @param {Augmented.Security.Principal} principal The principal for this context
+
+* @param {Security.Principal} principal The principal for this context
 * @param {array} permissions Permissions to add to the context
-* @memberof Augmented.Security
+* @memberof Security
 */
 export class Context {
   constructor(principal, permissions) {
@@ -89,9 +87,8 @@ export class Context {
 
   /**
    * getPrincipal - get the principal of this context
-   * @method getPrincipal
-   * @memberof Augmented.Security.Context
-   * @returns {Augmented.Security.Principal} principal The principal of this context
+   * @memberof Security.Context
+   * @returns {Security.Principal} principal The principal of this context
    */
   get principal() {
     return this._principal;
@@ -99,8 +96,7 @@ export class Context {
 
   /**
    * getPermissions - Get all the permissions for a principal
-   * @method getPermissions
-   * @memberof Augmented.Security.Context
+   * @memberof Security.Context
    * @returns {array} permissions All permissions
    */
   get permissions() {
@@ -109,9 +105,8 @@ export class Context {
 
   /**
    * setPermissions - Set all permissions for a principal
-   * @method setPermissions
    * @param {array} permissions
-   * @memberof Augmented.Security.Context
+   * @memberof Security.Context
    */
   set permissions(p) {
     this._permissions = p;
@@ -119,9 +114,8 @@ export class Context {
 
   /**
    * addPermission - Add a new permission for a principal
-   * @method addPermission
    * @param {string} permission
-   * @memberof Augmented.Security.Context
+   * @memberof Security.Context
    */
   addPermission(p) {
     this._permissions.push(p);
@@ -129,9 +123,8 @@ export class Context {
 
   /**
    * removePermission - Remove a permission for a principal
-   * @method removePermission
    * @param {string} permission
-   * @memberof Augmented.Security.Context
+   * @memberof Security.Context
    */
   removePermission(p) {
     const i = this._permissions.indexOf(p);
@@ -140,9 +133,8 @@ export class Context {
 
   /**
    * hasPermission - checks for a permission for this principal
-   * @method hasPermission
    * @param {string} permission
-   * @memberof Augmented.Security.Context
+   * @memberof Security.Context
    */
   hasPermission(p) {
     return (this._permissions.indexOf(p) !== -1);
@@ -152,8 +144,7 @@ export class Context {
 /**
 * AuthenticationFactory Class -
 * Returns a client of given type for use with security
-* @namespace Augmented.Security.AuthenticationFactory
-* @memberof Augmented.Security
+* @memberof Security
 * @static
 */
 export class AuthenticationFactory {
@@ -162,11 +153,9 @@ export class AuthenticationFactory {
 
   /**
    * Get an instance of a security client
-   * @method getSecurityClient
-   * @param {Augmented.Security.ClientType} clientType The Client Type to return
-   * @returns {Augmented.Security.Client} Returns a security client instance
+   * @param {Security.ClientType} clientType The Client Type to return
+   * @returns {Security.Client} Returns a security client instance
    * @static
-   * @memberof Augmented.Security.AuthenticationFactory
    */
   static getSecurityClient(clientType) {
     if (clientType === ClientType.OAUTH2) {
@@ -179,10 +168,8 @@ export class AuthenticationFactory {
 };
 
 /**
-* Augmented.Security.Entry -
 * Used to secure a resource via permissions
-* @class Entry
-* @memberof Augmented.Security
+* @memberof Security
 * @param {array} permissions Permissions to add to the entry (optional)
 * @param {boolean} negaive Sets negative permissions (optional)
 */
@@ -194,14 +181,12 @@ export class Entry {
   /**
    * Gets the permissions
    * @property {array} permissions
-   * @memberof Augmented.Security.Entry
    * @private
    */
 
   /**
   * Negative flag
   * @property {boolean} isNegative
-  * @memberof Augmented.Security.Entry
   */
   isNegative() {
     return this._neg;
@@ -209,8 +194,6 @@ export class Entry {
 
   /**
   * Gets the permissions
-  * @method getPermissions
-  * @memberof Augmented.Security.Entry
   * @returns {array} Permissions
   */
   get permissions() {
@@ -218,8 +201,6 @@ export class Entry {
   };
   /**
   * Sets the permissions
-  * @method setPermissions
-  * @memberof Augmented.Security.Entry
   * @param {array} permissions Permissions Array to set
   */
   set permissions(p) {
@@ -227,8 +208,6 @@ export class Entry {
   };
   /**
   * Add a permission
-  * @method addPermission
-  * @memberof Augmented.Security.Entry
   * @param {string} permission Permission to add
   */
   addPermission(p) {
@@ -236,8 +215,6 @@ export class Entry {
   };
   /**
   * Remove a permission
-  * @method removePermission
-  * @memberof Augmented.Security.Entry
   * @param {string} permission Permission to remove
   */
   removePermission(p) {
@@ -246,8 +223,6 @@ export class Entry {
   };
   /**
   * Returns if this entry has a permission
-  * @method hasPermission
-  * @memberof Augmented.Security.Entry
   * @param {string} permission Permission to test for
   * @returns {boolean} Returns true if this entry has this permission
   */
@@ -256,8 +231,6 @@ export class Entry {
   };
   /**
   * Sets this entry negaive or positive
-  * @method setNegative
-  * @memberof Augmented.Security.Entry
   * @param {boolean} negative flag True or False
   */
   setNegative(n) {

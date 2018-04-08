@@ -4,9 +4,8 @@ import Configuration from "../configuration.js";
 /**
  * Augmented.Utility.AsynchronousQueue -
  * An Async queue for handling async chained functions
- * @class AsynchronousQueue
  * @param {number} timeout The timout period for each process in the queue (optional)
- * @memberof Augmented.Utility
+ * @memberof Utility
  */
 class AsynchronousQueue {
   constructor(timeout) {
@@ -15,8 +14,7 @@ class AsynchronousQueue {
   };
 
   /**
-   * @method add The Add method for adding processes to the queue
-   * @memberof Augmented.Utility.AsynchronousQueue
+   * Add method for adding processes to the queue
    */
   add(...args) {
     if (args && args.length > 0) {
@@ -27,8 +25,7 @@ class AsynchronousQueue {
   };
 
   /**
-   * @method clear Clear all processes in the queue
-   * @memberof Augmented.Utility.AsynchronousQueue
+   * Clear all processes in the queue
    */
   clear() {
     if (this._queue.length > 0) {
@@ -37,8 +34,7 @@ class AsynchronousQueue {
   };
 
   /**
-   * @method process Process the queue
-   * @memberof Augmented.Utility.AsynchronousQueue
+   * Process the queue
    */
   process(...args) {
     if (args) {
@@ -65,16 +61,14 @@ class AsynchronousQueue {
   };
 
   /**
-   * @method getTimeout Get the timeout for the queue
-   * @memberof Augmented.Utility.AsynchronousQueue
+   * Get the timeout for the queue
    */
   get timeout() {
     return this._timeout;
   };
 
   /**
-   * @method getQueue get the full queue
-   * @memberof Augmented.Utility.AsynchronousQueue
+   * Get the full queue
    */
   get queue() {
     return this._queue;

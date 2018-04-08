@@ -1,8 +1,7 @@
 /**
  * Augmented.Utility.Stack -
  * Standard Stack data structure
- * @class Stack
- * @memberof Augmented.Utility
+ * @memberof Utility
  */
 class Stack {
   constructor() {
@@ -11,16 +10,12 @@ class Stack {
 
   /**
    * The empty method clears the stack
-   * @method empty
-   * @memberof Augmented.Utility.Stack
    */
   empty() {
     return (this._stack.length === 0);
   };
   /**
    * The peek method returns the first in the stack
-   * @method peek
-   * @memberof Augmented.Utility.Stack
    * @returns {object} Returns the first object in the stack
    */
   peek() {
@@ -28,8 +23,6 @@ class Stack {
   };
   /**
    * The pop method returns and removes the first in the stack
-   * @method pop
-   * @memberof Augmented.Utility.Stack
    * @returns {object} Returns the first object in the stack
    */
   pop() {
@@ -37,8 +30,6 @@ class Stack {
   };
   /**
    * The push method adds to the stack
-   * @method push
-   * @memberof Augmented.Utility.Stack
    * @param {object} item The item to push to the stack
    */
   push(item) {
@@ -46,8 +37,6 @@ class Stack {
   };
   /**
    * The search method returns where in the stack an item exists
-   * @method search
-   * @memberof Augmented.Utility.Stack
    * @returns {number} Returns the index of the item
    */
   search(item) {
@@ -55,8 +44,6 @@ class Stack {
   };
   /**
    * The size method returns the size of the stack
-   * @method size
-   * @memberof Augmented.Utility.Stack
    * @returns {number} Returns the size of the stack
    */
   size() {
@@ -64,16 +51,12 @@ class Stack {
   };
   /**
    * The clear method clears the stack
-   * @method clear
-   * @memberof Augmented.Utility.Stack
    */
   clear() {
     this._stack.splice(0, this._stack.length);
   };
   /**
    * The toArray method returns the stack as an array
-   * @method toArray
-   * @memberof Augmented.Utility.Stack
    * @returns {array} Returns the stack as an array
    */
   toArray() {
@@ -82,8 +65,6 @@ class Stack {
 
   /**
    * The toString method returns the stack as an string
-   * @method toString
-   * @memberof Augmented.Utility.Stack
    * @returns {string} Returns the stack as an string
    */
   toString() {

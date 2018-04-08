@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
-		<title>Object</title>
+		<title>AugmentedObject</title>
 		<link rel="icon" type="image/png" href="favicon.png"/>
 		<!--[if lt IE 9]>
 		<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -15,7 +15,7 @@
 			<style>
 				.page-header,
 				pre.code-toolbar > .toolbar:hover {
-					background-color: #2196F3;
+					background-color: #607D8B;
 				}
 				.callout-primary,
 				.toc .nav > li > a:hover,
@@ -24,10 +24,10 @@
 				.toc .nav > li.active > a:hover,
 				.toc .nav > li.active > a:focus,
 				pre.code-toolbar > .toolbar:hover {
-					border-left-color: #2196F3;
+					border-left-color: #607D8B;
 				}
 				pre.code-toolbar > .toolbar:hover {
-					border-bottom-color: #2196F3;
+					border-bottom-color: #607D8B;
 				}
 				.callout-primary h5,
 				.symbol-title.collapsible-symbol .toggle-icon,
@@ -37,11 +37,11 @@
 				.toc .nav > li.active > a,
 				.toc .nav > li.active > a:hover,
 				.toc .nav > li.active > a:focus {
-					color: #2196F3;
+					color: #607D8B;
 				}
 			</style>
 		<script type="text/javascript">
-			window.TEMPLATE_OPTIONS = {"includeDate":true,"dateFormat":"ddd MMM Do YYYY","systemName":"Augmented.js","systemSummary":"Augmented.js Next - Elegant Developement made simple.","systemLogo":"img/logo.png","systemColor":"#2196F3","navMembers":[{"kind":"class","title":"Classes","summary":"All documented classes."},{"kind":"external","title":"Externals","summary":"All documented external members."},{"kind":"global","title":"Globals","summary":"All documented globals."},{"kind":"mixin","title":"Mixins","summary":"All documented mixins."},{"kind":"interface","title":"Interfaces","summary":"All documented interfaces."},{"kind":"module","title":"Modules","summary":"All documented modules."},{"kind":"namespace","title":"Namespaces","summary":"All documented namespaces."},{"kind":"tutorial","title":"Tutorials","summary":"All available tutorials."}],"footer":"<a href='http://www.augmentedjs.com'>Augmented.js Homepage</a>","copyright":"","linenums":true,"collapseSymbols":false,"inverseNav":true,"inlineNav":false,"outputSourceFiles":true,"sourceRootPath":null,"disablePackagePath":true,"outputSourcePath":true,"showTableOfContents":true,"showAccessFilter":true,"analytics":null,"methodHeadingReturns":false,"sort":"linenum, longname, version, since","search":true,"favicon":"favicon.png","stylesheets":[],"scripts":[],"monospaceLinks":false,"cleverLinks":false,"logoFile":"images/logo.png","navType":"vertical","protocol":"html://"};
+			window.TEMPLATE_OPTIONS = {"includeDate":true,"dateFormat":"ddd MMM Do YYYY","systemName":"Augmented.js","systemSummary":"Augmented.js Next - Simply Development.","systemLogo":"img/jensen-silo-circle-small.png","systemColor":"#607D8B","navMembers":[{"kind":"class","title":"Classes","summary":"All documented classes."},{"kind":"external","title":"Externals","summary":"All documented external members."},{"kind":"global","title":"Globals","summary":"All documented globals."},{"kind":"mixin","title":"Mixins","summary":"All documented mixins."},{"kind":"interface","title":"Interfaces","summary":"All documented interfaces."},{"kind":"module","title":"Modules","summary":"All documented modules."},{"kind":"namespace","title":"Namespaces","summary":"All documented namespaces."},{"kind":"tutorial","title":"Tutorials","summary":"All available tutorials."}],"footer":"<a href='http://www.augmentedjs.com'>Augmented.js Homepage</a>","copyright":"","linenums":true,"collapseSymbols":false,"inverseNav":true,"inlineNav":false,"outputSourceFiles":true,"sourceRootPath":null,"disablePackagePath":true,"outputSourcePath":true,"showTableOfContents":true,"showAccessFilter":true,"analytics":null,"methodHeadingReturns":false,"sort":"linenum, longname, version, since","search":true,"favicon":"favicon.png","stylesheets":[],"scripts":[],"monospaceLinks":false,"cleverLinks":false,"logoFile":"images/jensen-silo-circle-small.png","navType":"vertical","protocol":"html://"};
 			window.DOCLET_TOC_ENABLED = true;
 			window.DOCLET_AFILTER_ENABLED = false;
 		</script>
@@ -51,7 +51,7 @@
 	<header class="navbar navbar-default navbar-fixed-top navbar-inverse">
 		<div class="container">
 			<div class="navbar-header">
-				<a class="navbar-brand branding-logo" href="index.html" style="background-image: url(img/logo.png);">
+				<a class="navbar-brand branding-logo" href="index.html" style="background-image: url(img/jensen-silo-circle-small.png);">
 					Augmented.js
 				</a>
 				<!-- displayed on small devices -->
@@ -66,25 +66,27 @@
 							<li class="dropdown">
 								<a href="list_class.html" class="dropdown-toggle" data-toggle="dropdown">Classes<b class="caret"></b></a>
 								<ul class="dropdown-menu">
+										<li><a href="AbstractLogger.html">AbstractLogger</a></li>
 										<li><a href="AbstractSecurityClient.html">AbstractSecurityClient</a></li>
-										<li><a href="Augmented.AbstractLogger.html">Augmented.AbstractLogger</a></li>
-										<li><a href="Augmented.AbstractModel.html">Augmented.AbstractModel</a></li>
-										<li><a href="Augmented.Application.html">Augmented.Application</a></li>
-										<li><a href="Augmented.Collection.html">Augmented.Collection</a></li>
-										<li><a href="Augmented.Object.html">Augmented.Object</a></li>
-										<li><a href="Augmented.Security.Client.ACLClient.html">Augmented.Security.Client.ACLClient</a></li>
-										<li><a href="Augmented.Security.Client.OAUTH2Client.html">Augmented.Security.Client.OAUTH2Client</a></li>
-										<li><a href="Augmented.Security.Context.html">Augmented.Security.Context</a></li>
-										<li><a href="Augmented.Security.Entry.html">Augmented.Security.Entry</a></li>
-										<li><a href="Augmented.Security.Principal.html">Augmented.Security.Principal</a></li>
-										<li><a href="Augmented.Utility.AsynchronousQueue.html">Augmented.Utility.AsynchronousQueue</a></li>
-										<li><a href="Augmented.Utility.BinarySearch.html">Augmented.Utility.BinarySearch</a></li>
-										<li><a href="Augmented.Utility.Map.html">Augmented.Utility.Map</a></li>
-										<li><a href="Augmented.Utility.PrettyPrint.html">Augmented.Utility.PrettyPrint</a></li>
-										<li><a href="Augmented.Utility.SchemaGenerator.html">Augmented.Utility.SchemaGenerator</a></li>
-										<li><a href="Augmented.Utility.Shuffle.html">Augmented.Utility.Shuffle</a></li>
-										<li><a href="Augmented.Utility.Stack.html">Augmented.Utility.Stack</a></li>
-										<li><a href="Augmented.ValidationFramework.html">Augmented.ValidationFramework</a></li>
+										<li><a href="Application.html">Application</a></li>
+										<li><a href="AugmentedObject.html">AugmentedObject</a></li>
+										<li><a href="ColorConsoleLogger.html">ColorConsoleLogger</a></li>
+										<li><a href="ConsoleLogger.html">ConsoleLogger</a></li>
+										<li><a href="Logger.exports.LoggerFactory.html">Logger.exports.LoggerFactory</a></li>
+										<li><a href="module.exports.html">module.exports</a></li>
+										<li><a href="module.exports.html">module.exports</a></li>
+										<li><a href="module.exports.html">module.exports</a></li>
+										<li><a href="Security.Client.exports.ACLClient.html">Security.Client.exports.ACLClient</a></li>
+										<li><a href="Security.Client.exports.OAUTH2Client.html">Security.Client.exports.OAUTH2Client</a></li>
+										<li><a href="Security.exports.AuthenticationFactory.html">Security.exports.AuthenticationFactory</a></li>
+										<li><a href="Security.exports.Context.html">Security.exports.Context</a></li>
+										<li><a href="Security.exports.Entry.html">Security.exports.Entry</a></li>
+										<li><a href="Security.exports.Principal.html">Security.exports.Principal</a></li>
+										<li><a href="Utility.AsynchronousQueue.html">Utility.AsynchronousQueue</a></li>
+										<li><a href="Utility.AugmentedMap.html">Utility.AugmentedMap</a></li>
+										<li><a href="Utility.exports.Transformer.html">Utility.exports.Transformer</a></li>
+										<li><a href="Utility.Stack.html">Utility.Stack</a></li>
+										<li><a href="ValidationFramework.html">ValidationFramework</a></li>
 								</ul>
 							</li>
 							<li class="dropdown">
@@ -96,17 +98,14 @@
 							<li class="dropdown">
 								<a href="list_namespace.html" class="dropdown-toggle" data-toggle="dropdown">Namespaces<b class="caret"></b></a>
 								<ul class="dropdown-menu">
-										<li><a href="Augmented.Logger.html">Augmented.Logger</a></li>
-										<li><a href="Augmented.Logger.LoggerFactory.html">Augmented.Logger.LoggerFactory</a></li>
-										<li><a href="Augmented.Security.html">Augmented.Security</a></li>
-										<li><a href="Augmented.Security.AuthenticationFactory.html">Augmented.Security.AuthenticationFactory</a></li>
-										<li><a href="Augmented.Security.Client.html">Augmented.Security.Client</a></li>
-										<li><a href="Augmented.Utility.html">Augmented.Utility</a></li>
 										<li><a href="Augmented.Utility.BundleObject.html">Augmented.Utility.BundleObject</a></li>
 										<li><a href="Augmented.Utility.MessageKeyFormatter.html">Augmented.Utility.MessageKeyFormatter</a></li>
 										<li><a href="Augmented.Utility.MessageReader.html">Augmented.Utility.MessageReader</a></li>
 										<li><a href="Augmented.Utility.ResourceBundle.html">Augmented.Utility.ResourceBundle</a></li>
-										<li><a href="Augmented.Utility.Transformer.html">Augmented.Utility.Transformer</a></li>
+										<li><a href="Logger.html">Logger</a></li>
+										<li><a href="Security.html">Security</a></li>
+										<li><a href="Security.Client.html">Security.Client</a></li>
+										<li><a href="Utility.html">Utility</a></li>
 								</ul>
 							</li>
 				</ul>
@@ -127,7 +126,7 @@
 	<!-- end:navbar.hbs -->		<div class="page-header">
 			<div class="container">
 				<span class="kind">class</span>
-				<h1><span class="name">Object</span></h1>
+				<h1><span class="name">AugmentedObject</span></h1>
 			</div>
 		</div>
 	<div class="container content">
@@ -136,16 +135,16 @@
 						<ol class="breadcrumb">
 							<li><a href="index.html">Home</a></li>
 							<li><a href="list_class.html">Classes</a></li>
-							<li class="active">Object</li>
+							<li class="active">AugmentedObject</li>
 						</ol>
 					<section>
 							<dl class="symbol primary">
 								<dt class="symbol-title class">
-			<h2 class="class"><span class="signature-new">new&nbsp;</span><span class="name">Object</span><span class="signature-params">( <span class="signature-param">options</span>&nbsp;)</span></h2>
+			<h2 class="class"><span class="signature-new">new&nbsp;</span><span class="name">AugmentedObject</span><span class="signature-params">( <span class="signature-param">options</span>&nbsp;)</span></h2>
 </dt>
 <dd class="symbol-details class" style="max-height: 9999px;">
 	<div class="symbol-details-inner">
-			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>Augmented Object<br>Base class for other classes to extend from</p></div>
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description classdesc"><p>Augmented Object<br>Base class for other classes to extend from</p></div>
 			</div>			<div class="callout callout-info">
 				<h5>Parameters</h5>
 				<table class="params table table-striped">
@@ -187,7 +186,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="object.js.html">object.js</a>, <a href="object.js.html#line-6">line 6</a></p>
+									<p class="form-control-static"><a href="object.js.html">object.js</a>, <a href="object.js.html#line-11">line 11</a></p>
 								</div>
 							</div>
 			
@@ -203,64 +202,7 @@
 									<dl class="symbol">
 											<hr/>
 											<dt class="symbol-title member public">
-			<h4 id="options" class="member public"><span class="signature-attribs">&lt;static> </span><span class="name">AugmentedObject#options</span><span class="signature-type"></span></h4>
-		</dt>
-<dd class="symbol-details member public">
-	<div class="symbol-details-inner">
-			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>The passed options</p></div>
-			</div>			<div class="callout callout-info">
-				<h5>Properties</h5>
-				<table class="params table table-striped">
-					<thead>
-					<tr>
-							<th>Name</th>
-						<th>Type</th>
-						<th class="last">Description</th>
-					</tr>
-					</thead>
-					<tbody>
-						<tr>
-								<td><code>options</code></td>
-							<td></td>
-							<td class="last">
-							</td>
-						</tr>
-					</tbody>
-				</table>
-			</div>
-			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-							<!-- source -->
-							<div class="form-group">
-								<label class="col-sm-3 control-label">Source</label>
-								<div class="col-sm-9">
-									<p class="form-control-static"><a href="object.js.html">object.js</a>, <a href="object.js.html#line-49">line 49</a></p>
-								</div>
-							</div>
-			
-			
-			
-			
-					</form>
-			</div>	</div>
-</dd>
-											<hr/>
-											<dt class="symbol-title member public">
-			<h4 id="events" class="member public"><span class="signature-attribs">&lt;static> </span><span class="name">AugmentedObject#events</span><span class="signature-type"></span></h4>
+			<h4 id="events" class="member public"><span class="name">events</span><span class="signature-type"></span></h4>
 		</dt>
 <dd class="symbol-details member public">
 	<div class="symbol-details-inner">
@@ -305,7 +247,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="object.js.html">object.js</a>, <a href="object.js.html#line-62">line 62</a></p>
+									<p class="form-control-static"><a href="object.js.html">object.js</a>, <a href="object.js.html#line-59">line 59</a></p>
 								</div>
 							</div>
 			
@@ -320,52 +262,7 @@
 									<dl class="symbol">
 											<hr/>
 											<dt class="symbol-title function public">
-			<h4 id=".initialize" class="function public"><span class="signature-attribs">&lt;static> </span><span class="name">initialize</span><span class="signature-params">()</span></h4>
-		</dt>
-<dd class="symbol-details function public">
-	<div class="symbol-details-inner">
-			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>Initialize the object</p></div>
-			</div>			<div class="callout callout-success"><h5>Returns</h5>		<form class="form-horizontal returns">
-							<div class="form-group">
-								<label class="col-sm-3 control-label returns-type"><span class="param-type">object</span></label>
-								<div class="col-sm-9">
-									<div class="form-control-static returns-description"><p>Returns this context</p></div>
-								</div>
-							</div>
-					</form>
-			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-							<!-- source -->
-							<div class="form-group">
-								<label class="col-sm-3 control-label">Source</label>
-								<div class="col-sm-9">
-									<p class="form-control-static"><a href="object.js.html">object.js</a>, <a href="object.js.html#line-34">line 34</a></p>
-								</div>
-							</div>
-			
-			
-			
-			
-					</form>
-			</div>	</div>
-</dd>
-											<hr/>
-											<dt class="symbol-title function public">
-			<h4 id=".trigger" class="function public"><span class="signature-attribs">&lt;static> </span><span class="name">trigger</span><span class="signature-params">( <span class="signature-param">name</span>, <span class="signature-param">args</span>&nbsp;)</span></h4>
+			<h4 id="trigger" class="function public"><span class="name">trigger</span><span class="signature-params">( <span class="signature-param">name</span>, <span class="signature-param">...args</span>&nbsp;)</span></h4>
 		</dt>
 <dd class="symbol-details function public">
 	<div class="symbol-details-inner">
@@ -377,6 +274,7 @@
 					<tr>
 							<th>Name</th>
 						<th>Type</th>
+							<th>Attributes</th>
 						<th class="last">Description</th>
 					</tr>
 					</thead>
@@ -384,6 +282,7 @@
 						<tr>
 								<td><code>name</code></td>
 							<td><span class="param-type">string</span></td>
+								<td class="attributes"></td>
 							<td class="last">
 									<p>The name of the event</p>
 							</td>
@@ -391,6 +290,7 @@
 						<tr>
 								<td><code>args</code></td>
 							<td><span class="param-type">any</span></td>
+								<td class="attributes">&lt;repeatable&gt;<br/></td>
 							<td class="last">
 									<p>any number of additional arguments</p>
 							</td>
@@ -426,7 +326,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="object.js.html">object.js</a>, <a href="object.js.html#line-70">line 70</a></p>
+									<p class="form-control-static"><a href="object.js.html">object.js</a>, <a href="object.js.html#line-76">line 76</a></p>
 								</div>
 							</div>
 			
@@ -438,7 +338,7 @@
 </dd>
 											<hr/>
 											<dt class="symbol-title function public">
-			<h4 id=".once" class="function public"><span class="signature-attribs">&lt;static> </span><span class="name">once</span><span class="signature-params">( <span class="signature-param">name</span>, <span class="signature-param">callback</span>, <span class="signature-param">context</span>&nbsp;)</span></h4>
+			<h4 id="once" class="function public"><span class="name">once</span><span class="signature-params">( <span class="signature-param">name</span>, <span class="signature-param">callback</span>, <span class="signature-param">context</span>&nbsp;)</span></h4>
 		</dt>
 <dd class="symbol-details function public">
 	<div class="symbol-details-inner">
@@ -506,7 +406,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="object.js.html">object.js</a>, <a href="object.js.html#line-98">line 98</a></p>
+									<p class="form-control-static"><a href="object.js.html">object.js</a>, <a href="object.js.html#line-103">line 103</a></p>
 								</div>
 							</div>
 			
@@ -518,7 +418,7 @@
 </dd>
 											<hr/>
 											<dt class="symbol-title function public">
-			<h4 id=".off" class="function public"><span class="signature-attribs">&lt;static> </span><span class="name">off</span><span class="signature-params">( <span class="signature-param">name</span>, <span class="signature-param">callback</span>, <span class="signature-param">context</span>&nbsp;)</span></h4>
+			<h4 id="off" class="function public"><span class="name">off</span><span class="signature-params">( <span class="signature-param">name</span>, <span class="signature-param">callback</span>, <span class="signature-param">context</span>&nbsp;)</span></h4>
 		</dt>
 <dd class="symbol-details function public">
 	<div class="symbol-details-inner">
@@ -586,7 +486,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="object.js.html">object.js</a>, <a href="object.js.html#line-119">line 119</a></p>
+									<p class="form-control-static"><a href="object.js.html">object.js</a>, <a href="object.js.html#line-122">line 122</a></p>
 								</div>
 							</div>
 			
@@ -598,7 +498,7 @@
 </dd>
 											<hr/>
 											<dt class="symbol-title function public">
-			<h4 id=".stopListening" class="function public"><span class="signature-attribs">&lt;static> </span><span class="name">stopListening</span><span class="signature-params">( <span class="signature-param">obj</span>, <span class="signature-param">name</span>, <span class="signature-param">callback</span>&nbsp;)</span></h4>
+			<h4 id="stopListening" class="function public"><span class="name">stopListening</span><span class="signature-params">( <span class="signature-param">obj</span>, <span class="signature-param">name</span>, <span class="signature-param">callback</span>&nbsp;)</span></h4>
 		</dt>
 <dd class="symbol-details function public">
 	<div class="symbol-details-inner">
@@ -666,7 +566,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="object.js.html">object.js</a>, <a href="object.js.html#line-141">line 141</a></p>
+									<p class="form-control-static"><a href="object.js.html">object.js</a>, <a href="object.js.html#line-140">line 140</a></p>
 								</div>
 							</div>
 			
@@ -678,7 +578,7 @@
 </dd>
 											<hr/>
 											<dt class="symbol-title function public">
-			<h4 id=".on" class="function public"><span class="signature-attribs">&lt;static> </span><span class="name">on</span><span class="signature-params">( <span class="signature-param">name</span>, <span class="signature-param">callback</span>, <span class="signature-param">context</span>&nbsp;)</span></h4>
+			<h4 id="on" class="function public"><span class="name">on</span><span class="signature-params">( <span class="signature-param">name</span>, <span class="signature-param">callback</span>, <span class="signature-param">context</span>&nbsp;)</span></h4>
 		</dt>
 <dd class="symbol-details function public">
 	<div class="symbol-details-inner">
@@ -746,7 +646,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="object.js.html">object.js</a>, <a href="object.js.html#line-170">line 170</a></p>
+									<p class="form-control-static"><a href="object.js.html">object.js</a>, <a href="object.js.html#line-167">line 167</a></p>
 								</div>
 							</div>
 			
@@ -758,7 +658,7 @@
 </dd>
 											<hr/>
 											<dt class="symbol-title function public">
-			<h4 id=".listenTo" class="function public"><span class="signature-attribs">&lt;static> </span><span class="name">listenTo</span><span class="signature-params">( <span class="signature-param">obj</span>, <span class="signature-param">name</span>, <span class="signature-param">callback</span>&nbsp;)</span></h4>
+			<h4 id="listenTo" class="function public"><span class="name">listenTo</span><span class="signature-params">( <span class="signature-param">obj</span>, <span class="signature-param">name</span>, <span class="signature-param">callback</span>&nbsp;)</span></h4>
 		</dt>
 <dd class="symbol-details function public">
 	<div class="symbol-details-inner">
@@ -826,7 +726,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="object.js.html">object.js</a>, <a href="object.js.html#line-184">line 184</a></p>
+									<p class="form-control-static"><a href="object.js.html">object.js</a>, <a href="object.js.html#line-180">line 180</a></p>
 								</div>
 							</div>
 			
@@ -838,7 +738,7 @@
 </dd>
 											<hr/>
 											<dt class="symbol-title function public">
-			<h4 id=".listenToOnce" class="function public"><span class="signature-attribs">&lt;static> </span><span class="name">listenToOnce</span><span class="signature-params">( <span class="signature-param">obj</span>, <span class="signature-param">name</span>, <span class="signature-param">callback</span>&nbsp;)</span></h4>
+			<h4 id="listenToOnce" class="function public"><span class="name">listenToOnce</span><span class="signature-params">( <span class="signature-param">obj</span>, <span class="signature-param">name</span>, <span class="signature-param">callback</span>&nbsp;)</span></h4>
 		</dt>
 <dd class="symbol-details function public">
 	<div class="symbol-details-inner">
@@ -906,7 +806,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="object.js.html">object.js</a>, <a href="object.js.html#line-214">line 214</a></p>
+									<p class="form-control-static"><a href="object.js.html">object.js</a>, <a href="object.js.html#line-206">line 206</a></p>
 								</div>
 							</div>
 			
@@ -927,7 +827,7 @@
 	</div>
 	<footer>
 				<div class="footer-option">&lt;a href&#x3D;&#x27;http://www.augmentedjs.com&#x27;&gt;Augmented.js Homepage&lt;/a&gt;</div>
-			<div class="generated-by">Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Sat Mar 31st 2018 using the <a href="https://github.com/steveush/foodoc">FooDoc template</a>.</div>
+			<div class="generated-by">Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Sun Apr 8th 2018 using the <a href="https://github.com/steveush/foodoc">FooDoc template</a>.</div>
 	</footer>
 	<script src="js/jquery.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>

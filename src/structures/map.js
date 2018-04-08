@@ -2,9 +2,8 @@ import isString from "../functions/isString.js";
 
 /**
  * ES6-like Map - than can marshall
- * @class Map
  * @param myData {object} Map data to fill map
- * @memberof Augmented.Utility
+ * @memberof Utility
  */
 class AugmentedMap {
   constructor(myData) {
@@ -17,8 +16,6 @@ class AugmentedMap {
 
   /**
    * Set the value by key in the map
-   * @method set
-   * @memberof Augmented.Utility.Map
    * @param {string} key name of the key
    * @param {any} value value for the key
    */
@@ -33,8 +30,6 @@ class AugmentedMap {
 
   /**
    * Get the value by key in the map
-   * @method get
-   * @memberof Augmented.Utility.Map
    * @param {string} key name of the key
    * @returns {any} The value for the key
    */
@@ -44,8 +39,6 @@ class AugmentedMap {
 
   /**
    * Index of the key in the map
-   * @method indexOf
-   * @memberof Augmented.Utility.Map
    * @param {string} key name of the key
    * @returns {number} index of the key
    */
@@ -55,8 +48,6 @@ class AugmentedMap {
 
   /**
    * Remove the value by key in the map
-   * @method remove
-   * @memberof Augmented.Utility.Map
    * @param {string} key name of the key
    */
   remove(key) {
@@ -67,8 +58,6 @@ class AugmentedMap {
 
   /**
    * Has returns whether a key exists in the map
-   * @method has
-   * @memberof Augmented.Utility.Map
    * @param {string} key name of the key
    * @returns {boolean} true if the key exists in the map
    */
@@ -78,8 +67,6 @@ class AugmentedMap {
 
   /**
    * Iterator forEach key to value in the map
-   * @method forEach
-   * @memberof Augmented.Utility.Map
    * @param {function} fn callback for the iterator
    */
   forEach(fn) {
@@ -96,8 +83,6 @@ class AugmentedMap {
 
   /**
    * Get the key for the index in the map
-   * @method key
-   * @memberof Augmented.Utility.Map
    * @param {number} i index of the key
    * @returns {object} the key at index
    */
@@ -107,8 +92,6 @@ class AugmentedMap {
 
   /**
    * The entries value object in the map
-   * @method entries
-   * @memberof Augmented.Utility.Map
    * @returns {array} Array of entries value objects
    */
   entries() {
@@ -125,8 +108,6 @@ class AugmentedMap {
 
   /**
    * The values in the map as an Array
-   * @method values
-   * @memberof Augmented.Utility.Map
    * @returns {array} values as an Array
    */
   values() {
@@ -142,8 +123,6 @@ class AugmentedMap {
 
   /**
    * Clear the map
-   * @method clear
-   * @memberof Augmented.Utility.Map
    */
   clear() {
     this._keys = [];
@@ -152,8 +131,6 @@ class AugmentedMap {
 
   /**
    * The size of the map in keys
-   * @method size
-   * @memberof Augmented.Utility.Map
    * @returns {number} size of map by keys
    */
   size() {
@@ -162,8 +139,6 @@ class AugmentedMap {
 
   /**
    * Represent the map in JSON
-   * @method toJSON
-   * @memberof Augmented.Utility.Map
    * @returns {object} JSON of the map
    */
   toJSON() {
@@ -172,8 +147,6 @@ class AugmentedMap {
 
   /**
    * Represent the map in a String of JSON
-   * @method toString
-   * @memberof Augmented.Utility.Map
    * @returns {string} Stringified JSON of the map
    */
   toString() {
@@ -184,8 +157,6 @@ class AugmentedMap {
 
   /**
    * Checks of the map is empty (not ES6)
-   * @method isEmpty
-   * @memberof Augmented.Utility.Map
    * @returns {boolean} true if the map is empty
    */
   isEmpty() {
@@ -197,10 +168,8 @@ class AugmentedMap {
    * dataToMarshall must be the following type of data to parse:
    * JSON object with properties (key/value)
    *
-   * @method marshall
    * @param {Augmented.Utility.Map} dataToMarshall Data to marshall as a map
    * @returns {boolean} Returns true on success
-   * @memberof Augmented.Utility.Map
    */
   marshall(dataToMarshall) {
     let dataToParse;

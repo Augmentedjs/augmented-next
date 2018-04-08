@@ -47,14 +47,17 @@ check = (app) => {
       reject(new Error("failed starting!"));
     }
   });
-};
+},
+DEFAULT_NAME = "untitled",
+METADATA_KEY = {};
+METADATA_KEY.NAME = Symbol("name");
+METADATA_KEY.DATASTORE = Symbol("datastore");
 
 /**
  * <p>Application Class for use to define an application.<br/>
  * An application contains metadata and initializers for the application.<br/>
  * <em>Applications track history, and normally would contain the entire single page App startup.</em></p>
  * @param {string} name Name of the application
- * @memberof Augmented
  * @example const app = new Augmented.Application("Awesome");
  * app.start();
  * @example const app = new Augmented.Application();
@@ -64,17 +67,31 @@ check = (app) => {
  * app.start();
  */
 class Application {
-  constructor(name) {
-    this._metadata = {};
-    // preassign a name
-    if (name) {
-      this._metadata["name"] = name;
+  constructor(options) {
+    if (!options) {
+      options = {};
+    }
+
+    if (options.metadata) {
+      this._metadata = options.metadata;
     } else {
-      this._metadata["name"] = "untitled";
+      this._metadata = {};
+    }
+
+    // preassign a name
+    if (options.name) {
+      this._name = options.name;
+    } else {
+      this._name = DEFAULT_NAME;
     }
 
     // preset a datastore object
-    this._metadata["datastore"] = {};
+    if (options.datastore) {
+      this._datastore = options.datastore;
+    } else {
+      this._datastore = {};
+    }
+
     this._router = null;
     this._started = false;
   };
@@ -97,12 +114,12 @@ class Application {
    * @property started
    * @returns {boolean} Returns the property of the started Event
    */
-
   get started() {
     return this._started;
   };
 
-  /** Event for after during startup of the application
+  /**
+   * Event for after during startup of the application
    */
   initialize() {
     return true;
@@ -124,11 +141,11 @@ class Application {
    * @property name
    */
   get name() {
-    return this.getMetadataItem("name");
+    return this.getMetadataItem(METADATA_KEY.NAME);
   };
 
   set name(n) {
-    return this.setMetadataItem("name", n);
+    return this.setMetadataItem(METADATA_KEY.NAME, n);
   };
 
   /** The metadata map
@@ -195,12 +212,12 @@ class Application {
    * @property {Augmented.Model|object} datastore
    */
   get datastore() {
-    return this.getMetadataItem("datastore");
+    return this.getMetadataItem(METADATA_KEY.DATASTORE);
   };
 
   set datastore(ds) {
     if (ds) {
-      this.setMetadataItem("datastore", ds);
+      this.setMetadataItem(METADATA_KEY.DATASTORE, ds);
     }
   };
 };

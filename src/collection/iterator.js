@@ -8,17 +8,18 @@
   const ITERATOR_KEYS = 2;
   const ITERATOR_KEYSVALUES = 3;
 
-  // A CollectionIterator implements JavaScript's Iterator protocol, allowing the
-  // use of `for of` loops in modern browsers and interoperation between
-  // Backbone.Collection and other JavaScript functions and third-party libraries
-  // which can operate on Iterables.
+/** A CollectionIterator implements JavaScript's Iterator protocol, allowing the
+ * use of `for of` loops in modern browsers and interoperation between
+ * Collection and other JavaScript functions and third-party libraries
+ * which can operate on Iterables.
+ */
 class CollectionIterator {
   constructor(collection, kind) {
     this._collection = collection;
     this._kind = kind;
     this._index = 0;
   };
-  
+
   // All Iterators should themselves be Iterable.
   /* ???
   if ($$iterator) {
@@ -27,6 +28,11 @@ class CollectionIterator {
     };
   }*/
 
+  /**
+   * Next model in collection<br/>
+   * Once exhausted, remove the reference to the collection so future
+   * calls to the next method always return done.
+   */
   next() {
     if (this._collection) {
       // Only continue iterating if the iterated collection is long enough.
@@ -56,3 +62,5 @@ class CollectionIterator {
     return {value: void 0, done: true};
   };
 };
+
+export default CollectionIterator;

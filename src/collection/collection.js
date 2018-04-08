@@ -30,11 +30,9 @@ const addOptions = {
  * <li>Validation and Schemas</li>
  * <li>Security</li>
  * </ul>
- * @class Augmented.Collection
- * @memberof Augmented
- * @extends Augmented.Object
+ * @extends Object
  */
-export default class AbstractCollection extends AugmentedObject {
+class AbstractCollection extends AugmentedObject {
   constructor(models, options) {
     super(options);
 
@@ -69,14 +67,12 @@ export default class AbstractCollection extends AugmentedObject {
   /**
    * Schema property
    * @property {object} schema The JSON schema from this collection
-   * @memberof Collection
    */
 
 
   /**
    * Validation Message property
    * @property {object} validationMessages The property holding validation message data
-   * @memberof Collection
    */
 
 
@@ -86,8 +82,9 @@ export default class AbstractCollection extends AugmentedObject {
   initialize(models, options) {
   };
 
-  // The JSON representation of a Collection is an array of the
-  // models" attributes.
+  /** The JSON representation of a Collection is an array of the
+   * models" attributes.
+   */
   toJSON() {
     //return this.map( (model) => { return model.toJSON(options); });
     let i = 0;
@@ -102,14 +99,17 @@ export default class AbstractCollection extends AugmentedObject {
     return _map(collection, interatee);
   };*/
 
-  // Add a model, or list of models to the set. `models` may be Backbone
-  // Models or raw JavaScript objects to be converted to Models, or any
-  // combination of the two.
+  /**
+   * Add a model, or list of models to the set. `models` may be Backbone
+   * Models or raw JavaScript objects to be converted to Models, or any
+   * combination of the two.
+   */
   add(models, options) {
     return this.set(models, extend({ merge: false }, options, addOptions));
   };
 
-  // Remove a model, or a list of models from the set.
+  /** Remove a model, or a list of models from the set.
+  */
   remove(models, options) {
     options = extend({}, options);
     const singular = Array.isArray(models);
@@ -122,10 +122,11 @@ export default class AbstractCollection extends AugmentedObject {
     return singular ? removed[0] : removed;
   };
 
-  // Update a collection by `set`-ing a new list of models, adding new ones,
-  // removing models that are no longer present, and merging models that
-  // already exist in the collection, as necessary. Similar to **Model#set**,
-  // the core operation for updating the data contained by the collection.
+  /** Update a collection by `set`-ing a new list of models, adding new ones,
+   * removing models that are no longer present, and merging models that
+   * already exist in the collection, as necessary. Similar to **Model#set**,
+   * the core operation for updating the data contained by the collection.
+   */
   set(models, options) {
     if (models === null) {
       return;
@@ -249,10 +250,11 @@ export default class AbstractCollection extends AugmentedObject {
     return singular ? models[0] : models;
   };
 
-  // When you have more items than you want to add or remove individually,
-  // you can reset the entire set with a new list of models, without firing
-  // any granular `add` or `remove` events. Fires `reset` when finished.
-  // Useful for bulk operations and optimizations.
+  /** When you have more items than you want to add or remove individually,
+   * you can reset the entire set with a new list of models, without firing
+   * any granular `add` or `remove` events. Fires `reset` when finished.
+   * Useful for bulk operations and optimizations.
+   */
   reset(models, options) {
     options = options ? _clone(options) : {};
     for (let i = 0; i < this.models.length; i++) {
@@ -265,35 +267,41 @@ export default class AbstractCollection extends AugmentedObject {
     return models;
   };
 
-  // Add a model to the end of the collection.
+  /** Add a model to the end of the collection.
+  */
   push(model, options) {
     return this.add(model, extend({at: this.length}, options));
   };
 
-  // Remove a model from the end of the collection.
+  /** Remove a model from the end of the collection.
+   */
   pop(options) {
     const model = this.at(this.length - 1);
     return this.remove(model, options);
   };
 
-  // Add a model to the beginning of the collection.
+  /** Add a model to the beginning of the collection.
+   */
   unshift(model, options) {
     return this.add(model, extend({at: 0}, options));
   };
 
-  // Remove a model from the beginning of the collection.
+  /** Remove a model from the beginning of the collection.
+   */
   shift(options) {
     const model = this.at(0);
     return this.remove(model, options);
   };
 
-  // Slice out a sub-array of models from the collection.
+  /** Slice out a sub-array of models from the collection.
+   */
   slice(...args) {
     return this.models.slice(args);
   };
 
-  // Get a model from the set by id, cid, model object with id or cid
-  // properties, or an attributes object that is transformed through modelId.
+  /** Get a model from the set by id, cid, model object with id or cid
+   * properties, or an attributes object that is transformed through modelId.
+   */
   get(obj) {
     if (obj == null) {
       return void 0;
@@ -303,12 +311,14 @@ export default class AbstractCollection extends AugmentedObject {
       obj.cid && this._byId[obj.cid];
   };
 
-  // Returns `true` if the model is in the collection.
+  /** Returns `true` if the model is in the collection.
+   */
   has(obj) {
     return (this.get(obj) !== null);
   };
 
-  // Get the model at the given index.
+  /** Get the model at the given index.
+   */
   at(index) {
     if (index < 0) {
       index += this.length;
@@ -316,21 +326,23 @@ export default class AbstractCollection extends AugmentedObject {
     return this.models[index];
   };
 
-  // Return models with matching attributes. Useful for simple cases of
-  // `filter`.
+  /** Return models with matching attributes. Useful for simple cases of `filter`.
+   */
   where(attrs, first) {
     return this[first ? "find" : "filter"](attrs);
   };
 
-  // Return the first model with matching attributes. Useful for simple cases
-  // of `find`.
+  /** Return the first model with matching attributes. Useful for simple cases
+   * of `find`.
+   */
   findWhere(attrs) {
     return this.where(attrs, true);
   };
 
-  // Force the collection to re-sort itself. You don"t need to call this under
-  // normal circumstances, as the set will maintain sort order as each item
-  // is added.
+  /** Force the collection to re-sort itself. You don"t need to call this under
+   * normal circumstances, as the set will maintain sort order as each item
+   * is added.
+   */
   sort(options) {
     let comparator = this.comparator;
     if (!comparator) throw new Error("Cannot sort a set without a comparator");
@@ -349,7 +361,8 @@ export default class AbstractCollection extends AugmentedObject {
     return this;
   };
 
-  // Pluck an attribute from each model in the collection.
+  /** Pluck an attribute from each model in the collection.
+   */
   pluck(attr) {
     let i = 0;
     const out = [], l = this.models.length;
@@ -360,12 +373,16 @@ export default class AbstractCollection extends AugmentedObject {
     //return this.map(attr + "");
   };
 
+  /**
+   * Fetch the collection
+   */
   fetch(options) {
   };
 
-  // Create a new instance of a model in this collection. Add the model to the
-  // collection immediately, unless `wait: true` is passed, in which case we
-  // wait for the server to agree.
+  /** Create a new instance of a model in this collection. Add the model to the
+   * collection immediately, unless `wait: true` is passed, in which case we
+   * wait for the server to agree.
+   */
   create(model, options) {
     options = options ? _clone(options) : {};
     let wait = options.wait;
@@ -382,13 +399,15 @@ export default class AbstractCollection extends AugmentedObject {
     return model;
   };
 
-  // **parse** converts a response into a list of models to be added to the
-  // collection. The default implementation is just to pass it through.
+  /** **parse** converts a response into a list of models to be added to the
+   * collection. The default implementation is just to pass it through.
+   */
   parse(resp, options) {
     return resp;
   };
 
-  // Create a new collection with an identical list of models as this one.
+  /** Create a new collection with an identical list of models as this one.
+   */
   clone() {
     return new this.constructor(this.models, {
       model: this.model,
@@ -396,7 +415,8 @@ export default class AbstractCollection extends AugmentedObject {
     });
   };
 
-  // Define how to uniquely identify models in the collection.
+  /** Define how to uniquely identify models in the collection.
+   */
   modelId(attrs) {
     if (attrs && this.model && this.model.idAttribute) {
       return attrs[this.model.idAttribute || "id"];
@@ -405,23 +425,151 @@ export default class AbstractCollection extends AugmentedObject {
     }
   };
 
-  // Get an iterator of all models in this collection.
+  /** Get an iterator of all models in this collection.
+   */
   values() {
     return new CollectionIterator(this, ITERATOR_VALUES);
   };
 
-  // Get an iterator of all model IDs in this collection.
+  /** Get an iterator of all model IDs in this collection.
+   */
   keys() {
     return new CollectionIterator(this, ITERATOR_KEYS);
   };
 
-  // Get an iterator of all [ID, model] tuples in this collection.
+  /** Get an iterator of all [ID, model] tuples in this collection.
+   */
   entries() {
     return new CollectionIterator(this, ITERATOR_KEYSVALUES);
   };
 
-  // Private method to reset all internal state. Called when the collection
-  // is first initialized or reset.
+  /**
+   * supportsValidation - Returns True if this collection supports validation
+   * @returns {boolean} Returns True if this collection supports validation
+   */
+  supportsValidation() {
+    return (this.schema && this.schema !== {});
+  };
+
+  /**
+   * isValid - Returns True if this collection is valid
+   * @returns {boolean} Returns True if this collection is valid
+   */
+  isValid() {
+    return (this.validationMessages) ? this.validationMessages.valid : true;
+  };
+
+  /**
+   * getValidationMessages - Returns the validation messages
+   * @returns {array} Returns the message is an array of objects.
+   */
+  getValidationMessages() {
+    return (this.validationMessages && this.validationMessages.messages) ? this.validationMessages.messages : [];
+  };
+
+  /**
+   * Validates the collection
+   * @returns {array} Returns array of message from validation
+   */
+  validate() {
+    if (this.supportsValidation()) {
+      // validate from Validator
+      let messages = [];
+      this.validationMessages.messages = messages;
+      this.validationMessages.valid = true;
+      const a = this.toJSON(), l = (a && Array.isArray(a)) ? a.length : 0;
+      let i = 0;
+      const v = new ValidationFramework();
+
+      //console.debug("AUGMENTED: Collection Validate: Beginning with " + l + " models.");
+      for (i = 0; i < l; i++) {
+        messages[i] = v.validate(a[i], this.schema);
+        if (!messages[i].valid) {
+          this.validationMessages.valid = false;
+        }
+      }
+
+      //logger.debug("AUGMENTED: Collection Validate: Completed isValid " + this.validationMessages.valid);
+    } else {
+      this.validationMessages.valid = true;
+    }
+    return this.validationMessages;
+  };
+
+  /**
+   * Collecion.sync
+   */
+  sync(method, model, options) {
+  };
+
+  /**
+   * Collection.save - Saves the collection as a "create"
+   */
+  save(options) {
+    this.sync("create", this, options);
+  };
+
+  /**
+   * Collection.update - Updates the collection as an "update"
+   */
+  update(options) {
+    this.sync("update", this, options);
+  };
+
+  /**
+   * Collection.remove - Remove from the collection as a "delete"
+   */
+  remove(options) {
+    this.sync("delete", this, options);
+  };
+
+  /**
+   * sortByKey - Sorts the collection by a property key
+   * @param {object} key The key to sort by
+   */
+  sortByKey(key) {
+    if (key) {
+      const data = this.toJSON();
+      if (data) {
+        const sorted = sortObjects(data, key);
+        this.reset(sorted);
+      }
+    }
+  };
+
+  /**
+   * isEmpty - returns true is the collection is empty
+   * @returns {boolean} returns true is the collection is empty
+   */
+  isEmpty() {
+    return (this.length === 0);
+  };
+  /**
+   * Collection.size - returns the size of the collection
+   * @returns {number} returns the size of the collection
+   */
+  size() {
+    return this.length;
+  };
+
+  /**
+   * toString - returns the collection data as a string
+   * @returns {string} returns the collection data as a string
+   */
+  toString() {
+    let ret = {};
+    try {
+      ret = JSON.stringify(this.toJSON());
+    } catch(e) {
+      console.error(e);
+    }
+    return ret;
+  };
+
+  /** Private method to reset all internal state. Called when the collection
+   * is first initialized or reset.
+   * @private
+   */
   _reset() {
     this.length = 0;
     this.models = [];
@@ -515,137 +663,6 @@ export default class AbstractCollection extends AugmentedObject {
     }
     this.trigger.apply(this, arguments);
   };
-
-  /**
-   * supportsValidation - Returns True if this collection supports validation
-   * @method supportsValidation
-   * @memberof Collection
-   * @returns {boolean} Returns True if this collection supports validation
-   */
-  supportsValidation() {
-    return (this.schema && this.schema !== {});
-  };
-  /**
-   * isValid - Returns True if this collection is valid
-   * @method isValid
-   * @memberof Collection
-   * @returns {boolean} Returns True if this collection is valid
-   */
-  isValid() {
-    return (this.validationMessages) ? this.validationMessages.valid : true;
-  };
-  /**
-   * getValidationMessages - Returns the validation messages
-   * @method getValidationMessages
-   * @memberof Collection
-   * @returns {array} Returns the message is an array of objects.
-   */
-  getValidationMessages() {
-    return (this.validationMessages && this.validationMessages.messages) ? this.validationMessages.messages : [];
-  };
-  /**
-   * Validates the collection
-   * @method validate
-   * @memberof Collection
-   * @returns {array} Returns array of message from validation
-   */
-  validate() {
-    if (this.supportsValidation()) {
-      // validate from Validator
-      let messages = [];
-      this.validationMessages.messages = messages;
-      this.validationMessages.valid = true;
-      const a = this.toJSON(), l = (a && Array.isArray(a)) ? a.length : 0;
-      let i = 0;
-      const v = new ValidationFramework();
-
-      //console.debug("AUGMENTED: Collection Validate: Beginning with " + l + " models.");
-      for (i = 0; i < l; i++) {
-        messages[i] = v.validate(a[i], this.schema);
-        if (!messages[i].valid) {
-          this.validationMessages.valid = false;
-        }
-      }
-
-      //logger.debug("AUGMENTED: Collection Validate: Completed isValid " + this.validationMessages.valid);
-    } else {
-      this.validationMessages.valid = true;
-    }
-    return this.validationMessages;
-  };
-
-  /**
-   * Collecion.sync
-   * @method sync
-   * @memberof Collection
-   */
-  sync(method, model, options) {
-  };
-  /**
-   * Collection.save - Saves the collection as a "create"
-   * @method save
-   * @memberof Collection
-   */
-  save(options) {
-    this.sync("create", this, options);
-  };
-  /**
-   * Collection.update - Updates the collection as an "update"
-   * @method update
-   * @memberof Collection
-   */
-  update(options) {
-    this.sync("update", this, options);
-  };
-  /**
-   * Collection.remove - Remove from the collection as a "delete"
-   * @method remove
-   * @memberof Collection
-   */
-  remove(options) {
-    this.sync("delete", this, options);
-  };
-  /**
-   * sortByKey - Sorts the collection by a property key
-   * @method sortByKey
-   * @param {object} key The key to sort by
-   * @memberof Collection
-   */
-  sortByKey(key) {
-    if (key) {
-      const data = this.toJSON();
-      if (data) {
-        const sorted = sortObjects(data, key);
-        this.reset(sorted);
-      }
-    }
-  };
-  /**
-   * Collection.isEmpty - returns true is the collection is empty
-   * @method isEmpty
-   * @memberof Collection
-   * @returns {boolean} returns true is the collection is empty
-   */
-  isEmpty() {
-    return (this.length === 0);
-  };
-  /**
-   * Collection.size - returns the size of the collection
-   * @method size
-   * @memberof Collection
-   * @returns {number} returns the size of the collection
-   */
-  size() {
-    return this.length;
-  };
-
-  /**
-   * toString - returns the collection data as a string
-   * @method toString
-   * @memberof Collection
-   * @returns {string}returns the collection data as a string
-   */
-  toString() {
-    return JSON.stringify(this.toJSON());
-  };
 };
+
+export default AbstractCollection;

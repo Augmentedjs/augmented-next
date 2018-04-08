@@ -1,8 +1,8 @@
 /**
  * Augmented.Security.ClientType - Security client type
  * @enum {Symbol}
- * @memberof Augmented.Security
- * @name Augmented.Security.ClientType
+ * @memberof Security
+ * @name ClientType
  * @property {Symbol} OAuth2 The OAuth2 type
  * @property {Symbol} ACL The ACL type
  */

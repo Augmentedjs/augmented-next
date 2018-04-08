@@ -10,7 +10,12 @@ import AugmentedMap from "./structures/map.js";
 import Configuration from "./configuration.js";
 import AsynchronousQueue from "./structures/queue.js";
 
-import * as Logger from "./logger/logger";
+import AbstractLogger from "./logger/abstractLogger.js";
+import ConsoleLogger from "./logger/consoleLogger.js";
+import ColorConsoleLogger from "./logger/colorConsoleLogger.js";
+import LoggerFactory from "./logger/loggerFactory.js";
+import Type from "./logger/type.js";
+import Level from "./logger/level.js";
 
 import Application from "./application/application.js";
 
@@ -51,7 +56,6 @@ import { fibonacci, fibonacciSequence } from "./functions/fibonacci.js";
  * @author Bob Warren
  *
  * @module Augmented
- * @version 2.0.0
  * @license Apache-2.0
  */
 const Augmented = {};
@@ -73,7 +77,17 @@ Augmented.Utility.quickSort = quickSort;
 Augmented.Utility.insertionSort = insertionSort;
 Augmented.Utility.bubbleSort = bubbleSort;
 
-Augmented.Logger = Logger;
+/**
+ * A Logger package
+ * @namespace Logger
+ */
+Augmented.Logger = {};
+Augmented.Logger.AbstractLogger = AbstractLogger;
+Augmented.Logger.ConsoleLogger = ConsoleLogger;
+Augmented.Logger.ColorConsoleLogger = ColorConsoleLogger;
+Augmented.Logger.LoggerFactory = LoggerFactory;
+Augmented.Logger.Type = Type;
+Augmented.Logger.Level = Level;
 
 Augmented.Object = AugmentedObject;
 Augmented.AbstractModel = AbstractModel;
@@ -107,7 +121,7 @@ Augmented.once = once;
  * @constant VERSION
  * @memberof Augmented
  */
-Augmented.VERSION = "2.0.0";
+Augmented.VERSION = VERSION;
 /**
  * A codename for internal use
  * @constant codename

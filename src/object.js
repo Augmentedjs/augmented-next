@@ -6,9 +6,9 @@ import { eventsApi, internalOn, offApi, triggerApi } from "./events.js";
 /**
  * Augmented Object
  * Base class for other classes to extend from
- * @class Augmented.Object
+ * @name Object
+ * @class
  * @param {object} options Object options
- * @memberof Augmented
  */
 class AugmentedObject {
   constructor(options) {
@@ -57,7 +57,6 @@ class AugmentedObject {
   /**
    * The Events
    * @property events
-   * @memberof Augmented.Object
    */
   get events() {
     return this._events;
@@ -72,11 +71,9 @@ class AugmentedObject {
    * passed the same arguments as `trigger` is, apart from the event name
    * (unless you're listening on `"all"`, which will cause your callback to
    * receive the true name of the event as the first argument).
-   * @method trigger
    * @param {string} name The name of the event
    * @param {any} args any number of additional arguments
    * @returns {object} Returns this context
-   * @memberof Augmented.Object
    */
   trigger(name, ...args) {
     //console.log("events", this._events);
@@ -100,12 +97,10 @@ class AugmentedObject {
    * the callback is invoked, its listener will be removed. If multiple events
    * are passed in using the space-separated syntax, the handler will fire
    * once for each event, not once for a combination of all events.
-   * @method once
    * @param {string} name The name of the event
    * @param {function} callback The callback to evoke
    * @param {object} context The context of the callback
    * @returns {object} Returns this context
-   * @memberof Augmented.Object
    */
   once(name, callback, context) {
     // Map the event into a `{event: once}` object.
@@ -121,12 +116,10 @@ class AugmentedObject {
    * callbacks with that function. If `callback` is null, removes all
    * callbacks for the event. If `name` is null, removes all bound
    * callbacks for all events.
-   * @method off
    * @param {string} name The name of the event
    * @param {function} callback The callback to evoke
    * @param {object} context The context of the callback
    * @returns {object} Returns this context
-   * @memberof Augmented.Object
    */
   off(name, callback, context) {
     if (this._events) {
@@ -141,12 +134,10 @@ class AugmentedObject {
   /**
    * Tell this object to stop listening to either specific events ... or
    * to every object it's currently listening to.
-   * @method stopListening
    * @param {object} obj The object to stop listening to
    * @param {string} name The name of the event
    * @param {function} callback The callback to evoke
    * @returns {object} Returns this context
-   * @memberof Augmented.Object
    */
   stopListening(obj, name, callback) {
     const listeningTo = this._listeningTo;
@@ -170,12 +161,10 @@ class AugmentedObject {
   /**
    * Bind an event to a `callback` function. Passing `"all"` will bind
    * the callback to all events fired.
-   * @method on
    * @param {string} name The name of the event
    * @param {function} callback The callback to evoke
    * @param {object} context The context of the callback
    * @returns {object} Returns this context
-   * @memberof Augmented.Object
    */
   on(name, callback, context) {
     return internalOn(this, name, callback, context);
@@ -185,12 +174,10 @@ class AugmentedObject {
    * Inversion-of-control versions of `on`. Tell *this* object to listen to
    * an event in another object... keeping track of what it's listening to
    * for easier unbinding later.
-   * @method listenTo
    * @param {object} obj The object to stop listening to
    * @param {string} name The name of the event
    * @param {function} callback The callback to evoke
    * @returns {object} Returns this context
-   * @memberof Augmented.Object
    */
   listenTo(obj, name, callback) {
     if (obj) {
@@ -213,12 +200,10 @@ class AugmentedObject {
 
   /**
    * Inversion-of-control versions of `once`.
-   * @method listenToOnce
    * @param {object} obj The object to stop listening to
    * @param {string} name The name of the event
    * @param {function} callback The callback to evoke
    * @returns {object} Returns this context
-   * @memberof Augmented.Object
    */
   listenToOnce(obj, name, callback) {
     // Map the event into a `{event: once}` object.

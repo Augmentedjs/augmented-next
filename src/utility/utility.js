@@ -1,14 +1,12 @@
 /**
  * Utility Package -
  * Small Utilities
- * @namespace Augmented.Utility
- * @memberof Augmented
+ * @namespace Utility
  */
 
 /**
  * Shuffles an Array with Fisher-Yates Shuffle algorithm
- * @class Augmented.Utility.Shuffle
- * @memberof Augmented.Utility
+ * @memberof Utility
  * @param {array} array The array to shuffle
  * @returns {array} A new shuffled array
  */
@@ -26,8 +24,7 @@ export const shuffle = (array) => {
 
 /**
  * Prints an object nicely
- * @class Augmented.Utility.PrettyPrint
- * @memberof Augmented.Utility
+ * @memberof Utility
  * @param {object} obj The object to print
  * @param {boolean} spaces Use spaces instead of tabs
  * @returns {number} number The number of spaces to pad
@@ -45,8 +42,7 @@ export const prettyPrint = (obj, spaces, number) => {
 /**
  * Performs a binary search on the host array. vs indexOf<br/>
  * Binary Search is a complexity of <em>O(n log n)</em> vs <em>O(n)</em> with indexOf
- * @class Augmented.Utility.BinarySearch
- * @memberof Augmented.Utility
+ * @memberof Utility
  * @param {Array} arr The array.
  * @param {Any} find The item to search for within the array.
  * @param {function} comparator The comparator to use
@@ -73,8 +69,8 @@ export const binarySearch = (arr, find, comparator) => {
  * Augmented.Utility.TransformerType <br/>
  * Transformer type for use in the transformer
  * @enum {Symbol} Augmented.Utility.TransformerType
- * @name Augmented.Utility.TransformerType
- * @memberof Augmented.Utility
+ * @name TransformerType
+ * @memberof Utility
  * @property {Symbol} String Standard String
  * @property {Symbol} Integer Integer
  * @property {Symbol} Number Any number
@@ -95,8 +91,7 @@ TransformerType.NULL = Symbol("Null");
 /**
  * Augmented.Utility.Transformer <br/>
  * Transform an object, type, or array to another type, object, or array
- * @namespace Augmented.Utility.Transformer
- * @memberof Augmented.Utility
+ * @memberof Utility
  */
 export class Transformer {
   constructor() {
@@ -107,15 +102,12 @@ export class Transformer {
    * The transformer type enum
    * @propery type The transformer type enum
    * @type {Augmented.Utility.TransformerType}
-   * @memberof Augmented.Utility.Transformer
    */
 
   /**
    * Transform an object, primitive, or array to another object, primitive, or array
-   * @method transform
    * @param {object} source Source primitive to transform
    * @param {Augmented.Utility.TransformerType} type Type to transform to
-   * @memberof Augmented.Utility.Transformer
    * @returns {object} returns a transformed object or primitive
    */
   static transform(source, type) {
@@ -159,8 +151,6 @@ export class Transformer {
 
   /**
    * Returns a Augmented.Utility.TransformerType of a passed object
-   * @method isType
-   * @memberof Augmented.Utility.Transformer
    * @param {object} source The source primitive
    * @returns {Augmented.Utility.TransformerType} type of source as Augmented.Utility.TransformerType
    */
@@ -183,8 +173,7 @@ export class Transformer {
 
 /**
  * Wrap method to handle wrapping functions (simular to _.wrap)
- * @method wrap
- * @memberof Augmented.Utility
+ * @memberof Utility
  */
 export const wrap = (fn, wrap) => {
   return () => {
@@ -195,11 +184,10 @@ export const wrap = (fn, wrap) => {
 /**
  * filter an oject from array of values
  *
- * @method filterObject
  * @param {object} object Object to filter
  * @param {array} keys keys to filter from the object
  * @returns {object} returns a new object with only these keys
- * @memberof Augmented.Utility
+ * @memberof Utility
  */
 export const filterObject = (object, keys) => {
   const newObject = {};
