@@ -617,7 +617,10 @@ class AbstractCollection extends AugmentedObject {
       this.validationMessages.valid = true;
       const a = this.toJSON(), l = (a &amp;&amp; Array.isArray(a)) ? a.length : 0;
       let i = 0;
-      const v = new ValidationFramework();
+      if (!this._validationFramework) {
+        this._validationFramework = new ValidationFramework();
+      }
+      const v = this._validationFramework;
 
       //console.debug("AUGMENTED: Collection Validate: Beginning with " + l + " models.");
       for (i = 0; i &lt; l; i++) {

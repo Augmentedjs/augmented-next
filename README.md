@@ -31,16 +31,14 @@ A few key features of the **Core** module are:
   - Multiple Security models supported
 * Application metadata Object
 * Utilities that support common abilities found in jQuery (only drastically faster)
-  - Ajax (mimics jQuery API)
   - Very fast Object extends
   - Array tools
   - ES6-like Map data structure object
   - Stack data structure object
   - O(log n) Search and sort algorithms
 * HTML5 localStorage factory with namespace protection support
-* Built-in logging factory with console and REST support
+* Built-in logging factory with console
 * Async Queue for processing
 * Mock support in Models and Collections
-* Full support for crossOrigin requests via property
 
 And much more!

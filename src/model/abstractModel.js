@@ -489,18 +489,12 @@ class AbstractModel extends AugmentedObject {
     return false;
   };
 
-  /** Check if the model is currently in a valid state.
-   */
-  isValid(options) {
-    return
-  };
-
   /**
    * isValid - Returns True if this model is valid
    * Runs two level validation, attribute-level then JSON Schema
    * @returns {boolean} Returns True if this model is valid
    */
-  isValid() {
+  isValid(options) {
     const valid = this._validate({}, extend({}, options, {validate: true}));
     if (valid) {
       const messages = this.validate();
@@ -513,7 +507,10 @@ class AbstractModel extends AugmentedObject {
    * @returns {array} Returns array of messages from validation
    */
   validate() {
-    const v = new ValidationFramework();
+    if (!this._validationFramework) {
+      this._validationFramework = new ValidationFramework();
+    }
+    const v = this._validationFramework;
 
     if (this.supportsValidation() && v.supportsValidation()) {
       // validate from Validator

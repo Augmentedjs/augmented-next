@@ -427,18 +427,6 @@ window.lunrData = {
           "type",
           "utility.augmentedmap#marshal"
         ],
-        "Security.Principal.html": [
-          "abstract",
-          "class",
-          "impliment",
-          "object",
-          "part",
-          "pricip",
-          "princip",
-          "secur",
-          "security.princip",
-          "us"
-        ],
         "Logger.LoggerFactory.html": [
           "class",
           "creat",
@@ -459,12 +447,36 @@ window.lunrData = {
           "lt;static&gt",
           "type"
         ],
-        "Logger.ConsoleLogger.html": [
+        "Security.Principal.html": [
+          "abstract",
           "class",
-          "consol",
-          "consolelogg",
-          "logger",
-          "logger.consolelogg"
+          "impliment",
+          "object",
+          "part",
+          "pricip",
+          "princip",
+          "secur",
+          "security.princip",
+          "us"
+        ],
+        "AbstractSecurityClient.html": [
+          "abstract",
+          "abstractsecuritycli",
+          "class",
+          "client",
+          "extend",
+          "secur",
+          "us"
+        ],
+        "AbstractSecurityClient.html#uri": [
+          "abstractsecurityclient#uri",
+          "member",
+          "uri"
+        ],
+        "AbstractSecurityClient.html#type": [
+          "abstractsecurityclient#typ",
+          "member",
+          "type"
         ],
         "Logger.AbstractLogger.html": [
           "abstract",
@@ -518,14 +530,6 @@ window.lunrData = {
           "log",
           "logger.abstractlogger#debug",
           "messag"
-        ],
-        "Logger.ColorConsoleLogger.html": [
-          "class",
-          "color",
-          "colorconsolelogg",
-          "consol",
-          "logger",
-          "logger.colorconsolelogg"
         ],
         "ValidationFramework.html": [
           "abstract",
@@ -607,6 +611,21 @@ window.lunrData = {
           "validationframework#generateschema",
           "via"
         ],
+        "Logger.ColorConsoleLogger.html": [
+          "class",
+          "color",
+          "colorconsolelogg",
+          "consol",
+          "logger",
+          "logger.colorconsolelogg"
+        ],
+        "Logger.ConsoleLogger.html": [
+          "class",
+          "consol",
+          "consolelogg",
+          "logger",
+          "logger.consolelogg"
+        ],
         "Utility.AsynchronousQueue.html": [
           "async",
           "asynchronousqueu",
@@ -656,25 +675,6 @@ window.lunrData = {
           "process",
           "queue",
           "utility.asynchronousqueue#process"
-        ],
-        "AbstractSecurityClient.html": [
-          "abstract",
-          "abstractsecuritycli",
-          "class",
-          "client",
-          "extend",
-          "secur",
-          "us"
-        ],
-        "AbstractSecurityClient.html#uri": [
-          "abstractsecurityclient#uri",
-          "member",
-          "uri"
-        ],
-        "AbstractSecurityClient.html#type": [
-          "abstractsecurityclient#typ",
-          "member",
-          "type"
         ],
         "Security.Context.html": [
           "augmented.security.contextus",
@@ -1329,13 +1329,18 @@ window.lunrData = {
         ],
         "AbstractModel.html#isValid": [
           "abstractmodel#isvalid",
-          "check",
-          "current",
+          "attribut",
           "function",
           "isvalid",
+          "json",
+          "level",
           "model",
-          "state",
-          "valid"
+          "return",
+          "schema",
+          "true",
+          "two",
+          "valid",
+          "validrun"
         ],
         "AbstractModel.html#supportsValidation": [
           "abstractmodel#supportsvalid",
@@ -1727,6 +1732,16 @@ window.lunrData = {
           "sortobject",
           "utility.sortobject"
         ],
+        "Utility.html#.SchemaGenerator": [
+          "augmented.utility.schemageneratorgenr",
+          "data",
+          "function",
+          "lt;static&gt",
+          "schema",
+          "schemagener",
+          "set",
+          "utility.schemagener"
+        ],
         "Utility.html#.mergeSort": [
           "adjac",
           "algorithm",
@@ -1748,16 +1763,6 @@ window.lunrData = {
           "through",
           "utility.mergesort",
           "wrong"
-        ],
-        "Utility.html#.SchemaGenerator": [
-          "augmented.utility.schemageneratorgenr",
-          "data",
-          "function",
-          "lt;static&gt",
-          "schema",
-          "schemagener",
-          "set",
-          "utility.schemagener"
         ],
         "Utility.html#.QuickSort": [
           "arr",
@@ -3869,6 +3874,10 @@ window.lunrData = {
                             "ref": "Security.Principal.html",
                             "tf": 7.142857142857142
                           },
+                          "AbstractSecurityClient.html": {
+                            "ref": "AbstractSecurityClient.html",
+                            "tf": 10
+                          },
                           "Logger.AbstractLogger.html": {
                             "ref": "Logger.AbstractLogger.html",
                             "tf": 16.666666666666664
@@ -3877,13 +3886,87 @@ window.lunrData = {
                             "ref": "ValidationFramework.html",
                             "tf": 4.545454545454546
                           },
-                          "AbstractSecurityClient.html": {
-                            "ref": "AbstractSecurityClient.html",
-                            "tf": 10
-                          },
                           "AbstractCollection.html": {
                             "ref": "AbstractCollection.html",
                             "tf": 7.142857142857142
+                          }
+                        },
+                        "s": {
+                          "docs": {},
+                          "e": {
+                            "docs": {},
+                            "c": {
+                              "docs": {},
+                              "u": {
+                                "docs": {},
+                                "r": {
+                                  "docs": {},
+                                  "i": {
+                                    "docs": {},
+                                    "t": {
+                                      "docs": {},
+                                      "y": {
+                                        "docs": {},
+                                        "c": {
+                                          "docs": {},
+                                          "l": {
+                                            "docs": {},
+                                            "i": {
+                                              "docs": {
+                                                "AbstractSecurityClient.html": {
+                                                  "ref": "AbstractSecurityClient.html",
+                                                  "tf": 1900
+                                                }
+                                              },
+                                              "e": {
+                                                "docs": {},
+                                                "n": {
+                                                  "docs": {},
+                                                  "t": {
+                                                    "docs": {},
+                                                    "#": {
+                                                      "docs": {},
+                                                      "u": {
+                                                        "docs": {},
+                                                        "r": {
+                                                          "docs": {},
+                                                          "i": {
+                                                            "docs": {
+                                                              "AbstractSecurityClient.html#uri": {
+                                                                "ref": "AbstractSecurityClient.html#uri",
+                                                                "tf": 1150
+                                                              }
+                                                            }
+                                                          }
+                                                        }
+                                                      },
+                                                      "t": {
+                                                        "docs": {},
+                                                        "y": {
+                                                          "docs": {},
+                                                          "p": {
+                                                            "docs": {
+                                                              "AbstractSecurityClient.html#type": {
+                                                                "ref": "AbstractSecurityClient.html#type",
+                                                                "tf": 1150
+                                                              }
+                                                            }
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
                           }
                         },
                         "l": {
@@ -3986,84 +4069,6 @@ window.lunrData = {
                                                   "Logger.AbstractLogger.html#debug": {
                                                     "ref": "Logger.AbstractLogger.html#debug",
                                                     "tf": 100
-                                                  }
-                                                }
-                                              }
-                                            }
-                                          }
-                                        }
-                                      }
-                                    }
-                                  }
-                                }
-                              }
-                            }
-                          }
-                        },
-                        "s": {
-                          "docs": {},
-                          "e": {
-                            "docs": {},
-                            "c": {
-                              "docs": {},
-                              "u": {
-                                "docs": {},
-                                "r": {
-                                  "docs": {},
-                                  "i": {
-                                    "docs": {},
-                                    "t": {
-                                      "docs": {},
-                                      "y": {
-                                        "docs": {},
-                                        "c": {
-                                          "docs": {},
-                                          "l": {
-                                            "docs": {},
-                                            "i": {
-                                              "docs": {
-                                                "AbstractSecurityClient.html": {
-                                                  "ref": "AbstractSecurityClient.html",
-                                                  "tf": 1900
-                                                }
-                                              },
-                                              "e": {
-                                                "docs": {},
-                                                "n": {
-                                                  "docs": {},
-                                                  "t": {
-                                                    "docs": {},
-                                                    "#": {
-                                                      "docs": {},
-                                                      "u": {
-                                                        "docs": {},
-                                                        "r": {
-                                                          "docs": {},
-                                                          "i": {
-                                                            "docs": {
-                                                              "AbstractSecurityClient.html#uri": {
-                                                                "ref": "AbstractSecurityClient.html#uri",
-                                                                "tf": 1150
-                                                              }
-                                                            }
-                                                          }
-                                                        }
-                                                      },
-                                                      "t": {
-                                                        "docs": {},
-                                                        "y": {
-                                                          "docs": {},
-                                                          "p": {
-                                                            "docs": {
-                                                              "AbstractSecurityClient.html#type": {
-                                                                "ref": "AbstractSecurityClient.html#type",
-                                                                "tf": 1150
-                                                              }
-                                                            }
-                                                          }
-                                                        }
-                                                      }
-                                                    }
                                                   }
                                                 }
                                               }
@@ -6664,7 +6669,7 @@ window.lunrData = {
                         },
                         "AbstractModel.html#isValid": {
                           "ref": "AbstractModel.html#isValid",
-                          "tf": 750
+                          "tf": 754.1666666666666
                         }
                       }
                     }
@@ -8165,10 +8170,6 @@ window.lunrData = {
                 "docs": {},
                 "e": {
                   "docs": {
-                    "AbstractModel.html#isValid": {
-                      "ref": "AbstractModel.html#isValid",
-                      "tf": 10
-                    },
                     "AbstractModel.html#set": {
                       "ref": "AbstractModel.html#set",
                       "tf": 2.631578947368421
@@ -9823,36 +9824,36 @@ window.lunrData = {
                       "ref": "Utility.AugmentedMap.html",
                       "tf": 110
                     },
-                    "Security.Principal.html": {
-                      "ref": "Security.Principal.html",
-                      "tf": 110
-                    },
                     "Logger.LoggerFactory.html": {
                       "ref": "Logger.LoggerFactory.html",
                       "tf": 110
                     },
-                    "Logger.ConsoleLogger.html": {
-                      "ref": "Logger.ConsoleLogger.html",
+                    "Security.Principal.html": {
+                      "ref": "Security.Principal.html",
+                      "tf": 110
+                    },
+                    "AbstractSecurityClient.html": {
+                      "ref": "AbstractSecurityClient.html",
                       "tf": 110
                     },
                     "Logger.AbstractLogger.html": {
                       "ref": "Logger.AbstractLogger.html",
                       "tf": 110
                     },
-                    "Logger.ColorConsoleLogger.html": {
-                      "ref": "Logger.ColorConsoleLogger.html",
-                      "tf": 110
-                    },
                     "ValidationFramework.html": {
                       "ref": "ValidationFramework.html",
                       "tf": 110
                     },
-                    "Utility.AsynchronousQueue.html": {
-                      "ref": "Utility.AsynchronousQueue.html",
+                    "Logger.ColorConsoleLogger.html": {
+                      "ref": "Logger.ColorConsoleLogger.html",
                       "tf": 110
                     },
-                    "AbstractSecurityClient.html": {
-                      "ref": "AbstractSecurityClient.html",
+                    "Logger.ConsoleLogger.html": {
+                      "ref": "Logger.ConsoleLogger.html",
+                      "tf": 110
+                    },
+                    "Utility.AsynchronousQueue.html": {
+                      "ref": "Utility.AsynchronousQueue.html",
                       "tf": 110
                     },
                     "Security.Context.html": {
@@ -10206,10 +10207,6 @@ window.lunrData = {
                     "Security.Context.html#.Context#hasPermission": {
                       "ref": "Security.Context.html#.Context#hasPermission",
                       "tf": 12.5
-                    },
-                    "AbstractModel.html#isValid": {
-                      "ref": "AbstractModel.html#isValid",
-                      "tf": 10
                     }
                   }
                 }
@@ -10327,6 +10324,348 @@ window.lunrData = {
           },
           "o": {
             "docs": {},
+            "l": {
+              "docs": {},
+              "o": {
+                "docs": {},
+                "r": {
+                  "docs": {
+                    "Logger.ColorConsoleLogger.html": {
+                      "ref": "Logger.ColorConsoleLogger.html",
+                      "tf": 16.666666666666664
+                    }
+                  },
+                  "c": {
+                    "docs": {},
+                    "o": {
+                      "docs": {},
+                      "n": {
+                        "docs": {},
+                        "s": {
+                          "docs": {},
+                          "o": {
+                            "docs": {},
+                            "l": {
+                              "docs": {},
+                              "e": {
+                                "docs": {},
+                                "l": {
+                                  "docs": {},
+                                  "o": {
+                                    "docs": {},
+                                    "g": {
+                                      "docs": {},
+                                      "g": {
+                                        "docs": {
+                                          "Logger.ColorConsoleLogger.html": {
+                                            "ref": "Logger.ColorConsoleLogger.html",
+                                            "tf": 750
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "l": {
+                "docs": {},
+                "e": {
+                  "docs": {},
+                  "c": {
+                    "docs": {},
+                    "t": {
+                      "docs": {
+                        "CollectionIterator.html#next": {
+                          "ref": "CollectionIterator.html#next",
+                          "tf": 3.8461538461538463
+                        },
+                        "AbstractCollection.html": {
+                          "ref": "AbstractCollection.html",
+                          "tf": 7.142857142857142
+                        },
+                        "AbstractCollection.html#toString": {
+                          "ref": "AbstractCollection.html#toString",
+                          "tf": 10
+                        },
+                        "AbstractCollection.html#size": {
+                          "ref": "AbstractCollection.html#size",
+                          "tf": 12.5
+                        },
+                        "AbstractCollection.html#isEmpty": {
+                          "ref": "AbstractCollection.html#isEmpty",
+                          "tf": 10
+                        },
+                        "AbstractCollection.html#sortByKey": {
+                          "ref": "AbstractCollection.html#sortByKey",
+                          "tf": 10
+                        },
+                        "AbstractCollection.html#remove": {
+                          "ref": "AbstractCollection.html#remove",
+                          "tf": 12.5
+                        },
+                        "AbstractCollection.html#update": {
+                          "ref": "AbstractCollection.html#update",
+                          "tf": 12.5
+                        },
+                        "AbstractCollection.html#save": {
+                          "ref": "AbstractCollection.html#save",
+                          "tf": 12.5
+                        },
+                        "AbstractCollection.html#validate": {
+                          "ref": "AbstractCollection.html#validate",
+                          "tf": 25
+                        },
+                        "AbstractCollection.html#isValid": {
+                          "ref": "AbstractCollection.html#isValid",
+                          "tf": 10
+                        },
+                        "AbstractCollection.html#supportsValidation": {
+                          "ref": "AbstractCollection.html#supportsValidation",
+                          "tf": 8.333333333333332
+                        },
+                        "AbstractCollection.html#entries": {
+                          "ref": "AbstractCollection.html#entries",
+                          "tf": 10
+                        },
+                        "AbstractCollection.html#keys": {
+                          "ref": "AbstractCollection.html#keys",
+                          "tf": 12.5
+                        },
+                        "AbstractCollection.html#values": {
+                          "ref": "AbstractCollection.html#values",
+                          "tf": 16.666666666666664
+                        },
+                        "AbstractCollection.html#modelId": {
+                          "ref": "AbstractCollection.html#modelId",
+                          "tf": 10
+                        },
+                        "AbstractCollection.html#clone": {
+                          "ref": "AbstractCollection.html#clone",
+                          "tf": 7.142857142857142
+                        },
+                        "AbstractCollection.html#create": {
+                          "ref": "AbstractCollection.html#create",
+                          "tf": 2.941176470588235
+                        },
+                        "AbstractCollection.html#fetch": {
+                          "ref": "AbstractCollection.html#fetch",
+                          "tf": 25
+                        },
+                        "AbstractCollection.html#pluck": {
+                          "ref": "AbstractCollection.html#pluck",
+                          "tf": 10
+                        },
+                        "AbstractCollection.html#sort": {
+                          "ref": "AbstractCollection.html#sort",
+                          "tf": 2.941176470588235
+                        },
+                        "AbstractCollection.html#has": {
+                          "ref": "AbstractCollection.html#has",
+                          "tf": 12.5
+                        },
+                        "AbstractCollection.html#slice": {
+                          "ref": "AbstractCollection.html#slice",
+                          "tf": 8.333333333333332
+                        },
+                        "AbstractCollection.html#shift": {
+                          "ref": "AbstractCollection.html#shift",
+                          "tf": 12.5
+                        },
+                        "AbstractCollection.html#unshift": {
+                          "ref": "AbstractCollection.html#unshift",
+                          "tf": 12.5
+                        },
+                        "AbstractCollection.html#pop": {
+                          "ref": "AbstractCollection.html#pop",
+                          "tf": 12.5
+                        },
+                        "AbstractCollection.html#push": {
+                          "ref": "AbstractCollection.html#push",
+                          "tf": 12.5
+                        },
+                        "AbstractCollection.html#set": {
+                          "ref": "AbstractCollection.html#set",
+                          "tf": 5.555555555555555
+                        },
+                        "AbstractCollection.html#toJSON": {
+                          "ref": "AbstractCollection.html#toJSON",
+                          "tf": 8.333333333333332
+                        },
+                        "AbstractModel.html#destroy": {
+                          "ref": "AbstractModel.html#destroy",
+                          "tf": 2.941176470588235
+                        }
+                      },
+                      "i": {
+                        "docs": {},
+                        "o": {
+                          "docs": {},
+                          "n": {
+                            "docs": {},
+                            "i": {
+                              "docs": {},
+                              "t": {
+                                "docs": {},
+                                "e": {
+                                  "docs": {},
+                                  "r": {
+                                    "docs": {
+                                      "CollectionIterator.html": {
+                                        "ref": "CollectionIterator.html",
+                                        "tf": 1902.6315789473683
+                                      }
+                                    },
+                                    "a": {
+                                      "docs": {},
+                                      "t": {
+                                        "docs": {},
+                                        "o": {
+                                          "docs": {},
+                                          "r": {
+                                            "docs": {},
+                                            "#": {
+                                              "docs": {},
+                                              "n": {
+                                                "docs": {},
+                                                "e": {
+                                                  "docs": {},
+                                                  "x": {
+                                                    "docs": {},
+                                                    "t": {
+                                                      "docs": {
+                                                        "CollectionIterator.html#next": {
+                                                          "ref": "CollectionIterator.html#next",
+                                                          "tf": 1150
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            },
+                            "o": {
+                              "docs": {},
+                              "n": {
+                                "docs": {},
+                                "c": {
+                                  "docs": {
+                                    "CollectionIterator.html#next": {
+                                      "ref": "CollectionIterator.html#next",
+                                      "tf": 3.8461538461538463
+                                    }
+                                  }
+                                }
+                              }
+                            },
+                            ".": {
+                              "docs": {},
+                              "s": {
+                                "docs": {
+                                  "AbstractCollection.html#size": {
+                                    "ref": "AbstractCollection.html#size",
+                                    "tf": 12.5
+                                  }
+                                },
+                                "a": {
+                                  "docs": {},
+                                  "v": {
+                                    "docs": {
+                                      "AbstractCollection.html#save": {
+                                        "ref": "AbstractCollection.html#save",
+                                        "tf": 12.5
+                                      }
+                                    }
+                                  }
+                                }
+                              },
+                              "r": {
+                                "docs": {},
+                                "e": {
+                                  "docs": {},
+                                  "m": {
+                                    "docs": {},
+                                    "o": {
+                                      "docs": {},
+                                      "v": {
+                                        "docs": {
+                                          "AbstractCollection.html#remove": {
+                                            "ref": "AbstractCollection.html#remove",
+                                            "tf": 12.5
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              },
+                              "u": {
+                                "docs": {},
+                                "p": {
+                                  "docs": {},
+                                  "d": {
+                                    "docs": {
+                                      "AbstractCollection.html#update": {
+                                        "ref": "AbstractCollection.html#update",
+                                        "tf": 12.5
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "i": {
+                      "docs": {},
+                      "o": {
+                        "docs": {},
+                        "n": {
+                          "docs": {},
+                          ".": {
+                            "docs": {},
+                            "s": {
+                              "docs": {},
+                              "y": {
+                                "docs": {},
+                                "n": {
+                                  "docs": {},
+                                  "c": {
+                                    "docs": {
+                                      "AbstractCollection.html#sync": {
+                                        "ref": "AbstractCollection.html#sync",
+                                        "tf": 50
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
             "n": {
               "docs": {},
               "s": {
@@ -10335,13 +10674,13 @@ window.lunrData = {
                   "docs": {},
                   "l": {
                     "docs": {
-                      "Logger.ConsoleLogger.html": {
-                        "ref": "Logger.ConsoleLogger.html",
-                        "tf": 25
-                      },
                       "Logger.ColorConsoleLogger.html": {
                         "ref": "Logger.ColorConsoleLogger.html",
                         "tf": 16.666666666666664
+                      },
+                      "Logger.ConsoleLogger.html": {
+                        "ref": "Logger.ConsoleLogger.html",
+                        "tf": 25
                       }
                     },
                     "e": {
@@ -10812,348 +11151,6 @@ window.lunrData = {
                 }
               }
             },
-            "l": {
-              "docs": {},
-              "o": {
-                "docs": {},
-                "r": {
-                  "docs": {
-                    "Logger.ColorConsoleLogger.html": {
-                      "ref": "Logger.ColorConsoleLogger.html",
-                      "tf": 16.666666666666664
-                    }
-                  },
-                  "c": {
-                    "docs": {},
-                    "o": {
-                      "docs": {},
-                      "n": {
-                        "docs": {},
-                        "s": {
-                          "docs": {},
-                          "o": {
-                            "docs": {},
-                            "l": {
-                              "docs": {},
-                              "e": {
-                                "docs": {},
-                                "l": {
-                                  "docs": {},
-                                  "o": {
-                                    "docs": {},
-                                    "g": {
-                                      "docs": {},
-                                      "g": {
-                                        "docs": {
-                                          "Logger.ColorConsoleLogger.html": {
-                                            "ref": "Logger.ColorConsoleLogger.html",
-                                            "tf": 750
-                                          }
-                                        }
-                                      }
-                                    }
-                                  }
-                                }
-                              }
-                            }
-                          }
-                        }
-                      }
-                    }
-                  }
-                }
-              },
-              "l": {
-                "docs": {},
-                "e": {
-                  "docs": {},
-                  "c": {
-                    "docs": {},
-                    "t": {
-                      "docs": {
-                        "CollectionIterator.html#next": {
-                          "ref": "CollectionIterator.html#next",
-                          "tf": 3.8461538461538463
-                        },
-                        "AbstractCollection.html": {
-                          "ref": "AbstractCollection.html",
-                          "tf": 7.142857142857142
-                        },
-                        "AbstractCollection.html#toString": {
-                          "ref": "AbstractCollection.html#toString",
-                          "tf": 10
-                        },
-                        "AbstractCollection.html#size": {
-                          "ref": "AbstractCollection.html#size",
-                          "tf": 12.5
-                        },
-                        "AbstractCollection.html#isEmpty": {
-                          "ref": "AbstractCollection.html#isEmpty",
-                          "tf": 10
-                        },
-                        "AbstractCollection.html#sortByKey": {
-                          "ref": "AbstractCollection.html#sortByKey",
-                          "tf": 10
-                        },
-                        "AbstractCollection.html#remove": {
-                          "ref": "AbstractCollection.html#remove",
-                          "tf": 12.5
-                        },
-                        "AbstractCollection.html#update": {
-                          "ref": "AbstractCollection.html#update",
-                          "tf": 12.5
-                        },
-                        "AbstractCollection.html#save": {
-                          "ref": "AbstractCollection.html#save",
-                          "tf": 12.5
-                        },
-                        "AbstractCollection.html#validate": {
-                          "ref": "AbstractCollection.html#validate",
-                          "tf": 25
-                        },
-                        "AbstractCollection.html#isValid": {
-                          "ref": "AbstractCollection.html#isValid",
-                          "tf": 10
-                        },
-                        "AbstractCollection.html#supportsValidation": {
-                          "ref": "AbstractCollection.html#supportsValidation",
-                          "tf": 8.333333333333332
-                        },
-                        "AbstractCollection.html#entries": {
-                          "ref": "AbstractCollection.html#entries",
-                          "tf": 10
-                        },
-                        "AbstractCollection.html#keys": {
-                          "ref": "AbstractCollection.html#keys",
-                          "tf": 12.5
-                        },
-                        "AbstractCollection.html#values": {
-                          "ref": "AbstractCollection.html#values",
-                          "tf": 16.666666666666664
-                        },
-                        "AbstractCollection.html#modelId": {
-                          "ref": "AbstractCollection.html#modelId",
-                          "tf": 10
-                        },
-                        "AbstractCollection.html#clone": {
-                          "ref": "AbstractCollection.html#clone",
-                          "tf": 7.142857142857142
-                        },
-                        "AbstractCollection.html#create": {
-                          "ref": "AbstractCollection.html#create",
-                          "tf": 2.941176470588235
-                        },
-                        "AbstractCollection.html#fetch": {
-                          "ref": "AbstractCollection.html#fetch",
-                          "tf": 25
-                        },
-                        "AbstractCollection.html#pluck": {
-                          "ref": "AbstractCollection.html#pluck",
-                          "tf": 10
-                        },
-                        "AbstractCollection.html#sort": {
-                          "ref": "AbstractCollection.html#sort",
-                          "tf": 2.941176470588235
-                        },
-                        "AbstractCollection.html#has": {
-                          "ref": "AbstractCollection.html#has",
-                          "tf": 12.5
-                        },
-                        "AbstractCollection.html#slice": {
-                          "ref": "AbstractCollection.html#slice",
-                          "tf": 8.333333333333332
-                        },
-                        "AbstractCollection.html#shift": {
-                          "ref": "AbstractCollection.html#shift",
-                          "tf": 12.5
-                        },
-                        "AbstractCollection.html#unshift": {
-                          "ref": "AbstractCollection.html#unshift",
-                          "tf": 12.5
-                        },
-                        "AbstractCollection.html#pop": {
-                          "ref": "AbstractCollection.html#pop",
-                          "tf": 12.5
-                        },
-                        "AbstractCollection.html#push": {
-                          "ref": "AbstractCollection.html#push",
-                          "tf": 12.5
-                        },
-                        "AbstractCollection.html#set": {
-                          "ref": "AbstractCollection.html#set",
-                          "tf": 5.555555555555555
-                        },
-                        "AbstractCollection.html#toJSON": {
-                          "ref": "AbstractCollection.html#toJSON",
-                          "tf": 8.333333333333332
-                        },
-                        "AbstractModel.html#destroy": {
-                          "ref": "AbstractModel.html#destroy",
-                          "tf": 2.941176470588235
-                        }
-                      },
-                      "i": {
-                        "docs": {},
-                        "o": {
-                          "docs": {},
-                          "n": {
-                            "docs": {},
-                            "i": {
-                              "docs": {},
-                              "t": {
-                                "docs": {},
-                                "e": {
-                                  "docs": {},
-                                  "r": {
-                                    "docs": {
-                                      "CollectionIterator.html": {
-                                        "ref": "CollectionIterator.html",
-                                        "tf": 1902.6315789473683
-                                      }
-                                    },
-                                    "a": {
-                                      "docs": {},
-                                      "t": {
-                                        "docs": {},
-                                        "o": {
-                                          "docs": {},
-                                          "r": {
-                                            "docs": {},
-                                            "#": {
-                                              "docs": {},
-                                              "n": {
-                                                "docs": {},
-                                                "e": {
-                                                  "docs": {},
-                                                  "x": {
-                                                    "docs": {},
-                                                    "t": {
-                                                      "docs": {
-                                                        "CollectionIterator.html#next": {
-                                                          "ref": "CollectionIterator.html#next",
-                                                          "tf": 1150
-                                                        }
-                                                      }
-                                                    }
-                                                  }
-                                                }
-                                              }
-                                            }
-                                          }
-                                        }
-                                      }
-                                    }
-                                  }
-                                }
-                              }
-                            },
-                            "o": {
-                              "docs": {},
-                              "n": {
-                                "docs": {},
-                                "c": {
-                                  "docs": {
-                                    "CollectionIterator.html#next": {
-                                      "ref": "CollectionIterator.html#next",
-                                      "tf": 3.8461538461538463
-                                    }
-                                  }
-                                }
-                              }
-                            },
-                            ".": {
-                              "docs": {},
-                              "s": {
-                                "docs": {
-                                  "AbstractCollection.html#size": {
-                                    "ref": "AbstractCollection.html#size",
-                                    "tf": 12.5
-                                  }
-                                },
-                                "a": {
-                                  "docs": {},
-                                  "v": {
-                                    "docs": {
-                                      "AbstractCollection.html#save": {
-                                        "ref": "AbstractCollection.html#save",
-                                        "tf": 12.5
-                                      }
-                                    }
-                                  }
-                                }
-                              },
-                              "r": {
-                                "docs": {},
-                                "e": {
-                                  "docs": {},
-                                  "m": {
-                                    "docs": {},
-                                    "o": {
-                                      "docs": {},
-                                      "v": {
-                                        "docs": {
-                                          "AbstractCollection.html#remove": {
-                                            "ref": "AbstractCollection.html#remove",
-                                            "tf": 12.5
-                                          }
-                                        }
-                                      }
-                                    }
-                                  }
-                                }
-                              },
-                              "u": {
-                                "docs": {},
-                                "p": {
-                                  "docs": {},
-                                  "d": {
-                                    "docs": {
-                                      "AbstractCollection.html#update": {
-                                        "ref": "AbstractCollection.html#update",
-                                        "tf": 12.5
-                                      }
-                                    }
-                                  }
-                                }
-                              }
-                            }
-                          }
-                        }
-                      }
-                    },
-                    "i": {
-                      "docs": {},
-                      "o": {
-                        "docs": {},
-                        "n": {
-                          "docs": {},
-                          ".": {
-                            "docs": {},
-                            "s": {
-                              "docs": {},
-                              "y": {
-                                "docs": {},
-                                "n": {
-                                  "docs": {},
-                                  "c": {
-                                    "docs": {
-                                      "AbstractCollection.html#sync": {
-                                        "ref": "AbstractCollection.html#sync",
-                                        "tf": 50
-                                      }
-                                    }
-                                  }
-                                }
-                              }
-                            }
-                          }
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-            },
             "r": {
               "docs": {},
               "e": {
@@ -11312,29 +11309,6 @@ window.lunrData = {
                               }
                             }
                           }
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "u": {
-            "docs": {},
-            "r": {
-              "docs": {},
-              "r": {
-                "docs": {},
-                "e": {
-                  "docs": {},
-                  "n": {
-                    "docs": {},
-                    "t": {
-                      "docs": {
-                        "AbstractModel.html#isValid": {
-                          "ref": "AbstractModel.html#isValid",
-                          "tf": 10
                         }
                       }
                     }
@@ -11553,10 +11527,6 @@ window.lunrData = {
                         "ref": "Logger.LoggerFactory.html#.getLogger",
                         "tf": 16.666666666666664
                       },
-                      "Logger.ConsoleLogger.html": {
-                        "ref": "Logger.ConsoleLogger.html",
-                        "tf": 25
-                      },
                       "Logger.AbstractLogger.html": {
                         "ref": "Logger.AbstractLogger.html",
                         "tf": 16.666666666666664
@@ -11564,6 +11534,10 @@ window.lunrData = {
                       "Logger.ColorConsoleLogger.html": {
                         "ref": "Logger.ColorConsoleLogger.html",
                         "tf": 16.666666666666664
+                      },
+                      "Logger.ConsoleLogger.html": {
+                        "ref": "Logger.ConsoleLogger.html",
+                        "tf": 25
                       },
                       "module-Augmented-Logger.html": {
                         "ref": "module-Augmented-Logger.html",
@@ -11630,91 +11604,6 @@ window.lunrData = {
                                                               }
                                                             }
                                                           }
-                                                        }
-                                                      }
-                                                    }
-                                                  }
-                                                }
-                                              }
-                                            }
-                                          }
-                                        }
-                                      }
-                                    }
-                                  }
-                                }
-                              }
-                            }
-                          }
-                        }
-                      },
-                      "c": {
-                        "docs": {},
-                        "o": {
-                          "docs": {},
-                          "n": {
-                            "docs": {},
-                            "s": {
-                              "docs": {},
-                              "o": {
-                                "docs": {},
-                                "l": {
-                                  "docs": {},
-                                  "e": {
-                                    "docs": {},
-                                    "l": {
-                                      "docs": {},
-                                      "o": {
-                                        "docs": {},
-                                        "g": {
-                                          "docs": {},
-                                          "g": {
-                                            "docs": {
-                                              "Logger.ConsoleLogger.html": {
-                                                "ref": "Logger.ConsoleLogger.html",
-                                                "tf": 1150
-                                              }
-                                            }
-                                          }
-                                        }
-                                      }
-                                    }
-                                  }
-                                }
-                              }
-                            }
-                          },
-                          "l": {
-                            "docs": {},
-                            "o": {
-                              "docs": {},
-                              "r": {
-                                "docs": {},
-                                "c": {
-                                  "docs": {},
-                                  "o": {
-                                    "docs": {},
-                                    "n": {
-                                      "docs": {},
-                                      "s": {
-                                        "docs": {},
-                                        "o": {
-                                          "docs": {},
-                                          "l": {
-                                            "docs": {},
-                                            "e": {
-                                              "docs": {},
-                                              "l": {
-                                                "docs": {},
-                                                "o": {
-                                                  "docs": {},
-                                                  "g": {
-                                                    "docs": {},
-                                                    "g": {
-                                                      "docs": {
-                                                        "Logger.ColorConsoleLogger.html": {
-                                                          "ref": "Logger.ColorConsoleLogger.html",
-                                                          "tf": 1150
                                                         }
                                                       }
                                                     }
@@ -11858,6 +11747,91 @@ window.lunrData = {
                                                     }
                                                   }
                                                 }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      },
+                      "c": {
+                        "docs": {},
+                        "o": {
+                          "docs": {},
+                          "l": {
+                            "docs": {},
+                            "o": {
+                              "docs": {},
+                              "r": {
+                                "docs": {},
+                                "c": {
+                                  "docs": {},
+                                  "o": {
+                                    "docs": {},
+                                    "n": {
+                                      "docs": {},
+                                      "s": {
+                                        "docs": {},
+                                        "o": {
+                                          "docs": {},
+                                          "l": {
+                                            "docs": {},
+                                            "e": {
+                                              "docs": {},
+                                              "l": {
+                                                "docs": {},
+                                                "o": {
+                                                  "docs": {},
+                                                  "g": {
+                                                    "docs": {},
+                                                    "g": {
+                                                      "docs": {
+                                                        "Logger.ColorConsoleLogger.html": {
+                                                          "ref": "Logger.ColorConsoleLogger.html",
+                                                          "tf": 1150
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          "n": {
+                            "docs": {},
+                            "s": {
+                              "docs": {},
+                              "o": {
+                                "docs": {},
+                                "l": {
+                                  "docs": {},
+                                  "e": {
+                                    "docs": {},
+                                    "l": {
+                                      "docs": {},
+                                      "o": {
+                                        "docs": {},
+                                        "g": {
+                                          "docs": {},
+                                          "g": {
+                                            "docs": {
+                                              "Logger.ConsoleLogger.html": {
+                                                "ref": "Logger.ConsoleLogger.html",
+                                                "tf": 1150
                                               }
                                             }
                                           }
@@ -12073,12 +12047,12 @@ window.lunrData = {
                                     "ref": "Utility.html#.sortObjects",
                                     "tf": 25
                                   },
-                                  "Utility.html#.mergeSort": {
-                                    "ref": "Utility.html#.mergeSort",
-                                    "tf": 33.33333333333333
-                                  },
                                   "Utility.html#.SchemaGenerator": {
                                     "ref": "Utility.html#.SchemaGenerator",
+                                    "tf": 33.33333333333333
+                                  },
+                                  "Utility.html#.mergeSort": {
+                                    "ref": "Utility.html#.mergeSort",
                                     "tf": 33.33333333333333
                                   },
                                   "Utility.html#.QuickSort": {
@@ -12481,7 +12455,7 @@ window.lunrData = {
                     },
                     "AbstractModel.html#isValid": {
                       "ref": "AbstractModel.html#isValid",
-                      "tf": 10
+                      "tf": 4.166666666666666
                     },
                     "AbstractModel.html#supportsValidation": {
                       "ref": "AbstractModel.html#supportsValidation",
@@ -12782,20 +12756,20 @@ window.lunrData = {
                         "ref": "Security.Entry.html#permissions",
                         "tf": 110
                       },
-                      "Utility.AsynchronousQueue.html#timeout": {
-                        "ref": "Utility.AsynchronousQueue.html#timeout",
-                        "tf": 110
-                      },
-                      "Utility.AsynchronousQueue.html#queue": {
-                        "ref": "Utility.AsynchronousQueue.html#queue",
-                        "tf": 110
-                      },
                       "AbstractSecurityClient.html#uri": {
                         "ref": "AbstractSecurityClient.html#uri",
                         "tf": 110
                       },
                       "AbstractSecurityClient.html#type": {
                         "ref": "AbstractSecurityClient.html#type",
+                        "tf": 110
+                      },
+                      "Utility.AsynchronousQueue.html#timeout": {
+                        "ref": "Utility.AsynchronousQueue.html#timeout",
+                        "tf": 110
+                      },
+                      "Utility.AsynchronousQueue.html#queue": {
+                        "ref": "Utility.AsynchronousQueue.html#queue",
                         "tf": 110
                       },
                       "Security.Context.html#.Context#principal": {
@@ -15887,12 +15861,12 @@ window.lunrData = {
                             "ref": "Utility.html#.sortObjects",
                             "tf": 110
                           },
-                          "Utility.html#.mergeSort": {
-                            "ref": "Utility.html#.mergeSort",
-                            "tf": 110
-                          },
                           "Utility.html#.SchemaGenerator": {
                             "ref": "Utility.html#.SchemaGenerator",
+                            "tf": 110
+                          },
+                          "Utility.html#.mergeSort": {
+                            "ref": "Utility.html#.mergeSort",
                             "tf": 110
                           },
                           "Utility.html#.QuickSort": {
@@ -18080,7 +18054,7 @@ window.lunrData = {
                     },
                     "AbstractModel.html#isValid": {
                       "ref": "AbstractModel.html#isValid",
-                      "tf": 10
+                      "tf": 4.166666666666666
                     },
                     "AbstractModel.html#supportsValidation": {
                       "ref": "AbstractModel.html#supportsValidation",
@@ -20052,7 +20026,7 @@ window.lunrData = {
           }
         }
       },
-      "length": 1578
+      "length": 1570
     },
     "corpusTokens": [
       "abstract",
@@ -20293,7 +20267,6 @@ window.lunrData = {
       "convert",
       "core",
       "creat",
-      "current",
       "data",
       "datastor",
       "datatomarshal",
@@ -21199,17 +21172,6 @@ window.lunrData = {
       "summary": "",
       "description": "Marshalls a mapdataToMarshall must be the following type of data to parse:JSON object with properties (key/value)"
     },
-    "Security.Principal.html": {
-      "id": "Security.Principal.html",
-      "kind": "class",
-      "title": "Principal",
-      "longname": "Security.Principal",
-      "name": "Principal",
-      "tags": "Security.Principal Principal",
-      "summary": "",
-      "description": "Pricipal object for use in security as part of the abstract implimentation",
-      "body": ""
-    },
     "Logger.LoggerFactory.html": {
       "id": "Logger.LoggerFactory.html",
       "kind": "class",
@@ -21231,16 +21193,47 @@ window.lunrData = {
       "summary": "",
       "description": "getLogger - get an instance of a logger"
     },
-    "Logger.ConsoleLogger.html": {
-      "id": "Logger.ConsoleLogger.html",
+    "Security.Principal.html": {
+      "id": "Security.Principal.html",
       "kind": "class",
-      "title": "ConsoleLogger",
-      "longname": "Logger.ConsoleLogger",
-      "name": "ConsoleLogger",
-      "tags": "Logger.ConsoleLogger ConsoleLogger",
+      "title": "Principal",
+      "longname": "Security.Principal",
+      "name": "Principal",
+      "tags": "Security.Principal Principal",
       "summary": "",
-      "description": "Console Logger",
+      "description": "Pricipal object for use in security as part of the abstract implimentation",
       "body": ""
+    },
+    "AbstractSecurityClient.html": {
+      "id": "AbstractSecurityClient.html",
+      "kind": "class",
+      "title": "AbstractSecurityClient",
+      "longname": "AbstractSecurityClient",
+      "name": "AbstractSecurityClient",
+      "tags": "AbstractSecurityClient",
+      "summary": "",
+      "description": "The abstract Security Client - for use to extend your own",
+      "body": ""
+    },
+    "AbstractSecurityClient.html#uri": {
+      "id": "AbstractSecurityClient.html#uri",
+      "kind": "member",
+      "title": "uri",
+      "longname": "AbstractSecurityClient#uri",
+      "name": "uri",
+      "tags": "AbstractSecurityClient#uri uri",
+      "summary": "",
+      "description": ""
+    },
+    "AbstractSecurityClient.html#type": {
+      "id": "AbstractSecurityClient.html#type",
+      "kind": "member",
+      "title": "type",
+      "longname": "AbstractSecurityClient#type",
+      "name": "type",
+      "tags": "AbstractSecurityClient#type type",
+      "summary": "",
+      "description": ""
     },
     "Logger.AbstractLogger.html": {
       "id": "Logger.AbstractLogger.html",
@@ -21302,17 +21295,6 @@ window.lunrData = {
       "tags": "Logger.AbstractLogger#debug AbstractLogger#debug debug",
       "summary": "",
       "description": "Log a message in debug level"
-    },
-    "Logger.ColorConsoleLogger.html": {
-      "id": "Logger.ColorConsoleLogger.html",
-      "kind": "class",
-      "title": "ColorConsoleLogger",
-      "longname": "Logger.ColorConsoleLogger",
-      "name": "ColorConsoleLogger",
-      "tags": "Logger.ColorConsoleLogger ColorConsoleLogger",
-      "summary": "",
-      "description": "Color Console Logger",
-      "body": ""
     },
     "ValidationFramework.html": {
       "id": "ValidationFramework.html",
@@ -21405,6 +21387,28 @@ window.lunrData = {
       "summary": "",
       "description": "Validates data via a schema"
     },
+    "Logger.ColorConsoleLogger.html": {
+      "id": "Logger.ColorConsoleLogger.html",
+      "kind": "class",
+      "title": "ColorConsoleLogger",
+      "longname": "Logger.ColorConsoleLogger",
+      "name": "ColorConsoleLogger",
+      "tags": "Logger.ColorConsoleLogger ColorConsoleLogger",
+      "summary": "",
+      "description": "Color Console Logger",
+      "body": ""
+    },
+    "Logger.ConsoleLogger.html": {
+      "id": "Logger.ConsoleLogger.html",
+      "kind": "class",
+      "title": "ConsoleLogger",
+      "longname": "Logger.ConsoleLogger",
+      "name": "ConsoleLogger",
+      "tags": "Logger.ConsoleLogger ConsoleLogger",
+      "summary": "",
+      "description": "Console Logger",
+      "body": ""
+    },
     "Utility.AsynchronousQueue.html": {
       "id": "Utility.AsynchronousQueue.html",
       "kind": "class",
@@ -21465,37 +21469,6 @@ window.lunrData = {
       "tags": "Utility.AsynchronousQueue#process AsynchronousQueue#process process",
       "summary": "",
       "description": "Process the queue"
-    },
-    "AbstractSecurityClient.html": {
-      "id": "AbstractSecurityClient.html",
-      "kind": "class",
-      "title": "AbstractSecurityClient",
-      "longname": "AbstractSecurityClient",
-      "name": "AbstractSecurityClient",
-      "tags": "AbstractSecurityClient",
-      "summary": "",
-      "description": "The abstract Security Client - for use to extend your own",
-      "body": ""
-    },
-    "AbstractSecurityClient.html#uri": {
-      "id": "AbstractSecurityClient.html#uri",
-      "kind": "member",
-      "title": "uri",
-      "longname": "AbstractSecurityClient#uri",
-      "name": "uri",
-      "tags": "AbstractSecurityClient#uri uri",
-      "summary": "",
-      "description": ""
-    },
-    "AbstractSecurityClient.html#type": {
-      "id": "AbstractSecurityClient.html#type",
-      "kind": "member",
-      "title": "type",
-      "longname": "AbstractSecurityClient#type",
-      "name": "type",
-      "tags": "AbstractSecurityClient#type type",
-      "summary": "",
-      "description": ""
     },
     "Security.Context.html": {
       "id": "Security.Context.html",
@@ -22100,7 +22073,7 @@ window.lunrData = {
       "name": "isValid",
       "tags": "AbstractModel#isValid isValid",
       "summary": "",
-      "description": "Check if the model is currently in a valid state."
+      "description": "isValid - Returns True if this model is validRuns two level validation, attribute-level then JSON Schema"
     },
     "AbstractModel.html#supportsValidation": {
       "id": "AbstractModel.html#supportsValidation",
@@ -22476,16 +22449,6 @@ window.lunrData = {
       "summary": "",
       "description": "Sorts an array of objects by propery in object"
     },
-    "Utility.html#.mergeSort": {
-      "id": "Utility.html#.mergeSort",
-      "kind": "function",
-      "title": "&lt;static&gt; mergeSort( array )",
-      "longname": "Utility.mergeSort",
-      "name": "mergeSort",
-      "tags": "Utility.mergeSort mergeSort",
-      "summary": "",
-      "description": "Simple sorting algorithm that repeatedly steps through the list to be sorted, compares each pair of adjacent items and swaps them if they are in the wrong order."
-    },
     "Utility.html#.SchemaGenerator": {
       "id": "Utility.html#.SchemaGenerator",
       "kind": "function",
@@ -22495,6 +22458,16 @@ window.lunrData = {
       "tags": "Utility.SchemaGenerator SchemaGenerator",
       "summary": "",
       "description": "Augmented.Utility.SchemaGeneratorGenrate a schema from a set of data"
+    },
+    "Utility.html#.mergeSort": {
+      "id": "Utility.html#.mergeSort",
+      "kind": "function",
+      "title": "&lt;static&gt; mergeSort( array )",
+      "longname": "Utility.mergeSort",
+      "name": "mergeSort",
+      "tags": "Utility.mergeSort mergeSort",
+      "summary": "",
+      "description": "Simple sorting algorithm that repeatedly steps through the list to be sorted, compares each pair of adjacent items and swaps them if they are in the wrong order."
     },
     "Utility.html#.QuickSort": {
       "id": "Utility.html#.QuickSort",
