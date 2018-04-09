@@ -76,12 +76,12 @@
 										<li><a href="Logger.ConsoleLogger.html">Logger.ConsoleLogger</a></li>
 										<li><a href="Logger.LoggerFactory.html">Logger.LoggerFactory</a></li>
 										<li><a href="Object.html">Object</a></li>
-										<li><a href="Security.Client.exports.ACLClient.html">Security.Client.exports.ACLClient</a></li>
-										<li><a href="Security.Client.exports.OAUTH2Client.html">Security.Client.exports.OAUTH2Client</a></li>
-										<li><a href="Security.exports.AuthenticationFactory.html">Security.exports.AuthenticationFactory</a></li>
-										<li><a href="Security.exports.Context.html">Security.exports.Context</a></li>
-										<li><a href="Security.exports.Entry.html">Security.exports.Entry</a></li>
-										<li><a href="Security.exports.Principal.html">Security.exports.Principal</a></li>
+										<li><a href="Security.AuthenticationFactory.html">Security.AuthenticationFactory</a></li>
+										<li><a href="Security.Client.ACLClient.html">Security.Client.ACLClient</a></li>
+										<li><a href="Security.Client.OAUTH2Client.html">Security.Client.OAUTH2Client</a></li>
+										<li><a href="Security.Context.html">Security.Context</a></li>
+										<li><a href="Security.Entry.html">Security.Entry</a></li>
+										<li><a href="Security.Principal.html">Security.Principal</a></li>
 										<li><a href="Utility.AsynchronousQueue.html">Utility.AsynchronousQueue</a></li>
 										<li><a href="Utility.AugmentedMap.html">Utility.AugmentedMap</a></li>
 										<li><a href="Utility.exports.Transformer.html">Utility.exports.Transformer</a></li>
@@ -103,7 +103,7 @@
 										<li><a href="Augmented.Utility.MessageReader.html">Augmented.Utility.MessageReader</a></li>
 										<li><a href="Augmented.Utility.ResourceBundle.html">Augmented.Utility.ResourceBundle</a></li>
 										<li><a href="module-Augmented-Logger.html">Augmented~Logger</a></li>
-										<li><a href="Security.html">Security</a></li>
+										<li><a href="module-Augmented-Security.html">Augmented~Security</a></li>
 										<li><a href="Security.Client.html">Security.Client</a></li>
 										<li><a href="Utility.html">Utility</a></li>
 								</ul>
@@ -167,14 +167,14 @@
 				</table>
 			</div>
 			<div class="callout callout-example"><h5>Examples</h5>		<div class="example-code">
-						<pre class="prettyprint source language-javascript"><code class="language-javascript">const app &#x3D; new Augmented.Application(&quot;Awesome&quot;);
+						<pre class="prettyprint source language-javascript"><code class="language-javascript">const app &#x3D; new Application(&quot;Awesome&quot;);
 			app.start();</code></pre>
 					</div>
 					<div class="example-code">
-						<pre class="prettyprint source language-javascript"><code class="language-javascript">const app &#x3D; new Augmented.Application();
+						<pre class="prettyprint source language-javascript"><code class="language-javascript">const app &#x3D; new Application();
 			app.name &#x3D; &quot;My Super Application!&quot;;
 			app.setMetadataItem(&quot;description&quot;, &quot;something very awesome&quot;);
-			app.beforeInitialize &#x3D; () &#x3D;&gt; { do some stuff... };
+			app.initialize &#x3D; () &#x3D;&gt; { do some stuff... };
 			app.start();</code></pre>
 					</div>
 			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">

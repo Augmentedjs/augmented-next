@@ -94,12 +94,13 @@ describe("Given Augmented", () => {
 			const a = [{ "name": "Bubba", "id": 1 }, { "name": "Bill", "id": 2 }, { "name": "MonkeyBone", "id": 3 }], p = function(aa) { return (aa.id === 2); };
 			it("checks if property is in an array", () => {
 				const r = a.find(p);
-				expect(r).to.deep.equal({ "name": "Bill", "id": 2 });
+				expect(r.name).to.equal("Bill");
+				expect(r.id).to.equal(2);
 			});
 
 			it("checks if property is not in an array", () => {
 				const r = a.find(p);
-				expect(r).not.to.deep.equal({ "name": "x", "id": 9 });
+				expect(r).not.to.equal({ "name": "x", "id": 9 });
 			});
 		});
 	});
@@ -231,7 +232,7 @@ describe("Given Augmented", () => {
 		it("returns all keys", () => {
 			const k = Augmented.allKeys(o);
 
-			expect(k).to.equal(["x", "y"]);
+			expect(k).to.deep.equal(["x", "y"]);
 		});
 	});
 
@@ -277,7 +278,7 @@ describe("Given Augmented", () => {
 		it("can create a sequence", () => {
 			const result = Augmented.fibonacciSequence(13);
 			expect(result).to.not.be.undefined;
-			expect(result).to.equal([0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144]);
+			expect(result).to.deep.equal([0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144]);
 		});
 	});
 });

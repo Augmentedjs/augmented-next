@@ -100,7 +100,7 @@ describe("Given an Augmented Object", () => {
           const x = object.once("testOnce");
           const y = object.trigger("testOnce");
           expect(y).to.not.be.undefined;
-          expect(object.events.testOnce).not.to.not.be.undefined;
+          expect(object.events.testOnce).to.be.undefined;
         });
       });
     });

@@ -58,12 +58,12 @@ METADATA_KEY.DATASTORE = Symbol("datastore");
  * An application contains metadata and initializers for the application.<br/>
  * <em>Applications track history, and normally would contain the entire single page App startup.</em></p>
  * @param {string} name Name of the application
- * @example const app = new Augmented.Application("Awesome");
+ * @example const app = new Application("Awesome");
  * app.start();
- * @example const app = new Augmented.Application();
+ * @example const app = new Application();
  * app.name = "My Super Application!";
  * app.setMetadataItem("description", "something very awesome");
- * app.beforeInitialize = () => { do some stuff... };
+ * app.initialize = () => { do some stuff... };
  * app.start();
  */
 class Application {

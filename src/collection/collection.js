@@ -448,7 +448,8 @@ class AbstractCollection extends AugmentedObject {
    * @returns {boolean} Returns True if this collection supports validation
    */
   supportsValidation() {
-    return (this.schema && this.schema !== {});
+    const ret = (this.schema && this.schema !== null && this.schema !== {});
+    return (ret) ? true : false;
   };
 
   /**

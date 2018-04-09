@@ -23,8 +23,15 @@ import { BundleObject, ResourceBundle, MessageReader, MessageKeyFormatter } from
 
 import SchemaGenerator from "./validation/schemaGenerator.js";
 import ValidationFramework from "./validation/validationFramework.js";
-import * as Security from "./security/security.js";
+
+import AbstractSecurityClient from "./security/abstractSecurityClient.js";
+import OAUTH2Client from "./security/oauthClient.js";
+import ACLClient from "./security/aclClient.js";
 import ClientType from "./security/clientType.js";
+import AuthenticationFactory from "./security/authenticationFactory.js";
+import Principal from "./security/principal.js";
+import Entry from "./security/entry.js";
+import Context from "./security/context.js";
 
 import isString from "./functions/isString.js";
 import isFunction from "./functions/isFunction.js";
@@ -94,9 +101,30 @@ Augmented.AbstractModel = AbstractModel;
 Augmented.AbstractCollection = AbstractCollection;
 
 Augmented.ValidationFramework = ValidationFramework;
-Augmented.Security = Security;
+
+/**
+* Security Package and API
+* @namespace Security
+*/
+/**
+ * Security client namespace
+ * @namespace Client
+ * @memberof Security
+ */
+Augmented.Security = {};
 Augmented.Security.ClientType = ClientType;
+Augmented.Security.AuthenticationFactory = AuthenticationFactory;
+Augmented.Security.Context = Context;
+Augmented.Security.Entry = Entry;
+Augmented.Security.Principal = Principal;
+Augmented.Security.Client = {};
+Augmented.Security.Client.AbstractSecurityClient = AbstractSecurityClient;
+Augmented.Security.Client.ACLClient = ACLClient;
+Augmented.Security.Client.OAUTH2Client = OAUTH2Client;
+
+
 Augmented.Configuration = Configuration;
+
 Augmented.Application = Application;
 
 Augmented.isString = isString;

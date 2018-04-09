@@ -77,7 +77,7 @@ describe("Given Validation", () => {
 			v.registerSchema("story", TEST_SCHEMA);
 			v.clearSchemas();
 			const x = v.getSchemas();
-			expect(x).to.be.empty;
+			expect(x["story"]).to.be.undefined;
 		});
 
 		it("can validate from a schema", () => {

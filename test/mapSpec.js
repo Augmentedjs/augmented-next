@@ -42,10 +42,10 @@ describe("Given a Map", () => {
     expect(m instanceof Augmented.Utility.Map).to.be.true;
   });
 
-  it("can get an object to the map", () => {
+  it("can get an object from the map", () => {
     map.set("object", { "x": "y" });
 
-    expect(map.get("object")).to.equal({ "x": "y" });
+    expect(map.get("object").x).to.equal("y");
   });
 
   it("can remove a string to the map", () => {
@@ -94,7 +94,7 @@ describe("Given a Map", () => {
     map.set("height", "6.0\"");
 
     const map2 = new Augmented.Utility.Map(map);
-    expect(map.values()).to.equal(map2.values());
+    expect(map.values()).to.deep.equal(map2.values());
   });
 
   it("can marshall a map", () => {
@@ -104,7 +104,7 @@ describe("Given a Map", () => {
     map2.set("height", "6.0\"");
 
     const success = map.marshall(map2);
-    expect(map.values()).to.equal(map2.values());
+    expect(map.values()).to.deep.equal(map2.values());
   });
 
   it("can marshall a JSON object value pair", () => {
@@ -137,12 +137,12 @@ describe("Given a Map", () => {
 
   it("can set an item with a number as a key", () => {
     map.set(16, "sixteen");
-    expect(map.get(16)).to.equal("sixteen");
+    expect(map.get(16)).to.deep.equal("sixteen");
   });
 
   it("can set an item with an object as a key", () => {
     map.set({ name: "Bob", age: 36 }, { data: "xxxxxxx" });
-    expect(map.get({ name: "Bob", age: 36 })).to.equal({ data: "xxxxxxx" });
+    expect(map.get({ name: "Bob", age: 36 }).data).to.equal("xxxxxxx");
   });
 
   it("can produce a string from the map", () => {

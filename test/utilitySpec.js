@@ -15,11 +15,12 @@ describe("Given Utilities", () => {
 	describe("Given object extend", () => {
 		it("Extends an object with data", () => {
 			const o = Augmented.Utility.extend({}, {"A": "B"});
-			expect(o).to.deep.equal({"A": "B"});
+			expect(o["A"]).to.deep.equal("B");
 		});
 
 		it("Extends an object with more data", () => {
-			expect(Augmented.Utility.extend({}, {"A": "B"}, {"C": "D"})).to.deep.equal({"A": "B", "C": "D"});
+			const o = Augmented.Utility.extend({}, {"A": "B"}, {"C": "D"});
+			expect(o["C"]).to.deep.equal("D");
 		});
 
 		it("Extends an object prototype", () => {
@@ -73,12 +74,12 @@ describe("Given Utilities", () => {
 
 		it("can filter objects to one key", () => {
 			const x = Augmented.Utility.filterObject(o, ["object"]);
-			expect(x).to.deep.equal({"object": "object"});
+			expect(x["object"]).to.equal("object");
 		});
 
 		it("can filter objects to multiple keys", () => {
 			const x = Augmented.Utility.filterObject(o, ["object", "is"]);
-			expect(x).to.deep.equal({"is": "is", "object": "object"});
+			expect(x.is).to.deep.equal("is");
 		});
 	});
 

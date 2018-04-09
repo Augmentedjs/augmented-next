@@ -12,7 +12,7 @@ describe("Given Sorting Utilities", () => {
 			const a = Augmented.Utility.sortObjects(o, "A");
 			expect(a).not.to.equal(null);
 			expect(a).not.to.equal([]);
-			expect(a).to.equal([{"A": "B"}, {"A": "C"}, {"A": "D"}]);
+			expect(a[0].A).to.equal("B");
 		});
 	});
 
@@ -21,7 +21,7 @@ describe("Given Sorting Utilities", () => {
 			const a = Augmented.Utility.quickSort(DATA);
 			expect(a).not.to.equal(null);
 			expect(a).not.to.equal([]);
-			expect(a).to.equal(SORTED);
+			expect(a).to.deep.equal(SORTED);
 		});
 	});
 
@@ -30,7 +30,7 @@ describe("Given Sorting Utilities", () => {
 			const a = Augmented.Utility.mergeSort(DATA);
 			expect(a).not.to.equal(null);
 			expect(a).not.to.equal([]);
-			expect(a).to.equal(SORTED);
+			expect(a).to.deep.equal(SORTED);
 		});
 	});
 
@@ -39,7 +39,7 @@ describe("Given Sorting Utilities", () => {
 			const a = Augmented.Utility.insertionSort(DATA);
 			expect(a).not.to.equal(null);
 			expect(a).not.to.equal([]);
-			expect(a).to.equal(SORTED);
+			expect(a).to.deep.equal(SORTED);
 		});
 	});
 
@@ -48,7 +48,7 @@ describe("Given Sorting Utilities", () => {
 			const a = Augmented.Utility.bubbleSort(DATA);
 			expect(a).not.to.equal(null);
 			expect(a).not.to.equal([]);
-			expect(a).to.equal(SORTED);
+			expect(a).to.deep.equal(SORTED);
 		});
 	});
 });

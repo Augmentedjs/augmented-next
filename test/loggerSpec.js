@@ -50,6 +50,7 @@ describe("Given a logger factory", () => {
 		});
 	});
 
+/*
 	describe("Given a REST logger", () => {
 		let logger = null;
 		beforeEach(() => {
@@ -64,4 +65,5 @@ describe("Given a logger factory", () => {
 			expect(logger).to.not.be.undefined;
 		});
 	});
+	*/
 });

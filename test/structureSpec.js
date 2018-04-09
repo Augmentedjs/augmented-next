@@ -119,7 +119,7 @@ describe("Given standard Data Structures", () => {
 		});
 
 		it("can sort object array by property", () => {
-			expect(sorted).to.equal([{"name":"Augmented Top Model","image":"images/topModel.png","title":"Augmented: JSON Schema Validation","desciption":"Demonstrates Augmented JSON Schema Validation.","link":"http://www.augmentedjs.com/top-model/index.html","patterns":[{"pName":"Event Binding"},{"pName":"Mediator"},{"pName":"JSON Schema Validation"}]},{"name":"Augmented.Presentation.AutomaticTable","image":"images/autoTable.png","title":"Augmented.Presentation: Editable Automatic Table","desciption":"Demonstrates Augmented.Presentation.AutomaticTable and various functions of the Presentation Module.","link":"http://www.augmentedjs.com/example/index.html","patterns":[{"pName":"Automatic Table"},{"pName":"Mediator"},{"pName":"JSON Schema Validation"}]},{"name":"Hello","image":"images/dataPush.png","title":"Hello","desciption":"Demonstrates Augmented Decorator View Data Push.","link":"http://www.augmentedjs.com/data-push/index.html","patterns":[{"pName":"MVVM"},{"pName":"Decorator"},{"pName":"Two-way Binding"}]},{"name":"Stickies!","image":"images/stickies.png","title":"Stickies!","desciption":"Demonstrates Augmented Decorator View.","link":"http://www.augmentedjs.com/decorator/index.html","patterns":[{"pName":"MVVM"},{"pName":"Decorator"},{"pName":"Two-way Binding"}]},{"name":"Visual Mediator","image":"images/mediator.png","title":"Visual Mediator","desciption":"Demonstrates Mediator View.","link":"http://www.augmentedjs.com/mediator/index.html","patterns":[{"pName":"Mediator"}]},{"name":"freeForm Design","image":"images/freeform.png","title":"freeForm Design - Augmented SPA Designer","desciption":"A Single Page Application designer built in Augmented.js.  This application can build the structure and source-code for a single page app.","link":"http://www.augmentedjs.com/freeform/index.html","patterns":[{"pName":"Single Page Application"}]}]);
+			expect(sorted[0].name).to.deep.equal("Augmented Top Model");
 		});
 	});
 
@@ -134,7 +134,7 @@ describe("Given standard Data Structures", () => {
 		});
 
 		it("can sort number array with QuickSort", () => {
-			expect(sorted).to.equal([4, 5, 7, 10, 12, 21, 22, 27, 32, 34, 43, 45, 55, 98, 99, 222, 234, 400, 663, 1232, 3242, 3411, 6547, 34267]);
+			expect(sorted).to.deep.equal([4, 5, 7, 10, 12, 21, 22, 27, 32, 34, 43, 45, 55, 98, 99, 222, 234, 400, 663, 1232, 3242, 3411, 6547, 34267]);
 		});
 
 		describe("can perform a binary search", () => {

@@ -43,13 +43,13 @@ describe("Given a Utility Transformer", () => {
 		it("can transform to an array", () => {
 			out = Augmented.Utility.Transformer.transform(source, Augmented.Utility.TransformerType.ARRAY);
 			expect(Array.isArray(out)).to.be.true;
-			expect(out).to.equal([100]);
+			expect(out).to.deep.equal([100]);
 		});
 
 		it("can transform to an object", () => {
 			out = Augmented.Utility.Transformer.transform(source, Augmented.Utility.TransformerType.OBJECT);
 			expect(typeof out === OBJECT).to.be.true;
-			expect(out).to.deep.equal({100: 100});
+			expect(out[100]).to.deep.equal(100);
 		});
 	});
 
@@ -91,13 +91,13 @@ describe("Given a Utility Transformer", () => {
 		it("can transform to an array", () => {
 			out = Augmented.Utility.Transformer.transform(source, Augmented.Utility.TransformerType.ARRAY);
 			expect(Array.isArray(out)).to.be.true;
-			expect(out).to.equal([1024.55]);
+			expect(out).to.deep.equal([1024.55]);
 		});
 
 		it("can transform to an object", () => {
 			out = Augmented.Utility.Transformer.transform(source, Augmented.Utility.TransformerType.OBJECT);
 			expect(typeof out === OBJECT).to.be.true;
-			expect(out).to.deep.equal({1024.55: 1024.55});
+			expect(out[1024.55]).to.deep.equal(1024.55);
 		});
 	});
 
@@ -139,13 +139,13 @@ describe("Given a Utility Transformer", () => {
 		it("can transform to an array", () => {
 			out = Augmented.Utility.Transformer.transform(source, Augmented.Utility.TransformerType.ARRAY);
 			expect(Array.isArray(out)).to.be.true;
-			expect(out).to.equal(["12345.80"]);
+			expect(out).to.deep.equal(["12345.80"]);
 		});
 
 		it("can transform to an object", () => {
 			out = Augmented.Utility.Transformer.transform(source, Augmented.Utility.TransformerType.OBJECT);
 			expect(typeof out === OBJECT).to.be.true;
-			expect(out).to.deep.equal({"12345.80": "12345.80"});
+			expect(out["12345.80"]).to.deep.equal("12345.80");
 		});
 	});
 
@@ -187,13 +187,13 @@ describe("Given a Utility Transformer", () => {
 		it("can transform to an array", () => {
 			out = Augmented.Utility.Transformer.transform(source, Augmented.Utility.TransformerType.ARRAY);
 			expect(Array.isArray(out)).to.be.true;
-			expect(out).to.equal([false]);
+			expect(out).to.deep.equal([false]);
 		});
 
 		it("can transform to an object", () => {
 			out = Augmented.Utility.Transformer.transform(source, Augmented.Utility.TransformerType.OBJECT);
 			expect(typeof out === OBJECT).to.be.true;
-			expect(out).to.deep.equal({false: false});
+			expect(out[false]).to.deep.equal(false);
 		});
 	});
 
@@ -235,13 +235,13 @@ describe("Given a Utility Transformer", () => {
 		it("can transform to an array", () => {
 			out = Augmented.Utility.Transformer.transform(source, Augmented.Utility.TransformerType.ARRAY);
 			expect(Array.isArray(out)).to.be.true;
-			expect(out).to.equal([1,2,3]);
+			expect(out).to.deep.equal([1,2,3]);
 		});
 
 		it("can transform to an object", () => {
 			out = Augmented.Utility.Transformer.transform(source, Augmented.Utility.TransformerType.OBJECT);
 			expect(typeof out === OBJECT).to.be.true;
-			expect(out).to.equal([1,2,3]);
+			expect(out).to.deep.equal([1,2,3]);
 		});
 	});
 
@@ -288,7 +288,7 @@ describe("Given a Utility Transformer", () => {
 		it("can transform to an object", () => {
 			out = Augmented.Utility.Transformer.transform(source, Augmented.Utility.TransformerType.OBJECT);
 			expect(typeof out === OBJECT).to.be.true;
-			expect(out).to.equal(source);
+			expect(out).to.deep.equal(source);
 		});
 	});
 });

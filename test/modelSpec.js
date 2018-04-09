@@ -20,7 +20,7 @@ describe("Given an Abstract Model", () => {
     model.reset({ "x": "x" });
 
     expect(model.get("x")).to.equal("x");
-    expect(model.get("y")).not.to.not.be.undefined;
+    expect(model.get("y")).to.be.undefined;
   });
 
   it("can set with data", () => {
