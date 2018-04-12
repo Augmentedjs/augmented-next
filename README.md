@@ -36,9 +36,8 @@ A few key features of the **Core** module are:
   - ES6-like Map data structure object
   - Stack data structure object
   - O(log n) Search and sort algorithms
-* HTML5 localStorage factory with namespace protection support
 * Built-in logging factory with console
 * Async Queue for processing
-* Mock support in Models and Collections
+
 
 And much more!

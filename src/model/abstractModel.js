@@ -601,8 +601,8 @@ class AbstractModel extends AugmentedObject {
       return true;
     }
     attrs = extend({}, this._attributes, attrs);
-    let error = this.validationError = this.validate(attrs, options) || null;
-    if (!error) {
+    const error = this.validationError = this.validate(attrs, options) || null;
+    if (!error.valid) {
       return true;
     }
     this.trigger("invalid", this, error, extend(options, {validationError: error}));
