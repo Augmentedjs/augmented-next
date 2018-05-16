@@ -100,7 +100,7 @@ class AbstractCollection extends AugmentedObject {
   };*/
 
   /**
-   * Add a model, or list of models to the set. `models` may be Backbone
+   * Add a model, or list of models to the set. `models` may be
    * Models or raw JavaScript objects to be converted to Models, or any
    * combination of the two.
    */
