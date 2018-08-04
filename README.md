@@ -1,6 +1,6 @@
 # Augmented.js Next
 ## The Augmented.js Next Framework.
-### Version 2.0.x
+### Version 2.1.x
 ### "JC Denton"
 **aug·ment·ed**
 /ˌôɡˈmentəd /
