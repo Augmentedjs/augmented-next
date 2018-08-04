@@ -77,4 +77,16 @@ describe("Given an Augmented Collection", () => {
     c.schema = {};
     expect(c.supportsValidation()).to.be.true;
   });
+
+  it("can find a model by matching properties", () => {
+    c.add(data);
+    const result = c.find({ "Name": "Karen" });
+    expect(result.get("Name")).to.equal("Karen");
+  });
+
+  it("can filter a model by matching properties", () => {
+    c.add(data);
+    const result = c.filter({ "ID": 123 });
+    expect(result[0].get("Name")).to.equal("Bob");
+  });
 });

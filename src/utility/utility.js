@@ -182,7 +182,7 @@ export const wrap = (fn, wrap) => {
 };
 
 /**
- * filter an oject from array of values
+ * filter an object from array of values
  *
  * @param {object} object Object to filter
  * @param {array} keys keys to filter from the object
@@ -199,4 +199,20 @@ export const filterObject = (object, keys) => {
     }
   }
   return newObject;
+};
+
+/**
+ * find an oject from matching properties
+ *
+ * @param {Array} set array/set of objects
+ * @param {object} properties properties to find by
+ * @returns {array} returns a the objects that matched
+ * @memberof Utility
+ */
+export const findByMatchingProperties = (set, properties) => {
+  return set.filter( (entry) => {
+    return Object.keys(properties).every( (key) => {
+      return entry[key] === properties[key];
+    });
+  });
 };

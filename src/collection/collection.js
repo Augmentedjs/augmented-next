@@ -10,6 +10,14 @@ import AbstractModel from "../model/abstractModel.js";
 import ValidationFramework from "../validation/validationFramework.js";
 import CollectionIterator from "./iterator.js";
 
+const findModelByMatchingProperties = (set, properties) => {
+  return set.filter( (entry) => {
+    return Object.keys(properties).every( (key) => {
+      return entry._attributes[key] === properties[key];
+    });
+  });
+};
+
 const _clone = require("lodash.clone");
 
 // Default options for `Collection#set`.
@@ -326,10 +334,35 @@ class AbstractCollection extends AugmentedObject {
     return this.models[index];
   };
 
+  /** find the model that matches these properties
+   * @param {object} attrs properties to match
+   * @returns {Augmented.AbstractModel} model that matched
+   */
+  find(attrs) {
+    const results = findModelByMatchingProperties(this.models, attrs);
+    if (results && results.length > 0) {
+      return results[0];
+    }
+    return null;
+  };
+
+  /** filter the models that match these properties
+   * @param {object} attrs properties to match
+   * @returns {array} models that matched
+   */
+  filter(attrs) {
+    return findModelByMatchingProperties(this.models, attrs);
+  };
+
   /** Return models with matching attributes. Useful for simple cases of `filter`.
+    * @param {object} attrs properties to match
+    * @returns {Augmented.AbstractModel|array} models that matched
    */
   where(attrs, first) {
-    return this[first ? "find" : "filter"](attrs);
+    if (first) {
+      return this.find(attrs);
+    }
+    return this.filter(attrs);
   };
 
   /** Return the first model with matching attributes. Useful for simple cases
