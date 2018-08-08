@@ -1,10 +1,9 @@
-<!-- start:source.tmpl.hbs -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
-		<title>functions/allKeys.js</title>
+		<title>Globals</title>
 		<link rel="icon" type="image/png" href="favicon.png"/>
 		<!--[if lt IE 9]>
 		<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -43,7 +42,7 @@
 			</style>
 		<script type="text/javascript">
 			window.TEMPLATE_OPTIONS = {"includeDate":true,"dateFormat":"ddd MMM Do YYYY","systemName":"Augmented.js","systemSummary":"Augmented.js Next - Simply Development.","systemLogo":"img/jensen-silo-circle-small.png","systemColor":"#607D8B","navMembers":[{"kind":"class","title":"Classes","summary":"All documented classes."},{"kind":"external","title":"Externals","summary":"All documented external members."},{"kind":"global","title":"Globals","summary":"All documented globals."},{"kind":"mixin","title":"Mixins","summary":"All documented mixins."},{"kind":"interface","title":"Interfaces","summary":"All documented interfaces."},{"kind":"module","title":"Modules","summary":"All documented modules."},{"kind":"namespace","title":"Namespaces","summary":"All documented namespaces."},{"kind":"tutorial","title":"Tutorials","summary":"All available tutorials."}],"footer":"<a href='http://www.augmentedjs.com'>Augmented.js Homepage</a>","copyright":"","linenums":true,"collapseSymbols":false,"inverseNav":true,"inlineNav":false,"outputSourceFiles":true,"sourceRootPath":null,"disablePackagePath":true,"outputSourcePath":true,"showTableOfContents":true,"showAccessFilter":true,"analytics":null,"methodHeadingReturns":false,"sort":"linenum, longname, version, since","search":true,"favicon":"favicon.png","stylesheets":[],"scripts":[],"monospaceLinks":false,"cleverLinks":false,"logoFile":"images/jensen-silo-circle-small.png","navType":"vertical","protocol":"html://"};
-			window.DOCLET_TOC_ENABLED = false;
+			window.DOCLET_TOC_ENABLED = true;
 			window.DOCLET_AFILTER_ENABLED = false;
 		</script>
 </head>
@@ -134,35 +133,104 @@
 	</header>
 	<!-- end:navbar.hbs -->		<div class="page-header">
 			<div class="container">
-				<span class="kind">source</span>
-				<h1><span class="name">functions/allKeys.js</span></h1>
-			</div>
+				<span class="kind">global</span>
+				<h1><span class="name">Globals</span></h1>
+				<div class="summary"><p>All documented globals.</p></div>			</div>
 		</div>
 	<div class="container content">
 		<div class="row">
-			<div class="col-md-12 main-content">
-		<section class="source-section">
-			<article></article>
-			<pre class="prettyprint source language-javascript line-numbers"><code class="language-javascript">import isObject from "./isObject.js";
-
-/**
- * Augmented.allKeys
- * @method allKeys
- * @memberof Augmented
- * @param {object} obj The input object
- * @returns {array} Returns the array of ALL keys including prototyped
- */
-const allKeys = (obj) => {
-  if (!isObject(obj)) {
-    return [];
-  }
-  return Object.getOwnPropertyNames(obj);
-};
-
-export default allKeys;
-</code></pre>
-		</section>
+			<div class="col-md-9 main-content">
+						<ol class="breadcrumb">
+							<li><a href="index.html">Home</a></li>
+							<li class="active">Globals</li>
+						</ol>
+					<section>
+							<article class="secondary">
+									<h3>Methods</h3>
+									<dl class="symbol">
+											<hr/>
+											<dt class="symbol-title function public">
+			<h4 id="_logMe" class="function public"><span class="name">_logMe</span><span class="signature-params">( <span class="signature-param">message</span>, <span class="signature-param">level</span>&nbsp;)</span></h4>
+		</dt>
+<dd class="symbol-details function public">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>logMe method - the actual logger method that logs.  Each instance will have it's own<br/><br>override this in an instance</p></div>
+			</div>			<div class="callout callout-info">
+				<h5>Parameters</h5>
+				<table class="params table table-striped">
+					<thead>
+					<tr>
+							<th>Name</th>
+						<th>Type</th>
+						<th class="last">Description</th>
+					</tr>
+					</thead>
+					<tbody>
+						<tr>
+								<td><code>message</code></td>
+							<td><span class="param-type">string</span></td>
+							<td class="last">
+									<p>The message to log</p>
+							</td>
+						</tr>
+						<tr>
+								<td><code>level</code></td>
+							<td><span class="param-type">string</span></td>
+							<td class="last">
+									<p>The level to log to</p>
+							</td>
+						</tr>
+					</tbody>
+				</table>
 			</div>
+			<div class="callout callout-success"><h5>Returns</h5>		<form class="form-horizontal returns">
+							<div class="form-group">
+								<label class="col-sm-3 control-label returns-type"><span class="param-type">string</span></label>
+								<div class="col-sm-9">
+									<div class="form-control-static returns-description"><p>The message</p></div>
+								</div>
+							</div>
+					</form>
+			</div>			<div class="callout callout-example"><h5>Examples</h5>		<div class="example-code">
+						<pre class="prettyprint source language-javascript"><code class="language-javascript">_logMe(message, level) { ... };</code></pre>
+					</div>
+			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="logger_abstractLogger.js.html">logger/abstractLogger.js</a>, <a href="logger_abstractLogger.js.html#line-83">line 83</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+									</dl>
+							</article>
+					</section>
+			</div>
+				<div class="col-md-3 side-content">
+					<nav class="toc hidden-print hidden-sm hidden-xs"></nav>
+				</div>
 		</div>
 	</div>
 	<footer>
@@ -194,4 +262,3 @@ export default allKeys;
 	
 </body>
 </html>
-<!-- end:source.tmpl.hbs -->

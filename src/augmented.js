@@ -1,6 +1,9 @@
 import * as Utility from "./utility/utility";
 import { sortObjects, mergeSort, quickSort, insertionSort, bubbleSort } from "./utility/sort.js";
 
+import formatDate from "./utility/formatDate.js";
+import formatBinary from "./utility/formatBinary.js";
+
 import AugmentedObject from "./object.js";
 import AbstractModel from "./model/abstractModel.js";
 import AbstractCollection from "./collection/collection.js";
@@ -83,6 +86,8 @@ Augmented.Utility.mergeSort = mergeSort;
 Augmented.Utility.quickSort = quickSort;
 Augmented.Utility.insertionSort = insertionSort;
 Augmented.Utility.bubbleSort = bubbleSort;
+Augmented.Utility.formatDate = formatDate;
+Augmented.Utility.formatBinary = formatBinary;
 
 /**
  * A Logger package

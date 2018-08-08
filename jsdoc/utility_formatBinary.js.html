@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
-		<title>functions/allKeys.js</title>
+		<title>utility/formatBinary.js</title>
 		<link rel="icon" type="image/png" href="favicon.png"/>
 		<!--[if lt IE 9]>
 		<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -135,7 +135,7 @@
 	<!-- end:navbar.hbs -->		<div class="page-header">
 			<div class="container">
 				<span class="kind">source</span>
-				<h1><span class="name">functions/allKeys.js</span></h1>
+				<h1><span class="name">utility/formatBinary.js</span></h1>
 			</div>
 		</div>
 	<div class="container content">
@@ -143,23 +143,27 @@
 			<div class="col-md-12 main-content">
 		<section class="source-section">
 			<article></article>
-			<pre class="prettyprint source language-javascript line-numbers"><code class="language-javascript">import isObject from "./isObject.js";
-
-/**
- * Augmented.allKeys
- * @method allKeys
- * @memberof Augmented
- * @param {object} obj The input object
- * @returns {array} Returns the array of ALL keys including prototyped
- */
-const allKeys = (obj) => {
-  if (!isObject(obj)) {
-    return [];
-  }
-  return Object.getOwnPropertyNames(obj);
+			<pre class="prettyprint source language-javascript line-numbers"><code class="language-javascript">const createBinaryString = (nMask) => {
+  // nMask must be between -2147483648 and 2147483647
+  let nFlag = 0, nShifted = nMask, sMask = '';
+  for (nFlag = 0; nFlag &lt; 32;
+       nFlag++, sMask += String(nShifted >>> 31), nShifted &lt;&lt;= 1);
+  return sMask;
 };
 
-export default allKeys;
+/**
+ * Format a number into binary string at a set precision
+ * @function formatBinary
+ * @memberof Utility
+ * @param {num} num The number to format
+  * @param {pres} pres The bit precision
+ * @returns {string} The formatted binary string
+ */
+const formatBinary = (num, pres) => {
+  return createBinaryString(num).split("").reverse().join("").substring(0, pres);
+};
+
+export default formatBinary;
 </code></pre>
 		</section>
 			</div>
