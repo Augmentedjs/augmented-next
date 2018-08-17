@@ -637,7 +637,7 @@ class AbstractCollection extends AugmentedObject {
       let model = this.get(models[i]);
       if (!model) continue;
 
-      let index = this.indexOf(model);doctor
+      let index = this.at(model);
       this.models.splice(index, 1);
       this.length--;
 
