@@ -43,7 +43,7 @@
 		<script type="text/javascript">
 			window.TEMPLATE_OPTIONS = {"includeDate":true,"dateFormat":"ddd MMM Do YYYY","systemName":"Augmented.js","systemSummary":"Augmented.js Next - Simply Development.","systemLogo":"img/jensen-silo-circle-small.png","systemColor":"#607D8B","navMembers":[{"kind":"class","title":"Classes","summary":"All documented classes."},{"kind":"external","title":"Externals","summary":"All documented external members."},{"kind":"global","title":"Globals","summary":"All documented globals."},{"kind":"mixin","title":"Mixins","summary":"All documented mixins."},{"kind":"interface","title":"Interfaces","summary":"All documented interfaces."},{"kind":"module","title":"Modules","summary":"All documented modules."},{"kind":"namespace","title":"Namespaces","summary":"All documented namespaces."},{"kind":"tutorial","title":"Tutorials","summary":"All available tutorials."}],"footer":"<a href='http://www.augmentedjs.com'>Augmented.js Homepage</a>","copyright":"","linenums":true,"collapseSymbols":false,"inverseNav":true,"inlineNav":false,"outputSourceFiles":true,"sourceRootPath":null,"disablePackagePath":true,"outputSourcePath":true,"showTableOfContents":true,"showAccessFilter":true,"analytics":null,"methodHeadingReturns":false,"sort":"linenum, longname, version, since","search":true,"favicon":"favicon.png","stylesheets":[],"scripts":[],"monospaceLinks":false,"cleverLinks":false,"logoFile":"images/jensen-silo-circle-small.png","navType":"vertical","protocol":"html://"};
 			window.DOCLET_TOC_ENABLED = true;
-			window.DOCLET_AFILTER_ENABLED = false;
+			window.DOCLET_AFILTER_ENABLED = true;
 		</script>
 </head>
 <body>
@@ -67,8 +67,25 @@
 									<a href="global.html" class="dropdown-toggle" data-toggle="dropdown">Globals<b class="caret"></b></a>
 									<ul class="dropdown-menu">
 											<li><a href="global.html#_logMe">_logMe</a></li>
+											<li><a href="global.html#binarySearch">binarySearch</a></li>
+											<li><a href="global.html#BundleObject">BundleObject</a></li>
+											<li><a href="global.html#ClientType">ClientType</a></li>
 											<li><a href="global.html#Configuration">Configuration</a></li>
+											<li><a href="global.html#exec">exec</a></li>
+											<li><a href="global.html#filter">filter</a></li>
+											<li><a href="global.html#filterObject">filterObject</a></li>
+											<li><a href="global.html#findByMatchingProperties">findByMatchingProperties</a></li>
+											<li><a href="global.html#formatDate">formatDate</a></li>
+											<li><a href="global.html#has">has</a></li>
+											<li><a href="global.html#isDefined">isDefined</a></li>
+											<li><a href="global.html#isFunction">isFunction</a></li>
+											<li><a href="global.html#isObject">isObject</a></li>
+											<li><a href="global.html#isString">isString</a></li>
+											<li><a href="global.html#prettyPrint">prettyPrint</a></li>
+											<li><a href="global.html#shuffle">shuffle</a></li>
+											<li><a href="global.html#TransformerType">TransformerType</a></li>
 											<li><a href="global.html#URI_TEMPLATE_GLOBAL_MODIFIERS">URI_TEMPLATE_GLOBAL_MODIFIERS</a></li>
+											<li><a href="global.html#wrap">wrap</a></li>
 									</ul>
 								</li>
 								<li class="dropdown">
@@ -78,22 +95,25 @@
 											<li><a href="AbstractModel.html">AbstractModel</a></li>
 											<li><a href="AbstractSecurityClient.html">AbstractSecurityClient</a></li>
 											<li><a href="Application.html">Application</a></li>
+											<li><a href="AsynchronousQueue.html">AsynchronousQueue</a></li>
+											<li><a href="AugmentedMap.html">AugmentedMap</a></li>
+											<li><a href="AugmentedObject.html">AugmentedObject</a></li>
+											<li><a href="AuthenticationFactory.html">AuthenticationFactory</a></li>
 											<li><a href="CollectionIterator.html">CollectionIterator</a></li>
+											<li><a href="Context.html">Context</a></li>
+											<li><a href="Entry.html">Entry</a></li>
 											<li><a href="Logger.AbstractLogger.html">Logger.AbstractLogger</a></li>
 											<li><a href="Logger.ColorConsoleLogger.html">Logger.ColorConsoleLogger</a></li>
 											<li><a href="Logger.ConsoleLogger.html">Logger.ConsoleLogger</a></li>
 											<li><a href="Logger.LoggerFactory.html">Logger.LoggerFactory</a></li>
-											<li><a href="Object.html">Object</a></li>
-											<li><a href="Security.AuthenticationFactory.html">Security.AuthenticationFactory</a></li>
+											<li><a href="MessageKeyFormatter.html">MessageKeyFormatter</a></li>
+											<li><a href="MessageReader.html">MessageReader</a></li>
+											<li><a href="OAUTH2Client.html">OAUTH2Client</a></li>
+											<li><a href="Principal.html">Principal</a></li>
+											<li><a href="ResourceBundle.html">ResourceBundle</a></li>
 											<li><a href="Security.Client.ACLClient.html">Security.Client.ACLClient</a></li>
-											<li><a href="Security.Client.OAUTH2Client.html">Security.Client.OAUTH2Client</a></li>
-											<li><a href="Security.Context.html">Security.Context</a></li>
-											<li><a href="Security.Entry.html">Security.Entry</a></li>
-											<li><a href="Security.Principal.html">Security.Principal</a></li>
-											<li><a href="Utility.AsynchronousQueue.html">Utility.AsynchronousQueue</a></li>
-											<li><a href="Utility.AugmentedMap.html">Utility.AugmentedMap</a></li>
-											<li><a href="Utility.exports.Transformer.html">Utility.exports.Transformer</a></li>
-											<li><a href="Utility.Stack.html">Utility.Stack</a></li>
+											<li><a href="Stack.html">Stack</a></li>
+											<li><a href="Transformer.html">Transformer</a></li>
 											<li><a href="ValidationFramework.html">ValidationFramework</a></li>
 									</ul>
 								</li>
@@ -106,14 +126,9 @@
 								<li class="dropdown">
 									<a href="list_namespace.html" class="dropdown-toggle" data-toggle="dropdown">Namespaces<b class="caret"></b></a>
 									<ul class="dropdown-menu">
-											<li><a href="Augmented.Utility.BundleObject.html">Augmented.Utility.BundleObject</a></li>
-											<li><a href="Augmented.Utility.MessageKeyFormatter.html">Augmented.Utility.MessageKeyFormatter</a></li>
-											<li><a href="Augmented.Utility.MessageReader.html">Augmented.Utility.MessageReader</a></li>
-											<li><a href="Augmented.Utility.ResourceBundle.html">Augmented.Utility.ResourceBundle</a></li>
 											<li><a href="module-Augmented-Logger.html">Augmented~Logger</a></li>
 											<li><a href="module-Augmented-Security.html">Augmented~Security</a></li>
 											<li><a href="Security.Client.html">Security.Client</a></li>
-											<li><a href="Utility.html">Utility</a></li>
 									</ul>
 								</li>
 				</ul>
@@ -145,6 +160,16 @@
 							<li><a href="list_class.html">Classes</a></li>
 							<li class="active">AbstractModel</li>
 						</ol>
+						<div class="access-filter">
+								<label class="checkbox-inline">
+									<input class="toggle-inherited" type="checkbox" value="" checked>
+									Inherited
+								</label>
+								<label class="checkbox-inline">
+									<input class="toggle-public" type="checkbox" value="" checked>
+									Public
+								</label>
+						</div>
 					<section>
 							<dl class="symbol primary">
 								<dt class="symbol-title class">
@@ -163,7 +188,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Augments</label>
 								<div class="col-sm-9">
-										<p class="form-control-static"><a href="Object.html">Object</a></p>
+										<p class="form-control-static"><a href="AugmentedObject.html">AugmentedObject</a></p>
 								</div>
 							</div>
 			
@@ -182,7 +207,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="model_abstractModel.js.html">model/abstractModel.js</a>, <a href="model_abstractModel.js.html#line-38">line 38</a></p>
+									<p class="form-control-static"><a href="node_modules_next-core-model_src_model_abstractModel.js.html">node_modules/next-core-model/src/model/abstractModel.js</a>, <a href="node_modules_next-core-model_src_model_abstractModel.js.html#line-36">line 36</a></p>
 								</div>
 							</div>
 			
@@ -194,6 +219,137 @@
 </dd>
 							</dl>
 							<article class="secondary">
+									<h3>Members</h3>
+									<dl class="symbol">
+											<hr/>
+											<dt class="symbol-title member public inherited">
+			<h4 id="options" class="member public inherited"><span class="name">options</span><span class="signature-type"></span></h4>
+		</dt>
+<dd class="symbol-details member public inherited">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>The passed options</p></div>
+			</div>			<div class="callout callout-info">
+				<h5>Properties</h5>
+				<table class="params table table-striped">
+					<thead>
+					<tr>
+							<th>Name</th>
+						<th>Type</th>
+						<th class="last">Description</th>
+					</tr>
+					</thead>
+					<tbody>
+						<tr>
+								<td><code>options</code></td>
+							<td></td>
+							<td class="last">
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+			
+			
+			
+			
+			
+							<!-- inherits -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Inherited From</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="AugmentedObject.html#options">AugmentedObject#options</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="node_modules_next-core-object_src_object.js.html">node_modules/next-core-object/src/object.js</a>, <a href="node_modules_next-core-object_src_object.js.html#line-43">line 43</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title member public inherited">
+			<h4 id="events" class="member public inherited"><span class="name">events</span><span class="signature-type"></span></h4>
+		</dt>
+<dd class="symbol-details member public inherited">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>The Events</p></div>
+			</div>			<div class="callout callout-info">
+				<h5>Properties</h5>
+				<table class="params table table-striped">
+					<thead>
+					<tr>
+							<th>Name</th>
+						<th>Type</th>
+						<th class="last">Description</th>
+					</tr>
+					</thead>
+					<tbody>
+						<tr>
+								<td><code>events</code></td>
+							<td></td>
+							<td class="last">
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+			
+			
+			
+			
+			
+							<!-- inherits -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Inherited From</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="AugmentedObject.html#events">AugmentedObject#events</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="node_modules_next-core-object_src_object.js.html">node_modules/next-core-object/src/object.js</a>, <a href="node_modules_next-core-object_src_object.js.html#line-55">line 55</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+									</dl>
 									<h3>Methods</h3>
 									<dl class="symbol">
 											<hr/>
@@ -244,7 +400,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="model_abstractModel.js.html">model/abstractModel.js</a>, <a href="model_abstractModel.js.html#line-92">line 92</a></p>
+									<p class="form-control-static"><a href="node_modules_next-core-model_src_model_abstractModel.js.html">node_modules/next-core-model/src/model/abstractModel.js</a>, <a href="node_modules_next-core-model_src_model_abstractModel.js.html#line-90">line 90</a></p>
 								</div>
 							</div>
 			
@@ -289,7 +445,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="model_abstractModel.js.html">model/abstractModel.js</a>, <a href="model_abstractModel.js.html#line-101">line 101</a></p>
+									<p class="form-control-static"><a href="node_modules_next-core-model_src_model_abstractModel.js.html">node_modules/next-core-model/src/model/abstractModel.js</a>, <a href="node_modules_next-core-model_src_model_abstractModel.js.html#line-99">line 99</a></p>
 								</div>
 							</div>
 			
@@ -326,7 +482,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="model_abstractModel.js.html">model/abstractModel.js</a>, <a href="model_abstractModel.js.html#line-109">line 109</a></p>
+									<p class="form-control-static"><a href="node_modules_next-core-model_src_model_abstractModel.js.html">node_modules/next-core-model/src/model/abstractModel.js</a>, <a href="node_modules_next-core-model_src_model_abstractModel.js.html#line-107">line 107</a></p>
 								</div>
 							</div>
 			
@@ -363,7 +519,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="model_abstractModel.js.html">model/abstractModel.js</a>, <a href="model_abstractModel.js.html#line-197">line 197</a></p>
+									<p class="form-control-static"><a href="node_modules_next-core-model_src_model_abstractModel.js.html">node_modules/next-core-model/src/model/abstractModel.js</a>, <a href="node_modules_next-core-model_src_model_abstractModel.js.html#line-210">line 210</a></p>
 								</div>
 							</div>
 			
@@ -408,7 +564,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="model_abstractModel.js.html">model/abstractModel.js</a>, <a href="model_abstractModel.js.html#line-204">line 204</a></p>
+									<p class="form-control-static"><a href="node_modules_next-core-model_src_model_abstractModel.js.html">node_modules/next-core-model/src/model/abstractModel.js</a>, <a href="node_modules_next-core-model_src_model_abstractModel.js.html#line-217">line 217</a></p>
 								</div>
 							</div>
 			
@@ -445,7 +601,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="model_abstractModel.js.html">model/abstractModel.js</a>, <a href="model_abstractModel.js.html#line-210">line 210</a></p>
+									<p class="form-control-static"><a href="node_modules_next-core-model_src_model_abstractModel.js.html">node_modules/next-core-model/src/model/abstractModel.js</a>, <a href="node_modules_next-core-model_src_model_abstractModel.js.html#line-223">line 223</a></p>
 								</div>
 							</div>
 			
@@ -482,7 +638,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="model_abstractModel.js.html">model/abstractModel.js</a>, <a href="model_abstractModel.js.html#line-217">line 217</a></p>
+									<p class="form-control-static"><a href="node_modules_next-core-model_src_model_abstractModel.js.html">node_modules/next-core-model/src/model/abstractModel.js</a>, <a href="node_modules_next-core-model_src_model_abstractModel.js.html#line-230">line 230</a></p>
 								</div>
 							</div>
 			
@@ -519,7 +675,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="model_abstractModel.js.html">model/abstractModel.js</a>, <a href="model_abstractModel.js.html#line-223">line 223</a></p>
+									<p class="form-control-static"><a href="node_modules_next-core-model_src_model_abstractModel.js.html">node_modules/next-core-model/src/model/abstractModel.js</a>, <a href="node_modules_next-core-model_src_model_abstractModel.js.html#line-236">line 236</a></p>
 								</div>
 							</div>
 			
@@ -556,7 +712,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="model_abstractModel.js.html">model/abstractModel.js</a>, <a href="model_abstractModel.js.html#line-232">line 232</a></p>
+									<p class="form-control-static"><a href="node_modules_next-core-model_src_model_abstractModel.js.html">node_modules/next-core-model/src/model/abstractModel.js</a>, <a href="node_modules_next-core-model_src_model_abstractModel.js.html#line-245">line 245</a></p>
 								</div>
 							</div>
 			
@@ -593,7 +749,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="model_abstractModel.js.html">model/abstractModel.js</a>, <a href="model_abstractModel.js.html#line-241">line 241</a></p>
+									<p class="form-control-static"><a href="node_modules_next-core-model_src_model_abstractModel.js.html">node_modules/next-core-model/src/model/abstractModel.js</a>, <a href="node_modules_next-core-model_src_model_abstractModel.js.html#line-254">line 254</a></p>
 								</div>
 							</div>
 			
@@ -630,7 +786,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="model_abstractModel.js.html">model/abstractModel.js</a>, <a href="model_abstractModel.js.html#line-263">line 263</a></p>
+									<p class="form-control-static"><a href="node_modules_next-core-model_src_model_abstractModel.js.html">node_modules/next-core-model/src/model/abstractModel.js</a>, <a href="node_modules_next-core-model_src_model_abstractModel.js.html#line-276">line 276</a></p>
 								</div>
 							</div>
 			
@@ -667,7 +823,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="model_abstractModel.js.html">model/abstractModel.js</a>, <a href="model_abstractModel.js.html#line-330">line 330</a></p>
+									<p class="form-control-static"><a href="node_modules_next-core-model_src_model_abstractModel.js.html">node_modules/next-core-model/src/model/abstractModel.js</a>, <a href="node_modules_next-core-model_src_model_abstractModel.js.html#line-343">line 343</a></p>
 								</div>
 							</div>
 			
@@ -704,7 +860,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="model_abstractModel.js.html">model/abstractModel.js</a>, <a href="model_abstractModel.js.html#line-368">line 368</a></p>
+									<p class="form-control-static"><a href="node_modules_next-core-model_src_model_abstractModel.js.html">node_modules/next-core-model/src/model/abstractModel.js</a>, <a href="node_modules_next-core-model_src_model_abstractModel.js.html#line-381">line 381</a></p>
 								</div>
 							</div>
 			
@@ -741,7 +897,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="model_abstractModel.js.html">model/abstractModel.js</a>, <a href="model_abstractModel.js.html#line-413">line 413</a></p>
+									<p class="form-control-static"><a href="node_modules_next-core-model_src_model_abstractModel.js.html">node_modules/next-core-model/src/model/abstractModel.js</a>, <a href="node_modules_next-core-model_src_model_abstractModel.js.html#line-427">line 427</a></p>
 								</div>
 							</div>
 			
@@ -778,7 +934,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="model_abstractModel.js.html">model/abstractModel.js</a>, <a href="model_abstractModel.js.html#line-419">line 419</a></p>
+									<p class="form-control-static"><a href="node_modules_next-core-model_src_model_abstractModel.js.html">node_modules/next-core-model/src/model/abstractModel.js</a>, <a href="node_modules_next-core-model_src_model_abstractModel.js.html#line-433">line 433</a></p>
 								</div>
 							</div>
 			
@@ -815,7 +971,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="model_abstractModel.js.html">model/abstractModel.js</a>, <a href="model_abstractModel.js.html#line-425">line 425</a></p>
+									<p class="form-control-static"><a href="node_modules_next-core-model_src_model_abstractModel.js.html">node_modules/next-core-model/src/model/abstractModel.js</a>, <a href="node_modules_next-core-model_src_model_abstractModel.js.html#line-439">line 439</a></p>
 								</div>
 							</div>
 			
@@ -852,7 +1008,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="model_abstractModel.js.html">model/abstractModel.js</a>, <a href="model_abstractModel.js.html#line-432">line 432</a></p>
+									<p class="form-control-static"><a href="node_modules_next-core-model_src_model_abstractModel.js.html">node_modules/next-core-model/src/model/abstractModel.js</a>, <a href="node_modules_next-core-model_src_model_abstractModel.js.html#line-446">line 446</a></p>
 								</div>
 							</div>
 			
@@ -889,7 +1045,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="model_abstractModel.js.html">model/abstractModel.js</a>, <a href="model_abstractModel.js.html#line-446">line 446</a></p>
+									<p class="form-control-static"><a href="node_modules_next-core-model_src_model_abstractModel.js.html">node_modules/next-core-model/src/model/abstractModel.js</a>, <a href="node_modules_next-core-model_src_model_abstractModel.js.html#line-460">line 460</a></p>
 								</div>
 							</div>
 			
@@ -926,7 +1082,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="model_abstractModel.js.html">model/abstractModel.js</a>, <a href="model_abstractModel.js.html#line-467">line 467</a></p>
+									<p class="form-control-static"><a href="node_modules_next-core-model_src_model_abstractModel.js.html">node_modules/next-core-model/src/model/abstractModel.js</a>, <a href="node_modules_next-core-model_src_model_abstractModel.js.html#line-481">line 481</a></p>
 								</div>
 							</div>
 			
@@ -963,7 +1119,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="model_abstractModel.js.html">model/abstractModel.js</a>, <a href="model_abstractModel.js.html#line-477">line 477</a></p>
+									<p class="form-control-static"><a href="node_modules_next-core-model_src_model_abstractModel.js.html">node_modules/next-core-model/src/model/abstractModel.js</a>, <a href="node_modules_next-core-model_src_model_abstractModel.js.html#line-491">line 491</a></p>
 								</div>
 							</div>
 			
@@ -1008,7 +1164,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="model_abstractModel.js.html">model/abstractModel.js</a>, <a href="model_abstractModel.js.html#line-485">line 485</a></p>
+									<p class="form-control-static"><a href="node_modules_next-core-model_src_model_abstractModel.js.html">node_modules/next-core-model/src/model/abstractModel.js</a>, <a href="node_modules_next-core-model_src_model_abstractModel.js.html#line-499">line 499</a></p>
 								</div>
 							</div>
 			
@@ -1053,7 +1209,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="model_abstractModel.js.html">model/abstractModel.js</a>, <a href="model_abstractModel.js.html#line-497">line 497</a></p>
+									<p class="form-control-static"><a href="node_modules_next-core-model_src_model_abstractModel.js.html">node_modules/next-core-model/src/model/abstractModel.js</a>, <a href="node_modules_next-core-model_src_model_abstractModel.js.html#line-511">line 511</a></p>
 								</div>
 							</div>
 			
@@ -1098,7 +1254,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="model_abstractModel.js.html">model/abstractModel.js</a>, <a href="model_abstractModel.js.html#line-509">line 509</a></p>
+									<p class="form-control-static"><a href="node_modules_next-core-model_src_model_abstractModel.js.html">node_modules/next-core-model/src/model/abstractModel.js</a>, <a href="node_modules_next-core-model_src_model_abstractModel.js.html#line-523">line 523</a></p>
 								</div>
 							</div>
 			
@@ -1143,7 +1299,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="model_abstractModel.js.html">model/abstractModel.js</a>, <a href="model_abstractModel.js.html#line-527">line 527</a></p>
+									<p class="form-control-static"><a href="node_modules_next-core-model_src_model_abstractModel.js.html">node_modules/next-core-model/src/model/abstractModel.js</a>, <a href="node_modules_next-core-model_src_model_abstractModel.js.html#line-541">line 541</a></p>
 								</div>
 							</div>
 			
@@ -1180,7 +1336,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="model_abstractModel.js.html">model/abstractModel.js</a>, <a href="model_abstractModel.js.html#line-541">line 541</a></p>
+									<p class="form-control-static"><a href="node_modules_next-core-model_src_model_abstractModel.js.html">node_modules/next-core-model/src/model/abstractModel.js</a>, <a href="node_modules_next-core-model_src_model_abstractModel.js.html#line-555">line 555</a></p>
 								</div>
 							</div>
 			
@@ -1238,7 +1394,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="model_abstractModel.js.html">model/abstractModel.js</a>, <a href="model_abstractModel.js.html#line-547">line 547</a></p>
+									<p class="form-control-static"><a href="node_modules_next-core-model_src_model_abstractModel.js.html">node_modules/next-core-model/src/model/abstractModel.js</a>, <a href="node_modules_next-core-model_src_model_abstractModel.js.html#line-561">line 561</a></p>
 								</div>
 							</div>
 			
@@ -1283,7 +1439,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="model_abstractModel.js.html">model/abstractModel.js</a>, <a href="model_abstractModel.js.html#line-558">line 558</a></p>
+									<p class="form-control-static"><a href="node_modules_next-core-model_src_model_abstractModel.js.html">node_modules/next-core-model/src/model/abstractModel.js</a>, <a href="node_modules_next-core-model_src_model_abstractModel.js.html#line-572">line 572</a></p>
 								</div>
 							</div>
 			
@@ -1328,7 +1484,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="model_abstractModel.js.html">model/abstractModel.js</a>, <a href="model_abstractModel.js.html#line-566">line 566</a></p>
+									<p class="form-control-static"><a href="node_modules_next-core-model_src_model_abstractModel.js.html">node_modules/next-core-model/src/model/abstractModel.js</a>, <a href="node_modules_next-core-model_src_model_abstractModel.js.html#line-580">line 580</a></p>
 								</div>
 							</div>
 			
@@ -1365,7 +1521,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="model_abstractModel.js.html">model/abstractModel.js</a>, <a href="model_abstractModel.js.html#line-573">line 573</a></p>
+									<p class="form-control-static"><a href="node_modules_next-core-model_src_model_abstractModel.js.html">node_modules/next-core-model/src/model/abstractModel.js</a>, <a href="node_modules_next-core-model_src_model_abstractModel.js.html#line-587">line 587</a></p>
 								</div>
 							</div>
 			
@@ -1402,7 +1558,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="model_abstractModel.js.html">model/abstractModel.js</a>, <a href="model_abstractModel.js.html#line-579">line 579</a></p>
+									<p class="form-control-static"><a href="node_modules_next-core-model_src_model_abstractModel.js.html">node_modules/next-core-model/src/model/abstractModel.js</a>, <a href="node_modules_next-core-model_src_model_abstractModel.js.html#line-593">line 593</a></p>
 								</div>
 							</div>
 			
@@ -1439,7 +1595,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="model_abstractModel.js.html">model/abstractModel.js</a>, <a href="model_abstractModel.js.html#line-585">line 585</a></p>
+									<p class="form-control-static"><a href="node_modules_next-core-model_src_model_abstractModel.js.html">node_modules/next-core-model/src/model/abstractModel.js</a>, <a href="node_modules_next-core-model_src_model_abstractModel.js.html#line-599">line 599</a></p>
 								</div>
 							</div>
 			
@@ -1476,7 +1632,671 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="model_abstractModel.js.html">model/abstractModel.js</a>, <a href="model_abstractModel.js.html#line-591">line 591</a></p>
+									<p class="form-control-static"><a href="node_modules_next-core-model_src_model_abstractModel.js.html">node_modules/next-core-model/src/model/abstractModel.js</a>, <a href="node_modules_next-core-model_src_model_abstractModel.js.html#line-605">line 605</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title function public inherited">
+			<h4 id="initialize" class="function public inherited"><span class="name">initialize</span><span class="signature-params">()</span></h4>
+		</dt>
+<dd class="symbol-details function public inherited">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>Initialize the object</p></div>
+			</div>			<div class="callout callout-success"><h5>Returns</h5>		<form class="form-horizontal returns">
+							<div class="form-group">
+								<label class="col-sm-3 control-label returns-type"><span class="param-type">object</span></label>
+								<div class="col-sm-9">
+									<div class="form-control-static returns-description"><p>Returns this context</p></div>
+								</div>
+							</div>
+					</form>
+			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+			
+			
+			
+			
+			
+							<!-- inherits -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Inherited From</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="AugmentedObject.html#initialize">AugmentedObject#initialize</a></p>
+								</div>
+							</div>
+			
+							<!-- overrides -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Overrides</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="AugmentedObject.html#initialize">AugmentedObject#initialize</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="node_modules_next-core-object_src_object.js.html">node_modules/next-core-object/src/object.js</a>, <a href="node_modules_next-core-object_src_object.js.html#line-35">line 35</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title function public inherited">
+			<h4 id="trigger" class="function public inherited"><span class="name">trigger</span><span class="signature-params">( <span class="signature-param">name</span>, <span class="signature-param">...args</span>&nbsp;)</span></h4>
+		</dt>
+<dd class="symbol-details function public inherited">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>Trigger one or many events, firing all bound callbacks. Callbacks are<br>passed the same arguments as <code>trigger</code> is, apart from the event name<br>(unless you're listening on <code>&quot;all&quot;</code>, which will cause your callback to<br>receive the true name of the event as the first argument).</p></div>
+			</div>			<div class="callout callout-info">
+				<h5>Parameters</h5>
+				<table class="params table table-striped">
+					<thead>
+					<tr>
+							<th>Name</th>
+						<th>Type</th>
+							<th>Attributes</th>
+						<th class="last">Description</th>
+					</tr>
+					</thead>
+					<tbody>
+						<tr>
+								<td><code>name</code></td>
+							<td><span class="param-type">string</span></td>
+								<td class="attributes"></td>
+							<td class="last">
+									<p>The name of the event</p>
+							</td>
+						</tr>
+						<tr>
+								<td><code>args</code></td>
+							<td><span class="param-type">any</span></td>
+								<td class="attributes">&lt;repeatable&gt;<br/></td>
+							<td class="last">
+									<p>any number of additional arguments</p>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="callout callout-success"><h5>Returns</h5>		<form class="form-horizontal returns">
+							<div class="form-group">
+								<label class="col-sm-3 control-label returns-type"><span class="param-type">object</span></label>
+								<div class="col-sm-9">
+									<div class="form-control-static returns-description"><p>Returns this context</p></div>
+								</div>
+							</div>
+					</form>
+			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+			
+			
+			
+			
+			
+							<!-- inherits -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Inherited From</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="AugmentedObject.html#trigger">AugmentedObject#trigger</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="node_modules_next-core-object_src_object.js.html">node_modules/next-core-object/src/object.js</a>, <a href="node_modules_next-core-object_src_object.js.html#line-72">line 72</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title function public inherited">
+			<h4 id="once" class="function public inherited"><span class="name">once</span><span class="signature-params">( <span class="signature-param">name</span>, <span class="signature-param">callback</span>, <span class="signature-param">context</span>&nbsp;)</span></h4>
+		</dt>
+<dd class="symbol-details function public inherited">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>Bind an event to only be triggered a single time. After the first time<br>the callback is invoked, its listener will be removed. If multiple events<br>are passed in using the space-separated syntax, the handler will fire<br>once for each event, not once for a combination of all events.</p></div>
+			</div>			<div class="callout callout-info">
+				<h5>Parameters</h5>
+				<table class="params table table-striped">
+					<thead>
+					<tr>
+							<th>Name</th>
+						<th>Type</th>
+						<th class="last">Description</th>
+					</tr>
+					</thead>
+					<tbody>
+						<tr>
+								<td><code>name</code></td>
+							<td><span class="param-type">string</span></td>
+							<td class="last">
+									<p>The name of the event</p>
+							</td>
+						</tr>
+						<tr>
+								<td><code>callback</code></td>
+							<td><span class="param-type">function</span></td>
+							<td class="last">
+									<p>The callback to evoke</p>
+							</td>
+						</tr>
+						<tr>
+								<td><code>context</code></td>
+							<td><span class="param-type">object</span></td>
+							<td class="last">
+									<p>The context of the callback</p>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="callout callout-success"><h5>Returns</h5>		<form class="form-horizontal returns">
+							<div class="form-group">
+								<label class="col-sm-3 control-label returns-type"><span class="param-type">object</span></label>
+								<div class="col-sm-9">
+									<div class="form-control-static returns-description"><p>Returns this context</p></div>
+								</div>
+							</div>
+					</form>
+			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+			
+			
+			
+			
+			
+							<!-- inherits -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Inherited From</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="AugmentedObject.html#once">AugmentedObject#once</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="node_modules_next-core-object_src_object.js.html">node_modules/next-core-object/src/object.js</a>, <a href="node_modules_next-core-object_src_object.js.html#line-99">line 99</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title function public inherited">
+			<h4 id="off" class="function public inherited"><span class="name">off</span><span class="signature-params">( <span class="signature-param">name</span>, <span class="signature-param">callback</span>, <span class="signature-param">context</span>&nbsp;)</span></h4>
+		</dt>
+<dd class="symbol-details function public inherited">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>Remove one or many callbacks. If <code>context</code> is null, removes all<br>callbacks with that function. If <code>callback</code> is null, removes all<br>callbacks for the event. If <code>name</code> is null, removes all bound<br>callbacks for all events.</p></div>
+			</div>			<div class="callout callout-info">
+				<h5>Parameters</h5>
+				<table class="params table table-striped">
+					<thead>
+					<tr>
+							<th>Name</th>
+						<th>Type</th>
+						<th class="last">Description</th>
+					</tr>
+					</thead>
+					<tbody>
+						<tr>
+								<td><code>name</code></td>
+							<td><span class="param-type">string</span></td>
+							<td class="last">
+									<p>The name of the event</p>
+							</td>
+						</tr>
+						<tr>
+								<td><code>callback</code></td>
+							<td><span class="param-type">function</span></td>
+							<td class="last">
+									<p>The callback to evoke</p>
+							</td>
+						</tr>
+						<tr>
+								<td><code>context</code></td>
+							<td><span class="param-type">object</span></td>
+							<td class="last">
+									<p>The context of the callback</p>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="callout callout-success"><h5>Returns</h5>		<form class="form-horizontal returns">
+							<div class="form-group">
+								<label class="col-sm-3 control-label returns-type"><span class="param-type">object</span></label>
+								<div class="col-sm-9">
+									<div class="form-control-static returns-description"><p>Returns this context</p></div>
+								</div>
+							</div>
+					</form>
+			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+			
+			
+			
+			
+			
+							<!-- inherits -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Inherited From</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="AugmentedObject.html#off">AugmentedObject#off</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="node_modules_next-core-object_src_object.js.html">node_modules/next-core-object/src/object.js</a>, <a href="node_modules_next-core-object_src_object.js.html#line-118">line 118</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title function public inherited">
+			<h4 id="stopListening" class="function public inherited"><span class="name">stopListening</span><span class="signature-params">( <span class="signature-param">obj</span>, <span class="signature-param">name</span>, <span class="signature-param">callback</span>&nbsp;)</span></h4>
+		</dt>
+<dd class="symbol-details function public inherited">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>Tell this object to stop listening to either specific events ... or<br>to every object it's currently listening to.</p></div>
+			</div>			<div class="callout callout-info">
+				<h5>Parameters</h5>
+				<table class="params table table-striped">
+					<thead>
+					<tr>
+							<th>Name</th>
+						<th>Type</th>
+						<th class="last">Description</th>
+					</tr>
+					</thead>
+					<tbody>
+						<tr>
+								<td><code>obj</code></td>
+							<td><span class="param-type">object</span></td>
+							<td class="last">
+									<p>The object to stop listening to</p>
+							</td>
+						</tr>
+						<tr>
+								<td><code>name</code></td>
+							<td><span class="param-type">string</span></td>
+							<td class="last">
+									<p>The name of the event</p>
+							</td>
+						</tr>
+						<tr>
+								<td><code>callback</code></td>
+							<td><span class="param-type">function</span></td>
+							<td class="last">
+									<p>The callback to evoke</p>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="callout callout-success"><h5>Returns</h5>		<form class="form-horizontal returns">
+							<div class="form-group">
+								<label class="col-sm-3 control-label returns-type"><span class="param-type">object</span></label>
+								<div class="col-sm-9">
+									<div class="form-control-static returns-description"><p>Returns this context</p></div>
+								</div>
+							</div>
+					</form>
+			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+			
+			
+			
+			
+			
+							<!-- inherits -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Inherited From</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="AugmentedObject.html#stopListening">AugmentedObject#stopListening</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="node_modules_next-core-object_src_object.js.html">node_modules/next-core-object/src/object.js</a>, <a href="node_modules_next-core-object_src_object.js.html#line-136">line 136</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title function public inherited">
+			<h4 id="on" class="function public inherited"><span class="name">on</span><span class="signature-params">( <span class="signature-param">name</span>, <span class="signature-param">callback</span>, <span class="signature-param">context</span>&nbsp;)</span></h4>
+		</dt>
+<dd class="symbol-details function public inherited">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>Bind an event to a <code>callback</code> function. Passing <code>&quot;all&quot;</code> will bind<br>the callback to all events fired.</p></div>
+			</div>			<div class="callout callout-info">
+				<h5>Parameters</h5>
+				<table class="params table table-striped">
+					<thead>
+					<tr>
+							<th>Name</th>
+						<th>Type</th>
+						<th class="last">Description</th>
+					</tr>
+					</thead>
+					<tbody>
+						<tr>
+								<td><code>name</code></td>
+							<td><span class="param-type">string</span></td>
+							<td class="last">
+									<p>The name of the event</p>
+							</td>
+						</tr>
+						<tr>
+								<td><code>callback</code></td>
+							<td><span class="param-type">function</span></td>
+							<td class="last">
+									<p>The callback to evoke</p>
+							</td>
+						</tr>
+						<tr>
+								<td><code>context</code></td>
+							<td><span class="param-type">object</span></td>
+							<td class="last">
+									<p>The context of the callback</p>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="callout callout-success"><h5>Returns</h5>		<form class="form-horizontal returns">
+							<div class="form-group">
+								<label class="col-sm-3 control-label returns-type"><span class="param-type">object</span></label>
+								<div class="col-sm-9">
+									<div class="form-control-static returns-description"><p>Returns this context</p></div>
+								</div>
+							</div>
+					</form>
+			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+			
+			
+			
+			
+			
+							<!-- inherits -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Inherited From</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="AugmentedObject.html#on">AugmentedObject#on</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="node_modules_next-core-object_src_object.js.html">node_modules/next-core-object/src/object.js</a>, <a href="node_modules_next-core-object_src_object.js.html#line-163">line 163</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title function public inherited">
+			<h4 id="listenTo" class="function public inherited"><span class="name">listenTo</span><span class="signature-params">( <span class="signature-param">obj</span>, <span class="signature-param">name</span>, <span class="signature-param">callback</span>&nbsp;)</span></h4>
+		</dt>
+<dd class="symbol-details function public inherited">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>Inversion-of-control versions of <code>on</code>. Tell <em>this</em> object to listen to<br>an event in another object... keeping track of what it's listening to<br>for easier unbinding later.</p></div>
+			</div>			<div class="callout callout-info">
+				<h5>Parameters</h5>
+				<table class="params table table-striped">
+					<thead>
+					<tr>
+							<th>Name</th>
+						<th>Type</th>
+						<th class="last">Description</th>
+					</tr>
+					</thead>
+					<tbody>
+						<tr>
+								<td><code>obj</code></td>
+							<td><span class="param-type">object</span></td>
+							<td class="last">
+									<p>The object to stop listening to</p>
+							</td>
+						</tr>
+						<tr>
+								<td><code>name</code></td>
+							<td><span class="param-type">string</span></td>
+							<td class="last">
+									<p>The name of the event</p>
+							</td>
+						</tr>
+						<tr>
+								<td><code>callback</code></td>
+							<td><span class="param-type">function</span></td>
+							<td class="last">
+									<p>The callback to evoke</p>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="callout callout-success"><h5>Returns</h5>		<form class="form-horizontal returns">
+							<div class="form-group">
+								<label class="col-sm-3 control-label returns-type"><span class="param-type">object</span></label>
+								<div class="col-sm-9">
+									<div class="form-control-static returns-description"><p>Returns this context</p></div>
+								</div>
+							</div>
+					</form>
+			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+			
+			
+			
+			
+			
+							<!-- inherits -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Inherited From</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="AugmentedObject.html#listenTo">AugmentedObject#listenTo</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="node_modules_next-core-object_src_object.js.html">node_modules/next-core-object/src/object.js</a>, <a href="node_modules_next-core-object_src_object.js.html#line-176">line 176</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title function public inherited">
+			<h4 id="listenToOnce" class="function public inherited"><span class="name">listenToOnce</span><span class="signature-params">( <span class="signature-param">obj</span>, <span class="signature-param">name</span>, <span class="signature-param">callback</span>&nbsp;)</span></h4>
+		</dt>
+<dd class="symbol-details function public inherited">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>Inversion-of-control versions of <code>once</code>.</p></div>
+			</div>			<div class="callout callout-info">
+				<h5>Parameters</h5>
+				<table class="params table table-striped">
+					<thead>
+					<tr>
+							<th>Name</th>
+						<th>Type</th>
+						<th class="last">Description</th>
+					</tr>
+					</thead>
+					<tbody>
+						<tr>
+								<td><code>obj</code></td>
+							<td><span class="param-type">object</span></td>
+							<td class="last">
+									<p>The object to stop listening to</p>
+							</td>
+						</tr>
+						<tr>
+								<td><code>name</code></td>
+							<td><span class="param-type">string</span></td>
+							<td class="last">
+									<p>The name of the event</p>
+							</td>
+						</tr>
+						<tr>
+								<td><code>callback</code></td>
+							<td><span class="param-type">function</span></td>
+							<td class="last">
+									<p>The callback to evoke</p>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="callout callout-success"><h5>Returns</h5>		<form class="form-horizontal returns">
+							<div class="form-group">
+								<label class="col-sm-3 control-label returns-type"><span class="param-type">object</span></label>
+								<div class="col-sm-9">
+									<div class="form-control-static returns-description"><p>Returns this context</p></div>
+								</div>
+							</div>
+					</form>
+			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+			
+			
+			
+			
+			
+							<!-- inherits -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Inherited From</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="AugmentedObject.html#listenToOnce">AugmentedObject#listenToOnce</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="node_modules_next-core-object_src_object.js.html">node_modules/next-core-object/src/object.js</a>, <a href="node_modules_next-core-object_src_object.js.html#line-202">line 202</a></p>
 								</div>
 							</div>
 			
@@ -1497,7 +2317,7 @@
 	</div>
 	<footer>
 				<div class="footer-option"><a href='http://www.augmentedjs.com'>Augmented.js Homepage</a></div>
-			<div class="generated-by">Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Fri Aug 17th 2018 using the <a href="https://github.com/steveush/foodoc">FooDoc template</a>.</div>
+			<div class="generated-by">Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Sun Nov 11th 2018 using the <a href="https://github.com/steveush/foodoc">FooDoc template</a>.</div>
 	</footer>
 	<script src="js/jquery.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>

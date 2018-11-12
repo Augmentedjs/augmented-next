@@ -28,5 +28,23 @@
   "markdown": {
     "parser": "gfm",
     "hardwrap": true
+  },
+  "source": {
+    "include": [
+      "./node_modules/next-core-application/src",
+      "./node_modules/next-core-bundle/src",
+      "./node_modules/next-core-logger/src",
+      "./node_modules/next-core-model/src",
+      "./node_modules/next-core-object/src",
+      "./node_modules/next-core-security/src",
+      "./node_modules/next-core-sort/src",
+      "./node_modules/next-core-structures/src",
+      "./node_modules/next-core-utilities/src",
+      "./node_modules/next-core-validation/src"
+    ],
+    "exclude": [
+    ],
+    "includePattern": ".+\\.js(doc|x)?$",
+    "excludePattern": "(^|\\/|\\\\)_"
   }
 }

@@ -67,8 +67,25 @@
 									<a href="global.html" class="dropdown-toggle" data-toggle="dropdown">Globals<b class="caret"></b></a>
 									<ul class="dropdown-menu">
 											<li><a href="global.html#_logMe">_logMe</a></li>
+											<li><a href="global.html#binarySearch">binarySearch</a></li>
+											<li><a href="global.html#BundleObject">BundleObject</a></li>
+											<li><a href="global.html#ClientType">ClientType</a></li>
 											<li><a href="global.html#Configuration">Configuration</a></li>
+											<li><a href="global.html#exec">exec</a></li>
+											<li><a href="global.html#filter">filter</a></li>
+											<li><a href="global.html#filterObject">filterObject</a></li>
+											<li><a href="global.html#findByMatchingProperties">findByMatchingProperties</a></li>
+											<li><a href="global.html#formatDate">formatDate</a></li>
+											<li><a href="global.html#has">has</a></li>
+											<li><a href="global.html#isDefined">isDefined</a></li>
+											<li><a href="global.html#isFunction">isFunction</a></li>
+											<li><a href="global.html#isObject">isObject</a></li>
+											<li><a href="global.html#isString">isString</a></li>
+											<li><a href="global.html#prettyPrint">prettyPrint</a></li>
+											<li><a href="global.html#shuffle">shuffle</a></li>
+											<li><a href="global.html#TransformerType">TransformerType</a></li>
 											<li><a href="global.html#URI_TEMPLATE_GLOBAL_MODIFIERS">URI_TEMPLATE_GLOBAL_MODIFIERS</a></li>
+											<li><a href="global.html#wrap">wrap</a></li>
 									</ul>
 								</li>
 								<li class="dropdown">
@@ -78,22 +95,25 @@
 											<li><a href="AbstractModel.html">AbstractModel</a></li>
 											<li><a href="AbstractSecurityClient.html">AbstractSecurityClient</a></li>
 											<li><a href="Application.html">Application</a></li>
+											<li><a href="AsynchronousQueue.html">AsynchronousQueue</a></li>
+											<li><a href="AugmentedMap.html">AugmentedMap</a></li>
+											<li><a href="AugmentedObject.html">AugmentedObject</a></li>
+											<li><a href="AuthenticationFactory.html">AuthenticationFactory</a></li>
 											<li><a href="CollectionIterator.html">CollectionIterator</a></li>
+											<li><a href="Context.html">Context</a></li>
+											<li><a href="Entry.html">Entry</a></li>
 											<li><a href="Logger.AbstractLogger.html">Logger.AbstractLogger</a></li>
 											<li><a href="Logger.ColorConsoleLogger.html">Logger.ColorConsoleLogger</a></li>
 											<li><a href="Logger.ConsoleLogger.html">Logger.ConsoleLogger</a></li>
 											<li><a href="Logger.LoggerFactory.html">Logger.LoggerFactory</a></li>
-											<li><a href="Object.html">Object</a></li>
-											<li><a href="Security.AuthenticationFactory.html">Security.AuthenticationFactory</a></li>
+											<li><a href="MessageKeyFormatter.html">MessageKeyFormatter</a></li>
+											<li><a href="MessageReader.html">MessageReader</a></li>
+											<li><a href="OAUTH2Client.html">OAUTH2Client</a></li>
+											<li><a href="Principal.html">Principal</a></li>
+											<li><a href="ResourceBundle.html">ResourceBundle</a></li>
 											<li><a href="Security.Client.ACLClient.html">Security.Client.ACLClient</a></li>
-											<li><a href="Security.Client.OAUTH2Client.html">Security.Client.OAUTH2Client</a></li>
-											<li><a href="Security.Context.html">Security.Context</a></li>
-											<li><a href="Security.Entry.html">Security.Entry</a></li>
-											<li><a href="Security.Principal.html">Security.Principal</a></li>
-											<li><a href="Utility.AsynchronousQueue.html">Utility.AsynchronousQueue</a></li>
-											<li><a href="Utility.AugmentedMap.html">Utility.AugmentedMap</a></li>
-											<li><a href="Utility.exports.Transformer.html">Utility.exports.Transformer</a></li>
-											<li><a href="Utility.Stack.html">Utility.Stack</a></li>
+											<li><a href="Stack.html">Stack</a></li>
+											<li><a href="Transformer.html">Transformer</a></li>
 											<li><a href="ValidationFramework.html">ValidationFramework</a></li>
 									</ul>
 								</li>
@@ -106,14 +126,9 @@
 								<li class="dropdown">
 									<a href="list_namespace.html" class="dropdown-toggle" data-toggle="dropdown">Namespaces<b class="caret"></b></a>
 									<ul class="dropdown-menu">
-											<li><a href="Augmented.Utility.BundleObject.html">Augmented.Utility.BundleObject</a></li>
-											<li><a href="Augmented.Utility.MessageKeyFormatter.html">Augmented.Utility.MessageKeyFormatter</a></li>
-											<li><a href="Augmented.Utility.MessageReader.html">Augmented.Utility.MessageReader</a></li>
-											<li><a href="Augmented.Utility.ResourceBundle.html">Augmented.Utility.ResourceBundle</a></li>
 											<li><a href="module-Augmented-Logger.html">Augmented~Logger</a></li>
 											<li><a href="module-Augmented-Security.html">Augmented~Security</a></li>
 											<li><a href="Security.Client.html">Security.Client</a></li>
-											<li><a href="Utility.html">Utility</a></li>
 									</ul>
 								</li>
 				</ul>
@@ -148,11 +163,13 @@
 					<section>
 							<dl class="symbol primary">
 								<dt class="symbol-title class">
-			<h2 class="class"><span class="signature-new">new&nbsp;</span><span class="name">Application</span><span class="signature-params">( <span class="signature-param">name</span>&nbsp;)</span></h2>
+			<h2 class="class"><span class="signature-new">new&nbsp;</span><span class="name">Application</span><span class="signature-params">( <span class="signature-param">options</span>&nbsp;)</span></h2>
 </dt>
 <dd class="symbol-details class" style="max-height: 9999px;">
 	<div class="symbol-details-inner">
-			<div class="callout callout-primary"><h5>Description</h5>		<div class="description classdesc"><p>Application Class for use to define an application.<br/><br>An application contains metadata and initializers for the application.<br/><br><em>Applications track history, and normally would contain the entire single page App startup.</em></p></div>
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description classdesc"><p><p>Application Class for use to define an application.<br/><br>An application contains metadata and initializers for the application.<br/><br><em>Applications track history, and normally would contain the entire single page App startup.</em></p></p>
+			<p><p>Supported options are:</p></p>
+			<ul><br><li><em>metadata</em> - an object of metadata to use for storing properties</li><br><li><em>name</em> - the name of the application</li><br><li><em>datastore</em> - a datastore to use via the datastore property</li><br><li><em>router</em> - the router to use via the router property</li><br></ul></div>
 			</div>			<div class="callout callout-info">
 				<h5>Parameters</h5>
 				<table class="params table table-striped">
@@ -165,17 +182,17 @@
 					</thead>
 					<tbody>
 						<tr>
-								<td><code>name</code></td>
-							<td><span class="param-type">string</span></td>
+								<td><code>options</code></td>
+							<td><span class="param-type">object</span></td>
 							<td class="last">
-									<p>Name of the application</p>
+									<p>options to init the application</p>
 							</td>
 						</tr>
 					</tbody>
 				</table>
 			</div>
 			<div class="callout callout-example"><h5>Examples</h5>		<div class="example-code">
-						<pre class="prettyprint source language-javascript"><code class="language-javascript">const app &#x3D; new Application(&quot;Awesome&quot;);
+						<pre class="prettyprint source language-javascript"><code class="language-javascript">const app &#x3D; new Application({ &quot;name&quot;: &quot;Awesome&quot; });
 			app.start();</code></pre>
 					</div>
 					<div class="example-code">
@@ -205,7 +222,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="application_application.js.html">application/application.js</a>, <a href="application_application.js.html#line-69">line 69</a></p>
+									<p class="form-control-static"><a href="node_modules_next-core-application_src_application.js.html">node_modules/next-core-application/src/application.js</a>, <a href="node_modules_next-core-application_src_application.js.html#line-78">line 78</a></p>
 								</div>
 							</div>
 			
@@ -219,6 +236,63 @@
 							<article class="secondary">
 									<h3>Members</h3>
 									<dl class="symbol">
+											<hr/>
+											<dt class="symbol-title member public">
+			<h4 id="router" class="member public"><span class="name">router</span><span class="signature-type"></span></h4>
+		</dt>
+<dd class="symbol-details member public">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>The router property of the application</p></div>
+			</div>			<div class="callout callout-info">
+				<h5>Properties</h5>
+				<table class="params table table-striped">
+					<thead>
+					<tr>
+							<th>Name</th>
+						<th>Type</th>
+						<th class="last">Description</th>
+					</tr>
+					</thead>
+					<tbody>
+						<tr>
+								<td><code>router</code></td>
+							<td></td>
+							<td class="last">
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="node_modules_next-core-application_src_application.js.html">node_modules/next-core-application/src/application.js</a>, <a href="node_modules_next-core-application_src_application.js.html#line-118">line 118</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
 											<hr/>
 											<dt class="symbol-title member public">
 			<h4 id="started" class="member public"><span class="name">started</span><span class="signature-type"></span></h4>
@@ -274,7 +348,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="application_application.js.html">application/application.js</a>, <a href="application_application.js.html#line-117">line 117</a></p>
+									<p class="form-control-static"><a href="node_modules_next-core-application_src_application.js.html">node_modules/next-core-application/src/application.js</a>, <a href="node_modules_next-core-application_src_application.js.html#line-131">line 131</a></p>
 								</div>
 							</div>
 			
@@ -331,7 +405,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="application_application.js.html">application/application.js</a>, <a href="application_application.js.html#line-143">line 143</a></p>
+									<p class="form-control-static"><a href="node_modules_next-core-application_src_application.js.html">node_modules/next-core-application/src/application.js</a>, <a href="node_modules_next-core-application_src_application.js.html#line-157">line 157</a></p>
 								</div>
 							</div>
 			
@@ -396,7 +470,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="application_application.js.html">application/application.js</a>, <a href="application_application.js.html#line-155">line 155</a></p>
+									<p class="form-control-static"><a href="node_modules_next-core-application_src_application.js.html">node_modules/next-core-application/src/application.js</a>, <a href="node_modules_next-core-application_src_application.js.html#line-169">line 169</a></p>
 								</div>
 							</div>
 			
@@ -453,64 +527,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="application_application.js.html">application/application.js</a>, <a href="application_application.js.html#line-214">line 214</a></p>
-								</div>
-							</div>
-			
-			
-			
-			
-					</form>
-			</div>	</div>
-</dd>
-											<hr/>
-											<dt class="symbol-title member public">
-			<h4 id="router" class="member public"><span class="name">router</span><span class="signature-type"></span></h4>
-		</dt>
-<dd class="symbol-details member public">
-	<div class="symbol-details-inner">
-			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>The router property of the application</p></div>
-			</div>			<div class="callout callout-info">
-				<h5>Properties</h5>
-				<table class="params table table-striped">
-					<thead>
-					<tr>
-							<th>Name</th>
-						<th>Type</th>
-						<th class="last">Description</th>
-					</tr>
-					</thead>
-					<tbody>
-						<tr>
-								<td><code>router</code></td>
-							<td></td>
-							<td class="last">
-							</td>
-						</tr>
-					</tbody>
-				</table>
-			</div>
-			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-							<!-- source -->
-							<div class="form-group">
-								<label class="col-sm-3 control-label">Source</label>
-								<div class="col-sm-9">
-									<p class="form-control-static"><a href="application_application.js.html">application/application.js</a>, <a href="application_application.js.html#line-104">line 104</a></p>
+									<p class="form-control-static"><a href="node_modules_next-core-application_src_application.js.html">node_modules/next-core-application/src/application.js</a>, <a href="node_modules_next-core-application_src_application.js.html#line-228">line 228</a></p>
 								</div>
 							</div>
 			
@@ -550,7 +567,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="application_application.js.html">application/application.js</a>, <a href="application_application.js.html#line-124">line 124</a></p>
+									<p class="form-control-static"><a href="node_modules_next-core-application_src_application.js.html">node_modules/next-core-application/src/application.js</a>, <a href="node_modules_next-core-application_src_application.js.html#line-138">line 138</a></p>
 								</div>
 							</div>
 			
@@ -587,7 +604,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="application_application.js.html">application/application.js</a>, <a href="application_application.js.html#line-130">line 130</a></p>
+									<p class="form-control-static"><a href="node_modules_next-core-application_src_application.js.html">node_modules/next-core-application/src/application.js</a>, <a href="node_modules_next-core-application_src_application.js.html#line-144">line 144</a></p>
 								</div>
 							</div>
 			
@@ -624,7 +641,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="application_application.js.html">application/application.js</a>, <a href="application_application.js.html#line-136">line 136</a></p>
+									<p class="form-control-static"><a href="node_modules_next-core-application_src_application.js.html">node_modules/next-core-application/src/application.js</a>, <a href="node_modules_next-core-application_src_application.js.html#line-150">line 150</a></p>
 								</div>
 							</div>
 			
@@ -689,7 +706,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="application_application.js.html">application/application.js</a>, <a href="application_application.js.html#line-163">line 163</a></p>
+									<p class="form-control-static"><a href="node_modules_next-core-application_src_application.js.html">node_modules/next-core-application/src/application.js</a>, <a href="node_modules_next-core-application_src_application.js.html#line-177">line 177</a></p>
 								</div>
 							</div>
 			
@@ -755,7 +772,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="application_application.js.html">application/application.js</a>, <a href="application_application.js.html#line-171">line 171</a></p>
+									<p class="form-control-static"><a href="node_modules_next-core-application_src_application.js.html">node_modules/next-core-application/src/application.js</a>, <a href="node_modules_next-core-application_src_application.js.html#line-185">line 185</a></p>
 								</div>
 							</div>
 			
@@ -813,7 +830,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="application_application.js.html">application/application.js</a>, <a href="application_application.js.html#line-178">line 178</a></p>
+									<p class="form-control-static"><a href="node_modules_next-core-application_src_application.js.html">node_modules/next-core-application/src/application.js</a>, <a href="node_modules_next-core-application_src_application.js.html#line-192">line 192</a></p>
 								</div>
 							</div>
 			
@@ -858,7 +875,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="application_application.js.html">application/application.js</a>, <a href="application_application.js.html#line-187">line 187</a></p>
+									<p class="form-control-static"><a href="node_modules_next-core-application_src_application.js.html">node_modules/next-core-application/src/application.js</a>, <a href="node_modules_next-core-application_src_application.js.html#line-201">line 201</a></p>
 								</div>
 							</div>
 			
@@ -895,7 +912,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="application_application.js.html">application/application.js</a>, <a href="application_application.js.html#line-207">line 207</a></p>
+									<p class="form-control-static"><a href="node_modules_next-core-application_src_application.js.html">node_modules/next-core-application/src/application.js</a>, <a href="node_modules_next-core-application_src_application.js.html#line-221">line 221</a></p>
 								</div>
 							</div>
 			
@@ -916,7 +933,7 @@
 	</div>
 	<footer>
 				<div class="footer-option"><a href='http://www.augmentedjs.com'>Augmented.js Homepage</a></div>
-			<div class="generated-by">Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Fri Aug 17th 2018 using the <a href="https://github.com/steveush/foodoc">FooDoc template</a>.</div>
+			<div class="generated-by">Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Sun Nov 11th 2018 using the <a href="https://github.com/steveush/foodoc">FooDoc template</a>.</div>
 	</footer>
 	<script src="js/jquery.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
