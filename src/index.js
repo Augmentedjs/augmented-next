@@ -1,59 +1,16 @@
-import * as Utility from "./utility/utility";
-import { sortObjects, mergeSort, quickSort, insertionSort, bubbleSort } from "./utility/sort.js";
-
-import formatDate from "./utility/formatDate.js";
-import formatBinary from "./utility/formatBinary.js";
-
-import AugmentedObject from "./object.js";
-import AbstractModel from "./model/abstractModel.js";
-import AbstractCollection from "./collection/collection.js";
-
-import Stack from "./structures/stack.js";
-import AugmentedMap from "./structures/map.js";
-import Configuration from "./configuration.js";
-import AsynchronousQueue from "./structures/queue.js";
-
-import AbstractLogger from "./logger/abstractLogger.js";
-import ConsoleLogger from "./logger/consoleLogger.js";
-import ColorConsoleLogger from "./logger/colorConsoleLogger.js";
-import LoggerFactory from "./logger/loggerFactory.js";
-import Type from "./logger/type.js";
-import Level from "./logger/level.js";
-
-import Application from "./application/application.js";
-
-import { BundleObject, ResourceBundle, MessageReader, MessageKeyFormatter } from "./resourceBundle.js";
-
-import SchemaGenerator from "./validation/schemaGenerator.js";
-import ValidationFramework from "./validation/validationFramework.js";
-
-import AbstractSecurityClient from "./security/abstractSecurityClient.js";
-import OAUTH2Client from "./security/oauthClient.js";
-import ACLClient from "./security/aclClient.js";
-import ClientType from "./security/clientType.js";
-import AuthenticationFactory from "./security/authenticationFactory.js";
-import Principal from "./security/principal.js";
-import Entry from "./security/entry.js";
-import Context from "./security/context.js";
-
-import isString from "./functions/isString.js";
-import isFunction from "./functions/isFunction.js";
-import extend from "./functions/extend.js";
-import pad from "./functions/pad.js";
-import uniqueId from "./functions/uniqueId.js";
-import has from "./functions/has.js";
-import isObject from "./functions/isObject.js";
-import allKeys from "./functions/allKeys.js";
-import create from "./functions/create.js";
-import result from "./functions/result.js";
-import arrayHas from "./functions/arrayHas.js";
-import exec from "./functions/exec.js";
-import isDefined from "./functions/isDefined.js";
-import some from "./functions/some.js";
-import splice from "./functions/splice.js";
-import before from "./functions/before.js";
-import once from "./functions/once.js";
-import { fibonacci, fibonacciSequence } from "./functions/fibonacci.js";
+import { Application } from "next-core-application";
+import { BundleObject, ResourceBundle, MessageReader, MessageKeyFormatter } from "next-core-bundle";
+import { AbstractLogger, ConsoleLogger, ColorConsoleLogger, LoggerFactory, Type, Level } from "next-core-logger";
+import { AbstractModel, AbstractCollection, CollectionIterator } from "next-core-model";
+import { AugmentedObject, Configuration, eventsApi, internalOn, offApi, triggerApi } from "next-core-object";
+import { AbstractSecurityClient, OAUTH2Client, ACLClient, ClientType, AuthenticationFactory, Principal, Entry, Context } from "next-core-security";
+import { sortObjects, mergeSort, quickSort, insertionSort, bubbleSort } from "next-core-sort";
+import { Stack, AugmentedMap, AsynchronousQueue } from "next-core-structures";
+import { isString, isFunction, extend, pad, uniqueId, has, isObject, allKeys, create, result, arrayHas,
+  exec, isDefined, some, splice, before, once, fibonacci, fibonacciSequence, shuffle, prettyPrint,
+  binarySearch, TransformerType, Transformer, wrap, filterObject, findByMatchingProperties,
+  formatDate, formatBinary, filter } from "next-core-utilities";
+import { ValidationFramework, SchemaGenerator } from "next-core-validation";
 
 /*
  * Base functionality
@@ -69,7 +26,15 @@ import { fibonacci, fibonacciSequence } from "./functions/fibonacci.js";
  * @license Apache-2.0
  */
 const Augmented = {};
-Augmented.Utility = Utility;
+Augmented.Utility = {};
+Augmented.Utility.findByMatchingProperties = findByMatchingProperties;
+Augmented.Utility.filterObject = filterObject;
+Augmented.Utility.wrap = wrap;
+Augmented.Utility.Transformer = Transformer;
+Augmented.Utility.TransformerType = TransformerType;
+Augmented.Utility.binarySearch = binarySearch;
+Augmented.Utility.prettyPrint = prettyPrint;
+Augmented.Utility.shuffle = shuffle;
 Augmented.Utility.Map = AugmentedMap;
 Augmented.Utility.Stack = Stack;
 Augmented.Utility.SchemaGenerator = SchemaGenerator;
