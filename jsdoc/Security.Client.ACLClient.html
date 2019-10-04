@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
-		<title>.Client.ACLClient</title>
+		<title>.Client~ACLClient</title>
 		<link rel="icon" type="image/png" href="favicon.png"/>
 		<!--[if lt IE 9]>
 		<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -68,22 +68,36 @@
 									<ul class="dropdown-menu">
 											<li><a href="global.html#_logMe">_logMe</a></li>
 											<li><a href="global.html#binarySearch">binarySearch</a></li>
+											<li><a href="global.html#bubbleSort">bubbleSort</a></li>
 											<li><a href="global.html#BundleObject">BundleObject</a></li>
 											<li><a href="global.html#ClientType">ClientType</a></li>
 											<li><a href="global.html#Configuration">Configuration</a></li>
+											<li><a href="global.html#EVENT_SPLITTER">EVENT_SPLITTER</a></li>
+											<li><a href="global.html#eventsApi">eventsApi</a></li>
 											<li><a href="global.html#exec">exec</a></li>
 											<li><a href="global.html#filter">filter</a></li>
 											<li><a href="global.html#filterObject">filterObject</a></li>
 											<li><a href="global.html#findByMatchingProperties">findByMatchingProperties</a></li>
 											<li><a href="global.html#formatDate">formatDate</a></li>
 											<li><a href="global.html#has">has</a></li>
+											<li><a href="global.html#insertionSort">insertionSort</a></li>
+											<li><a href="global.html#internalOn">internalOn</a></li>
 											<li><a href="global.html#isDefined">isDefined</a></li>
 											<li><a href="global.html#isFunction">isFunction</a></li>
 											<li><a href="global.html#isObject">isObject</a></li>
 											<li><a href="global.html#isString">isString</a></li>
+											<li><a href="global.html#Level">Level</a></li>
+											<li><a href="global.html#mergeSort">mergeSort</a></li>
+											<li><a href="global.html#offApi">offApi</a></li>
+											<li><a href="global.html#onApi">onApi</a></li>
 											<li><a href="global.html#prettyPrint">prettyPrint</a></li>
+											<li><a href="global.html#quickSort">quickSort</a></li>
 											<li><a href="global.html#shuffle">shuffle</a></li>
+											<li><a href="global.html#sortObjects">sortObjects</a></li>
 											<li><a href="global.html#TransformerType">TransformerType</a></li>
+											<li><a href="global.html#triggerApi">triggerApi</a></li>
+											<li><a href="global.html#triggerEvents">triggerEvents</a></li>
+											<li><a href="global.html#Type">Type</a></li>
 											<li><a href="global.html#URI_TEMPLATE_GLOBAL_MODIFIERS">URI_TEMPLATE_GLOBAL_MODIFIERS</a></li>
 											<li><a href="global.html#wrap">wrap</a></li>
 									</ul>
@@ -92,6 +106,7 @@
 									<a href="list_class.html" class="dropdown-toggle" data-toggle="dropdown">Classes<b class="caret"></b></a>
 									<ul class="dropdown-menu">
 											<li><a href="AbstractCollection.html">AbstractCollection</a></li>
+											<li><a href="AbstractLogger.html">AbstractLogger</a></li>
 											<li><a href="AbstractModel.html">AbstractModel</a></li>
 											<li><a href="AbstractSecurityClient.html">AbstractSecurityClient</a></li>
 											<li><a href="Application.html">Application</a></li>
@@ -100,12 +115,11 @@
 											<li><a href="AugmentedObject.html">AugmentedObject</a></li>
 											<li><a href="AuthenticationFactory.html">AuthenticationFactory</a></li>
 											<li><a href="CollectionIterator.html">CollectionIterator</a></li>
+											<li><a href="ConsoleLogger.html">ConsoleLogger</a></li>
 											<li><a href="Context.html">Context</a></li>
 											<li><a href="Entry.html">Entry</a></li>
-											<li><a href="Logger.AbstractLogger.html">Logger.AbstractLogger</a></li>
 											<li><a href="Logger.ColorConsoleLogger.html">Logger.ColorConsoleLogger</a></li>
-											<li><a href="Logger.ConsoleLogger.html">Logger.ConsoleLogger</a></li>
-											<li><a href="Logger.LoggerFactory.html">Logger.LoggerFactory</a></li>
+											<li><a href="LoggerFactory.html">LoggerFactory</a></li>
 											<li><a href="MessageKeyFormatter.html">MessageKeyFormatter</a></li>
 											<li><a href="MessageReader.html">MessageReader</a></li>
 											<li><a href="OAUTH2Client.html">OAUTH2Client</a></li>
@@ -149,7 +163,7 @@
 	<!-- end:navbar.hbs -->		<div class="page-header">
 			<div class="container">
 				<span class="kind">class</span>
-				<h1><span class="ancestors"><a href="Security.Client.html">.Client</a>.</span><span class="name">ACLClient</span></h1>
+				<h1><span class="ancestors"><a href="Security.Client.html">.Client</a>~</span><span class="name">ACLClient</span></h1>
 			</div>
 		</div>
 	<div class="container content">
@@ -158,7 +172,7 @@
 						<ol class="breadcrumb">
 							<li><a href="index.html">Home</a></li>
 							<li><a href="list_class.html">Classes</a></li>
-							<li class="active"><a href="Security.Client.html">.Client</a>.ACLClient</li>
+							<li class="active"><a href="Security.Client.html">.Client</a>~ACLClient</li>
 						</ol>
 					<section>
 							<dl class="symbol primary">
@@ -188,7 +202,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="node_modules_next-core-security_src_aclClient.js.html">node_modules/next-core-security/src/aclClient.js</a>, <a href="node_modules_next-core-security_src_aclClient.js.html#line-7">line 7</a></p>
+									<p class="form-control-static"><a href="node_modules_next-core-security_src_aclClient.js.html">node_modules/next-core-security/src/aclClient.js</a>, <a href="node_modules_next-core-security_src_aclClient.js.html#line-8">line 8</a></p>
 								</div>
 							</div>
 			
@@ -294,7 +308,7 @@
 	</div>
 	<footer>
 				<div class="footer-option"><a href='http://www.augmentedjs.com'>Augmented.js Homepage</a></div>
-			<div class="generated-by">Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Sun Nov 11th 2018 using the <a href="https://github.com/steveush/foodoc">FooDoc template</a>.</div>
+			<div class="generated-by">Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.3</a> on Fri Oct 4th 2019 using the <a href="https://github.com/steveush/foodoc">FooDoc template</a>.</div>
 	</footer>
 	<script src="js/jquery.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>

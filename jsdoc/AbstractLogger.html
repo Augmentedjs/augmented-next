@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
-		<title>MessageKeyFormatter</title>
+		<title>&amp;lt;abstract&amp;gt; AbstractLogger</title>
 		<link rel="icon" type="image/png" href="favicon.png"/>
 		<!--[if lt IE 9]>
 		<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -163,7 +163,7 @@
 	<!-- end:navbar.hbs -->		<div class="page-header">
 			<div class="container">
 				<span class="kind">class</span>
-				<h1><span class="name">MessageKeyFormatter</span></h1>
+				<h1><span class="signature-attribs">&lt;abstract> </span><span class="name">AbstractLogger</span></h1>
 			</div>
 		</div>
 	<div class="container content">
@@ -172,71 +172,16 @@
 						<ol class="breadcrumb">
 							<li><a href="index.html">Home</a></li>
 							<li><a href="list_class.html">Classes</a></li>
-							<li class="active">MessageKeyFormatter</li>
+							<li class="active">AbstractLogger</li>
 						</ol>
 					<section>
 							<dl class="symbol primary">
 								<dt class="symbol-title class">
-			<h2 class="class"><span class="signature-new">new&nbsp;</span><span class="name">MessageKeyFormatter</span><span class="signature-params">()</span></h2>
+			<h2 class="class"><span class="signature-new">new&nbsp;</span><span class="signature-attribs">&lt;abstract> </span><span class="name">AbstractLogger</span><span class="signature-params">( <span class="signature-param">l</span>&nbsp;)</span></h2>
 </dt>
 <dd class="symbol-details class" style="max-height: 9999px;">
 	<div class="symbol-details-inner">
-			<div class="callout callout-primary"><h5>Description</h5>		<div class="description classdesc"><p>Augmented.Utility.MessageKeyFormatter<br/>
-			<p>Concatenate the pieces of the message together if a portion of the key is<br>
-			missing, the rest of the key is ignored. <em>ex. if the &quot;rule&quot; attribute is<br>
-			missing, then the key will return with the message.level + message.kind only</em></p></p></div>
-			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-							<!-- source -->
-							<div class="form-group">
-								<label class="col-sm-3 control-label">Source</label>
-								<div class="col-sm-9">
-									<p class="form-control-static"><a href="node_modules_next-core-bundle_src_resourceBundle.js.html">node_modules/next-core-bundle/src/resourceBundle.js</a>, <a href="node_modules_next-core-bundle_src_resourceBundle.js.html#line-89">line 89</a></p>
-								</div>
-							</div>
-			
-			
-			
-			
-					</form>
-			</div>	</div>
-</dd>
-							</dl>
-							<article class="secondary">
-									<h3>Classes</h3>
-									<dl class="symbol">
-											<hr/>
-											<dt class="symbol-title class public">
-			<h4 id="MessageKeyFormatter" class="class public"><a href="MessageKeyFormatter.html"><span class="signature-new">new&nbsp;</span><span class="name">MessageKeyFormatter</span><span class="signature-params">()</span></a></h4>
-		</dt>
-<dd class="symbol-details class public">
-	<div class="symbol-details-inner">
-	</div>
-</dd>
-									</dl>
-									<h3>Methods</h3>
-									<dl class="symbol">
-											<hr/>
-											<dt class="symbol-title function public">
-			<h4 id=".format" class="function public"><span class="signature-attribs">&lt;static> </span><span class="name">format</span><span class="signature-params">( <span class="signature-param">message</span>&nbsp;)</span></h4>
-		</dt>
-<dd class="symbol-details function public">
-	<div class="symbol-details-inner">
-			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>Format a key for a message</p></div>
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description classdesc"><p>Augmented Abstract Logger</p></div>
 			</div>			<div class="callout callout-info">
 				<h5>Parameters</h5>
 				<table class="params table table-striped">
@@ -249,10 +194,82 @@
 					</thead>
 					<tbody>
 						<tr>
-								<td><code>message</code></td>
-							<td><span class="param-type">message</span></td>
+								<td><code>l</code></td>
+							<td><span class="param-type"><a href="global.html#Level">Level</a></span></td>
 							<td class="last">
-									<p>The message to format</p>
+									<p>The level to initialize the logger with</p>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="node_modules_next-core-logger_src_abstractLogger.js.html">node_modules/next-core-logger/src/abstractLogger.js</a>, <a href="node_modules_next-core-logger_src_abstractLogger.js.html#line-10">line 10</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+							</dl>
+							<article class="secondary">
+									<h3>Methods</h3>
+									<dl class="symbol">
+											<hr/>
+											<dt class="symbol-title function public">
+			<h4 id="log" class="function public"><span class="name">log</span><span class="signature-params">( <span class="signature-param">...message</span>, <span class="signature-param">level</span>&nbsp;)</span></h4>
+		</dt>
+<dd class="symbol-details function public">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>log a message with default level</p></div>
+			</div>			<div class="callout callout-info">
+				<h5>Parameters</h5>
+				<table class="params table table-striped">
+					<thead>
+					<tr>
+							<th>Name</th>
+						<th>Type</th>
+							<th>Attributes</th>
+						<th class="last">Description</th>
+					</tr>
+					</thead>
+					<tbody>
+						<tr>
+								<td><code>message</code></td>
+							<td><span class="param-type">string</span></td>
+								<td class="attributes">&lt;repeatable&gt;<br/></td>
+							<td class="last">
+									<p>The message to log</p>
+							</td>
+						</tr>
+						<tr>
+								<td><code>level</code></td>
+							<td><span class="param-type">Logger.Level</span></td>
+								<td class="attributes"></td>
+							<td class="last">
+									<p>The level of the log message</p>
 							</td>
 						</tr>
 					</tbody>
@@ -260,9 +277,9 @@
 			</div>
 			<div class="callout callout-success"><h5>Returns</h5>		<form class="form-horizontal returns">
 							<div class="form-group">
-								<label class="col-sm-3 control-label returns-type"></label>
+								<label class="col-sm-3 control-label returns-type"><span class="param-type">Any</span></label>
 								<div class="col-sm-9">
-									<div class="form-control-static returns-description"><p>The key to lookup in a bundle</p></div>
+									<div class="form-control-static returns-description"><p>The message</p></div>
 								</div>
 							</div>
 					</form>
@@ -286,7 +303,243 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="node_modules_next-core-bundle_src_resourceBundle.js.html">node_modules/next-core-bundle/src/resourceBundle.js</a>, <a href="node_modules_next-core-bundle_src_resourceBundle.js.html#line-103">line 103</a></p>
+									<p class="form-control-static"><a href="node_modules_next-core-logger_src_abstractLogger.js.html">node_modules/next-core-logger/src/abstractLogger.js</a>, <a href="node_modules_next-core-logger_src_abstractLogger.js.html#line-31">line 31</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title function public">
+			<h4 id="info" class="function public"><span class="name">info</span><span class="signature-params">( <span class="signature-param">...message</span>&nbsp;)</span></h4>
+		</dt>
+<dd class="symbol-details function public">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>Logs a message in info level</p></div>
+			</div>			<div class="callout callout-info">
+				<h5>Parameters</h5>
+				<table class="params table table-striped">
+					<thead>
+					<tr>
+							<th>Name</th>
+						<th>Type</th>
+							<th>Attributes</th>
+						<th class="last">Description</th>
+					</tr>
+					</thead>
+					<tbody>
+						<tr>
+								<td><code>message</code></td>
+							<td><span class="param-type">Any</span></td>
+								<td class="attributes">&lt;repeatable&gt;<br/></td>
+							<td class="last">
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="node_modules_next-core-logger_src_abstractLogger.js.html">node_modules/next-core-logger/src/abstractLogger.js</a>, <a href="node_modules_next-core-logger_src_abstractLogger.js.html#line-39">line 39</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title function public">
+			<h4 id="error" class="function public"><span class="name">error</span><span class="signature-params">( <span class="signature-param">...message</span>&nbsp;)</span></h4>
+		</dt>
+<dd class="symbol-details function public">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>Log a message in error level</p></div>
+			</div>			<div class="callout callout-info">
+				<h5>Parameters</h5>
+				<table class="params table table-striped">
+					<thead>
+					<tr>
+							<th>Name</th>
+						<th>Type</th>
+							<th>Attributes</th>
+						<th class="last">Description</th>
+					</tr>
+					</thead>
+					<tbody>
+						<tr>
+								<td><code>message</code></td>
+							<td><span class="param-type">Any</span></td>
+								<td class="attributes">&lt;repeatable&gt;<br/></td>
+							<td class="last">
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="node_modules_next-core-logger_src_abstractLogger.js.html">node_modules/next-core-logger/src/abstractLogger.js</a>, <a href="node_modules_next-core-logger_src_abstractLogger.js.html#line-47">line 47</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title function public">
+			<h4 id="debug" class="function public"><span class="name">debug</span><span class="signature-params">( <span class="signature-param">...message</span>&nbsp;)</span></h4>
+		</dt>
+<dd class="symbol-details function public">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>Log a message in debug level</p></div>
+			</div>			<div class="callout callout-info">
+				<h5>Parameters</h5>
+				<table class="params table table-striped">
+					<thead>
+					<tr>
+							<th>Name</th>
+						<th>Type</th>
+							<th>Attributes</th>
+						<th class="last">Description</th>
+					</tr>
+					</thead>
+					<tbody>
+						<tr>
+								<td><code>message</code></td>
+							<td><span class="param-type">Any</span></td>
+								<td class="attributes">&lt;repeatable&gt;<br/></td>
+							<td class="last">
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="node_modules_next-core-logger_src_abstractLogger.js.html">node_modules/next-core-logger/src/abstractLogger.js</a>, <a href="node_modules_next-core-logger_src_abstractLogger.js.html#line-55">line 55</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title function public">
+			<h4 id="warn" class="function public"><span class="name">warn</span><span class="signature-params">( <span class="signature-param">...message</span>&nbsp;)</span></h4>
+		</dt>
+<dd class="symbol-details function public">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>Log a message in warn level</p></div>
+			</div>			<div class="callout callout-info">
+				<h5>Parameters</h5>
+				<table class="params table table-striped">
+					<thead>
+					<tr>
+							<th>Name</th>
+						<th>Type</th>
+							<th>Attributes</th>
+						<th class="last">Description</th>
+					</tr>
+					</thead>
+					<tbody>
+						<tr>
+								<td><code>message</code></td>
+							<td><span class="param-type">Any</span></td>
+								<td class="attributes">&lt;repeatable&gt;<br/></td>
+							<td class="last">
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="node_modules_next-core-logger_src_abstractLogger.js.html">node_modules/next-core-logger/src/abstractLogger.js</a>, <a href="node_modules_next-core-logger_src_abstractLogger.js.html#line-63">line 63</a></p>
 								</div>
 							</div>
 			

@@ -68,22 +68,36 @@
 									<ul class="dropdown-menu">
 											<li><a href="global.html#_logMe">_logMe</a></li>
 											<li><a href="global.html#binarySearch">binarySearch</a></li>
+											<li><a href="global.html#bubbleSort">bubbleSort</a></li>
 											<li><a href="global.html#BundleObject">BundleObject</a></li>
 											<li><a href="global.html#ClientType">ClientType</a></li>
 											<li><a href="global.html#Configuration">Configuration</a></li>
+											<li><a href="global.html#EVENT_SPLITTER">EVENT_SPLITTER</a></li>
+											<li><a href="global.html#eventsApi">eventsApi</a></li>
 											<li><a href="global.html#exec">exec</a></li>
 											<li><a href="global.html#filter">filter</a></li>
 											<li><a href="global.html#filterObject">filterObject</a></li>
 											<li><a href="global.html#findByMatchingProperties">findByMatchingProperties</a></li>
 											<li><a href="global.html#formatDate">formatDate</a></li>
 											<li><a href="global.html#has">has</a></li>
+											<li><a href="global.html#insertionSort">insertionSort</a></li>
+											<li><a href="global.html#internalOn">internalOn</a></li>
 											<li><a href="global.html#isDefined">isDefined</a></li>
 											<li><a href="global.html#isFunction">isFunction</a></li>
 											<li><a href="global.html#isObject">isObject</a></li>
 											<li><a href="global.html#isString">isString</a></li>
+											<li><a href="global.html#Level">Level</a></li>
+											<li><a href="global.html#mergeSort">mergeSort</a></li>
+											<li><a href="global.html#offApi">offApi</a></li>
+											<li><a href="global.html#onApi">onApi</a></li>
 											<li><a href="global.html#prettyPrint">prettyPrint</a></li>
+											<li><a href="global.html#quickSort">quickSort</a></li>
 											<li><a href="global.html#shuffle">shuffle</a></li>
+											<li><a href="global.html#sortObjects">sortObjects</a></li>
 											<li><a href="global.html#TransformerType">TransformerType</a></li>
+											<li><a href="global.html#triggerApi">triggerApi</a></li>
+											<li><a href="global.html#triggerEvents">triggerEvents</a></li>
+											<li><a href="global.html#Type">Type</a></li>
 											<li><a href="global.html#URI_TEMPLATE_GLOBAL_MODIFIERS">URI_TEMPLATE_GLOBAL_MODIFIERS</a></li>
 											<li><a href="global.html#wrap">wrap</a></li>
 									</ul>
@@ -92,6 +106,7 @@
 									<a href="list_class.html" class="dropdown-toggle" data-toggle="dropdown">Classes<b class="caret"></b></a>
 									<ul class="dropdown-menu">
 											<li><a href="AbstractCollection.html">AbstractCollection</a></li>
+											<li><a href="AbstractLogger.html">AbstractLogger</a></li>
 											<li><a href="AbstractModel.html">AbstractModel</a></li>
 											<li><a href="AbstractSecurityClient.html">AbstractSecurityClient</a></li>
 											<li><a href="Application.html">Application</a></li>
@@ -100,12 +115,11 @@
 											<li><a href="AugmentedObject.html">AugmentedObject</a></li>
 											<li><a href="AuthenticationFactory.html">AuthenticationFactory</a></li>
 											<li><a href="CollectionIterator.html">CollectionIterator</a></li>
+											<li><a href="ConsoleLogger.html">ConsoleLogger</a></li>
 											<li><a href="Context.html">Context</a></li>
 											<li><a href="Entry.html">Entry</a></li>
-											<li><a href="Logger.AbstractLogger.html">Logger.AbstractLogger</a></li>
 											<li><a href="Logger.ColorConsoleLogger.html">Logger.ColorConsoleLogger</a></li>
-											<li><a href="Logger.ConsoleLogger.html">Logger.ConsoleLogger</a></li>
-											<li><a href="Logger.LoggerFactory.html">Logger.LoggerFactory</a></li>
+											<li><a href="LoggerFactory.html">LoggerFactory</a></li>
 											<li><a href="MessageKeyFormatter.html">MessageKeyFormatter</a></li>
 											<li><a href="MessageReader.html">MessageReader</a></li>
 											<li><a href="OAUTH2Client.html">OAUTH2Client</a></li>
@@ -177,9 +191,11 @@
 </dt>
 <dd class="symbol-details class" style="max-height: 9999px;">
 	<div class="symbol-details-inner">
-			<div class="callout callout-primary"><h5>Description</h5>		<div class="description classdesc"><p>AbstractModel <br/><br>Supports: <ul></p>
-			<p><li>Validation and Schemas</li></p>
-			<p><li>Security</li><br></ul></p></div>
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description classdesc"><p>AbstractModel <br/><br>
+			Supports: <ul></p>
+			<li>Validation and Schemas</li>
+			<li>Security</li>
+			</ul></div>
 			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
 			
 			
@@ -207,7 +223,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="node_modules_next-core-model_src_model_abstractModel.js.html">node_modules/next-core-model/src/model/abstractModel.js</a>, <a href="node_modules_next-core-model_src_model_abstractModel.js.html#line-36">line 36</a></p>
+									<p class="form-control-static"><a href="node_modules_next-core-model_src_model_abstractModel.js.html">node_modules/next-core-model/src/model/abstractModel.js</a>, <a href="node_modules_next-core-model_src_model_abstractModel.js.html#line-37">line 37</a></p>
 								</div>
 							</div>
 			
@@ -263,6 +279,13 @@
 								</div>
 							</div>
 			
+							<!-- overrides -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Overrides</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="AugmentedObject.html#options">AugmentedObject#options</a></p>
+								</div>
+							</div>
 			
 			
 			
@@ -327,6 +350,13 @@
 								</div>
 							</div>
 			
+							<!-- overrides -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Overrides</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="AugmentedObject.html#events">AugmentedObject#events</a></p>
+								</div>
+							</div>
 			
 			
 			
@@ -352,6 +382,158 @@
 									</dl>
 									<h3>Methods</h3>
 									<dl class="symbol">
+											<hr/>
+											<dt class="symbol-title function public inherited">
+			<h4 id="initialize" class="function public inherited"><span class="name">initialize</span><span class="signature-params">()</span></h4>
+		</dt>
+<dd class="symbol-details function public inherited">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>Initialize the object</p></div>
+			</div>			<div class="callout callout-success"><h5>Returns</h5>		<form class="form-horizontal returns">
+							<div class="form-group">
+								<label class="col-sm-3 control-label returns-type"><span class="param-type">object</span></label>
+								<div class="col-sm-9">
+									<div class="form-control-static returns-description"><p>Returns this context</p></div>
+								</div>
+							</div>
+					</form>
+			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+			
+			
+			
+			
+			
+							<!-- inherits -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Inherited From</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="AugmentedObject.html#initialize">AugmentedObject#initialize</a></p>
+								</div>
+							</div>
+			
+							<!-- overrides -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Overrides</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="AugmentedObject.html#initialize">AugmentedObject#initialize</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="node_modules_next-core-object_src_object.js.html">node_modules/next-core-object/src/object.js</a>, <a href="node_modules_next-core-object_src_object.js.html#line-35">line 35</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title function public inherited">
+			<h4 id="trigger" class="function public inherited"><span class="name">trigger</span><span class="signature-params">( <span class="signature-param">name</span>, <span class="signature-param">...args</span>&nbsp;)</span></h4>
+		</dt>
+<dd class="symbol-details function public inherited">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>Trigger one or many events, firing all bound callbacks. Callbacks are<br>
+			passed the same arguments as <code>trigger</code> is, apart from the event name<br>
+			(unless you're listening on <code>&quot;all&quot;</code>, which will cause your callback to<br>
+			receive the true name of the event as the first argument).</p></div>
+			</div>			<div class="callout callout-info">
+				<h5>Parameters</h5>
+				<table class="params table table-striped">
+					<thead>
+					<tr>
+							<th>Name</th>
+						<th>Type</th>
+							<th>Attributes</th>
+						<th class="last">Description</th>
+					</tr>
+					</thead>
+					<tbody>
+						<tr>
+								<td><code>name</code></td>
+							<td><span class="param-type">string</span></td>
+								<td class="attributes"></td>
+							<td class="last">
+									<p>The name of the event</p>
+							</td>
+						</tr>
+						<tr>
+								<td><code>args</code></td>
+							<td><span class="param-type">any</span></td>
+								<td class="attributes">&lt;repeatable&gt;<br/></td>
+							<td class="last">
+									<p>any number of additional arguments</p>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="callout callout-success"><h5>Returns</h5>		<form class="form-horizontal returns">
+							<div class="form-group">
+								<label class="col-sm-3 control-label returns-type"><span class="param-type">object</span></label>
+								<div class="col-sm-9">
+									<div class="form-control-static returns-description"><p>Returns this context</p></div>
+								</div>
+							</div>
+					</form>
+			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+			
+			
+			
+			
+			
+							<!-- inherits -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Inherited From</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="AugmentedObject.html#trigger">AugmentedObject#trigger</a></p>
+								</div>
+							</div>
+			
+							<!-- overrides -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Overrides</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="AugmentedObject.html#trigger">AugmentedObject#trigger</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="node_modules_next-core-object_src_object.js.html">node_modules/next-core-object/src/object.js</a>, <a href="node_modules_next-core-object_src_object.js.html#line-72">line 72</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
 											<hr/>
 											<dt class="symbol-title function public">
 			<h4 id="preinitialize" class="function public"><span class="name">preinitialize</span><span class="signature-params">()</span></h4>
@@ -456,1341 +638,15 @@
 			</div>	</div>
 </dd>
 											<hr/>
-											<dt class="symbol-title function public">
-			<h4 id="set" class="function public"><span class="name">set</span><span class="signature-params">()</span></h4>
-		</dt>
-<dd class="symbol-details function public">
-	<div class="symbol-details-inner">
-			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>Set a hash of model attributes on the object, firing <code>&quot;change&quot;</code>. This is<br>the core primitive operation of a model, updating the data and notifying<br>anyone who needs to know about the change in state.</p></div>
-			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-							<!-- source -->
-							<div class="form-group">
-								<label class="col-sm-3 control-label">Source</label>
-								<div class="col-sm-9">
-									<p class="form-control-static"><a href="node_modules_next-core-model_src_model_abstractModel.js.html">node_modules/next-core-model/src/model/abstractModel.js</a>, <a href="node_modules_next-core-model_src_model_abstractModel.js.html#line-107">line 107</a></p>
-								</div>
-							</div>
-			
-			
-			
-			
-					</form>
-			</div>	</div>
-</dd>
-											<hr/>
-											<dt class="symbol-title function public">
-			<h4 id="escape" class="function public"><span class="name">escape</span><span class="signature-params">()</span></h4>
-		</dt>
-<dd class="symbol-details function public">
-	<div class="symbol-details-inner">
-			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>Escape the attribute data</p></div>
-			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-							<!-- source -->
-							<div class="form-group">
-								<label class="col-sm-3 control-label">Source</label>
-								<div class="col-sm-9">
-									<p class="form-control-static"><a href="node_modules_next-core-model_src_model_abstractModel.js.html">node_modules/next-core-model/src/model/abstractModel.js</a>, <a href="node_modules_next-core-model_src_model_abstractModel.js.html#line-210">line 210</a></p>
-								</div>
-							</div>
-			
-			
-			
-			
-					</form>
-			</div>	</div>
-</dd>
-											<hr/>
-											<dt class="symbol-title function public">
-			<h4 id="has" class="function public"><span class="name">has</span><span class="signature-params">()</span></h4>
-		</dt>
-<dd class="symbol-details function public">
-	<div class="symbol-details-inner">
-			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>Has an attribute in the Model</p></div>
-			</div>			<div class="callout callout-success"><h5>Returns</h5>		<form class="form-horizontal returns">
-							<div class="form-group">
-								<label class="col-sm-3 control-label returns-type"><span class="param-type">bolean</span></label>
-								<div class="col-sm-9">
-									<div class="form-control-static returns-description"><p>Returns true if exists</p></div>
-								</div>
-							</div>
-					</form>
-			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-							<!-- source -->
-							<div class="form-group">
-								<label class="col-sm-3 control-label">Source</label>
-								<div class="col-sm-9">
-									<p class="form-control-static"><a href="node_modules_next-core-model_src_model_abstractModel.js.html">node_modules/next-core-model/src/model/abstractModel.js</a>, <a href="node_modules_next-core-model_src_model_abstractModel.js.html#line-217">line 217</a></p>
-								</div>
-							</div>
-			
-			
-			
-			
-					</form>
-			</div>	</div>
-</dd>
-											<hr/>
-											<dt class="symbol-title function public">
-			<h4 id="matches" class="function public"><span class="name">matches</span><span class="signature-params">()</span></h4>
-		</dt>
-<dd class="symbol-details function public">
-	<div class="symbol-details-inner">
-			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>Special-cased proxy to underscore's <code>matches</code> method.</p></div>
-			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-							<!-- source -->
-							<div class="form-group">
-								<label class="col-sm-3 control-label">Source</label>
-								<div class="col-sm-9">
-									<p class="form-control-static"><a href="node_modules_next-core-model_src_model_abstractModel.js.html">node_modules/next-core-model/src/model/abstractModel.js</a>, <a href="node_modules_next-core-model_src_model_abstractModel.js.html#line-223">line 223</a></p>
-								</div>
-							</div>
-			
-			
-			
-			
-					</form>
-			</div>	</div>
-</dd>
-											<hr/>
-											<dt class="symbol-title function public">
-			<h4 id="unset" class="function public"><span class="name">unset</span><span class="signature-params">()</span></h4>
-		</dt>
-<dd class="symbol-details function public">
-	<div class="symbol-details-inner">
-			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>Remove an attribute from the model, firing <code>&quot;change&quot;</code>. <code>unset</code> is a noop<br>if the attribute doesn't exist.</p></div>
-			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-							<!-- source -->
-							<div class="form-group">
-								<label class="col-sm-3 control-label">Source</label>
-								<div class="col-sm-9">
-									<p class="form-control-static"><a href="node_modules_next-core-model_src_model_abstractModel.js.html">node_modules/next-core-model/src/model/abstractModel.js</a>, <a href="node_modules_next-core-model_src_model_abstractModel.js.html#line-230">line 230</a></p>
-								</div>
-							</div>
-			
-			
-			
-			
-					</form>
-			</div>	</div>
-</dd>
-											<hr/>
-											<dt class="symbol-title function public">
-			<h4 id="clear" class="function public"><span class="name">clear</span><span class="signature-params">()</span></h4>
-		</dt>
-<dd class="symbol-details function public">
-	<div class="symbol-details-inner">
-			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>Clear all attributes on the model, firing <code>&quot;change&quot;</code>.</p></div>
-			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-							<!-- source -->
-							<div class="form-group">
-								<label class="col-sm-3 control-label">Source</label>
-								<div class="col-sm-9">
-									<p class="form-control-static"><a href="node_modules_next-core-model_src_model_abstractModel.js.html">node_modules/next-core-model/src/model/abstractModel.js</a>, <a href="node_modules_next-core-model_src_model_abstractModel.js.html#line-236">line 236</a></p>
-								</div>
-							</div>
-			
-			
-			
-			
-					</form>
-			</div>	</div>
-</dd>
-											<hr/>
-											<dt class="symbol-title function public">
-			<h4 id="toJSON" class="function public"><span class="name">toJSON</span><span class="signature-params">()</span></h4>
-		</dt>
-<dd class="symbol-details function public">
-	<div class="symbol-details-inner">
-			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>Transforms model to pure toJSON</p></div>
-			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-							<!-- source -->
-							<div class="form-group">
-								<label class="col-sm-3 control-label">Source</label>
-								<div class="col-sm-9">
-									<p class="form-control-static"><a href="node_modules_next-core-model_src_model_abstractModel.js.html">node_modules/next-core-model/src/model/abstractModel.js</a>, <a href="node_modules_next-core-model_src_model_abstractModel.js.html#line-245">line 245</a></p>
-								</div>
-							</div>
-			
-			
-			
-			
-					</form>
-			</div>	</div>
-</dd>
-											<hr/>
-											<dt class="symbol-title function public">
-			<h4 id="fetch" class="function public"><span class="name">fetch</span><span class="signature-params">()</span></h4>
-		</dt>
-<dd class="symbol-details function public">
-	<div class="symbol-details-inner">
-			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>Fetch the model from the server, merging the response with the model's<br>local attributes. Any changed attributes will trigger a &quot;change&quot; event.</p></div>
-			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-							<!-- source -->
-							<div class="form-group">
-								<label class="col-sm-3 control-label">Source</label>
-								<div class="col-sm-9">
-									<p class="form-control-static"><a href="node_modules_next-core-model_src_model_abstractModel.js.html">node_modules/next-core-model/src/model/abstractModel.js</a>, <a href="node_modules_next-core-model_src_model_abstractModel.js.html#line-254">line 254</a></p>
-								</div>
-							</div>
-			
-			
-			
-			
-					</form>
-			</div>	</div>
-</dd>
-											<hr/>
-											<dt class="symbol-title function public">
-			<h4 id="save" class="function public"><span class="name">save</span><span class="signature-params">()</span></h4>
-		</dt>
-<dd class="symbol-details function public">
-	<div class="symbol-details-inner">
-			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>Set a hash of model attributes, and sync the model to the server.<br>If the server returns an attributes hash that differs, the model's<br>state will be <code>set</code> again.</p></div>
-			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-							<!-- source -->
-							<div class="form-group">
-								<label class="col-sm-3 control-label">Source</label>
-								<div class="col-sm-9">
-									<p class="form-control-static"><a href="node_modules_next-core-model_src_model_abstractModel.js.html">node_modules/next-core-model/src/model/abstractModel.js</a>, <a href="node_modules_next-core-model_src_model_abstractModel.js.html#line-276">line 276</a></p>
-								</div>
-							</div>
-			
-			
-			
-			
-					</form>
-			</div>	</div>
-</dd>
-											<hr/>
-											<dt class="symbol-title function public">
-			<h4 id="destroy" class="function public"><span class="name">destroy</span><span class="signature-params">()</span></h4>
-		</dt>
-<dd class="symbol-details function public">
-	<div class="symbol-details-inner">
-			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>Destroy this model on the server if it was already persisted.<br>Optimistically removes the model from its collection, if it has one.<br>If <code>wait: true</code> is passed, waits for the server to respond before removal.</p></div>
-			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-							<!-- source -->
-							<div class="form-group">
-								<label class="col-sm-3 control-label">Source</label>
-								<div class="col-sm-9">
-									<p class="form-control-static"><a href="node_modules_next-core-model_src_model_abstractModel.js.html">node_modules/next-core-model/src/model/abstractModel.js</a>, <a href="node_modules_next-core-model_src_model_abstractModel.js.html#line-343">line 343</a></p>
-								</div>
-							</div>
-			
-			
-			
-			
-					</form>
-			</div>	</div>
-</dd>
-											<hr/>
-											<dt class="symbol-title function public">
-			<h4 id="url" class="function public"><span class="name">url</span><span class="signature-params">()</span></h4>
-		</dt>
-<dd class="symbol-details function public">
-	<div class="symbol-details-inner">
-			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>Default URL for the model's representation on the server -- if you're<br>using restful methods, override this to change the endpoint<br>that will be called.</p></div>
-			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-							<!-- source -->
-							<div class="form-group">
-								<label class="col-sm-3 control-label">Source</label>
-								<div class="col-sm-9">
-									<p class="form-control-static"><a href="node_modules_next-core-model_src_model_abstractModel.js.html">node_modules/next-core-model/src/model/abstractModel.js</a>, <a href="node_modules_next-core-model_src_model_abstractModel.js.html#line-381">line 381</a></p>
-								</div>
-							</div>
-			
-			
-			
-			
-					</form>
-			</div>	</div>
-</dd>
-											<hr/>
-											<dt class="symbol-title function public">
-			<h4 id="parse" class="function public"><span class="name">parse</span><span class="signature-params">()</span></h4>
-		</dt>
-<dd class="symbol-details function public">
-	<div class="symbol-details-inner">
-			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>*parse** converts a response into the hash of attributes to be <code>set</code> on<br>the model. The default implementation is just to pass the response along.</p></div>
-			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-							<!-- source -->
-							<div class="form-group">
-								<label class="col-sm-3 control-label">Source</label>
-								<div class="col-sm-9">
-									<p class="form-control-static"><a href="node_modules_next-core-model_src_model_abstractModel.js.html">node_modules/next-core-model/src/model/abstractModel.js</a>, <a href="node_modules_next-core-model_src_model_abstractModel.js.html#line-427">line 427</a></p>
-								</div>
-							</div>
-			
-			
-			
-			
-					</form>
-			</div>	</div>
-</dd>
-											<hr/>
-											<dt class="symbol-title function public">
-			<h4 id="clone" class="function public"><span class="name">clone</span><span class="signature-params">()</span></h4>
-		</dt>
-<dd class="symbol-details function public">
-	<div class="symbol-details-inner">
-			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>Create a new model with identical attributes to this one.</p></div>
-			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-							<!-- source -->
-							<div class="form-group">
-								<label class="col-sm-3 control-label">Source</label>
-								<div class="col-sm-9">
-									<p class="form-control-static"><a href="node_modules_next-core-model_src_model_abstractModel.js.html">node_modules/next-core-model/src/model/abstractModel.js</a>, <a href="node_modules_next-core-model_src_model_abstractModel.js.html#line-433">line 433</a></p>
-								</div>
-							</div>
-			
-			
-			
-			
-					</form>
-			</div>	</div>
-</dd>
-											<hr/>
-											<dt class="symbol-title function public">
-			<h4 id="isNew" class="function public"><span class="name">isNew</span><span class="signature-params">()</span></h4>
-		</dt>
-<dd class="symbol-details function public">
-	<div class="symbol-details-inner">
-			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>A model is new if it has never been saved to the server, and lacks an id.</p></div>
-			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-							<!-- source -->
-							<div class="form-group">
-								<label class="col-sm-3 control-label">Source</label>
-								<div class="col-sm-9">
-									<p class="form-control-static"><a href="node_modules_next-core-model_src_model_abstractModel.js.html">node_modules/next-core-model/src/model/abstractModel.js</a>, <a href="node_modules_next-core-model_src_model_abstractModel.js.html#line-439">line 439</a></p>
-								</div>
-							</div>
-			
-			
-			
-			
-					</form>
-			</div>	</div>
-</dd>
-											<hr/>
-											<dt class="symbol-title function public">
-			<h4 id="hasChanged" class="function public"><span class="name">hasChanged</span><span class="signature-params">()</span></h4>
-		</dt>
-<dd class="symbol-details function public">
-	<div class="symbol-details-inner">
-			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>Determine if the model has changed since the last <code>&quot;change&quot;</code> event.<br>If you specify an attribute name, determine if that attribute has changed.</p></div>
-			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-							<!-- source -->
-							<div class="form-group">
-								<label class="col-sm-3 control-label">Source</label>
-								<div class="col-sm-9">
-									<p class="form-control-static"><a href="node_modules_next-core-model_src_model_abstractModel.js.html">node_modules/next-core-model/src/model/abstractModel.js</a>, <a href="node_modules_next-core-model_src_model_abstractModel.js.html#line-446">line 446</a></p>
-								</div>
-							</div>
-			
-			
-			
-			
-					</form>
-			</div>	</div>
-</dd>
-											<hr/>
-											<dt class="symbol-title function public">
-			<h4 id="changedAttributes" class="function public"><span class="name">changedAttributes</span><span class="signature-params">()</span></h4>
-		</dt>
-<dd class="symbol-details function public">
-	<div class="symbol-details-inner">
-			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>Return an object containing all the attributes that have changed, or<br>false if there are no changed attributes. Useful for determining what<br>parts of a view need to be updated and/or what attributes need to be<br>persisted to the server. Unset attributes will be set to undefined.<br>You can also pass an attributes object to diff against the model,<br>determining if there <em>would be</em> a change.</p></div>
-			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-							<!-- source -->
-							<div class="form-group">
-								<label class="col-sm-3 control-label">Source</label>
-								<div class="col-sm-9">
-									<p class="form-control-static"><a href="node_modules_next-core-model_src_model_abstractModel.js.html">node_modules/next-core-model/src/model/abstractModel.js</a>, <a href="node_modules_next-core-model_src_model_abstractModel.js.html#line-460">line 460</a></p>
-								</div>
-							</div>
-			
-			
-			
-			
-					</form>
-			</div>	</div>
-</dd>
-											<hr/>
-											<dt class="symbol-title function public">
-			<h4 id="previous" class="function public"><span class="name">previous</span><span class="signature-params">()</span></h4>
-		</dt>
-<dd class="symbol-details function public">
-	<div class="symbol-details-inner">
-			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>Get the previous value of an attribute, recorded at the time the last<br><code>&quot;change&quot;</code> event was fired.</p></div>
-			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-							<!-- source -->
-							<div class="form-group">
-								<label class="col-sm-3 control-label">Source</label>
-								<div class="col-sm-9">
-									<p class="form-control-static"><a href="node_modules_next-core-model_src_model_abstractModel.js.html">node_modules/next-core-model/src/model/abstractModel.js</a>, <a href="node_modules_next-core-model_src_model_abstractModel.js.html#line-481">line 481</a></p>
-								</div>
-							</div>
-			
-			
-			
-			
-					</form>
-			</div>	</div>
-</dd>
-											<hr/>
-											<dt class="symbol-title function public">
-			<h4 id="previousAttributes" class="function public"><span class="name">previousAttributes</span><span class="signature-params">()</span></h4>
-		</dt>
-<dd class="symbol-details function public">
-	<div class="symbol-details-inner">
-			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>Get all of the attributes of the model at the time of the previous<br><code>&quot;change&quot;</code> event.</p></div>
-			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-							<!-- source -->
-							<div class="form-group">
-								<label class="col-sm-3 control-label">Source</label>
-								<div class="col-sm-9">
-									<p class="form-control-static"><a href="node_modules_next-core-model_src_model_abstractModel.js.html">node_modules/next-core-model/src/model/abstractModel.js</a>, <a href="node_modules_next-core-model_src_model_abstractModel.js.html#line-491">line 491</a></p>
-								</div>
-							</div>
-			
-			
-			
-			
-					</form>
-			</div>	</div>
-</dd>
-											<hr/>
-											<dt class="symbol-title function public">
-			<h4 id="supportsValidation" class="function public"><span class="name">supportsValidation</span><span class="signature-params">()</span></h4>
-		</dt>
-<dd class="symbol-details function public">
-	<div class="symbol-details-inner">
-			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>supportsValidation - Returns True if this model supports validation</p></div>
-			</div>			<div class="callout callout-success"><h5>Returns</h5>		<form class="form-horizontal returns">
-							<div class="form-group">
-								<label class="col-sm-3 control-label returns-type"><span class="param-type">boolean</span></label>
-								<div class="col-sm-9">
-									<div class="form-control-static returns-description"><p>Returns True if this model supports validation</p></div>
-								</div>
-							</div>
-					</form>
-			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-							<!-- source -->
-							<div class="form-group">
-								<label class="col-sm-3 control-label">Source</label>
-								<div class="col-sm-9">
-									<p class="form-control-static"><a href="node_modules_next-core-model_src_model_abstractModel.js.html">node_modules/next-core-model/src/model/abstractModel.js</a>, <a href="node_modules_next-core-model_src_model_abstractModel.js.html#line-499">line 499</a></p>
-								</div>
-							</div>
-			
-			
-			
-			
-					</form>
-			</div>	</div>
-</dd>
-											<hr/>
-											<dt class="symbol-title function public">
-			<h4 id="isValid" class="function public"><span class="name">isValid</span><span class="signature-params">()</span></h4>
-		</dt>
-<dd class="symbol-details function public">
-	<div class="symbol-details-inner">
-			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>isValid - Returns True if this model is valid<br>Runs two level validation, attribute-level then JSON Schema</p></div>
-			</div>			<div class="callout callout-success"><h5>Returns</h5>		<form class="form-horizontal returns">
-							<div class="form-group">
-								<label class="col-sm-3 control-label returns-type"><span class="param-type">boolean</span></label>
-								<div class="col-sm-9">
-									<div class="form-control-static returns-description"><p>Returns True if this model is valid</p></div>
-								</div>
-							</div>
-					</form>
-			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-							<!-- source -->
-							<div class="form-group">
-								<label class="col-sm-3 control-label">Source</label>
-								<div class="col-sm-9">
-									<p class="form-control-static"><a href="node_modules_next-core-model_src_model_abstractModel.js.html">node_modules/next-core-model/src/model/abstractModel.js</a>, <a href="node_modules_next-core-model_src_model_abstractModel.js.html#line-511">line 511</a></p>
-								</div>
-							</div>
-			
-			
-			
-			
-					</form>
-			</div>	</div>
-</dd>
-											<hr/>
-											<dt class="symbol-title function public">
-			<h4 id="validate" class="function public"><span class="name">validate</span><span class="signature-params">()</span></h4>
-		</dt>
-<dd class="symbol-details function public">
-	<div class="symbol-details-inner">
-			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>Validates the model</p></div>
-			</div>			<div class="callout callout-success"><h5>Returns</h5>		<form class="form-horizontal returns">
-							<div class="form-group">
-								<label class="col-sm-3 control-label returns-type"><span class="param-type">array</span></label>
-								<div class="col-sm-9">
-									<div class="form-control-static returns-description"><p>Returns array of messages from validation</p></div>
-								</div>
-							</div>
-					</form>
-			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-							<!-- source -->
-							<div class="form-group">
-								<label class="col-sm-3 control-label">Source</label>
-								<div class="col-sm-9">
-									<p class="form-control-static"><a href="node_modules_next-core-model_src_model_abstractModel.js.html">node_modules/next-core-model/src/model/abstractModel.js</a>, <a href="node_modules_next-core-model_src_model_abstractModel.js.html#line-523">line 523</a></p>
-								</div>
-							</div>
-			
-			
-			
-			
-					</form>
-			</div>	</div>
-</dd>
-											<hr/>
-											<dt class="symbol-title function public">
-			<h4 id="getValidationMessages" class="function public"><span class="name">getValidationMessages</span><span class="signature-params">()</span></h4>
-		</dt>
-<dd class="symbol-details function public">
-	<div class="symbol-details-inner">
-			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>Gets the validation messages only in an array</p></div>
-			</div>			<div class="callout callout-success"><h5>Returns</h5>		<form class="form-horizontal returns">
-							<div class="form-group">
-								<label class="col-sm-3 control-label returns-type"><span class="param-type">array</span></label>
-								<div class="col-sm-9">
-									<div class="form-control-static returns-description"><p>Returns array of messages from validation</p></div>
-								</div>
-							</div>
-					</form>
-			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-							<!-- source -->
-							<div class="form-group">
-								<label class="col-sm-3 control-label">Source</label>
-								<div class="col-sm-9">
-									<p class="form-control-static"><a href="node_modules_next-core-model_src_model_abstractModel.js.html">node_modules/next-core-model/src/model/abstractModel.js</a>, <a href="node_modules_next-core-model_src_model_abstractModel.js.html#line-541">line 541</a></p>
-								</div>
-							</div>
-			
-			
-			
-			
-					</form>
-			</div>	</div>
-</dd>
-											<hr/>
-											<dt class="symbol-title function public">
-			<h4 id="sync" class="function public"><span class="name">sync</span><span class="signature-params">()</span></h4>
-		</dt>
-<dd class="symbol-details function public">
-	<div class="symbol-details-inner">
-			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>Sync model data to bound REST call</p></div>
-			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-							<!-- source -->
-							<div class="form-group">
-								<label class="col-sm-3 control-label">Source</label>
-								<div class="col-sm-9">
-									<p class="form-control-static"><a href="node_modules_next-core-model_src_model_abstractModel.js.html">node_modules/next-core-model/src/model/abstractModel.js</a>, <a href="node_modules_next-core-model_src_model_abstractModel.js.html#line-555">line 555</a></p>
-								</div>
-							</div>
-			
-			
-			
-			
-					</form>
-			</div>	</div>
-</dd>
-											<hr/>
-											<dt class="symbol-title function public">
-			<h4 id="reset" class="function public"><span class="name">reset</span><span class="signature-params">( <span class="signature-param">data</span>&nbsp;)</span></h4>
-		</dt>
-<dd class="symbol-details function public">
-	<div class="symbol-details-inner">
-			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>reset - clear and rewrite the model with passed data</p></div>
-			</div>			<div class="callout callout-info">
-				<h5>Parameters</h5>
-				<table class="params table table-striped">
-					<thead>
-					<tr>
-							<th>Name</th>
-						<th>Type</th>
-						<th class="last">Description</th>
-					</tr>
-					</thead>
-					<tbody>
-						<tr>
-								<td><code>data</code></td>
-							<td><span class="param-type">object</span></td>
-							<td class="last">
-									<p>The data to replace the model with (optional)</p>
-							</td>
-						</tr>
-					</tbody>
-				</table>
-			</div>
-			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-							<!-- source -->
-							<div class="form-group">
-								<label class="col-sm-3 control-label">Source</label>
-								<div class="col-sm-9">
-									<p class="form-control-static"><a href="node_modules_next-core-model_src_model_abstractModel.js.html">node_modules/next-core-model/src/model/abstractModel.js</a>, <a href="node_modules_next-core-model_src_model_abstractModel.js.html#line-561">line 561</a></p>
-								</div>
-							</div>
-			
-			
-			
-			
-					</form>
-			</div>	</div>
-</dd>
-											<hr/>
-											<dt class="symbol-title function public">
-			<h4 id="isEmpty" class="function public"><span class="name">isEmpty</span><span class="signature-params">()</span></h4>
-		</dt>
-<dd class="symbol-details function public">
-	<div class="symbol-details-inner">
-			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>isEmpty - returns true is the model is empty</p></div>
-			</div>			<div class="callout callout-success"><h5>Returns</h5>		<form class="form-horizontal returns">
-							<div class="form-group">
-								<label class="col-sm-3 control-label returns-type"><span class="param-type">boolean</span></label>
-								<div class="col-sm-9">
-									<div class="form-control-static returns-description"><p>returns true is the model is empty</p></div>
-								</div>
-							</div>
-					</form>
-			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-							<!-- source -->
-							<div class="form-group">
-								<label class="col-sm-3 control-label">Source</label>
-								<div class="col-sm-9">
-									<p class="form-control-static"><a href="node_modules_next-core-model_src_model_abstractModel.js.html">node_modules/next-core-model/src/model/abstractModel.js</a>, <a href="node_modules_next-core-model_src_model_abstractModel.js.html#line-572">line 572</a></p>
-								</div>
-							</div>
-			
-			
-			
-			
-					</form>
-			</div>	</div>
-</dd>
-											<hr/>
-											<dt class="symbol-title function public">
-			<h4 id="toString" class="function public"><span class="name">toString</span><span class="signature-params">()</span></h4>
-		</dt>
-<dd class="symbol-details function public">
-	<div class="symbol-details-inner">
-			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>toString - returns the model data as a string</p></div>
-			</div>			<div class="callout callout-success"><h5>Returns</h5>		<form class="form-horizontal returns">
-							<div class="form-group">
-								<label class="col-sm-3 control-label returns-type"><span class="param-type">string</span></label>
-								<div class="col-sm-9">
-									<div class="form-control-static returns-description"><p>returns the model data as a string</p></div>
-								</div>
-							</div>
-					</form>
-			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-							<!-- source -->
-							<div class="form-group">
-								<label class="col-sm-3 control-label">Source</label>
-								<div class="col-sm-9">
-									<p class="form-control-static"><a href="node_modules_next-core-model_src_model_abstractModel.js.html">node_modules/next-core-model/src/model/abstractModel.js</a>, <a href="node_modules_next-core-model_src_model_abstractModel.js.html#line-580">line 580</a></p>
-								</div>
-							</div>
-			
-			
-			
-			
-					</form>
-			</div>	</div>
-</dd>
-											<hr/>
-											<dt class="symbol-title function public">
-			<h4 id="fetch" class="function public"><span class="name">fetch</span><span class="signature-params">()</span></h4>
-		</dt>
-<dd class="symbol-details function public">
-	<div class="symbol-details-inner">
-			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>fetch - Fetches the model as a 'get'</p></div>
-			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-							<!-- source -->
-							<div class="form-group">
-								<label class="col-sm-3 control-label">Source</label>
-								<div class="col-sm-9">
-									<p class="form-control-static"><a href="node_modules_next-core-model_src_model_abstractModel.js.html">node_modules/next-core-model/src/model/abstractModel.js</a>, <a href="node_modules_next-core-model_src_model_abstractModel.js.html#line-587">line 587</a></p>
-								</div>
-							</div>
-			
-			
-			
-			
-					</form>
-			</div>	</div>
-</dd>
-											<hr/>
-											<dt class="symbol-title function public">
-			<h4 id="save" class="function public"><span class="name">save</span><span class="signature-params">()</span></h4>
-		</dt>
-<dd class="symbol-details function public">
-	<div class="symbol-details-inner">
-			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>save - Saves the model as a 'create'</p></div>
-			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-							<!-- source -->
-							<div class="form-group">
-								<label class="col-sm-3 control-label">Source</label>
-								<div class="col-sm-9">
-									<p class="form-control-static"><a href="node_modules_next-core-model_src_model_abstractModel.js.html">node_modules/next-core-model/src/model/abstractModel.js</a>, <a href="node_modules_next-core-model_src_model_abstractModel.js.html#line-593">line 593</a></p>
-								</div>
-							</div>
-			
-			
-			
-			
-					</form>
-			</div>	</div>
-</dd>
-											<hr/>
-											<dt class="symbol-title function public">
-			<h4 id="update" class="function public"><span class="name">update</span><span class="signature-params">()</span></h4>
-		</dt>
-<dd class="symbol-details function public">
-	<div class="symbol-details-inner">
-			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>update - Updates the model as a 'update'</p></div>
-			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-							<!-- source -->
-							<div class="form-group">
-								<label class="col-sm-3 control-label">Source</label>
-								<div class="col-sm-9">
-									<p class="form-control-static"><a href="node_modules_next-core-model_src_model_abstractModel.js.html">node_modules/next-core-model/src/model/abstractModel.js</a>, <a href="node_modules_next-core-model_src_model_abstractModel.js.html#line-599">line 599</a></p>
-								</div>
-							</div>
-			
-			
-			
-			
-					</form>
-			</div>	</div>
-</dd>
-											<hr/>
-											<dt class="symbol-title function public">
-			<h4 id="destroy" class="function public"><span class="name">destroy</span><span class="signature-params">()</span></h4>
-		</dt>
-<dd class="symbol-details function public">
-	<div class="symbol-details-inner">
-			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>destroy - Deletes the model as a 'delete'</p></div>
-			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-							<!-- source -->
-							<div class="form-group">
-								<label class="col-sm-3 control-label">Source</label>
-								<div class="col-sm-9">
-									<p class="form-control-static"><a href="node_modules_next-core-model_src_model_abstractModel.js.html">node_modules/next-core-model/src/model/abstractModel.js</a>, <a href="node_modules_next-core-model_src_model_abstractModel.js.html#line-605">line 605</a></p>
-								</div>
-							</div>
-			
-			
-			
-			
-					</form>
-			</div>	</div>
-</dd>
-											<hr/>
-											<dt class="symbol-title function public inherited">
-			<h4 id="initialize" class="function public inherited"><span class="name">initialize</span><span class="signature-params">()</span></h4>
-		</dt>
-<dd class="symbol-details function public inherited">
-	<div class="symbol-details-inner">
-			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>Initialize the object</p></div>
-			</div>			<div class="callout callout-success"><h5>Returns</h5>		<form class="form-horizontal returns">
-							<div class="form-group">
-								<label class="col-sm-3 control-label returns-type"><span class="param-type">object</span></label>
-								<div class="col-sm-9">
-									<div class="form-control-static returns-description"><p>Returns this context</p></div>
-								</div>
-							</div>
-					</form>
-			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
-			
-			
-			
-			
-			
-			
-							<!-- inherits -->
-							<div class="form-group">
-								<label class="col-sm-3 control-label">Inherited From</label>
-								<div class="col-sm-9">
-									<p class="form-control-static"><a href="AugmentedObject.html#initialize">AugmentedObject#initialize</a></p>
-								</div>
-							</div>
-			
-							<!-- overrides -->
-							<div class="form-group">
-								<label class="col-sm-3 control-label">Overrides</label>
-								<div class="col-sm-9">
-									<p class="form-control-static"><a href="AugmentedObject.html#initialize">AugmentedObject#initialize</a></p>
-								</div>
-							</div>
-			
-			
-			
-			
-			
-			
-			
-			
-							<!-- source -->
-							<div class="form-group">
-								<label class="col-sm-3 control-label">Source</label>
-								<div class="col-sm-9">
-									<p class="form-control-static"><a href="node_modules_next-core-object_src_object.js.html">node_modules/next-core-object/src/object.js</a>, <a href="node_modules_next-core-object_src_object.js.html#line-35">line 35</a></p>
-								</div>
-							</div>
-			
-			
-			
-			
-					</form>
-			</div>	</div>
-</dd>
-											<hr/>
-											<dt class="symbol-title function public inherited">
-			<h4 id="trigger" class="function public inherited"><span class="name">trigger</span><span class="signature-params">( <span class="signature-param">name</span>, <span class="signature-param">...args</span>&nbsp;)</span></h4>
-		</dt>
-<dd class="symbol-details function public inherited">
-	<div class="symbol-details-inner">
-			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>Trigger one or many events, firing all bound callbacks. Callbacks are<br>passed the same arguments as <code>trigger</code> is, apart from the event name<br>(unless you're listening on <code>&quot;all&quot;</code>, which will cause your callback to<br>receive the true name of the event as the first argument).</p></div>
-			</div>			<div class="callout callout-info">
-				<h5>Parameters</h5>
-				<table class="params table table-striped">
-					<thead>
-					<tr>
-							<th>Name</th>
-						<th>Type</th>
-							<th>Attributes</th>
-						<th class="last">Description</th>
-					</tr>
-					</thead>
-					<tbody>
-						<tr>
-								<td><code>name</code></td>
-							<td><span class="param-type">string</span></td>
-								<td class="attributes"></td>
-							<td class="last">
-									<p>The name of the event</p>
-							</td>
-						</tr>
-						<tr>
-								<td><code>args</code></td>
-							<td><span class="param-type">any</span></td>
-								<td class="attributes">&lt;repeatable&gt;<br/></td>
-							<td class="last">
-									<p>any number of additional arguments</p>
-							</td>
-						</tr>
-					</tbody>
-				</table>
-			</div>
-			<div class="callout callout-success"><h5>Returns</h5>		<form class="form-horizontal returns">
-							<div class="form-group">
-								<label class="col-sm-3 control-label returns-type"><span class="param-type">object</span></label>
-								<div class="col-sm-9">
-									<div class="form-control-static returns-description"><p>Returns this context</p></div>
-								</div>
-							</div>
-					</form>
-			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
-			
-			
-			
-			
-			
-			
-							<!-- inherits -->
-							<div class="form-group">
-								<label class="col-sm-3 control-label">Inherited From</label>
-								<div class="col-sm-9">
-									<p class="form-control-static"><a href="AugmentedObject.html#trigger">AugmentedObject#trigger</a></p>
-								</div>
-							</div>
-			
-			
-			
-			
-			
-			
-			
-			
-			
-							<!-- source -->
-							<div class="form-group">
-								<label class="col-sm-3 control-label">Source</label>
-								<div class="col-sm-9">
-									<p class="form-control-static"><a href="node_modules_next-core-object_src_object.js.html">node_modules/next-core-object/src/object.js</a>, <a href="node_modules_next-core-object_src_object.js.html#line-72">line 72</a></p>
-								</div>
-							</div>
-			
-			
-			
-			
-					</form>
-			</div>	</div>
-</dd>
-											<hr/>
 											<dt class="symbol-title function public inherited">
 			<h4 id="once" class="function public inherited"><span class="name">once</span><span class="signature-params">( <span class="signature-param">name</span>, <span class="signature-param">callback</span>, <span class="signature-param">context</span>&nbsp;)</span></h4>
 		</dt>
 <dd class="symbol-details function public inherited">
 	<div class="symbol-details-inner">
-			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>Bind an event to only be triggered a single time. After the first time<br>the callback is invoked, its listener will be removed. If multiple events<br>are passed in using the space-separated syntax, the handler will fire<br>once for each event, not once for a combination of all events.</p></div>
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>Bind an event to only be triggered a single time. After the first time<br>
+			the callback is invoked, its listener will be removed. If multiple events<br>
+			are passed in using the space-separated syntax, the handler will fire<br>
+			once for each event, not once for a combination of all events.</p></div>
 			</div>			<div class="callout callout-info">
 				<h5>Parameters</h5>
 				<table class="params table table-striped">
@@ -1849,6 +705,13 @@
 								</div>
 							</div>
 			
+							<!-- overrides -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Overrides</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="AugmentedObject.html#once">AugmentedObject#once</a></p>
+								</div>
+							</div>
 			
 			
 			
@@ -1872,12 +735,54 @@
 			</div>	</div>
 </dd>
 											<hr/>
+											<dt class="symbol-title function public">
+			<h4 id="set" class="function public"><span class="name">set</span><span class="signature-params">()</span></h4>
+		</dt>
+<dd class="symbol-details function public">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>Set a hash of model attributes on the object, firing <code>&quot;change&quot;</code>. This is<br>
+			the core primitive operation of a model, updating the data and notifying<br>
+			anyone who needs to know about the change in state.</p></div>
+			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="node_modules_next-core-model_src_model_abstractModel.js.html">node_modules/next-core-model/src/model/abstractModel.js</a>, <a href="node_modules_next-core-model_src_model_abstractModel.js.html#line-107">line 107</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
 											<dt class="symbol-title function public inherited">
 			<h4 id="off" class="function public inherited"><span class="name">off</span><span class="signature-params">( <span class="signature-param">name</span>, <span class="signature-param">callback</span>, <span class="signature-param">context</span>&nbsp;)</span></h4>
 		</dt>
 <dd class="symbol-details function public inherited">
 	<div class="symbol-details-inner">
-			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>Remove one or many callbacks. If <code>context</code> is null, removes all<br>callbacks with that function. If <code>callback</code> is null, removes all<br>callbacks for the event. If <code>name</code> is null, removes all bound<br>callbacks for all events.</p></div>
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>Remove one or many callbacks. If <code>context</code> is null, removes all<br>
+			callbacks with that function. If <code>callback</code> is null, removes all<br>
+			callbacks for the event. If <code>name</code> is null, removes all bound<br>
+			callbacks for all events.</p></div>
 			</div>			<div class="callout callout-info">
 				<h5>Parameters</h5>
 				<table class="params table table-striped">
@@ -1936,6 +841,13 @@
 								</div>
 							</div>
 			
+							<!-- overrides -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Overrides</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="AugmentedObject.html#off">AugmentedObject#off</a></p>
+								</div>
+							</div>
 			
 			
 			
@@ -1964,7 +876,8 @@
 		</dt>
 <dd class="symbol-details function public inherited">
 	<div class="symbol-details-inner">
-			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>Tell this object to stop listening to either specific events ... or<br>to every object it's currently listening to.</p></div>
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>Tell this object to stop listening to either specific events ... or<br>
+			to every object it's currently listening to.</p></div>
 			</div>			<div class="callout callout-info">
 				<h5>Parameters</h5>
 				<table class="params table table-striped">
@@ -2023,6 +936,13 @@
 								</div>
 							</div>
 			
+							<!-- overrides -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Overrides</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="AugmentedObject.html#stopListening">AugmentedObject#stopListening</a></p>
+								</div>
+							</div>
 			
 			
 			
@@ -2051,7 +971,8 @@
 		</dt>
 <dd class="symbol-details function public inherited">
 	<div class="symbol-details-inner">
-			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>Bind an event to a <code>callback</code> function. Passing <code>&quot;all&quot;</code> will bind<br>the callback to all events fired.</p></div>
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>Bind an event to a <code>callback</code> function. Passing <code>&quot;all&quot;</code> will bind<br>
+			the callback to all events fired.</p></div>
 			</div>			<div class="callout callout-info">
 				<h5>Parameters</h5>
 				<table class="params table table-striped">
@@ -2110,6 +1031,13 @@
 								</div>
 							</div>
 			
+							<!-- overrides -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Overrides</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="AugmentedObject.html#on">AugmentedObject#on</a></p>
+								</div>
+							</div>
 			
 			
 			
@@ -2138,7 +1066,9 @@
 		</dt>
 <dd class="symbol-details function public inherited">
 	<div class="symbol-details-inner">
-			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>Inversion-of-control versions of <code>on</code>. Tell <em>this</em> object to listen to<br>an event in another object... keeping track of what it's listening to<br>for easier unbinding later.</p></div>
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>Inversion-of-control versions of <code>on</code>. Tell <em>this</em> object to listen to<br>
+			an event in another object... keeping track of what it's listening to<br>
+			for easier unbinding later.</p></div>
 			</div>			<div class="callout callout-info">
 				<h5>Parameters</h5>
 				<table class="params table table-striped">
@@ -2197,6 +1127,13 @@
 								</div>
 							</div>
 			
+							<!-- overrides -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Overrides</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="AugmentedObject.html#listenTo">AugmentedObject#listenTo</a></p>
+								</div>
+							</div>
 			
 			
 			
@@ -2284,6 +1221,13 @@
 								</div>
 							</div>
 			
+							<!-- overrides -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Overrides</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="AugmentedObject.html#listenToOnce">AugmentedObject#listenToOnce</a></p>
+								</div>
+							</div>
 			
 			
 			
@@ -2306,6 +1250,1248 @@
 					</form>
 			</div>	</div>
 </dd>
+											<hr/>
+											<dt class="symbol-title function public">
+			<h4 id="escape" class="function public"><span class="name">escape</span><span class="signature-params">()</span></h4>
+		</dt>
+<dd class="symbol-details function public">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>Escape the attribute data</p></div>
+			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="node_modules_next-core-model_src_model_abstractModel.js.html">node_modules/next-core-model/src/model/abstractModel.js</a>, <a href="node_modules_next-core-model_src_model_abstractModel.js.html#line-225">line 225</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title function public">
+			<h4 id="has" class="function public"><span class="name">has</span><span class="signature-params">()</span></h4>
+		</dt>
+<dd class="symbol-details function public">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>Has an attribute in the Model</p></div>
+			</div>			<div class="callout callout-success"><h5>Returns</h5>		<form class="form-horizontal returns">
+							<div class="form-group">
+								<label class="col-sm-3 control-label returns-type"><span class="param-type">bolean</span></label>
+								<div class="col-sm-9">
+									<div class="form-control-static returns-description"><p>Returns true if exists</p></div>
+								</div>
+							</div>
+					</form>
+			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="node_modules_next-core-model_src_model_abstractModel.js.html">node_modules/next-core-model/src/model/abstractModel.js</a>, <a href="node_modules_next-core-model_src_model_abstractModel.js.html#line-232">line 232</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title function public">
+			<h4 id="matches" class="function public"><span class="name">matches</span><span class="signature-params">()</span></h4>
+		</dt>
+<dd class="symbol-details function public">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>Special-cased proxy to underscore's <code>matches</code> method.</p></div>
+			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="node_modules_next-core-model_src_model_abstractModel.js.html">node_modules/next-core-model/src/model/abstractModel.js</a>, <a href="node_modules_next-core-model_src_model_abstractModel.js.html#line-238">line 238</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title function public">
+			<h4 id="unset" class="function public"><span class="name">unset</span><span class="signature-params">()</span></h4>
+		</dt>
+<dd class="symbol-details function public">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>Remove an attribute from the model, firing <code>&quot;change&quot;</code>. <code>unset</code> is a noop<br>
+			if the attribute doesn't exist.</p></div>
+			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="node_modules_next-core-model_src_model_abstractModel.js.html">node_modules/next-core-model/src/model/abstractModel.js</a>, <a href="node_modules_next-core-model_src_model_abstractModel.js.html#line-245">line 245</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title function public">
+			<h4 id="clear" class="function public"><span class="name">clear</span><span class="signature-params">()</span></h4>
+		</dt>
+<dd class="symbol-details function public">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>Clear all attributes on the model, firing <code>&quot;change&quot;</code>.</p></div>
+			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="node_modules_next-core-model_src_model_abstractModel.js.html">node_modules/next-core-model/src/model/abstractModel.js</a>, <a href="node_modules_next-core-model_src_model_abstractModel.js.html#line-251">line 251</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title function public">
+			<h4 id="toJSON" class="function public"><span class="name">toJSON</span><span class="signature-params">()</span></h4>
+		</dt>
+<dd class="symbol-details function public">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>Transforms model to pure toJSON</p></div>
+			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="node_modules_next-core-model_src_model_abstractModel.js.html">node_modules/next-core-model/src/model/abstractModel.js</a>, <a href="node_modules_next-core-model_src_model_abstractModel.js.html#line-260">line 260</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title function public">
+			<h4 id="fetch" class="function public"><span class="name">fetch</span><span class="signature-params">()</span></h4>
+		</dt>
+<dd class="symbol-details function public">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>Fetch the model from the server, merging the response with the model's<br>
+			local attributes. Any changed attributes will trigger a &quot;change&quot; event.</p></div>
+			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="node_modules_next-core-model_src_model_abstractModel.js.html">node_modules/next-core-model/src/model/abstractModel.js</a>, <a href="node_modules_next-core-model_src_model_abstractModel.js.html#line-269">line 269</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title function public">
+			<h4 id="save" class="function public"><span class="name">save</span><span class="signature-params">()</span></h4>
+		</dt>
+<dd class="symbol-details function public">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>Set a hash of model attributes, and sync the model to the server.<br>
+			If the server returns an attributes hash that differs, the model's<br>
+			state will be <code>set</code> again.</p></div>
+			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="node_modules_next-core-model_src_model_abstractModel.js.html">node_modules/next-core-model/src/model/abstractModel.js</a>, <a href="node_modules_next-core-model_src_model_abstractModel.js.html#line-291">line 291</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title function public">
+			<h4 id="destroy" class="function public"><span class="name">destroy</span><span class="signature-params">()</span></h4>
+		</dt>
+<dd class="symbol-details function public">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>Destroy this model on the server if it was already persisted.<br>
+			Optimistically removes the model from its collection, if it has one.<br>
+			If <code>wait: true</code> is passed, waits for the server to respond before removal.</p></div>
+			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="node_modules_next-core-model_src_model_abstractModel.js.html">node_modules/next-core-model/src/model/abstractModel.js</a>, <a href="node_modules_next-core-model_src_model_abstractModel.js.html#line-358">line 358</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title function public">
+			<h4 id="url" class="function public"><span class="name">url</span><span class="signature-params">()</span></h4>
+		</dt>
+<dd class="symbol-details function public">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>Default URL for the model's representation on the server -- if you're<br>
+			using restful methods, override this to change the endpoint<br>
+			that will be called.</p></div>
+			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="node_modules_next-core-model_src_model_abstractModel.js.html">node_modules/next-core-model/src/model/abstractModel.js</a>, <a href="node_modules_next-core-model_src_model_abstractModel.js.html#line-396">line 396</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title function public">
+			<h4 id="keys" class="function public"><span class="name">keys</span><span class="signature-params">()</span></h4>
+		</dt>
+<dd class="symbol-details function public">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>Keys of the attributes in this Model</p></div>
+			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="node_modules_next-core-model_src_model_abstractModel.js.html">node_modules/next-core-model/src/model/abstractModel.js</a>, <a href="node_modules_next-core-model_src_model_abstractModel.js.html#line-411">line 411</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title function public">
+			<h4 id="values" class="function public"><span class="name">values</span><span class="signature-params">()</span></h4>
+		</dt>
+<dd class="symbol-details function public">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>Values of the attributes in this Model</p></div>
+			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="node_modules_next-core-model_src_model_abstractModel.js.html">node_modules/next-core-model/src/model/abstractModel.js</a>, <a href="node_modules_next-core-model_src_model_abstractModel.js.html#line-418">line 418</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title function public">
+			<h4 id="parse" class="function public"><span class="name">parse</span><span class="signature-params">()</span></h4>
+		</dt>
+<dd class="symbol-details function public">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>Converts a response into the hash of attributes to be <code>set</code> on<br>
+			the model. The default implementation is just to pass the response along.</p></div>
+			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="node_modules_next-core-model_src_model_abstractModel.js.html">node_modules/next-core-model/src/model/abstractModel.js</a>, <a href="node_modules_next-core-model_src_model_abstractModel.js.html#line-442">line 442</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title function public">
+			<h4 id="clone" class="function public"><span class="name">clone</span><span class="signature-params">()</span></h4>
+		</dt>
+<dd class="symbol-details function public">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>Create a new model with identical attributes to this one.</p></div>
+			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="node_modules_next-core-model_src_model_abstractModel.js.html">node_modules/next-core-model/src/model/abstractModel.js</a>, <a href="node_modules_next-core-model_src_model_abstractModel.js.html#line-448">line 448</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title function public">
+			<h4 id="isNew" class="function public"><span class="name">isNew</span><span class="signature-params">()</span></h4>
+		</dt>
+<dd class="symbol-details function public">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>A model is new if it has never been saved to the server, and lacks an id.</p></div>
+			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="node_modules_next-core-model_src_model_abstractModel.js.html">node_modules/next-core-model/src/model/abstractModel.js</a>, <a href="node_modules_next-core-model_src_model_abstractModel.js.html#line-454">line 454</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title function public">
+			<h4 id="hasChanged" class="function public"><span class="name">hasChanged</span><span class="signature-params">()</span></h4>
+		</dt>
+<dd class="symbol-details function public">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>Determine if the model has changed since the last <code>&quot;change&quot;</code> event.<br>
+			If you specify an attribute name, determine if that attribute has changed.</p></div>
+			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="node_modules_next-core-model_src_model_abstractModel.js.html">node_modules/next-core-model/src/model/abstractModel.js</a>, <a href="node_modules_next-core-model_src_model_abstractModel.js.html#line-461">line 461</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title function public">
+			<h4 id="changedAttributes" class="function public"><span class="name">changedAttributes</span><span class="signature-params">()</span></h4>
+		</dt>
+<dd class="symbol-details function public">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>Return an object containing all the attributes that have changed, or<br>
+			false if there are no changed attributes. Useful for determining what<br>
+			parts of a view need to be updated and/or what attributes need to be<br>
+			persisted to the server. Unset attributes will be set to undefined.<br>
+			You can also pass an attributes object to diff against the model,<br>
+			determining if there <em>would be</em> a change.</p></div>
+			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="node_modules_next-core-model_src_model_abstractModel.js.html">node_modules/next-core-model/src/model/abstractModel.js</a>, <a href="node_modules_next-core-model_src_model_abstractModel.js.html#line-475">line 475</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title function public">
+			<h4 id="previous" class="function public"><span class="name">previous</span><span class="signature-params">()</span></h4>
+		</dt>
+<dd class="symbol-details function public">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>Get the previous value of an attribute, recorded at the time the last<br>
+			<code>&quot;change&quot;</code> event was fired.</p></div>
+			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="node_modules_next-core-model_src_model_abstractModel.js.html">node_modules/next-core-model/src/model/abstractModel.js</a>, <a href="node_modules_next-core-model_src_model_abstractModel.js.html#line-496">line 496</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title function public">
+			<h4 id="previousAttributes" class="function public"><span class="name">previousAttributes</span><span class="signature-params">()</span></h4>
+		</dt>
+<dd class="symbol-details function public">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>Get all of the attributes of the model at the time of the previous<br>
+			<code>&quot;change&quot;</code> event.</p></div>
+			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="node_modules_next-core-model_src_model_abstractModel.js.html">node_modules/next-core-model/src/model/abstractModel.js</a>, <a href="node_modules_next-core-model_src_model_abstractModel.js.html#line-506">line 506</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title function public">
+			<h4 id="supportsValidation" class="function public"><span class="name">supportsValidation</span><span class="signature-params">()</span></h4>
+		</dt>
+<dd class="symbol-details function public">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>supportsValidation - Returns True if this model supports validation</p></div>
+			</div>			<div class="callout callout-success"><h5>Returns</h5>		<form class="form-horizontal returns">
+							<div class="form-group">
+								<label class="col-sm-3 control-label returns-type"><span class="param-type">boolean</span></label>
+								<div class="col-sm-9">
+									<div class="form-control-static returns-description"><p>Returns True if this model supports validation</p></div>
+								</div>
+							</div>
+					</form>
+			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="node_modules_next-core-model_src_model_abstractModel.js.html">node_modules/next-core-model/src/model/abstractModel.js</a>, <a href="node_modules_next-core-model_src_model_abstractModel.js.html#line-514">line 514</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title function public">
+			<h4 id="isValid" class="function public"><span class="name">isValid</span><span class="signature-params">()</span></h4>
+		</dt>
+<dd class="symbol-details function public">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>isValid - Returns True if this model is valid<br>
+			Runs two level validation, attribute-level then JSON Schema</p></div>
+			</div>			<div class="callout callout-success"><h5>Returns</h5>		<form class="form-horizontal returns">
+							<div class="form-group">
+								<label class="col-sm-3 control-label returns-type"><span class="param-type">boolean</span></label>
+								<div class="col-sm-9">
+									<div class="form-control-static returns-description"><p>Returns True if this model is valid</p></div>
+								</div>
+							</div>
+					</form>
+			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="node_modules_next-core-model_src_model_abstractModel.js.html">node_modules/next-core-model/src/model/abstractModel.js</a>, <a href="node_modules_next-core-model_src_model_abstractModel.js.html#line-526">line 526</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title function public">
+			<h4 id="validate" class="function public"><span class="name">validate</span><span class="signature-params">()</span></h4>
+		</dt>
+<dd class="symbol-details function public">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>Validates the model</p></div>
+			</div>			<div class="callout callout-success"><h5>Returns</h5>		<form class="form-horizontal returns">
+							<div class="form-group">
+								<label class="col-sm-3 control-label returns-type"><span class="param-type">array</span></label>
+								<div class="col-sm-9">
+									<div class="form-control-static returns-description"><p>Returns array of messages from validation</p></div>
+								</div>
+							</div>
+					</form>
+			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="node_modules_next-core-model_src_model_abstractModel.js.html">node_modules/next-core-model/src/model/abstractModel.js</a>, <a href="node_modules_next-core-model_src_model_abstractModel.js.html#line-538">line 538</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title function public">
+			<h4 id="getValidationMessages" class="function public"><span class="name">getValidationMessages</span><span class="signature-params">()</span></h4>
+		</dt>
+<dd class="symbol-details function public">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>Gets the validation messages only in an array</p></div>
+			</div>			<div class="callout callout-success"><h5>Returns</h5>		<form class="form-horizontal returns">
+							<div class="form-group">
+								<label class="col-sm-3 control-label returns-type"><span class="param-type">array</span></label>
+								<div class="col-sm-9">
+									<div class="form-control-static returns-description"><p>Returns array of messages from validation</p></div>
+								</div>
+							</div>
+					</form>
+			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="node_modules_next-core-model_src_model_abstractModel.js.html">node_modules/next-core-model/src/model/abstractModel.js</a>, <a href="node_modules_next-core-model_src_model_abstractModel.js.html#line-556">line 556</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title function public">
+			<h4 id="sync" class="function public"><span class="name">sync</span><span class="signature-params">()</span></h4>
+		</dt>
+<dd class="symbol-details function public">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>Sync model data to bound REST call</p></div>
+			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="node_modules_next-core-model_src_model_abstractModel.js.html">node_modules/next-core-model/src/model/abstractModel.js</a>, <a href="node_modules_next-core-model_src_model_abstractModel.js.html#line-570">line 570</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title function public">
+			<h4 id="reset" class="function public"><span class="name">reset</span><span class="signature-params">( <span class="signature-param">data</span>&nbsp;)</span></h4>
+		</dt>
+<dd class="symbol-details function public">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>reset - clear and rewrite the model with passed data</p></div>
+			</div>			<div class="callout callout-info">
+				<h5>Parameters</h5>
+				<table class="params table table-striped">
+					<thead>
+					<tr>
+							<th>Name</th>
+						<th>Type</th>
+						<th class="last">Description</th>
+					</tr>
+					</thead>
+					<tbody>
+						<tr>
+								<td><code>data</code></td>
+							<td><span class="param-type">object</span></td>
+							<td class="last">
+									<p>The data to replace the model with (optional)</p>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="node_modules_next-core-model_src_model_abstractModel.js.html">node_modules/next-core-model/src/model/abstractModel.js</a>, <a href="node_modules_next-core-model_src_model_abstractModel.js.html#line-576">line 576</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title function public">
+			<h4 id="isEmpty" class="function public"><span class="name">isEmpty</span><span class="signature-params">()</span></h4>
+		</dt>
+<dd class="symbol-details function public">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>isEmpty - returns true is the model is empty</p></div>
+			</div>			<div class="callout callout-success"><h5>Returns</h5>		<form class="form-horizontal returns">
+							<div class="form-group">
+								<label class="col-sm-3 control-label returns-type"><span class="param-type">boolean</span></label>
+								<div class="col-sm-9">
+									<div class="form-control-static returns-description"><p>returns true is the model is empty</p></div>
+								</div>
+							</div>
+					</form>
+			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="node_modules_next-core-model_src_model_abstractModel.js.html">node_modules/next-core-model/src/model/abstractModel.js</a>, <a href="node_modules_next-core-model_src_model_abstractModel.js.html#line-587">line 587</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title function public">
+			<h4 id="toString" class="function public"><span class="name">toString</span><span class="signature-params">()</span></h4>
+		</dt>
+<dd class="symbol-details function public">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>toString - returns the model data as a string</p></div>
+			</div>			<div class="callout callout-success"><h5>Returns</h5>		<form class="form-horizontal returns">
+							<div class="form-group">
+								<label class="col-sm-3 control-label returns-type"><span class="param-type">string</span></label>
+								<div class="col-sm-9">
+									<div class="form-control-static returns-description"><p>returns the model data as a string</p></div>
+								</div>
+							</div>
+					</form>
+			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="node_modules_next-core-model_src_model_abstractModel.js.html">node_modules/next-core-model/src/model/abstractModel.js</a>, <a href="node_modules_next-core-model_src_model_abstractModel.js.html#line-595">line 595</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title function public">
+			<h4 id="fetch" class="function public"><span class="name">fetch</span><span class="signature-params">()</span></h4>
+		</dt>
+<dd class="symbol-details function public">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>fetch - Fetches the model as a 'get'</p></div>
+			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="node_modules_next-core-model_src_model_abstractModel.js.html">node_modules/next-core-model/src/model/abstractModel.js</a>, <a href="node_modules_next-core-model_src_model_abstractModel.js.html#line-602">line 602</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title function public">
+			<h4 id="save" class="function public"><span class="name">save</span><span class="signature-params">()</span></h4>
+		</dt>
+<dd class="symbol-details function public">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>save - Saves the model as a 'create'</p></div>
+			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="node_modules_next-core-model_src_model_abstractModel.js.html">node_modules/next-core-model/src/model/abstractModel.js</a>, <a href="node_modules_next-core-model_src_model_abstractModel.js.html#line-608">line 608</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title function public">
+			<h4 id="update" class="function public"><span class="name">update</span><span class="signature-params">()</span></h4>
+		</dt>
+<dd class="symbol-details function public">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>update - Updates the model as a 'update'</p></div>
+			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="node_modules_next-core-model_src_model_abstractModel.js.html">node_modules/next-core-model/src/model/abstractModel.js</a>, <a href="node_modules_next-core-model_src_model_abstractModel.js.html#line-614">line 614</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title function public">
+			<h4 id="destroy" class="function public"><span class="name">destroy</span><span class="signature-params">()</span></h4>
+		</dt>
+<dd class="symbol-details function public">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>destroy - Deletes the model as a 'delete'</p></div>
+			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="node_modules_next-core-model_src_model_abstractModel.js.html">node_modules/next-core-model/src/model/abstractModel.js</a>, <a href="node_modules_next-core-model_src_model_abstractModel.js.html#line-620">line 620</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
 									</dl>
 							</article>
 					</section>
@@ -2317,7 +2503,7 @@
 	</div>
 	<footer>
 				<div class="footer-option"><a href='http://www.augmentedjs.com'>Augmented.js Homepage</a></div>
-			<div class="generated-by">Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Sun Nov 11th 2018 using the <a href="https://github.com/steveush/foodoc">FooDoc template</a>.</div>
+			<div class="generated-by">Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.3</a> on Fri Oct 4th 2019 using the <a href="https://github.com/steveush/foodoc">FooDoc template</a>.</div>
 	</footer>
 	<script src="js/jquery.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
