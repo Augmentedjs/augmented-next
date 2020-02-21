@@ -300,35 +300,6 @@
           "properti",
           "type"
         ],
-        "LoggerFactory.html": [
-          "class",
-          "creat",
-          "factori",
-          "instanc",
-          "logger",
-          "loggerfactori"
-        ],
-        "LoggerFactory.html#.getLogger": [
-          "function",
-          "getlogg",
-          "instanc",
-          "level",
-          "logger",
-          "loggerfactory.getlogg",
-          "lt;static&gt",
-          "type"
-        ],
-        "Principal.html": [
-          "abstract",
-          "class",
-          "impliment",
-          "object",
-          "part",
-          "pricip",
-          "princip",
-          "secur",
-          "us"
-        ],
         "AbstractLogger.html": [
           "abstract",
           "abstractlogg",
@@ -377,6 +348,17 @@
           "messag",
           "warn"
         ],
+        "Principal.html": [
+          "abstract",
+          "class",
+          "impliment",
+          "object",
+          "part",
+          "pricip",
+          "princip",
+          "secur",
+          "us"
+        ],
         "ConsoleLogger.html": [
           "class",
           "consol",
@@ -422,6 +404,174 @@
           "log",
           "messag",
           "warn"
+        ],
+        "LoggerFactory.html": [
+          "class",
+          "creat",
+          "factori",
+          "instanc",
+          "logger",
+          "loggerfactori"
+        ],
+        "LoggerFactory.html#.getLogger": [
+          "function",
+          "getlogg",
+          "instanc",
+          "level",
+          "logger",
+          "loggerfactory.getlogg",
+          "lt;static&gt",
+          "type"
+        ],
+        "AugmentedObject.html": [
+          "augment",
+          "augmentedobject",
+          "base",
+          "class",
+          "extend",
+          "object"
+        ],
+        "AugmentedObject.html#options": [
+          "augmentedobject#opt",
+          "member",
+          "option",
+          "pass"
+        ],
+        "AugmentedObject.html#events": [
+          "augmentedobject#ev",
+          "event",
+          "member"
+        ],
+        "AugmentedObject.html#initialize": [
+          "augmentedobject#initi",
+          "function",
+          "initi",
+          "object"
+        ],
+        "AugmentedObject.html#trigger": [
+          "apart",
+          "arg",
+          "argument",
+          "augmentedobject#trigg",
+          "bound",
+          "callback",
+          "caus",
+          "event",
+          "fire",
+          "first",
+          "function",
+          "listen",
+          "mani",
+          "name",
+          "on",
+          "pass",
+          "receiv",
+          "same",
+          "trigger",
+          "true",
+          "unless",
+          "you'r"
+        ],
+        "AugmentedObject.html#once": [
+          "augmentedobject#onc",
+          "bind",
+          "callback",
+          "combin",
+          "context",
+          "each",
+          "event",
+          "fire",
+          "first",
+          "function",
+          "handler",
+          "invok",
+          "listen",
+          "multipl",
+          "name",
+          "onc",
+          "pass",
+          "remov",
+          "separ",
+          "singl",
+          "space",
+          "syntax",
+          "time",
+          "trigger",
+          "us"
+        ],
+        "AugmentedObject.html#off": [
+          "augmentedobject#off",
+          "bound",
+          "callback",
+          "context",
+          "event",
+          "function",
+          "mani",
+          "name",
+          "null",
+          "on",
+          "remov"
+        ],
+        "AugmentedObject.html#stopListening": [
+          "augmentedobject#stoplisten",
+          "callback",
+          "current",
+          "event",
+          "function",
+          "it'",
+          "listen",
+          "name",
+          "obj",
+          "object",
+          "specif",
+          "stop",
+          "stoplisten",
+          "tell"
+        ],
+        "AugmentedObject.html#on": [
+          "augmentedobject#on",
+          "bind",
+          "callback",
+          "context",
+          "event",
+          "fire",
+          "function",
+          "name",
+          "pass"
+        ],
+        "AugmentedObject.html#listenTo": [
+          "anoth",
+          "augmentedobject#listento",
+          "callback",
+          "control",
+          "easier",
+          "event",
+          "function",
+          "invers",
+          "it'",
+          "keep",
+          "later",
+          "listen",
+          "listento",
+          "name",
+          "obj",
+          "object",
+          "tell",
+          "track",
+          "unbind",
+          "version"
+        ],
+        "AugmentedObject.html#listenToOnce": [
+          "augmentedobject#listentoonc",
+          "callback",
+          "control",
+          "function",
+          "invers",
+          "listentoonc",
+          "name",
+          "obj",
+          "onc",
+          "version"
         ],
         "Context.html": [
           "augmented.security.context",
@@ -500,15 +650,6 @@
           "stack",
           "stack#peek"
         ],
-        "Stack.html#toString": [
-          "function",
-          "method",
-          "return",
-          "stack",
-          "stack#tostr",
-          "string",
-          "tostr"
-        ],
         "Stack.html#pop": [
           "first",
           "function",
@@ -562,6 +703,71 @@
           "stack#toarray",
           "toarray"
         ],
+        "Stack.html#toString": [
+          "function",
+          "method",
+          "return",
+          "stack",
+          "stack#tostr",
+          "string",
+          "tostr"
+        ],
+        "Logger.BasicLogger.html": [
+          "basic",
+          "basiclogg",
+          "class",
+          "consol",
+          "extra",
+          "level",
+          "logger",
+          "logger.basiclogg",
+          "text"
+        ],
+        "Logger.BasicLogger.html#log": [
+          "basiclogger#log",
+          "default",
+          "function",
+          "level",
+          "log",
+          "logger.basiclogger#log",
+          "messag"
+        ],
+        "Logger.BasicLogger.html#info": [
+          "basiclogger#info",
+          "function",
+          "info",
+          "level",
+          "log",
+          "logger.basiclogger#info",
+          "messag"
+        ],
+        "Logger.BasicLogger.html#error": [
+          "basiclogger#error",
+          "error",
+          "function",
+          "level",
+          "log",
+          "logger.basiclogger#error",
+          "messag"
+        ],
+        "Logger.BasicLogger.html#debug": [
+          "basiclogger#debug",
+          "debug",
+          "function",
+          "level",
+          "log",
+          "logger.basiclogger#debug",
+          "messag"
+        ],
+        "Logger.BasicLogger.html#warn": [
+          "basiclogger#warn",
+          "function",
+          "level",
+          "log",
+          "logger.basiclogger#warn",
+          "messag",
+          "warn"
+        ],
         "Logger.ColorConsoleLogger.html": [
           "class",
           "color",
@@ -614,158 +820,6 @@
           "logger.colorconsolelogger#warn",
           "messag",
           "warn"
-        ],
-        "AugmentedObject.html": [
-          "augment",
-          "augmentedobject",
-          "base",
-          "class",
-          "extend",
-          "object"
-        ],
-        "AugmentedObject.html#options": [
-          "augmentedobject#opt",
-          "member",
-          "option",
-          "pass"
-        ],
-        "AugmentedObject.html#events": [
-          "augmentedobject#ev",
-          "event",
-          "member"
-        ],
-        "AugmentedObject.html#initialize": [
-          "augmentedobject#initi",
-          "function",
-          "initi",
-          "object"
-        ],
-        "AugmentedObject.html#trigger": [
-          "apart",
-          "arg",
-          "argument",
-          "augmentedobject#trigg",
-          "bound",
-          "callback",
-          "caus",
-          "event",
-          "fire",
-          "first",
-          "function",
-          "listen",
-          "mani",
-          "name",
-          "on",
-          "pass",
-          "quot;all&quot",
-          "receiv",
-          "same",
-          "trigger",
-          "true",
-          "unless",
-          "you'r"
-        ],
-        "AugmentedObject.html#once": [
-          "augmentedobject#onc",
-          "bind",
-          "callback",
-          "combin",
-          "context",
-          "each",
-          "event",
-          "fire",
-          "first",
-          "function",
-          "handler",
-          "invok",
-          "listen",
-          "multipl",
-          "name",
-          "onc",
-          "pass",
-          "remov",
-          "separ",
-          "singl",
-          "space",
-          "syntax",
-          "time",
-          "trigger",
-          "us"
-        ],
-        "AugmentedObject.html#off": [
-          "augmentedobject#off",
-          "bound",
-          "callback",
-          "context",
-          "event",
-          "function",
-          "mani",
-          "name",
-          "null",
-          "on",
-          "remov"
-        ],
-        "AugmentedObject.html#stopListening": [
-          "augmentedobject#stoplisten",
-          "callback",
-          "current",
-          "event",
-          "function",
-          "it'",
-          "listen",
-          "name",
-          "obj",
-          "object",
-          "specif",
-          "stop",
-          "stoplisten",
-          "tell"
-        ],
-        "AugmentedObject.html#on": [
-          "augmentedobject#on",
-          "bind",
-          "callback",
-          "context",
-          "event",
-          "fire",
-          "function",
-          "name",
-          "pass",
-          "quot;all&quot"
-        ],
-        "AugmentedObject.html#listenTo": [
-          "anoth",
-          "augmentedobject#listento",
-          "callback",
-          "control",
-          "easier",
-          "event",
-          "function",
-          "invers",
-          "it'",
-          "keep",
-          "later",
-          "listen",
-          "listento",
-          "name",
-          "obj",
-          "object",
-          "tell",
-          "track",
-          "unbind",
-          "version"
-        ],
-        "AugmentedObject.html#listenToOnce": [
-          "augmentedobject#listentoonc",
-          "callback",
-          "control",
-          "function",
-          "invers",
-          "listentoonc",
-          "name",
-          "obj",
-          "onc",
-          "version"
         ],
         "AbstractSecurityClient.html": [
           "abstract",
@@ -880,21 +934,6 @@
           "schema",
           "validationframework#registerschema"
         ],
-        "ValidationFramework.html#getSchema": [
-          "function",
-          "get",
-          "getschema",
-          "ident",
-          "schema",
-          "validationframework#getschema"
-        ],
-        "ValidationFramework.html#getSchemas": [
-          "function",
-          "get",
-          "getschema",
-          "schema",
-          "validationframework#getschema"
-        ],
         "ValidationFramework.html#clearSchemas": [
           "clear",
           "clearschema",
@@ -928,6 +967,21 @@
           "valid",
           "validationframework#generateschema",
           "via"
+        ],
+        "ValidationFramework.html#getSchema": [
+          "function",
+          "get",
+          "getschema",
+          "ident",
+          "schema",
+          "validationframework#getschema"
+        ],
+        "ValidationFramework.html#getSchemas": [
+          "function",
+          "get",
+          "getschema",
+          "schema",
+          "validationframework#getschema"
         ],
         "CollectionIterator.html": [
           "allow",
@@ -994,38 +1048,6 @@
           "resourcebundle.getstr",
           "string"
         ],
-        "Transformer.html": [
-          "anoth",
-          "array",
-          "augmented.utility.transform",
-          "class",
-          "object",
-          "transform",
-          "type"
-        ],
-        "Transformer.html#.transform": [
-          "anoth",
-          "array",
-          "function",
-          "lt;static&gt",
-          "object",
-          "primit",
-          "sourc",
-          "transform",
-          "transformer.transform",
-          "type"
-        ],
-        "Transformer.html#.isType": [
-          "augmented.utility.transformertyp",
-          "function",
-          "istyp",
-          "lt;static&gt",
-          "object",
-          "pass",
-          "return",
-          "sourc",
-          "transformer.istyp"
-        ],
         "AbstractModel.html": [
           "abstractmodel",
           "class",
@@ -1068,7 +1090,6 @@
           "name",
           "on",
           "pass",
-          "quot;all&quot",
           "receiv",
           "same",
           "trigger",
@@ -1083,13 +1104,6 @@
           "preiniti",
           "properti",
           "valid"
-        ],
-        "AbstractModel.html#get": [
-          "abstractmodel#get",
-          "attribut",
-          "form",
-          "function",
-          "model"
         ],
         "AbstractModel.html#once": [
           "abstractmodel#onc",
@@ -1118,6 +1132,13 @@
           "trigger",
           "us"
         ],
+        "AbstractModel.html#get": [
+          "abstractmodel#get",
+          "attribut",
+          "form",
+          "function",
+          "model"
+        ],
         "AbstractModel.html#set": [
           "abstractmodel#set",
           "anyon",
@@ -1135,7 +1156,6 @@
           "object",
           "oper",
           "primit",
-          "quot;change&quot",
           "set",
           "state",
           "updat"
@@ -1178,8 +1198,7 @@
           "fire",
           "function",
           "name",
-          "pass",
-          "quot;all&quot"
+          "pass"
         ],
         "AbstractModel.html#listenTo": [
           "abstractmodel#listento",
@@ -1241,24 +1260,24 @@
         "AbstractModel.html#unset": [
           "abstractmodel#unset",
           "attribut",
+          "chang",
           "doesn't",
           "exist",
           "fire",
           "function",
           "model",
           "noop",
-          "quot;change&quot",
           "remov",
           "unset"
         ],
         "AbstractModel.html#clear": [
           "abstractmodel#clear",
           "attribut",
+          "chang",
           "clear",
           "fire",
           "function",
-          "model",
-          "quot;change&quot"
+          "model"
         ],
         "AbstractModel.html#toJSON": [
           "abstractmodel#tojson",
@@ -1368,7 +1387,6 @@
           "last",
           "model",
           "name",
-          "quot;change&quot",
           "specifi"
         ],
         "AbstractModel.html#changedAttributes": [
@@ -1401,12 +1419,12 @@
         "AbstractModel.html#previous": [
           "abstractmodel#previ",
           "attribut",
+          "chang",
           "event",
           "fire",
           "function",
           "last",
           "previou",
-          "quot;change&quot",
           "record",
           "time",
           "valu"
@@ -1414,12 +1432,12 @@
         "AbstractModel.html#previousAttributes": [
           "abstractmodel#previousattribut",
           "attribut",
+          "chang",
           "event",
           "function",
           "model",
           "previou",
           "previousattribut",
-          "quot;change&quot",
           "time"
         ],
         "AbstractModel.html#supportsValidation": [
@@ -1532,7 +1550,7 @@
           "collect",
           "function",
           "json",
-          "models&quot",
+          "model",
           "represent",
           "tojson"
         ],
@@ -1554,8 +1572,8 @@
           "abstractcollection#remov",
           "collect",
           "collection.remov",
+          "delet",
           "function",
-          "quot;delete&quot",
           "remov"
         ],
         "AbstractCollection.html#set": [
@@ -1735,7 +1753,7 @@
           "call",
           "circumst",
           "collect",
-          "don&quot;t",
+          "don\"t",
           "each",
           "forc",
           "function",
@@ -1890,8 +1908,8 @@
           "abstractcollection#sav",
           "collect",
           "collection.sav",
+          "creat",
           "function",
-          "quot;create&quot",
           "save"
         ],
         "AbstractCollection.html#update": [
@@ -1899,7 +1917,6 @@
           "collect",
           "collection.upd",
           "function",
-          "quot;update&quot",
           "updat"
         ],
         "AbstractCollection.html#sortByKey": [
@@ -2119,9 +2136,9 @@
           "miss",
           "piec",
           "portion",
-          "quot;rule&quot",
           "rest",
           "return",
+          "rule",
           "togeth"
         ],
         "MessageKeyFormatter.html#.format": [
@@ -2131,6 +2148,38 @@
           "lt;static&gt",
           "messag",
           "messagekeyformatter.format"
+        ],
+        "Transformer.html": [
+          "anoth",
+          "array",
+          "augmented.utility.transform",
+          "class",
+          "object",
+          "transform",
+          "type"
+        ],
+        "Transformer.html#.transform": [
+          "anoth",
+          "array",
+          "function",
+          "lt;static&gt",
+          "object",
+          "primit",
+          "sourc",
+          "transform",
+          "transformer.transform",
+          "type"
+        ],
+        "Transformer.html#.isType": [
+          "augmented.utility.transformertyp",
+          "function",
+          "istyp",
+          "lt;static&gt",
+          "object",
+          "pass",
+          "return",
+          "sourc",
+          "transformer.istyp"
         ],
         "module-Augmented.html": [
           "augment",
@@ -2163,7 +2212,7 @@
           "security.cli"
         ]
       },
-      "length": 213
+      "length": 219
     },
     "tokenStore": {
       "root": {
@@ -2396,58 +2445,6 @@
                                                 }
                                               }
                                             },
-                                            "t": {
-                                              "docs": {},
-                                              "r": {
-                                                "docs": {},
-                                                "a": {
-                                                  "docs": {},
-                                                  "n": {
-                                                    "docs": {},
-                                                    "s": {
-                                                      "docs": {},
-                                                      "f": {
-                                                        "docs": {},
-                                                        "o": {
-                                                          "docs": {},
-                                                          "r": {
-                                                            "docs": {},
-                                                            "m": {
-                                                              "docs": {
-                                                                "Transformer.html": {
-                                                                  "ref": "Transformer.html",
-                                                                  "tf": 5.555555555555555
-                                                                }
-                                                              },
-                                                              "e": {
-                                                                "docs": {},
-                                                                "r": {
-                                                                  "docs": {},
-                                                                  "t": {
-                                                                    "docs": {},
-                                                                    "y": {
-                                                                      "docs": {},
-                                                                      "p": {
-                                                                        "docs": {
-                                                                          "Transformer.html#.isType": {
-                                                                            "ref": "Transformer.html#.isType",
-                                                                            "tf": 12.5
-                                                                          }
-                                                                        }
-                                                                      }
-                                                                    }
-                                                                  }
-                                                                }
-                                                              }
-                                                            }
-                                                          }
-                                                        }
-                                                      }
-                                                    }
-                                                  }
-                                                }
-                                              }
-                                            },
                                             "m": {
                                               "docs": {},
                                               "e": {
@@ -2488,6 +2485,58 @@
                                                                                 }
                                                                               }
                                                                             }
+                                                                          }
+                                                                        }
+                                                                      }
+                                                                    }
+                                                                  }
+                                                                }
+                                                              }
+                                                            }
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            },
+                                            "t": {
+                                              "docs": {},
+                                              "r": {
+                                                "docs": {},
+                                                "a": {
+                                                  "docs": {},
+                                                  "n": {
+                                                    "docs": {},
+                                                    "s": {
+                                                      "docs": {},
+                                                      "f": {
+                                                        "docs": {},
+                                                        "o": {
+                                                          "docs": {},
+                                                          "r": {
+                                                            "docs": {},
+                                                            "m": {
+                                                              "docs": {
+                                                                "Transformer.html": {
+                                                                  "ref": "Transformer.html",
+                                                                  "tf": 5.555555555555555
+                                                                }
+                                                              },
+                                                              "e": {
+                                                                "docs": {},
+                                                                "r": {
+                                                                  "docs": {},
+                                                                  "t": {
+                                                                    "docs": {},
+                                                                    "y": {
+                                                                      "docs": {},
+                                                                      "p": {
+                                                                        "docs": {
+                                                                          "Transformer.html#.isType": {
+                                                                            "ref": "Transformer.html#.isType",
+                                                                            "tf": 12.5
                                                                           }
                                                                         }
                                                                       }
@@ -3845,11 +3894,11 @@
                   "docs": {
                     "AugmentedObject.html#trigger": {
                       "ref": "AugmentedObject.html#trigger",
-                      "tf": 1.8518518518518516
+                      "tf": 1.9230769230769231
                     },
                     "AbstractModel.html#trigger": {
                       "ref": "AbstractModel.html#trigger",
-                      "tf": 1.8518518518518516
+                      "tf": 1.9230769230769231
                     }
                   }
                 }
@@ -3884,14 +3933,6 @@
                       "ref": "Stack.html#toArray",
                       "tf": 10
                     },
-                    "Transformer.html": {
-                      "ref": "Transformer.html",
-                      "tf": 11.11111111111111
-                    },
-                    "Transformer.html#.transform": {
-                      "ref": "Transformer.html#.transform",
-                      "tf": 12.5
-                    },
                     "AbstractModel.html#getValidationMessages": {
                       "ref": "AbstractModel.html#getValidationMessages",
                       "tf": 12.5
@@ -3903,6 +3944,14 @@
                     "AbstractCollection.html#slice": {
                       "ref": "AbstractCollection.html#slice",
                       "tf": 8.333333333333332
+                    },
+                    "Transformer.html": {
+                      "ref": "Transformer.html",
+                      "tf": 11.11111111111111
+                    },
+                    "Transformer.html#.transform": {
+                      "ref": "Transformer.html#.transform",
+                      "tf": 12.5
                     }
                   }
                 }
@@ -3931,11 +3980,11 @@
                         "docs": {
                           "AugmentedObject.html#trigger": {
                             "ref": "AugmentedObject.html#trigger",
-                            "tf": 3.7037037037037033
+                            "tf": 3.8461538461538463
                           },
                           "AbstractModel.html#trigger": {
                             "ref": "AbstractModel.html#trigger",
-                            "tf": 3.7037037037037033
+                            "tf": 3.8461538461538463
                           }
                         }
                       }
@@ -3959,13 +4008,13 @@
                       "docs": {},
                       "t": {
                         "docs": {
-                          "Principal.html": {
-                            "ref": "Principal.html",
-                            "tf": 7.142857142857142
-                          },
                           "AbstractLogger.html": {
                             "ref": "AbstractLogger.html",
                             "tf": 16.666666666666664
+                          },
+                          "Principal.html": {
+                            "ref": "Principal.html",
+                            "tf": 7.142857142857142
                           },
                           "AbstractSecurityClient.html": {
                             "ref": "AbstractSecurityClient.html",
@@ -5729,6 +5778,10 @@
                       "ref": "AugmentedObject.html#listenTo",
                       "tf": 3.125
                     },
+                    "AbstractModel.html#listenTo": {
+                      "ref": "AbstractModel.html#listenTo",
+                      "tf": 3.125
+                    },
                     "Transformer.html": {
                       "ref": "Transformer.html",
                       "tf": 5.555555555555555
@@ -5736,10 +5789,6 @@
                     "Transformer.html#.transform": {
                       "ref": "Transformer.html#.transform",
                       "tf": 6.25
-                    },
-                    "AbstractModel.html#listenTo": {
-                      "ref": "AbstractModel.html#listenTo",
-                      "tf": 3.125
                     }
                   }
                 }
@@ -6259,6 +6308,10 @@
                           "ref": "ConsoleLogger.html#log",
                           "tf": 12.5
                         },
+                        "Logger.BasicLogger.html#log": {
+                          "ref": "Logger.BasicLogger.html#log",
+                          "tf": 12.5
+                        },
                         "Logger.ColorConsoleLogger.html#log": {
                           "ref": "Logger.ColorConsoleLogger.html#log",
                           "tf": 12.5
@@ -6309,6 +6362,10 @@
                     "ConsoleLogger.html#debug": {
                       "ref": "ConsoleLogger.html#debug",
                       "tf": 712.5
+                    },
+                    "Logger.BasicLogger.html#debug": {
+                      "ref": "Logger.BasicLogger.html#debug",
+                      "tf": 662.5
                     },
                     "Logger.ColorConsoleLogger.html#debug": {
                       "ref": "Logger.ColorConsoleLogger.html#debug",
@@ -6374,6 +6431,10 @@
                     "AbstractModel.html#destroy": {
                       "ref": "AbstractModel.html#destroy",
                       "tf": 25
+                    },
+                    "AbstractCollection.html#remove": {
+                      "ref": "AbstractCollection.html#remove",
+                      "tf": 12.5
                     }
                   }
                 }
@@ -6427,28 +6488,13 @@
                   }
                 }
               },
-              "&": {
+              "\"": {
                 "docs": {},
-                "q": {
-                  "docs": {},
-                  "u": {
-                    "docs": {},
-                    "o": {
-                      "docs": {},
-                      "t": {
-                        "docs": {},
-                        ";": {
-                          "docs": {},
-                          "t": {
-                            "docs": {
-                              "AbstractCollection.html#sort": {
-                                "ref": "AbstractCollection.html#sort",
-                                "tf": 2.7777777777777777
-                              }
-                            }
-                          }
-                        }
-                      }
+                "t": {
+                  "docs": {
+                    "AbstractCollection.html#sort": {
+                      "ref": "AbstractCollection.html#sort",
+                      "tf": 2.7777777777777777
                     }
                   }
                 }
@@ -6691,6 +6737,29 @@
                 }
               }
             },
+            "f": {
+              "docs": {},
+              "o": {
+                "docs": {
+                  "AbstractLogger.html#info": {
+                    "ref": "AbstractLogger.html#info",
+                    "tf": 712.5
+                  },
+                  "ConsoleLogger.html#info": {
+                    "ref": "ConsoleLogger.html#info",
+                    "tf": 712.5
+                  },
+                  "Logger.BasicLogger.html#info": {
+                    "ref": "Logger.BasicLogger.html#info",
+                    "tf": 662.5
+                  },
+                  "Logger.ColorConsoleLogger.html#info": {
+                    "ref": "Logger.ColorConsoleLogger.html#info",
+                    "tf": 662.5
+                  }
+                }
+              }
+            },
             "s": {
               "docs": {},
               "t": {
@@ -6719,25 +6788,6 @@
                         }
                       }
                     }
-                  }
-                }
-              }
-            },
-            "f": {
-              "docs": {},
-              "o": {
-                "docs": {
-                  "AbstractLogger.html#info": {
-                    "ref": "AbstractLogger.html#info",
-                    "tf": 712.5
-                  },
-                  "ConsoleLogger.html#info": {
-                    "ref": "ConsoleLogger.html#info",
-                    "tf": 712.5
-                  },
-                  "Logger.ColorConsoleLogger.html#info": {
-                    "ref": "Logger.ColorConsoleLogger.html#info",
-                    "tf": 662.5
                   }
                 }
               }
@@ -6899,20 +6949,6 @@
                 }
               }
             },
-            "t": {
-              "docs": {},
-              "y": {
-                "docs": {},
-                "p": {
-                  "docs": {
-                    "Transformer.html#.isType": {
-                      "ref": "Transformer.html#.isType",
-                      "tf": 683.3333333333334
-                    }
-                  }
-                }
-              }
-            },
             "v": {
               "docs": {},
               "a": {
@@ -6932,6 +6968,20 @@
                           "tf": 760
                         }
                       }
+                    }
+                  }
+                }
+              }
+            },
+            "t": {
+              "docs": {},
+              "y": {
+                "docs": {},
+                "p": {
+                  "docs": {
+                    "Transformer.html#.isType": {
+                      "ref": "Transformer.html#.isType",
+                      "tf": 683.3333333333334
                     }
                   }
                 }
@@ -7338,7 +7388,7 @@
                   },
                   "AugmentedObject.html#trigger": {
                     "ref": "AugmentedObject.html#trigger",
-                    "tf": 37.03703703703703
+                    "tf": 37.179487179487175
                   },
                   "AugmentedObject.html#once": {
                     "ref": "AugmentedObject.html#once",
@@ -7366,7 +7416,7 @@
                   },
                   "AbstractModel.html#trigger": {
                     "ref": "AbstractModel.html#trigger",
-                    "tf": 37.03703703703703
+                    "tf": 37.179487179487175
                   },
                   "AbstractModel.html#once": {
                     "ref": "AbstractModel.html#once",
@@ -7718,14 +7768,6 @@
                       "ref": "AugmentedMap.html#remove",
                       "tf": 712.5
                     },
-                    "Context.html#removePermission": {
-                      "ref": "Context.html#removePermission",
-                      "tf": 12.5
-                    },
-                    "Stack.html#pop": {
-                      "ref": "Stack.html#pop",
-                      "tf": 8.333333333333332
-                    },
                     "AugmentedObject.html#once": {
                       "ref": "AugmentedObject.html#once",
                       "tf": 1.9230769230769231
@@ -7733,6 +7775,14 @@
                     "AugmentedObject.html#off": {
                       "ref": "AugmentedObject.html#off",
                       "tf": 10
+                    },
+                    "Context.html#removePermission": {
+                      "ref": "Context.html#removePermission",
+                      "tf": 12.5
+                    },
+                    "Stack.html#pop": {
+                      "ref": "Stack.html#pop",
+                      "tf": 8.333333333333332
                     },
                     "CollectionIterator.html#next": {
                       "ref": "CollectionIterator.html#next",
@@ -7835,10 +7885,6 @@
                         "ref": "Stack.html#peek",
                         "tf": 10
                       },
-                      "Stack.html#toString": {
-                        "ref": "Stack.html#toString",
-                        "tf": 10
-                      },
                       "Stack.html#pop": {
                         "ref": "Stack.html#pop",
                         "tf": 8.333333333333332
@@ -7855,6 +7901,10 @@
                         "ref": "Stack.html#toArray",
                         "tf": 10
                       },
+                      "Stack.html#toString": {
+                        "ref": "Stack.html#toString",
+                        "tf": 10
+                      },
                       "AuthenticationFactory.html": {
                         "ref": "AuthenticationFactory.html",
                         "tf": 6.25
@@ -7866,10 +7916,6 @@
                       "CollectionIterator.html#next": {
                         "ref": "CollectionIterator.html#next",
                         "tf": 3.3333333333333335
-                      },
-                      "Transformer.html#.isType": {
-                        "ref": "Transformer.html#.isType",
-                        "tf": 12.5
                       },
                       "AbstractModel.html#save": {
                         "ref": "AbstractModel.html#save",
@@ -7938,6 +7984,10 @@
                       "MessageKeyFormatter.html": {
                         "ref": "MessageKeyFormatter.html",
                         "tf": 2.631578947368421
+                      },
+                      "Transformer.html#.isType": {
+                        "ref": "Transformer.html#.isType",
+                        "tf": 12.5
                       }
                     }
                   }
@@ -7993,11 +8043,11 @@
                     "docs": {
                       "AugmentedObject.html#trigger": {
                         "ref": "AugmentedObject.html#trigger",
-                        "tf": 1.8518518518518516
+                        "tf": 1.9230769230769231
                       },
                       "AbstractModel.html#trigger": {
                         "ref": "AbstractModel.html#trigger",
-                        "tf": 1.8518518518518516
+                        "tf": 1.9230769230769231
                       }
                     }
                   }
@@ -8203,6 +8253,17 @@
                 "AbstractModel.html#isValid": {
                   "ref": "AbstractModel.html#isValid",
                   "tf": 3.8461538461538463
+                }
+              }
+            },
+            "l": {
+              "docs": {},
+              "e": {
+                "docs": {
+                  "MessageKeyFormatter.html": {
+                    "ref": "MessageKeyFormatter.html",
+                    "tf": 2.631578947368421
+                  }
                 }
               }
             }
@@ -8608,6 +8669,24 @@
                 }
               }
             },
+            "p": {
+              "docs": {},
+              "a": {
+                "docs": {},
+                "r": {
+                  "docs": {
+                    "AugmentedObject.html#once": {
+                      "ref": "AugmentedObject.html#once",
+                      "tf": 1.9230769230769231
+                    },
+                    "AbstractModel.html#once": {
+                      "ref": "AbstractModel.html#once",
+                      "tf": 1.9230769230769231
+                    }
+                  }
+                }
+              }
+            },
             "a": {
               "docs": {},
               "r": {
@@ -8624,24 +8703,6 @@
                         "ref": "MessageReader.html#.getMessage",
                         "tf": 1.7857142857142856
                       }
-                    }
-                  }
-                }
-              }
-            },
-            "p": {
-              "docs": {},
-              "a": {
-                "docs": {},
-                "r": {
-                  "docs": {
-                    "AugmentedObject.html#once": {
-                      "ref": "AugmentedObject.html#once",
-                      "tf": 1.9230769230769231
-                    },
-                    "AbstractModel.html#once": {
-                      "ref": "AbstractModel.html#once",
-                      "tf": 1.9230769230769231
                     }
                   }
                 }
@@ -8746,28 +8807,6 @@
             },
             "o": {
               "docs": {},
-              "r": {
-                "docs": {},
-                "a": {
-                  "docs": {},
-                  "g": {
-                    "docs": {
-                      "Context.html": {
-                        "ref": "Context.html",
-                        "tf": 8.333333333333332
-                      }
-                    }
-                  }
-                },
-                "e": {
-                  "docs": {
-                    "Application.html": {
-                      "ref": "Application.html",
-                      "tf": 1.1627906976744187
-                    }
-                  }
-                }
-              },
               "p": {
                 "docs": {
                   "AugmentedObject.html#stopListening": {
@@ -8814,6 +8853,28 @@
                     }
                   }
                 }
+              },
+              "r": {
+                "docs": {},
+                "a": {
+                  "docs": {},
+                  "g": {
+                    "docs": {
+                      "Context.html": {
+                        "ref": "Context.html",
+                        "tf": 8.333333333333332
+                      }
+                    }
+                  }
+                },
+                "e": {
+                  "docs": {
+                    "Application.html": {
+                      "ref": "Application.html",
+                      "tf": 1.1627906976744187
+                    }
+                  }
+                }
               }
             },
             "a": {
@@ -8832,10 +8893,6 @@
                     },
                     "Stack.html#peek": {
                       "ref": "Stack.html#peek",
-                      "tf": 10
-                    },
-                    "Stack.html#toString": {
-                      "ref": "Stack.html#toString",
                       "tf": 10
                     },
                     "Stack.html#pop": {
@@ -8860,6 +8917,10 @@
                     },
                     "Stack.html#toArray": {
                       "ref": "Stack.html#toArray",
+                      "tf": 10
+                    },
+                    "Stack.html#toString": {
+                      "ref": "Stack.html#toString",
                       "tf": 10
                     }
                   },
@@ -8927,46 +8988,6 @@
                         }
                       }
                     },
-                    "t": {
-                      "docs": {},
-                      "o": {
-                        "docs": {},
-                        "s": {
-                          "docs": {},
-                          "t": {
-                            "docs": {},
-                            "r": {
-                              "docs": {
-                                "Stack.html#toString": {
-                                  "ref": "Stack.html#toString",
-                                  "tf": 1150
-                                }
-                              }
-                            }
-                          }
-                        },
-                        "a": {
-                          "docs": {},
-                          "r": {
-                            "docs": {},
-                            "r": {
-                              "docs": {},
-                              "a": {
-                                "docs": {},
-                                "y": {
-                                  "docs": {
-                                    "Stack.html#toArray": {
-                                      "ref": "Stack.html#toArray",
-                                      "tf": 1150
-                                    }
-                                  }
-                                }
-                              }
-                            }
-                          }
-                        }
-                      }
-                    },
                     "s": {
                       "docs": {},
                       "e": {
@@ -9013,6 +9034,46 @@
                               "docs": {
                                 "Stack.html#clear": {
                                   "ref": "Stack.html#clear",
+                                  "tf": 1150
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "t": {
+                      "docs": {},
+                      "o": {
+                        "docs": {},
+                        "a": {
+                          "docs": {},
+                          "r": {
+                            "docs": {},
+                            "r": {
+                              "docs": {},
+                              "a": {
+                                "docs": {},
+                                "y": {
+                                  "docs": {
+                                    "Stack.html#toArray": {
+                                      "ref": "Stack.html#toArray",
+                                      "tf": 1150
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "s": {
+                          "docs": {},
+                          "t": {
+                            "docs": {},
+                            "r": {
+                              "docs": {
+                                "Stack.html#toString": {
+                                  "ref": "Stack.html#toString",
                                   "tf": 1150
                                 }
                               }
@@ -9099,92 +9160,6 @@
               }
             }
           },
-          "u": {
-            "docs": {},
-            "p": {
-              "docs": {},
-              "p": {
-                "docs": {},
-                "o": {
-                  "docs": {},
-                  "r": {
-                    "docs": {},
-                    "t": {
-                      "docs": {
-                        "Stack.html": {
-                          "ref": "Stack.html",
-                          "tf": 5
-                        },
-                        "ValidationFramework.html#supportsValidation": {
-                          "ref": "ValidationFramework.html#supportsValidation",
-                          "tf": 12.5
-                        },
-                        "AbstractModel.html": {
-                          "ref": "AbstractModel.html",
-                          "tf": 10
-                        },
-                        "AbstractModel.html#supportsValidation": {
-                          "ref": "AbstractModel.html#supportsValidation",
-                          "tf": 8.333333333333332
-                        },
-                        "AbstractCollection.html": {
-                          "ref": "AbstractCollection.html",
-                          "tf": 7.142857142857142
-                        },
-                        "AbstractCollection.html#supportsValidation": {
-                          "ref": "AbstractCollection.html#supportsValidation",
-                          "tf": 8.333333333333332
-                        },
-                        "Application.html": {
-                          "ref": "Application.html",
-                          "tf": 1.1627906976744187
-                        }
-                      },
-                      "s": {
-                        "docs": {},
-                        "v": {
-                          "docs": {},
-                          "a": {
-                            "docs": {},
-                            "l": {
-                              "docs": {},
-                              "i": {
-                                "docs": {},
-                                "d": {
-                                  "docs": {
-                                    "ValidationFramework.html#supportsValidation": {
-                                      "ref": "ValidationFramework.html#supportsValidation",
-                                      "tf": 750
-                                    },
-                                    "AbstractModel.html#supportsValidation": {
-                                      "ref": "AbstractModel.html#supportsValidation",
-                                      "tf": 758.3333333333334
-                                    },
-                                    "AbstractCollection.html#supportsValidation": {
-                                      "ref": "AbstractCollection.html#supportsValidation",
-                                      "tf": 758.3333333333334
-                                    }
-                                  }
-                                }
-                              }
-                            }
-                          }
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-            },
-            "b": {
-              "docs": {
-                "AbstractCollection.html#slice": {
-                  "ref": "AbstractCollection.html#slice",
-                  "tf": 8.333333333333332
-                }
-              }
-            }
-          },
           "a": {
             "docs": {},
             "m": {
@@ -9193,11 +9168,11 @@
                 "docs": {
                   "AugmentedObject.html#trigger": {
                     "ref": "AugmentedObject.html#trigger",
-                    "tf": 1.8518518518518516
+                    "tf": 1.9230769230769231
                   },
                   "AbstractModel.html#trigger": {
                     "ref": "AbstractModel.html#trigger",
-                    "tf": 1.8518518518518516
+                    "tf": 1.9230769230769231
                   }
                 }
               }
@@ -9331,6 +9306,92 @@
               }
             }
           },
+          "u": {
+            "docs": {},
+            "p": {
+              "docs": {},
+              "p": {
+                "docs": {},
+                "o": {
+                  "docs": {},
+                  "r": {
+                    "docs": {},
+                    "t": {
+                      "docs": {
+                        "Stack.html": {
+                          "ref": "Stack.html",
+                          "tf": 5
+                        },
+                        "ValidationFramework.html#supportsValidation": {
+                          "ref": "ValidationFramework.html#supportsValidation",
+                          "tf": 12.5
+                        },
+                        "AbstractModel.html": {
+                          "ref": "AbstractModel.html",
+                          "tf": 10
+                        },
+                        "AbstractModel.html#supportsValidation": {
+                          "ref": "AbstractModel.html#supportsValidation",
+                          "tf": 8.333333333333332
+                        },
+                        "AbstractCollection.html": {
+                          "ref": "AbstractCollection.html",
+                          "tf": 7.142857142857142
+                        },
+                        "AbstractCollection.html#supportsValidation": {
+                          "ref": "AbstractCollection.html#supportsValidation",
+                          "tf": 8.333333333333332
+                        },
+                        "Application.html": {
+                          "ref": "Application.html",
+                          "tf": 1.1627906976744187
+                        }
+                      },
+                      "s": {
+                        "docs": {},
+                        "v": {
+                          "docs": {},
+                          "a": {
+                            "docs": {},
+                            "l": {
+                              "docs": {},
+                              "i": {
+                                "docs": {},
+                                "d": {
+                                  "docs": {
+                                    "ValidationFramework.html#supportsValidation": {
+                                      "ref": "ValidationFramework.html#supportsValidation",
+                                      "tf": 750
+                                    },
+                                    "AbstractModel.html#supportsValidation": {
+                                      "ref": "AbstractModel.html#supportsValidation",
+                                      "tf": 758.3333333333334
+                                    },
+                                    "AbstractCollection.html#supportsValidation": {
+                                      "ref": "AbstractCollection.html#supportsValidation",
+                                      "tf": 758.3333333333334
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "b": {
+              "docs": {
+                "AbstractCollection.html#slice": {
+                  "ref": "AbstractCollection.html#slice",
+                  "tf": 8.333333333333332
+                }
+              }
+            }
+          },
           "c": {
             "docs": {},
             "h": {
@@ -9344,14 +9405,6 @@
                       "ValidationFramework.html#registerSchema": {
                         "ref": "ValidationFramework.html#registerSchema",
                         "tf": 49.99999999999999
-                      },
-                      "ValidationFramework.html#getSchema": {
-                        "ref": "ValidationFramework.html#getSchema",
-                        "tf": 25
-                      },
-                      "ValidationFramework.html#getSchemas": {
-                        "ref": "ValidationFramework.html#getSchemas",
-                        "tf": 25
                       },
                       "ValidationFramework.html#clearSchemas": {
                         "ref": "ValidationFramework.html#clearSchemas",
@@ -9369,6 +9422,14 @@
                         "ref": "ValidationFramework.html#generateSchema",
                         "tf": 12.5
                       },
+                      "ValidationFramework.html#getSchema": {
+                        "ref": "ValidationFramework.html#getSchema",
+                        "tf": 25
+                      },
+                      "ValidationFramework.html#getSchemas": {
+                        "ref": "ValidationFramework.html#getSchemas",
+                        "tf": 25
+                      },
                       "AbstractModel.html": {
                         "ref": "AbstractModel.html",
                         "tf": 10
@@ -9380,62 +9441,6 @@
                       "AbstractCollection.html": {
                         "ref": "AbstractCollection.html",
                         "tf": 7.142857142857142
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "o": {
-            "docs": {},
-            "u": {
-              "docs": {},
-              "r": {
-                "docs": {},
-                "c": {
-                  "docs": {
-                    "Transformer.html#.transform": {
-                      "ref": "Transformer.html#.transform",
-                      "tf": 25
-                    },
-                    "Transformer.html#.isType": {
-                      "ref": "Transformer.html#.isType",
-                      "tf": 33.33333333333333
-                    }
-                  }
-                }
-              }
-            },
-            "r": {
-              "docs": {},
-              "t": {
-                "docs": {
-                  "AbstractCollection.html#sort": {
-                    "ref": "AbstractCollection.html#sort",
-                    "tf": 755.5555555555555
-                  },
-                  "AbstractCollection.html#sortByKey": {
-                    "ref": "AbstractCollection.html#sortByKey",
-                    "tf": 10
-                  }
-                },
-                "b": {
-                  "docs": {},
-                  "y": {
-                    "docs": {},
-                    "k": {
-                      "docs": {},
-                      "e": {
-                        "docs": {},
-                        "y": {
-                          "docs": {
-                            "AbstractCollection.html#sortByKey": {
-                              "ref": "AbstractCollection.html#sortByKey",
-                              "tf": 710
-                            }
-                          }
-                        }
                       }
                     }
                   }
@@ -9471,6 +9476,62 @@
                     "AbstractCollection.html#slice": {
                       "ref": "AbstractCollection.html#slice",
                       "tf": 758.3333333333334
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "o": {
+            "docs": {},
+            "r": {
+              "docs": {},
+              "t": {
+                "docs": {
+                  "AbstractCollection.html#sort": {
+                    "ref": "AbstractCollection.html#sort",
+                    "tf": 755.5555555555555
+                  },
+                  "AbstractCollection.html#sortByKey": {
+                    "ref": "AbstractCollection.html#sortByKey",
+                    "tf": 10
+                  }
+                },
+                "b": {
+                  "docs": {},
+                  "y": {
+                    "docs": {},
+                    "k": {
+                      "docs": {},
+                      "e": {
+                        "docs": {},
+                        "y": {
+                          "docs": {
+                            "AbstractCollection.html#sortByKey": {
+                              "ref": "AbstractCollection.html#sortByKey",
+                              "tf": 710
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "u": {
+              "docs": {},
+              "r": {
+                "docs": {},
+                "c": {
+                  "docs": {
+                    "Transformer.html#.transform": {
+                      "ref": "Transformer.html#.transform",
+                      "tf": 25
+                    },
+                    "Transformer.html#.isType": {
+                      "ref": "Transformer.html#.isType",
+                      "tf": 33.33333333333333
                     }
                   }
                 }
@@ -9949,21 +10010,25 @@
                       "ref": "AugmentedMap.html",
                       "tf": 110
                     },
-                    "LoggerFactory.html": {
-                      "ref": "LoggerFactory.html",
+                    "AbstractLogger.html": {
+                      "ref": "AbstractLogger.html",
                       "tf": 110
                     },
                     "Principal.html": {
                       "ref": "Principal.html",
                       "tf": 110
                     },
-                    "AbstractLogger.html": {
-                      "ref": "AbstractLogger.html",
-                      "tf": 110
-                    },
                     "ConsoleLogger.html": {
                       "ref": "ConsoleLogger.html",
                       "tf": 110
+                    },
+                    "LoggerFactory.html": {
+                      "ref": "LoggerFactory.html",
+                      "tf": 110
+                    },
+                    "AugmentedObject.html": {
+                      "ref": "AugmentedObject.html",
+                      "tf": 126.66666666666666
                     },
                     "Context.html": {
                       "ref": "Context.html",
@@ -9973,13 +10038,13 @@
                       "ref": "Stack.html",
                       "tf": 110
                     },
+                    "Logger.BasicLogger.html": {
+                      "ref": "Logger.BasicLogger.html",
+                      "tf": 110
+                    },
                     "Logger.ColorConsoleLogger.html": {
                       "ref": "Logger.ColorConsoleLogger.html",
                       "tf": 110
-                    },
-                    "AugmentedObject.html": {
-                      "ref": "AugmentedObject.html",
-                      "tf": 126.66666666666666
                     },
                     "AbstractSecurityClient.html": {
                       "ref": "AbstractSecurityClient.html",
@@ -10005,10 +10070,6 @@
                       "ref": "ResourceBundle.html",
                       "tf": 110
                     },
-                    "Transformer.html": {
-                      "ref": "Transformer.html",
-                      "tf": 110
-                    },
                     "AbstractModel.html": {
                       "ref": "AbstractModel.html",
                       "tf": 110
@@ -10027,6 +10088,10 @@
                     },
                     "MessageKeyFormatter.html": {
                       "ref": "MessageKeyFormatter.html",
+                      "tf": 110
+                    },
+                    "Transformer.html": {
+                      "ref": "Transformer.html",
                       "tf": 110
                     }
                   }
@@ -10289,11 +10354,19 @@
                   "docs": {
                     "AbstractModel.html#set": {
                       "ref": "AbstractModel.html#set",
-                      "tf": 2.631578947368421
+                      "tf": 5.263157894736842
+                    },
+                    "AbstractModel.html#unset": {
+                      "ref": "AbstractModel.html#unset",
+                      "tf": 5
+                    },
+                    "AbstractModel.html#clear": {
+                      "ref": "AbstractModel.html#clear",
+                      "tf": 10
                     },
                     "AbstractModel.html#fetch": {
                       "ref": "AbstractModel.html#fetch",
-                      "tf": 3.8461538461538463
+                      "tf": 7.6923076923076925
                     },
                     "AbstractModel.html#url": {
                       "ref": "AbstractModel.html#url",
@@ -10301,11 +10374,19 @@
                     },
                     "AbstractModel.html#hasChanged": {
                       "ref": "AbstractModel.html#hasChanged",
-                      "tf": 8.333333333333332
+                      "tf": 12.5
                     },
                     "AbstractModel.html#changedAttributes": {
                       "ref": "AbstractModel.html#changedAttributes",
                       "tf": 4.838709677419355
+                    },
+                    "AbstractModel.html#previous": {
+                      "ref": "AbstractModel.html#previous",
+                      "tf": 5.555555555555555
+                    },
+                    "AbstractModel.html#previousAttributes": {
+                      "ref": "AbstractModel.html#previousAttributes",
+                      "tf": 8.333333333333332
                     }
                   },
                   "e": {
@@ -10347,39 +10428,6 @@
               }
             }
           },
-          "r": {
-            "docs": {},
-            "e": {
-              "docs": {},
-              "a": {
-                "docs": {},
-                "t": {
-                  "docs": {
-                    "LoggerFactory.html": {
-                      "ref": "LoggerFactory.html",
-                      "tf": 10
-                    },
-                    "AbstractModel.html#clone": {
-                      "ref": "AbstractModel.html#clone",
-                      "tf": 8.333333333333332
-                    },
-                    "AbstractModel.html#save": {
-                      "ref": "AbstractModel.html#save",
-                      "tf": 12.5
-                    },
-                    "AbstractCollection.html#create": {
-                      "ref": "AbstractCollection.html#create",
-                      "tf": 752.9411764705883
-                    },
-                    "AbstractCollection.html#clone": {
-                      "ref": "AbstractCollection.html#clone",
-                      "tf": 7.142857142857142
-                    }
-                  }
-                }
-              }
-            }
-          },
           "o": {
             "docs": {},
             "n": {
@@ -10393,6 +10441,10 @@
                       "ConsoleLogger.html": {
                         "ref": "ConsoleLogger.html",
                         "tf": 25
+                      },
+                      "Logger.BasicLogger.html": {
+                        "ref": "Logger.BasicLogger.html",
+                        "tf": 8.333333333333332
                       },
                       "Logger.ColorConsoleLogger.html": {
                         "ref": "Logger.ColorConsoleLogger.html",
@@ -10527,14 +10579,6 @@
                     "docs": {},
                     "t": {
                       "docs": {
-                        "Context.html": {
-                          "ref": "Context.html",
-                          "tf": 1900
-                        },
-                        "Context.html#principal": {
-                          "ref": "Context.html#principal",
-                          "tf": 16.666666666666664
-                        },
                         "AugmentedObject.html#once": {
                           "ref": "AugmentedObject.html#once",
                           "tf": 25
@@ -10546,6 +10590,14 @@
                         "AugmentedObject.html#on": {
                           "ref": "AugmentedObject.html#on",
                           "tf": 33.33333333333333
+                        },
+                        "Context.html": {
+                          "ref": "Context.html",
+                          "tf": 1900
+                        },
+                        "Context.html#principal": {
+                          "ref": "Context.html#principal",
+                          "tf": 16.666666666666664
                         },
                         "AbstractModel.html#once": {
                           "ref": "AbstractModel.html#once",
@@ -10818,6 +10870,45 @@
                             "tf": 2.631578947368421
                           }
                         }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "m": {
+              "docs": {},
+              "b": {
+                "docs": {},
+                "i": {
+                  "docs": {},
+                  "n": {
+                    "docs": {
+                      "AugmentedObject.html#once": {
+                        "ref": "AugmentedObject.html#once",
+                        "tf": 1.9230769230769231
+                      },
+                      "AbstractModel.html#once": {
+                        "ref": "AbstractModel.html#once",
+                        "tf": 1.9230769230769231
+                      },
+                      "AbstractCollection.html#add": {
+                        "ref": "AbstractCollection.html#add",
+                        "tf": 3.571428571428571
+                      }
+                    }
+                  }
+                }
+              },
+              "p": {
+                "docs": {},
+                "o": {
+                  "docs": {},
+                  "n": {
+                    "docs": {
+                      "module-Augmented.html": {
+                        "ref": "module-Augmented.html",
+                        "tf": 12.5
                       }
                     }
                   }
@@ -11257,45 +11348,6 @@
                 }
               }
             },
-            "m": {
-              "docs": {},
-              "b": {
-                "docs": {},
-                "i": {
-                  "docs": {},
-                  "n": {
-                    "docs": {
-                      "AugmentedObject.html#once": {
-                        "ref": "AugmentedObject.html#once",
-                        "tf": 1.9230769230769231
-                      },
-                      "AbstractModel.html#once": {
-                        "ref": "AbstractModel.html#once",
-                        "tf": 1.9230769230769231
-                      },
-                      "AbstractCollection.html#add": {
-                        "ref": "AbstractCollection.html#add",
-                        "tf": 3.571428571428571
-                      }
-                    }
-                  }
-                }
-              },
-              "p": {
-                "docs": {},
-                "o": {
-                  "docs": {},
-                  "n": {
-                    "docs": {
-                      "module-Augmented.html": {
-                        "ref": "module-Augmented.html",
-                        "tf": 12.5
-                      }
-                    }
-                  }
-                }
-              }
-            },
             "r": {
               "docs": {},
               "e": {
@@ -11311,6 +11363,43 @@
                   "module-Augmented.html": {
                     "ref": "module-Augmented.html",
                     "tf": 12.5
+                  }
+                }
+              }
+            }
+          },
+          "r": {
+            "docs": {},
+            "e": {
+              "docs": {},
+              "a": {
+                "docs": {},
+                "t": {
+                  "docs": {
+                    "LoggerFactory.html": {
+                      "ref": "LoggerFactory.html",
+                      "tf": 10
+                    },
+                    "AbstractModel.html#clone": {
+                      "ref": "AbstractModel.html#clone",
+                      "tf": 8.333333333333332
+                    },
+                    "AbstractModel.html#save": {
+                      "ref": "AbstractModel.html#save",
+                      "tf": 12.5
+                    },
+                    "AbstractCollection.html#create": {
+                      "ref": "AbstractCollection.html#create",
+                      "tf": 752.9411764705883
+                    },
+                    "AbstractCollection.html#clone": {
+                      "ref": "AbstractCollection.html#clone",
+                      "tf": 7.142857142857142
+                    },
+                    "AbstractCollection.html#save": {
+                      "ref": "AbstractCollection.html#save",
+                      "tf": 12.5
+                    }
                   }
                 }
               }
@@ -11349,7 +11438,7 @@
                         "docs": {
                           "AugmentedObject.html#trigger": {
                             "ref": "AugmentedObject.html#trigger",
-                            "tf": 5.555555555555555
+                            "tf": 5.769230769230769
                           },
                           "AugmentedObject.html#once": {
                             "ref": "AugmentedObject.html#once",
@@ -11365,7 +11454,7 @@
                           },
                           "AugmentedObject.html#on": {
                             "ref": "AugmentedObject.html#on",
-                            "tf": 43.33333333333333
+                            "tf": 44.44444444444444
                           },
                           "AugmentedObject.html#listenTo": {
                             "ref": "AugmentedObject.html#listenTo",
@@ -11377,7 +11466,7 @@
                           },
                           "AbstractModel.html#trigger": {
                             "ref": "AbstractModel.html#trigger",
-                            "tf": 5.555555555555555
+                            "tf": 5.769230769230769
                           },
                           "AbstractModel.html#once": {
                             "ref": "AbstractModel.html#once",
@@ -11393,7 +11482,7 @@
                           },
                           "AbstractModel.html#on": {
                             "ref": "AbstractModel.html#on",
-                            "tf": 43.33333333333333
+                            "tf": 44.44444444444444
                           },
                           "AbstractModel.html#listenTo": {
                             "ref": "AbstractModel.html#listenTo",
@@ -11416,11 +11505,11 @@
                 "docs": {
                   "AugmentedObject.html#trigger": {
                     "ref": "AugmentedObject.html#trigger",
-                    "tf": 1.8518518518518516
+                    "tf": 1.9230769230769231
                   },
                   "AbstractModel.html#trigger": {
                     "ref": "AbstractModel.html#trigger",
-                    "tf": 1.8518518518518516
+                    "tf": 1.9230769230769231
                   }
                 }
               }
@@ -11634,7 +11723,7 @@
                     "docs": {
                       "AugmentedObject.html#trigger": {
                         "ref": "AugmentedObject.html#trigger",
-                        "tf": 1.8518518518518516
+                        "tf": 1.9230769230769231
                       },
                       "AugmentedObject.html#once": {
                         "ref": "AugmentedObject.html#once",
@@ -11650,7 +11739,7 @@
                       },
                       "AbstractModel.html#trigger": {
                         "ref": "AbstractModel.html#trigger",
-                        "tf": 1.8518518518518516
+                        "tf": 1.9230769230769231
                       },
                       "AbstractModel.html#once": {
                         "ref": "AbstractModel.html#once",
@@ -11771,6 +11860,26 @@
                   "ref": "ConsoleLogger.html#warn",
                   "tf": 12.5
                 },
+                "Logger.BasicLogger.html#log": {
+                  "ref": "Logger.BasicLogger.html#log",
+                  "tf": 645.8333333333334
+                },
+                "Logger.BasicLogger.html#info": {
+                  "ref": "Logger.BasicLogger.html#info",
+                  "tf": 12.5
+                },
+                "Logger.BasicLogger.html#error": {
+                  "ref": "Logger.BasicLogger.html#error",
+                  "tf": 12.5
+                },
+                "Logger.BasicLogger.html#debug": {
+                  "ref": "Logger.BasicLogger.html#debug",
+                  "tf": 12.5
+                },
+                "Logger.BasicLogger.html#warn": {
+                  "ref": "Logger.BasicLogger.html#warn",
+                  "tf": 12.5
+                },
                 "Logger.ColorConsoleLogger.html#log": {
                   "ref": "Logger.ColorConsoleLogger.html#log",
                   "tf": 645.8333333333334
@@ -11798,6 +11907,14 @@
                   "docs": {},
                   "r": {
                     "docs": {
+                      "AbstractLogger.html": {
+                        "ref": "AbstractLogger.html",
+                        "tf": 16.666666666666664
+                      },
+                      "ConsoleLogger.html": {
+                        "ref": "ConsoleLogger.html",
+                        "tf": 25
+                      },
                       "LoggerFactory.html": {
                         "ref": "LoggerFactory.html",
                         "tf": 20
@@ -11806,13 +11923,9 @@
                         "ref": "LoggerFactory.html#.getLogger",
                         "tf": 16.666666666666664
                       },
-                      "AbstractLogger.html": {
-                        "ref": "AbstractLogger.html",
-                        "tf": 16.666666666666664
-                      },
-                      "ConsoleLogger.html": {
-                        "ref": "ConsoleLogger.html",
-                        "tf": 25
+                      "Logger.BasicLogger.html": {
+                        "ref": "Logger.BasicLogger.html",
+                        "tf": 8.333333333333332
                       },
                       "Logger.ColorConsoleLogger.html": {
                         "ref": "Logger.ColorConsoleLogger.html",
@@ -11883,6 +11996,135 @@
                     },
                     ".": {
                       "docs": {},
+                      "b": {
+                        "docs": {},
+                        "a": {
+                          "docs": {},
+                          "s": {
+                            "docs": {},
+                            "i": {
+                              "docs": {},
+                              "c": {
+                                "docs": {},
+                                "l": {
+                                  "docs": {},
+                                  "o": {
+                                    "docs": {},
+                                    "g": {
+                                      "docs": {},
+                                      "g": {
+                                        "docs": {
+                                          "Logger.BasicLogger.html": {
+                                            "ref": "Logger.BasicLogger.html",
+                                            "tf": 1150
+                                          }
+                                        },
+                                        "e": {
+                                          "docs": {},
+                                          "r": {
+                                            "docs": {},
+                                            "#": {
+                                              "docs": {},
+                                              "l": {
+                                                "docs": {},
+                                                "o": {
+                                                  "docs": {},
+                                                  "g": {
+                                                    "docs": {
+                                                      "Logger.BasicLogger.html#log": {
+                                                        "ref": "Logger.BasicLogger.html#log",
+                                                        "tf": 1100
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              },
+                                              "i": {
+                                                "docs": {},
+                                                "n": {
+                                                  "docs": {},
+                                                  "f": {
+                                                    "docs": {},
+                                                    "o": {
+                                                      "docs": {
+                                                        "Logger.BasicLogger.html#info": {
+                                                          "ref": "Logger.BasicLogger.html#info",
+                                                          "tf": 1100
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              },
+                                              "e": {
+                                                "docs": {},
+                                                "r": {
+                                                  "docs": {},
+                                                  "r": {
+                                                    "docs": {},
+                                                    "o": {
+                                                      "docs": {},
+                                                      "r": {
+                                                        "docs": {
+                                                          "Logger.BasicLogger.html#error": {
+                                                            "ref": "Logger.BasicLogger.html#error",
+                                                            "tf": 1100
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              },
+                                              "d": {
+                                                "docs": {},
+                                                "e": {
+                                                  "docs": {},
+                                                  "b": {
+                                                    "docs": {},
+                                                    "u": {
+                                                      "docs": {},
+                                                      "g": {
+                                                        "docs": {
+                                                          "Logger.BasicLogger.html#debug": {
+                                                            "ref": "Logger.BasicLogger.html#debug",
+                                                            "tf": 1100
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              },
+                                              "w": {
+                                                "docs": {},
+                                                "a": {
+                                                  "docs": {},
+                                                  "r": {
+                                                    "docs": {},
+                                                    "n": {
+                                                      "docs": {
+                                                        "Logger.BasicLogger.html#warn": {
+                                                          "ref": "Logger.BasicLogger.html#warn",
+                                                          "tf": 1100
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      },
                       "c": {
                         "docs": {},
                         "o": {
@@ -12085,6 +12327,110 @@
               }
             }
           },
+          "t": {
+            "docs": {},
+            ";": {
+              "docs": {},
+              "a": {
+                "docs": {},
+                "b": {
+                  "docs": {},
+                  "s": {
+                    "docs": {},
+                    "t": {
+                      "docs": {},
+                      "r": {
+                        "docs": {},
+                        "a": {
+                          "docs": {},
+                          "c": {
+                            "docs": {},
+                            "t": {
+                              "docs": {},
+                              "&": {
+                                "docs": {},
+                                "g": {
+                                  "docs": {},
+                                  "t": {
+                                    "docs": {
+                                      "AbstractLogger.html": {
+                                        "ref": "AbstractLogger.html",
+                                        "tf": 50
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "s": {
+                "docs": {},
+                "t": {
+                  "docs": {},
+                  "a": {
+                    "docs": {},
+                    "t": {
+                      "docs": {},
+                      "i": {
+                        "docs": {},
+                        "c": {
+                          "docs": {},
+                          "&": {
+                            "docs": {},
+                            "g": {
+                              "docs": {},
+                              "t": {
+                                "docs": {
+                                  "LoggerFactory.html#.getLogger": {
+                                    "ref": "LoggerFactory.html#.getLogger",
+                                    "tf": 25
+                                  },
+                                  "AuthenticationFactory.html#.getSecurityClient": {
+                                    "ref": "AuthenticationFactory.html#.getSecurityClient",
+                                    "tf": 33.33333333333333
+                                  },
+                                  "ResourceBundle.html#.getBundle": {
+                                    "ref": "ResourceBundle.html#.getBundle",
+                                    "tf": 33.33333333333333
+                                  },
+                                  "ResourceBundle.html#.getString": {
+                                    "ref": "ResourceBundle.html#.getString",
+                                    "tf": 50
+                                  },
+                                  "MessageReader.html#.getMessage": {
+                                    "ref": "MessageReader.html#.getMessage",
+                                    "tf": 33.33333333333333
+                                  },
+                                  "MessageKeyFormatter.html#.format": {
+                                    "ref": "MessageKeyFormatter.html#.format",
+                                    "tf": 33.33333333333333
+                                  },
+                                  "Transformer.html#.transform": {
+                                    "ref": "Transformer.html#.transform",
+                                    "tf": 25
+                                  },
+                                  "Transformer.html#.isType": {
+                                    "ref": "Transformer.html#.isType",
+                                    "tf": 33.33333333333333
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
           "e": {
             "docs": {},
             "v": {
@@ -12093,10 +12439,6 @@
                 "docs": {},
                 "l": {
                   "docs": {
-                    "LoggerFactory.html#.getLogger": {
-                      "ref": "LoggerFactory.html#.getLogger",
-                      "tf": 25
-                    },
                     "AbstractLogger.html#log": {
                       "ref": "AbstractLogger.html#log",
                       "tf": 45.83333333333333
@@ -12137,6 +12479,34 @@
                       "ref": "ConsoleLogger.html#warn",
                       "tf": 12.5
                     },
+                    "LoggerFactory.html#.getLogger": {
+                      "ref": "LoggerFactory.html#.getLogger",
+                      "tf": 25
+                    },
+                    "Logger.BasicLogger.html": {
+                      "ref": "Logger.BasicLogger.html",
+                      "tf": 8.333333333333332
+                    },
+                    "Logger.BasicLogger.html#log": {
+                      "ref": "Logger.BasicLogger.html#log",
+                      "tf": 45.83333333333333
+                    },
+                    "Logger.BasicLogger.html#info": {
+                      "ref": "Logger.BasicLogger.html#info",
+                      "tf": 12.5
+                    },
+                    "Logger.BasicLogger.html#error": {
+                      "ref": "Logger.BasicLogger.html#error",
+                      "tf": 12.5
+                    },
+                    "Logger.BasicLogger.html#debug": {
+                      "ref": "Logger.BasicLogger.html#debug",
+                      "tf": 12.5
+                    },
+                    "Logger.BasicLogger.html#warn": {
+                      "ref": "Logger.BasicLogger.html#warn",
+                      "tf": 12.5
+                    },
                     "Logger.ColorConsoleLogger.html#log": {
                       "ref": "Logger.ColorConsoleLogger.html#log",
                       "tf": 45.83333333333333
@@ -12160,110 +12530,6 @@
                     "AbstractModel.html#isValid": {
                       "ref": "AbstractModel.html#isValid",
                       "tf": 7.6923076923076925
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "t": {
-            "docs": {},
-            ";": {
-              "docs": {},
-              "s": {
-                "docs": {},
-                "t": {
-                  "docs": {},
-                  "a": {
-                    "docs": {},
-                    "t": {
-                      "docs": {},
-                      "i": {
-                        "docs": {},
-                        "c": {
-                          "docs": {},
-                          "&": {
-                            "docs": {},
-                            "g": {
-                              "docs": {},
-                              "t": {
-                                "docs": {
-                                  "LoggerFactory.html#.getLogger": {
-                                    "ref": "LoggerFactory.html#.getLogger",
-                                    "tf": 25
-                                  },
-                                  "AuthenticationFactory.html#.getSecurityClient": {
-                                    "ref": "AuthenticationFactory.html#.getSecurityClient",
-                                    "tf": 33.33333333333333
-                                  },
-                                  "ResourceBundle.html#.getBundle": {
-                                    "ref": "ResourceBundle.html#.getBundle",
-                                    "tf": 33.33333333333333
-                                  },
-                                  "ResourceBundle.html#.getString": {
-                                    "ref": "ResourceBundle.html#.getString",
-                                    "tf": 50
-                                  },
-                                  "Transformer.html#.transform": {
-                                    "ref": "Transformer.html#.transform",
-                                    "tf": 25
-                                  },
-                                  "Transformer.html#.isType": {
-                                    "ref": "Transformer.html#.isType",
-                                    "tf": 33.33333333333333
-                                  },
-                                  "MessageReader.html#.getMessage": {
-                                    "ref": "MessageReader.html#.getMessage",
-                                    "tf": 33.33333333333333
-                                  },
-                                  "MessageKeyFormatter.html#.format": {
-                                    "ref": "MessageKeyFormatter.html#.format",
-                                    "tf": 33.33333333333333
-                                  }
-                                }
-                              }
-                            }
-                          }
-                        }
-                      }
-                    }
-                  }
-                }
-              },
-              "a": {
-                "docs": {},
-                "b": {
-                  "docs": {},
-                  "s": {
-                    "docs": {},
-                    "t": {
-                      "docs": {},
-                      "r": {
-                        "docs": {},
-                        "a": {
-                          "docs": {},
-                          "c": {
-                            "docs": {},
-                            "t": {
-                              "docs": {},
-                              "&": {
-                                "docs": {},
-                                "g": {
-                                  "docs": {},
-                                  "t": {
-                                    "docs": {
-                                      "AbstractLogger.html": {
-                                        "ref": "AbstractLogger.html",
-                                        "tf": 50
-                                      }
-                                    }
-                                  }
-                                }
-                              }
-                            }
-                          }
-                        }
-                      }
                     }
                   }
                 }
@@ -12533,6 +12799,10 @@
                       "ref": "AbstractModel.html#update",
                       "tf": 12.5
                     },
+                    "AbstractCollection.html#toJSON": {
+                      "ref": "AbstractCollection.html#toJSON",
+                      "tf": 8.333333333333332
+                    },
                     "AbstractCollection.html#add": {
                       "ref": "AbstractCollection.html#add",
                       "tf": 17.857142857142858
@@ -12646,29 +12916,6 @@
                       }
                     }
                   },
-                  "s": {
-                    "docs": {},
-                    "&": {
-                      "docs": {},
-                      "q": {
-                        "docs": {},
-                        "u": {
-                          "docs": {},
-                          "o": {
-                            "docs": {},
-                            "t": {
-                              "docs": {
-                                "AbstractCollection.html#toJSON": {
-                                  "ref": "AbstractCollection.html#toJSON",
-                                  "tf": 8.333333333333332
-                                }
-                              }
-                            }
-                          }
-                        }
-                      }
-                    }
-                  },
                   "#": {
                     "docs": {},
                     "s": {
@@ -12741,20 +12988,20 @@
                         "ref": "Entry.html#permissions",
                         "tf": 110
                       },
-                      "Context.html#principal": {
-                        "ref": "Context.html#principal",
-                        "tf": 110
-                      },
-                      "Context.html#permissions": {
-                        "ref": "Context.html#permissions",
-                        "tf": 110
-                      },
                       "AugmentedObject.html#options": {
                         "ref": "AugmentedObject.html#options",
                         "tf": 110
                       },
                       "AugmentedObject.html#events": {
                         "ref": "AugmentedObject.html#events",
+                        "tf": 110
+                      },
+                      "Context.html#principal": {
+                        "ref": "Context.html#principal",
+                        "tf": 110
+                      },
+                      "Context.html#permissions": {
+                        "ref": "Context.html#permissions",
                         "tf": 110
                       },
                       "AbstractSecurityClient.html#uri": {
@@ -12852,6 +13099,26 @@
                       },
                       "ConsoleLogger.html#warn": {
                         "ref": "ConsoleLogger.html#warn",
+                        "tf": 62.5
+                      },
+                      "Logger.BasicLogger.html#log": {
+                        "ref": "Logger.BasicLogger.html#log",
+                        "tf": 45.83333333333333
+                      },
+                      "Logger.BasicLogger.html#info": {
+                        "ref": "Logger.BasicLogger.html#info",
+                        "tf": 62.5
+                      },
+                      "Logger.BasicLogger.html#error": {
+                        "ref": "Logger.BasicLogger.html#error",
+                        "tf": 62.5
+                      },
+                      "Logger.BasicLogger.html#debug": {
+                        "ref": "Logger.BasicLogger.html#debug",
+                        "tf": 62.5
+                      },
+                      "Logger.BasicLogger.html#warn": {
+                        "ref": "Logger.BasicLogger.html#warn",
                         "tf": 62.5
                       },
                       "Logger.ColorConsoleLogger.html#log": {
@@ -13095,10 +13362,6 @@
                         "ref": "Stack.html#peek",
                         "tf": 10
                       },
-                      "Stack.html#toString": {
-                        "ref": "Stack.html#toString",
-                        "tf": 10
-                      },
                       "Stack.html#pop": {
                         "ref": "Stack.html#pop",
                         "tf": 8.333333333333332
@@ -13121,6 +13384,10 @@
                       },
                       "Stack.html#toArray": {
                         "ref": "Stack.html#toArray",
+                        "tf": 10
+                      },
+                      "Stack.html#toString": {
+                        "ref": "Stack.html#toString",
                         "tf": 10
                       },
                       "AsynchronousQueue.html#add": {
@@ -13296,7 +13563,7 @@
                 "docs": {
                   "AugmentedObject.html#trigger": {
                     "ref": "AugmentedObject.html#trigger",
-                    "tf": 1.8518518518518516
+                    "tf": 1.9230769230769231
                   },
                   "AugmentedObject.html#off": {
                     "ref": "AugmentedObject.html#off",
@@ -13304,7 +13571,7 @@
                   },
                   "AbstractModel.html#trigger": {
                     "ref": "AbstractModel.html#trigger",
-                    "tf": 1.8518518518518516
+                    "tf": 1.9230769230769231
                   },
                   "AbstractModel.html#off": {
                     "ref": "AbstractModel.html#off",
@@ -13761,6 +14028,17 @@
                     }
                   }
                 }
+              },
+              "r": {
+                "docs": {},
+                "a": {
+                  "docs": {
+                    "Logger.BasicLogger.html": {
+                      "ref": "Logger.BasicLogger.html",
+                      "tf": 8.333333333333332
+                    }
+                  }
+                }
               }
             },
             "h": {
@@ -13829,6 +14107,10 @@
                       "ref": "ConsoleLogger.html#error",
                       "tf": 712.5
                     },
+                    "Logger.BasicLogger.html#error": {
+                      "ref": "Logger.BasicLogger.html#error",
+                      "tf": 662.5
+                    },
                     "Logger.ColorConsoleLogger.html#error": {
                       "ref": "Logger.ColorConsoleLogger.html#error",
                       "tf": 662.5
@@ -13852,7 +14134,7 @@
                     },
                     "AugmentedObject.html#trigger": {
                       "ref": "AugmentedObject.html#trigger",
-                      "tf": 5.555555555555555
+                      "tf": 5.769230769230769
                     },
                     "AugmentedObject.html#once": {
                       "ref": "AugmentedObject.html#once",
@@ -13868,7 +14150,7 @@
                     },
                     "AugmentedObject.html#on": {
                       "ref": "AugmentedObject.html#on",
-                      "tf": 10
+                      "tf": 11.11111111111111
                     },
                     "AugmentedObject.html#listenTo": {
                       "ref": "AugmentedObject.html#listenTo",
@@ -13880,7 +14162,7 @@
                     },
                     "AbstractModel.html#trigger": {
                       "ref": "AbstractModel.html#trigger",
-                      "tf": 5.555555555555555
+                      "tf": 5.769230769230769
                     },
                     "AbstractModel.html#once": {
                       "ref": "AbstractModel.html#once",
@@ -13896,7 +14178,7 @@
                     },
                     "AbstractModel.html#on": {
                       "ref": "AbstractModel.html#on",
-                      "tf": 10
+                      "tf": 11.11111111111111
                     },
                     "AbstractModel.html#listenTo": {
                       "ref": "AbstractModel.html#listenTo",
@@ -14156,7 +14438,7 @@
                   },
                   "AugmentedObject.html#trigger": {
                     "ref": "AugmentedObject.html#trigger",
-                    "tf": 1.8518518518518516
+                    "tf": 1.9230769230769231
                   },
                   "AugmentedObject.html#once": {
                     "ref": "AugmentedObject.html#once",
@@ -14164,11 +14446,7 @@
                   },
                   "AugmentedObject.html#on": {
                     "ref": "AugmentedObject.html#on",
-                    "tf": 5
-                  },
-                  "Transformer.html#.isType": {
-                    "ref": "Transformer.html#.isType",
-                    "tf": 12.5
+                    "tf": 5.555555555555555
                   },
                   "AbstractModel.html#options": {
                     "ref": "AbstractModel.html#options",
@@ -14176,7 +14454,7 @@
                   },
                   "AbstractModel.html#trigger": {
                     "ref": "AbstractModel.html#trigger",
-                    "tf": 1.8518518518518516
+                    "tf": 1.9230769230769231
                   },
                   "AbstractModel.html#once": {
                     "ref": "AbstractModel.html#once",
@@ -14184,7 +14462,7 @@
                   },
                   "AbstractModel.html#on": {
                     "ref": "AbstractModel.html#on",
-                    "tf": 5
+                    "tf": 5.555555555555555
                   },
                   "AbstractModel.html#destroy": {
                     "ref": "AbstractModel.html#destroy",
@@ -14209,6 +14487,10 @@
                   "AbstractCollection.html#parse": {
                     "ref": "AbstractCollection.html#parse",
                     "tf": 4.545454545454546
+                  },
+                  "Transformer.html#.isType": {
+                    "ref": "Transformer.html#.isType",
+                    "tf": 12.5
                   }
                 },
                 "w": {
@@ -14378,13 +14660,13 @@
                   "docs": {},
                   "t": {
                     "docs": {
-                      "Transformer.html#.transform": {
-                        "ref": "Transformer.html#.transform",
-                        "tf": 12.5
-                      },
                       "AbstractModel.html#set": {
                         "ref": "AbstractModel.html#set",
                         "tf": 2.631578947368421
+                      },
+                      "Transformer.html#.transform": {
+                        "ref": "Transformer.html#.transform",
+                        "tf": 12.5
                       }
                     }
                   }
@@ -14691,13 +14973,13 @@
                 "ref": "Principal.html",
                 "tf": 7.142857142857142
               },
-              "Context.html": {
-                "ref": "Context.html",
-                "tf": 8.333333333333332
-              },
               "AugmentedObject.html#once": {
                 "ref": "AugmentedObject.html#once",
                 "tf": 1.9230769230769231
+              },
+              "Context.html": {
+                "ref": "Context.html",
+                "tf": 8.333333333333332
               },
               "AbstractSecurityClient.html": {
                 "ref": "AbstractSecurityClient.html",
@@ -14778,11 +15060,11 @@
                     "docs": {
                       "AugmentedObject.html#trigger": {
                         "ref": "AugmentedObject.html#trigger",
-                        "tf": 1.8518518518518516
+                        "tf": 1.9230769230769231
                       },
                       "AbstractModel.html#trigger": {
                         "ref": "AbstractModel.html#trigger",
-                        "tf": 1.8518518518518516
+                        "tf": 1.9230769230769231
                       },
                       "AbstractCollection.html#create": {
                         "ref": "AbstractCollection.html#create",
@@ -14960,7 +15242,7 @@
                     },
                     "AbstractCollection.html#update": {
                       "ref": "AbstractCollection.html#update",
-                      "tf": 762.5
+                      "tf": 775
                     }
                   }
                 }
@@ -15263,31 +15545,33 @@
                                                     }
                                                   }
                                                 },
-                                                "g": {
+                                                "c": {
                                                   "docs": {},
-                                                  "e": {
+                                                  "l": {
                                                     "docs": {},
-                                                    "t": {
+                                                    "e": {
                                                       "docs": {},
-                                                      "s": {
+                                                      "a": {
                                                         "docs": {},
-                                                        "c": {
+                                                        "r": {
                                                           "docs": {},
-                                                          "h": {
+                                                          "s": {
                                                             "docs": {},
-                                                            "e": {
+                                                            "c": {
                                                               "docs": {},
-                                                              "m": {
+                                                              "h": {
                                                                 "docs": {},
-                                                                "a": {
-                                                                  "docs": {
-                                                                    "ValidationFramework.html#getSchema": {
-                                                                      "ref": "ValidationFramework.html#getSchema",
-                                                                      "tf": 1150
-                                                                    },
-                                                                    "ValidationFramework.html#getSchemas": {
-                                                                      "ref": "ValidationFramework.html#getSchemas",
-                                                                      "tf": 1150
+                                                                "e": {
+                                                                  "docs": {},
+                                                                  "m": {
+                                                                    "docs": {},
+                                                                    "a": {
+                                                                      "docs": {
+                                                                        "ValidationFramework.html#clearSchemas": {
+                                                                          "ref": "ValidationFramework.html#clearSchemas",
+                                                                          "tf": 1150
+                                                                        }
+                                                                      }
                                                                     }
                                                                   }
                                                                 }
@@ -15295,7 +15579,36 @@
                                                             }
                                                           }
                                                         }
-                                                      },
+                                                      }
+                                                    }
+                                                  }
+                                                },
+                                                "v": {
+                                                  "docs": {},
+                                                  "a": {
+                                                    "docs": {},
+                                                    "l": {
+                                                      "docs": {},
+                                                      "i": {
+                                                        "docs": {},
+                                                        "d": {
+                                                          "docs": {
+                                                            "ValidationFramework.html#validate": {
+                                                              "ref": "ValidationFramework.html#validate",
+                                                              "tf": 1150
+                                                            }
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                },
+                                                "g": {
+                                                  "docs": {},
+                                                  "e": {
+                                                    "docs": {},
+                                                    "t": {
+                                                      "docs": {},
                                                       "v": {
                                                         "docs": {},
                                                         "a": {
@@ -15348,6 +15661,33 @@
                                                             }
                                                           }
                                                         }
+                                                      },
+                                                      "s": {
+                                                        "docs": {},
+                                                        "c": {
+                                                          "docs": {},
+                                                          "h": {
+                                                            "docs": {},
+                                                            "e": {
+                                                              "docs": {},
+                                                              "m": {
+                                                                "docs": {},
+                                                                "a": {
+                                                                  "docs": {
+                                                                    "ValidationFramework.html#getSchema": {
+                                                                      "ref": "ValidationFramework.html#getSchema",
+                                                                      "tf": 1150
+                                                                    },
+                                                                    "ValidationFramework.html#getSchemas": {
+                                                                      "ref": "ValidationFramework.html#getSchemas",
+                                                                      "tf": 1150
+                                                                    }
+                                                                  }
+                                                                }
+                                                              }
+                                                            }
+                                                          }
+                                                        }
                                                       }
                                                     },
                                                     "n": {
@@ -15386,64 +15726,6 @@
                                                                   }
                                                                 }
                                                               }
-                                                            }
-                                                          }
-                                                        }
-                                                      }
-                                                    }
-                                                  }
-                                                },
-                                                "c": {
-                                                  "docs": {},
-                                                  "l": {
-                                                    "docs": {},
-                                                    "e": {
-                                                      "docs": {},
-                                                      "a": {
-                                                        "docs": {},
-                                                        "r": {
-                                                          "docs": {},
-                                                          "s": {
-                                                            "docs": {},
-                                                            "c": {
-                                                              "docs": {},
-                                                              "h": {
-                                                                "docs": {},
-                                                                "e": {
-                                                                  "docs": {},
-                                                                  "m": {
-                                                                    "docs": {},
-                                                                    "a": {
-                                                                      "docs": {
-                                                                        "ValidationFramework.html#clearSchemas": {
-                                                                          "ref": "ValidationFramework.html#clearSchemas",
-                                                                          "tf": 1150
-                                                                        }
-                                                                      }
-                                                                    }
-                                                                  }
-                                                                }
-                                                              }
-                                                            }
-                                                          }
-                                                        }
-                                                      }
-                                                    }
-                                                  }
-                                                },
-                                                "v": {
-                                                  "docs": {},
-                                                  "a": {
-                                                    "docs": {},
-                                                    "l": {
-                                                      "docs": {},
-                                                      "i": {
-                                                        "docs": {},
-                                                        "d": {
-                                                          "docs": {
-                                                            "ValidationFramework.html#validate": {
-                                                              "ref": "ValidationFramework.html#validate",
-                                                              "tf": 1150
                                                             }
                                                           }
                                                         }
@@ -15628,10 +15910,6 @@
                             "ref": "AugmentedMap.html#marshall",
                             "tf": 110
                           },
-                          "LoggerFactory.html#.getLogger": {
-                            "ref": "LoggerFactory.html#.getLogger",
-                            "tf": 110
-                          },
                           "AbstractLogger.html#log": {
                             "ref": "AbstractLogger.html#log",
                             "tf": 110
@@ -15672,6 +15950,42 @@
                             "ref": "ConsoleLogger.html#warn",
                             "tf": 110
                           },
+                          "LoggerFactory.html#.getLogger": {
+                            "ref": "LoggerFactory.html#.getLogger",
+                            "tf": 110
+                          },
+                          "AugmentedObject.html#initialize": {
+                            "ref": "AugmentedObject.html#initialize",
+                            "tf": 110
+                          },
+                          "AugmentedObject.html#trigger": {
+                            "ref": "AugmentedObject.html#trigger",
+                            "tf": 110
+                          },
+                          "AugmentedObject.html#once": {
+                            "ref": "AugmentedObject.html#once",
+                            "tf": 110
+                          },
+                          "AugmentedObject.html#off": {
+                            "ref": "AugmentedObject.html#off",
+                            "tf": 112.5
+                          },
+                          "AugmentedObject.html#stopListening": {
+                            "ref": "AugmentedObject.html#stopListening",
+                            "tf": 110
+                          },
+                          "AugmentedObject.html#on": {
+                            "ref": "AugmentedObject.html#on",
+                            "tf": 115.55555555555556
+                          },
+                          "AugmentedObject.html#listenTo": {
+                            "ref": "AugmentedObject.html#listenTo",
+                            "tf": 110
+                          },
+                          "AugmentedObject.html#listenToOnce": {
+                            "ref": "AugmentedObject.html#listenToOnce",
+                            "tf": 110
+                          },
                           "Context.html#addPermission": {
                             "ref": "Context.html#addPermission",
                             "tf": 110
@@ -15690,10 +16004,6 @@
                           },
                           "Stack.html#peek": {
                             "ref": "Stack.html#peek",
-                            "tf": 110
-                          },
-                          "Stack.html#toString": {
-                            "ref": "Stack.html#toString",
                             "tf": 110
                           },
                           "Stack.html#pop": {
@@ -15720,6 +16030,30 @@
                             "ref": "Stack.html#toArray",
                             "tf": 110
                           },
+                          "Stack.html#toString": {
+                            "ref": "Stack.html#toString",
+                            "tf": 110
+                          },
+                          "Logger.BasicLogger.html#log": {
+                            "ref": "Logger.BasicLogger.html#log",
+                            "tf": 110
+                          },
+                          "Logger.BasicLogger.html#info": {
+                            "ref": "Logger.BasicLogger.html#info",
+                            "tf": 110
+                          },
+                          "Logger.BasicLogger.html#error": {
+                            "ref": "Logger.BasicLogger.html#error",
+                            "tf": 110
+                          },
+                          "Logger.BasicLogger.html#debug": {
+                            "ref": "Logger.BasicLogger.html#debug",
+                            "tf": 110
+                          },
+                          "Logger.BasicLogger.html#warn": {
+                            "ref": "Logger.BasicLogger.html#warn",
+                            "tf": 110
+                          },
                           "Logger.ColorConsoleLogger.html#log": {
                             "ref": "Logger.ColorConsoleLogger.html#log",
                             "tf": 110
@@ -15738,38 +16072,6 @@
                           },
                           "Logger.ColorConsoleLogger.html#warn": {
                             "ref": "Logger.ColorConsoleLogger.html#warn",
-                            "tf": 110
-                          },
-                          "AugmentedObject.html#initialize": {
-                            "ref": "AugmentedObject.html#initialize",
-                            "tf": 110
-                          },
-                          "AugmentedObject.html#trigger": {
-                            "ref": "AugmentedObject.html#trigger",
-                            "tf": 110
-                          },
-                          "AugmentedObject.html#once": {
-                            "ref": "AugmentedObject.html#once",
-                            "tf": 110
-                          },
-                          "AugmentedObject.html#off": {
-                            "ref": "AugmentedObject.html#off",
-                            "tf": 112.5
-                          },
-                          "AugmentedObject.html#stopListening": {
-                            "ref": "AugmentedObject.html#stopListening",
-                            "tf": 110
-                          },
-                          "AugmentedObject.html#on": {
-                            "ref": "AugmentedObject.html#on",
-                            "tf": 115
-                          },
-                          "AugmentedObject.html#listenTo": {
-                            "ref": "AugmentedObject.html#listenTo",
-                            "tf": 110
-                          },
-                          "AugmentedObject.html#listenToOnce": {
-                            "ref": "AugmentedObject.html#listenToOnce",
                             "tf": 110
                           },
                           "AuthenticationFactory.html#.getSecurityClient": {
@@ -15800,14 +16102,6 @@
                             "ref": "ValidationFramework.html#registerSchema",
                             "tf": 110
                           },
-                          "ValidationFramework.html#getSchema": {
-                            "ref": "ValidationFramework.html#getSchema",
-                            "tf": 110
-                          },
-                          "ValidationFramework.html#getSchemas": {
-                            "ref": "ValidationFramework.html#getSchemas",
-                            "tf": 110
-                          },
                           "ValidationFramework.html#clearSchemas": {
                             "ref": "ValidationFramework.html#clearSchemas",
                             "tf": 110
@@ -15822,6 +16116,14 @@
                           },
                           "ValidationFramework.html#generateSchema": {
                             "ref": "ValidationFramework.html#generateSchema",
+                            "tf": 110
+                          },
+                          "ValidationFramework.html#getSchema": {
+                            "ref": "ValidationFramework.html#getSchema",
+                            "tf": 110
+                          },
+                          "ValidationFramework.html#getSchemas": {
+                            "ref": "ValidationFramework.html#getSchemas",
                             "tf": 110
                           },
                           "CollectionIterator.html": {
@@ -15840,14 +16142,6 @@
                             "ref": "ResourceBundle.html#.getString",
                             "tf": 110
                           },
-                          "Transformer.html#.transform": {
-                            "ref": "Transformer.html#.transform",
-                            "tf": 110
-                          },
-                          "Transformer.html#.isType": {
-                            "ref": "Transformer.html#.isType",
-                            "tf": 110
-                          },
                           "AbstractModel.html#initialize": {
                             "ref": "AbstractModel.html#initialize",
                             "tf": 110
@@ -15860,12 +16154,12 @@
                             "ref": "AbstractModel.html#preinitialize",
                             "tf": 110
                           },
-                          "AbstractModel.html#get": {
-                            "ref": "AbstractModel.html#get",
-                            "tf": 110
-                          },
                           "AbstractModel.html#once": {
                             "ref": "AbstractModel.html#once",
+                            "tf": 110
+                          },
+                          "AbstractModel.html#get": {
+                            "ref": "AbstractModel.html#get",
                             "tf": 110
                           },
                           "AbstractModel.html#set": {
@@ -15882,7 +16176,7 @@
                           },
                           "AbstractModel.html#on": {
                             "ref": "AbstractModel.html#on",
-                            "tf": 115
+                            "tf": 115.55555555555556
                           },
                           "AbstractModel.html#listenTo": {
                             "ref": "AbstractModel.html#listenTo",
@@ -16199,6 +16493,14 @@
                           "MessageKeyFormatter.html#.format": {
                             "ref": "MessageKeyFormatter.html#.format",
                             "tf": 110
+                          },
+                          "Transformer.html#.transform": {
+                            "ref": "Transformer.html#.transform",
+                            "tf": 110
+                          },
+                          "Transformer.html#.isType": {
+                            "ref": "Transformer.html#.isType",
+                            "tf": 110
                           }
                         }
                       }
@@ -16380,46 +16682,11 @@
             "docs": {},
             "r": {
               "docs": {},
-              "s": {
-                "docs": {},
-                "t": {
-                  "docs": {
-                    "Stack.html#peek": {
-                      "ref": "Stack.html#peek",
-                      "tf": 10
-                    },
-                    "Stack.html#pop": {
-                      "ref": "Stack.html#pop",
-                      "tf": 8.333333333333332
-                    },
-                    "AugmentedObject.html#trigger": {
-                      "ref": "AugmentedObject.html#trigger",
-                      "tf": 1.8518518518518516
-                    },
-                    "AugmentedObject.html#once": {
-                      "ref": "AugmentedObject.html#once",
-                      "tf": 1.9230769230769231
-                    },
-                    "AbstractModel.html#trigger": {
-                      "ref": "AbstractModel.html#trigger",
-                      "tf": 1.8518518518518516
-                    },
-                    "AbstractModel.html#once": {
-                      "ref": "AbstractModel.html#once",
-                      "tf": 1.9230769230769231
-                    },
-                    "AbstractCollection.html#findWhere": {
-                      "ref": "AbstractCollection.html#findWhere",
-                      "tf": 5.555555555555555
-                    }
-                  }
-                }
-              },
               "e": {
                 "docs": {
                   "AugmentedObject.html#trigger": {
                     "ref": "AugmentedObject.html#trigger",
-                    "tf": 1.8518518518518516
+                    "tf": 1.9230769230769231
                   },
                   "AugmentedObject.html#once": {
                     "ref": "AugmentedObject.html#once",
@@ -16427,11 +16694,11 @@
                   },
                   "AugmentedObject.html#on": {
                     "ref": "AugmentedObject.html#on",
-                    "tf": 5
+                    "tf": 5.555555555555555
                   },
                   "AbstractModel.html#trigger": {
                     "ref": "AbstractModel.html#trigger",
-                    "tf": 1.8518518518518516
+                    "tf": 1.9230769230769231
                   },
                   "AbstractModel.html#once": {
                     "ref": "AbstractModel.html#once",
@@ -16443,7 +16710,7 @@
                   },
                   "AbstractModel.html#on": {
                     "ref": "AbstractModel.html#on",
-                    "tf": 5
+                    "tf": 5.555555555555555
                   },
                   "AbstractModel.html#unset": {
                     "ref": "AbstractModel.html#unset",
@@ -16460,6 +16727,41 @@
                   "AbstractCollection.html#reset": {
                     "ref": "AbstractCollection.html#reset",
                     "tf": 4
+                  }
+                }
+              },
+              "s": {
+                "docs": {},
+                "t": {
+                  "docs": {
+                    "AugmentedObject.html#trigger": {
+                      "ref": "AugmentedObject.html#trigger",
+                      "tf": 1.9230769230769231
+                    },
+                    "AugmentedObject.html#once": {
+                      "ref": "AugmentedObject.html#once",
+                      "tf": 1.9230769230769231
+                    },
+                    "Stack.html#peek": {
+                      "ref": "Stack.html#peek",
+                      "tf": 10
+                    },
+                    "Stack.html#pop": {
+                      "ref": "Stack.html#pop",
+                      "tf": 8.333333333333332
+                    },
+                    "AbstractModel.html#trigger": {
+                      "ref": "AbstractModel.html#trigger",
+                      "tf": 1.9230769230769231
+                    },
+                    "AbstractModel.html#once": {
+                      "ref": "AbstractModel.html#once",
+                      "tf": 1.9230769230769231
+                    },
+                    "AbstractCollection.html#findWhere": {
+                      "ref": "AbstractCollection.html#findWhere",
+                      "tf": 5.555555555555555
+                    }
                   }
                 }
               }
@@ -16889,18 +17191,6 @@
                         "ref": "AugmentedObject.html#listenTo",
                         "tf": 6.25
                       },
-                      "Transformer.html": {
-                        "ref": "Transformer.html",
-                        "tf": 11.11111111111111
-                      },
-                      "Transformer.html#.transform": {
-                        "ref": "Transformer.html#.transform",
-                        "tf": 12.5
-                      },
-                      "Transformer.html#.isType": {
-                        "ref": "Transformer.html#.isType",
-                        "tf": 12.5
-                      },
                       "AbstractModel.html#initialize": {
                         "ref": "AbstractModel.html#initialize",
                         "tf": 25
@@ -16932,6 +17222,18 @@
                       "Application.html": {
                         "ref": "Application.html",
                         "tf": 1.1627906976744187
+                      },
+                      "Transformer.html": {
+                        "ref": "Transformer.html",
+                        "tf": 11.11111111111111
+                      },
+                      "Transformer.html#.transform": {
+                        "ref": "Transformer.html#.transform",
+                        "tf": 12.5
+                      },
+                      "Transformer.html#.isType": {
+                        "ref": "Transformer.html#.isType",
+                        "tf": 12.5
                       }
                     }
                   }
@@ -16949,13 +17251,13 @@
                   "docs": {},
                   "n": {
                     "docs": {
-                      "Stack.html": {
-                        "ref": "Stack.html",
-                        "tf": 5
-                      },
                       "AugmentedObject.html#options": {
                         "ref": "AugmentedObject.html#options",
                         "tf": 775
+                      },
+                      "Stack.html": {
+                        "ref": "Stack.html",
+                        "tf": 5
                       },
                       "AbstractModel.html#options": {
                         "ref": "AbstractModel.html#options",
@@ -17020,7 +17322,7 @@
             "docs": {
               "AugmentedObject.html#trigger": {
                 "ref": "AugmentedObject.html#trigger",
-                "tf": 1.8518518518518516
+                "tf": 1.9230769230769231
               },
               "AugmentedObject.html#off": {
                 "ref": "AugmentedObject.html#off",
@@ -17028,7 +17330,7 @@
               },
               "AbstractModel.html#trigger": {
                 "ref": "AbstractModel.html#trigger",
-                "tf": 1.8518518518518516
+                "tf": 1.9230769230769231
               },
               "AbstractModel.html#off": {
                 "ref": "AbstractModel.html#off",
@@ -17297,6 +17599,10 @@
                   "ConsoleLogger.html#warn": {
                     "ref": "ConsoleLogger.html#warn",
                     "tf": 712.5
+                  },
+                  "Logger.BasicLogger.html#warn": {
+                    "ref": "Logger.BasicLogger.html#warn",
+                    "tf": 662.5
                   },
                   "Logger.ColorConsoleLogger.html#warn": {
                     "ref": "Logger.ColorConsoleLogger.html#warn",
@@ -17602,7 +17908,7 @@
                       "docs": {
                         "AugmentedObject.html#trigger": {
                           "ref": "AugmentedObject.html#trigger",
-                          "tf": 687.0370370370371
+                          "tf": 687.1794871794872
                         },
                         "AugmentedObject.html#once": {
                           "ref": "AugmentedObject.html#once",
@@ -17610,7 +17916,7 @@
                         },
                         "AbstractModel.html#trigger": {
                           "ref": "AbstractModel.html#trigger",
-                          "tf": 687.0370370370371
+                          "tf": 687.1794871794872
                         },
                         "AbstractModel.html#once": {
                           "ref": "AbstractModel.html#once",
@@ -17632,11 +17938,11 @@
                 "docs": {
                   "AugmentedObject.html#trigger": {
                     "ref": "AugmentedObject.html#trigger",
-                    "tf": 1.8518518518518516
+                    "tf": 1.9230769230769231
                   },
                   "AbstractModel.html#trigger": {
                     "ref": "AbstractModel.html#trigger",
-                    "tf": 1.8518518518518516
+                    "tf": 1.9230769230769231
                   },
                   "AbstractModel.html#destroy": {
                     "ref": "AbstractModel.html#destroy",
@@ -17710,14 +18016,6 @@
                         "docs": {},
                         "m": {
                           "docs": {
-                            "Transformer.html": {
-                              "ref": "Transformer.html",
-                              "tf": 1905.5555555555557
-                            },
-                            "Transformer.html#.transform": {
-                              "ref": "Transformer.html#.transform",
-                              "tf": 681.25
-                            },
                             "AbstractModel.html#toJSON": {
                               "ref": "AbstractModel.html#toJSON",
                               "tf": 12.5
@@ -17725,6 +18023,14 @@
                             "AbstractCollection.html#get": {
                               "ref": "AbstractCollection.html#get",
                               "tf": 3.571428571428571
+                            },
+                            "Transformer.html": {
+                              "ref": "Transformer.html",
+                              "tf": 1905.5555555555557
+                            },
+                            "Transformer.html#.transform": {
+                              "ref": "Transformer.html#.transform",
+                              "tf": 681.25
                             }
                           },
                           "e": {
@@ -17860,6 +18166,17 @@
                   }
                 }
               }
+            },
+            "x": {
+              "docs": {},
+              "t": {
+                "docs": {
+                  "Logger.BasicLogger.html": {
+                    "ref": "Logger.BasicLogger.html",
+                    "tf": 8.333333333333332
+                  }
+                }
+              }
             }
           },
           "h": {
@@ -17954,6 +18271,131 @@
                     "tf": 8.333333333333332
                   }
                 }
+              },
+              "i": {
+                "docs": {},
+                "c": {
+                  "docs": {
+                    "Logger.BasicLogger.html": {
+                      "ref": "Logger.BasicLogger.html",
+                      "tf": 8.333333333333332
+                    }
+                  },
+                  "l": {
+                    "docs": {},
+                    "o": {
+                      "docs": {},
+                      "g": {
+                        "docs": {},
+                        "g": {
+                          "docs": {
+                            "Logger.BasicLogger.html": {
+                              "ref": "Logger.BasicLogger.html",
+                              "tf": 750
+                            }
+                          },
+                          "e": {
+                            "docs": {},
+                            "r": {
+                              "docs": {},
+                              "#": {
+                                "docs": {},
+                                "l": {
+                                  "docs": {},
+                                  "o": {
+                                    "docs": {},
+                                    "g": {
+                                      "docs": {
+                                        "Logger.BasicLogger.html#log": {
+                                          "ref": "Logger.BasicLogger.html#log",
+                                          "tf": 100
+                                        }
+                                      }
+                                    }
+                                  }
+                                },
+                                "i": {
+                                  "docs": {},
+                                  "n": {
+                                    "docs": {},
+                                    "f": {
+                                      "docs": {},
+                                      "o": {
+                                        "docs": {
+                                          "Logger.BasicLogger.html#info": {
+                                            "ref": "Logger.BasicLogger.html#info",
+                                            "tf": 100
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                },
+                                "e": {
+                                  "docs": {},
+                                  "r": {
+                                    "docs": {},
+                                    "r": {
+                                      "docs": {},
+                                      "o": {
+                                        "docs": {},
+                                        "r": {
+                                          "docs": {
+                                            "Logger.BasicLogger.html#error": {
+                                              "ref": "Logger.BasicLogger.html#error",
+                                              "tf": 100
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                },
+                                "d": {
+                                  "docs": {},
+                                  "e": {
+                                    "docs": {},
+                                    "b": {
+                                      "docs": {},
+                                      "u": {
+                                        "docs": {},
+                                        "g": {
+                                          "docs": {
+                                            "Logger.BasicLogger.html#debug": {
+                                              "ref": "Logger.BasicLogger.html#debug",
+                                              "tf": 100
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                },
+                                "w": {
+                                  "docs": {},
+                                  "a": {
+                                    "docs": {},
+                                    "r": {
+                                      "docs": {},
+                                      "n": {
+                                        "docs": {
+                                          "Logger.BasicLogger.html#warn": {
+                                            "ref": "Logger.BasicLogger.html#warn",
+                                            "tf": 100
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
               }
             },
             "c": {
@@ -17978,7 +18420,7 @@
                   "docs": {
                     "AugmentedObject.html#trigger": {
                       "ref": "AugmentedObject.html#trigger",
-                      "tf": 1.8518518518518516
+                      "tf": 1.9230769230769231
                     },
                     "AugmentedObject.html#off": {
                       "ref": "AugmentedObject.html#off",
@@ -17986,7 +18428,7 @@
                     },
                     "AbstractModel.html#trigger": {
                       "ref": "AbstractModel.html#trigger",
-                      "tf": 1.8518518518518516
+                      "tf": 1.9230769230769231
                     },
                     "AbstractModel.html#off": {
                       "ref": "AbstractModel.html#off",
@@ -18013,7 +18455,7 @@
                   },
                   "AugmentedObject.html#on": {
                     "ref": "AugmentedObject.html#on",
-                    "tf": 10
+                    "tf": 11.11111111111111
                   },
                   "AbstractModel.html#once": {
                     "ref": "AbstractModel.html#once",
@@ -18021,7 +18463,7 @@
                   },
                   "AbstractModel.html#on": {
                     "ref": "AbstractModel.html#on",
-                    "tf": 10
+                    "tf": 11.11111111111111
                   }
                 }
               }
@@ -18218,265 +18660,38 @@
             }
           }
         },
-        "q": {
+        "y": {
           "docs": {},
-          "u": {
+          "o": {
             "docs": {},
-            "o": {
+            "u": {
               "docs": {},
-              "t": {
+              "'": {
                 "docs": {},
-                ";": {
-                  "docs": {},
-                  "a": {
-                    "docs": {},
-                    "l": {
-                      "docs": {},
-                      "l": {
-                        "docs": {},
-                        "&": {
-                          "docs": {},
-                          "q": {
-                            "docs": {},
-                            "u": {
-                              "docs": {},
-                              "o": {
-                                "docs": {},
-                                "t": {
-                                  "docs": {
-                                    "AugmentedObject.html#trigger": {
-                                      "ref": "AugmentedObject.html#trigger",
-                                      "tf": 1.8518518518518516
-                                    },
-                                    "AugmentedObject.html#on": {
-                                      "ref": "AugmentedObject.html#on",
-                                      "tf": 5
-                                    },
-                                    "AbstractModel.html#trigger": {
-                                      "ref": "AbstractModel.html#trigger",
-                                      "tf": 1.8518518518518516
-                                    },
-                                    "AbstractModel.html#on": {
-                                      "ref": "AbstractModel.html#on",
-                                      "tf": 5
-                                    }
-                                  }
-                                }
-                              }
-                            }
-                          }
-                        }
-                      }
-                    }
-                  },
-                  "c": {
-                    "docs": {},
-                    "h": {
-                      "docs": {},
-                      "a": {
-                        "docs": {},
-                        "n": {
-                          "docs": {},
-                          "g": {
-                            "docs": {},
-                            "e": {
-                              "docs": {},
-                              "&": {
-                                "docs": {},
-                                "q": {
-                                  "docs": {},
-                                  "u": {
-                                    "docs": {},
-                                    "o": {
-                                      "docs": {},
-                                      "t": {
-                                        "docs": {
-                                          "AbstractModel.html#set": {
-                                            "ref": "AbstractModel.html#set",
-                                            "tf": 2.631578947368421
-                                          },
-                                          "AbstractModel.html#unset": {
-                                            "ref": "AbstractModel.html#unset",
-                                            "tf": 5
-                                          },
-                                          "AbstractModel.html#clear": {
-                                            "ref": "AbstractModel.html#clear",
-                                            "tf": 10
-                                          },
-                                          "AbstractModel.html#fetch": {
-                                            "ref": "AbstractModel.html#fetch",
-                                            "tf": 3.8461538461538463
-                                          },
-                                          "AbstractModel.html#hasChanged": {
-                                            "ref": "AbstractModel.html#hasChanged",
-                                            "tf": 4.166666666666666
-                                          },
-                                          "AbstractModel.html#previous": {
-                                            "ref": "AbstractModel.html#previous",
-                                            "tf": 5.555555555555555
-                                          },
-                                          "AbstractModel.html#previousAttributes": {
-                                            "ref": "AbstractModel.html#previousAttributes",
-                                            "tf": 8.333333333333332
-                                          }
-                                        }
-                                      }
-                                    }
-                                  }
-                                }
-                              }
-                            }
-                          }
-                        }
-                      }
+                "r": {
+                  "docs": {
+                    "AugmentedObject.html#trigger": {
+                      "ref": "AugmentedObject.html#trigger",
+                      "tf": 1.9230769230769231
                     },
-                    "r": {
-                      "docs": {},
-                      "e": {
-                        "docs": {},
-                        "a": {
-                          "docs": {},
-                          "t": {
-                            "docs": {},
-                            "e": {
-                              "docs": {},
-                              "&": {
-                                "docs": {},
-                                "q": {
-                                  "docs": {},
-                                  "u": {
-                                    "docs": {},
-                                    "o": {
-                                      "docs": {},
-                                      "t": {
-                                        "docs": {
-                                          "AbstractCollection.html#save": {
-                                            "ref": "AbstractCollection.html#save",
-                                            "tf": 12.5
-                                          }
-                                        }
-                                      }
-                                    }
-                                  }
-                                }
-                              }
-                            }
-                          }
-                        }
-                      }
-                    }
-                  },
-                  "u": {
-                    "docs": {},
-                    "p": {
-                      "docs": {},
-                      "d": {
-                        "docs": {},
-                        "a": {
-                          "docs": {},
-                          "t": {
-                            "docs": {},
-                            "e": {
-                              "docs": {},
-                              "&": {
-                                "docs": {},
-                                "q": {
-                                  "docs": {},
-                                  "u": {
-                                    "docs": {},
-                                    "o": {
-                                      "docs": {},
-                                      "t": {
-                                        "docs": {
-                                          "AbstractCollection.html#update": {
-                                            "ref": "AbstractCollection.html#update",
-                                            "tf": 12.5
-                                          }
-                                        }
-                                      }
-                                    }
-                                  }
-                                }
-                              }
-                            }
-                          }
-                        }
-                      }
-                    }
-                  },
-                  "d": {
-                    "docs": {},
-                    "e": {
-                      "docs": {},
-                      "l": {
-                        "docs": {},
-                        "e": {
-                          "docs": {},
-                          "t": {
-                            "docs": {},
-                            "e": {
-                              "docs": {},
-                              "&": {
-                                "docs": {},
-                                "q": {
-                                  "docs": {},
-                                  "u": {
-                                    "docs": {},
-                                    "o": {
-                                      "docs": {},
-                                      "t": {
-                                        "docs": {
-                                          "AbstractCollection.html#remove": {
-                                            "ref": "AbstractCollection.html#remove",
-                                            "tf": 12.5
-                                          }
-                                        }
-                                      }
-                                    }
-                                  }
-                                }
-                              }
-                            }
-                          }
-                        }
-                      }
-                    }
-                  },
-                  "r": {
-                    "docs": {},
-                    "u": {
-                      "docs": {},
-                      "l": {
-                        "docs": {},
-                        "e": {
-                          "docs": {},
-                          "&": {
-                            "docs": {},
-                            "q": {
-                              "docs": {},
-                              "u": {
-                                "docs": {},
-                                "o": {
-                                  "docs": {},
-                                  "t": {
-                                    "docs": {
-                                      "MessageKeyFormatter.html": {
-                                        "ref": "MessageKeyFormatter.html",
-                                        "tf": 2.631578947368421
-                                      }
-                                    }
-                                  }
-                                }
-                              }
-                            }
-                          }
-                        }
-                      }
+                    "AbstractModel.html#trigger": {
+                      "ref": "AbstractModel.html#trigger",
+                      "tf": 1.9230769230769231
+                    },
+                    "AbstractModel.html#url": {
+                      "ref": "AbstractModel.html#url",
+                      "tf": 3.8461538461538463
                     }
                   }
                 }
               }
-            },
+            }
+          }
+        },
+        "q": {
+          "docs": {},
+          "u": {
+            "docs": {},
             "e": {
               "docs": {},
               "u": {
@@ -18512,37 +18727,9 @@
               }
             }
           }
-        },
-        "y": {
-          "docs": {},
-          "o": {
-            "docs": {},
-            "u": {
-              "docs": {},
-              "'": {
-                "docs": {},
-                "r": {
-                  "docs": {
-                    "AugmentedObject.html#trigger": {
-                      "ref": "AugmentedObject.html#trigger",
-                      "tf": 1.8518518518518516
-                    },
-                    "AbstractModel.html#trigger": {
-                      "ref": "AbstractModel.html#trigger",
-                      "tf": 1.8518518518518516
-                    },
-                    "AbstractModel.html#url": {
-                      "ref": "AbstractModel.html#url",
-                      "tf": 3.8461538461538463
-                    }
-                  }
-                }
-              }
-            }
-          }
         }
       },
-      "length": 1756
+      "length": 1792
     },
     "corpusTokens": [
       "abstract",
@@ -18727,6 +18914,13 @@
       "author",
       "back",
       "base",
+      "basic",
+      "basiclogg",
+      "basiclogger#debug",
+      "basiclogger#error",
+      "basiclogger#info",
+      "basiclogger#log",
+      "basiclogger#warn",
       "befor",
       "beforeiniti",
       "begin",
@@ -18809,7 +19003,7 @@
       "differ",
       "document",
       "doesn't",
-      "don&quot;t",
+      "don\"t",
       "done",
       "dure",
       "each",
@@ -18833,6 +19027,7 @@
       "exhaust",
       "exist",
       "extend",
+      "extra",
       "factori",
       "fallback",
       "fals",
@@ -18924,6 +19119,12 @@
       "local",
       "log",
       "logger",
+      "logger.basiclogg",
+      "logger.basiclogger#debug",
+      "logger.basiclogger#error",
+      "logger.basiclogger#info",
+      "logger.basiclogger#log",
+      "logger.basiclogger#warn",
       "logger.colorconsolelogg",
       "logger.colorconsolelogger#debug",
       "logger.colorconsolelogger#error",
@@ -18957,7 +19158,6 @@
       "model#set",
       "model'",
       "modelid",
-      "models&quot",
       "modern",
       "modul",
       "module:aug",
@@ -19026,12 +19226,6 @@
       "pure",
       "push",
       "queue",
-      "quot;all&quot",
-      "quot;change&quot",
-      "quot;create&quot",
-      "quot;delete&quot",
-      "quot;rule&quot",
-      "quot;update&quot",
       "raw",
       "re",
       "read",
@@ -19060,6 +19254,7 @@
       "role/privileg",
       "rout",
       "router",
+      "rule",
       "run",
       "same",
       "save",
@@ -19116,6 +19311,7 @@
       "sync",
       "syntax",
       "tell",
+      "text",
       "third",
       "through",
       "time",
@@ -19515,38 +19711,6 @@
       "summary": "",
       "description": "Marshalls a map dataToMarshall must be the following type of data to parse: JSON object with properties (key/value)"
     },
-    "LoggerFactory.html": {
-      "id": "LoggerFactory.html",
-      "kind": "class",
-      "title": "LoggerFactory",
-      "longname": "LoggerFactory",
-      "name": "LoggerFactory",
-      "tags": "LoggerFactory",
-      "summary": "",
-      "description": "A logger factory for creating a logger instance",
-      "body": ""
-    },
-    "LoggerFactory.html#.getLogger": {
-      "id": "LoggerFactory.html#.getLogger",
-      "kind": "function",
-      "title": "&lt;static&gt; getLogger( type, level )",
-      "longname": "LoggerFactory.getLogger",
-      "name": "getLogger",
-      "tags": "LoggerFactory.getLogger getLogger",
-      "summary": "",
-      "description": "getLogger - get an instance of a logger"
-    },
-    "Principal.html": {
-      "id": "Principal.html",
-      "kind": "class",
-      "title": "Principal",
-      "longname": "Principal",
-      "name": "Principal",
-      "tags": "Principal",
-      "summary": "",
-      "description": "Pricipal object for use in security as part of the abstract implimentation",
-      "body": ""
-    },
     "AbstractLogger.html": {
       "id": "AbstractLogger.html",
       "kind": "class",
@@ -19608,6 +19772,17 @@
       "summary": "",
       "description": "Log a message in warn level"
     },
+    "Principal.html": {
+      "id": "Principal.html",
+      "kind": "class",
+      "title": "Principal",
+      "longname": "Principal",
+      "name": "Principal",
+      "tags": "Principal",
+      "summary": "",
+      "description": "Pricipal object for use in security as part of the abstract implimentation",
+      "body": ""
+    },
     "ConsoleLogger.html": {
       "id": "ConsoleLogger.html",
       "kind": "class",
@@ -19668,6 +19843,138 @@
       "tags": "ConsoleLogger#warn warn",
       "summary": "",
       "description": "Log a message in warn level"
+    },
+    "LoggerFactory.html": {
+      "id": "LoggerFactory.html",
+      "kind": "class",
+      "title": "LoggerFactory",
+      "longname": "LoggerFactory",
+      "name": "LoggerFactory",
+      "tags": "LoggerFactory",
+      "summary": "",
+      "description": "A logger factory for creating a logger instance",
+      "body": ""
+    },
+    "LoggerFactory.html#.getLogger": {
+      "id": "LoggerFactory.html#.getLogger",
+      "kind": "function",
+      "title": "&lt;static&gt; getLogger( type, level )",
+      "longname": "LoggerFactory.getLogger",
+      "name": "getLogger",
+      "tags": "LoggerFactory.getLogger getLogger",
+      "summary": "",
+      "description": "getLogger - get an instance of a logger"
+    },
+    "AugmentedObject.html": {
+      "id": "AugmentedObject.html",
+      "kind": "class",
+      "title": "AugmentedObject",
+      "longname": "AugmentedObject",
+      "name": "AugmentedObject",
+      "tags": "AugmentedObject",
+      "summary": "",
+      "description": "Augmented Object Base class for other classes to extend from",
+      "body": ""
+    },
+    "AugmentedObject.html#options": {
+      "id": "AugmentedObject.html#options",
+      "kind": "member",
+      "title": "options",
+      "longname": "AugmentedObject#options",
+      "name": "options",
+      "tags": "AugmentedObject#options options",
+      "summary": "",
+      "description": "The passed options"
+    },
+    "AugmentedObject.html#events": {
+      "id": "AugmentedObject.html#events",
+      "kind": "member",
+      "title": "events",
+      "longname": "AugmentedObject#events",
+      "name": "events",
+      "tags": "AugmentedObject#events events",
+      "summary": "",
+      "description": "The Events"
+    },
+    "AugmentedObject.html#initialize": {
+      "id": "AugmentedObject.html#initialize",
+      "kind": "function",
+      "title": "initialize()",
+      "longname": "AugmentedObject#initialize",
+      "name": "initialize",
+      "tags": "AugmentedObject#initialize initialize",
+      "summary": "",
+      "description": "Initialize the object"
+    },
+    "AugmentedObject.html#trigger": {
+      "id": "AugmentedObject.html#trigger",
+      "kind": "function",
+      "title": "trigger( name, ...args )",
+      "longname": "AugmentedObject#trigger",
+      "name": "trigger",
+      "tags": "AugmentedObject#trigger trigger",
+      "summary": "",
+      "description": "Trigger one or many events, firing all bound callbacks. Callbacks are passed the same arguments as trigger is, apart from the event name (unless you're listening on \"all\", which will cause your callback to receive the true name of the event as the first argument)."
+    },
+    "AugmentedObject.html#once": {
+      "id": "AugmentedObject.html#once",
+      "kind": "function",
+      "title": "once( name, callback, context )",
+      "longname": "AugmentedObject#once",
+      "name": "once",
+      "tags": "AugmentedObject#once once",
+      "summary": "",
+      "description": "Bind an event to only be triggered a single time. After the first time the callback is invoked, its listener will be removed. If multiple events are passed in using the space-separated syntax, the handler will fire once for each event, not once for a combination of all events."
+    },
+    "AugmentedObject.html#off": {
+      "id": "AugmentedObject.html#off",
+      "kind": "function",
+      "title": "off( name, callback, context )",
+      "longname": "AugmentedObject#off",
+      "name": "off",
+      "tags": "AugmentedObject#off off",
+      "summary": "",
+      "description": "Remove one or many callbacks. If context is null, removes all callbacks with that function. If callback is null, removes all callbacks for the event. If name is null, removes all bound callbacks for all events."
+    },
+    "AugmentedObject.html#stopListening": {
+      "id": "AugmentedObject.html#stopListening",
+      "kind": "function",
+      "title": "stopListening( obj, name, callback )",
+      "longname": "AugmentedObject#stopListening",
+      "name": "stopListening",
+      "tags": "AugmentedObject#stopListening stopListening",
+      "summary": "",
+      "description": "Tell this object to stop listening to either specific events ... or to every object it's currently listening to."
+    },
+    "AugmentedObject.html#on": {
+      "id": "AugmentedObject.html#on",
+      "kind": "function",
+      "title": "on( name, callback, context )",
+      "longname": "AugmentedObject#on",
+      "name": "on",
+      "tags": "AugmentedObject#on on",
+      "summary": "",
+      "description": "Bind an event to a callback function. Passing \"all\" will bind the callback to all events fired."
+    },
+    "AugmentedObject.html#listenTo": {
+      "id": "AugmentedObject.html#listenTo",
+      "kind": "function",
+      "title": "listenTo( obj, name, callback )",
+      "longname": "AugmentedObject#listenTo",
+      "name": "listenTo",
+      "tags": "AugmentedObject#listenTo listenTo",
+      "summary": "",
+      "description": "Inversion-of-control versions of on. Tell this object to listen to an event in another object... keeping track of what it's listening to for easier unbinding later."
+    },
+    "AugmentedObject.html#listenToOnce": {
+      "id": "AugmentedObject.html#listenToOnce",
+      "kind": "function",
+      "title": "listenToOnce( obj, name, callback )",
+      "longname": "AugmentedObject#listenToOnce",
+      "name": "listenToOnce",
+      "tags": "AugmentedObject#listenToOnce listenToOnce",
+      "summary": "",
+      "description": "Inversion-of-control versions of once."
     },
     "Context.html": {
       "id": "Context.html",
@@ -19761,16 +20068,6 @@
       "summary": "",
       "description": "The peek method returns the first in the stack"
     },
-    "Stack.html#toString": {
-      "id": "Stack.html#toString",
-      "kind": "function",
-      "title": "toString()",
-      "longname": "Stack#toString",
-      "name": "toString",
-      "tags": "Stack#toString toString",
-      "summary": "",
-      "description": "The toString method returns the stack as an string"
-    },
     "Stack.html#pop": {
       "id": "Stack.html#pop",
       "kind": "function",
@@ -19830,6 +20127,77 @@
       "tags": "Stack#toArray toArray",
       "summary": "",
       "description": "The toArray method returns the stack as an array"
+    },
+    "Stack.html#toString": {
+      "id": "Stack.html#toString",
+      "kind": "function",
+      "title": "toString()",
+      "longname": "Stack#toString",
+      "name": "toString",
+      "tags": "Stack#toString toString",
+      "summary": "",
+      "description": "The toString method returns the stack as an string"
+    },
+    "Logger.BasicLogger.html": {
+      "id": "Logger.BasicLogger.html",
+      "kind": "class",
+      "title": "BasicLogger",
+      "longname": "Logger.BasicLogger",
+      "name": "BasicLogger",
+      "tags": "Logger.BasicLogger BasicLogger",
+      "summary": "",
+      "description": "Basic Console Logger (level off extra text)",
+      "body": ""
+    },
+    "Logger.BasicLogger.html#log": {
+      "id": "Logger.BasicLogger.html#log",
+      "kind": "function",
+      "title": "log( ...message, level )",
+      "longname": "Logger.BasicLogger#log",
+      "name": "log",
+      "tags": "Logger.BasicLogger#log BasicLogger#log log",
+      "summary": "",
+      "description": "log a message with default level"
+    },
+    "Logger.BasicLogger.html#info": {
+      "id": "Logger.BasicLogger.html#info",
+      "kind": "function",
+      "title": "info( ...message )",
+      "longname": "Logger.BasicLogger#info",
+      "name": "info",
+      "tags": "Logger.BasicLogger#info BasicLogger#info info",
+      "summary": "",
+      "description": "Logs a message in info level"
+    },
+    "Logger.BasicLogger.html#error": {
+      "id": "Logger.BasicLogger.html#error",
+      "kind": "function",
+      "title": "error( ...message )",
+      "longname": "Logger.BasicLogger#error",
+      "name": "error",
+      "tags": "Logger.BasicLogger#error BasicLogger#error error",
+      "summary": "",
+      "description": "Log a message in error level"
+    },
+    "Logger.BasicLogger.html#debug": {
+      "id": "Logger.BasicLogger.html#debug",
+      "kind": "function",
+      "title": "debug( ...message )",
+      "longname": "Logger.BasicLogger#debug",
+      "name": "debug",
+      "tags": "Logger.BasicLogger#debug BasicLogger#debug debug",
+      "summary": "",
+      "description": "Log a message in debug level"
+    },
+    "Logger.BasicLogger.html#warn": {
+      "id": "Logger.BasicLogger.html#warn",
+      "kind": "function",
+      "title": "warn( ...message )",
+      "longname": "Logger.BasicLogger#warn",
+      "name": "warn",
+      "tags": "Logger.BasicLogger#warn BasicLogger#warn warn",
+      "summary": "",
+      "description": "Log a message in warn level"
     },
     "Logger.ColorConsoleLogger.html": {
       "id": "Logger.ColorConsoleLogger.html",
@@ -19891,117 +20259,6 @@
       "tags": "Logger.ColorConsoleLogger#warn ColorConsoleLogger#warn warn",
       "summary": "",
       "description": "Log a message in warn level"
-    },
-    "AugmentedObject.html": {
-      "id": "AugmentedObject.html",
-      "kind": "class",
-      "title": "AugmentedObject",
-      "longname": "AugmentedObject",
-      "name": "AugmentedObject",
-      "tags": "AugmentedObject",
-      "summary": "",
-      "description": "Augmented Object Base class for other classes to extend from",
-      "body": ""
-    },
-    "AugmentedObject.html#options": {
-      "id": "AugmentedObject.html#options",
-      "kind": "member",
-      "title": "options",
-      "longname": "AugmentedObject#options",
-      "name": "options",
-      "tags": "AugmentedObject#options options",
-      "summary": "",
-      "description": "The passed options"
-    },
-    "AugmentedObject.html#events": {
-      "id": "AugmentedObject.html#events",
-      "kind": "member",
-      "title": "events",
-      "longname": "AugmentedObject#events",
-      "name": "events",
-      "tags": "AugmentedObject#events events",
-      "summary": "",
-      "description": "The Events"
-    },
-    "AugmentedObject.html#initialize": {
-      "id": "AugmentedObject.html#initialize",
-      "kind": "function",
-      "title": "initialize()",
-      "longname": "AugmentedObject#initialize",
-      "name": "initialize",
-      "tags": "AugmentedObject#initialize initialize",
-      "summary": "",
-      "description": "Initialize the object"
-    },
-    "AugmentedObject.html#trigger": {
-      "id": "AugmentedObject.html#trigger",
-      "kind": "function",
-      "title": "trigger( name, ...args )",
-      "longname": "AugmentedObject#trigger",
-      "name": "trigger",
-      "tags": "AugmentedObject#trigger trigger",
-      "summary": "",
-      "description": "Trigger one or many events, firing all bound callbacks. Callbacks are passed the same arguments as trigger is, apart from the event name (unless you're listening on &quot;all&quot;, which will cause your callback to receive the true name of the event as the first argument)."
-    },
-    "AugmentedObject.html#once": {
-      "id": "AugmentedObject.html#once",
-      "kind": "function",
-      "title": "once( name, callback, context )",
-      "longname": "AugmentedObject#once",
-      "name": "once",
-      "tags": "AugmentedObject#once once",
-      "summary": "",
-      "description": "Bind an event to only be triggered a single time. After the first time the callback is invoked, its listener will be removed. If multiple events are passed in using the space-separated syntax, the handler will fire once for each event, not once for a combination of all events."
-    },
-    "AugmentedObject.html#off": {
-      "id": "AugmentedObject.html#off",
-      "kind": "function",
-      "title": "off( name, callback, context )",
-      "longname": "AugmentedObject#off",
-      "name": "off",
-      "tags": "AugmentedObject#off off",
-      "summary": "",
-      "description": "Remove one or many callbacks. If context is null, removes all callbacks with that function. If callback is null, removes all callbacks for the event. If name is null, removes all bound callbacks for all events."
-    },
-    "AugmentedObject.html#stopListening": {
-      "id": "AugmentedObject.html#stopListening",
-      "kind": "function",
-      "title": "stopListening( obj, name, callback )",
-      "longname": "AugmentedObject#stopListening",
-      "name": "stopListening",
-      "tags": "AugmentedObject#stopListening stopListening",
-      "summary": "",
-      "description": "Tell this object to stop listening to either specific events ... or to every object it's currently listening to."
-    },
-    "AugmentedObject.html#on": {
-      "id": "AugmentedObject.html#on",
-      "kind": "function",
-      "title": "on( name, callback, context )",
-      "longname": "AugmentedObject#on",
-      "name": "on",
-      "tags": "AugmentedObject#on on",
-      "summary": "",
-      "description": "Bind an event to a callback function. Passing &quot;all&quot; will bind the callback to all events fired."
-    },
-    "AugmentedObject.html#listenTo": {
-      "id": "AugmentedObject.html#listenTo",
-      "kind": "function",
-      "title": "listenTo( obj, name, callback )",
-      "longname": "AugmentedObject#listenTo",
-      "name": "listenTo",
-      "tags": "AugmentedObject#listenTo listenTo",
-      "summary": "",
-      "description": "Inversion-of-control versions of on. Tell this object to listen to an event in another object... keeping track of what it's listening to for easier unbinding later."
-    },
-    "AugmentedObject.html#listenToOnce": {
-      "id": "AugmentedObject.html#listenToOnce",
-      "kind": "function",
-      "title": "listenToOnce( obj, name, callback )",
-      "longname": "AugmentedObject#listenToOnce",
-      "name": "listenToOnce",
-      "tags": "AugmentedObject#listenToOnce listenToOnce",
-      "summary": "",
-      "description": "Inversion-of-control versions of once."
     },
     "AbstractSecurityClient.html": {
       "id": "AbstractSecurityClient.html",
@@ -20147,26 +20404,6 @@
       "summary": "",
       "description": "Registers a schema to the Framework"
     },
-    "ValidationFramework.html#getSchema": {
-      "id": "ValidationFramework.html#getSchema",
-      "kind": "function",
-      "title": "getSchema( identity )",
-      "longname": "ValidationFramework#getSchema",
-      "name": "getSchema",
-      "tags": "ValidationFramework#getSchema getSchema",
-      "summary": "",
-      "description": "Gets a schema"
-    },
-    "ValidationFramework.html#getSchemas": {
-      "id": "ValidationFramework.html#getSchemas",
-      "kind": "function",
-      "title": "getSchemas()",
-      "longname": "ValidationFramework#getSchemas",
-      "name": "getSchemas",
-      "tags": "ValidationFramework#getSchemas getSchemas",
-      "summary": "",
-      "description": "Gets all schemas"
-    },
     "ValidationFramework.html#clearSchemas": {
       "id": "ValidationFramework.html#clearSchemas",
       "kind": "function",
@@ -20206,6 +20443,26 @@
       "tags": "ValidationFramework#generateSchema generateSchema",
       "summary": "",
       "description": "Validates data via a schema"
+    },
+    "ValidationFramework.html#getSchema": {
+      "id": "ValidationFramework.html#getSchema",
+      "kind": "function",
+      "title": "getSchema( identity )",
+      "longname": "ValidationFramework#getSchema",
+      "name": "getSchema",
+      "tags": "ValidationFramework#getSchema getSchema",
+      "summary": "",
+      "description": "Gets a schema"
+    },
+    "ValidationFramework.html#getSchemas": {
+      "id": "ValidationFramework.html#getSchemas",
+      "kind": "function",
+      "title": "getSchemas()",
+      "longname": "ValidationFramework#getSchemas",
+      "name": "getSchemas",
+      "tags": "ValidationFramework#getSchemas getSchemas",
+      "summary": "",
+      "description": "Gets all schemas"
     },
     "CollectionIterator.html": {
       "id": "CollectionIterator.html",
@@ -20259,37 +20516,6 @@
       "summary": "",
       "description": "Gets a string from the registered bundle"
     },
-    "Transformer.html": {
-      "id": "Transformer.html",
-      "kind": "class",
-      "title": "Transformer",
-      "longname": "Transformer",
-      "name": "Transformer",
-      "tags": "Transformer",
-      "summary": "",
-      "description": "Augmented.Utility.Transformer Transform an object, type, or array to another type, object, or array",
-      "body": ""
-    },
-    "Transformer.html#.transform": {
-      "id": "Transformer.html#.transform",
-      "kind": "function",
-      "title": "&lt;static&gt; transform( source, type )",
-      "longname": "Transformer.transform",
-      "name": "transform",
-      "tags": "Transformer.transform transform",
-      "summary": "",
-      "description": "Transform an object, primitive, or array to another object, primitive, or array"
-    },
-    "Transformer.html#.isType": {
-      "id": "Transformer.html#.isType",
-      "kind": "function",
-      "title": "&lt;static&gt; isType( source )",
-      "longname": "Transformer.isType",
-      "name": "isType",
-      "tags": "Transformer.isType isType",
-      "summary": "",
-      "description": "Returns a Augmented.Utility.TransformerType of a passed object"
-    },
     "AbstractModel.html": {
       "id": "AbstractModel.html",
       "kind": "class",
@@ -20339,7 +20565,7 @@
       "name": "trigger",
       "tags": "AbstractModel#trigger trigger",
       "summary": "",
-      "description": "Trigger one or many events, firing all bound callbacks. Callbacks are passed the same arguments as trigger is, apart from the event name (unless you're listening on &quot;all&quot;, which will cause your callback to receive the true name of the event as the first argument)."
+      "description": "Trigger one or many events, firing all bound callbacks. Callbacks are passed the same arguments as trigger is, apart from the event name (unless you're listening on \"all\", which will cause your callback to receive the true name of the event as the first argument)."
     },
     "AbstractModel.html#preinitialize": {
       "id": "AbstractModel.html#preinitialize",
@@ -20351,16 +20577,6 @@
       "summary": "",
       "description": "Validation Message property"
     },
-    "AbstractModel.html#get": {
-      "id": "AbstractModel.html#get",
-      "kind": "function",
-      "title": "get()",
-      "longname": "AbstractModel#get",
-      "name": "get",
-      "tags": "AbstractModel#get get",
-      "summary": "",
-      "description": "Get the attribute form the Model"
-    },
     "AbstractModel.html#once": {
       "id": "AbstractModel.html#once",
       "kind": "function",
@@ -20371,6 +20587,16 @@
       "summary": "",
       "description": "Bind an event to only be triggered a single time. After the first time the callback is invoked, its listener will be removed. If multiple events are passed in using the space-separated syntax, the handler will fire once for each event, not once for a combination of all events."
     },
+    "AbstractModel.html#get": {
+      "id": "AbstractModel.html#get",
+      "kind": "function",
+      "title": "get()",
+      "longname": "AbstractModel#get",
+      "name": "get",
+      "tags": "AbstractModel#get get",
+      "summary": "",
+      "description": "Get the attribute form the Model"
+    },
     "AbstractModel.html#set": {
       "id": "AbstractModel.html#set",
       "kind": "function",
@@ -20379,7 +20605,7 @@
       "name": "set",
       "tags": "AbstractModel#set set",
       "summary": "",
-      "description": "Set a hash of model attributes on the object, firing &quot;change&quot;. This is the core primitive operation of a model, updating the data and notifying anyone who needs to know about the change in state."
+      "description": "Set a hash of model attributes on the object, firing \"change\". This is the core primitive operation of a model, updating the data and notifying anyone who needs to know about the change in state."
     },
     "AbstractModel.html#off": {
       "id": "AbstractModel.html#off",
@@ -20409,7 +20635,7 @@
       "name": "on",
       "tags": "AbstractModel#on on",
       "summary": "",
-      "description": "Bind an event to a callback function. Passing &quot;all&quot; will bind the callback to all events fired."
+      "description": "Bind an event to a callback function. Passing \"all\" will bind the callback to all events fired."
     },
     "AbstractModel.html#listenTo": {
       "id": "AbstractModel.html#listenTo",
@@ -20469,7 +20695,7 @@
       "name": "unset",
       "tags": "AbstractModel#unset unset",
       "summary": "",
-      "description": "Remove an attribute from the model, firing &quot;change&quot;. unset is a noop if the attribute doesn't exist."
+      "description": "Remove an attribute from the model, firing \"change\". unset is a noop if the attribute doesn't exist."
     },
     "AbstractModel.html#clear": {
       "id": "AbstractModel.html#clear",
@@ -20479,7 +20705,7 @@
       "name": "clear",
       "tags": "AbstractModel#clear clear",
       "summary": "",
-      "description": "Clear all attributes on the model, firing &quot;change&quot;."
+      "description": "Clear all attributes on the model, firing \"change\"."
     },
     "AbstractModel.html#toJSON": {
       "id": "AbstractModel.html#toJSON",
@@ -20589,7 +20815,7 @@
       "name": "hasChanged",
       "tags": "AbstractModel#hasChanged hasChanged",
       "summary": "",
-      "description": "Determine if the model has changed since the last &quot;change&quot; event. If you specify an attribute name, determine if that attribute has changed."
+      "description": "Determine if the model has changed since the last \"change\" event. If you specify an attribute name, determine if that attribute has changed."
     },
     "AbstractModel.html#changedAttributes": {
       "id": "AbstractModel.html#changedAttributes",
@@ -20609,7 +20835,7 @@
       "name": "previous",
       "tags": "AbstractModel#previous previous",
       "summary": "",
-      "description": "Get the previous value of an attribute, recorded at the time the last &quot;change&quot; event was fired."
+      "description": "Get the previous value of an attribute, recorded at the time the last \"change\" event was fired."
     },
     "AbstractModel.html#previousAttributes": {
       "id": "AbstractModel.html#previousAttributes",
@@ -20619,7 +20845,7 @@
       "name": "previousAttributes",
       "tags": "AbstractModel#previousAttributes previousAttributes",
       "summary": "",
-      "description": "Get all of the attributes of the model at the time of the previous &quot;change&quot; event."
+      "description": "Get all of the attributes of the model at the time of the previous \"change\" event."
     },
     "AbstractModel.html#supportsValidation": {
       "id": "AbstractModel.html#supportsValidation",
@@ -20740,7 +20966,7 @@
       "name": "toJSON",
       "tags": "AbstractCollection#toJSON toJSON",
       "summary": "",
-      "description": "The JSON representation of a Collection is an array of the models&quot; attributes."
+      "description": "The JSON representation of a Collection is an array of the models\" attributes."
     },
     "AbstractCollection.html#add": {
       "id": "AbstractCollection.html#add",
@@ -20760,7 +20986,7 @@
       "name": "remove",
       "tags": "AbstractCollection#remove remove",
       "summary": "",
-      "description": "Collection.remove - Remove from the collection as a &quot;delete&quot;"
+      "description": "Collection.remove - Remove from the collection as a \"delete\""
     },
     "AbstractCollection.html#set": {
       "id": "AbstractCollection.html#set",
@@ -20910,7 +21136,7 @@
       "name": "sort",
       "tags": "AbstractCollection#sort sort",
       "summary": "",
-      "description": "Force the collection to re-sort itself. You don&quot;t need to call this under normal circumstances, as the set will maintain sort order as each item is added."
+      "description": "Force the collection to re-sort itself. You don\"t need to call this under normal circumstances, as the set will maintain sort order as each item is added."
     },
     "AbstractCollection.html#pluck": {
       "id": "AbstractCollection.html#pluck",
@@ -21060,7 +21286,7 @@
       "name": "save",
       "tags": "AbstractCollection#save save",
       "summary": "",
-      "description": "Collection.save - Saves the collection as a &quot;create&quot;"
+      "description": "Collection.save - Saves the collection as a \"create\""
     },
     "AbstractCollection.html#update": {
       "id": "AbstractCollection.html#update",
@@ -21070,7 +21296,7 @@
       "name": "update",
       "tags": "AbstractCollection#update update",
       "summary": "",
-      "description": "Collection.update - Updates the collection as an &quot;update&quot;"
+      "description": "Collection.update - Updates the collection as an \"update\""
     },
     "AbstractCollection.html#sortByKey": {
       "id": "AbstractCollection.html#sortByKey",
@@ -21282,7 +21508,7 @@
       "name": "MessageKeyFormatter",
       "tags": "MessageKeyFormatter",
       "summary": "",
-      "description": "Augmented.Utility.MessageKeyFormatter Concatenate the pieces of the message together if a portion of the key is missing, the rest of the key is ignored. ex. if the &quot;rule&quot; attribute is missing, then the key will return with the message.level + message.kind only",
+      "description": "Augmented.Utility.MessageKeyFormatter Concatenate the pieces of the message together if a portion of the key is missing, the rest of the key is ignored. ex. if the \"rule\" attribute is missing, then the key will return with the message.level + message.kind only",
       "body": ""
     },
     "MessageKeyFormatter.html#.format": {
@@ -21294,6 +21520,37 @@
       "tags": "MessageKeyFormatter.format format",
       "summary": "",
       "description": "Format a key for a message"
+    },
+    "Transformer.html": {
+      "id": "Transformer.html",
+      "kind": "class",
+      "title": "Transformer",
+      "longname": "Transformer",
+      "name": "Transformer",
+      "tags": "Transformer",
+      "summary": "",
+      "description": "Augmented.Utility.Transformer Transform an object, type, or array to another type, object, or array",
+      "body": ""
+    },
+    "Transformer.html#.transform": {
+      "id": "Transformer.html#.transform",
+      "kind": "function",
+      "title": "&lt;static&gt; transform( source, type )",
+      "longname": "Transformer.transform",
+      "name": "transform",
+      "tags": "Transformer.transform transform",
+      "summary": "",
+      "description": "Transform an object, primitive, or array to another object, primitive, or array"
+    },
+    "Transformer.html#.isType": {
+      "id": "Transformer.html#.isType",
+      "kind": "function",
+      "title": "&lt;static&gt; isType( source )",
+      "longname": "Transformer.isType",
+      "name": "isType",
+      "tags": "Transformer.isType isType",
+      "summary": "",
+      "description": "Returns a Augmented.Utility.TransformerType of a passed object"
     },
     "module-Augmented.html": {
       "id": "module-Augmented.html",

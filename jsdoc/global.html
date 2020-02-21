@@ -78,6 +78,7 @@
 											<li><a href="global.html#filter">filter</a></li>
 											<li><a href="global.html#filterObject">filterObject</a></li>
 											<li><a href="global.html#findByMatchingProperties">findByMatchingProperties</a></li>
+											<li><a href="global.html#formatByteSize">formatByteSize</a></li>
 											<li><a href="global.html#formatDate">formatDate</a></li>
 											<li><a href="global.html#has">has</a></li>
 											<li><a href="global.html#insertionSort">insertionSort</a></li>
@@ -87,12 +88,14 @@
 											<li><a href="global.html#isObject">isObject</a></li>
 											<li><a href="global.html#isString">isString</a></li>
 											<li><a href="global.html#Level">Level</a></li>
+											<li><a href="global.html#memorySizeOf">memorySizeOf</a></li>
 											<li><a href="global.html#mergeSort">mergeSort</a></li>
 											<li><a href="global.html#offApi">offApi</a></li>
 											<li><a href="global.html#onApi">onApi</a></li>
 											<li><a href="global.html#prettyPrint">prettyPrint</a></li>
 											<li><a href="global.html#quickSort">quickSort</a></li>
 											<li><a href="global.html#shuffle">shuffle</a></li>
+											<li><a href="global.html#sizeOf">sizeOf</a></li>
 											<li><a href="global.html#sortObjects">sortObjects</a></li>
 											<li><a href="global.html#TransformerType">TransformerType</a></li>
 											<li><a href="global.html#triggerApi">triggerApi</a></li>
@@ -118,6 +121,7 @@
 											<li><a href="ConsoleLogger.html">ConsoleLogger</a></li>
 											<li><a href="Context.html">Context</a></li>
 											<li><a href="Entry.html">Entry</a></li>
+											<li><a href="Logger.BasicLogger.html">Logger.BasicLogger</a></li>
 											<li><a href="Logger.ColorConsoleLogger.html">Logger.ColorConsoleLogger</a></li>
 											<li><a href="LoggerFactory.html">LoggerFactory</a></li>
 											<li><a href="MessageKeyFormatter.html">MessageKeyFormatter</a></li>
@@ -285,14 +289,21 @@
 								<td><code>CONSOLE</code></td>
 							<td><span class="param-type">Symbol</span></td>
 							<td class="last">
-									<p>The console logger (HTML5 console)</p>
+									<p>The console logger (terminal)</p>
 							</td>
 						</tr>
 						<tr>
 								<td><code>COLOR_CONSOLE</code></td>
 							<td><span class="param-type">Symbol</span></td>
 							<td class="last">
-									<p>The color console logger (HTML5 console)</p>
+									<p>The color console logger (terminal)</p>
+							</td>
+						</tr>
+						<tr>
+								<td><code>BASIC</code></td>
+							<td><span class="param-type">Symbol</span></td>
+							<td class="last">
+									<p>The basic console logger (terminal)</p>
 							</td>
 						</tr>
 					</tbody>
@@ -517,6 +528,51 @@
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
 									<p class="form-control-static"><a href="node_modules_next-core-sort_src_sort.js.html">node_modules/next-core-sort/src/sort.js</a>, <a href="node_modules_next-core-sort_src_sort.js.html#line-1">line 1</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title function public">
+			<h4 id="sizeOf" class="function public"><span class="name">sizeOf</span><span class="signature-params">()</span></h4>
+		</dt>
+<dd class="symbol-details function public">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>Returns the size in bytes of an object</p></div>
+			</div>			<div class="callout callout-success"><h5>Returns</h5>		<form class="form-horizontal returns">
+							<div class="form-group">
+								<label class="col-sm-3 control-label returns-type"><span class="param-type">Number</span></label>
+								<div class="col-sm-9">
+									<div class="form-control-static returns-description"><p>size in bytes</p></div>
+								</div>
+							</div>
+					</form>
+			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="node_modules_next-core-utilities_src_sizeOf.js.html">node_modules/next-core-utilities/src/sizeOf.js</a>, <a href="node_modules_next-core-utilities_src_sizeOf.js.html#line-1">line 1</a></p>
 								</div>
 							</div>
 			
@@ -1090,6 +1146,96 @@
 </dd>
 											<hr/>
 											<dt class="symbol-title function public">
+			<h4 id="formatByteSize" class="function public"><span class="name">formatByteSize</span><span class="signature-params">()</span></h4>
+		</dt>
+<dd class="symbol-details function public">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>Returns the number (in bytes) as a human readable string</p></div>
+			</div>			<div class="callout callout-success"><h5>Returns</h5>		<form class="form-horizontal returns">
+							<div class="form-group">
+								<label class="col-sm-3 control-label returns-type"><span class="param-type">String</span></label>
+								<div class="col-sm-9">
+									<div class="form-control-static returns-description"><p>size in formated human readable string</p></div>
+								</div>
+							</div>
+					</form>
+			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="node_modules_next-core-utilities_src_sizeOf.js.html">node_modules/next-core-utilities/src/sizeOf.js</a>, <a href="node_modules_next-core-utilities_src_sizeOf.js.html#line-34">line 34</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title function public">
+			<h4 id="memorySizeOf" class="function public"><span class="name">memorySizeOf</span><span class="signature-params">()</span></h4>
+		</dt>
+<dd class="symbol-details function public">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>Returns the object size as a human readable string</p></div>
+			</div>			<div class="callout callout-success"><h5>Returns</h5>		<form class="form-horizontal returns">
+							<div class="form-group">
+								<label class="col-sm-3 control-label returns-type"><span class="param-type">String</span></label>
+								<div class="col-sm-9">
+									<div class="form-control-static returns-description"><p>size in formated human readable string</p></div>
+								</div>
+							</div>
+					</form>
+			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="node_modules_next-core-utilities_src_sizeOf.js.html">node_modules/next-core-utilities/src/sizeOf.js</a>, <a href="node_modules_next-core-utilities_src_sizeOf.js.html#line-46">line 46</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title function public">
 			<h4 id="mergeSort" class="function public"><span class="name">mergeSort</span><span class="signature-params">( <span class="signature-param">array</span>&nbsp;)</span></h4>
 		</dt>
 <dd class="symbol-details function public">
@@ -1221,7 +1367,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="node_modules_next-core-logger_src_abstractLogger.js.html">node_modules/next-core-logger/src/abstractLogger.js</a>, <a href="node_modules_next-core-logger_src_abstractLogger.js.html#line-67">line 67</a></p>
+									<p class="form-control-static"><a href="node_modules_next-core-logger_src_abstractLogger.js.html">node_modules/next-core-logger/src/abstractLogger.js</a>, <a href="node_modules_next-core-logger_src_abstractLogger.js.html#line-66">line 66</a></p>
 								</div>
 							</div>
 			
@@ -1441,7 +1587,7 @@
 	</div>
 	<footer>
 				<div class="footer-option"><a href='http://www.augmentedjs.com'>Augmented.js Homepage</a></div>
-			<div class="generated-by">Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.3</a> on Fri Oct 4th 2019 using the <a href="https://github.com/steveush/foodoc">FooDoc template</a>.</div>
+			<div class="generated-by">Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.3</a> on Thu Feb 20th 2020 using the <a href="https://github.com/steveush/foodoc">FooDoc template</a>.</div>
 	</footer>
 	<script src="js/jquery.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
