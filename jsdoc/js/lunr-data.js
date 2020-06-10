@@ -300,54 +300,6 @@ window.lunrData = {
           "properti",
           "type"
         ],
-        "AbstractLogger.html": [
-          "abstract",
-          "abstractlogg",
-          "augment",
-          "class",
-          "logger",
-          "lt;abstract&gt"
-        ],
-        "AbstractLogger.html#log": [
-          "abstractlogger#log",
-          "default",
-          "function",
-          "level",
-          "log",
-          "messag"
-        ],
-        "AbstractLogger.html#info": [
-          "abstractlogger#info",
-          "function",
-          "info",
-          "level",
-          "log",
-          "messag"
-        ],
-        "AbstractLogger.html#error": [
-          "abstractlogger#error",
-          "error",
-          "function",
-          "level",
-          "log",
-          "messag"
-        ],
-        "AbstractLogger.html#debug": [
-          "abstractlogger#debug",
-          "debug",
-          "function",
-          "level",
-          "log",
-          "messag"
-        ],
-        "AbstractLogger.html#warn": [
-          "abstractlogger#warn",
-          "function",
-          "level",
-          "log",
-          "messag",
-          "warn"
-        ],
         "Principal.html": [
           "abstract",
           "class",
@@ -358,70 +310,6 @@ window.lunrData = {
           "princip",
           "secur",
           "us"
-        ],
-        "ConsoleLogger.html": [
-          "class",
-          "consol",
-          "consolelogg",
-          "logger"
-        ],
-        "ConsoleLogger.html#log": [
-          "consolelogger#log",
-          "default",
-          "function",
-          "level",
-          "log",
-          "messag"
-        ],
-        "ConsoleLogger.html#info": [
-          "consolelogger#info",
-          "function",
-          "info",
-          "level",
-          "log",
-          "messag"
-        ],
-        "ConsoleLogger.html#error": [
-          "consolelogger#error",
-          "error",
-          "function",
-          "level",
-          "log",
-          "messag"
-        ],
-        "ConsoleLogger.html#debug": [
-          "consolelogger#debug",
-          "debug",
-          "function",
-          "level",
-          "log",
-          "messag"
-        ],
-        "ConsoleLogger.html#warn": [
-          "consolelogger#warn",
-          "function",
-          "level",
-          "log",
-          "messag",
-          "warn"
-        ],
-        "LoggerFactory.html": [
-          "class",
-          "creat",
-          "factori",
-          "instanc",
-          "logger",
-          "loggerfactori"
-        ],
-        "LoggerFactory.html#.getLogger": [
-          "function",
-          "getlogg",
-          "instanc",
-          "level",
-          "logger",
-          "loggerfactory.getlogg",
-          "lt;static&gt",
-          "type"
         ],
         "AugmentedObject.html": [
           "augment",
@@ -712,115 +600,6 @@ window.lunrData = {
           "string",
           "tostr"
         ],
-        "Logger.BasicLogger.html": [
-          "basic",
-          "basiclogg",
-          "class",
-          "consol",
-          "extra",
-          "level",
-          "logger",
-          "logger.basiclogg",
-          "text"
-        ],
-        "Logger.BasicLogger.html#log": [
-          "basiclogger#log",
-          "default",
-          "function",
-          "level",
-          "log",
-          "logger.basiclogger#log",
-          "messag"
-        ],
-        "Logger.BasicLogger.html#info": [
-          "basiclogger#info",
-          "function",
-          "info",
-          "level",
-          "log",
-          "logger.basiclogger#info",
-          "messag"
-        ],
-        "Logger.BasicLogger.html#error": [
-          "basiclogger#error",
-          "error",
-          "function",
-          "level",
-          "log",
-          "logger.basiclogger#error",
-          "messag"
-        ],
-        "Logger.BasicLogger.html#debug": [
-          "basiclogger#debug",
-          "debug",
-          "function",
-          "level",
-          "log",
-          "logger.basiclogger#debug",
-          "messag"
-        ],
-        "Logger.BasicLogger.html#warn": [
-          "basiclogger#warn",
-          "function",
-          "level",
-          "log",
-          "logger.basiclogger#warn",
-          "messag",
-          "warn"
-        ],
-        "Logger.ColorConsoleLogger.html": [
-          "class",
-          "color",
-          "colorconsolelogg",
-          "consol",
-          "logger",
-          "logger.colorconsolelogg"
-        ],
-        "Logger.ColorConsoleLogger.html#log": [
-          "colorconsolelogger#log",
-          "default",
-          "function",
-          "level",
-          "log",
-          "logger.colorconsolelogger#log",
-          "messag"
-        ],
-        "Logger.ColorConsoleLogger.html#info": [
-          "colorconsolelogger#info",
-          "function",
-          "info",
-          "level",
-          "log",
-          "logger.colorconsolelogger#info",
-          "messag"
-        ],
-        "Logger.ColorConsoleLogger.html#error": [
-          "colorconsolelogger#error",
-          "error",
-          "function",
-          "level",
-          "log",
-          "logger.colorconsolelogger#error",
-          "messag"
-        ],
-        "Logger.ColorConsoleLogger.html#debug": [
-          "colorconsolelogger#debug",
-          "debug",
-          "function",
-          "level",
-          "log",
-          "logger.colorconsolelogger#debug",
-          "messag"
-        ],
-        "Logger.ColorConsoleLogger.html#warn": [
-          "colorconsolelogger#warn",
-          "function",
-          "level",
-          "log",
-          "logger.colorconsolelogger#warn",
-          "messag",
-          "warn"
-        ],
         "AbstractSecurityClient.html": [
           "abstract",
           "abstractsecuritycli",
@@ -934,6 +713,21 @@ window.lunrData = {
           "schema",
           "validationframework#registerschema"
         ],
+        "ValidationFramework.html#getSchema": [
+          "function",
+          "get",
+          "getschema",
+          "ident",
+          "schema",
+          "validationframework#getschema"
+        ],
+        "ValidationFramework.html#getSchemas": [
+          "function",
+          "get",
+          "getschema",
+          "schema",
+          "validationframework#getschema"
+        ],
         "ValidationFramework.html#clearSchemas": [
           "clear",
           "clearschema",
@@ -967,21 +761,6 @@ window.lunrData = {
           "valid",
           "validationframework#generateschema",
           "via"
-        ],
-        "ValidationFramework.html#getSchema": [
-          "function",
-          "get",
-          "getschema",
-          "ident",
-          "schema",
-          "validationframework#getschema"
-        ],
-        "ValidationFramework.html#getSchemas": [
-          "function",
-          "get",
-          "getschema",
-          "schema",
-          "validationframework#getschema"
         ],
         "CollectionIterator.html": [
           "allow",
@@ -2212,7 +1991,7 @@ window.lunrData = {
           "security.cli"
         ]
       },
-      "length": 219
+      "length": 193
     },
     "tokenStore": {
       "root": {
@@ -2231,10 +2010,6 @@ window.lunrData = {
                     "docs": {},
                     "t": {
                       "docs": {
-                        "AbstractLogger.html": {
-                          "ref": "AbstractLogger.html",
-                          "tf": 16.666666666666664
-                        },
                         "AugmentedObject.html": {
                           "ref": "AugmentedObject.html",
                           "tf": 8.333333333333332
@@ -4008,10 +3783,6 @@ window.lunrData = {
                       "docs": {},
                       "t": {
                         "docs": {
-                          "AbstractLogger.html": {
-                            "ref": "AbstractLogger.html",
-                            "tf": 16.666666666666664
-                          },
                           "Principal.html": {
                             "ref": "Principal.html",
                             "tf": 7.142857142857142
@@ -4027,120 +3798,6 @@ window.lunrData = {
                           "AbstractCollection.html": {
                             "ref": "AbstractCollection.html",
                             "tf": 7.142857142857142
-                          }
-                        },
-                        "l": {
-                          "docs": {},
-                          "o": {
-                            "docs": {},
-                            "g": {
-                              "docs": {},
-                              "g": {
-                                "docs": {
-                                  "AbstractLogger.html": {
-                                    "ref": "AbstractLogger.html",
-                                    "tf": 1850
-                                  }
-                                },
-                                "e": {
-                                  "docs": {},
-                                  "r": {
-                                    "docs": {},
-                                    "#": {
-                                      "docs": {},
-                                      "l": {
-                                        "docs": {},
-                                        "o": {
-                                          "docs": {},
-                                          "g": {
-                                            "docs": {
-                                              "AbstractLogger.html#log": {
-                                                "ref": "AbstractLogger.html#log",
-                                                "tf": 1150
-                                              }
-                                            }
-                                          }
-                                        }
-                                      },
-                                      "i": {
-                                        "docs": {},
-                                        "n": {
-                                          "docs": {},
-                                          "f": {
-                                            "docs": {},
-                                            "o": {
-                                              "docs": {
-                                                "AbstractLogger.html#info": {
-                                                  "ref": "AbstractLogger.html#info",
-                                                  "tf": 1150
-                                                }
-                                              }
-                                            }
-                                          }
-                                        }
-                                      },
-                                      "e": {
-                                        "docs": {},
-                                        "r": {
-                                          "docs": {},
-                                          "r": {
-                                            "docs": {},
-                                            "o": {
-                                              "docs": {},
-                                              "r": {
-                                                "docs": {
-                                                  "AbstractLogger.html#error": {
-                                                    "ref": "AbstractLogger.html#error",
-                                                    "tf": 1150
-                                                  }
-                                                }
-                                              }
-                                            }
-                                          }
-                                        }
-                                      },
-                                      "d": {
-                                        "docs": {},
-                                        "e": {
-                                          "docs": {},
-                                          "b": {
-                                            "docs": {},
-                                            "u": {
-                                              "docs": {},
-                                              "g": {
-                                                "docs": {
-                                                  "AbstractLogger.html#debug": {
-                                                    "ref": "AbstractLogger.html#debug",
-                                                    "tf": 1150
-                                                  }
-                                                }
-                                              }
-                                            }
-                                          }
-                                        }
-                                      },
-                                      "w": {
-                                        "docs": {},
-                                        "a": {
-                                          "docs": {},
-                                          "r": {
-                                            "docs": {},
-                                            "n": {
-                                              "docs": {
-                                                "AbstractLogger.html#warn": {
-                                                  "ref": "AbstractLogger.html#warn",
-                                                  "tf": 1150
-                                                }
-                                              }
-                                            }
-                                          }
-                                        }
-                                      }
-                                    }
-                                  }
-                                }
-                              }
-                            }
                           }
                         },
                         "s": {
@@ -6290,6 +5947,26 @@ window.lunrData = {
                 }
               }
             },
+            "s": {
+              "docs": {},
+              "t": {
+                "docs": {},
+                "r": {
+                  "docs": {},
+                  "o": {
+                    "docs": {},
+                    "y": {
+                      "docs": {
+                        "AbstractModel.html#destroy": {
+                          "ref": "AbstractModel.html#destroy",
+                          "tf": 762.5
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
             "f": {
               "docs": {},
               "a": {
@@ -6300,22 +5977,6 @@ window.lunrData = {
                     "docs": {},
                     "t": {
                       "docs": {
-                        "AbstractLogger.html#log": {
-                          "ref": "AbstractLogger.html#log",
-                          "tf": 12.5
-                        },
-                        "ConsoleLogger.html#log": {
-                          "ref": "ConsoleLogger.html#log",
-                          "tf": 12.5
-                        },
-                        "Logger.BasicLogger.html#log": {
-                          "ref": "Logger.BasicLogger.html#log",
-                          "tf": 12.5
-                        },
-                        "Logger.ColorConsoleLogger.html#log": {
-                          "ref": "Logger.ColorConsoleLogger.html#log",
-                          "tf": 12.5
-                        },
                         "AbstractModel.html#url": {
                           "ref": "AbstractModel.html#url",
                           "tf": 3.8461538461538463
@@ -6344,52 +6005,6 @@ window.lunrData = {
                     "Application.html": {
                       "ref": "Application.html",
                       "tf": 1.1627906976744187
-                    }
-                  }
-                }
-              }
-            },
-            "b": {
-              "docs": {},
-              "u": {
-                "docs": {},
-                "g": {
-                  "docs": {
-                    "AbstractLogger.html#debug": {
-                      "ref": "AbstractLogger.html#debug",
-                      "tf": 712.5
-                    },
-                    "ConsoleLogger.html#debug": {
-                      "ref": "ConsoleLogger.html#debug",
-                      "tf": 712.5
-                    },
-                    "Logger.BasicLogger.html#debug": {
-                      "ref": "Logger.BasicLogger.html#debug",
-                      "tf": 662.5
-                    },
-                    "Logger.ColorConsoleLogger.html#debug": {
-                      "ref": "Logger.ColorConsoleLogger.html#debug",
-                      "tf": 662.5
-                    }
-                  }
-                }
-              }
-            },
-            "s": {
-              "docs": {},
-              "t": {
-                "docs": {},
-                "r": {
-                  "docs": {},
-                  "o": {
-                    "docs": {},
-                    "y": {
-                      "docs": {
-                        "AbstractModel.html#destroy": {
-                          "ref": "AbstractModel.html#destroy",
-                          "tf": 762.5
-                        }
-                      }
                     }
                   }
                 }
@@ -6737,61 +6352,6 @@ window.lunrData = {
                 }
               }
             },
-            "f": {
-              "docs": {},
-              "o": {
-                "docs": {
-                  "AbstractLogger.html#info": {
-                    "ref": "AbstractLogger.html#info",
-                    "tf": 712.5
-                  },
-                  "ConsoleLogger.html#info": {
-                    "ref": "ConsoleLogger.html#info",
-                    "tf": 712.5
-                  },
-                  "Logger.BasicLogger.html#info": {
-                    "ref": "Logger.BasicLogger.html#info",
-                    "tf": 662.5
-                  },
-                  "Logger.ColorConsoleLogger.html#info": {
-                    "ref": "Logger.ColorConsoleLogger.html#info",
-                    "tf": 662.5
-                  }
-                }
-              }
-            },
-            "s": {
-              "docs": {},
-              "t": {
-                "docs": {},
-                "a": {
-                  "docs": {},
-                  "n": {
-                    "docs": {},
-                    "c": {
-                      "docs": {
-                        "LoggerFactory.html": {
-                          "ref": "LoggerFactory.html",
-                          "tf": 10
-                        },
-                        "LoggerFactory.html#.getLogger": {
-                          "ref": "LoggerFactory.html#.getLogger",
-                          "tf": 16.666666666666664
-                        },
-                        "AuthenticationFactory.html#.getSecurityClient": {
-                          "ref": "AuthenticationFactory.html#.getSecurityClient",
-                          "tf": 16.666666666666664
-                        },
-                        "AbstractCollection.html#create": {
-                          "ref": "AbstractCollection.html#create",
-                          "tf": 2.941176470588235
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-            },
             "i": {
               "docs": {},
               "t": {
@@ -6856,6 +6416,30 @@ window.lunrData = {
                       "AbstractModel.html#listenToOnce": {
                         "ref": "AbstractModel.html#listenToOnce",
                         "tf": 12.5
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "s": {
+              "docs": {},
+              "t": {
+                "docs": {},
+                "a": {
+                  "docs": {},
+                  "n": {
+                    "docs": {},
+                    "c": {
+                      "docs": {
+                        "AuthenticationFactory.html#.getSecurityClient": {
+                          "ref": "AuthenticationFactory.html#.getSecurityClient",
+                          "tf": 16.666666666666664
+                        },
+                        "AbstractCollection.html#create": {
+                          "ref": "AbstractCollection.html#create",
+                          "tf": 2.941176470588235
+                        }
                       }
                     }
                   }
@@ -9406,6 +8990,14 @@ window.lunrData = {
                         "ref": "ValidationFramework.html#registerSchema",
                         "tf": 49.99999999999999
                       },
+                      "ValidationFramework.html#getSchema": {
+                        "ref": "ValidationFramework.html#getSchema",
+                        "tf": 25
+                      },
+                      "ValidationFramework.html#getSchemas": {
+                        "ref": "ValidationFramework.html#getSchemas",
+                        "tf": 25
+                      },
                       "ValidationFramework.html#clearSchemas": {
                         "ref": "ValidationFramework.html#clearSchemas",
                         "tf": 25
@@ -9421,14 +9013,6 @@ window.lunrData = {
                       "ValidationFramework.html#generateSchema": {
                         "ref": "ValidationFramework.html#generateSchema",
                         "tf": 12.5
-                      },
-                      "ValidationFramework.html#getSchema": {
-                        "ref": "ValidationFramework.html#getSchema",
-                        "tf": 25
-                      },
-                      "ValidationFramework.html#getSchemas": {
-                        "ref": "ValidationFramework.html#getSchemas",
-                        "tf": 25
                       },
                       "AbstractModel.html": {
                         "ref": "AbstractModel.html",
@@ -9609,23 +9193,6 @@ window.lunrData = {
                 "Application.html#datastore": {
                   "ref": "Application.html#datastore",
                   "tf": 16.666666666666664
-                }
-              },
-              "l": {
-                "docs": {},
-                "o": {
-                  "docs": {},
-                  "g": {
-                    "docs": {},
-                    "g": {
-                      "docs": {
-                        "LoggerFactory.html#.getLogger": {
-                          "ref": "LoggerFactory.html#.getLogger",
-                          "tf": 691.6666666666666
-                        }
-                      }
-                    }
-                  }
                 }
               },
               "p": {
@@ -10010,20 +9577,8 @@ window.lunrData = {
                       "ref": "AugmentedMap.html",
                       "tf": 110
                     },
-                    "AbstractLogger.html": {
-                      "ref": "AbstractLogger.html",
-                      "tf": 110
-                    },
                     "Principal.html": {
                       "ref": "Principal.html",
-                      "tf": 110
-                    },
-                    "ConsoleLogger.html": {
-                      "ref": "ConsoleLogger.html",
-                      "tf": 110
-                    },
-                    "LoggerFactory.html": {
-                      "ref": "LoggerFactory.html",
                       "tf": 110
                     },
                     "AugmentedObject.html": {
@@ -10036,14 +9591,6 @@ window.lunrData = {
                     },
                     "Stack.html": {
                       "ref": "Stack.html",
-                      "tf": 110
-                    },
-                    "Logger.BasicLogger.html": {
-                      "ref": "Logger.BasicLogger.html",
-                      "tf": 110
-                    },
-                    "Logger.ColorConsoleLogger.html": {
-                      "ref": "Logger.ColorConsoleLogger.html",
                       "tf": 110
                     },
                     "AbstractSecurityClient.html": {
@@ -10428,149 +9975,182 @@ window.lunrData = {
               }
             }
           },
-          "o": {
+          "a": {
             "docs": {},
-            "n": {
+            "l": {
               "docs": {},
-              "s": {
-                "docs": {},
-                "o": {
+              "l": {
+                "docs": {
+                  "CollectionIterator.html#next": {
+                    "ref": "CollectionIterator.html#next",
+                    "tf": 3.3333333333333335
+                  },
+                  "AbstractModel.html#url": {
+                    "ref": "AbstractModel.html#url",
+                    "tf": 3.8461538461538463
+                  },
+                  "AbstractModel.html#sync": {
+                    "ref": "AbstractModel.html#sync",
+                    "tf": 8.333333333333332
+                  },
+                  "AbstractCollection.html#sort": {
+                    "ref": "AbstractCollection.html#sort",
+                    "tf": 2.7777777777777777
+                  }
+                },
+                "b": {
                   "docs": {},
-                  "l": {
-                    "docs": {
-                      "ConsoleLogger.html": {
-                        "ref": "ConsoleLogger.html",
-                        "tf": 25
-                      },
-                      "Logger.BasicLogger.html": {
-                        "ref": "Logger.BasicLogger.html",
-                        "tf": 8.333333333333332
-                      },
-                      "Logger.ColorConsoleLogger.html": {
-                        "ref": "Logger.ColorConsoleLogger.html",
-                        "tf": 16.666666666666664
-                      }
-                    },
-                    "e": {
+                  "a": {
+                    "docs": {},
+                    "c": {
                       "docs": {},
-                      "l": {
-                        "docs": {},
-                        "o": {
-                          "docs": {},
-                          "g": {
-                            "docs": {},
-                            "g": {
-                              "docs": {
-                                "ConsoleLogger.html": {
-                                  "ref": "ConsoleLogger.html",
-                                  "tf": 1900
-                                }
-                              },
-                              "e": {
-                                "docs": {},
-                                "r": {
-                                  "docs": {},
-                                  "#": {
-                                    "docs": {},
-                                    "l": {
-                                      "docs": {},
-                                      "o": {
-                                        "docs": {},
-                                        "g": {
-                                          "docs": {
-                                            "ConsoleLogger.html#log": {
-                                              "ref": "ConsoleLogger.html#log",
-                                              "tf": 1150
-                                            }
-                                          }
-                                        }
-                                      }
-                                    },
-                                    "i": {
-                                      "docs": {},
-                                      "n": {
-                                        "docs": {},
-                                        "f": {
-                                          "docs": {},
-                                          "o": {
-                                            "docs": {
-                                              "ConsoleLogger.html#info": {
-                                                "ref": "ConsoleLogger.html#info",
-                                                "tf": 1150
-                                              }
-                                            }
-                                          }
-                                        }
-                                      }
-                                    },
-                                    "e": {
-                                      "docs": {},
-                                      "r": {
-                                        "docs": {},
-                                        "r": {
-                                          "docs": {},
-                                          "o": {
-                                            "docs": {},
-                                            "r": {
-                                              "docs": {
-                                                "ConsoleLogger.html#error": {
-                                                  "ref": "ConsoleLogger.html#error",
-                                                  "tf": 1150
-                                                }
-                                              }
-                                            }
-                                          }
-                                        }
-                                      }
-                                    },
-                                    "d": {
-                                      "docs": {},
-                                      "e": {
-                                        "docs": {},
-                                        "b": {
-                                          "docs": {},
-                                          "u": {
-                                            "docs": {},
-                                            "g": {
-                                              "docs": {
-                                                "ConsoleLogger.html#debug": {
-                                                  "ref": "ConsoleLogger.html#debug",
-                                                  "tf": 1150
-                                                }
-                                              }
-                                            }
-                                          }
-                                        }
-                                      }
-                                    },
-                                    "w": {
-                                      "docs": {},
-                                      "a": {
-                                        "docs": {},
-                                        "r": {
-                                          "docs": {},
-                                          "n": {
-                                            "docs": {
-                                              "ConsoleLogger.html#warn": {
-                                                "ref": "ConsoleLogger.html#warn",
-                                                "tf": 1150
-                                              }
-                                            }
-                                          }
-                                        }
-                                      }
-                                    }
-                                  }
-                                }
-                              }
-                            }
+                      "k": {
+                        "docs": {
+                          "AugmentedObject.html#trigger": {
+                            "ref": "AugmentedObject.html#trigger",
+                            "tf": 5.769230769230769
+                          },
+                          "AugmentedObject.html#once": {
+                            "ref": "AugmentedObject.html#once",
+                            "tf": 26.923076923076923
+                          },
+                          "AugmentedObject.html#off": {
+                            "ref": "AugmentedObject.html#off",
+                            "tf": 45.83333333333333
+                          },
+                          "AugmentedObject.html#stopListening": {
+                            "ref": "AugmentedObject.html#stopListening",
+                            "tf": 25
+                          },
+                          "AugmentedObject.html#on": {
+                            "ref": "AugmentedObject.html#on",
+                            "tf": 44.44444444444444
+                          },
+                          "AugmentedObject.html#listenTo": {
+                            "ref": "AugmentedObject.html#listenTo",
+                            "tf": 25
+                          },
+                          "AugmentedObject.html#listenToOnce": {
+                            "ref": "AugmentedObject.html#listenToOnce",
+                            "tf": 25
+                          },
+                          "AbstractModel.html#trigger": {
+                            "ref": "AbstractModel.html#trigger",
+                            "tf": 5.769230769230769
+                          },
+                          "AbstractModel.html#once": {
+                            "ref": "AbstractModel.html#once",
+                            "tf": 26.923076923076923
+                          },
+                          "AbstractModel.html#off": {
+                            "ref": "AbstractModel.html#off",
+                            "tf": 45.83333333333333
+                          },
+                          "AbstractModel.html#stopListening": {
+                            "ref": "AbstractModel.html#stopListening",
+                            "tf": 25
+                          },
+                          "AbstractModel.html#on": {
+                            "ref": "AbstractModel.html#on",
+                            "tf": 44.44444444444444
+                          },
+                          "AbstractModel.html#listenTo": {
+                            "ref": "AbstractModel.html#listenTo",
+                            "tf": 25
+                          },
+                          "AbstractModel.html#listenToOnce": {
+                            "ref": "AbstractModel.html#listenToOnce",
+                            "tf": 25
                           }
                         }
                       }
                     }
                   }
                 }
+              }
+            },
+            "u": {
+              "docs": {},
+              "s": {
+                "docs": {
+                  "AugmentedObject.html#trigger": {
+                    "ref": "AugmentedObject.html#trigger",
+                    "tf": 1.9230769230769231
+                  },
+                  "AbstractModel.html#trigger": {
+                    "ref": "AbstractModel.html#trigger",
+                    "tf": 1.9230769230769231
+                  }
+                }
+              }
+            },
+            "s": {
+              "docs": {},
+              "e": {
+                "docs": {
+                  "AbstractModel.html#matches": {
+                    "ref": "AbstractModel.html#matches",
+                    "tf": 8.333333333333332
+                  },
+                  "AbstractCollection.html#where": {
+                    "ref": "AbstractCollection.html#where",
+                    "tf": 6.25
+                  },
+                  "AbstractCollection.html#findWhere": {
+                    "ref": "AbstractCollection.html#findWhere",
+                    "tf": 5.555555555555555
+                  },
+                  "AbstractCollection.html#create": {
+                    "ref": "AbstractCollection.html#create",
+                    "tf": 2.941176470588235
+                  }
+                }
+              }
+            }
+          },
+          "o": {
+            "docs": {},
+            "m": {
+              "docs": {},
+              "b": {
+                "docs": {},
+                "i": {
+                  "docs": {},
+                  "n": {
+                    "docs": {
+                      "AugmentedObject.html#once": {
+                        "ref": "AugmentedObject.html#once",
+                        "tf": 1.9230769230769231
+                      },
+                      "AbstractModel.html#once": {
+                        "ref": "AbstractModel.html#once",
+                        "tf": 1.9230769230769231
+                      },
+                      "AbstractCollection.html#add": {
+                        "ref": "AbstractCollection.html#add",
+                        "tf": 3.571428571428571
+                      }
+                    }
+                  }
+                }
               },
+              "p": {
+                "docs": {},
+                "o": {
+                  "docs": {},
+                  "n": {
+                    "docs": {
+                      "module-Augmented.html": {
+                        "ref": "module-Augmented.html",
+                        "tf": 12.5
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "n": {
+              "docs": {},
               "t": {
                 "docs": {},
                 "e": {
@@ -10876,193 +10456,8 @@ window.lunrData = {
                 }
               }
             },
-            "m": {
-              "docs": {},
-              "b": {
-                "docs": {},
-                "i": {
-                  "docs": {},
-                  "n": {
-                    "docs": {
-                      "AugmentedObject.html#once": {
-                        "ref": "AugmentedObject.html#once",
-                        "tf": 1.9230769230769231
-                      },
-                      "AbstractModel.html#once": {
-                        "ref": "AbstractModel.html#once",
-                        "tf": 1.9230769230769231
-                      },
-                      "AbstractCollection.html#add": {
-                        "ref": "AbstractCollection.html#add",
-                        "tf": 3.571428571428571
-                      }
-                    }
-                  }
-                }
-              },
-              "p": {
-                "docs": {},
-                "o": {
-                  "docs": {},
-                  "n": {
-                    "docs": {
-                      "module-Augmented.html": {
-                        "ref": "module-Augmented.html",
-                        "tf": 12.5
-                      }
-                    }
-                  }
-                }
-              }
-            },
             "l": {
               "docs": {},
-              "o": {
-                "docs": {},
-                "r": {
-                  "docs": {
-                    "Logger.ColorConsoleLogger.html": {
-                      "ref": "Logger.ColorConsoleLogger.html",
-                      "tf": 16.666666666666664
-                    }
-                  },
-                  "c": {
-                    "docs": {},
-                    "o": {
-                      "docs": {},
-                      "n": {
-                        "docs": {},
-                        "s": {
-                          "docs": {},
-                          "o": {
-                            "docs": {},
-                            "l": {
-                              "docs": {},
-                              "e": {
-                                "docs": {},
-                                "l": {
-                                  "docs": {},
-                                  "o": {
-                                    "docs": {},
-                                    "g": {
-                                      "docs": {},
-                                      "g": {
-                                        "docs": {
-                                          "Logger.ColorConsoleLogger.html": {
-                                            "ref": "Logger.ColorConsoleLogger.html",
-                                            "tf": 750
-                                          }
-                                        },
-                                        "e": {
-                                          "docs": {},
-                                          "r": {
-                                            "docs": {},
-                                            "#": {
-                                              "docs": {},
-                                              "l": {
-                                                "docs": {},
-                                                "o": {
-                                                  "docs": {},
-                                                  "g": {
-                                                    "docs": {
-                                                      "Logger.ColorConsoleLogger.html#log": {
-                                                        "ref": "Logger.ColorConsoleLogger.html#log",
-                                                        "tf": 100
-                                                      }
-                                                    }
-                                                  }
-                                                }
-                                              },
-                                              "i": {
-                                                "docs": {},
-                                                "n": {
-                                                  "docs": {},
-                                                  "f": {
-                                                    "docs": {},
-                                                    "o": {
-                                                      "docs": {
-                                                        "Logger.ColorConsoleLogger.html#info": {
-                                                          "ref": "Logger.ColorConsoleLogger.html#info",
-                                                          "tf": 100
-                                                        }
-                                                      }
-                                                    }
-                                                  }
-                                                }
-                                              },
-                                              "e": {
-                                                "docs": {},
-                                                "r": {
-                                                  "docs": {},
-                                                  "r": {
-                                                    "docs": {},
-                                                    "o": {
-                                                      "docs": {},
-                                                      "r": {
-                                                        "docs": {
-                                                          "Logger.ColorConsoleLogger.html#error": {
-                                                            "ref": "Logger.ColorConsoleLogger.html#error",
-                                                            "tf": 100
-                                                          }
-                                                        }
-                                                      }
-                                                    }
-                                                  }
-                                                }
-                                              },
-                                              "d": {
-                                                "docs": {},
-                                                "e": {
-                                                  "docs": {},
-                                                  "b": {
-                                                    "docs": {},
-                                                    "u": {
-                                                      "docs": {},
-                                                      "g": {
-                                                        "docs": {
-                                                          "Logger.ColorConsoleLogger.html#debug": {
-                                                            "ref": "Logger.ColorConsoleLogger.html#debug",
-                                                            "tf": 100
-                                                          }
-                                                        }
-                                                      }
-                                                    }
-                                                  }
-                                                }
-                                              },
-                                              "w": {
-                                                "docs": {},
-                                                "a": {
-                                                  "docs": {},
-                                                  "r": {
-                                                    "docs": {},
-                                                    "n": {
-                                                      "docs": {
-                                                        "Logger.ColorConsoleLogger.html#warn": {
-                                                          "ref": "Logger.ColorConsoleLogger.html#warn",
-                                                          "tf": 100
-                                                        }
-                                                      }
-                                                    }
-                                                  }
-                                                }
-                                              }
-                                            }
-                                          }
-                                        }
-                                      }
-                                    }
-                                  }
-                                }
-                              }
-                            }
-                          }
-                        }
-                      }
-                    }
-                  }
-                }
-              },
               "l": {
                 "docs": {},
                 "e": {
@@ -11368,176 +10763,6 @@ window.lunrData = {
               }
             }
           },
-          "r": {
-            "docs": {},
-            "e": {
-              "docs": {},
-              "a": {
-                "docs": {},
-                "t": {
-                  "docs": {
-                    "LoggerFactory.html": {
-                      "ref": "LoggerFactory.html",
-                      "tf": 10
-                    },
-                    "AbstractModel.html#clone": {
-                      "ref": "AbstractModel.html#clone",
-                      "tf": 8.333333333333332
-                    },
-                    "AbstractModel.html#save": {
-                      "ref": "AbstractModel.html#save",
-                      "tf": 12.5
-                    },
-                    "AbstractCollection.html#create": {
-                      "ref": "AbstractCollection.html#create",
-                      "tf": 752.9411764705883
-                    },
-                    "AbstractCollection.html#clone": {
-                      "ref": "AbstractCollection.html#clone",
-                      "tf": 7.142857142857142
-                    },
-                    "AbstractCollection.html#save": {
-                      "ref": "AbstractCollection.html#save",
-                      "tf": 12.5
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "a": {
-            "docs": {},
-            "l": {
-              "docs": {},
-              "l": {
-                "docs": {
-                  "CollectionIterator.html#next": {
-                    "ref": "CollectionIterator.html#next",
-                    "tf": 3.3333333333333335
-                  },
-                  "AbstractModel.html#url": {
-                    "ref": "AbstractModel.html#url",
-                    "tf": 3.8461538461538463
-                  },
-                  "AbstractModel.html#sync": {
-                    "ref": "AbstractModel.html#sync",
-                    "tf": 8.333333333333332
-                  },
-                  "AbstractCollection.html#sort": {
-                    "ref": "AbstractCollection.html#sort",
-                    "tf": 2.7777777777777777
-                  }
-                },
-                "b": {
-                  "docs": {},
-                  "a": {
-                    "docs": {},
-                    "c": {
-                      "docs": {},
-                      "k": {
-                        "docs": {
-                          "AugmentedObject.html#trigger": {
-                            "ref": "AugmentedObject.html#trigger",
-                            "tf": 5.769230769230769
-                          },
-                          "AugmentedObject.html#once": {
-                            "ref": "AugmentedObject.html#once",
-                            "tf": 26.923076923076923
-                          },
-                          "AugmentedObject.html#off": {
-                            "ref": "AugmentedObject.html#off",
-                            "tf": 45.83333333333333
-                          },
-                          "AugmentedObject.html#stopListening": {
-                            "ref": "AugmentedObject.html#stopListening",
-                            "tf": 25
-                          },
-                          "AugmentedObject.html#on": {
-                            "ref": "AugmentedObject.html#on",
-                            "tf": 44.44444444444444
-                          },
-                          "AugmentedObject.html#listenTo": {
-                            "ref": "AugmentedObject.html#listenTo",
-                            "tf": 25
-                          },
-                          "AugmentedObject.html#listenToOnce": {
-                            "ref": "AugmentedObject.html#listenToOnce",
-                            "tf": 25
-                          },
-                          "AbstractModel.html#trigger": {
-                            "ref": "AbstractModel.html#trigger",
-                            "tf": 5.769230769230769
-                          },
-                          "AbstractModel.html#once": {
-                            "ref": "AbstractModel.html#once",
-                            "tf": 26.923076923076923
-                          },
-                          "AbstractModel.html#off": {
-                            "ref": "AbstractModel.html#off",
-                            "tf": 45.83333333333333
-                          },
-                          "AbstractModel.html#stopListening": {
-                            "ref": "AbstractModel.html#stopListening",
-                            "tf": 25
-                          },
-                          "AbstractModel.html#on": {
-                            "ref": "AbstractModel.html#on",
-                            "tf": 44.44444444444444
-                          },
-                          "AbstractModel.html#listenTo": {
-                            "ref": "AbstractModel.html#listenTo",
-                            "tf": 25
-                          },
-                          "AbstractModel.html#listenToOnce": {
-                            "ref": "AbstractModel.html#listenToOnce",
-                            "tf": 25
-                          }
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-            },
-            "u": {
-              "docs": {},
-              "s": {
-                "docs": {
-                  "AugmentedObject.html#trigger": {
-                    "ref": "AugmentedObject.html#trigger",
-                    "tf": 1.9230769230769231
-                  },
-                  "AbstractModel.html#trigger": {
-                    "ref": "AbstractModel.html#trigger",
-                    "tf": 1.9230769230769231
-                  }
-                }
-              }
-            },
-            "s": {
-              "docs": {},
-              "e": {
-                "docs": {
-                  "AbstractModel.html#matches": {
-                    "ref": "AbstractModel.html#matches",
-                    "tf": 8.333333333333332
-                  },
-                  "AbstractCollection.html#where": {
-                    "ref": "AbstractCollection.html#where",
-                    "tf": 6.25
-                  },
-                  "AbstractCollection.html#findWhere": {
-                    "ref": "AbstractCollection.html#findWhere",
-                    "tf": 5.555555555555555
-                  },
-                  "AbstractCollection.html#create": {
-                    "ref": "AbstractCollection.html#create",
-                    "tf": 2.941176470588235
-                  }
-                }
-              }
-            }
-          },
           "u": {
             "docs": {},
             "r": {
@@ -11559,6 +10784,39 @@ window.lunrData = {
                           "tf": 5
                         }
                       }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "r": {
+            "docs": {},
+            "e": {
+              "docs": {},
+              "a": {
+                "docs": {},
+                "t": {
+                  "docs": {
+                    "AbstractModel.html#clone": {
+                      "ref": "AbstractModel.html#clone",
+                      "tf": 8.333333333333332
+                    },
+                    "AbstractModel.html#save": {
+                      "ref": "AbstractModel.html#save",
+                      "tf": 12.5
+                    },
+                    "AbstractCollection.html#create": {
+                      "ref": "AbstractCollection.html#create",
+                      "tf": 752.9411764705883
+                    },
+                    "AbstractCollection.html#clone": {
+                      "ref": "AbstractCollection.html#clone",
+                      "tf": 7.142857142857142
+                    },
+                    "AbstractCollection.html#save": {
+                      "ref": "AbstractCollection.html#save",
+                      "tf": 12.5
                     }
                   }
                 }
@@ -11816,726 +11074,6 @@ window.lunrData = {
               }
             }
           },
-          "o": {
-            "docs": {},
-            "g": {
-              "docs": {
-                "AbstractLogger.html#log": {
-                  "ref": "AbstractLogger.html#log",
-                  "tf": 695.8333333333334
-                },
-                "AbstractLogger.html#info": {
-                  "ref": "AbstractLogger.html#info",
-                  "tf": 12.5
-                },
-                "AbstractLogger.html#error": {
-                  "ref": "AbstractLogger.html#error",
-                  "tf": 12.5
-                },
-                "AbstractLogger.html#debug": {
-                  "ref": "AbstractLogger.html#debug",
-                  "tf": 12.5
-                },
-                "AbstractLogger.html#warn": {
-                  "ref": "AbstractLogger.html#warn",
-                  "tf": 12.5
-                },
-                "ConsoleLogger.html#log": {
-                  "ref": "ConsoleLogger.html#log",
-                  "tf": 695.8333333333334
-                },
-                "ConsoleLogger.html#info": {
-                  "ref": "ConsoleLogger.html#info",
-                  "tf": 12.5
-                },
-                "ConsoleLogger.html#error": {
-                  "ref": "ConsoleLogger.html#error",
-                  "tf": 12.5
-                },
-                "ConsoleLogger.html#debug": {
-                  "ref": "ConsoleLogger.html#debug",
-                  "tf": 12.5
-                },
-                "ConsoleLogger.html#warn": {
-                  "ref": "ConsoleLogger.html#warn",
-                  "tf": 12.5
-                },
-                "Logger.BasicLogger.html#log": {
-                  "ref": "Logger.BasicLogger.html#log",
-                  "tf": 645.8333333333334
-                },
-                "Logger.BasicLogger.html#info": {
-                  "ref": "Logger.BasicLogger.html#info",
-                  "tf": 12.5
-                },
-                "Logger.BasicLogger.html#error": {
-                  "ref": "Logger.BasicLogger.html#error",
-                  "tf": 12.5
-                },
-                "Logger.BasicLogger.html#debug": {
-                  "ref": "Logger.BasicLogger.html#debug",
-                  "tf": 12.5
-                },
-                "Logger.BasicLogger.html#warn": {
-                  "ref": "Logger.BasicLogger.html#warn",
-                  "tf": 12.5
-                },
-                "Logger.ColorConsoleLogger.html#log": {
-                  "ref": "Logger.ColorConsoleLogger.html#log",
-                  "tf": 645.8333333333334
-                },
-                "Logger.ColorConsoleLogger.html#info": {
-                  "ref": "Logger.ColorConsoleLogger.html#info",
-                  "tf": 12.5
-                },
-                "Logger.ColorConsoleLogger.html#error": {
-                  "ref": "Logger.ColorConsoleLogger.html#error",
-                  "tf": 12.5
-                },
-                "Logger.ColorConsoleLogger.html#debug": {
-                  "ref": "Logger.ColorConsoleLogger.html#debug",
-                  "tf": 12.5
-                },
-                "Logger.ColorConsoleLogger.html#warn": {
-                  "ref": "Logger.ColorConsoleLogger.html#warn",
-                  "tf": 12.5
-                }
-              },
-              "g": {
-                "docs": {},
-                "e": {
-                  "docs": {},
-                  "r": {
-                    "docs": {
-                      "AbstractLogger.html": {
-                        "ref": "AbstractLogger.html",
-                        "tf": 16.666666666666664
-                      },
-                      "ConsoleLogger.html": {
-                        "ref": "ConsoleLogger.html",
-                        "tf": 25
-                      },
-                      "LoggerFactory.html": {
-                        "ref": "LoggerFactory.html",
-                        "tf": 20
-                      },
-                      "LoggerFactory.html#.getLogger": {
-                        "ref": "LoggerFactory.html#.getLogger",
-                        "tf": 16.666666666666664
-                      },
-                      "Logger.BasicLogger.html": {
-                        "ref": "Logger.BasicLogger.html",
-                        "tf": 8.333333333333332
-                      },
-                      "Logger.ColorConsoleLogger.html": {
-                        "ref": "Logger.ColorConsoleLogger.html",
-                        "tf": 16.666666666666664
-                      },
-                      "module-Augmented-Logger.html": {
-                        "ref": "module-Augmented-Logger.html",
-                        "tf": 525
-                      }
-                    },
-                    "f": {
-                      "docs": {},
-                      "a": {
-                        "docs": {},
-                        "c": {
-                          "docs": {},
-                          "t": {
-                            "docs": {},
-                            "o": {
-                              "docs": {},
-                              "r": {
-                                "docs": {},
-                                "i": {
-                                  "docs": {
-                                    "LoggerFactory.html": {
-                                      "ref": "LoggerFactory.html",
-                                      "tf": 1900
-                                    }
-                                  }
-                                },
-                                "y": {
-                                  "docs": {},
-                                  ".": {
-                                    "docs": {},
-                                    "g": {
-                                      "docs": {},
-                                      "e": {
-                                        "docs": {},
-                                        "t": {
-                                          "docs": {},
-                                          "l": {
-                                            "docs": {},
-                                            "o": {
-                                              "docs": {},
-                                              "g": {
-                                                "docs": {},
-                                                "g": {
-                                                  "docs": {
-                                                    "LoggerFactory.html#.getLogger": {
-                                                      "ref": "LoggerFactory.html#.getLogger",
-                                                      "tf": 1150
-                                                    }
-                                                  }
-                                                }
-                                              }
-                                            }
-                                          }
-                                        }
-                                      }
-                                    }
-                                  }
-                                }
-                              }
-                            }
-                          }
-                        }
-                      }
-                    },
-                    ".": {
-                      "docs": {},
-                      "b": {
-                        "docs": {},
-                        "a": {
-                          "docs": {},
-                          "s": {
-                            "docs": {},
-                            "i": {
-                              "docs": {},
-                              "c": {
-                                "docs": {},
-                                "l": {
-                                  "docs": {},
-                                  "o": {
-                                    "docs": {},
-                                    "g": {
-                                      "docs": {},
-                                      "g": {
-                                        "docs": {
-                                          "Logger.BasicLogger.html": {
-                                            "ref": "Logger.BasicLogger.html",
-                                            "tf": 1150
-                                          }
-                                        },
-                                        "e": {
-                                          "docs": {},
-                                          "r": {
-                                            "docs": {},
-                                            "#": {
-                                              "docs": {},
-                                              "l": {
-                                                "docs": {},
-                                                "o": {
-                                                  "docs": {},
-                                                  "g": {
-                                                    "docs": {
-                                                      "Logger.BasicLogger.html#log": {
-                                                        "ref": "Logger.BasicLogger.html#log",
-                                                        "tf": 1100
-                                                      }
-                                                    }
-                                                  }
-                                                }
-                                              },
-                                              "i": {
-                                                "docs": {},
-                                                "n": {
-                                                  "docs": {},
-                                                  "f": {
-                                                    "docs": {},
-                                                    "o": {
-                                                      "docs": {
-                                                        "Logger.BasicLogger.html#info": {
-                                                          "ref": "Logger.BasicLogger.html#info",
-                                                          "tf": 1100
-                                                        }
-                                                      }
-                                                    }
-                                                  }
-                                                }
-                                              },
-                                              "e": {
-                                                "docs": {},
-                                                "r": {
-                                                  "docs": {},
-                                                  "r": {
-                                                    "docs": {},
-                                                    "o": {
-                                                      "docs": {},
-                                                      "r": {
-                                                        "docs": {
-                                                          "Logger.BasicLogger.html#error": {
-                                                            "ref": "Logger.BasicLogger.html#error",
-                                                            "tf": 1100
-                                                          }
-                                                        }
-                                                      }
-                                                    }
-                                                  }
-                                                }
-                                              },
-                                              "d": {
-                                                "docs": {},
-                                                "e": {
-                                                  "docs": {},
-                                                  "b": {
-                                                    "docs": {},
-                                                    "u": {
-                                                      "docs": {},
-                                                      "g": {
-                                                        "docs": {
-                                                          "Logger.BasicLogger.html#debug": {
-                                                            "ref": "Logger.BasicLogger.html#debug",
-                                                            "tf": 1100
-                                                          }
-                                                        }
-                                                      }
-                                                    }
-                                                  }
-                                                }
-                                              },
-                                              "w": {
-                                                "docs": {},
-                                                "a": {
-                                                  "docs": {},
-                                                  "r": {
-                                                    "docs": {},
-                                                    "n": {
-                                                      "docs": {
-                                                        "Logger.BasicLogger.html#warn": {
-                                                          "ref": "Logger.BasicLogger.html#warn",
-                                                          "tf": 1100
-                                                        }
-                                                      }
-                                                    }
-                                                  }
-                                                }
-                                              }
-                                            }
-                                          }
-                                        }
-                                      }
-                                    }
-                                  }
-                                }
-                              }
-                            }
-                          }
-                        }
-                      },
-                      "c": {
-                        "docs": {},
-                        "o": {
-                          "docs": {},
-                          "l": {
-                            "docs": {},
-                            "o": {
-                              "docs": {},
-                              "r": {
-                                "docs": {},
-                                "c": {
-                                  "docs": {},
-                                  "o": {
-                                    "docs": {},
-                                    "n": {
-                                      "docs": {},
-                                      "s": {
-                                        "docs": {},
-                                        "o": {
-                                          "docs": {},
-                                          "l": {
-                                            "docs": {},
-                                            "e": {
-                                              "docs": {},
-                                              "l": {
-                                                "docs": {},
-                                                "o": {
-                                                  "docs": {},
-                                                  "g": {
-                                                    "docs": {},
-                                                    "g": {
-                                                      "docs": {
-                                                        "Logger.ColorConsoleLogger.html": {
-                                                          "ref": "Logger.ColorConsoleLogger.html",
-                                                          "tf": 1150
-                                                        }
-                                                      },
-                                                      "e": {
-                                                        "docs": {},
-                                                        "r": {
-                                                          "docs": {},
-                                                          "#": {
-                                                            "docs": {},
-                                                            "l": {
-                                                              "docs": {},
-                                                              "o": {
-                                                                "docs": {},
-                                                                "g": {
-                                                                  "docs": {
-                                                                    "Logger.ColorConsoleLogger.html#log": {
-                                                                      "ref": "Logger.ColorConsoleLogger.html#log",
-                                                                      "tf": 1100
-                                                                    }
-                                                                  }
-                                                                }
-                                                              }
-                                                            },
-                                                            "i": {
-                                                              "docs": {},
-                                                              "n": {
-                                                                "docs": {},
-                                                                "f": {
-                                                                  "docs": {},
-                                                                  "o": {
-                                                                    "docs": {
-                                                                      "Logger.ColorConsoleLogger.html#info": {
-                                                                        "ref": "Logger.ColorConsoleLogger.html#info",
-                                                                        "tf": 1100
-                                                                      }
-                                                                    }
-                                                                  }
-                                                                }
-                                                              }
-                                                            },
-                                                            "e": {
-                                                              "docs": {},
-                                                              "r": {
-                                                                "docs": {},
-                                                                "r": {
-                                                                  "docs": {},
-                                                                  "o": {
-                                                                    "docs": {},
-                                                                    "r": {
-                                                                      "docs": {
-                                                                        "Logger.ColorConsoleLogger.html#error": {
-                                                                          "ref": "Logger.ColorConsoleLogger.html#error",
-                                                                          "tf": 1100
-                                                                        }
-                                                                      }
-                                                                    }
-                                                                  }
-                                                                }
-                                                              }
-                                                            },
-                                                            "d": {
-                                                              "docs": {},
-                                                              "e": {
-                                                                "docs": {},
-                                                                "b": {
-                                                                  "docs": {},
-                                                                  "u": {
-                                                                    "docs": {},
-                                                                    "g": {
-                                                                      "docs": {
-                                                                        "Logger.ColorConsoleLogger.html#debug": {
-                                                                          "ref": "Logger.ColorConsoleLogger.html#debug",
-                                                                          "tf": 1100
-                                                                        }
-                                                                      }
-                                                                    }
-                                                                  }
-                                                                }
-                                                              }
-                                                            },
-                                                            "w": {
-                                                              "docs": {},
-                                                              "a": {
-                                                                "docs": {},
-                                                                "r": {
-                                                                  "docs": {},
-                                                                  "n": {
-                                                                    "docs": {
-                                                                      "Logger.ColorConsoleLogger.html#warn": {
-                                                                        "ref": "Logger.ColorConsoleLogger.html#warn",
-                                                                        "tf": 1100
-                                                                      }
-                                                                    }
-                                                                  }
-                                                                }
-                                                              }
-                                                            }
-                                                          }
-                                                        }
-                                                      }
-                                                    }
-                                                  }
-                                                }
-                                              }
-                                            }
-                                          }
-                                        }
-                                      }
-                                    }
-                                  }
-                                }
-                              }
-                            }
-                          }
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-            },
-            "o": {
-              "docs": {},
-              "p": {
-                "docs": {
-                  "CollectionIterator.html": {
-                    "ref": "CollectionIterator.html",
-                    "tf": 2.5
-                  },
-                  "MessageReader.html#.getMessage": {
-                    "ref": "MessageReader.html#.getMessage",
-                    "tf": 1.7857142857142856
-                  }
-                }
-              }
-            },
-            "c": {
-              "docs": {},
-              "a": {
-                "docs": {},
-                "l": {
-                  "docs": {
-                    "AbstractModel.html#fetch": {
-                      "ref": "AbstractModel.html#fetch",
-                      "tf": 3.8461538461538463
-                    }
-                  }
-                }
-              }
-            },
-            "n": {
-              "docs": {},
-              "g": {
-                "docs": {},
-                "e": {
-                  "docs": {},
-                  "r": {
-                    "docs": {
-                      "AbstractCollection.html#set": {
-                        "ref": "AbstractCollection.html#set",
-                        "tf": 1.7857142857142856
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "t": {
-            "docs": {},
-            ";": {
-              "docs": {},
-              "a": {
-                "docs": {},
-                "b": {
-                  "docs": {},
-                  "s": {
-                    "docs": {},
-                    "t": {
-                      "docs": {},
-                      "r": {
-                        "docs": {},
-                        "a": {
-                          "docs": {},
-                          "c": {
-                            "docs": {},
-                            "t": {
-                              "docs": {},
-                              "&": {
-                                "docs": {},
-                                "g": {
-                                  "docs": {},
-                                  "t": {
-                                    "docs": {
-                                      "AbstractLogger.html": {
-                                        "ref": "AbstractLogger.html",
-                                        "tf": 50
-                                      }
-                                    }
-                                  }
-                                }
-                              }
-                            }
-                          }
-                        }
-                      }
-                    }
-                  }
-                }
-              },
-              "s": {
-                "docs": {},
-                "t": {
-                  "docs": {},
-                  "a": {
-                    "docs": {},
-                    "t": {
-                      "docs": {},
-                      "i": {
-                        "docs": {},
-                        "c": {
-                          "docs": {},
-                          "&": {
-                            "docs": {},
-                            "g": {
-                              "docs": {},
-                              "t": {
-                                "docs": {
-                                  "LoggerFactory.html#.getLogger": {
-                                    "ref": "LoggerFactory.html#.getLogger",
-                                    "tf": 25
-                                  },
-                                  "AuthenticationFactory.html#.getSecurityClient": {
-                                    "ref": "AuthenticationFactory.html#.getSecurityClient",
-                                    "tf": 33.33333333333333
-                                  },
-                                  "ResourceBundle.html#.getBundle": {
-                                    "ref": "ResourceBundle.html#.getBundle",
-                                    "tf": 33.33333333333333
-                                  },
-                                  "ResourceBundle.html#.getString": {
-                                    "ref": "ResourceBundle.html#.getString",
-                                    "tf": 50
-                                  },
-                                  "MessageReader.html#.getMessage": {
-                                    "ref": "MessageReader.html#.getMessage",
-                                    "tf": 33.33333333333333
-                                  },
-                                  "MessageKeyFormatter.html#.format": {
-                                    "ref": "MessageKeyFormatter.html#.format",
-                                    "tf": 33.33333333333333
-                                  },
-                                  "Transformer.html#.transform": {
-                                    "ref": "Transformer.html#.transform",
-                                    "tf": 25
-                                  },
-                                  "Transformer.html#.isType": {
-                                    "ref": "Transformer.html#.isType",
-                                    "tf": 33.33333333333333
-                                  }
-                                }
-                              }
-                            }
-                          }
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "e": {
-            "docs": {},
-            "v": {
-              "docs": {},
-              "e": {
-                "docs": {},
-                "l": {
-                  "docs": {
-                    "AbstractLogger.html#log": {
-                      "ref": "AbstractLogger.html#log",
-                      "tf": 45.83333333333333
-                    },
-                    "AbstractLogger.html#info": {
-                      "ref": "AbstractLogger.html#info",
-                      "tf": 12.5
-                    },
-                    "AbstractLogger.html#error": {
-                      "ref": "AbstractLogger.html#error",
-                      "tf": 12.5
-                    },
-                    "AbstractLogger.html#debug": {
-                      "ref": "AbstractLogger.html#debug",
-                      "tf": 12.5
-                    },
-                    "AbstractLogger.html#warn": {
-                      "ref": "AbstractLogger.html#warn",
-                      "tf": 12.5
-                    },
-                    "ConsoleLogger.html#log": {
-                      "ref": "ConsoleLogger.html#log",
-                      "tf": 45.83333333333333
-                    },
-                    "ConsoleLogger.html#info": {
-                      "ref": "ConsoleLogger.html#info",
-                      "tf": 12.5
-                    },
-                    "ConsoleLogger.html#error": {
-                      "ref": "ConsoleLogger.html#error",
-                      "tf": 12.5
-                    },
-                    "ConsoleLogger.html#debug": {
-                      "ref": "ConsoleLogger.html#debug",
-                      "tf": 12.5
-                    },
-                    "ConsoleLogger.html#warn": {
-                      "ref": "ConsoleLogger.html#warn",
-                      "tf": 12.5
-                    },
-                    "LoggerFactory.html#.getLogger": {
-                      "ref": "LoggerFactory.html#.getLogger",
-                      "tf": 25
-                    },
-                    "Logger.BasicLogger.html": {
-                      "ref": "Logger.BasicLogger.html",
-                      "tf": 8.333333333333332
-                    },
-                    "Logger.BasicLogger.html#log": {
-                      "ref": "Logger.BasicLogger.html#log",
-                      "tf": 45.83333333333333
-                    },
-                    "Logger.BasicLogger.html#info": {
-                      "ref": "Logger.BasicLogger.html#info",
-                      "tf": 12.5
-                    },
-                    "Logger.BasicLogger.html#error": {
-                      "ref": "Logger.BasicLogger.html#error",
-                      "tf": 12.5
-                    },
-                    "Logger.BasicLogger.html#debug": {
-                      "ref": "Logger.BasicLogger.html#debug",
-                      "tf": 12.5
-                    },
-                    "Logger.BasicLogger.html#warn": {
-                      "ref": "Logger.BasicLogger.html#warn",
-                      "tf": 12.5
-                    },
-                    "Logger.ColorConsoleLogger.html#log": {
-                      "ref": "Logger.ColorConsoleLogger.html#log",
-                      "tf": 45.83333333333333
-                    },
-                    "Logger.ColorConsoleLogger.html#info": {
-                      "ref": "Logger.ColorConsoleLogger.html#info",
-                      "tf": 12.5
-                    },
-                    "Logger.ColorConsoleLogger.html#error": {
-                      "ref": "Logger.ColorConsoleLogger.html#error",
-                      "tf": 12.5
-                    },
-                    "Logger.ColorConsoleLogger.html#debug": {
-                      "ref": "Logger.ColorConsoleLogger.html#debug",
-                      "tf": 12.5
-                    },
-                    "Logger.ColorConsoleLogger.html#warn": {
-                      "ref": "Logger.ColorConsoleLogger.html#warn",
-                      "tf": 12.5
-                    },
-                    "AbstractModel.html#isValid": {
-                      "ref": "AbstractModel.html#isValid",
-                      "tf": 7.6923076923076925
-                    }
-                  }
-                }
-              }
-            }
-          },
           "a": {
             "docs": {},
             "t": {
@@ -12582,6 +11120,151 @@ window.lunrData = {
                   "MessageReader.html#.getMessage": {
                     "ref": "MessageReader.html#.getMessage",
                     "tf": 1.7857142857142856
+                  }
+                }
+              }
+            }
+          },
+          "t": {
+            "docs": {},
+            ";": {
+              "docs": {},
+              "s": {
+                "docs": {},
+                "t": {
+                  "docs": {},
+                  "a": {
+                    "docs": {},
+                    "t": {
+                      "docs": {},
+                      "i": {
+                        "docs": {},
+                        "c": {
+                          "docs": {},
+                          "&": {
+                            "docs": {},
+                            "g": {
+                              "docs": {},
+                              "t": {
+                                "docs": {
+                                  "AuthenticationFactory.html#.getSecurityClient": {
+                                    "ref": "AuthenticationFactory.html#.getSecurityClient",
+                                    "tf": 33.33333333333333
+                                  },
+                                  "ResourceBundle.html#.getBundle": {
+                                    "ref": "ResourceBundle.html#.getBundle",
+                                    "tf": 33.33333333333333
+                                  },
+                                  "ResourceBundle.html#.getString": {
+                                    "ref": "ResourceBundle.html#.getString",
+                                    "tf": 50
+                                  },
+                                  "MessageReader.html#.getMessage": {
+                                    "ref": "MessageReader.html#.getMessage",
+                                    "tf": 33.33333333333333
+                                  },
+                                  "MessageKeyFormatter.html#.format": {
+                                    "ref": "MessageKeyFormatter.html#.format",
+                                    "tf": 33.33333333333333
+                                  },
+                                  "Transformer.html#.transform": {
+                                    "ref": "Transformer.html#.transform",
+                                    "tf": 25
+                                  },
+                                  "Transformer.html#.isType": {
+                                    "ref": "Transformer.html#.isType",
+                                    "tf": 33.33333333333333
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "o": {
+            "docs": {},
+            "o": {
+              "docs": {},
+              "p": {
+                "docs": {
+                  "CollectionIterator.html": {
+                    "ref": "CollectionIterator.html",
+                    "tf": 2.5
+                  },
+                  "MessageReader.html#.getMessage": {
+                    "ref": "MessageReader.html#.getMessage",
+                    "tf": 1.7857142857142856
+                  }
+                }
+              }
+            },
+            "c": {
+              "docs": {},
+              "a": {
+                "docs": {},
+                "l": {
+                  "docs": {
+                    "AbstractModel.html#fetch": {
+                      "ref": "AbstractModel.html#fetch",
+                      "tf": 3.8461538461538463
+                    }
+                  }
+                }
+              }
+            },
+            "n": {
+              "docs": {},
+              "g": {
+                "docs": {},
+                "e": {
+                  "docs": {},
+                  "r": {
+                    "docs": {
+                      "AbstractCollection.html#set": {
+                        "ref": "AbstractCollection.html#set",
+                        "tf": 1.7857142857142856
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "g": {
+              "docs": {},
+              "g": {
+                "docs": {},
+                "e": {
+                  "docs": {},
+                  "r": {
+                    "docs": {
+                      "module-Augmented-Logger.html": {
+                        "ref": "module-Augmented-Logger.html",
+                        "tf": 525
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "e": {
+            "docs": {},
+            "v": {
+              "docs": {},
+              "e": {
+                "docs": {},
+                "l": {
+                  "docs": {
+                    "AbstractModel.html#isValid": {
+                      "ref": "AbstractModel.html#isValid",
+                      "tf": 7.6923076923076925
+                    }
                   }
                 }
               }
@@ -13053,6 +11736,103 @@ window.lunrData = {
                 }
               }
             },
+            "t": {
+              "docs": {},
+              "h": {
+                "docs": {},
+                "o": {
+                  "docs": {},
+                  "d": {
+                    "docs": {
+                      "Stack.html#empty": {
+                        "ref": "Stack.html#empty",
+                        "tf": 12.5
+                      },
+                      "Stack.html#peek": {
+                        "ref": "Stack.html#peek",
+                        "tf": 10
+                      },
+                      "Stack.html#pop": {
+                        "ref": "Stack.html#pop",
+                        "tf": 8.333333333333332
+                      },
+                      "Stack.html#push": {
+                        "ref": "Stack.html#push",
+                        "tf": 12.5
+                      },
+                      "Stack.html#search": {
+                        "ref": "Stack.html#search",
+                        "tf": 8.333333333333332
+                      },
+                      "Stack.html#size": {
+                        "ref": "Stack.html#size",
+                        "tf": 10
+                      },
+                      "Stack.html#clear": {
+                        "ref": "Stack.html#clear",
+                        "tf": 12.5
+                      },
+                      "Stack.html#toArray": {
+                        "ref": "Stack.html#toArray",
+                        "tf": 10
+                      },
+                      "Stack.html#toString": {
+                        "ref": "Stack.html#toString",
+                        "tf": 10
+                      },
+                      "AsynchronousQueue.html#add": {
+                        "ref": "AsynchronousQueue.html#add",
+                        "tf": 10
+                      },
+                      "CollectionIterator.html#next": {
+                        "ref": "CollectionIterator.html#next",
+                        "tf": 3.3333333333333335
+                      },
+                      "AbstractModel.html#matches": {
+                        "ref": "AbstractModel.html#matches",
+                        "tf": 8.333333333333332
+                      },
+                      "AbstractModel.html#url": {
+                        "ref": "AbstractModel.html#url",
+                        "tf": 3.8461538461538463
+                      }
+                    }
+                  }
+                }
+              },
+              "a": {
+                "docs": {},
+                "d": {
+                  "docs": {},
+                  "a": {
+                    "docs": {},
+                    "t": {
+                      "docs": {},
+                      "a": {
+                        "docs": {
+                          "Application.html": {
+                            "ref": "Application.html",
+                            "tf": 3.488372093023256
+                          },
+                          "Application.html#metadata": {
+                            "ref": "Application.html#metadata",
+                            "tf": 775
+                          },
+                          "Application.html#setMetadataItem": {
+                            "ref": "Application.html#setMetadataItem",
+                            "tf": 12.5
+                          },
+                          "Application.html#getMetadataItem": {
+                            "ref": "Application.html#getMetadataItem",
+                            "tf": 16.666666666666664
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
             "s": {
               "docs": {},
               "s": {
@@ -13061,86 +11841,6 @@ window.lunrData = {
                   "docs": {},
                   "g": {
                     "docs": {
-                      "AbstractLogger.html#log": {
-                        "ref": "AbstractLogger.html#log",
-                        "tf": 45.83333333333333
-                      },
-                      "AbstractLogger.html#info": {
-                        "ref": "AbstractLogger.html#info",
-                        "tf": 62.5
-                      },
-                      "AbstractLogger.html#error": {
-                        "ref": "AbstractLogger.html#error",
-                        "tf": 62.5
-                      },
-                      "AbstractLogger.html#debug": {
-                        "ref": "AbstractLogger.html#debug",
-                        "tf": 62.5
-                      },
-                      "AbstractLogger.html#warn": {
-                        "ref": "AbstractLogger.html#warn",
-                        "tf": 62.5
-                      },
-                      "ConsoleLogger.html#log": {
-                        "ref": "ConsoleLogger.html#log",
-                        "tf": 45.83333333333333
-                      },
-                      "ConsoleLogger.html#info": {
-                        "ref": "ConsoleLogger.html#info",
-                        "tf": 62.5
-                      },
-                      "ConsoleLogger.html#error": {
-                        "ref": "ConsoleLogger.html#error",
-                        "tf": 62.5
-                      },
-                      "ConsoleLogger.html#debug": {
-                        "ref": "ConsoleLogger.html#debug",
-                        "tf": 62.5
-                      },
-                      "ConsoleLogger.html#warn": {
-                        "ref": "ConsoleLogger.html#warn",
-                        "tf": 62.5
-                      },
-                      "Logger.BasicLogger.html#log": {
-                        "ref": "Logger.BasicLogger.html#log",
-                        "tf": 45.83333333333333
-                      },
-                      "Logger.BasicLogger.html#info": {
-                        "ref": "Logger.BasicLogger.html#info",
-                        "tf": 62.5
-                      },
-                      "Logger.BasicLogger.html#error": {
-                        "ref": "Logger.BasicLogger.html#error",
-                        "tf": 62.5
-                      },
-                      "Logger.BasicLogger.html#debug": {
-                        "ref": "Logger.BasicLogger.html#debug",
-                        "tf": 62.5
-                      },
-                      "Logger.BasicLogger.html#warn": {
-                        "ref": "Logger.BasicLogger.html#warn",
-                        "tf": 62.5
-                      },
-                      "Logger.ColorConsoleLogger.html#log": {
-                        "ref": "Logger.ColorConsoleLogger.html#log",
-                        "tf": 45.83333333333333
-                      },
-                      "Logger.ColorConsoleLogger.html#info": {
-                        "ref": "Logger.ColorConsoleLogger.html#info",
-                        "tf": 62.5
-                      },
-                      "Logger.ColorConsoleLogger.html#error": {
-                        "ref": "Logger.ColorConsoleLogger.html#error",
-                        "tf": 62.5
-                      },
-                      "Logger.ColorConsoleLogger.html#debug": {
-                        "ref": "Logger.ColorConsoleLogger.html#debug",
-                        "tf": 62.5
-                      },
-                      "Logger.ColorConsoleLogger.html#warn": {
-                        "ref": "Logger.ColorConsoleLogger.html#warn",
-                        "tf": 62.5
-                      },
                       "AbstractModel.html#preinitialize": {
                         "ref": "AbstractModel.html#preinitialize",
                         "tf": 16.666666666666664
@@ -13338,103 +12038,6 @@ window.lunrData = {
                                 }
                               }
                             }
-                          }
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-            },
-            "t": {
-              "docs": {},
-              "h": {
-                "docs": {},
-                "o": {
-                  "docs": {},
-                  "d": {
-                    "docs": {
-                      "Stack.html#empty": {
-                        "ref": "Stack.html#empty",
-                        "tf": 12.5
-                      },
-                      "Stack.html#peek": {
-                        "ref": "Stack.html#peek",
-                        "tf": 10
-                      },
-                      "Stack.html#pop": {
-                        "ref": "Stack.html#pop",
-                        "tf": 8.333333333333332
-                      },
-                      "Stack.html#push": {
-                        "ref": "Stack.html#push",
-                        "tf": 12.5
-                      },
-                      "Stack.html#search": {
-                        "ref": "Stack.html#search",
-                        "tf": 8.333333333333332
-                      },
-                      "Stack.html#size": {
-                        "ref": "Stack.html#size",
-                        "tf": 10
-                      },
-                      "Stack.html#clear": {
-                        "ref": "Stack.html#clear",
-                        "tf": 12.5
-                      },
-                      "Stack.html#toArray": {
-                        "ref": "Stack.html#toArray",
-                        "tf": 10
-                      },
-                      "Stack.html#toString": {
-                        "ref": "Stack.html#toString",
-                        "tf": 10
-                      },
-                      "AsynchronousQueue.html#add": {
-                        "ref": "AsynchronousQueue.html#add",
-                        "tf": 10
-                      },
-                      "CollectionIterator.html#next": {
-                        "ref": "CollectionIterator.html#next",
-                        "tf": 3.3333333333333335
-                      },
-                      "AbstractModel.html#matches": {
-                        "ref": "AbstractModel.html#matches",
-                        "tf": 8.333333333333332
-                      },
-                      "AbstractModel.html#url": {
-                        "ref": "AbstractModel.html#url",
-                        "tf": 3.8461538461538463
-                      }
-                    }
-                  }
-                }
-              },
-              "a": {
-                "docs": {},
-                "d": {
-                  "docs": {},
-                  "a": {
-                    "docs": {},
-                    "t": {
-                      "docs": {},
-                      "a": {
-                        "docs": {
-                          "Application.html": {
-                            "ref": "Application.html",
-                            "tf": 3.488372093023256
-                          },
-                          "Application.html#metadata": {
-                            "ref": "Application.html#metadata",
-                            "tf": 775
-                          },
-                          "Application.html#setMetadataItem": {
-                            "ref": "Application.html#setMetadataItem",
-                            "tf": 12.5
-                          },
-                          "Application.html#getMetadataItem": {
-                            "ref": "Application.html#getMetadataItem",
-                            "tf": 16.666666666666664
                           }
                         }
                       }
@@ -14028,17 +12631,6 @@ window.lunrData = {
                     }
                   }
                 }
-              },
-              "r": {
-                "docs": {},
-                "a": {
-                  "docs": {
-                    "Logger.BasicLogger.html": {
-                      "ref": "Logger.BasicLogger.html",
-                      "tf": 8.333333333333332
-                    }
-                  }
-                }
               }
             },
             "h": {
@@ -14085,35 +12677,6 @@ window.lunrData = {
                     "AbstractCollection.html#isEmpty": {
                       "ref": "AbstractCollection.html#isEmpty",
                       "tf": 10
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "r": {
-            "docs": {},
-            "r": {
-              "docs": {},
-              "o": {
-                "docs": {},
-                "r": {
-                  "docs": {
-                    "AbstractLogger.html#error": {
-                      "ref": "AbstractLogger.html#error",
-                      "tf": 712.5
-                    },
-                    "ConsoleLogger.html#error": {
-                      "ref": "ConsoleLogger.html#error",
-                      "tf": 712.5
-                    },
-                    "Logger.BasicLogger.html#error": {
-                      "ref": "Logger.BasicLogger.html#error",
-                      "tf": 662.5
-                    },
-                    "Logger.ColorConsoleLogger.html#error": {
-                      "ref": "Logger.ColorConsoleLogger.html#error",
-                      "tf": 662.5
                     }
                   }
                 }
@@ -15545,33 +14108,31 @@ window.lunrData = {
                                                     }
                                                   }
                                                 },
-                                                "c": {
+                                                "g": {
                                                   "docs": {},
-                                                  "l": {
+                                                  "e": {
                                                     "docs": {},
-                                                    "e": {
+                                                    "t": {
                                                       "docs": {},
-                                                      "a": {
+                                                      "s": {
                                                         "docs": {},
-                                                        "r": {
+                                                        "c": {
                                                           "docs": {},
-                                                          "s": {
+                                                          "h": {
                                                             "docs": {},
-                                                            "c": {
+                                                            "e": {
                                                               "docs": {},
-                                                              "h": {
+                                                              "m": {
                                                                 "docs": {},
-                                                                "e": {
-                                                                  "docs": {},
-                                                                  "m": {
-                                                                    "docs": {},
-                                                                    "a": {
-                                                                      "docs": {
-                                                                        "ValidationFramework.html#clearSchemas": {
-                                                                          "ref": "ValidationFramework.html#clearSchemas",
-                                                                          "tf": 1150
-                                                                        }
-                                                                      }
+                                                                "a": {
+                                                                  "docs": {
+                                                                    "ValidationFramework.html#getSchema": {
+                                                                      "ref": "ValidationFramework.html#getSchema",
+                                                                      "tf": 1150
+                                                                    },
+                                                                    "ValidationFramework.html#getSchemas": {
+                                                                      "ref": "ValidationFramework.html#getSchemas",
+                                                                      "tf": 1150
                                                                     }
                                                                   }
                                                                 }
@@ -15579,36 +14140,7 @@ window.lunrData = {
                                                             }
                                                           }
                                                         }
-                                                      }
-                                                    }
-                                                  }
-                                                },
-                                                "v": {
-                                                  "docs": {},
-                                                  "a": {
-                                                    "docs": {},
-                                                    "l": {
-                                                      "docs": {},
-                                                      "i": {
-                                                        "docs": {},
-                                                        "d": {
-                                                          "docs": {
-                                                            "ValidationFramework.html#validate": {
-                                                              "ref": "ValidationFramework.html#validate",
-                                                              "tf": 1150
-                                                            }
-                                                          }
-                                                        }
-                                                      }
-                                                    }
-                                                  }
-                                                },
-                                                "g": {
-                                                  "docs": {},
-                                                  "e": {
-                                                    "docs": {},
-                                                    "t": {
-                                                      "docs": {},
+                                                      },
                                                       "v": {
                                                         "docs": {},
                                                         "a": {
@@ -15661,33 +14193,6 @@ window.lunrData = {
                                                             }
                                                           }
                                                         }
-                                                      },
-                                                      "s": {
-                                                        "docs": {},
-                                                        "c": {
-                                                          "docs": {},
-                                                          "h": {
-                                                            "docs": {},
-                                                            "e": {
-                                                              "docs": {},
-                                                              "m": {
-                                                                "docs": {},
-                                                                "a": {
-                                                                  "docs": {
-                                                                    "ValidationFramework.html#getSchema": {
-                                                                      "ref": "ValidationFramework.html#getSchema",
-                                                                      "tf": 1150
-                                                                    },
-                                                                    "ValidationFramework.html#getSchemas": {
-                                                                      "ref": "ValidationFramework.html#getSchemas",
-                                                                      "tf": 1150
-                                                                    }
-                                                                  }
-                                                                }
-                                                              }
-                                                            }
-                                                          }
-                                                        }
                                                       }
                                                     },
                                                     "n": {
@@ -15726,6 +14231,64 @@ window.lunrData = {
                                                                   }
                                                                 }
                                                               }
+                                                            }
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                },
+                                                "c": {
+                                                  "docs": {},
+                                                  "l": {
+                                                    "docs": {},
+                                                    "e": {
+                                                      "docs": {},
+                                                      "a": {
+                                                        "docs": {},
+                                                        "r": {
+                                                          "docs": {},
+                                                          "s": {
+                                                            "docs": {},
+                                                            "c": {
+                                                              "docs": {},
+                                                              "h": {
+                                                                "docs": {},
+                                                                "e": {
+                                                                  "docs": {},
+                                                                  "m": {
+                                                                    "docs": {},
+                                                                    "a": {
+                                                                      "docs": {
+                                                                        "ValidationFramework.html#clearSchemas": {
+                                                                          "ref": "ValidationFramework.html#clearSchemas",
+                                                                          "tf": 1150
+                                                                        }
+                                                                      }
+                                                                    }
+                                                                  }
+                                                                }
+                                                              }
+                                                            }
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                },
+                                                "v": {
+                                                  "docs": {},
+                                                  "a": {
+                                                    "docs": {},
+                                                    "l": {
+                                                      "docs": {},
+                                                      "i": {
+                                                        "docs": {},
+                                                        "d": {
+                                                          "docs": {
+                                                            "ValidationFramework.html#validate": {
+                                                              "ref": "ValidationFramework.html#validate",
+                                                              "tf": 1150
                                                             }
                                                           }
                                                         }
@@ -15910,50 +14473,6 @@ window.lunrData = {
                             "ref": "AugmentedMap.html#marshall",
                             "tf": 110
                           },
-                          "AbstractLogger.html#log": {
-                            "ref": "AbstractLogger.html#log",
-                            "tf": 110
-                          },
-                          "AbstractLogger.html#info": {
-                            "ref": "AbstractLogger.html#info",
-                            "tf": 110
-                          },
-                          "AbstractLogger.html#error": {
-                            "ref": "AbstractLogger.html#error",
-                            "tf": 110
-                          },
-                          "AbstractLogger.html#debug": {
-                            "ref": "AbstractLogger.html#debug",
-                            "tf": 110
-                          },
-                          "AbstractLogger.html#warn": {
-                            "ref": "AbstractLogger.html#warn",
-                            "tf": 110
-                          },
-                          "ConsoleLogger.html#log": {
-                            "ref": "ConsoleLogger.html#log",
-                            "tf": 110
-                          },
-                          "ConsoleLogger.html#info": {
-                            "ref": "ConsoleLogger.html#info",
-                            "tf": 110
-                          },
-                          "ConsoleLogger.html#error": {
-                            "ref": "ConsoleLogger.html#error",
-                            "tf": 110
-                          },
-                          "ConsoleLogger.html#debug": {
-                            "ref": "ConsoleLogger.html#debug",
-                            "tf": 110
-                          },
-                          "ConsoleLogger.html#warn": {
-                            "ref": "ConsoleLogger.html#warn",
-                            "tf": 110
-                          },
-                          "LoggerFactory.html#.getLogger": {
-                            "ref": "LoggerFactory.html#.getLogger",
-                            "tf": 110
-                          },
                           "AugmentedObject.html#initialize": {
                             "ref": "AugmentedObject.html#initialize",
                             "tf": 110
@@ -16034,46 +14553,6 @@ window.lunrData = {
                             "ref": "Stack.html#toString",
                             "tf": 110
                           },
-                          "Logger.BasicLogger.html#log": {
-                            "ref": "Logger.BasicLogger.html#log",
-                            "tf": 110
-                          },
-                          "Logger.BasicLogger.html#info": {
-                            "ref": "Logger.BasicLogger.html#info",
-                            "tf": 110
-                          },
-                          "Logger.BasicLogger.html#error": {
-                            "ref": "Logger.BasicLogger.html#error",
-                            "tf": 110
-                          },
-                          "Logger.BasicLogger.html#debug": {
-                            "ref": "Logger.BasicLogger.html#debug",
-                            "tf": 110
-                          },
-                          "Logger.BasicLogger.html#warn": {
-                            "ref": "Logger.BasicLogger.html#warn",
-                            "tf": 110
-                          },
-                          "Logger.ColorConsoleLogger.html#log": {
-                            "ref": "Logger.ColorConsoleLogger.html#log",
-                            "tf": 110
-                          },
-                          "Logger.ColorConsoleLogger.html#info": {
-                            "ref": "Logger.ColorConsoleLogger.html#info",
-                            "tf": 110
-                          },
-                          "Logger.ColorConsoleLogger.html#error": {
-                            "ref": "Logger.ColorConsoleLogger.html#error",
-                            "tf": 110
-                          },
-                          "Logger.ColorConsoleLogger.html#debug": {
-                            "ref": "Logger.ColorConsoleLogger.html#debug",
-                            "tf": 110
-                          },
-                          "Logger.ColorConsoleLogger.html#warn": {
-                            "ref": "Logger.ColorConsoleLogger.html#warn",
-                            "tf": 110
-                          },
                           "AuthenticationFactory.html#.getSecurityClient": {
                             "ref": "AuthenticationFactory.html#.getSecurityClient",
                             "tf": 110
@@ -16102,6 +14581,14 @@ window.lunrData = {
                             "ref": "ValidationFramework.html#registerSchema",
                             "tf": 110
                           },
+                          "ValidationFramework.html#getSchema": {
+                            "ref": "ValidationFramework.html#getSchema",
+                            "tf": 110
+                          },
+                          "ValidationFramework.html#getSchemas": {
+                            "ref": "ValidationFramework.html#getSchemas",
+                            "tf": 110
+                          },
                           "ValidationFramework.html#clearSchemas": {
                             "ref": "ValidationFramework.html#clearSchemas",
                             "tf": 110
@@ -16116,14 +14603,6 @@ window.lunrData = {
                           },
                           "ValidationFramework.html#generateSchema": {
                             "ref": "ValidationFramework.html#generateSchema",
-                            "tf": 110
-                          },
-                          "ValidationFramework.html#getSchema": {
-                            "ref": "ValidationFramework.html#getSchema",
-                            "tf": 110
-                          },
-                          "ValidationFramework.html#getSchemas": {
-                            "ref": "ValidationFramework.html#getSchemas",
                             "tf": 110
                           },
                           "CollectionIterator.html": {
@@ -16624,60 +15103,6 @@ window.lunrData = {
               }
             }
           },
-          "a": {
-            "docs": {},
-            "c": {
-              "docs": {},
-              "t": {
-                "docs": {},
-                "o": {
-                  "docs": {},
-                  "r": {
-                    "docs": {},
-                    "i": {
-                      "docs": {
-                        "LoggerFactory.html": {
-                          "ref": "LoggerFactory.html",
-                          "tf": 10
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-            },
-            "l": {
-              "docs": {},
-              "s": {
-                "docs": {
-                  "AbstractModel.html#changedAttributes": {
-                    "ref": "AbstractModel.html#changedAttributes",
-                    "tf": 1.6129032258064515
-                  }
-                }
-              },
-              "l": {
-                "docs": {},
-                "b": {
-                  "docs": {},
-                  "a": {
-                    "docs": {},
-                    "c": {
-                      "docs": {},
-                      "k": {
-                        "docs": {
-                          "MessageReader.html#.getMessage": {
-                            "ref": "MessageReader.html#.getMessage",
-                            "tf": 1.7857142857142856
-                          }
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          },
           "i": {
             "docs": {},
             "r": {
@@ -16886,6 +15311,40 @@ window.lunrData = {
                     "AbstractCollection.html#fetch": {
                       "ref": "AbstractCollection.html#fetch",
                       "tf": 775
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "a": {
+            "docs": {},
+            "l": {
+              "docs": {},
+              "s": {
+                "docs": {
+                  "AbstractModel.html#changedAttributes": {
+                    "ref": "AbstractModel.html#changedAttributes",
+                    "tf": 1.6129032258064515
+                  }
+                }
+              },
+              "l": {
+                "docs": {},
+                "b": {
+                  "docs": {},
+                  "a": {
+                    "docs": {},
+                    "c": {
+                      "docs": {},
+                      "k": {
+                        "docs": {
+                          "MessageReader.html#.getMessage": {
+                            "ref": "MessageReader.html#.getMessage",
+                            "tf": 1.7857142857142856
+                          }
+                        }
+                      }
                     }
                   }
                 }
@@ -17586,58 +16045,6 @@ window.lunrData = {
               }
             }
           },
-          "a": {
-            "docs": {},
-            "r": {
-              "docs": {},
-              "n": {
-                "docs": {
-                  "AbstractLogger.html#warn": {
-                    "ref": "AbstractLogger.html#warn",
-                    "tf": 712.5
-                  },
-                  "ConsoleLogger.html#warn": {
-                    "ref": "ConsoleLogger.html#warn",
-                    "tf": 712.5
-                  },
-                  "Logger.BasicLogger.html#warn": {
-                    "ref": "Logger.BasicLogger.html#warn",
-                    "tf": 662.5
-                  },
-                  "Logger.ColorConsoleLogger.html#warn": {
-                    "ref": "Logger.ColorConsoleLogger.html#warn",
-                    "tf": 662.5
-                  }
-                }
-              }
-            },
-            "i": {
-              "docs": {},
-              "t": {
-                "docs": {
-                  "AbstractModel.html#destroy": {
-                    "ref": "AbstractModel.html#destroy",
-                    "tf": 5.555555555555555
-                  },
-                  "AbstractCollection.html#create": {
-                    "ref": "AbstractCollection.html#create",
-                    "tf": 5.88235294117647
-                  }
-                }
-              }
-            },
-            "n": {
-              "docs": {},
-              "t": {
-                "docs": {
-                  "AbstractCollection.html#reset": {
-                    "ref": "AbstractCollection.html#reset",
-                    "tf": 2
-                  }
-                }
-              }
-            }
-          },
           "r": {
             "docs": {},
             "a": {
@@ -17661,6 +16068,35 @@ window.lunrData = {
                         }
                       }
                     }
+                  }
+                }
+              }
+            }
+          },
+          "a": {
+            "docs": {},
+            "i": {
+              "docs": {},
+              "t": {
+                "docs": {
+                  "AbstractModel.html#destroy": {
+                    "ref": "AbstractModel.html#destroy",
+                    "tf": 5.555555555555555
+                  },
+                  "AbstractCollection.html#create": {
+                    "ref": "AbstractCollection.html#create",
+                    "tf": 5.88235294117647
+                  }
+                }
+              }
+            },
+            "n": {
+              "docs": {},
+              "t": {
+                "docs": {
+                  "AbstractCollection.html#reset": {
+                    "ref": "AbstractCollection.html#reset",
+                    "tf": 2
                   }
                 }
               }
@@ -17869,10 +16305,6 @@ window.lunrData = {
                   "AugmentedMap.html#marshall": {
                     "ref": "AugmentedMap.html#marshall",
                     "tf": 4.545454545454546
-                  },
-                  "LoggerFactory.html#.getLogger": {
-                    "ref": "LoggerFactory.html#.getLogger",
-                    "tf": 25
                   },
                   "AbstractSecurityClient.html#type": {
                     "ref": "AbstractSecurityClient.html#type",
@@ -18166,17 +16598,6 @@ window.lunrData = {
                   }
                 }
               }
-            },
-            "x": {
-              "docs": {},
-              "t": {
-                "docs": {
-                  "Logger.BasicLogger.html": {
-                    "ref": "Logger.BasicLogger.html",
-                    "tf": 8.333333333333332
-                  }
-                }
-              }
             }
           },
           "h": {
@@ -18269,131 +16690,6 @@ window.lunrData = {
                   "ValidationFramework.html": {
                     "ref": "ValidationFramework.html",
                     "tf": 8.333333333333332
-                  }
-                }
-              },
-              "i": {
-                "docs": {},
-                "c": {
-                  "docs": {
-                    "Logger.BasicLogger.html": {
-                      "ref": "Logger.BasicLogger.html",
-                      "tf": 8.333333333333332
-                    }
-                  },
-                  "l": {
-                    "docs": {},
-                    "o": {
-                      "docs": {},
-                      "g": {
-                        "docs": {},
-                        "g": {
-                          "docs": {
-                            "Logger.BasicLogger.html": {
-                              "ref": "Logger.BasicLogger.html",
-                              "tf": 750
-                            }
-                          },
-                          "e": {
-                            "docs": {},
-                            "r": {
-                              "docs": {},
-                              "#": {
-                                "docs": {},
-                                "l": {
-                                  "docs": {},
-                                  "o": {
-                                    "docs": {},
-                                    "g": {
-                                      "docs": {
-                                        "Logger.BasicLogger.html#log": {
-                                          "ref": "Logger.BasicLogger.html#log",
-                                          "tf": 100
-                                        }
-                                      }
-                                    }
-                                  }
-                                },
-                                "i": {
-                                  "docs": {},
-                                  "n": {
-                                    "docs": {},
-                                    "f": {
-                                      "docs": {},
-                                      "o": {
-                                        "docs": {
-                                          "Logger.BasicLogger.html#info": {
-                                            "ref": "Logger.BasicLogger.html#info",
-                                            "tf": 100
-                                          }
-                                        }
-                                      }
-                                    }
-                                  }
-                                },
-                                "e": {
-                                  "docs": {},
-                                  "r": {
-                                    "docs": {},
-                                    "r": {
-                                      "docs": {},
-                                      "o": {
-                                        "docs": {},
-                                        "r": {
-                                          "docs": {
-                                            "Logger.BasicLogger.html#error": {
-                                              "ref": "Logger.BasicLogger.html#error",
-                                              "tf": 100
-                                            }
-                                          }
-                                        }
-                                      }
-                                    }
-                                  }
-                                },
-                                "d": {
-                                  "docs": {},
-                                  "e": {
-                                    "docs": {},
-                                    "b": {
-                                      "docs": {},
-                                      "u": {
-                                        "docs": {},
-                                        "g": {
-                                          "docs": {
-                                            "Logger.BasicLogger.html#debug": {
-                                              "ref": "Logger.BasicLogger.html#debug",
-                                              "tf": 100
-                                            }
-                                          }
-                                        }
-                                      }
-                                    }
-                                  }
-                                },
-                                "w": {
-                                  "docs": {},
-                                  "a": {
-                                    "docs": {},
-                                    "r": {
-                                      "docs": {},
-                                      "n": {
-                                        "docs": {
-                                          "Logger.BasicLogger.html#warn": {
-                                            "ref": "Logger.BasicLogger.html#warn",
-                                            "tf": 100
-                                          }
-                                        }
-                                      }
-                                    }
-                                  }
-                                }
-                              }
-                            }
-                          }
-                        }
-                      }
-                    }
                   }
                 }
               }
@@ -18729,7 +17025,7 @@ window.lunrData = {
           }
         }
       },
-      "length": 1792
+      "length": 1623
     },
     "corpusTokens": [
       "abstract",
@@ -18773,12 +17069,6 @@ window.lunrData = {
       "abstractcollection#valid",
       "abstractcollection#valu",
       "abstractcollection#wher",
-      "abstractlogg",
-      "abstractlogger#debug",
-      "abstractlogger#error",
-      "abstractlogger#info",
-      "abstractlogger#log",
-      "abstractlogger#warn",
       "abstractmodel",
       "abstractmodel#changedattribut",
       "abstractmodel#clear",
@@ -18914,13 +17204,6 @@ window.lunrData = {
       "author",
       "back",
       "base",
-      "basic",
-      "basiclogg",
-      "basiclogger#debug",
-      "basiclogger#error",
-      "basiclogger#info",
-      "basiclogger#log",
-      "basiclogger#warn",
       "befor",
       "beforeiniti",
       "begin",
@@ -18960,23 +17243,9 @@ window.lunrData = {
       "collection.upd",
       "collectioniter",
       "collectioniterator#next",
-      "color",
-      "colorconsolelogg",
-      "colorconsolelogger#debug",
-      "colorconsolelogger#error",
-      "colorconsolelogger#info",
-      "colorconsolelogger#log",
-      "colorconsolelogger#warn",
       "combin",
       "compon",
       "concaten",
-      "consol",
-      "consolelogg",
-      "consolelogger#debug",
-      "consolelogger#error",
-      "consolelogger#info",
-      "consolelogger#log",
-      "consolelogger#warn",
       "contain",
       "context",
       "context#addpermiss",
@@ -18992,7 +17261,6 @@ window.lunrData = {
       "data",
       "datastor",
       "datatomarshal",
-      "debug",
       "default",
       "defin",
       "delet",
@@ -19019,7 +17287,6 @@ window.lunrData = {
       "entry#permiss",
       "entry#removepermiss",
       "entry#setneg",
-      "error",
       "es6",
       "escap",
       "event",
@@ -19027,8 +17294,6 @@ window.lunrData = {
       "exhaust",
       "exist",
       "extend",
-      "extra",
-      "factori",
       "fallback",
       "fals",
       "fetch",
@@ -19053,7 +17318,6 @@ window.lunrData = {
       "generateschema",
       "get",
       "getbundl",
-      "getlogg",
       "getmessag",
       "getmetadataitem",
       "getpermiss",
@@ -19081,7 +17345,6 @@ window.lunrData = {
       "index",
       "indexof",
       "individu",
-      "info",
       "ing",
       "initi",
       "instanc",
@@ -19117,25 +17380,9 @@ window.lunrData = {
       "listento",
       "listentoonc",
       "local",
-      "log",
       "logger",
-      "logger.basiclogg",
-      "logger.basiclogger#debug",
-      "logger.basiclogger#error",
-      "logger.basiclogger#info",
-      "logger.basiclogger#log",
-      "logger.basiclogger#warn",
-      "logger.colorconsolelogg",
-      "logger.colorconsolelogger#debug",
-      "logger.colorconsolelogger#error",
-      "logger.colorconsolelogger#info",
-      "logger.colorconsolelogger#log",
-      "logger.colorconsolelogger#warn",
-      "loggerfactori",
-      "loggerfactory.getlogg",
       "longer",
       "loop",
-      "lt;abstract&gt",
       "lt;static&gt",
       "maintain",
       "mani",
@@ -19311,7 +17558,6 @@ window.lunrData = {
       "sync",
       "syntax",
       "tell",
-      "text",
       "third",
       "through",
       "time",
@@ -19358,7 +17604,6 @@ window.lunrData = {
       "view",
       "wait",
       "want",
-      "warn",
       "whether",
       "without",
       "wrap",
@@ -19711,67 +17956,6 @@ window.lunrData = {
       "summary": "",
       "description": "Marshalls a map dataToMarshall must be the following type of data to parse: JSON object with properties (key/value)"
     },
-    "AbstractLogger.html": {
-      "id": "AbstractLogger.html",
-      "kind": "class",
-      "title": "&lt;abstract&gt; AbstractLogger",
-      "longname": "AbstractLogger",
-      "name": "AbstractLogger",
-      "tags": "AbstractLogger",
-      "summary": "",
-      "description": "Augmented Abstract Logger",
-      "body": ""
-    },
-    "AbstractLogger.html#log": {
-      "id": "AbstractLogger.html#log",
-      "kind": "function",
-      "title": "log( ...message, level )",
-      "longname": "AbstractLogger#log",
-      "name": "log",
-      "tags": "AbstractLogger#log log",
-      "summary": "",
-      "description": "log a message with default level"
-    },
-    "AbstractLogger.html#info": {
-      "id": "AbstractLogger.html#info",
-      "kind": "function",
-      "title": "info( ...message )",
-      "longname": "AbstractLogger#info",
-      "name": "info",
-      "tags": "AbstractLogger#info info",
-      "summary": "",
-      "description": "Logs a message in info level"
-    },
-    "AbstractLogger.html#error": {
-      "id": "AbstractLogger.html#error",
-      "kind": "function",
-      "title": "error( ...message )",
-      "longname": "AbstractLogger#error",
-      "name": "error",
-      "tags": "AbstractLogger#error error",
-      "summary": "",
-      "description": "Log a message in error level"
-    },
-    "AbstractLogger.html#debug": {
-      "id": "AbstractLogger.html#debug",
-      "kind": "function",
-      "title": "debug( ...message )",
-      "longname": "AbstractLogger#debug",
-      "name": "debug",
-      "tags": "AbstractLogger#debug debug",
-      "summary": "",
-      "description": "Log a message in debug level"
-    },
-    "AbstractLogger.html#warn": {
-      "id": "AbstractLogger.html#warn",
-      "kind": "function",
-      "title": "warn( ...message )",
-      "longname": "AbstractLogger#warn",
-      "name": "warn",
-      "tags": "AbstractLogger#warn warn",
-      "summary": "",
-      "description": "Log a message in warn level"
-    },
     "Principal.html": {
       "id": "Principal.html",
       "kind": "class",
@@ -19782,88 +17966,6 @@ window.lunrData = {
       "summary": "",
       "description": "Pricipal object for use in security as part of the abstract implimentation",
       "body": ""
-    },
-    "ConsoleLogger.html": {
-      "id": "ConsoleLogger.html",
-      "kind": "class",
-      "title": "ConsoleLogger",
-      "longname": "ConsoleLogger",
-      "name": "ConsoleLogger",
-      "tags": "ConsoleLogger",
-      "summary": "",
-      "description": "Console Logger",
-      "body": ""
-    },
-    "ConsoleLogger.html#log": {
-      "id": "ConsoleLogger.html#log",
-      "kind": "function",
-      "title": "log( ...message, level )",
-      "longname": "ConsoleLogger#log",
-      "name": "log",
-      "tags": "ConsoleLogger#log log",
-      "summary": "",
-      "description": "log a message with default level"
-    },
-    "ConsoleLogger.html#info": {
-      "id": "ConsoleLogger.html#info",
-      "kind": "function",
-      "title": "info( ...message )",
-      "longname": "ConsoleLogger#info",
-      "name": "info",
-      "tags": "ConsoleLogger#info info",
-      "summary": "",
-      "description": "Logs a message in info level"
-    },
-    "ConsoleLogger.html#error": {
-      "id": "ConsoleLogger.html#error",
-      "kind": "function",
-      "title": "error( ...message )",
-      "longname": "ConsoleLogger#error",
-      "name": "error",
-      "tags": "ConsoleLogger#error error",
-      "summary": "",
-      "description": "Log a message in error level"
-    },
-    "ConsoleLogger.html#debug": {
-      "id": "ConsoleLogger.html#debug",
-      "kind": "function",
-      "title": "debug( ...message )",
-      "longname": "ConsoleLogger#debug",
-      "name": "debug",
-      "tags": "ConsoleLogger#debug debug",
-      "summary": "",
-      "description": "Log a message in debug level"
-    },
-    "ConsoleLogger.html#warn": {
-      "id": "ConsoleLogger.html#warn",
-      "kind": "function",
-      "title": "warn( ...message )",
-      "longname": "ConsoleLogger#warn",
-      "name": "warn",
-      "tags": "ConsoleLogger#warn warn",
-      "summary": "",
-      "description": "Log a message in warn level"
-    },
-    "LoggerFactory.html": {
-      "id": "LoggerFactory.html",
-      "kind": "class",
-      "title": "LoggerFactory",
-      "longname": "LoggerFactory",
-      "name": "LoggerFactory",
-      "tags": "LoggerFactory",
-      "summary": "",
-      "description": "A logger factory for creating a logger instance",
-      "body": ""
-    },
-    "LoggerFactory.html#.getLogger": {
-      "id": "LoggerFactory.html#.getLogger",
-      "kind": "function",
-      "title": "&lt;static&gt; getLogger( type, level )",
-      "longname": "LoggerFactory.getLogger",
-      "name": "getLogger",
-      "tags": "LoggerFactory.getLogger getLogger",
-      "summary": "",
-      "description": "getLogger - get an instance of a logger"
     },
     "AugmentedObject.html": {
       "id": "AugmentedObject.html",
@@ -20138,128 +18240,6 @@ window.lunrData = {
       "summary": "",
       "description": "The toString method returns the stack as an string"
     },
-    "Logger.BasicLogger.html": {
-      "id": "Logger.BasicLogger.html",
-      "kind": "class",
-      "title": "BasicLogger",
-      "longname": "Logger.BasicLogger",
-      "name": "BasicLogger",
-      "tags": "Logger.BasicLogger BasicLogger",
-      "summary": "",
-      "description": "Basic Console Logger (level off extra text)",
-      "body": ""
-    },
-    "Logger.BasicLogger.html#log": {
-      "id": "Logger.BasicLogger.html#log",
-      "kind": "function",
-      "title": "log( ...message, level )",
-      "longname": "Logger.BasicLogger#log",
-      "name": "log",
-      "tags": "Logger.BasicLogger#log BasicLogger#log log",
-      "summary": "",
-      "description": "log a message with default level"
-    },
-    "Logger.BasicLogger.html#info": {
-      "id": "Logger.BasicLogger.html#info",
-      "kind": "function",
-      "title": "info( ...message )",
-      "longname": "Logger.BasicLogger#info",
-      "name": "info",
-      "tags": "Logger.BasicLogger#info BasicLogger#info info",
-      "summary": "",
-      "description": "Logs a message in info level"
-    },
-    "Logger.BasicLogger.html#error": {
-      "id": "Logger.BasicLogger.html#error",
-      "kind": "function",
-      "title": "error( ...message )",
-      "longname": "Logger.BasicLogger#error",
-      "name": "error",
-      "tags": "Logger.BasicLogger#error BasicLogger#error error",
-      "summary": "",
-      "description": "Log a message in error level"
-    },
-    "Logger.BasicLogger.html#debug": {
-      "id": "Logger.BasicLogger.html#debug",
-      "kind": "function",
-      "title": "debug( ...message )",
-      "longname": "Logger.BasicLogger#debug",
-      "name": "debug",
-      "tags": "Logger.BasicLogger#debug BasicLogger#debug debug",
-      "summary": "",
-      "description": "Log a message in debug level"
-    },
-    "Logger.BasicLogger.html#warn": {
-      "id": "Logger.BasicLogger.html#warn",
-      "kind": "function",
-      "title": "warn( ...message )",
-      "longname": "Logger.BasicLogger#warn",
-      "name": "warn",
-      "tags": "Logger.BasicLogger#warn BasicLogger#warn warn",
-      "summary": "",
-      "description": "Log a message in warn level"
-    },
-    "Logger.ColorConsoleLogger.html": {
-      "id": "Logger.ColorConsoleLogger.html",
-      "kind": "class",
-      "title": "ColorConsoleLogger",
-      "longname": "Logger.ColorConsoleLogger",
-      "name": "ColorConsoleLogger",
-      "tags": "Logger.ColorConsoleLogger ColorConsoleLogger",
-      "summary": "",
-      "description": "Color Console Logger",
-      "body": ""
-    },
-    "Logger.ColorConsoleLogger.html#log": {
-      "id": "Logger.ColorConsoleLogger.html#log",
-      "kind": "function",
-      "title": "log( ...message, level )",
-      "longname": "Logger.ColorConsoleLogger#log",
-      "name": "log",
-      "tags": "Logger.ColorConsoleLogger#log ColorConsoleLogger#log log",
-      "summary": "",
-      "description": "log a message with default level"
-    },
-    "Logger.ColorConsoleLogger.html#info": {
-      "id": "Logger.ColorConsoleLogger.html#info",
-      "kind": "function",
-      "title": "info( ...message )",
-      "longname": "Logger.ColorConsoleLogger#info",
-      "name": "info",
-      "tags": "Logger.ColorConsoleLogger#info ColorConsoleLogger#info info",
-      "summary": "",
-      "description": "Logs a message in info level"
-    },
-    "Logger.ColorConsoleLogger.html#error": {
-      "id": "Logger.ColorConsoleLogger.html#error",
-      "kind": "function",
-      "title": "error( ...message )",
-      "longname": "Logger.ColorConsoleLogger#error",
-      "name": "error",
-      "tags": "Logger.ColorConsoleLogger#error ColorConsoleLogger#error error",
-      "summary": "",
-      "description": "Log a message in error level"
-    },
-    "Logger.ColorConsoleLogger.html#debug": {
-      "id": "Logger.ColorConsoleLogger.html#debug",
-      "kind": "function",
-      "title": "debug( ...message )",
-      "longname": "Logger.ColorConsoleLogger#debug",
-      "name": "debug",
-      "tags": "Logger.ColorConsoleLogger#debug ColorConsoleLogger#debug debug",
-      "summary": "",
-      "description": "Log a message in debug level"
-    },
-    "Logger.ColorConsoleLogger.html#warn": {
-      "id": "Logger.ColorConsoleLogger.html#warn",
-      "kind": "function",
-      "title": "warn( ...message )",
-      "longname": "Logger.ColorConsoleLogger#warn",
-      "name": "warn",
-      "tags": "Logger.ColorConsoleLogger#warn ColorConsoleLogger#warn warn",
-      "summary": "",
-      "description": "Log a message in warn level"
-    },
     "AbstractSecurityClient.html": {
       "id": "AbstractSecurityClient.html",
       "kind": "class",
@@ -20404,6 +18384,26 @@ window.lunrData = {
       "summary": "",
       "description": "Registers a schema to the Framework"
     },
+    "ValidationFramework.html#getSchema": {
+      "id": "ValidationFramework.html#getSchema",
+      "kind": "function",
+      "title": "getSchema( identity )",
+      "longname": "ValidationFramework#getSchema",
+      "name": "getSchema",
+      "tags": "ValidationFramework#getSchema getSchema",
+      "summary": "",
+      "description": "Gets a schema"
+    },
+    "ValidationFramework.html#getSchemas": {
+      "id": "ValidationFramework.html#getSchemas",
+      "kind": "function",
+      "title": "getSchemas()",
+      "longname": "ValidationFramework#getSchemas",
+      "name": "getSchemas",
+      "tags": "ValidationFramework#getSchemas getSchemas",
+      "summary": "",
+      "description": "Gets all schemas"
+    },
     "ValidationFramework.html#clearSchemas": {
       "id": "ValidationFramework.html#clearSchemas",
       "kind": "function",
@@ -20443,26 +18443,6 @@ window.lunrData = {
       "tags": "ValidationFramework#generateSchema generateSchema",
       "summary": "",
       "description": "Validates data via a schema"
-    },
-    "ValidationFramework.html#getSchema": {
-      "id": "ValidationFramework.html#getSchema",
-      "kind": "function",
-      "title": "getSchema( identity )",
-      "longname": "ValidationFramework#getSchema",
-      "name": "getSchema",
-      "tags": "ValidationFramework#getSchema getSchema",
-      "summary": "",
-      "description": "Gets a schema"
-    },
-    "ValidationFramework.html#getSchemas": {
-      "id": "ValidationFramework.html#getSchemas",
-      "kind": "function",
-      "title": "getSchemas()",
-      "longname": "ValidationFramework#getSchemas",
-      "name": "getSchemas",
-      "tags": "ValidationFramework#getSchemas getSchemas",
-      "summary": "",
-      "description": "Gets all schemas"
     },
     "CollectionIterator.html": {
       "id": "CollectionIterator.html",
