@@ -10,7 +10,7 @@ adjective: augmented
     1. having been made greater in size or value.
 
 
-**Please note:** _This is a deprecated version._. This package is now maintained in seperate modules.
+**Please note:** _This is a deprecated version_. This package is now maintained in seperate modules.
 
 **Augmented.js** is a javascript framework design to make development easier with full design features.  Augmented.js provides a large set of functionality designed to develop single pages applications easier as well as mobile web.  Augmented.js Next is full JavaScript 2015/2017 structure.
 
